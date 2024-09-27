@@ -24,10 +24,10 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        mytheme: {
+        light: {
           'primary': '#ff0808',
           'secondary': '#ff6363',
-          'accent': '#f5f5f5',
+          'accent': 'white',
           'neutral': '#333333',
           'base-100': '#ffffff',
           'base-content': '#000000',
@@ -37,6 +37,13 @@ module.exports = {
           'error': '#F87272',
         },
       },
+      {
+        dark: {
+        ...require("daisyui/src/theming/themes")["dark"],
+        'primary': '#ff0808',
+        'secondary': '#d95252',
+        'accent': 'rgb(59, 66, 75)'
+      }},
     ],
   },
 };

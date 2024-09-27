@@ -1,7 +1,6 @@
 <script>
     import "../app.css";
     import Sidebar from '$lib/components/Sidebar.svelte';
-    import AccountButton from '$lib/components/AccountButton.svelte';
   
   </script>
   
@@ -11,8 +10,6 @@
     
     <!-- Main Content Area -->
     <div class="flex-1 relative p-6">
-      <!-- Account button at the top-right -->
-      <AccountButton />
   
       <!-- The main content where route content will be displayed -->
       <main class="mt-12">
