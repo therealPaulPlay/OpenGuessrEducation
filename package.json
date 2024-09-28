@@ -20,6 +20,9 @@
 	"type": "module",
 	"dependencies": {
 		"daisyui": "^4.12.10",
-		"theme-change": "^2.5.0"
+		"globe.gl": "^2.32.6",
+		"lucide-svelte": "^0.446.0",
+		"theme-change": "^2.5.0",
+		"three": "^0.169.0"
 	}
 }
