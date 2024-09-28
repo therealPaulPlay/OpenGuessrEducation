@@ -31,8 +31,8 @@
         globe
             .polygonsData(countries.features)
             .polygonAltitude(0.01)
-            .polygonCapColor(() => "rgba(255, 8, 8, 0.5)")
-            .polygonSideColor(() => "rgba(255, 8, 8, 0.5)")
+            .polygonCapColor(() => "rgba(255, 8, 8, 0.6)")
+            .polygonSideColor(() => "rgba(255, 8, 8, 0.6)")
             .polygonStrokeColor(() => "#111")
             .onPolygonHover((hoverD) => {
                 globe
@@ -40,7 +40,7 @@
                     .polygonCapColor((d) =>
                         d === hoverD
                             ? "rgba(255, 255, 255, 0.8)"
-                            : "rgba(255, 8, 8, 0.5)",
+                            : "rgba(255, 8, 8, 0.6)",
                     );
             })
             .onPolygonClick((clickedCountry) => {

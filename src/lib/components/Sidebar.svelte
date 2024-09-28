@@ -124,11 +124,11 @@
                 <a
                     class="btn normal-case text-lg btn-accent"
                     href="https://openguessr.com" target="_blank">
-                    Launch OpenGuessr</a>
+                    Play OpenGuessr</a>
             </li>
         </ul>
 
-        <div class="flex justify-around mt-auto">
+        <div class="flex justify-between mt-auto">
             <DarkModeToggle />
             <AccountButton />
         </div>

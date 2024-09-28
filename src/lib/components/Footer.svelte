@@ -2,8 +2,7 @@
     class="footer bg-base-200 items-center p-4 flex justify-between">
     <aside class="flex-grow text-center">
         <p class="w-full text-center">
-            © {new Date().getFullYear()} <a href="https://paulplay.studio" target="_blank">PaulPlay</a> ("Paul
-            Rhomberg")  - All rights reserved
+            © {new Date().getFullYear()} <a href="https://paulplay.studio" target="_blank">PaulPlay</a> - All rights reserved.
         </p>
     </aside>
     <nav class="flex gap-4">

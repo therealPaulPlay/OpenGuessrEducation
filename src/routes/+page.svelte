@@ -1,16 +1,26 @@
 <script>
     import Globe from "$lib/components/Globe.svelte";
-    import { Users, MapPin, Info } from "lucide-svelte";
+    import {
+        MapPin,
+        Info,
+        Users,
+        Globe as GlobeIcon,
+        Book,
+        Trophy,
+        Compass,
+        Flag,
+        Award,
+        Map,
+        ArrowRight,
+    } from "lucide-svelte";
     import DollarSign from "$lib/components/DollarSign.svelte";
     import { onMount } from "svelte";
 
-    let progress = 75;
-
-    let welcomeText = "Master your geography skills."
-
+    let welcomeText = "Master your geography skills.";
     let yourName;
+    let isHovered = false;
 
-    onMount(() => yourName = localStorage.getItem("username") || "you");
+    onMount(() => (yourName = ", " + localStorage.getItem("username") || "."));
 </script>
 
 <div class="container mx-auto px-4 py-8">
@@ -22,74 +32,194 @@
         {welcomeText}
     </h1>
     <p class="text-xl text-center mb-8">
-        A new Geography Champion was born. It's {yourName}.
+        Welcome to OpenGuessr Education{yourName}.
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-        <div class="card bg-base-200 shadow-xl">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div
+            class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <div class="card-body">
+                <GlobeIcon class="w-12 h-12 text-secondary mb-4" />
                 <h2 class="card-title">Learn GeoGuessing</h2>
                 <p>
-                    Master the art of location guessing with interactive, straightforward guides.
+                    Master the art of location guessing with interactive,
+                    straightforward guides.
                 </p>
                 <div class="card-actions justify-end">
-                    <button class="btn btn-accent">Start Learning</button>
+                    <button class="btn btn-secondary">Get started</button>
                 </div>
             </div>
         </div>
 
-        <div class="card bg-base-200 shadow-xl">
+        <div
+            class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <div class="card-body">
+                <Book class="w-12 h-12 text-secondary mb-4" />
                 <h2 class="card-title">Quizzes</h2>
                 <p>
-                    Challenge yourself in engaging geography quizzes. Try it out!
+                    Challenge yourself in engaging geography quizzes. Try it
+                    out!
                 </p>
                 <div class="card-actions justify-end">
-                    <button class="btn btn-accent">Take a Quiz</button>
+                    <button class="btn btn-secondary">Take a Quiz</button>
                 </div>
             </div>
         </div>
 
-        <div class="card bg-base-200 shadow-xl">
+        <div
+            class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <div class="card-body">
+                <Trophy class="w-12 h-12 text-secondary mb-4" />
                 <h2 class="card-title">Pro-Player Strategies</h2>
                 <p>
-                    Learn strats from top players like Rainbolt to
-                    elevate your game.
+                    Learn strategies from top players to elevate
+                    your game and gain a deep understanding.
                 </p>
                 <div class="card-actions justify-end">
-                    <button class="btn btn-accent">Discover Strategies</button>
+                    <button class="btn btn-secondary"
+                        >Discover Guides</button>
                 </div>
             </div>
         </div>
     </div>
 
-<div class="stats shadow w-full mb-12 bg-base-200">
-    <div class="stat">
-        <div class="stat-figure text-primary">
-            <Users size={36} />
+    <div class="text-focused-section mb-16 mt-16 flex justify-center flex-col">
+        <h2 class="text-4xl font-bold mb-8 text-center">
+            The place to learn it all.
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-8 w-5/6 mx-auto">
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <Compass
+                        class="w-8 h-8 text-secondary mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                            Explore the World
+                        </h3>
+                        <p class="text-base">
+                            Dive into our <b>educational (but fun!) content</b> to learn
+                            about different <b>locations</b>, <b>continents</b>,
+                            <b>capitals</b>, and <b>landmarks</b>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <Flag
+                        class="w-8 h-8 text-secondary mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                            Learn through Play
+                        </h3>
+                        <p class="text-base">
+                            The platform makes learning <b>fun</b> and
+                            <b>exciting</b>
+                            through various <b>quizzes</b> and
+                            <b>trivia challenges</b>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <Award
+                        class="w-8 h-8 text-secondary mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                            Master GeoGuessing
+                        </h3>
+                        <p class="text-base">
+                            Whether you're a fan of <b>GeoGuessr</b>,
+                            <b>OpenGuessr</b>, or <b>Geotastic</b>, you'll find something that suits your needs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <Map
+                        class="w-8 h-8 text-secondary mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                            Become a Geography Expert
+                        </h3>
+                        <p class="text-base">
+                            Become a staple of the geography <b>community</b>.
+                            The discord is full of gigachads that want to learn more about our planet.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="stat-title">Active Players</div>
-        <div class="stat-value text-primary">800.000+</div>
-        <div class="stat-desc">Learn from a large community.</div>
     </div>
 
-    <div class="stat">
-        <div class="stat-figure text-secondary">
-            <MapPin size={36} />
+    <div class="stats shadow w-full mb-12 bg-base-200">
+        <div class="stat">
+            <div class="stat-figure text-secondary">
+                <Users size={36} />
+            </div>
+            <div class="stat-title">Active Players</div>
+            <div class="stat-value text-secondary">800,000+</div>
+            <div class="stat-desc">Learn from a large community.</div>
         </div>
-        <div class="stat-title">Countries Covered</div>
-        <div class="stat-value text-secondary">83</div>
-        <div class="stat-desc">Out of 83 countries with streetview</div>
+
+        <div class="stat">
+            <div class="stat-figure text-secondary">
+                <MapPin size={36} />
+            </div>
+            <div class="stat-title">Countries Covered</div>
+            <div class="stat-value text-secondary">83</div>
+            <div class="stat-desc">Out of 83 countries with Street View</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-figure text-secondary">
+                <DollarSign size={36} />
+            </div>
+            <div class="stat-title">Cost</div>
+            <div class="stat-value text-secondary">Free</div>
+            <div class="stat-desc">OpenGuessr is committed to being free</div>
+        </div>
     </div>
 
-    <div class="stat">
-        <div class="stat-figure text-secondary">
-            <DollarSign size={36} />
-        </div>
-        <div class="stat-title">Cost</div>
-        <div class="stat-value text-secondary">Free</div>
-        <div class="stat-desc">OpenGuessr is commited to being free</div>
+    <div class="mb-12 text-center">
+        <h2 class="text-4xl font-bold mb-2 text-center">
+            Ready to become a pro?
+        </h2>
+        <p class="text-xl mb-6">
+            The journey will be legendary.
+        </p>
+        <button 
+            class="btn btn-secondary btn-lg relative overflow-hidden"
+            on:mouseenter={() => isHovered = true}
+            on:mouseleave={() => isHovered = false}
+        >
+            <span class="mr-2">Start geo-maxxing</span>
+            <div class="w-10 h-10 relative">
+                <img
+                    src="src/lib/assets/noob_player.png"
+                    alt="Beginner"
+                    class="w-full h-full object-contain absolute transition-opacity duration-300 ease-in-out"
+                    style="opacity: {isHovered ? 0 : 1}"
+                />
+                <img
+                    src="src/lib/assets/pro_player.png"
+                    alt="Pro"
+                    class="w-full h-full object-contain absolute transition-opacity duration-300 ease-in-out"
+                    style="opacity: {isHovered ? 1 : 0}"
+                />
+            </div>
+        </button>
     </div>
 </div>
-</div>
+
+<style>
+    .text-secondary {
+        color: var(--secondary-color);
+    }
+
+    .text-focused-section {
+        line-height: 1.6;
+    }
+</style>
