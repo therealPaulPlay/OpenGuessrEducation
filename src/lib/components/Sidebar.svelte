@@ -27,8 +27,8 @@
             activeButton = "get-started";
         } else if (currentPath === "/guides") {
             activeButton = "guides";
-        } else if (currentPath === "/strategies") {
-            activeButton = "strategies";
+        } else if (currentPath === "/quiz") {
+            activeButton = "quiz";
         } else if (currentPath.startsWith("/countries")) {
             const country = currentPath.split("/").pop();
             activeButton = country.toLowerCase();
@@ -76,6 +76,12 @@
                     class="btn normal-case text-lg {activeButton === 'get-started' ? 'btn-primary text-white' : 'btn-accent'}"
                     href="/get-started"
                     on:click={() => switchSelection('get-started')}>Get started</a>
+            </li>
+            <li>
+                <a
+                    class="btn normal-case text-lg {activeButton === 'quiz' ? 'btn-primary text-white' : 'btn-accent'}"
+                    href="/quiz"
+                    on:click={() => switchSelection('quiz')}>Quizzes</a>
             </li>
             <li class="w-full">
                 <button

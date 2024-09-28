@@ -35,7 +35,7 @@
     }
 </script>
 
-<div class="container mx-auto p-6 max-w-5xl">
+<article class="container mx-auto p-6 max-w-5xl">
     <img
         src="/src/lib/assets/openguessr_jungle_adventure.png"
         alt="Geography adventure"
@@ -45,9 +45,7 @@
     </h1>
     <p class="mb-6">
         Welcome to OpenGuessr Education, the ultimate geography quiz platform
-        that will test your knowledge and detective skills. Whether you're a
-        geography whiz or just looking for a fun way to learn about the world,
-        you'll have a great time (trust me bro). Let's take a quick tour to find
+        that will test your knowledge and detective skills. Let's take a quick tour to find
         out what this page has to offer!
     </p>
 
@@ -121,7 +119,7 @@
         Quizzes on OpenGuessr Education are a great way to test your knowledge
         of different countries. In these quizzes, you'll for example be
         presented with a country name and have to find and click it on the map. Quizzes help you memorize country names, states and country shapes. To start a quiz, visit the <a
-            href="/quizzes"
+            href="/quiz"
             class="text-secondary">Quizzes</a> page.
     </p>
 
@@ -139,7 +137,7 @@
     <h3 class="text-xl font-semibold mb-2">Join the Community</h3>
     <p class="mb-6">
         Connect with other geography enthusiasts and share your experiences.
-        Join our <a
+        Join the <a
             href="https://discord.com/invite/CSc3MbDrZ8"
             target="_blank"
             class="text-secondary">Discord Server</a> to participate in discussions,
@@ -176,7 +174,7 @@
             <div class="collapse-content">
                 <p>
                     Improving your geoguessing skills takes practice and
-                    attention to detail. Use our <a
+                    attention to detail. Use these <a
                         href="/guides"
                         class="text-secondary">Guides</a> to learn about common clues
                     and strategies. Playing regularly and reviewing your guesses
@@ -199,23 +197,9 @@
             </div>
         </div>
     </div>
-</div>
+</article>
 
 <style>
-    .wiggle {
-        animation: wiggle 0.5s;
-    }
-
-    @keyframes wiggle {
-        0%,
-        100% {
-            transform: rotate(-3deg);
-        }
-        50% {
-            transform: rotate(3deg);
-        }
-    }
-
     .game-container {
         display: flex;
         align-items: flex-start;

@@ -11,6 +11,7 @@
         Flag,
         Award,
         Map,
+        Gamepad2,
         ArrowRight,
     } from "lucide-svelte";
     import DollarSign from "$lib/components/DollarSign.svelte";
@@ -39,11 +40,10 @@
         <div
             class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <div class="card-body">
-                <GlobeIcon class="w-12 h-12 text-secondary mb-4" />
+                <Book class="w-12 h-12 text-secondary mb-4" />
                 <h2 class="card-title">Learn GeoGuessing</h2>
                 <p>
-                    Master the art of location guessing with interactive,
-                    straightforward guides.
+                    Master the art of location guessing with straightforward guides, articles and fun quizzes.
                 </p>
                 <div class="card-actions justify-end">
                     <button class="btn btn-secondary">Get started</button>
@@ -54,11 +54,10 @@
         <div
             class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <div class="card-body">
-                <Book class="w-12 h-12 text-secondary mb-4" />
+                <Gamepad2 class="w-12 h-12 text-secondary mb-4" />
                 <h2 class="card-title">Quizzes</h2>
                 <p>
-                    Challenge yourself in engaging geography quizzes. Try it
-                    out!
+                    Challenge yourself in engaging geography quizzes. Why not give it a go now?
                 </p>
                 <div class="card-actions justify-end">
                     <button class="btn btn-secondary">Take a Quiz</button>
