@@ -1,6 +1,7 @@
 <script>
   import "../app.css";
   import Sidebar from '$lib/components/Sidebar.svelte';
+  import Footer from "../lib/components/Footer.svelte";
   import { onMount } from 'svelte';
 
   let isDrawerOpen = false;
@@ -25,12 +26,12 @@
   }
 </script>
 
-<div class="flex h-screen bg-base-100 dark:bg-base-900">
+<div class="flex flex-col h-screen bg-base-100 dark:bg-base-900">
   <!-- Sidebar -->
   <Sidebar bind:isOpen={isDrawerOpen} />
   
   <!-- Main Content Area -->
-  <div class="flex-1 flex flex-col overflow-hidden lg:ml-64">
+  <div class="flex-1 flex flex-col lg:ml-64">
     <!-- Hamburger toggle for smaller screens -->
     <button 
       class="lg:hidden fixed top-4 left-4 z-20 btn btn-square btn-accent"
@@ -43,5 +44,9 @@
     <main class="flex-1 p-6 overflow-y-auto w-full mt-16 lg:mt-0">
       <slot />
     </main>
+
+    <!-- Footer -->
+    <Footer />
   </div>
 </div>
+

@@ -7,7 +7,11 @@
     export let isOpen = false;
 
     let showCountries = false;
+    let showGuides = false;
+
     let countries = ["England", "Germany", "USA", "Japan"];
+    let guides = ["Create Maps", "Land a 5K"];
+
     let activeButton = "";
     let mounted = false;
 
@@ -19,11 +23,13 @@
         const currentPath = $page.url.pathname;
         if (currentPath === "/") {
             activeButton = "home";
-        } else if (currentPath === "/starter-guide") {
-            activeButton = "starter-guide";
-        } else if (currentPath === "/map-creation") {
-            activeButton = "map-creation";
-        } else if (currentPath.startsWith("/learn-countries")) {
+        } else if (currentPath === "/get-started") {
+            activeButton = "get-started";
+        } else if (currentPath === "/guides") {
+            activeButton = "guides";
+        } else if (currentPath === "/strategies") {
+            activeButton = "strategies";
+        } else if (currentPath.startsWith("/countries")) {
             const country = currentPath.split("/").pop();
             activeButton = country.toLowerCase();
         }
@@ -39,6 +45,10 @@
     function toggleCountries() {
         showCountries = !showCountries;
     }
+
+    function toggleGuides() {
+        showGuides = !showGuides;
+    }
 </script>
 
 <aside class="bg-base-200 w-64 h-full overflow-y-auto fixed left-0 top-0 bottom-0 z-30 transition-transform duration-300 ease-in-out lg:translate-x-0"
@@ -46,7 +56,7 @@
        class:-translate-x-full={!isOpen && mounted}>
     <nav class="flex h-full flex-col justify-between p-4">
         <!-- Logo -->
-        <div class="flex justify-center items-center mb-6">
+        <div class="flex justify-center items-center mb-6 mt-5">
             <img
                 src="/src/lib/assets/openguessr_icon.png"
                 alt="OpenGuessr Logo"
@@ -54,7 +64,7 @@
         </div>
 
         <!-- Navigation Links -->
-        <ul class="menu w-full space-y-4 p-0">
+        <ul class="menu w-full space-y-4 p-0 mt-20">
             <li>
                 <a
                     class="btn normal-case text-lg {activeButton === 'home' ? 'btn-primary text-white' : 'btn-accent'}"
@@ -63,19 +73,34 @@
             </li>
             <li>
                 <a
-                    class="btn normal-case text-lg {activeButton === 'starter-guide' ? 'btn-primary text-white' : 'btn-accent'}"
-                    href="/starter-guide"
-                    on:click={() => switchSelection('starter-guide')}>Starter Guide</a>
-            </li>
-            <li>
-                <a
-                    class="btn normal-case text-lg {activeButton === 'map-creation' ? 'btn-primary text-white' : 'btn-accent'}"
-                    href="/map-creation"
-                    on:click={() => switchSelection('map-creation')}>Map Creation</a>
+                    class="btn normal-case text-lg {activeButton === 'get-started' ? 'btn-primary text-white' : 'btn-accent'}"
+                    href="/get-started"
+                    on:click={() => switchSelection('get-started')}>Get started</a>
             </li>
             <li class="w-full">
                 <button
-                    class="btn w-full normal-case text-lg {activeButton === 'learn-countries' ? 'btn-primary text-white' : 'btn-accent'}"
+                    class="btn w-full normal-case text-lg {activeButton === 'guides' ? 'btn-primary text-white' : 'btn-accent'}"
+                    on:click={toggleGuides}>
+                    Guides
+                </button>
+                {#if showGuides}
+                    <ul class="ml-4 space-y-3 mt-4">
+                        {#each guides as guide}
+                            <li>
+                                <a
+                                    class="btn btn-sm w-full {activeButton === guide.toLowerCase() ? 'btn-primary text-white' : 'btn-accent'}"
+                                    href={"/guides/" + guide.toLowerCase()}
+                                    on:click={() => switchSelection(guide.toLowerCase())}>
+                                    {guide}
+                                </a>
+                            </li>
+                        {/each}
+                    </ul>
+                {/if}
+            </li>
+            <li class="w-full">
+                <button
+                    class="btn w-full normal-case text-lg {activeButton === 'countries' ? 'btn-primary text-white' : 'btn-accent'}"
                     on:click={toggleCountries}>
                     Learn Countries
                 </button>
@@ -85,7 +110,7 @@
                             <li>
                                 <a
                                     class="btn btn-sm w-full {activeButton === country.toLowerCase() ? 'btn-primary text-white' : 'btn-accent'}"
-                                    href={"/learn-countries/" + country.toLowerCase()}
+                                    href={"/countries/" + country.toLowerCase()}
                                     on:click={() => switchSelection(country.toLowerCase())}>
                                     {country}
                                 </a>
@@ -93,6 +118,13 @@
                         {/each}
                     </ul>
                 {/if}
+            </li>
+            <div class="divider">OR</div>
+            <li>
+                <a
+                    class="btn normal-case text-lg btn-accent"
+                    href="https://openguessr.com" target="_blank">
+                    Launch OpenGuessr</a>
             </li>
         </ul>
 

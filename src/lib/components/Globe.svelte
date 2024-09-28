@@ -50,13 +50,14 @@
                             / /g,
                             "-",
                         );
-                    window.location.href = `/learn-countries/${countryName}`;
+                    window.location.href = `/countries/${countryName}`;
                 }
             });
 
         // Auto-rotate
         globe.controls().autoRotate = true;
         globe.controls().autoRotateSpeed = 0.5;
+        globe.controls().enableZoom = false;
 
         // Apply low-poly effect
         globe
@@ -73,7 +74,7 @@
 </script>
 
 <div
-    class="globe-container w-fit flex justify-center items-center rounded-xl overflow-hidden"
+    class="globe-container w-full flex justify-center items-center rounded-xl"
     bind:this={globeElement}>
 </div>
 
