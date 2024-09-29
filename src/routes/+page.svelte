@@ -1,5 +1,6 @@
 <script>
     import Globe from "$lib/components/Globe.svelte";
+    import { goto } from '$app/navigation';
     import {
         MapPin,
         Info,
@@ -21,10 +22,12 @@
     let yourName;
     let isHovered = false;
 
+
+
     onMount(() => (yourName = ", " + localStorage.getItem("username") || "."));
 </script>
 
-<div class="container mx-auto px-4 py-8">
+<article class="container mx-auto px-4 py-8">
     <div class="mb-12">
         <Globe />
     </div>
@@ -46,7 +49,7 @@
                     Master the art of location guessing with straightforward guides, articles and fun quizzes.
                 </p>
                 <div class="card-actions justify-end">
-                    <button class="btn btn-secondary">Get started</button>
+                    <button class="btn btn-secondary" on:click={() => { goto("/get-started")} }>Get started</button>
                 </div>
             </div>
         </div>
@@ -60,7 +63,7 @@
                     Challenge yourself in engaging geography quizzes. Why not give it a go now?
                 </p>
                 <div class="card-actions justify-end">
-                    <button class="btn btn-secondary">Take a Quiz</button>
+                    <button class="btn btn-secondary" on:click={() => { goto("/quiz")} }>Take a Quiz</button>
                 </div>
             </div>
         </div>
@@ -69,13 +72,13 @@
             class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <div class="card-body">
                 <Trophy class="w-12 h-12 text-secondary mb-4" />
-                <h2 class="card-title">Pro-Player Strategies</h2>
+                <h2 class="card-title">Pro-Player Guides</h2>
                 <p>
-                    Learn strategies from top players to elevate
-                    your game and gain a deep understanding.
+                    Learn to play and discover tricks from top players to elevate
+                    your game.
                 </p>
                 <div class="card-actions justify-end">
-                    <button class="btn btn-secondary"
+                    <button class="btn btn-secondary" on:click={() => { goto("/guides")} }
                         >Discover Guides</button>
                 </div>
             </div>
@@ -193,6 +196,7 @@
             class="btn btn-secondary btn-lg relative overflow-hidden"
             on:mouseenter={() => isHovered = true}
             on:mouseleave={() => isHovered = false}
+            on:click={() => {goto("/get-started")} }
         >
             <span class="mr-2">Start geo-maxxing</span>
             <div class="w-10 h-10 relative">
@@ -203,7 +207,7 @@
                     style="opacity: {isHovered ? 0 : 1}"
                 />
                 <img
-                    src="src/lib/assets/pro_player.png"
+                    src="src/lib/assets/chad_moai.png"
                     alt="Pro"
                     class="w-full h-full object-contain absolute transition-opacity duration-300 ease-in-out"
                     style="opacity: {isHovered ? 1 : 0}"
@@ -211,7 +215,7 @@
             </div>
         </button>
     </div>
-</div>
+</article>
 
 <style>
     .text-secondary {

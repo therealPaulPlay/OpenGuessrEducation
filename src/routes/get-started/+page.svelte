@@ -40,7 +40,7 @@
         src="/src/lib/assets/openguessr_jungle_adventure.png"
         alt="Geography adventure"
         class="w-full rounded-xl mb-10" />
-    <h1 class="text-4xl font-bold mb-4 text-secondary">
+    <h1 class="text-4xl font-bold mb-4">
         Embark on an epic learning-adventure.
     </h1>
     <p class="mb-6">
