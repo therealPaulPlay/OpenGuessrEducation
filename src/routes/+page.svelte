@@ -41,7 +41,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <div
-            class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="card-body">
                 <Book class="w-12 h-12 text-secondary mb-4" />
                 <h2 class="card-title">Learn GeoGuessing</h2>
@@ -55,7 +55,7 @@
         </div>
 
         <div
-            class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="card-body">
                 <Gamepad2 class="w-12 h-12 text-secondary mb-4" />
                 <h2 class="card-title">Quizzes</h2>
@@ -69,7 +69,7 @@
         </div>
 
         <div
-            class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="card-body">
                 <Trophy class="w-12 h-12 text-secondary mb-4" />
                 <h2 class="card-title">Pro-Player Guides</h2>
@@ -148,7 +148,7 @@
                         </h3>
                         <p class="text-base">
                             Become a staple of the geography <b>community</b>.
-                            The discord is full of gigachads that want to learn more about our planet.
+                            The discord is full of cool nerds that want to learn more about our planet.
                         </p>
                     </div>
                 </div>

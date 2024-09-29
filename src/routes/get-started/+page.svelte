@@ -49,7 +49,7 @@
         out what this page has to offer!
     </p>
 
-    <h3 class="text-xl font-semibold mb-2">What is OpenGuessr?</h3>
+    <h3 class="text-2xl font-semibold mb-2">What is OpenGuessr?</h3>
     <p class="mb-6">
         <a href="https://openguessr.com" target="_blank" class="text-secondary"
             >OpenGuessr</a>
@@ -77,23 +77,23 @@
             </h3>
             <div class="buttons-container flex flex-col space-y-2">
                 <button
-                    class="btn btn-accent btn-sm streetview-minigame-button"
+                    class="btn btn-outline btn-sm streetview-minigame-button"
                     on:click={(event) =>
                         handleGuess("Washington", event.target)}>
                     Washington
                 </button>
                 <button
-                    class="btn btn-accent btn-sm"
+                    class="btn btn-outline btn-sm"
                     on:click={(event) => handleGuess("New York", event.target)}>
                     New York
                 </button>
                 <button
-                    class="btn btn-accent btn-sm streetview-minigame-button"
+                    class="btn btn-outline btn-sm streetview-minigame-button"
                     on:click={(event) => handleGuess("London", event.target)}>
                     London
                 </button>
                 <button
-                    class="btn btn-accent btn-sm streetview-minigame-button"
+                    class="btn btn-outline btn-sm streetview-minigame-button"
                     on:click={(event) =>
                         handleGuess("Las Vegas", event.target)}>
                     Las Vegas
@@ -102,7 +102,7 @@
         </div>
     </div>
 
-    <h3 class="text-xl font-semibold mb-2">
+    <h3 class="text-2xl font-semibold mb-2">
         Got it, but what's OpenGuessr Education?
     </h3>
     <p class="mb-6">
@@ -118,7 +118,7 @@
     <p class="mb-6">
         Quizzes on OpenGuessr Education are a great way to test your knowledge
         of different countries. In these quizzes, you'll for example be
-        presented with a country name and have to find and click it on the map. Quizzes help you memorize country names, states and country shapes. To start a quiz, visit the <a
+        presented with a country name and have to select it on the map. Quizzes help you memorize country names, states and country shapes. To start a quiz, visit the <a
             href="/quiz"
             class="text-secondary">Quizzes</a> page.
     </p>
