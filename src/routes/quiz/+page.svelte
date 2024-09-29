@@ -18,7 +18,6 @@
     ];
 
     let quizCategories = [];
-    let scrollContainers = [];
     let selectedTags = new Set();
 
     $: filteredQuizCategories = quizCategories.map((category) => ({
@@ -47,47 +46,7 @@
                 (quiz) => quiz.category === category.folder,
             ),
         }));
-
-        scrollContainers = document.querySelectorAll(".scroll-container");
-        checkScrollability();
-        window.addEventListener("resize", checkScrollability);
     });
-
-    function scroll(containerIndex, direction) {
-        const container = scrollContainers[containerIndex];
-        if (container) {
-            const scrollAmount = container.clientWidth * 0.8;
-            container.scrollBy({
-                left: direction * scrollAmount,
-                behavior: "smooth",
-            });
-            checkScrollability();
-        }
-    }
-
-    function checkScrollability() {
-        scrollContainers.forEach((container, index) => {
-            const leftButton = document.getElementById(`left-button-${index}`);
-            const rightButton = document.getElementById(
-                `right-button-${index}`,
-            );
-            const leftFade = document.getElementById(`left-fade-${index}`);
-            const rightFade = document.getElementById(`right-fade-${index}`);
-
-            if (leftButton && rightButton && leftFade && rightFade) {
-                const hasLeftScroll = container.scrollLeft > 0;
-                const hasRightScroll =
-                    container.scrollWidth > container.clientWidth &&
-                    container.scrollLeft <
-                        container.scrollWidth - container.clientWidth;
-
-                leftButton.style.display = hasLeftScroll ? "flex" : "none";
-                rightButton.style.display = hasRightScroll ? "flex" : "none";
-                leftFade.style.opacity = hasLeftScroll ? "1" : "0";
-                rightFade.style.opacity = hasRightScroll ? "1" : "0";
-            }
-        });
-    }
 
     function toggleTag(tag) {
         if (selectedTags.has(tag)) {
@@ -135,8 +94,7 @@
             <div class="relative">
                 <button
                     id="left-button-{index}"
-                    class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg hidden items-center justify-center"
-                    on:click={() => scroll(index, -1)}>
+                    class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg hidden items-center justify-center">
                     <ArrowLeft />
                 </button>
                 <div
@@ -144,8 +102,7 @@
                     class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-base-100 to-transparent z-10 pointer-events-none opacity-0 transition-opacity duration-300"></div>
                 </div>
                 <div
-                    class="scroll-container flex space-x-4 overflow-x-auto flex-nowrap scrollbar-hide"
-                    on:scroll={() => checkScrollability()}>
+                    class="scroll-container flex space-x-4 overflow-x-auto flex-nowrap scrollbar-hide">
                     {#each category.quizzes as quiz}
                         <div
                             class="card w-64 bg-base-200 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300">
@@ -185,8 +142,7 @@
                 </div>
                 <button
                     id="right-button-{index}"
-                    class="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg hidden items-center justify-center"
-                    on:click={() => scroll(index, 1)}>
+                    class="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg hidden items-center justify-center">
                     <ArrowRight />
                 </button>
             </div>
