@@ -103,7 +103,7 @@
     <h1 class="text-5xl font-bold mb-12">Discover Quizzes</h1>
 
     <div class="mb-8">
-        <h2 class="text-2xl font-semibold mb-4">Filter by Tag:</h2>
+        <h2 class="text-2xl font-semibold mb-4">Filter by Continent:</h2>
         <div class="flex flex-wrap gap-2">
             {#each allTags as tag}
                 {#if tag !== undefined}
@@ -209,7 +209,7 @@
         left: 0;
         width: 100px; 
         height: 100%;
-        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        background: linear-gradient(to right, oklch(var(--b1)), rgba(255, 255, 255, 0));
         pointer-events: none;
         z-index: 10; /* Ensure it appears above the scroll container */
     }
@@ -220,7 +220,7 @@
         right: 0;
         width: 100px;
         height: 100%;
-        background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        background: linear-gradient(to left, oklch(var(--b1)), rgba(255, 255, 255, 0));
         pointer-events: none; /* Prevent interaction */
         z-index: 10; /* Ensure it appears above the scroll container */
     }
