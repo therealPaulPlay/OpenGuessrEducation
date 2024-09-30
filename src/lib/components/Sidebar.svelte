@@ -51,7 +51,7 @@
     }
 </script>
 
-<aside class="bg-base-200 w-64 h-full overflow-y-auto fixed left-0 top-0 bottom-0 z-30 transition-transform duration-300 ease-in-out lg:translate-x-0"
+<aside class="bg-base-200 w-64 h-full overflow-y-auto fixed left-0 top-0 bottom-0 z-[100] transition-transform duration-300 ease-in-out lg:translate-x-0"
        class:translate-x-0={isOpen}
        class:-translate-x-full={!isOpen && mounted}>
     <nav class="flex h-full flex-col justify-between p-4">
@@ -143,5 +143,5 @@
 
 <!-- Overlay for mobile -->
 {#if isOpen}
-    <div class="fixed inset-0 bg-black bg-opacity-50 z-20 lg:hidden" on:click={() => isOpen = false}></div>
+    <button class="fixed inset-0 bg-black bg-opacity-50 z-[99] lg:hidden" on:click={() => isOpen = false}></button>
 {/if}

@@ -37,6 +37,7 @@
                 const { metadata } = await module();
                 const pathParts = path.split("/");
                 const category = pathParts[pathParts.length - 3];
+                path = path.replace("/src/routes", "");
                 return { ...metadata, category, path };
             }),
         );
@@ -78,7 +79,7 @@
     function scrollContainer(containerId, scrollAmount) {
         const container = document.getElementById(containerId);
         if (container) {
-            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            container.scrollBy({ left: scrollAmount, behavior: "smooth" });
             updateButtonVisibility(containerId);
         }
     }
@@ -87,9 +88,10 @@
         const container = document.getElementById(containerId);
         const { scrollLeft, scrollWidth, clientWidth } = container;
 
-        const index = parseInt(containerId.split('-')[2]);
+        const index = parseInt(containerId.split("-")[2]);
         scrollButtonVisibility[index].left = scrollLeft > 0;
-        scrollButtonVisibility[index].right = scrollLeft < (scrollWidth - clientWidth);
+        scrollButtonVisibility[index].right =
+            scrollLeft < scrollWidth - clientWidth;
     }
 
     function updateAllButtonVisibility() {
@@ -129,15 +131,17 @@
                 {#if scrollButtonVisibility[index]?.left}
                     <button
                         class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg items-center justify-center"
-                        on:click={() => scrollContainer(`scroll-container-${index}`, -450)}>
+                        on:click={() =>
+                            scrollContainer(`scroll-container-${index}`, -450)}>
                         <ArrowLeft />
                     </button>
                 {/if}
                 <div
                     id={`scroll-container-${index}`}
                     class="scroll-container flex space-x-4 overflow-x-auto flex-nowrap scrollbar-hide"
-                    on:scroll={() => updateButtonVisibility(`scroll-container-${index}`)}>
-                    {#each category.quizzes as quiz}
+                    on:scroll={() =>
+                        updateButtonVisibility(`scroll-container-${index}`)}>
+                    {#each category.quizzes as quiz (quiz.path)}
                         <div
                             class="card w-64 bg-base-200 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300">
                             <div class="card-body flex flex-col h-full">
@@ -155,7 +159,8 @@
                                         region={quiz.region}
                                         zoom={quiz.zoom}
                                         width={192}
-                                        height={120} />
+                                        height={120}
+                                        key={quiz.path} />
                                 </div>
                                 <div class="card-actions justify-end mt-auto">
                                     <a
@@ -173,12 +178,25 @@
                 {#if scrollButtonVisibility[index]?.right}
                     <button
                         class="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg items-center justify-center"
-                        on:click={() => scrollContainer(`scroll-container-${index}`, 450)}>
+                        on:click={() =>
+                            scrollContainer(`scroll-container-${index}`, 450)}>
                         <ArrowRight />
                     </button>
                 {/if}
-                    <div class="fade-left transition-opacity {scrollButtonVisibility[index]?.left ? "opacity-100" : "opacity-0"}"></div>
-                    <div class="fade-right transition-opacity {scrollButtonVisibility[index]?.right ? "opacity-100" : "opacity-0"}"></div>
+                <div
+                    class="fade-left transition-opacity {scrollButtonVisibility[
+                        index
+                    ]?.left
+                        ? 'opacity-100'
+                        : 'opacity-0'}">
+                </div>
+                <div
+                    class="fade-right transition-opacity {scrollButtonVisibility[
+                        index
+                    ]?.right
+                        ? 'opacity-100'
+                        : 'opacity-0'}">
+                </div>
             </div>
         </div>
     {/each}
@@ -207,9 +225,13 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100px; 
+        width: 100px;
         height: 100%;
-        background: linear-gradient(to right, oklch(var(--b1)), rgba(255, 255, 255, 0));
+        background: linear-gradient(
+            to right,
+            oklch(var(--b1)),
+            rgba(255, 255, 255, 0)
+        );
         pointer-events: none;
         z-index: 10; /* Ensure it appears above the scroll container */
     }
@@ -220,7 +242,11 @@
         right: 0;
         width: 100px;
         height: 100%;
-        background: linear-gradient(to left, oklch(var(--b1)), rgba(255, 255, 255, 0));
+        background: linear-gradient(
+            to left,
+            oklch(var(--b1)),
+            rgba(255, 255, 255, 0)
+        );
         pointer-events: none; /* Prevent interaction */
         z-index: 10; /* Ensure it appears above the scroll container */
     }
