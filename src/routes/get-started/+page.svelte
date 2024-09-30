@@ -118,7 +118,7 @@
     <p class="mb-6">
         Quizzes on OpenGuessr Education are a great way to test your knowledge
         of different countries. In these quizzes, you'll for example be
-        presented with a country name and have to select it on the map. Quizzes help you memorize country names, states and country shapes. To start a quiz, visit the <a
+        presented with a country name and have to select it on the map. Quizzes help you memorize country names, shapes, states, flags, cities and more depending on the quiz type. To start a quiz, visit the <a
             href="/quiz"
             class="text-secondary">Quizzes</a> page.
     </p>
@@ -130,8 +130,7 @@
             >Guides</a> section. Guides are packed with tips and tricks to help you
         become the next Rainbolt. They are frequently updated, so you'll always have
         the latest strategies at your fingertips. Whether you're looking to score
-        more 5ks or just want to learn how to notice important clues in street view
-        images, these guides have got you covered.
+        more 5ks, win more duels or want to learn how to use the compass effectively, these guides have got you covered.
     </p>
 
     <h3 class="text-xl font-semibold mb-2">Join the Community</h3>
@@ -141,8 +140,8 @@
             href="https://discord.com/invite/CSc3MbDrZ8"
             target="_blank"
             class="text-secondary">Discord Server</a> to participate in discussions,
-        share tips, and compete in challenges. It's like a virtual hangout for geography
-        nerds.
+        share tips, and compete in challenges. It's a virtual hangout for geography
+        nerds - chances are, you'll like it there!
     </p>
 
     <h3 class="text-2xl font-semibold mb-4">Frequently Asked Questions</h3>
@@ -174,9 +173,9 @@
             <div class="collapse-content">
                 <p>
                     Improving your geoguessing skills takes practice and
-                    attention to detail. Use these <a
+                    attention to detail.<a
                         href="/guides"
-                        class="text-secondary">Guides</a> to learn about common clues
+                        class="text-secondary">Guides</a> on OpenGuessr Education help you learn about common clues
                     and strategies. Playing regularly and reviewing your guesses
                     will also help you get better over time. Remember, practice makes
                     perfect!

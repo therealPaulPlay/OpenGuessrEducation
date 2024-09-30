@@ -51,7 +51,6 @@
             const response = await fetch("src/lib/json/countries-110m.json");
             const topology = await response.json();
             const featureData = feature(topology, topology.objects.countries);
-            console.log(featureData);
             return featureData;
         } catch(error) {
             console.error("Error fetching topo json:", error);
@@ -98,9 +97,6 @@
                 ) {
                     const d = path(feature);
                     if (d) {
-                        console.log(
-                            `Generated path for ${feature.properties.name}`,
-                        );
                         return {
                             ...feature,
                             uniqueKey: `feature-${index}-${feature.properties.name || "unnamed"}`,

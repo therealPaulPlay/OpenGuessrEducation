@@ -146,10 +146,10 @@
                             class="card w-64 bg-base-200 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300">
                             <div class="card-body flex flex-col h-full">
                                 <div class="flex-grow">
-                                    <h3 class="card-title text-lg mb-4">
+                                    <h3 class="card-title text-lg mb-6 h-10">
                                         {quiz.title}
                                     </h3>
-                                    <div class="flex flex-wrap gap-2 mt-2 mb-4">
+                                    <div class="flex flex-wrap gap-2 mb-2">
                                         {#each quiz.tags || [] as tag}
                                             <span class="badge badge-accent"
                                                 >{tag}</span>
@@ -168,7 +168,7 @@
                                             "/+page.svelte",
                                             "",
                                         )}
-                                        class="btn btn-secondary btn-sm"
+                                        class="btn btn-secondary btn-md -mb-1 mt-2"
                                         >Start Quiz</a>
                                 </div>
                             </div>
