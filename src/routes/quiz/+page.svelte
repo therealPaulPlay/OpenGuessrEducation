@@ -19,6 +19,7 @@
 
     let quizCategories = [];
     let selectedTags = new Set();
+    let scrollButtonVisibility = [];
 
     $: filteredQuizCategories = quizCategories.map((category) => ({
         ...category,
@@ -35,7 +36,7 @@
             Object.entries(modules).map(async ([path, module]) => {
                 const { metadata } = await module();
                 const pathParts = path.split("/");
-                const category = pathParts[pathParts.length - 3]; // Assuming /quiz/category/quiz-name/+page.svelte structure
+                const category = pathParts[pathParts.length - 3];
                 return { ...metadata, category, path };
             }),
         );
@@ -46,6 +47,15 @@
                 (quiz) => quiz.category === category.folder,
             ),
         }));
+
+        // Initialize button visibility
+        scrollButtonVisibility = quizCategories.map(() => ({
+            left: false,
+            right: false,
+        }));
+
+        // Delay visibility update to ensure elements are rendered
+        setTimeout(updateAllButtonVisibility, 100);
     });
 
     function toggleTag(tag) {
@@ -64,6 +74,29 @@
             ),
         ),
     ];
+
+    function scrollContainer(containerId, scrollAmount) {
+        const container = document.getElementById(containerId);
+        if (container) {
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            updateButtonVisibility(containerId);
+        }
+    }
+
+    function updateButtonVisibility(containerId) {
+        const container = document.getElementById(containerId);
+        const { scrollLeft, scrollWidth, clientWidth } = container;
+
+        const index = parseInt(containerId.split('-')[2]);
+        scrollButtonVisibility[index].left = scrollLeft > 0;
+        scrollButtonVisibility[index].right = scrollLeft < (scrollWidth - clientWidth);
+    }
+
+    function updateAllButtonVisibility() {
+        quizCategories.forEach((_, index) => {
+            updateButtonVisibility(`scroll-container-${index}`);
+        });
+    }
 </script>
 
 <article class="container mx-auto p-6">
@@ -85,6 +118,7 @@
             {/each}
         </div>
     </div>
+
     {#each filteredQuizCategories as category, index}
         <div class="mb-12">
             <h2 class="text-3xl font-semibold mb-4 flex items-center">
@@ -92,17 +126,17 @@
                 {category.name}
             </h2>
             <div class="relative">
-                <button
-                    id="left-button-{index}"
-                    class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg hidden items-center justify-center">
-                    <ArrowLeft />
-                </button>
+                {#if scrollButtonVisibility[index]?.left}
+                    <button
+                        class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg items-center justify-center"
+                        on:click={() => scrollContainer(`scroll-container-${index}`, -450)}>
+                        <ArrowLeft />
+                    </button>
+                {/if}
                 <div
-                    id="left-fade-{index}"
-                    class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-base-100 to-transparent z-10 pointer-events-none opacity-0 transition-opacity duration-300"></div>
-                </div>
-                <div
-                    class="scroll-container flex space-x-4 overflow-x-auto flex-nowrap scrollbar-hide">
+                    id={`scroll-container-${index}`}
+                    class="scroll-container flex space-x-4 overflow-x-auto flex-nowrap scrollbar-hide"
+                    on:scroll={() => updateButtonVisibility(`scroll-container-${index}`)}>
                     {#each category.quizzes as quiz}
                         <div
                             class="card w-64 bg-base-200 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300">
@@ -136,16 +170,17 @@
                         </div>
                     {/each}
                 </div>
-                <div
-                    id="right-fade-{index}"
-                    class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-base-100 to-transparent z-10 pointer-events-none opacity-0 transition-opacity duration-300">
-                </div>
-                <button
-                    id="right-button-{index}"
-                    class="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg hidden items-center justify-center">
-                    <ArrowRight />
-                </button>
+                {#if scrollButtonVisibility[index]?.right}
+                    <button
+                        class="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg items-center justify-center"
+                        on:click={() => scrollContainer(`scroll-container-${index}`, 450)}>
+                        <ArrowRight />
+                    </button>
+                {/if}
+                    <div class="fade-left transition-opacity {scrollButtonVisibility[index]?.left ? "opacity-100" : "opacity-0"}"></div>
+                    <div class="fade-right transition-opacity {scrollButtonVisibility[index]?.right ? "opacity-100" : "opacity-0"}"></div>
             </div>
+        </div>
     {/each}
 </article>
 
@@ -154,17 +189,42 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
+
     .scrollbar-hide::-webkit-scrollbar {
         display: none;
     }
+
     .scroll-container {
         padding: 35px 15px;
         padding-top: 20px;
-        margin-left: -15px;
         overflow-x: auto;
         overflow-y: visible;
         white-space: nowrap;
+        position: relative; /* Add this for positioning the fade effects */
     }
+
+    .fade-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px; 
+        height: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        pointer-events: none;
+        z-index: 10; /* Ensure it appears above the scroll container */
+    }
+
+    .fade-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100%;
+        background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        pointer-events: none; /* Prevent interaction */
+        z-index: 10; /* Ensure it appears above the scroll container */
+    }
+
     .card {
         display: inline-block;
         vertical-align: top;
