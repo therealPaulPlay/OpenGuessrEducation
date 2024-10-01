@@ -8,7 +8,7 @@
         Building2,
     } from "lucide-svelte";
     import { onMount } from "svelte";
-    import QuizMap from "$lib/components/QuizMap.svelte";
+    import QuizCard from "$lib/components/QuizCard.svelte";
 
     const categories = [
         { name: "Countries", icon: Globe, folder: "countries" },
@@ -85,13 +85,17 @@
     }
 
     function updateButtonVisibility(containerId) {
-        const container = document.getElementById(containerId);
-        const { scrollLeft, scrollWidth, clientWidth } = container;
+        try {
+            const container = document.getElementById(containerId);
+            const { scrollLeft, scrollWidth, clientWidth } = container;
 
-        const index = parseInt(containerId.split("-")[2]);
-        scrollButtonVisibility[index].left = scrollLeft > 0;
-        scrollButtonVisibility[index].right =
-            scrollLeft < scrollWidth - clientWidth;
+            const index = parseInt(containerId.split("-")[2]);
+            scrollButtonVisibility[index].left = scrollLeft > 0;
+            scrollButtonVisibility[index].right =
+                scrollLeft < scrollWidth - clientWidth;
+        } catch (error) {
+            console.error("Error in updateButtonVisability:", error);
+        }
     }
 
     function updateAllButtonVisibility() {
@@ -142,37 +146,12 @@
                     on:scroll={() =>
                         updateButtonVisibility(`scroll-container-${index}`)}>
                     {#each category.quizzes as quiz (quiz.path)}
-                        <div
-                            class="card w-64 bg-base-200 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300">
-                            <div class="card-body flex flex-col h-full">
-                                <div class="flex-grow">
-                                    <h3 class="card-title text-lg mb-6 h-10">
-                                        {quiz.title}
-                                    </h3>
-                                    <div class="flex flex-wrap gap-2 mb-2">
-                                        {#each quiz.tags || [] as tag}
-                                            <span class="badge badge-accent"
-                                                >{tag}</span>
-                                        {/each}
-                                    </div>
-                                    <QuizMap
-                                        region={quiz.region}
-                                        zoom={quiz.zoom}
-                                        width={192}
-                                        height={120}
-                                        key={quiz.path} />
-                                </div>
-                                <div class="card-actions justify-end mt-auto">
-                                    <a
-                                        href={quiz.path.replace(
-                                            "/+page.svelte",
-                                            "",
-                                        )}
-                                        class="btn btn-secondary btn-md -mb-1 mt-2"
-                                        >Start Quiz</a>
-                                </div>
-                            </div>
-                        </div>
+                        <QuizCard
+                            title={quiz.title}
+                            tags={quiz.tags || []}
+                            region={quiz.region}
+                            zoom={quiz.zoom}
+                            path={quiz.path} />
                     {/each}
                 </div>
                 {#if scrollButtonVisibility[index]?.right}
@@ -249,11 +228,5 @@
         );
         pointer-events: none; /* Prevent interaction */
         z-index: 10; /* Ensure it appears above the scroll container */
-    }
-
-    .card {
-        display: inline-block;
-        vertical-align: top;
-        white-space: normal;
     }
 </style>

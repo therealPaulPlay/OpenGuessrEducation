@@ -1,0 +1,34 @@
+<script>
+    import QuizMap from "./QuizMap.svelte";
+    export let title = "Default title";
+    export let region = "";
+    export let zoom = 1;
+    export let width = 192;
+    export let height = 120;
+    export let path;
+    export let tags = [];
+</script>
+
+<div
+    class="card w-64 bg-base-200 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300">
+    <div class="card-body flex flex-col h-full">
+        <div class="flex-grow">
+            <h3 class="card-title text-lg mb-6 h-10">
+                {title}
+            </h3>
+            <div class="flex flex-wrap gap-2 mb-2">
+                {#each tags || [] as tag}
+                    <span class="badge badge-accent">{tag}</span>
+                {/each}
+            </div>
+            <!-- region={region} is the same as {region}, that's a shorthand for when var name + assignment match -->
+            <QuizMap {region} {zoom} {width} {height} />
+        </div>
+        <div class="card-actions justify-end mt-auto">
+            <a
+                href={path.replace("/+page.svelte", "")}
+                class="btn btn-secondary btn-md -mb-1 mt-2">Start Quiz</a>
+        </div>
+    </div>
+</div>
+

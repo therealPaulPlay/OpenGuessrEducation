@@ -48,7 +48,7 @@
 
     async function fetchTopoJSON() {
         try {
-            const response = await fetch("src/lib/json/countries-110m.json");
+            const response = await fetch("/src/lib/json/countries-110m.json");
             const topology = await response.json();
             const featureData = feature(topology, topology.objects.countries);
             return featureData;
@@ -59,7 +59,7 @@
 
     async function fetchContinentCountries() {
         try {
-            const regionCountryData = await fetch("src/lib/json/continent-countries.json");
+            const regionCountryData = await fetch("/src/lib/json/continent-countries.json");
             const regionCountries = await regionCountryData.json();
             return regionCountries;
         } catch(error) {
@@ -117,7 +117,6 @@
 
     function highlightCountries() {
         const countries = regionCountries[region] || [region];
-        console.log(`Highlighted countries for region ${region}:`, countries);
         return countries;
     }
 
