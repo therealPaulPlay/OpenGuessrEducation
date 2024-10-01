@@ -66,6 +66,7 @@
         // Listen for theme changes by observing the data-theme attribute
         const observer = new MutationObserver(() => {
             globe.globeImageUrl(getThemeTexture());
+            }
         });
 
         // Observe changes to the attributes of the html element
