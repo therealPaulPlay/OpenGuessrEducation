@@ -125,7 +125,7 @@
     class="globe-container w-full flex justify-center items-center rounded-xl"
     bind:this={globeElement}>
     {#if isLoading}
-        <div class="loading loading-spinner loading-lg"></div>
+        <div class="loading loading-spinner loading-lg text-base-200"></div>
     {/if}
 </div>
 
