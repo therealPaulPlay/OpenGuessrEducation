@@ -156,7 +156,7 @@
         </div>
     </div>
 
-    <div class="stats shadow w-full mb-12 bg-base-200">
+    <div class="stats outline outline-1 outline-base-300 w-full mb-12">
         <div class="stat">
             <div class="stat-figure text-secondary">
                 <Users size={36} />

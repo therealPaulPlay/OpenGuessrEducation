@@ -31,7 +31,7 @@
     }));
 
     onMount(async () => {
-        const modules = import.meta.glob("/src/routes/quiz/**/*.svelte");
+        const modules = import.meta.glob("/src/routes/quiz/play/**/*.svelte");
         const quizzes = await Promise.all(
             Object.entries(modules).map(async ([path, module]) => {
                 const { metadata } = await module();
@@ -42,6 +42,7 @@
             }),
         );
 
+        // add matching quizzes to each category
         quizCategories = categories.map((category) => ({
             ...category,
             quizzes: quizzes.filter(
