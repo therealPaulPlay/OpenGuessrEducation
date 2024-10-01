@@ -13,7 +13,7 @@
     class="card w-64 bg-base-200 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300">
     <div class="card-body flex flex-col h-full">
         <div class="flex-grow">
-            <h3 class="card-title text-lg mb-6 h-10">
+            <h3 class="card-title text-xl mb-6 text-wrap h-10 items-start">
                 {title}
             </h3>
             <div class="flex flex-wrap gap-2 mb-2">
