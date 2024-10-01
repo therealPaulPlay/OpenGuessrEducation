@@ -93,7 +93,7 @@
             .map((feature, index) => {
                 if (
                     highlightedCountries.includes(feature.properties.name) ||
-                    region === "World"
+                    (region === "World" || region === "All")
                 ) {
                     const d = path(feature);
                     if (d) {

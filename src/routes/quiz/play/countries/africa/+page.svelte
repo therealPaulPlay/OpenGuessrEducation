@@ -1,18 +1,11 @@
 <script context="module">
-    import { quizMetadata } from "$lib/stores/quizMetadataStore.js";
-
-    // Determine the category from the module URL
-    const modulePath = new URL(import.meta.url).pathname;
-    const pathParts = modulePath.split("/");
-    const category = pathParts[pathParts.length - 3];
+    import { determineCategory } from "$lib/utils/quizMetadataHelper.js";
 
     export const metadata = {
         title: "African Countries",
         tags: ["Africa"],
         region: "Africa",
         zoom: 1,
-        category: category
-    };
-
-    quizMetadata.set(metadata);
+        category: determineCategory(new URL(import.meta.url).pathname)
+    }
 </script>

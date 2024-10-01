@@ -172,7 +172,7 @@
             </div>
             <div class="stat-title">Countries Covered</div>
             <div class="stat-value text-secondary">83</div>
-            <div class="stat-desc">Out of 83 countries with Street View</div>
+            <div class="stat-desc">Out of 83 countries with Street View.</div>
         </div>
 
         <div class="stat">
@@ -181,7 +181,7 @@
             </div>
             <div class="stat-title">Cost</div>
             <div class="stat-value text-secondary">Free</div>
-            <div class="stat-desc">OpenGuessr is committed to being free</div>
+            <div class="stat-desc">OpenGuessr is committed to being free.</div>
         </div>
     </div>
 

@@ -2,9 +2,9 @@
     import { determineCategory } from "$lib/utils/quizMetadataHelper.js";
 
     export const metadata = {
-        title: "Oceanian Countries",
-        tags: ["Oceania"],
-        region: "Oceania",
+        title: "US States",
+        tags: ["North America"],
+        region: "North America",
         zoom: 1,
         category: determineCategory(new URL(import.meta.url).pathname)
     }
