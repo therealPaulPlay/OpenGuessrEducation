@@ -3,6 +3,7 @@
   import { quizMetadata } from "$lib/stores/quizMetadataStore.js";
   import { ArrowLeftIcon } from "lucide-svelte";
   import QuizCard from "$lib/components/QuizCard.svelte";
+  import QuizMap from "$lib/components/QuizMap.svelte";
 
   // subscribe to quiz metadata store
   let metadata;
@@ -18,7 +19,7 @@
 
   onMount(async () => {
     const modules = import.meta.glob("/src/routes/quiz/play/**/*.svelte");
-    
+
     quizzes = await Promise.all(
       Object.entries(modules).map(async ([path, module]) => {
         const quizModule = await module();
@@ -33,9 +34,10 @@
     quizzes.forEach((quiz) => {
       try {
         let similarityScore = 0;
-        
+
         // If the quiz has the same category as the current quiz, increase its similarity
-        similarityScore = quiz.category == metadata.category ? similarityScore + 2 : 0;
+        similarityScore =
+          quiz.category == metadata.category ? similarityScore + 2 : 0;
 
         // For each tag that the quiz shares with the current quiz, increase its similarity
         metadata.tags.forEach((tag) => {
@@ -85,12 +87,13 @@
       <p>No quizzes available.</p>
     {:else}
       {#each quizzesWithSimilarityScore as quiz (quiz.path)}
-        <QuizCard
-          title={quiz.title}
-          tags={quiz.tags || []}
-          region={quiz.region}
-          zoom={quiz.zoom}
-          path={quiz.path} />
+        <QuizCard title={quiz.title} tags={quiz.tags || []} path={quiz.path}>
+          <QuizMap
+            region={quiz.region}
+            zoom={quiz.zoom}
+            width={192}
+            height={120} />
+        </QuizCard>
       {/each}
     {/if}
   </div>

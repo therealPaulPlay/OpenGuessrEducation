@@ -1,18 +1,23 @@
 <script>
-    import { onMount } from "svelte";
+    import { onMount, onDestroy } from "svelte";
 
     let globeElement;
     let globe;
+    let isLoading = true;
+    let isVisible = false;
+    let observer;
 
-    onMount(async () => {
+    // Function to determine the current globe texture based on the data-theme attribute
+    const getThemeTexture = () => {
+        return document.documentElement.getAttribute("data-theme") === "dark"
+            ? "/src/lib/assets/earth_dark.jpg" // Dark mode texture
+            : "/src/lib/assets/earth_light.jpg"; // Light mode texture
+    };
+
+    const loadGlobe = async () => {
+        if (!isVisible || globe) return;
+
         const Globe = (await import("globe.gl")).default;
-
-        // Function to determine the current globe texture based on the data-theme attribute
-        const getThemeTexture = () => {
-            return document.documentElement.getAttribute('data-theme') === 'dark'
-                ? "/src/lib/assets/earth_dark.jpg" // Dark mode texture
-                : "/src/lib/assets/earth_light.jpg"; // Light mode texture
-        };
 
         globe = Globe()
             .globeImageUrl(getThemeTexture())
@@ -45,11 +50,10 @@
             })
             .onPolygonClick((clickedCountry) => {
                 if (clickedCountry) {
-                    const countryName =
-                        clickedCountry.properties.NAME.toLowerCase().replace(
-                            / /g,
-                            "-",
-                        );
+                    const countryName = clickedCountry.properties.NAME.toLowerCase().replace(
+                        / /g,
+                        "-",
+                    );
                     window.location.href = `/countries/${countryName}`;
                 }
             });
@@ -60,30 +64,75 @@
         globe.controls().enableZoom = false;
 
         // Apply low-poly effect
-        globe
-            .polygonStrokeColor(() => "#111");
+        globe.polygonStrokeColor(() => "#111");
 
-        // Listen for theme changes by observing the data-theme attribute
-        const observer = new MutationObserver(() => {
-            globe.globeImageUrl(getThemeTexture());
+        isLoading = false;
+    };
+
+    const cleanupGlobe = () => {
+        if (globe) {
+            globe.pauseAnimation();
+            globe.controls().dispose();
+            globe._destructor();
+            globe = null;
+        }
+        if (globeElement) {
+            while (globeElement.firstChild) {
+                globeElement.removeChild(globeElement.firstChild);
+            }
+        }
+        isLoading = true;
+    };
+
+    onMount(() => {
+        observer = new IntersectionObserver(
+            ([entry]) => {
+                isVisible = entry.isIntersecting;
+                if (isVisible) {
+                    loadGlobe();
+                }
+            },
+            { threshold: 0.1 },
+        );
+
+        if (globeElement) {
+            observer.observe(globeElement);
+        }
+
+        // Theme change observer
+        const themeObserver = new MutationObserver(() => {
+            if (globe) {
+                globe.globeImageUrl(getThemeTexture());
             }
         });
 
-        // Observe changes to the attributes of the html element
-        observer.observe(document.documentElement, { attributes: true });
+        themeObserver.observe(document.documentElement, { attributes: true });
+
+        return () => {
+            themeObserver.disconnect();
+        };
+    });
+
+    onDestroy(() => {
+        if (observer) {
+            observer.disconnect();
+        }
+        cleanupGlobe();
     });
 </script>
 
 <div
     class="globe-container w-full flex justify-center items-center rounded-xl"
     bind:this={globeElement}>
+    {#if isLoading}
+        <div class="loading loading-spinner loading-lg"></div>
+    {/if}
 </div>
 
 <style>
     .globe-container {
         height: 400px;
     }
-
     :global(.scene-container) {
         background-color: transparent !important;
     }

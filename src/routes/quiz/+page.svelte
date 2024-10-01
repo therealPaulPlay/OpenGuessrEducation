@@ -9,6 +9,7 @@
     } from "lucide-svelte";
     import { onMount } from "svelte";
     import QuizCard from "$lib/components/QuizCard.svelte";
+    import QuizMap from "$lib/components/QuizMap.svelte";
 
     const categories = [
         { name: "Countries", icon: Globe, folder: "countries" },
@@ -150,9 +151,13 @@
                         <QuizCard
                             title={quiz.title}
                             tags={quiz.tags || []}
-                            region={quiz.region}
-                            zoom={quiz.zoom}
-                            path={quiz.path} />
+                            path={quiz.path}>
+                            <QuizMap
+                                region={quiz.region}
+                                zoom={quiz.zoom}
+                                width={192}
+                                height={120} />
+                        </QuizCard>
                     {/each}
                 </div>
                 {#if scrollButtonVisibility[index]?.right}

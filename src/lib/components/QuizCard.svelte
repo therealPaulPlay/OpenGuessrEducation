@@ -1,10 +1,5 @@
 <script>
-    import QuizMap from "./QuizMap.svelte";
     export let title = "Default title";
-    export let region = "";
-    export let zoom = 1;
-    export let width = 192;
-    export let height = 120;
     export let path;
     export let tags = [];
 </script>
@@ -21,8 +16,7 @@
                     <span class="badge badge-accent">{tag}</span>
                 {/each}
             </div>
-            <!-- region={region} is the same as {region}, that's a shorthand for when var name + assignment match -->
-            <QuizMap {region} {zoom} {width} {height} />
+            <slot />
         </div>
         <div class="card-actions justify-end mt-auto">
             <a
