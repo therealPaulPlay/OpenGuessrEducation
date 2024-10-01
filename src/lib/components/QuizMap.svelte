@@ -15,6 +15,8 @@
     let selectedFeature = null; // To keep track of the selected feature
     let regionCountries;
 
+    let loaded = false;
+
     const regionBounds = {
         World: [
             [-180, -90],
@@ -52,17 +54,19 @@
             const topology = await response.json();
             const featureData = feature(topology, topology.objects.countries);
             return featureData;
-        } catch(error) {
+        } catch (error) {
             console.error("Error fetching topo json:", error);
         }
     }
 
     async function fetchContinentCountries() {
         try {
-            const regionCountryData = await fetch("/src/lib/json/continent-countries.json");
+            const regionCountryData = await fetch(
+                "/src/lib/json/continent-countries.json",
+            );
             const regionCountries = await regionCountryData.json();
             return regionCountries;
-        } catch(error) {
+        } catch (error) {
             console.error("Error fetching continent country json:", error);
         }
     }
@@ -93,7 +97,8 @@
             .map((feature, index) => {
                 if (
                     highlightedCountries.includes(feature.properties.name) ||
-                    (region === "World" || region === "All")
+                    region === "World" ||
+                    region === "All"
                 ) {
                     const d = path(feature);
                     if (d) {
@@ -124,36 +129,44 @@
     onMount(async () => {
         const geoData = await fetchTopoJSON();
         regionCountries = await fetchContinentCountries();
-
+        
         if (geoData && regionCountries) {
             features = geoData.features;
             updateProjection();
             generatePaths();
+            loaded = true;
         }
     });
 </script>
 
-<div class="map-container rounded-xl" style="width: {width}px; height: {height}px;">
-    <svg
-        bind:this={svgElement}
-        {width}
-        {height}
-        viewBox={`0 0 ${width} ${height}`}>
-        <rect {width} {height} fill="oklch(var(--b3))" />
-        <g>
-            {#each features as feature (feature.uniqueKey)}
-                <!-- svelte-ignore a11y-click-events-have-key-events -->
-                <!-- svelte-ignore a11y-no-static-element-interactions -->
-                <path
-                    d={feature.d}
-                    fill="oklch(var(--s))"
-                    stroke="oklch(var(--b3))"
-                    stroke-width="0.5"
-                    vector-effect="non-scaling-stroke"
-                    on:click={() => handleCountryClick(feature)} />
-            {/each}
-        </g>
-    </svg>
+<div
+    class="map-container rounded-xl"
+    style="width: {width}px; height: {height}px;">
+    {#if !loaded}
+        <div class="skeleton w-full h-full opacity-75"></div>
+    {:else}
+        <svg
+            bind:this={svgElement}
+            {width}
+            {height}
+            viewBox={`0 0 ${width} ${height}`}
+            class="{loaded ? "opacity-100" : "opacity-0"} transition-opacity duration-300">
+            <rect {width} {height} fill="oklch(var(--b3))" />
+            <g>
+                {#each features as feature (feature.uniqueKey)}
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
+                    <!-- svelte-ignore a11y-no-static-element-interactions -->
+                    <path
+                        d={feature.d}
+                        fill="oklch(var(--s))"
+                        stroke="oklch(var(--b3))"
+                        stroke-width="0.5"
+                        vector-effect="non-scaling-stroke"
+                        on:click={() => handleCountryClick(feature)} />
+                {/each}
+            </g>
+        </svg>
+    {/if}
 </div>
 
 <style>

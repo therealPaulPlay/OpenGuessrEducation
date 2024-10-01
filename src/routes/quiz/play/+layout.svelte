@@ -33,8 +33,6 @@
       }),
     );
 
-    console.log(metadata.category);
-
     // Calculate similarity scores for other quizzes
     quizzes.forEach((quiz) => {
       try {
