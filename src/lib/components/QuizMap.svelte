@@ -223,7 +223,7 @@
     });
 </script>
 
-<div class="map-container rounded-xl" style="width: w-full; height: w-full;" id="mapContainer">
+<div class="map-container rounded-lg" style="width: w-full; height: w-full;" id="mapContainer">
     {#if !loaded}
         <div class="skeleton w-full h-full opacity-75"></div>
     {:else}
