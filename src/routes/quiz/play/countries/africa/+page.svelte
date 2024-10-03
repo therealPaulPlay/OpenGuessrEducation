@@ -14,5 +14,4 @@
 <QuizMapGame
     region={metadata.region}
     zoom={metadata.zoom}
-    geoJsonPath={metadata.geoJsonPath}
 />

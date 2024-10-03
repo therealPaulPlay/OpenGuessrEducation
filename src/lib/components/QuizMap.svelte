@@ -11,6 +11,7 @@
     export let height = 400; // Height of the map
     export let interactive = false;
     export let highlightedFeature = null;
+    export let drawSurrounding = false; // New prop to control whether to draw surrounding countries
 
     let svgElement;
     let features = [];
@@ -90,9 +91,7 @@
 
     async function fetchContinentCountries() {
         try {
-            const regionCountryData = await fetch(
-                "/src/lib/json/regions.json",
-            );
+            const regionCountryData = await fetch("/src/lib/json/regions.json");
             const regionCountries = await regionCountryData.json();
             return regionCountries;
         } catch (error) {
@@ -124,23 +123,31 @@
         const highlightedCountries = highlightCountries();
         features = features
             .map((feature, index) => {
-                if (
+                const isHighlighted =
                     highlightedCountries.includes(feature.properties.name) ||
                     region === "World" ||
-                    region === "All"
-                ) {
-                    const d = path(feature);
-                    if (d) {
-                        return {
-                            ...feature,
-                            uniqueKey: `feature-${index}-${feature.properties.name || "unnamed"}`,
-                            d,
-                        };
-                    }
+                    region === "All";
+                const d = path(feature);
+                if (d) {
+                    return {
+                        ...feature,
+                        uniqueKey: `feature-${index}-${feature.properties.name || "unnamed"}`,
+                        d,
+                        color: isHighlighted
+                            ? feature.color || "oklch(var(--s))" // Highlighted countries use the normal color
+                            : drawSurrounding
+                              ? "rgba(125,125,125, 0.2)"
+                              : null, // Surrounding countries get the base color if drawSurrounding is true
+                    };
                 }
                 return null; // Filter out invalid paths
             })
-            .filter(Boolean);
+            .filter(
+                (feature) =>
+                    feature &&
+                    (drawSurrounding ||
+                        highlightedCountries.includes(feature.properties.name)),
+            );
     }
 
     function highlightCountries() {

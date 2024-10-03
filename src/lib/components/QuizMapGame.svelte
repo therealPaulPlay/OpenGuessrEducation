@@ -12,7 +12,6 @@
 
     export let region = "World";
     export let zoom = 1;
-    export let geoJsonPath = "/src/lib/json/geojson-world-110m.json";
 
     let quizMap;
     let features = [];
@@ -223,8 +222,9 @@
             bind:this={quizMap}
             {region}
             {zoom}
+            drawSurrounding={true}
             on:click={handleMapClick}
-            interactive={gameMode === "click"}
+            interactive={true}
             {highlightedFeature} />
     </div>
 

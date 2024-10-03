@@ -160,7 +160,8 @@
                                 region={quiz.region}
                                 zoom={quiz.zoom}
                                 width={192}
-                                height={120} />
+                                height={120}
+                                drawSurrounding={true} />
                         </QuizCard>
                     {/each}
                 </div>
