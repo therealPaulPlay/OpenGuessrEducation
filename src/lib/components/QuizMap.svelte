@@ -7,8 +7,8 @@
 
     export let region = "World";
     export let zoom = 1;
-    export let width = 800; // Width of the map
-    export let height = 400; // Height of the map
+    export let width = 800;
+    export let height = 400;
     export let interactive = false;
     export let highlightedFeature = null;
 
@@ -16,12 +16,17 @@
     let features = [];
     let projection = geoMercator();
     let path = geoPath().projection(projection);
-    let selectedFeature = null; // To keep track of the selected feature
+    let selectedFeature = null;
     let regionCountries;
+    let translateX = 0;
+    let translateY = 0;
 
     let loaded = false;
 
     const dispatch = createEventDispatcher();
+
+    const MIN_ZOOM = 0.5;
+    const MAX_ZOOM = 10;
 
     const regionBounds = {
         World: [
@@ -107,12 +112,11 @@
         const x = (x0 + x1) / 2;
         const y = (y0 + y1) / 2;
 
-        // Update the scale to ensure proper visibility
         const scale = Math.min(width / dx, height / dy) * 0.8 * zoom * 70;
 
         projection
             .scale(scale)
-            .translate([width / 2, height / 2])
+            .translate([translateX, translateY])
             .center([x, y]);
 
         path = geoPath().projection(projection);
@@ -133,16 +137,13 @@
                         uniqueKey: `feature-${index}-${feature.properties.name || "unnamed"}`,
                         d,
                         color: isHighlighted
-                            ? feature.color || "oklch(var(--s))" // Highlighted countries use the normal color
-                            : "rgba(125,125,125, 0.2)"
+                            ? feature.color || "oklch(var(--s))"
+                            : "rgba(125,125,125, 0.2)",
                     };
                 }
-                return null; // Filter out invalid paths
+                return null;
             })
-            .filter(
-                (feature) =>
-                    feature,
-            );
+            .filter((feature) => feature);
     }
 
     function highlightCountries() {
@@ -150,29 +151,88 @@
         return countries;
     }
 
-    // Load the map on mount
+    let rect;
+    let mapContainer;
+
+    function handleZoom(event) {
+        if (!interactive) return;
+        event.preventDefault();
+
+        if (!rect) rect = svgElement.getBoundingClientRect();
+
+        // Get cursor position relative to the SVG container
+        const cursorX = event.clientX - rect.left;
+        const cursorY = event.clientY - rect.top;
+
+        // Determine the zoom direction and factor
+        const direction = event.deltaY > 0 ? -1 : 1; // Invert scroll direction for natural zoom
+        const zoomFactor = Math.exp(direction * 0.1); // Smaller zoom factor for better control
+
+        // Save the old zoom level before applying the new zoom
+        const oldZoom = zoom;
+
+        // Update zoom level, clamping within defined limits
+        zoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, zoom * zoomFactor));
+
+        // Calculate the new scale after zooming
+        const scaleChange = zoom / oldZoom;
+
+        // Adjust translation to keep the point under the mouse fixed in geographical coordinates
+        translateX -= (cursorX - translateX) * (scaleChange - 1);
+        translateY -= (cursorY - translateY) * (scaleChange - 1);
+
+        // Apply the new translation and scale to the projection
+        projection
+            .scale(projection.scale() * scaleChange) // Apply the new scale
+            .translate([translateX, translateY]); // Update translation
+
+        // Update the projection to generate paths
+        generatePaths();
+    }
+
     onMount(async () => {
+        mapContainer = document.getElementById("mapContainer");
         const geoData = await fetchTopoJSON();
         regionCountries = await fetchContinentCountries();
 
         if (geoData && regionCountries) {
             features = geoData.features;
-            updateProjection();
+
+            // Initialize translateX and translateY to center the map initially
+            const bounds = regionBounds[region] || regionBounds.World;
+            const [[x0, y0], [x1, y1]] = bounds;
+
+            // Calculate center of the region to position the map correctly
+            const x = (x0 + x1) / 2;
+            const y = (y0 + y1) / 2;
+
+            // Calculate initial translate values based on the width and height
+            translateX = width / 2;
+            translateY = height / 2;
+
+            // Apply initial projection settings
+            projection
+                .center([x, y])
+                .scale(Math.min(width / (x1 - x0), height / (y1 - y0)) * 0.8 * 70) // Adjust scale for better fitting
+                .translate([translateX, translateY]);
+
+            // Update the path generation after setting up the projection
             generatePaths();
             loaded = true;
         }
     });
 </script>
 
-<div
-    class="map-container rounded-xl" style="width: w-full h-full;">
+<div class="map-container rounded-xl" style="width: w-full; height: w-full;" id="mapContainer">
     {#if !loaded}
         <div class="skeleton w-full h-full opacity-75"></div>
     {:else}
         <svg
             bind:this={svgElement}
-            width="100%" height="100%"
+            width="100%"
+            height="100%"
             viewBox={`0 0 ${width} ${height}`}
+            on:wheel={handleZoom}
             class="transition-opacity duration-300 {interactive
                 ? 'pointer-events-auto'
                 : 'pointer-events-none'}">
@@ -211,7 +271,7 @@
 
     path {
         vector-effect: non-scaling-stroke;
-        cursor: pointer; /* Change cursor for better interactivity */
+        cursor: pointer;
     }
 
     path:hover {
