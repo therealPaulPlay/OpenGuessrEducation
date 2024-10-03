@@ -58,7 +58,7 @@
         }));
 
         // Delay visibility update to ensure elements are rendered
-        setTimeout(updateAllButtonVisibility, 100);
+        setTimeout(updateAllButtonVisibility, 10);
     });
 
     function toggleTag(tag) {
@@ -67,7 +67,11 @@
         } else {
             selectedTags.add(tag);
         }
+
         selectedTags = selectedTags; // Trigger reactivity
+
+        // Delay visibility update to ensure elements are rendered
+        setTimeout(updateAllButtonVisibility, 10);
     }
 
     $: allTags = [

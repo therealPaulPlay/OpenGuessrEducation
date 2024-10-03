@@ -1,7 +1,8 @@
 <script>
   import "../app.css";
   import Sidebar from '$lib/components/Sidebar.svelte';
-  import Footer from "../lib/components/Footer.svelte";
+  import Footer from "$lib/components/Footer.svelte";
+  import Analytics from "$lib/components/Analytics.svelte";
   import { onMount } from 'svelte';
 
   let isDrawerOpen = false;
@@ -49,4 +50,7 @@
     <Footer />
   </div>
 </div>
+
+<!-- Google Analytics (just code)-->
+<Analytics />
 

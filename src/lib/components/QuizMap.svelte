@@ -2,11 +2,15 @@
     import { onMount } from "svelte";
     import { geoPath, geoMercator } from "d3-geo";
     import { feature } from "topojson-client";
+    import { mapClickValue } from "$lib/stores/quizMap.js";
+    import { createEventDispatcher } from "svelte";
 
     export let region = "World";
     export let zoom = 1;
     export let width = 800; // Width of the map
     export let height = 400; // Height of the map
+    export let interactive = false;
+    export let highlightedFeature = null;
 
     let svgElement;
     let features = [];
@@ -16,6 +20,8 @@
     let regionCountries;
 
     let loaded = false;
+
+    const dispatch = createEventDispatcher();
 
     const regionBounds = {
         World: [
@@ -48,9 +54,32 @@
         ],
     };
 
+    export function highlightFeature(featureName, color) {
+        features = features.map((feature) => {
+            if (feature.properties.name === featureName) {
+                return { ...feature, color };
+            }
+            return feature;
+        });
+    }
+
+    $: {
+        if (highlightedFeature) {
+            highlightFeature(highlightedFeature, "white");
+        }
+    }
+
+    function handleCountryClick(country) {
+        selectedFeature = country;
+        mapClickValue.set(country);
+        dispatch("click", { properties: country.properties });
+    }
+
     async function fetchTopoJSON() {
         try {
-            const response = await fetch("/src/lib/json/countries-110m.json");
+            const response = await fetch(
+                "/src/lib/json/geojson-world-110m.json",
+            );
             const topology = await response.json();
             const featureData = feature(topology, topology.objects.countries);
             return featureData;
@@ -62,12 +91,12 @@
     async function fetchContinentCountries() {
         try {
             const regionCountryData = await fetch(
-                "/src/lib/json/continent-countries.json",
+                "/src/lib/json/regions.json",
             );
             const regionCountries = await regionCountryData.json();
             return regionCountries;
         } catch (error) {
-            console.error("Error fetching continent country json:", error);
+            console.error("Error fetching region json:", error);
         }
     }
 
@@ -114,12 +143,6 @@
             .filter(Boolean);
     }
 
-    function handleCountryClick(country) {
-        selectedFeature = country; // Set selected feature
-        alert(`You clicked on: ${country.properties.name}`);
-        // Additional logic can go here
-    }
-
     function highlightCountries() {
         const countries = regionCountries[region] || [region];
         return countries;
@@ -129,7 +152,7 @@
     onMount(async () => {
         const geoData = await fetchTopoJSON();
         regionCountries = await fetchContinentCountries();
-        
+
         if (geoData && regionCountries) {
             features = geoData.features;
             updateProjection();
@@ -150,7 +173,9 @@
             {width}
             {height}
             viewBox={`0 0 ${width} ${height}`}
-            class="{loaded ? "opacity-100" : "opacity-0"} transition-opacity duration-300">
+            class="transition-opacity duration-300 {interactive
+                ? 'pointer-events-auto'
+                : 'pointer-events-none'}">
             <rect {width} {height} fill="oklch(var(--b3))" />
             <g>
                 {#each features as feature (feature.uniqueKey)}
@@ -158,7 +183,7 @@
                     <!-- svelte-ignore a11y-no-static-element-interactions -->
                     <path
                         d={feature.d}
-                        fill="oklch(var(--s))"
+                        fill={feature.color || "oklch(var(--s))"}
                         stroke="oklch(var(--b3))"
                         stroke-width="0.5"
                         vector-effect="non-scaling-stroke"
@@ -174,15 +199,22 @@
         margin: 0;
         padding: 0;
     }
+
     .map-container {
         position: relative;
         overflow: hidden;
     }
+
     svg {
         display: block;
     }
+
     path {
         vector-effect: non-scaling-stroke;
         cursor: pointer; /* Change cursor for better interactivity */
+    }
+
+    path:hover {
+        color: oklch(var(--p));
     }
 </style>
