@@ -11,7 +11,6 @@
     export let height = 400; // Height of the map
     export let interactive = false;
     export let highlightedFeature = null;
-    export let drawSurrounding = false; // New prop to control whether to draw surrounding countries
 
     let svgElement;
     let features = [];
@@ -135,18 +134,14 @@
                         d,
                         color: isHighlighted
                             ? feature.color || "oklch(var(--s))" // Highlighted countries use the normal color
-                            : drawSurrounding
-                              ? "rgba(125,125,125, 0.2)"
-                              : null, // Surrounding countries get the base color if drawSurrounding is true
+                            : "rgba(125,125,125, 0.2)"
                     };
                 }
                 return null; // Filter out invalid paths
             })
             .filter(
                 (feature) =>
-                    feature &&
-                    (drawSurrounding ||
-                        highlightedCountries.includes(feature.properties.name)),
+                    feature,
             );
     }
 
@@ -170,15 +165,13 @@
 </script>
 
 <div
-    class="map-container rounded-xl"
-    style="width: {width}px; height: {height}px;">
+    class="map-container rounded-xl" style="width: w-full h-full;">
     {#if !loaded}
         <div class="skeleton w-full h-full opacity-75"></div>
     {:else}
         <svg
             bind:this={svgElement}
-            {width}
-            {height}
+            width="100%" height="100%"
             viewBox={`0 0 ${width} ${height}`}
             class="transition-opacity duration-300 {interactive
                 ? 'pointer-events-auto'

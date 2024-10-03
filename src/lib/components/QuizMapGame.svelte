@@ -168,6 +168,7 @@
 
     function handleMapClick(event) {
         if (gameMode === "click") {
+            console.log(event.detail.properties.name);
             checkAnswer(event.detail.properties.name);
         }
     }
@@ -217,12 +218,13 @@
         </select>
     </div>
 
-    <div class="map-wrapper" style="height: 500px;">
+    <div class="map-wrapper">
         <QuizMap
             bind:this={quizMap}
             {region}
             {zoom}
-            drawSurrounding={true}
+            width={1000}
+            height={750}
             on:click={handleMapClick}
             interactive={true}
             {highlightedFeature} />
