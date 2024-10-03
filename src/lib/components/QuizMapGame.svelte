@@ -109,23 +109,7 @@
         } else {
             errors++;
             currentWrongAttempts++;
-            const similarity = calculateSimilarity(
-                answer,
-                currentQuestion,
-            );
-            if (similarity > 0.8) {
-                feedback = "Hot!";
-                feedbackColor = "text-error";
-                feedbackIcon = ThermometerSun;
-            } else if (similarity > 0.6) {
-                feedback = "Warm";
-                feedbackColor = "text-warning";
-                feedbackIcon = Thermometer;
-            } else {
-                feedback = "Cold";
-                feedbackColor = "text-info";
-                feedbackIcon = ThermometerSnowflake;
-            }
+
             if (currentWrongAttempts >= 3) {
                 highlightCorrectAnswer();
             }
@@ -198,7 +182,7 @@
             {#if gameOver}
                 Quiz Complete!
             {:else}
-                Click on: {currentQuestion}
+                Click on <span class="text-secondary">{currentQuestion}</span>
             {/if}
         </h2>
         <div class="flex items-center gap-2">
