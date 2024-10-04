@@ -80,12 +80,23 @@
             showLabel = false;
 
             features = features.map((feature) => {
+                if (feature.properties.name === featureName) {
+                    return { ...feature, showLabel };
+                }
+                return feature;
+            });
+        }, 500);
+    }
+
+    export function disableFeatureInteractions(featureName) {
+        const interactive = false;
+
+        features = features.map((feature) => {
             if (feature.properties.name === featureName) {
-                return { ...feature, showLabel };
+                return { ...feature, interactive };
             }
             return feature;
         });
-        }, 500);
     }
 
     let flashInterval;
@@ -95,7 +106,7 @@
 
         if (feature) {
             let flashCount = 0;
-            
+
             clearInterval(flashInterval);
             feature.color = "oklch(var(--s))";
 
@@ -120,7 +131,7 @@
     }
 
     function handleRegionClick(feature) {
-        if (feature.isHighlighted) {
+        if (feature.isHighlighted && feature.interactive) {
             dispatch("click", { properties: feature.properties });
         }
     }
@@ -169,7 +180,7 @@
 
     function generatePaths() {
         const highlightedCountries = highlightCountries();
-        
+
         features = features
             .map((feature, index) => {
                 const isHighlighted =
@@ -183,6 +194,7 @@
                         uniqueKey: `feature-${index}-${feature.properties.name || "unnamed"}`,
                         d,
                         isHighlighted: isHighlighted,
+                        interactive: true,
                         color: isHighlighted
                             ? feature.color || "oklch(var(--s))"
                             : "rgba(125,125,125, 0.2)",
@@ -266,7 +278,7 @@
     function shortenRegionName(name) {
         if (name.length > 14) {
             name = name.substring(0, 10) + "..";
-        } 
+        }
 
         return name;
     }
@@ -352,17 +364,36 @@
                     {#if feature.isHighlighted && (showLabels || feature.showLabel) && zoom >= 1}
                         {#if path.centroid(feature)}
                             {@const [x, y] = path.centroid(feature)}
+                            {@const text = shortenRegionName(
+                                feature.properties.name,
+                            )}
+                            {@const textLength = text.length * 8}
+                            <!-- Approximate width per character -->
+
                             <g>
+                                <!-- Background rectangle with dynamic width -->
+                                <rect
+                                    x={x - textLength / 2 - 10}
+                                    y={y - 12}
+                                    width={textLength + 20}
+                                    height="24"
+                                    rx="5"
+                                    ry="5"
+                                    opacity="0.85"
+                                    pointer-events="none"
+                                    fill="oklch(var(--b2))" />
+
+                                <!-- Text label, vertically centered -->
                                 <text
                                     {x}
-                                    {y}
+                                    y={y + 1}
                                     text-anchor="middle"
-                                    alignment-baseline="middle"
-                                    fill="oklch(var(--b1))"
+                                    dominant-baseline="middle"
+                                    fill="oklch(var(--s))"
                                     font-size="15"
                                     font-weight="bold"
                                     pointer-events="none">
-                                    {shortenRegionName(feature.properties.name)}
+                                    {text}
                                 </text>
                             </g>
                         {/if}
