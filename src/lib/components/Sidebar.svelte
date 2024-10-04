@@ -64,7 +64,7 @@
         </div>
 
         <!-- Navigation Links -->
-        <ul class="menu w-full space-y-4 p-0 mt-20">
+        <ul class="menu w-full space-y-4 p-0 mt-20 mb-5">
             <li>
                 <a
                     class="btn normal-case text-lg {activeButton === 'home' ? 'btn-primary text-white' : 'btn-accent'}"
@@ -83,47 +83,17 @@
                     href="/quiz"
                     on:click={() => switchSelection('quiz')}>Quizzes</a>
             </li>
-            <li class="w-full">
-                <button
-                    class="btn w-full normal-case text-lg {activeButton === 'guides' ? 'btn-primary text-white' : 'btn-accent'}"
-                    on:click={toggleGuides}>
-                    Guides
-                </button>
-                {#if showGuides}
-                    <ul class="ml-4 space-y-3 mt-4">
-                        {#each guides as guide}
-                            <li>
-                                <a
-                                    class="btn btn-sm w-full {activeButton === guide.toLowerCase() ? 'btn-primary text-white' : 'btn-accent'}"
-                                    href={"/guides/" + guide.toLowerCase()}
-                                    on:click={() => switchSelection(guide.toLowerCase())}>
-                                    {guide}
-                                </a>
-                            </li>
-                        {/each}
-                    </ul>
-                {/if}
+            <li>
+                <a
+                    class="btn normal-case text-lg {activeButton === 'guides' ? 'btn-primary text-white' : 'btn-accent'}"
+                    href="/guides"
+                    on:click={() => switchSelection('guides')}>Guides</a>
             </li>
-            <li class="w-full">
-                <button
-                    class="btn w-full normal-case text-lg {activeButton === 'countries' ? 'btn-primary text-white' : 'btn-accent'}"
-                    on:click={toggleCountries}>
-                    Learn Countries
-                </button>
-                {#if showCountries}
-                    <ul class="ml-4 space-y-3 mt-4">
-                        {#each countries as country}
-                            <li>
-                                <a
-                                    class="btn btn-sm w-full {activeButton === country.toLowerCase() ? 'btn-primary text-white' : 'btn-accent'}"
-                                    href={"/countries/" + country.toLowerCase()}
-                                    on:click={() => switchSelection(country.toLowerCase())}>
-                                    {country}
-                                </a>
-                            </li>
-                        {/each}
-                    </ul>
-                {/if}
+            <li>
+                <a
+                    class="btn normal-case text-lg {activeButton === 'countries' ? 'btn-primary text-white' : 'btn-accent'}"
+                    href="/countries"
+                    on:click={() => switchSelection('countries')}>Learn Countries</a>
             </li>
             <div class="divider">OR</div>
             <li>

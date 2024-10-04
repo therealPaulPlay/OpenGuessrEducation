@@ -15,9 +15,6 @@
     let gameMode = "click"; // 'click', 'type', or 'learn'
 
     let userInput = "";
-    let feedback = "";
-    let feedbackColor = "";
-    let feedbackIcon = null;
 
     let score = 0;
     let errors = 0;
@@ -57,7 +54,7 @@
         timer = 0;
         remainingFeatures = [...features];
         nextQuestion();
-        
+
         if (!timerRunning) {
             startTimer();
         }
@@ -88,10 +85,6 @@
         currentQuestion = remainingFeatures[index];
         remainingFeatures.splice(index, 1);
 
-        userInput = "";
-        feedback = "";
-        feedbackColor = "";
-        feedbackIcon = null;
         highlightedFeature = gameMode === "type" ? currentQuestion : null;
     }
 
@@ -107,7 +100,7 @@
             } else {
                 quizMap.highlightFeature(currentQuestion, "oklch(var(--su))");
             }
-            
+
             nextQuestion();
         } else {
             errors++;
@@ -158,37 +151,38 @@
 </script>
 
 <div class="quiz-container bg-base-200 p-6 rounded-xl">
-    <div class="flex justify-between items-center mb-4">
+    <div class="flex justify-between items-center mb-4 flex-wrap">
         <h2 class="text-2xl font-bold">
             <h2 class="text-2xl font-bold">
                 {#if gameOver}
                     Quiz Complete!
                 {:else if gameMode === "learn"}
-                    Click on <span class="text-secondary">{currentQuestion}</span>
+                    Click on <span class="text-secondary"
+                        >{currentQuestion}</span>
                 {:else if gameMode === "click"}
-                    Click on <span class="text-secondary">{currentQuestion}</span>
+                    Click on <span class="text-secondary"
+                        >{currentQuestion}</span>
                 {:else if gameMode === "type"}
                     Enter the name of the highlighted country
                 {/if}
             </h2>
         </h2>
-        <div class="flex items-center gap-2">
-            <Timer class="w-6 h-6" />
-            <span class="text-xl">{timeString}</span>
+        <div class="flex justify-end gap-5">
+            <select
+                class="menu menu-vertical lg:menu-horizontal bg-base-300 rounded-lg outline-none"
+                on:change={(e) => changeGameMode(e.target.value)}>
+                <option value="click" selected={gameMode === "click"}
+                    >Click Mode</option>
+                <option value="type" selected={gameMode === "type"}
+                    >Type Mode</option>
+                <option value="learn" selected={gameMode === "learn"}
+                    >Learn Mode</option>
+            </select>
+            <div class="flex items-center gap-2">
+                <Timer class="w-6 h-6" />
+                <span class="text-xl min-w-10 text-center">{timeString}</span>
+            </div>
         </div>
-    </div>
-
-    <div class="mb-4">
-        <select
-            class="select select-bordered w-full max-w-xs"
-            on:change={(e) => changeGameMode(e.target.value)}>
-            <option value="click" selected={gameMode === "click"}
-                >Click Mode</option>
-            <option value="type" selected={gameMode === "type"}
-                >Type Mode</option>
-            <option value="learn" selected={gameMode === "learn"}
-                >Learn Mode</option>
-        </select>
     </div>
 
     <div class="map-wrapper">
@@ -214,19 +208,6 @@
                 class="input input-bordered w-full" />
             <button class="btn btn-primary mt-2" on:click={handleInputSubmit}
                 >Submit</button>
-        </div>
-    {/if}
-
-    {#if feedback}
-        <div
-            class="mt-4 text-center text-xl {feedbackColor}"
-            in:scale={{ duration: 300, easing: quintOut }}>
-            {#if feedbackIcon}
-                <svelte:component
-                    this={feedbackIcon}
-                    class="inline-block mr-2" />
-            {/if}
-            {feedback}
         </div>
     {/if}
 

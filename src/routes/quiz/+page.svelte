@@ -132,8 +132,8 @@
     </div>
 
     {#each filteredQuizCategories as category, index}
-        <div class="mb-12">
-            <h2 class="text-3xl font-semibold mb-4 flex items-center">
+        <div class="mb-6">
+            <h2 class="text-3xl font-semibold mb-2 flex items-center">
                 <svelte:component this={category.icon} class="w-8 h-8 mr-2" />
                 {category.name}
             </h2>
