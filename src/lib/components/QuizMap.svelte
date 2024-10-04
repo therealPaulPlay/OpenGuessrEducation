@@ -2,7 +2,6 @@
     import { onMount } from "svelte";
     import { geoPath, geoMercator } from "d3-geo";
     import { feature } from "topojson-client";
-    import { mapClickValue } from "$lib/stores/quizMap.js";
     import { createEventDispatcher } from "svelte";
 
     export let region = "World";
@@ -11,12 +10,12 @@
     export let height = 400;
     export let interactive = false;
     export let highlightedFeature = null;
+    export let showLabels = false;
 
     let svgElement;
     let features = [];
     let projection = geoMercator();
     let path = geoPath().projection(projection);
-    let selectedFeature = null;
     let regionCountries;
     let translateX = 0;
     let translateY = 0;
@@ -68,16 +67,62 @@
         });
     }
 
-    $: {
-        if (highlightedFeature) {
-            highlightFeature(highlightedFeature, "white");
+    export function brieflyShowName(featureName) {
+        let showLabel = true;
+        features = features.map((feature) => {
+            if (feature.properties.name === featureName) {
+                return { ...feature, showLabel };
+            }
+            return feature;
+        });
+
+        setTimeout(() => {
+            showLabel = false;
+
+            features = features.map((feature) => {
+            if (feature.properties.name === featureName) {
+                return { ...feature, showLabel };
+            }
+            return feature;
+        });
+        }, 500);
+    }
+
+    let flashInterval;
+
+    export function flashFeature(featureName) {
+        const feature = features.find((f) => f.properties.name === featureName);
+
+        if (feature) {
+            let flashCount = 0;
+            
+            clearInterval(flashInterval);
+            feature.color = "oklch(var(--s))";
+
+            flashInterval = setInterval(() => {
+                feature.color =
+                    flashCount % 2 == 0 ? "white" : "oklch(var(--s))";
+                features = [...features];
+                flashCount++;
+                if (flashCount >= 4) {
+                    clearInterval(flashInterval);
+                    feature.color = "oklch(var(--s))";
+                    features = [...features];
+                }
+            }, 300);
         }
     }
 
-    function handleCountryClick(country) {
-        selectedFeature = country;
-        mapClickValue.set(country);
-        dispatch("click", { properties: country.properties });
+    $: {
+        if (highlightedFeature) {
+            highlightFeature(highlightedFeature, "oklch(var(--p))");
+        }
+    }
+
+    function handleRegionClick(feature) {
+        if (feature.isHighlighted) {
+            dispatch("click", { properties: feature.properties });
+        }
     }
 
     async function fetchTopoJSON() {
@@ -124,6 +169,7 @@
 
     function generatePaths() {
         const highlightedCountries = highlightCountries();
+        
         features = features
             .map((feature, index) => {
                 const isHighlighted =
@@ -136,6 +182,7 @@
                         ...feature,
                         uniqueKey: `feature-${index}-${feature.properties.name || "unnamed"}`,
                         d,
+                        isHighlighted: isHighlighted,
                         color: isHighlighted
                             ? feature.color || "oklch(var(--s))"
                             : "rgba(125,125,125, 0.2)",
@@ -190,6 +237,40 @@
         generatePaths();
     }
 
+    let isDragging = false;
+    let lastX, lastY;
+
+    function handleMouseDown(event) {
+        if (!interactive) return;
+        isDragging = true;
+        lastX = event.clientX;
+        lastY = event.clientY;
+    }
+
+    function handleMouseMove(event) {
+        if (!interactive || !isDragging) return;
+        const dx = event.clientX - lastX;
+        const dy = event.clientY - lastY;
+        translateX += dx;
+        translateY += dy;
+        lastX = event.clientX;
+        lastY = event.clientY;
+        updateProjection();
+        generatePaths();
+    }
+
+    function handleMouseUp() {
+        isDragging = false;
+    }
+
+    function shortenRegionName(name) {
+        if (name.length > 14) {
+            name = name.substring(0, 10) + "..";
+        } 
+
+        return name;
+    }
+
     onMount(async () => {
         mapContainer = document.getElementById("mapContainer");
         const geoData = await fetchTopoJSON();
@@ -213,7 +294,9 @@
             // Apply initial projection settings
             projection
                 .center([x, y])
-                .scale(Math.min(width / (x1 - x0), height / (y1 - y0)) * 0.8 * 70) // Adjust scale for better fitting
+                .scale(
+                    Math.min(width / (x1 - x0), height / (y1 - y0)) * 0.8 * 70,
+                ) // Adjust scale for better fitting
                 .translate([translateX, translateY]);
 
             // Update the path generation after setting up the projection
@@ -223,31 +306,67 @@
     });
 </script>
 
-<div class="map-container rounded-lg" style="width: w-full; height: w-full;" id="mapContainer">
+<div
+    class="map-container rounded-lg"
+    style="width: w-full; height: w-full;"
+    id="mapContainer">
     {#if !loaded}
         <div class="skeleton w-full h-full opacity-75"></div>
     {:else}
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
         <svg
             bind:this={svgElement}
             width="100%"
             height="100%"
             viewBox={`0 0 ${width} ${height}`}
             on:wheel={handleZoom}
+            on:mousedown={handleMouseDown}
+            on:mousemove={handleMouseMove}
+            on:mouseup={handleMouseUp}
+            on:mouseleave={handleMouseUp}
             class="transition-opacity duration-300 {interactive
                 ? 'pointer-events-auto'
                 : 'pointer-events-none'}">
             <rect {width} {height} fill="oklch(var(--b3))" />
+
             <g>
                 {#each features as feature (feature.uniqueKey)}
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
-                    <!-- svelte-ignore a11y-no-static-element-interactions -->
                     <path
                         d={feature.d}
                         fill={feature.color || "oklch(var(--s))"}
                         stroke="oklch(var(--b3))"
                         stroke-width="0.5"
                         vector-effect="non-scaling-stroke"
-                        on:click={() => handleCountryClick(feature)} />
+                        on:click={() => handleRegionClick(feature)}
+                        on:mouseenter={() => (feature.isHovered = true)}
+                        on:mouseleave={() => (feature.isHovered = false)}
+                        style="filter: {feature.isHovered
+                            ? 'brightness(1.1)'
+                            : 'none'};" />
+                {/each}
+            </g>
+
+            <g>
+                {#each features as feature (feature.uniqueKey)}
+                    {#if feature.isHighlighted && (showLabels || feature.showLabel) && zoom >= 1}
+                        {#if path.centroid(feature)}
+                            {@const [x, y] = path.centroid(feature)}
+                            <g>
+                                <text
+                                    {x}
+                                    {y}
+                                    text-anchor="middle"
+                                    alignment-baseline="middle"
+                                    fill="oklch(var(--b1))"
+                                    font-size="15"
+                                    font-weight="bold"
+                                    pointer-events="none">
+                                    {shortenRegionName(feature.properties.name)}
+                                </text>
+                            </g>
+                        {/if}
+                    {/if}
                 {/each}
             </g>
         </svg>

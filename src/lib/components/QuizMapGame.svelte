@@ -2,12 +2,7 @@
     import { onMount } from "svelte";
     import { fade, scale } from "svelte/transition";
     import { quintOut } from "svelte/easing";
-    import {
-        Timer,
-        ThermometerSnowflake,
-        Thermometer,
-        ThermometerSun,
-    } from "lucide-svelte";
+    import { Timer, Star } from "lucide-svelte";
     import QuizMap from "$lib/components/QuizMap.svelte";
 
     export let region = "World";
@@ -17,7 +12,7 @@
     let features = [];
     let currentQuestion;
     let remainingFeatures = [];
-    let gameMode = "click"; // 'click' or 'type'
+    let gameMode = "click"; // 'click', 'type', or 'learn'
 
     let userInput = "";
     let feedback = "";
@@ -62,6 +57,7 @@
         timer = 0;
         remainingFeatures = [...features];
         nextQuestion();
+        
         if (!timerRunning) {
             startTimer();
         }
@@ -85,30 +81,40 @@
             endGame();
             return;
         }
+
         currentWrongAttempts = 0;
 
         const index = Math.floor(Math.random() * remainingFeatures.length);
         currentQuestion = remainingFeatures[index];
-        console.log(currentQuestion);
         remainingFeatures.splice(index, 1);
-        
+
         userInput = "";
         feedback = "";
         feedbackColor = "";
         feedbackIcon = null;
-        highlightedFeature = null;
+        highlightedFeature = gameMode === "type" ? currentQuestion : null;
     }
 
     function checkAnswer(answer) {
         if (answer.toLowerCase() === currentQuestion.toLowerCase()) {
             score++;
-            feedback = "Correct!";
-            feedbackColor = "text-success";
-            quizMap.highlightFeature(currentQuestion, "oklch(var(--p))");
+
+            // Highlight region green if hint was not used, highlight yellow if hint was used
+            if (currentWrongAttempts >= 3) {
+                quizMap.highlightFeature(currentQuestion, "oklch(var(--wa))");
+            } else {
+                quizMap.highlightFeature(currentQuestion, "oklch(var(--su))");
+            }
+            
             nextQuestion();
         } else {
             errors++;
             currentWrongAttempts++;
+            quizMap.highlightFeature(answer, "oklch(var(--p))");
+            if (gameMode != "learn") quizMap.brieflyShowName(answer);
+            setTimeout(() => {
+                quizMap.highlightFeature(answer, "oklch(var(--s))");
+            }, 500);
 
             if (currentWrongAttempts >= 3) {
                 highlightCorrectAnswer();
@@ -117,41 +123,11 @@
     }
 
     function highlightCorrectAnswer() {
-        highlightedFeature = currentQuestion;
-        setTimeout(() => {
-            highlightedFeature = null;
-        }, 2000);
-    }
-
-    function calculateSimilarity(str1, str2) {
-        const len1 = str1.length;
-        const len2 = str2.length;
-        const matrix = Array(len1 + 1)
-            .fill()
-            .map(() => Array(len2 + 1).fill(0));
-
-        for (let i = 0; i <= len1; i++) matrix[i][0] = i;
-        for (let j = 0; j <= len2; j++) matrix[0][j] = j;
-
-        for (let i = 1; i <= len1; i++) {
-            for (let j = 1; j <= len2; j++) {
-                const cost =
-                    str1[i - 1].toLowerCase() !== str2[j - 1].toLowerCase()
-                        ? 1
-                        : 0;
-                matrix[i][j] = Math.min(
-                    matrix[i - 1][j] + 1,
-                    matrix[i][j - 1] + 1,
-                    matrix[i - 1][j - 1] + cost,
-                );
-            }
-        }
-
-        return 1 - matrix[len1][len2] / Math.max(len1, len2);
+        quizMap.flashFeature(currentQuestion);
     }
 
     function handleMapClick(event) {
-        if (gameMode === "click") {
+        if (gameMode === "click" || gameMode === "learn") {
             console.log(event.detail.properties.name);
             checkAnswer(event.detail.properties.name);
         }
@@ -160,6 +136,7 @@
     function handleInputSubmit() {
         if (gameMode === "type") {
             checkAnswer(userInput);
+            userInput = "";
         }
     }
 
@@ -168,22 +145,30 @@
         stopTimer();
     }
 
-    function toggleGameMode() {
-        gameMode = gameMode === "click" ? "type" : "click";
+    function changeGameMode(mode) {
+        gameMode = mode;
+        startGame();
     }
 
     $: accuracy = gameOver ? Math.round((score / (score + errors)) * 100) : 0;
     $: timeString = `${Math.floor(timer / 60)}:${(timer % 60).toString().padStart(2, "0")}`;
+    $: stars = Math.min(3, Math.floor(accuracy / 33));
 </script>
 
 <div class="quiz-container bg-base-200 p-6 rounded-xl">
     <div class="flex justify-between items-center mb-4">
         <h2 class="text-2xl font-bold">
-            {#if gameOver}
-                Quiz Complete!
-            {:else}
-                Click on <span class="text-secondary">{currentQuestion}</span>
-            {/if}
+            <h2 class="text-2xl font-bold">
+                {#if gameOver}
+                    Quiz Complete!
+                {:else if gameMode === "learn"}
+                    Click on <span class="text-secondary">{currentQuestion}</span>
+                {:else if gameMode === "click"}
+                    Click on <span class="text-secondary">{currentQuestion}</span>
+                {:else if gameMode === "type"}
+                    Enter the name of the highlighted country
+                {/if}
+            </h2>
         </h2>
         <div class="flex items-center gap-2">
             <Timer class="w-6 h-6" />
@@ -194,11 +179,13 @@
     <div class="mb-4">
         <select
             class="select select-bordered w-full max-w-xs"
-            on:change={toggleGameMode}>
+            on:change={(e) => changeGameMode(e.target.value)}>
             <option value="click" selected={gameMode === "click"}
                 >Click Mode</option>
             <option value="type" selected={gameMode === "type"}
                 >Type Mode</option>
+            <option value="learn" selected={gameMode === "learn"}
+                >Learn Mode</option>
         </select>
     </div>
 
@@ -211,7 +198,8 @@
             height={750}
             on:click={handleMapClick}
             interactive={true}
-            {highlightedFeature} />
+            {highlightedFeature}
+            showLabels={gameMode === "learn"} />
     </div>
 
     {#if gameMode === "type"}
@@ -242,14 +230,32 @@
 
     {#if gameOver}
         <div
-            class="mt-8 text-center"
-            in:scale={{ duration: 300, easing: quintOut }}>
-            <h3 class="text-3xl font-bold mb-4">Game Over!</h3>
-            <p class="text-xl">Score: {score}/{score + errors}</p>
-            <p class="text-xl">Accuracy: {accuracy}%</p>
-            <p class="text-xl">Time: {timeString}</p>
-            <button class="btn btn-primary mt-4" on:click={startGame}
-                >Play Again</button>
+            class="fixed inset-0 bg-base-300 bg-opacity-75 flex items-center justify-center z-50">
+            <div
+                class="bg-base-100 p-8 rounded-xl text-center"
+                in:scale={{ duration: 300, easing: quintOut }}>
+                <h3 class="text-3xl font-bold mb-4">Quiz Complete!</h3>
+                <p class="text-xl mb-2">Score: {score}/{score + errors}</p>
+                <p class="text-xl mb-2">Accuracy: {accuracy}%</p>
+                <p class="text-xl mb-4">Time: {timeString}</p>
+                <div class="flex justify-center mb-4">
+                    {#each Array(3) as _, i}
+                        <div
+                            in:scale={{
+                                duration: 300,
+                                delay: i * 300,
+                                easing: quintOut,
+                            }}>
+                            <Star
+                                class="w-8 h-8 {i < stars
+                                    ? 'text-warning'
+                                    : 'text-base-300'}" />
+                        </div>
+                    {/each}
+                </div>
+                <button class="btn btn-primary" on:click={startGame}
+                    >Play Again</button>
+            </div>
         </div>
     {/if}
 </div>

@@ -25,9 +25,9 @@
             activeButton = "home";
         } else if (currentPath === "/get-started") {
             activeButton = "get-started";
-        } else if (currentPath === "/guides") {
+        } else if (currentPath.startsWith("/guides")) {
             activeButton = "guides";
-        } else if (currentPath === "/quiz") {
+        } else if (currentPath.startsWith("/quiz")) {
             activeButton = "quiz";
         } else if (currentPath.startsWith("/countries")) {
             const country = currentPath.split("/").pop();
