@@ -1,5 +1,5 @@
 <script>
-    import { Sprout, BookCheck, Lightbulb } from "lucide-svelte";
+    import { Sprout, BookCheck, Lightbulb, Compass } from "lucide-svelte";
     import GuideCard from "$lib/components/GuideCard.svelte";
 </script>
 
@@ -13,7 +13,9 @@
         </h2>
         <div class="relative">
             <div class="w-full flex space-x-4 flex-wrap scrollbar-hide">
-                <GuideCard />
+                <GuideCard>
+                    <Compass class="w-28 h-28"></Compass>
+                </GuideCard>
             </div>
         </div>
         <h2 class="text-3xl font-semibold mb-4 mt-12 flex items-center">
