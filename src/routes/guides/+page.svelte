@@ -13,7 +13,7 @@
         </h2>
         <div class="relative">
             <div class="w-full flex space-x-4 flex-wrap scrollbar-hide">
-                <GuideCard>
+                <GuideCard title="The Compass" description="Learn how to use the compass, determine the hemisphere and line up with a road or coastline." href="/guides/read/beginner/compass">
                     <Compass class="w-28 h-28"></Compass>
                 </GuideCard>
             </div>

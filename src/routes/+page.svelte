@@ -72,7 +72,7 @@
             class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="card-body">
                 <Trophy class="w-12 h-12 text-secondary mb-4" />
-                <h2 class="card-title">Pro-Player Guides</h2>
+                <h2 class="card-title">Professional Guides</h2>
                 <p>
                     Learn to play and discover tricks from top players to elevate
                     your game.

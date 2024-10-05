@@ -49,7 +49,7 @@
         out what this page has to offer!
     </p>
 
-    <h3 class="text-2xl font-semibold mb-2">What is OpenGuessr?</h3>
+    <h2 class="text-2xl font-semibold mb-2">What is OpenGuessr?</h2>
     <p class="mb-6">
         <a href="https://openguessr.com" target="_blank" class="text-secondary"
             >OpenGuessr</a>
@@ -102,9 +102,9 @@
         </div>
     </div>
 
-    <h3 class="text-2xl font-semibold mb-2">
+    <h2 class="text-2xl font-semibold mb-2">
         Got it, but what's OpenGuessr Education?
-    </h3>
+    </h2>
     <p class="mb-6">
         OpenGuessr Education is a new learning site that helps you get better at
         geoguessing. Want to learn more about <a

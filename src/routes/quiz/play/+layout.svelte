@@ -74,7 +74,7 @@
 
 <article class="container mx-auto p-6 max-w-5xl">
   <a
-    class="mt-12 text-lg flex gap-3 justify-items-start items-center hover:opacity-50 transition-opacity w-fit"
+    class="text-lg flex gap-3 justify-items-start items-center hover:opacity-50 transition-opacity w-fit"
     href="/quiz/">
     <ArrowLeftIcon />
     Back
