@@ -1,9 +1,8 @@
 <script>
-    import InteractiveCompass from "$lib/components/InteractiveCompass.svelte";
     import ArticleTip from "$lib/components/ArticleTip.svelte";
 </script>
 
-<h1 class="text-4xl font-bold mb-4">The Compass</h1>
+<h1 class="text-4xl font-bold mb-4">Keyboard Shortcuts</h1>
 <p class="mb-2">
     The compass is a powerful tool for quickly gaining a <b
         >general sense</b>
@@ -35,8 +34,6 @@
             </li>
         </ol>
     </div>
-
-    <InteractiveCompass />
 </div>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">How to "line up"</h2>

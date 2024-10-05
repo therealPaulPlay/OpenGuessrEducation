@@ -323,7 +323,7 @@
     style="width: w-full; height: w-full;"
     id="mapContainer">
     {#if !loaded}
-        <div class="skeleton w-full h-full opacity-75"></div>
+        <div class="skeleton w-full h-full min-h-28 opacity-75 rounded-lg"></div>
     {:else}
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <svg

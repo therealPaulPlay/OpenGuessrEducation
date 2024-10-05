@@ -1,5 +1,8 @@
 <script>
     import { ArrowLeftIcon } from "lucide-svelte";
+    import { ArrowUp } from "lucide-svelte";
+      import { scrollTop } from 'svelte-scrolling'
+    
 </script>
 
 <article class="container mx-auto p-6 max-w-3xl">
@@ -10,4 +13,9 @@
         Back
     </a>
     <slot />
+    <div class="w-full flex justify-center mt-8">
+        <button class="btn btn-wide btn-accent" on:click={scrollTop}>
+            <ArrowUp /> Back to top
+        </button>
+    </div>
 </article>

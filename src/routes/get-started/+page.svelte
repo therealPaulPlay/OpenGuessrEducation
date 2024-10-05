@@ -44,9 +44,9 @@
         Embark on an epic learning-adventure.
     </h1>
     <p class="mb-6">
-        Welcome to OpenGuessr Education, the ultimate geography quiz platform
-        that will test your knowledge and detective skills. Let's take a quick tour to find
-        out what this page has to offer!
+        Welcome to OpenGuessr Education, the ultimate geography platform
+        that will test your knowledge and sharpen up your geography guessing skills. Let's take a quick tour to find
+        out what this site has to offer!
     </p>
 
     <h2 class="text-2xl font-semibold mb-2">What is OpenGuessr?</h2>
@@ -173,7 +173,7 @@
             <div class="collapse-content">
                 <p>
                     Improving your geoguessing skills takes practice and
-                    attention to detail.<a
+                    attention to detail. <a
                         href="/guides"
                         class="text-secondary">Guides</a> on OpenGuessr Education help you learn about common clues
                     and strategies. Playing regularly and reviewing your guesses
