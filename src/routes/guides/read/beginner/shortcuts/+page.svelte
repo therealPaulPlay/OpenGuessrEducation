@@ -4,63 +4,50 @@
 
 <h1 class="text-4xl font-bold mb-4">Keyboard Shortcuts</h1>
 <p class="mb-2">
-    The compass is a powerful tool for quickly gaining a <b
-        >general sense</b>
-    for where a location might be and comes in handy when trying to
-    <b>pinpoint the exact road</b>.
-</p>
-
-<div class="flex gap-10 mt-8 flex-wrap">
-    <div class="max-w-xs">
-        <h2 class="text-2xl font-bold mb-4">Determining the Hemisphere</h2>
-        <ol class="list-decimal list-inside mb-6">
-            <li class="mb-2">
-                Locate the compass in-game.
-            </li>
-            <li class="mb-2">Find the sun's position in the sky. Note that the sun is not always visible.</li>
-            <li class="mb-2">
-                The <b>red end</b> of the compass needle
-                always points <b>north</b>.
-            </li>
-            <li class="mb-2">
-                If the <b>sun is in the north</b>,
-                you're in the
-                <b>southern hemisphere</b>.
-            </li>
-            <li class="mb-2">
-                If the <b>sun is in the south</b>,
-                you're in the
-                <b>northern hemisphere</b>.
-            </li>
-        </ol>
-    </div>
-</div>
-
-<h2 class="text-2xl font-bold mt-8 mb-2">How to "line up"</h2>
-<p class="mb-2">
-    The compass can help you find out which geographical features you are seeing
-    in the streetview. To <b>line up</b> the streetview with the map, rotate the
-    camera so that the <b>compass points north</b> and
-    then tilt the view so that the ground becomes visible. This way, you can scan for roads, coastlines or other landmarks on the minimap that
-    follow the same direction as the geographical feature, because the
-    <b>minimap always points north</b>.
+    These keyboard shortcuts will help you play <b>GeoGuessr</b>
+    more quickly and effectively. Especially in time-limited multiplayer matches,
+    using these is highly recommended. These keyboard shortcuts are up-to-date and
+    taken from the official
+    <a
+        class="text-secondary"
+        href="https://geoguessr.zendesk.com/hc/en-us/articles/4410060533009-How-do-I-use-Keyboard-Shortcuts-in-the-game"
+        >zendesk</a> page.
 </p>
 
 <ArticleTip>
-    In OpenGuessr, you can click on the compass to rotate the view to face north!
+    As OpenGuessr uses an Iframe for the panorama image, most keyboard shortcuts cannot be implemented, as they would be captured by the Iframe.
 </ArticleTip>
 
-<img alt="streetview example lining up" src="/src/lib/assets/guides/compass-streetview-example.jpg" class="rounded-xl">
-
-<h2 class="text-2xl font-bold mt-8 mb-2">The two hemispheres</h2>
-<p class="mb-2">
-    Not everyone is familiar with the earth's two hemispheres, so here is a short explanation. <br>
-    The equator splits the planet earth into two halves, a northern (upper) and a southern (lower) half. For example, Europe is located entirely in the northern hemisphere, 
-    whereas Oceania sits in the southern hemisphere.
-</p>
-
-<style>
-    :global(body) {
-        background-color: theme("colors.base-200");
-    }
-</style>
+<h2 class="text-2xl font-bold mt-8 mb-2">GeoGuessr keyboard shortcuts</h2>
+<ol class="mb-2 list-disc list-inside">
+    <li>
+        Press <kbd class="kbd kbd-sm mx-2">Space</kbd> to lock in a guess (Available in OpenGuessr)
+    </li>
+    <li>
+        Press <kbd class="kbd kbd-sm mx-2">Z</kbd> go back one step in the streetview
+    </li>
+    <li>
+        Press <kbd class="kbd kbd-sm mx-2">C</kbd> to place or return to a checkpoint
+    </li>
+    <li>
+        Press <kbd class="kbd kbd-sm mx-2">R</kbd> to return to the starting location
+    </li>
+    <li>
+        Press <kbd class="kbd kbd-sm mx-2">F</kbd> to enter fullscreen
+    </li>
+    <li>
+        Press <kbd class="kbd kbd-sm mx-2">ESC</kbd> to bring up the settings menu
+    </li>
+    <li>
+        Press <kbd class="kbd kbd-sm mx-2">1</kbd> -  <kbd class="kbd kbd-sm mx-2">6</kbd> to quickly access emotes
+    </li>
+    <li>
+        Use <kbd class="kbd kbd-sm ml-2">W</kbd>, <kbd class="kbd kbd-sm ml-2">A</kbd>, <kbd class="kbd kbd-sm mx-2">S</kbd> and <kbd class="kbd kbd-sm mx-2">D</kbd> to move (Available in OpenGuessr)
+    </li>
+    <li>
+        Press <kbd class="kbd kbd-sm mx-2">ESC</kbd> to bring up the settings menu
+    </li>
+    <li>
+        Press <kbd class="kbd kbd-sm mx-2">Enter</kbd> to bring up the settings menu
+    </li>
+</ol>

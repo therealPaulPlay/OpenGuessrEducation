@@ -1,9 +1,26 @@
 <script>
     import { ArrowLeftIcon } from "lucide-svelte";
     import { ArrowUp } from "lucide-svelte";
-      import { scrollTop } from 'svelte-scrolling'
-    
+    import { scrollTop } from "svelte-scrolling";
+    import { onMount } from "svelte";
+
+    let showScrollButton = false;
+
+    function checkScrollable() {
+        showScrollButton =
+            document.documentElement.scrollHeight > window.innerHeight;
+    }
+
+    onMount(() => {
+        checkScrollable();
+        window.addEventListener("resize", checkScrollable);
+        return () => {
+            window.removeEventListener("resize", checkScrollable);
+        };
+    });
 </script>
+
+<svelte:window on:scroll={checkScrollable} />
 
 <article class="container mx-auto p-6 max-w-3xl">
     <a
@@ -13,9 +30,11 @@
         Back
     </a>
     <slot />
-    <div class="w-full flex justify-center mt-8">
-        <button class="btn btn-wide btn-accent" on:click={scrollTop}>
-            <ArrowUp /> Back to top
-        </button>
-    </div>
+    {#if showScrollButton}
+        <div class="w-full flex justify-center mt-12">
+            <button class="btn btn-wide btn-accent" on:click={scrollTop}>
+                <ArrowUp /> Back to top
+            </button>
+        </div>
+    {/if}
 </article>

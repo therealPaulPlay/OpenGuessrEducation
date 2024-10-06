@@ -10,32 +10,25 @@
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Example h2 header</h2>
 <p class="mb-2">
-    Pay attention to the margins used. A normal paragraph usually has a margin-bottom of 2 (mb-2 class). H2 headers use a margin-top of 8.
+    Pay attention to the margins used. A normal paragraph usually has a
+    margin-bottom of 2 (mb-2 class). H2 headers use a margin-top of 8.
 </p>
 
 <ArticleTip>
-    This is a highlighted tip that you can use in your guides. Below, you can see an example image!
+    This is a highlighted tip that you can use in your guides. Below, you can
+    see an example image!
 </ArticleTip>
 
-<img alt="streetview example lining up" src="/src/lib/assets/guides/example.jpg" class="rounded-xl w-full">
+<img
+    alt="streetview example lining up"
+    src="/src/lib/assets/guides/example.jpg"
+    class="rounded-xl w-full" />
 
 <h2 class="text-2xl font-bold mt-8 mb-2">A second H2 header</h2>
-<p class="mb-2">
-    This is a second header with example text.
-</p>
+<p class="mb-2">This is a second header with example text.</p>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">A third H2 header</h2>
-<p class="mb-2">
-    This is a third with example text.
-</p>
+<p class="mb-2">This is a third with example text.</p>
 
 <h3 class="text-xl font-bold mt-8 mb-2">Example H3 header</h3>
-<p class="mb-2">
-    This is an example that shows a H3 header with text.
-</p>
-
-<style>
-    :global(body) {
-        background-color: theme("colors.base-200");
-    }
-</style>
+<p class="mb-2">This is an example that shows a H3 header with text.</p>

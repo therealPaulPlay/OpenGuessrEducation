@@ -61,9 +61,3 @@
     The equator splits the planet earth into two halves, a northern (upper) and a southern (lower) half. For example, Europe is located entirely in the northern hemisphere, 
     whereas Oceania sits in the southern hemisphere.
 </p>
-
-<style>
-    :global(body) {
-        background-color: theme("colors.base-200");
-    }
-</style>
