@@ -1,5 +1,12 @@
 <script>
-    import { Sprout, Keyboard, Lightbulb, Compass, Rabbit } from "lucide-svelte";
+    import {
+        Sprout,
+        Keyboard,
+        Lightbulb,
+        Compass,
+        Rabbit,
+        Map,
+    } from "lucide-svelte";
     import GuideCard from "$lib/components/GuideCard.svelte";
 </script>
 
@@ -25,16 +32,23 @@
                 title="Keyboard Shortcuts"
                 description="A cheat sheet for the most useful keyboard shortcuts in GeoGuessr."
                 href="/guides/read/beginner/shortcuts"
-                hueRotate=20>
+                hueRotate="20">
                 <Keyboard class="w-28 h-28"></Keyboard>
             </GuideCard>
             <GuideCard
-            title="Fast Movement"
-            description="Find out how to move a lot more quickly inside of the Streetview."
-            href="/guides/read/beginner/fast-movement"
-            hueRotate=40>
-            <Rabbit class="w-28 h-28"></Rabbit>
-        </GuideCard>
+                title="Fast Movement"
+                description="Find out how to move a lot more quickly inside of the Street View."
+                href="/guides/read/beginner/fast-movement"
+                hueRotate="40">
+                <Rabbit class="w-28 h-28"></Rabbit>
+            </GuideCard>
+            <GuideCard
+                title="Map Basics"
+                description="Learn what maps are, what coverage is and how community maps differ."
+                href="/guides/read/beginner/map-basics"
+                hueRotate="60">
+                <Map class="w-28 h-28"></Map>
+            </GuideCard>
         </div>
         <!-- Intermediate Guides -->
         <h2 class="text-3xl font-semibold mb-4 mt-12 flex items-center">

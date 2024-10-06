@@ -11,7 +11,8 @@
     <a
         class="text-secondary"
         href="https://geoguessr.zendesk.com/hc/en-us/articles/4410060533009-How-do-I-use-Keyboard-Shortcuts-in-the-game"
-        >zendesk</a> page.
+        target="_blank"
+        >Zendesk</a> page.
 </p>
 
 <ArticleTip>
@@ -24,7 +25,7 @@
         Press <kbd class="kbd kbd-sm mx-2">Space</kbd> to lock in a guess (Available in OpenGuessr)
     </li>
     <li>
-        Press <kbd class="kbd kbd-sm mx-2">Z</kbd> go back one step in the streetview
+        Press <kbd class="kbd kbd-sm mx-2">Z</kbd> go back one step in the street view
     </li>
     <li>
         Press <kbd class="kbd kbd-sm mx-2">C</kbd> to place or return to a checkpoint

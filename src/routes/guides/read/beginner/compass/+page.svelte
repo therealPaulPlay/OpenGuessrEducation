@@ -42,7 +42,7 @@
 <h2 class="text-2xl font-bold mt-8 mb-2">How to "line up"</h2>
 <p class="mb-2">
     The compass can help you find out which geographical features you are seeing
-    in the streetview. To <b>line up</b> the streetview with the map, rotate the
+    in the street view. To <b>line up</b> the street view with the map, rotate the
     camera so that the <b>compass points north</b> and
     then tilt the view so that the ground becomes visible. This way, you can scan for roads, coastlines or other landmarks on the minimap that
     follow the same direction as the geographical feature, because the
