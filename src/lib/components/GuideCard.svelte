@@ -16,12 +16,10 @@
     };
 
     onMount(() => {
-        handleResize(); // Check on mount
-        window.addEventListener("resize", handleResize); // Listen to resize
-    });
-
-    onDestroy(() => {
-        window.removeEventListener("resize", handleResize); // Clean up listener on destroy
+        if (window) {
+            handleResize(); // Check on mount
+            window.addEventListener("resize", handleResize); // Listen to resize
+        }
     });
 </script>
 
@@ -32,7 +30,7 @@
     <figure class="relative">
         <img
             src="/src/lib/assets/guide_preview.png"
-            class="h-full {mobile ? "w-64" : "w-48"} dark:opacity-90"
+            class="h-full {mobile ? 'w-64' : 'w-48'} dark:opacity-90"
             style="filter: hue-rotate({hueRotate}deg)"
             alt="Guide preview" />
         <div class="absolute h-full w-full">
@@ -46,7 +44,10 @@
         <h2 class="card-title text-ellipsis">{title}</h2>
         <p class="text-wrap max-h-24 text-clip">{description}</p>
         <div class="card-actions justify-end mt-auto -mb-1">
-            <a class="btn btn-secondary btn-md" style="filter: hue-rotate({hueRotate}deg)" {href}>Read</a>
+            <a
+                class="btn btn-secondary btn-md"
+                style="filter: hue-rotate({hueRotate}deg)"
+                {href}>Read</a>
         </div>
     </div>
 </div>

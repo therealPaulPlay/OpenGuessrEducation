@@ -12,15 +12,15 @@
     }
 
     onMount(() => {
-        checkScrollable();
-        window.addEventListener("resize", checkScrollable);
-        return () => {
-            window.removeEventListener("resize", checkScrollable);
-        };
+        if (window && document) {
+            checkScrollable();
+            window.addEventListener("resize", checkScrollable);
+            return () => {
+                window.removeEventListener("resize", checkScrollable);
+            };
+        }
     });
 </script>
-
-<svelte:window on:scroll={checkScrollable} />
 
 <article class="container mx-auto p-6 max-w-3xl">
     <a
