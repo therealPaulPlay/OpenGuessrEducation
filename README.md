@@ -4,6 +4,7 @@ The unique combination of minigames, interactive guides and extensive country da
 
 ## Getting started
 This project uses Svelte (UI Framework) with SvelteKit (Web development framework). You can check out their [official docs](https://svelte.dev/) to get started.
+Moreover, Tailwind CSS (which is dependent on PostCSS) is used for utility classes.
 
 ## How to contribute
 Contributions to the project are greatly appreciated.

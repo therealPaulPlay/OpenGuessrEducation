@@ -1,5 +1,5 @@
 <script>
-    import { Sprout, Keyboard, Lightbulb, Compass } from "lucide-svelte";
+    import { Sprout, Keyboard, Lightbulb, Compass, Rabbit } from "lucide-svelte";
     import GuideCard from "$lib/components/GuideCard.svelte";
 </script>
 
@@ -28,6 +28,13 @@
                 hueRotate=20>
                 <Keyboard class="w-28 h-28"></Keyboard>
             </GuideCard>
+            <GuideCard
+            title="Fast Movement"
+            description="Find out how to move a lot more quickly inside of the Streetview."
+            href="/guides/read/beginner/fast-movement"
+            hueRotate=40>
+            <Rabbit class="w-28 h-28"></Rabbit>
+        </GuideCard>
         </div>
         <!-- Intermediate Guides -->
         <h2 class="text-3xl font-semibold mb-4 mt-12 flex items-center">

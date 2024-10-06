@@ -10,7 +10,7 @@
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Example h2 header</h2>
 <p class="mb-2">
-    Pay attention to the margins used. A normal paragraph usually has a
+    Pay attention to the <b>margins</b> used. A normal paragraph usually has a
     margin-bottom of 2 (mb-2 class). H2 headers use a margin-top of 8.
 </p>
 
@@ -32,3 +32,8 @@
 
 <h3 class="text-xl font-bold mt-8 mb-2">Example H3 header</h3>
 <p class="mb-2">This is an example that shows a H3 header with text.</p>
+<ol class="mb-2 list-disc list-inside">
+    <li>
+        This is a bullet point.
+    </li>
+</ol>
