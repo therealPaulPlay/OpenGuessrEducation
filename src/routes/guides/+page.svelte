@@ -6,6 +6,8 @@
         Compass,
         Rabbit,
         Map,
+        Camera,
+        Move
     } from "lucide-svelte";
     import GuideCard from "$lib/components/GuideCard.svelte";
 </script>
@@ -48,6 +50,20 @@
                 href="/guides/read/beginner/map-basics"
                 hueRotate="60">
                 <Map class="w-28 h-28"></Map>
+            </GuideCard>
+            <GuideCard
+                title="Street View Coverage"
+                description="Find out where coverage exist, which cameras where used and what generations are."
+                href="/guides/read/beginner/coverage"
+                hueRotate="80">
+                <Camera class="w-28 h-28"></Camera>
+            </GuideCard>
+            <GuideCard
+                title="Restrictions & NMPZ"
+                description="Learn about game controls, like Zoom, Move and Pan, and discover restrictions."
+                href="/guides/read/beginner/restrictions"
+                hueRotate="100">
+                <Move class="w-28 h-28"></Move>
             </GuideCard>
         </div>
         <!-- Intermediate Guides -->

@@ -23,7 +23,7 @@
     src="/src/lib/assets/guides/example.jpg"
     class="rounded-xl w-full" />
 
-<p class="text-center mt-2">An image description.</p>
+<p class="text-center mt-2">A paragraph before an image should use mb-4.</p>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">A second H2 header</h2>
 <p class="mb-2">This is a second header with example text.</p>
