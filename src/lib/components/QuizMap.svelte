@@ -3,6 +3,7 @@
     import { geoPath, geoMercator } from "d3-geo";
     import { feature } from "topojson-client";
     import { createEventDispatcher } from "svelte";
+    import { Plus, Minus } from 'lucide-svelte';
 
     export let region = "World";
     export let zoom = 1;
@@ -60,6 +61,9 @@
             [180, 10],
         ],
     };
+
+    let initialScale;
+    let rect;
 
     export function highlightFeature(featureName, color) {
         features = features.map((feature) => {
@@ -213,20 +217,19 @@
         return countries;
     }
 
-    let rect;
-
     function handleZoom(event) {
         if (!interactive) return;
         event.preventDefault();
 
         rect = mapContainer.getBoundingClientRect();
+        const svgRect = svgElement.getBoundingClientRect();
 
         // Get cursor position relative to the SVG container
-        const cursorX = event.clientX - rect.left;
-        const cursorY = event.clientY - rect.top;
+        const cursorX = (event.clientX - rect.left) * (width / rect.width);
+        const cursorY = (event.clientY - rect.top) * (height / rect.height);
 
         // Determine the zoom direction and factor
-        const direction = event.deltaY > 0 ? -1 : 1; // Invert scroll direction for natural zoom
+        const direction = event.deltaY > 0 ? -1 : 1;
         const zoomFactor = Math.exp(direction * 0.1); // Smaller zoom factor for better control
 
         // Save the old zoom level before applying the new zoom
@@ -243,9 +246,7 @@
         translateY -= (cursorY - translateY) * (scaleChange - 1);
 
         // Apply the new translation and scale to the projection
-        projection
-            .scale(projection.scale() * scaleChange) // Apply the new scale
-            .translate([translateX, translateY]); // Update translation
+        updateProjection();
 
         // Update the projection to generate paths
         generatePaths();
@@ -263,8 +264,8 @@
 
     function handleMouseMove(event) {
         if (!interactive || !isDragging) return;
-        const dx = event.clientX - lastX;
-        const dy = event.clientY - lastY;
+        const dx = (event.clientX - lastX) * (width / rect.width);
+        const dy = (event.clientY - lastY) * (height / rect.height);
         translateX += dx;
         translateY += dy;
         lastX = event.clientX;
@@ -283,6 +284,18 @@
         }
 
         return name;
+    }
+
+    function handleZoomIn() {
+        zoom = Math.min(MAX_ZOOM, zoom * 1.2);
+        updateProjection();
+        generatePaths();
+    }
+
+    function handleZoomOut() {
+        zoom = Math.max(MIN_ZOOM, zoom / 1.2);
+        updateProjection();
+        generatePaths();
     }
 
     onMount(async () => {
@@ -305,27 +318,31 @@
             translateY = height / 2;
 
             // Apply initial projection settings
+            initialScale = Math.min(width / (x1 - x0), height / (y1 - y0)) * 0.8 * 70;
             projection
                 .center([x, y])
-                .scale(
-                    Math.min(width / (x1 - x0), height / (y1 - y0)) * 0.8 * 70,
-                ) // Adjust scale for better fitting
+                .scale(initialScale)
                 .translate([translateX, translateY]);
 
             // Update the path generation after setting up the projection
+            updateProjection();
             generatePaths();
             loaded = true;
+
+            // Store the initial rect for reference
+            rect = mapContainer.getBoundingClientRect();
         }
     });
 </script>
 
 <div
-    class="map-container rounded-lg"
+    class="map-container rounded-lg relative"
     bind:this={mapContainer}
     style="width: w-full; height: w-full;"
     id="mapContainer">
     {#if !loaded}
-        <div class="skeleton w-full h-full min-h-28 opacity-75 rounded-lg"></div>
+        <div class="skeleton w-full h-full min-h-28 opacity-75 rounded-lg">
+        </div>
     {:else}
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <svg
@@ -403,6 +420,22 @@
                 {/each}
             </g>
         </svg>
+        {#if interactive}
+        <div class="absolute bottom-4 right-4 flex flex-col gap-2">
+            <button
+                class="btn btn-circle btn-sm"
+                on:click={handleZoomIn}
+                aria-label="Zoom in">
+                <Plus size={16} />
+            </button>
+            <button
+                class="btn btn-circle btn-sm"
+                on:click={handleZoomOut}
+                aria-label="Zoom out">
+                <Minus size={16} />
+            </button>
+        </div>
+        {/if}
     {/if}
 </div>
 
