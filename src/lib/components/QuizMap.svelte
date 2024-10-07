@@ -3,7 +3,7 @@
     import { geoPath, geoMercator } from "d3-geo";
     import { feature } from "topojson-client";
     import { createEventDispatcher } from "svelte";
-    import { Plus, Minus } from 'lucide-svelte';
+    import { Plus, Minus } from "lucide-svelte";
 
     export let region = "World";
     export let zoom = 1;
@@ -228,15 +228,27 @@
         const cursorX = (event.clientX - rect.left) * (width / rect.width);
         const cursorY = (event.clientY - rect.top) * (height / rect.height);
 
-        // Determine the zoom direction and factor
+        // Determine the zoom direction
         const direction = event.deltaY > 0 ? -1 : 1;
-        const zoomFactor = Math.exp(direction * 0.1); // Smaller zoom factor for better control
+
+        // Detect if the input is from a touchpad
+        const isTouchpad = Math.abs(event.deltaY) < 50;
+
+        // Calculate zoom change based on input type
+        let zoomChange;
+        if (isTouchpad) {
+            // Linear zoom change for touchpad
+            zoomChange = 1 + direction * 0.03;
+        } else {
+            // Exponential zoom change for mouse wheel (unchanged)
+            zoomChange = Math.exp(direction * 0.1);
+        }
 
         // Save the old zoom level before applying the new zoom
         const oldZoom = zoom;
 
         // Update zoom level, clamping within defined limits
-        zoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, zoom * zoomFactor));
+        zoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, zoom * zoomChange));
 
         // Calculate the new scale after zooming
         const scaleChange = zoom / oldZoom;
@@ -318,7 +330,8 @@
             translateY = height / 2;
 
             // Apply initial projection settings
-            initialScale = Math.min(width / (x1 - x0), height / (y1 - y0)) * 0.8 * 70;
+            initialScale =
+                Math.min(width / (x1 - x0), height / (y1 - y0)) * 0.8 * 70;
             projection
                 .center([x, y])
                 .scale(initialScale)
@@ -421,20 +434,20 @@
             </g>
         </svg>
         {#if interactive}
-        <div class="absolute bottom-4 right-4 flex flex-col gap-2">
-            <button
-                class="btn btn-circle btn-sm"
-                on:click={handleZoomIn}
-                aria-label="Zoom in">
-                <Plus size={16} />
-            </button>
-            <button
-                class="btn btn-circle btn-sm"
-                on:click={handleZoomOut}
-                aria-label="Zoom out">
-                <Minus size={16} />
-            </button>
-        </div>
+            <div class="absolute bottom-4 right-4 flex flex-col gap-2">
+                <button
+                    class="btn btn-circle btn-sm"
+                    on:click={handleZoomIn}
+                    aria-label="Zoom in">
+                    <Plus size={16} />
+                </button>
+                <button
+                    class="btn btn-circle btn-sm"
+                    on:click={handleZoomOut}
+                    aria-label="Zoom out">
+                    <Minus size={16} />
+                </button>
+            </div>
         {/if}
     {/if}
 </div>
