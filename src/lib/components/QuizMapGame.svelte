@@ -194,6 +194,7 @@
             height={750}
             on:click={handleMapClick}
             interactive={true}
+            minLabelZoom=1
             {highlightedFeature}
             showLabels={gameMode === "learn"} />
     </div>

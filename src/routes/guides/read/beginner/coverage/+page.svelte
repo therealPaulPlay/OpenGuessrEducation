@@ -44,7 +44,7 @@ In this guide, we will take a look at how these 3D-Panoramas are <b>being made</
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Unofficial Coverage</h2>
 
-<p class="mb-2">A lot of imagery comes from third-party contributors through different means. The <b>modern way to contribue</b> 3D imagery is to use a supported 360 camera and then
+<p class="mb-2">A lot of imagery comes from third-party contributors through different means. The <b>modern way to contribue</b> 3D imagery is to use a <b>supported 360 camera</b> and then
 upload images or videos to <b>Street View Studio</b>. Additionally, with selected Android devices, it is possible to capture and publish <b>photospheres</b>, which are simply 360-degree images that don't offer the possibility
 to move around. Especially in african countries or remote locations, unofficial coverage is common. </p>
 

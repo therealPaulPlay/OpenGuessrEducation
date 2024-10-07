@@ -1,14 +1,14 @@
-<h1 class="text-4xl font-bold mb-4">Controls & NMPZ</h1>
+<h1 class="text-4xl font-bold mb-4">Restrictions & NMPZ</h1>
 
 <p class="mb-2">
-    This guide will explain the term <b>NMPZ</b> as well as the specific ways to control a panorama. Taking away some or all of these ways is often <b>favored by
+    This guide will explain the term <b>NMPZ</b> as well as the specific ways to control a panorama. Moreover, we will be going over different <b>restrictions</b> for matches. Taking away some or all of these ways is often <b>favored by
         professional players</b> to increase the difficulty and ensure that every player sees the same hints.
 </p>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">The term "NMPZ"</h2>
 
 <p class="mb-2">
-    NMPZ stands for No Move, no Pan and no Zoom. Let's quickly go over these three controls.
+    NMPZ stands for <b>No Move, no Pan and no Zoom</b>. Let's quickly go over these three controls.
 </p>
 
 <ol class="mb-2 list-disc list-inside">

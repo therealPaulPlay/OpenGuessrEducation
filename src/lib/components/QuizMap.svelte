@@ -11,8 +11,11 @@
     export let interactive = false;
     export let highlightedFeature = null;
     export let showLabels = false;
+    export let minLabelZoom = 1;
+    export let notHighlightedColor = "rgba(125,125,125, 0.2)";
 
     let svgElement;
+    let mapContainer;
     let features = [];
     let projection = geoMercator();
     let path = geoPath().projection(projection);
@@ -197,7 +200,7 @@
                         interactive: true,
                         color: isHighlighted
                             ? feature.color || "oklch(var(--s))"
-                            : "rgba(125,125,125, 0.2)",
+                            : notHighlightedColor,
                     };
                 }
                 return null;
@@ -211,13 +214,12 @@
     }
 
     let rect;
-    let mapContainer;
 
     function handleZoom(event) {
         if (!interactive) return;
         event.preventDefault();
 
-        if (!rect) rect = svgElement.getBoundingClientRect();
+        rect = mapContainer.getBoundingClientRect();
 
         // Get cursor position relative to the SVG container
         const cursorX = event.clientX - rect.left;
@@ -284,7 +286,6 @@
     }
 
     onMount(async () => {
-        mapContainer = document.getElementById("mapContainer");
         const geoData = await fetchTopoJSON();
         regionCountries = await fetchContinentCountries();
 
@@ -320,6 +321,7 @@
 
 <div
     class="map-container rounded-lg"
+    bind:this={mapContainer}
     style="width: w-full; height: w-full;"
     id="mapContainer">
     {#if !loaded}
@@ -361,7 +363,7 @@
 
             <g>
                 {#each features as feature (feature.uniqueKey)}
-                    {#if feature.isHighlighted && (showLabels || feature.showLabel) && zoom >= 1}
+                    {#if feature.isHighlighted && (showLabels || feature.showLabel) && zoom >= minLabelZoom}
                         {#if path.centroid(feature)}
                             {@const [x, y] = path.centroid(feature)}
                             {@const text = shortenRegionName(

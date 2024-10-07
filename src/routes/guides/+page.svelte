@@ -7,7 +7,8 @@
         Rabbit,
         Map,
         Camera,
-        Move
+        Move,
+        ArrowDownUp
     } from "lucide-svelte";
     import GuideCard from "$lib/components/GuideCard.svelte";
 </script>
@@ -73,6 +74,13 @@
         </h2>
         <div class="w-full flex space-x-4 flex-wrap scrollbar-hide">
             <!-- Cards here -->
+            <GuideCard
+            title="Driving side"
+            description="Learn in which countries people drive on the left or right side of the road."
+            href="/guides/read/intermediate/driving-side"
+            hueRotate="120">
+            <ArrowDownUp class="w-28 h-28"></ArrowDownUp>
+        </GuideCard>
         </div>
     </div>
 </article>
