@@ -29,7 +29,7 @@
     const dispatch = createEventDispatcher();
 
     const MIN_ZOOM = 0.5;
-    const MAX_ZOOM = 10;
+    const MAX_ZOOM = 20;
 
     const regionBounds = {
         World: [
@@ -222,7 +222,6 @@
         event.preventDefault();
 
         rect = mapContainer.getBoundingClientRect();
-        const svgRect = svgElement.getBoundingClientRect();
 
         // Get cursor position relative to the SVG container
         const cursorX = (event.clientX - rect.left) * (width / rect.width);
@@ -276,6 +275,8 @@
 
     function handleMouseMove(event) {
         if (!interactive || !isDragging) return;
+        // Store the initial rect for reference
+        rect = mapContainer.getBoundingClientRect();
         const dx = (event.clientX - lastX) * (width / rect.width);
         const dy = (event.clientY - lastY) * (height / rect.height);
         translateX += dx;
@@ -341,9 +342,6 @@
             updateProjection();
             generatePaths();
             loaded = true;
-
-            // Store the initial rect for reference
-            rect = mapContainer.getBoundingClientRect();
         }
     });
 </script>
