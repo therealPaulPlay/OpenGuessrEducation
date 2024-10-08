@@ -377,7 +377,7 @@
             class="transition-opacity duration-300 {interactive
                 ? 'pointer-events-auto'
                 : 'pointer-events-none'}">
-            <rect {width} {height} fill="oklch(var(--b3))" />
+            <rect {width} {height} fill="oklch(var(--a))" />
 
             <g>
                 {#each features as feature (feature.uniqueKey)}
@@ -385,7 +385,7 @@
                     <path
                         d={feature.d}
                         fill={feature.color || "oklch(var(--s))"}
-                        stroke="oklch(var(--b3))"
+                        stroke="oklch(var(--a))"
                         stroke-width="0.5"
                         vector-effect="non-scaling-stroke"
                         on:click={() => handleRegionClick(feature)}
@@ -442,13 +442,13 @@
         {#if interactive}
             <div class="absolute bottom-4 right-4 flex flex-col gap-2">
                 <button
-                    class="btn btn-circle btn-sm"
+                    class="btn btn-circle btn-base-200 btn-sm"
                     on:click={handleZoomIn}
                     aria-label="Zoom in">
                     <Plus size={16} />
                 </button>
                 <button
-                    class="btn btn-circle btn-sm"
+                    class="btn btn-circle btn-base-200 btn-sm"
                     on:click={handleZoomOut}
                     aria-label="Zoom out">
                     <Minus size={16} />

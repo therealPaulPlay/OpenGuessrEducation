@@ -191,7 +191,7 @@
             {region}
             {zoom}
             width={1000}
-            height={750}
+            height={550}
             on:click={handleMapClick}
             interactive={true}
             minLabelZoom=1

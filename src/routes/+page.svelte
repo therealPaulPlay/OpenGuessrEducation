@@ -50,8 +50,7 @@
                 <Book class="w-12 h-12 text-secondary mb-4" />
                 <h2 class="card-title">Learn GeoGuessing</h2>
                 <p>
-                    Master the art of location guessing with concise guides,
-                    articles and fun quizzes.
+                    Master the art of location guessing with concise guides and fun quizzes.
                 </p>
                 <div class="card-actions justify-end">
                     <button

@@ -23,7 +23,7 @@
 
 <QuizMap region="Driving Side" interactive=true showLabels=true minLabelZoom=3 notHighlightedColor="#67999e"/>
 
-<p class="text-center mt-2">Map comparing left-hand and right-hand traffic.</p>
+<p class="text-center mt-2">Map comparing left-hand to right-hand traffic.</p>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Determining the driving direction</h2>
 

@@ -44,18 +44,19 @@
         Embark on an epic learning-adventure.
     </h1>
     <p class="mb-6">
-        Welcome to OpenGuessr Education, the ultimate geography platform
-        that will test your knowledge and sharpen up your geography guessing skills. Let's take a quick tour to find
-        out what this site has to offer!
+        Welcome to OpenGuessr Education, the <b>ultimate geography platform</b>
+        that will test your knowledge and sharpen up your geography guessing skills.
+        Let's take a <b>quick tour</b> to find out what this site has to offer!
     </p>
 
     <h2 class="text-2xl font-semibold mb-2">What is OpenGuessr?</h2>
     <p class="mb-6">
         <a href="https://openguessr.com" target="_blank" class="text-secondary"
             >OpenGuessr</a>
-        is an exciting geography game where you guess the location of a street
-        view image. Have you heard of GeoGuessr before? OpenGuessr is
-        comparable, but with a slightly different feature set, and 100% free!
+        is an exciting geography game where you guess the location of a street view
+        image. Have you heard of <b>GeoGuessr</b> before? OpenGuessr is
+        <b>comparable</b>, but with a slightly different feature set, and
+        <b>100% free</b>!
         <br /><br />
         The closer your guess is to the actual location, the higher your score. Think
         of it as a virtual treasure hunt where the treasure is your newfound knowledge
@@ -106,37 +107,43 @@
         Got it, but what's OpenGuessr Education?
     </h2>
     <p class="mb-6">
-        OpenGuessr Education is a new learning site that helps you get better at
-        geoguessing. Want to learn more about <a
-            href="/countries/germany"
-            class="text-secondary">Germany</a
-        >, for example? There is a page for that.
-        <a href="/countries/england" class="text-secondary">England</a>? Yup. And there is more - let's take a look at guides and fun quizzes.
+        <b>OpenGuessr Education</b> is a new <b>learning site</b> that helps you
+        get better at geoguessing. Want to learn more about
+        <a href="/countries/germany" class="text-secondary">Germany</a>, for
+        example? There is a page for that.
+        <a href="/countries/england" class="text-secondary">England</a>? Yup.
+        And there is more - let's take a look at guides and fun quizzes.
     </p>
 
     <h3 class="text-xl font-semibold mb-2">Understanding Quizzes</h3>
     <p class="mb-6">
-        Quizzes on OpenGuessr Education are a great way to test your knowledge
-        of different countries. In these quizzes, you'll for example be
-        presented with a country name and have to select it on the map. Quizzes help you memorize country names, shapes, states, flags, cities and more depending on the quiz type. To start a quiz, visit the <a
-            href="/quiz"
-            class="text-secondary">Quizzes</a> page.
+        <b>Quizzes</b> on OpenGuessr Education are a great way to
+        <b>test your knowledge</b>
+        of different countries. In these quizzes, you'll for example be presented
+        with a country name and have to select it on the map. Quizzes help you
+        <b>memorize</b>
+        country <b>names, shapes, states, flags, cities</b> and more depending
+        on the quiz type. To start a quiz, visit the
+        <a href="/quiz" class="text-secondary">Quizzes</a> page.
     </p>
 
     <h3 class="text-xl font-semibold mb-2">About Guides</h3>
     <p class="mb-6">
-        Want to improve your geoguessing skills and gain knowledge about the game? Check
-        out the comprehensive <a href="/guides" class="text-secondary"
-            >Guides</a> section. Guides are packed with tips and tricks to help you
-        become the next Rainbolt. They are frequently updated, so you'll always have
-        the latest strategies at your fingertips. Whether you're looking to score
-        more 5ks, win more duels or want to learn how to use the compass effectively, these guides have got you covered.
+        Want to <b>improve</b> your <b>geo-guessing skills</b> and gain
+        knowledge about the game? <b>Check out</b>
+        the comprehensive <a href="/guides" class="text-secondary">Guides</a>
+        section. Guides are <b>packed with tips</b> and tricks to help you
+        become the next Rainbolt. They are frequently updated, so you'll always
+        have the latest strategies at your fingertips. Whether you're looking to
+        <b>score more 5ks</b>, win more duels or want to learn how to use the
+        compass effectively, these guides have got you covered.
     </p>
 
     <h3 class="text-xl font-semibold mb-2">Join the Community</h3>
     <p class="mb-6">
-        Connect with other geography enthusiasts and share your experiences.
-        Join the <a
+        <b>Connect</b> with other <b>geography enthusiasts</b> and share your
+        experiences. Join the
+        <a
             href="https://discord.com/invite/CSc3MbDrZ8"
             target="_blank"
             class="text-secondary">Discord Server</a> to participate in discussions,
@@ -175,10 +182,10 @@
                     Improving your geoguessing skills takes practice and
                     attention to detail. <a
                         href="/guides"
-                        class="text-secondary">Guides</a> on OpenGuessr Education help you learn about common clues
-                    and strategies. Playing regularly and reviewing your guesses
-                    will also help you get better over time. Remember, practice makes
-                    perfect!
+                        class="text-secondary">Guides</a> on OpenGuessr Education
+                    help you learn about common clues and strategies. Playing regularly
+                    and reviewing your guesses will also help you get better over
+                    time. Remember, practice makes perfect!
                 </p>
             </div>
         </div>
@@ -191,7 +198,23 @@
             </div>
             <div class="collapse-content">
                 <p>
-                    OpenGuessr is funded by ads and supporter purchases. These make it possible for OpenGuessr to be free of charge.
+                    OpenGuessr is funded by ads and supporter purchases. These
+                    make it possible for OpenGuessr to be free of charge.
+                </p>
+            </div>
+        </div>
+        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+        <div
+            tabindex="0"
+            class="collapse collapse-arrow bg-base-200 bg-base-100 rounded-box mb-2">
+            <div class="collapse-title text-lg font-medium">
+                Where can I learn to play GeoGuessr?
+            </div>
+            <div class="collapse-content">
+                <p>
+                    OpenGuessr Education is a great place to learn new geography and GeoGuessr metas. Moreover, sites such as <a class="text-secondary" href="https://plonkit.net" target="_blank">Plonk It</a>, 
+                    <a class="text-secondary" href="https://geotips.net/" target="_blank">GeoTips</a> and <a class="text-secondary" href="https://geohints.com/" target="_blank">GeoHints</a> are other
+                    amazing resources.
                 </p>
             </div>
         </div>

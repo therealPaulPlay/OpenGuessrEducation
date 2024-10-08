@@ -8,7 +8,7 @@
     these systems are used to map and photograph areas that are otherwise inaccessible, such as <b>mountain trails</b>, <b>narrow historical streets</b>, or <b>dense forests</b>.
 </p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">What Does a Trekker Camera Look Like?</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">What does a trekker-camera look like?</h2>
 <p class="mb-2">
     The <b>Trekker camera</b> is a backpack-mounted device with a distinctive, large <b>spherical camera</b> above the carrier's head. 
     Equipped with multiple lenses to capture <b>360-degree panoramic views</b>, it is designed to endure long walks on rough terrains, providing clear images of locations unreachable by cars or bikes. 
