@@ -60,6 +60,14 @@
             [90, -60],
             [180, 10],
         ],
+        "Hebrew Alphabet": [
+            [20, 10],
+            [50, 50],
+        ],
+        "Greek Alphabet": [
+            [-45, 30],
+            [70, 50],
+        ]
     };
 
     let initialScale;

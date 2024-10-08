@@ -8,7 +8,10 @@
         Map,
         Camera,
         Move,
-        ArrowDownUp
+        ArrowDownUp,
+        TrafficCone,
+        BookA,
+        Footprints
     } from "lucide-svelte";
     import GuideCard from "$lib/components/GuideCard.svelte";
 </script>
@@ -72,14 +75,35 @@
             <Lightbulb class="w-8 h-8 mr-2" />
             Intermediate
         </h2>
-        <div class="w-full flex space-x-4 flex-wrap scrollbar-hide">
+        <div class="w-full flex gap-8 flex-wrap scrollbar-hide">
             <!-- Cards here -->
             <GuideCard
-            title="Driving side"
-            description="Learn in which countries people drive on the left or right side of the road."
-            href="/guides/read/intermediate/driving-side"
-            hueRotate="120">
-            <ArrowDownUp class="w-28 h-28"></ArrowDownUp>
+                title="Driving side"
+                description="Learn in which countries people drive on the left or right side of the road."
+                href="/guides/read/intermediate/driving-side"
+                hueRotate="120">
+                <ArrowDownUp class="w-28 h-28"></ArrowDownUp>
+            </GuideCard>
+            <GuideCard
+                title="Road lines"
+                description="Distinguish road lines from another, differentiate between white and yellow lines."
+                href="/guides/read/intermediate/road-lines"
+                hueRotate="140">
+                <TrafficCone class="w-28 h-28"></TrafficCone>
+            </GuideCard>
+            <GuideCard
+                title="Alphabets"
+                description="Find out which alphabets and languages are in use and where."
+                href="/guides/read/intermediate/alphabets"
+                hueRotate="160">
+                <BookA class="w-28 h-28"></BookA>
+            </GuideCard>
+            <GuideCard
+            title="Trekker Coverage"
+            description="Learn what Trekker coverage refers to and how it could be useful for guessing."
+            href="/guides/read/intermediate/trekker"
+            hueRotate="180">
+            <Footprints class="w-28 h-28"></Footprints>
         </GuideCard>
         </div>
     </div>

@@ -64,7 +64,7 @@
         </div>
 
         <!-- Navigation Links -->
-        <ul class="menu w-full space-y-4 p-0 mt-20 mb-5">
+        <ul class="menu w-full space-y-4 p-0 mt-10 mb-5">
             <li>
                 <a
                     class="btn normal-case text-lg {activeButton === 'home' ? 'btn-primary text-white' : 'btn-accent'}"
