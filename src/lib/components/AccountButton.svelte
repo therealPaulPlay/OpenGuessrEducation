@@ -15,5 +15,5 @@
 {/if}
 
 {#if !isLoggedIn}
-  <button class="btn btn-primary">Log in</button>
+  <a class="btn btn-primary" href="https://openguessr.com/signup">Log in</a>
 {/if}
