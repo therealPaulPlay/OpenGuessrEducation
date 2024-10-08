@@ -1,6 +1,6 @@
 <script>
     import Globe from "$lib/components/Globe.svelte";
-    import { goto } from '$app/navigation';
+    import { goto } from "$app/navigation";
     import {
         MapPin,
         Info,
@@ -19,12 +19,16 @@
     import { onMount } from "svelte";
 
     let welcomeText = "Master your geography skills.";
-    let yourName;
+    let yourName = "";
     let isHovered = false;
 
-
-
-    onMount(() => (yourName = ", " + localStorage.getItem("username") || "."));
+    onMount(() => {
+        if (localStorage.getItem("username")) {
+            yourName = ", " + localStorage.getItem("username");
+        } else {
+            yourName = "";
+        }
+    });
 </script>
 
 <article class="container mx-auto px-4 py-8">
@@ -46,10 +50,15 @@
                 <Book class="w-12 h-12 text-secondary mb-4" />
                 <h2 class="card-title">Learn GeoGuessing</h2>
                 <p>
-                    Master the art of location guessing with concise guides, articles and fun quizzes.
+                    Master the art of location guessing with concise guides,
+                    articles and fun quizzes.
                 </p>
                 <div class="card-actions justify-end">
-                    <button class="btn btn-secondary" on:click={() => { goto("/get-started")} }>Get started</button>
+                    <button
+                        class="btn btn-secondary"
+                        on:click={() => {
+                            goto("/get-started");
+                        }}>Get started</button>
                 </div>
             </div>
         </div>
@@ -60,10 +69,15 @@
                 <Gamepad2 class="w-12 h-12 text-secondary mb-4" />
                 <h2 class="card-title">Quizzes</h2>
                 <p>
-                    Challenge yourself in engaging geography quizzes. Why not give it a go now?
+                    Challenge yourself in engaging geography quizzes. Why not
+                    give it a go now?
                 </p>
                 <div class="card-actions justify-end">
-                    <button class="btn btn-secondary" on:click={() => { goto("/quiz")} }>Take a Quiz</button>
+                    <button
+                        class="btn btn-secondary"
+                        on:click={() => {
+                            goto("/quiz");
+                        }}>Take a Quiz</button>
                 </div>
             </div>
         </div>
@@ -74,12 +88,15 @@
                 <Trophy class="w-12 h-12 text-secondary mb-4" />
                 <h2 class="card-title">Professional Guides</h2>
                 <p>
-                    Learn to play and discover tricks from top players to elevate
-                    your game.
+                    Learn to play and discover tricks from top players to
+                    elevate your game.
                 </p>
                 <div class="card-actions justify-end">
-                    <button class="btn btn-secondary" on:click={() => { goto("/guides")} }
-                        >Discover Guides</button>
+                    <button
+                        class="btn btn-secondary"
+                        on:click={() => {
+                            goto("/guides");
+                        }}>Discover Guides</button>
                 </div>
             </div>
         </div>
@@ -100,8 +117,9 @@
                             Explore the World
                         </h3>
                         <p class="text-base">
-                            Dive into our <b>educational (but fun!) content</b> to learn
-                            about different <b>locations</b>, <b>continents</b>,
+                            Dive into our <b>educational (but fun!) content</b>
+                            to learn about different <b>locations</b>,
+                            <b>continents</b>,
                             <b>capitals</b>, and <b>landmarks</b>.
                         </p>
                     </div>
@@ -134,7 +152,8 @@
                         </h3>
                         <p class="text-base">
                             Whether you're a fan of <b>GeoGuessr</b>,
-                            <b>OpenGuessr</b>, or <b>Geotastic</b>, you'll find something that suits your needs.
+                            <b>OpenGuessr</b>, or <b>Geotastic</b>, you'll find
+                            something that suits your needs.
                         </p>
                     </div>
                 </div>
@@ -148,7 +167,8 @@
                         </h3>
                         <p class="text-base">
                             Become a staple of the geography <b>community</b>.
-                            The discord is full of cool nerds that want to learn more about our planet.
+                            The discord is full of cool nerds that want to learn
+                            more about our planet.
                         </p>
                     </div>
                 </div>
@@ -189,29 +209,26 @@
         <h2 class="text-4xl font-bold mb-2 text-center">
             Ready to become a pro?
         </h2>
-        <p class="text-xl mb-6">
-            The journey will be legendary.
-        </p>
-        <button 
+        <p class="text-xl mb-6">The journey will be legendary.</p>
+        <button
             class="btn btn-secondary btn-lg relative overflow-hidden"
-            on:mouseenter={() => isHovered = true}
-            on:mouseleave={() => isHovered = false}
-            on:click={() => {goto("/get-started")} }
-        >
-            <span class="mr-2">Start geo-maxxing</span>
+            on:mouseenter={() => (isHovered = true)}
+            on:mouseleave={() => (isHovered = false)}
+            on:click={() => {
+                goto("/get-started");
+            }}>
+            <span class="mr-2">Start learning</span>
             <div class="w-10 h-10 relative">
                 <img
                     src="src/lib/assets/noob_player.png"
                     alt="Beginner"
                     class="w-full h-full object-contain absolute transition-opacity duration-300 ease-in-out"
-                    style="opacity: {isHovered ? 0 : 1}"
-                />
+                    style="opacity: {isHovered ? 0 : 1}" />
                 <img
                     src="src/lib/assets/chad_moai.png"
                     alt="Pro"
                     class="w-full h-full object-contain absolute transition-opacity duration-300 ease-in-out"
-                    style="opacity: {isHovered ? 1 : 0}"
-                />
+                    style="opacity: {isHovered ? 1 : 0}" />
             </div>
         </button>
     </div>
