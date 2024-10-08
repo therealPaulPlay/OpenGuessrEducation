@@ -1,6 +1,7 @@
 <script>
     import InteractiveCompass from "$lib/components/InteractiveCompass.svelte";
     import ArticleTip from "$lib/components/ArticleTip.svelte";
+    import GuideQuiz from "$lib/components/GuideQuiz.svelte";
 </script>
 
 <h1 class="text-4xl font-bold mb-4">The Compass</h1>
@@ -61,3 +62,12 @@
     The equator splits the planet earth into two halves, a northern (upper) and a southern (lower) half. For example, Europe is located entirely in the northern hemisphere, 
     whereas Oceania sits in the southern hemisphere.
 </p>
+
+<GuideQuiz
+  question="What is the capital of France?"
+  answerOne="London"
+  answerTwo="Paris"
+  answerThree="Berlin"
+  answerFour="Madrid"
+  correctAnswer={2}
+/>

@@ -12,7 +12,7 @@
 <h2 class="text-2xl font-bold mt-8 mb-2">Latin Alphabet</h2>
 <p class="mb-2">
     The <b>Latin alphabet</b> is the most widely used script in the world. It's the official alphabet in many countries 
-    including <b>the USA, most of Europe, and parts of Africa</b>. It’s characterized by simple letters like <b>A, B, C, D</b>.
+    including <b>the USA, most of Europe, and parts of Africa</b>. It's characterized by simple letters like <b>A, B, C, D</b>.
     Special characters like <b>é</b> or <b>ñ</b> can help identify countries like <b>France</b> or <b>Spain</b>. Letters like <b>ü, ä, or ö</b> are being
     used in <b>German</b>.
 </p>
@@ -27,7 +27,7 @@
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Cyrillic Alphabet</h2>
 <p class="mb-2">
-    The <b>Cyrillic alphabet</b> is used in several countries including <b>Russia, Bulgaria, and Serbia</b>. It’s distinctive with 
+    The <b>Cyrillic alphabet</b> is used in several countries including <b>Russia, Bulgaria, and Serbia</b>. It's distinctive with 
     letters like <b>ж, ч, ш</b>. Words written in Cyrillic often look more compact and blocky.
 </p>
 <p class="mb-4">
@@ -41,7 +41,7 @@
 <h2 class="text-2xl font-bold mt-8 mb-2">Arabic Alphabet</h2>
 <p class="mb-2">
     The <b>Arabic alphabet</b> is used in countries across the <b>Middle East and North Africa</b>, including 
-    <b>Saudi Arabia, Egypt, and Morocco</b>. It’s written <b>right-to-left</b> and has a flowing, cursive style.
+    <b>Saudi Arabia, Egypt, and Morocco</b>. It's written <b>right-to-left</b> and has a flowing, cursive style.
     Key letters to recognize are <b>ا, ب, ت</b>.
 </p>
 <p class="mb-2">
@@ -49,7 +49,7 @@
 </p>
 
 <ArticleTip>
-    Detect Arabic by recognizing the script’s right-to-left orientation and its elegant, connected letters.
+    Detect Arabic by recognizing the script's right-to-left orientation and its elegant, connected letters.
 </ArticleTip>
 
 <QuizMap region="Arabic Alphabet" interactive=true showLabels=true minLabelZoom=3/>
@@ -58,7 +58,7 @@
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Hebrew Alphabet</h2>
 <p class="mb-2">
-    The <b>Hebrew alphabet</b> is primarily used in <b>Israel</b>. It’s also written <b>right-to-left</b> and 
+    The <b>Hebrew alphabet</b> is primarily used in <b>Israel</b>. It's also written <b>right-to-left</b> and 
     includes distinct letters like <b>א, ב, ג</b>.
 </p>
 <p class="mb-2">
@@ -66,7 +66,7 @@
 </p>
 
 <ArticleTip>
-    Look for Hebrew’s blocky characters and right-to-left writing style to spot countries like Israel.
+    Look for Hebrew's blocky characters and right-to-left writing style to spot countries like Israel.
 </ArticleTip>
 
 <QuizMap region="Hebrew Alphabet" interactive=true showLabels=true minLabelZoom=3/>
@@ -106,7 +106,7 @@
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Devanagari Alphabet</h2>
 <p class="mb-2">
-    The <b>Devanagari alphabet</b> is used in <b>India and Nepal</b>, for languages like <b>Hindi</b> and <b>Nepali</b>. It’s notable 
+    The <b>Devanagari alphabet</b> is used in <b>India and Nepal</b>, for languages like <b>Hindi</b> and <b>Nepali</b>. It's notable 
     for its horizontal line running above the letters and includes characters like <b>अ, ब, म</b>.
 </p>
 <p class="mb-2">
@@ -121,9 +121,9 @@
 
 <p class="text-center mt-2">Countries that use the Devanagari alphabet.</p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Hangul</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Hangul Alphabet</h2>
 <p class="mb-2">
-    <b>Hangul</b> is the unique alphabet used in <b>South Korea</b>. It’s composed of distinct letters that combine to form syllables. 
+    <b>Hangul</b> is the unique alphabet used in <b>South Korea</b>. It's composed of distinct letters that combine to form syllables. 
     Recognizable characters include <b>ㅎ, ㄱ, ㅂ</b>.
 </p>
 <p class="mb-2">

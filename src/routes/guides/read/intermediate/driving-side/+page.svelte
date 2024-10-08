@@ -25,7 +25,7 @@
 
 <p class="text-center mt-2">Map comparing left-hand to right-hand traffic.</p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Determining the driving direction</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Determining the direction of travel</h2>
 
 <p class="mb-2">
     Sometimes, determining the driving direction of the capture car can be a bit difficult. Let's go over a <b>few methods</b> that allow you to
