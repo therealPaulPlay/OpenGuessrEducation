@@ -2,6 +2,7 @@
 <script>
   import { onMount } from "svelte";
   import { CircleUserRound } from "lucide-svelte";
+  import { isAuthenticated } from "$lib/stores/accountData.js";
 
   let isLoggedIn = false;
 
@@ -26,10 +27,16 @@
         userId = localStorage.getItem("id") || "-1";
         username = localStorage.getItem("username") || "Guest";
 
+        // Set store data
+        isAuthenticated.set(true);
+
         // Load basic details
         const user = await getUser();
         experience = user.experience;
         username = user.userName;
+
+        // Save experience to localstorage
+        localStorage.setItem("experience", experience);
       }
     } else {
       isLoggedIn = false;

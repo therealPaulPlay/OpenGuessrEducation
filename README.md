@@ -1,3 +1,5 @@
+![OpenGuessr Education cover image](relative%20src/lib/assets/openguessr_jungle_adventure.png?raw=true)
+
 # OpenGuessr Education
 [OpenGuessr Education](https://education.openguessr.com) is a knowledge hub and quiz page for geography enthusiasts, created and managed by [PaulPlay](https://paulplay.studio)👋 The goal of the project is to build a site that teaches players how to improve their skills in geography-guessing games such as OpenGuessr, GeoGuessr or Geotastic and appeals to general geography fans as well.
 The unique combination of minigames, interactive guides and extensive country data should make learning about the world fun and exciting.
@@ -15,7 +17,7 @@ If you have a suggestion that would enhance the project, please fork the repo an
 2. Create your Feature Branch (git checkout -b suggestion/newSuggestion)
 3. Commit your Changes (git commit -m 'Commit message that describes the changes')
 4. Push to the Branch (git push origin suggestion/newSuggestion)
-5. Open a Pull Request
+5. Open a Pull Request to the suggestion branch (not main!)
 
 ### Contribution Rules
 + The contribution must fit the project and the geography context

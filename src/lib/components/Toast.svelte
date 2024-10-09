@@ -6,6 +6,8 @@
     export let duration = 3000;
     export let type = "success";
 
+    export let typeClass = "alert-" + type;
+
     let visible = false;
 
     onMount(() => {
@@ -20,8 +22,8 @@
     <div
         class="toast toast-top toast-end"
         transition:fade={{ duration: 300 }}>
-        <div class="alert alert-{type}">
-            <span>{message}</span>
+        <div class="alert {typeClass}">
+            <span class="font-bold">{message}</span>
         </div>
     </div>
 {/if}
