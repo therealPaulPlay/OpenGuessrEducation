@@ -1,5 +1,6 @@
 <script>
     import ArticleTip from "$lib/components/ArticleTip.svelte";
+    import GuideQuiz from "$lib/components/GuideQuiz.svelte";
 </script>
 
 <h1 class="text-4xl font-bold mb-4">An example guide</h1>
@@ -15,7 +16,7 @@
 </p>
 
 <ArticleTip>
-    This is a highlighted tip. Please use target="_blank" for links, thank you!
+    This is a highlighted tip. Please use target="_blank" for external links, thank you!
 </ArticleTip>
 
 <img
@@ -27,6 +28,15 @@
 
 <h2 class="text-2xl font-bold mt-8 mb-2">A second H2 header</h2>
 <p class="mb-2">This is a second header with example text.</p>
+
+<GuideQuiz
+  question="How many quizzes can a guide include?"
+  answerOne="A single one"
+  answerTwo="Up to ten"
+  answerThree="At least one"
+  answerFour="There is no minimum or maximum"
+  correctAnswer={4}
+/>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">A third H2 header</h2>
 <p class="mb-2">This is a third with example text.</p>

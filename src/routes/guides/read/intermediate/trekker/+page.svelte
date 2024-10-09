@@ -1,5 +1,6 @@
 <script>
     import ArticleTip from "$lib/components/ArticleTip.svelte";
+    import GuideQuiz from "$lib/components/GuideQuiz.svelte";
 </script>
 
 <h1 class="text-4xl font-bold mb-4">Trekker Coverage</h1>
@@ -14,6 +15,15 @@
     Equipped with multiple lenses to capture <b>360-degree panoramic views</b>, it is designed to endure long walks on rough terrains, providing clear images of locations unreachable by cars or bikes. 
     For instance, you might spot Trekker footage in locations like the remote temples of <b>Machu Picchu</b> or deep within <b>forests</b>.
 </p>
+
+<GuideQuiz
+  question='Where is trekker coverage common?'
+  answerOne="On large highways"
+  answerTwo="In areas explored best on foot"
+  answerThree="In cities and inside buildings"
+  answerFour="In more populated areas"
+  correctAnswer={2}>
+</GuideQuiz>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Why is it useful for guessing?</h2>
 <p class="mb-2">

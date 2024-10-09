@@ -1,3 +1,7 @@
+<script>
+    import GuideQuiz from "$lib/components/GuideQuiz.svelte";
+</script>
+
 <h1 class="text-4xl font-bold mb-4">Fast Movement</h1>
 <p class="mb-2">Picture this - you're starting a new round and get a location in the middle of nowhere. <b>No hints</b>, not even road signs.
     This is exactly when <b>moving fast</b> can make a tangible difference in determining who comes out victorious. 
@@ -19,6 +23,15 @@
     src="/src/lib/assets/guides/selected_arrow.png"
     class="rounded-xl w-full" />
 <p class="text-center mt-2">A correctly selected arrow.</p>
+
+<GuideQuiz
+  question='What should be done after clicking on the white arrow?'
+  answerOne="Hold down Enter or Space"
+  answerTwo="Hold down any keyboard button"
+  answerThree="Click elsewhere, then hold down Space"
+  answerFour="Click and drag the white arrow"
+  correctAnswer={1}
+/>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">How to "teleport"</h2>
 <p class="mb-2">Sometimes, teleporting can be used to <b>jump to places</b> that would otherwise be hard to reach.</p>

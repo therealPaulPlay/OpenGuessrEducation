@@ -31,6 +31,11 @@
     }
   });
 
+  function getIndexLetter(i) {
+    const letters = ["A", "B", "C", "D"];
+    return letters[i];
+  }
+
   function handleAnswer(index) {
     if (isCompleted) return;
 
@@ -47,7 +52,7 @@
   }
 </script>
 
-<div class="w-full bg-base-200 rounded-xl shadow-md mt-4 relative">
+<div class="w-full bg-base-200 rounded-xl shadow-md my-8 relative">
   {#if !isLoggedIn}
     <div
       class="absolute w-full h-full backdrop-blur-sm z-20 rounded-xl">
@@ -67,10 +72,12 @@
       <h2 class="text-xl font-bold">{question}</h2><div class="badge badge-success mt-1 transition-opacity {isCompleted ? "opacity-0" : ""}">500 XP</div>
     </div>
 
+    <slot />
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       {#each answers as answer, index}
         <button
-          class="btn w-full h-auto py-2 px-4 relative
+          class="btn w-full h-auto py-2 px-12 relative text-wrap
                    {index === correctAnswer - 1 && isCompleted
             ? 'btn-success opacity-100'
             : 'btn-accent'}
@@ -87,6 +94,9 @@
               <Check size={20} />
             </span>
           {/if}
+          <span class="absolute left-2 rounded-full items-center flex justify-center bg-base-200 text-center align-middle w-7 h-7">
+            <p class="opacity-50">{getIndexLetter(index)}</p>
+          </span>
         </button>
       {/each}
     </div>

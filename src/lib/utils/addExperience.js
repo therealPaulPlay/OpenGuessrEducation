@@ -1,6 +1,7 @@
 export async function addExperience(addAmount) {
 
-    const currentExperience = localStorage.getItem("experience");
+    const currentExperience = Number(localStorage.getItem("experience"));
+    
     if (!currentExperience) {
         console.error("Couldn't retrieve experience");
         return
@@ -9,7 +10,7 @@ export async function addExperience(addAmount) {
     try {
         const requestBody = {
             id: localStorage.getItem("id"),
-            experience: currentExperience + addAmount
+            experience: currentExperience + Number(addAmount)
         };
 
         const experienceEndpoint = "https://accounts.openguessr.com/accounts/update/experience";
@@ -28,9 +29,9 @@ export async function addExperience(addAmount) {
         if (response.ok) {
             const data = await response.json();
             if (data?.user?.experience) localStorage.setItem("experience", data?.user?.experience);
-            
+
         } else {
-            console.error('Experience update failed, Status: ' + response.status + ", Full response: " + response);
+            console.error('Experience update failed, Status: ' + response.status + ", Error " + response?.error);
         }
     } catch (error) {
         console.error('Error occurred during experience update: ', error);

@@ -6,12 +6,13 @@
     export let duration = 3000;
     export let type = "success";
 
-    export let typeClass = "alert-" + type;
+    export let typeClass = "alert-success";
 
     let visible = false;
 
     onMount(() => {
         visible = true;
+        typeClass = "alert-" + type;
         setTimeout(() => {
             visible = false;
         }, duration);

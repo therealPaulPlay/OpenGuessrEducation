@@ -1,3 +1,7 @@
+<script>
+    import GuideQuiz from "$lib/components/GuideQuiz.svelte";
+</script>
+
 <h1 class="text-4xl font-bold mb-4">Restrictions & NMPZ</h1>
 
 <p class="mb-2">
@@ -19,6 +23,15 @@
 </ol>
 
 <p class="mb-2"> Oftentimes, these controls are being enabled or disabled to make for interesting restrictions. Especially "No-Move" is quite popular in the GeoGuessr community.</p>
+
+<GuideQuiz
+  question='What does NMPZ stand for?'
+  answerOne="No move, No pan, No zoom"
+  answerTwo="No mods, No pins, No zoom"
+  answerThree="Never mark pins as zero"
+  answerFour="No map, No places, No zones"
+  correctAnswer={1}
+/>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Restrictions</h2>
 

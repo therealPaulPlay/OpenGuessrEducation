@@ -47,12 +47,17 @@
     camera so that the <b>compass points north</b> and
     then tilt the view so that the ground becomes visible. This way, you can scan for roads, coastlines or other landmarks on the minimap that
     follow the same direction as the geographical feature, because the
-    <b>minimap always points north</b>.
+    <b>minimap always points north</b>. In <b>OpenGuessr</b>, you can also simply <b>click</b> on the <b>compass</b> to rotate the view to face <b>north</b>.
 </p>
 
-<ArticleTip>
-    In OpenGuessr, you can click on the compass to rotate the view to face north!
-</ArticleTip>
+<GuideQuiz
+  question='When would "lining up" be beneficial?'
+  answerOne="When the round starts"
+  answerTwo="Always, to determine the hemisphere"
+  answerThree="When searching for the right road"
+  answerFour="After placing the pin"
+  correctAnswer={3}
+/>
 
 <img alt="streetview example lining up" src="/src/lib/assets/guides/compass-streetview-example.jpg" class="rounded-xl">
 
@@ -62,12 +67,3 @@
     The equator splits the planet earth into two halves, a northern (upper) and a southern (lower) half. For example, Europe is located entirely in the northern hemisphere, 
     whereas Oceania sits in the southern hemisphere.
 </p>
-
-<GuideQuiz
-  question="What is the capital of France?"
-  answerOne="London"
-  answerTwo="Paris"
-  answerThree="Berlin"
-  answerFour="Madrid"
-  correctAnswer={2}
-/>

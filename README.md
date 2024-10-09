@@ -41,6 +41,14 @@ If you have a suggestion that would enhance the project, please fork the repo an
 </GuideCard>
 ```
 
+### Guide Structure Rules
++ Please follow the structure seen in ```/src/routes/guides/read/example/tutorial```
++ Use proper spacing. Usually at least ```mb-2``` after text, ```mt-8``` for subheadings, ```mb-4``` on text if an image follows it etc. The guide tutorial shows this. 
++ Headings should **not** have a ```:``` at the end
++ Answers for Quizzes should **not** end in a ```., ? or !````
++ Highlight important words in **bold** using ```<b>word</b>```. As a rule of thumb, every concept should be understandable by just reading the words in bold.
++ Make use of article tips and article guides, but don't put too many inside of a guide. Ensure that content > components.
+
 ## About Svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).

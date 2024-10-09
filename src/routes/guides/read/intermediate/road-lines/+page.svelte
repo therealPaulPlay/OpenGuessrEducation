@@ -1,5 +1,6 @@
 <script>
     import ArticleTip from "$lib/components/ArticleTip.svelte";
+    import GuideQuiz from "$lib/components/GuideQuiz.svelte";
 </script>
 
 <h1 class="text-4xl font-bold mb-4">Road lines</h1>
@@ -40,18 +41,24 @@
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Yellow center lines</h2>
 
-<p class="mb-4">
+<p class="mb-2">
     In general, <b>North- and South America</b> have yellow center lines. In the US, there are usually <b>two center lines</b>, whereas a <b>single center line</b> is more common
     in <b>Canada</b> or <b>Mexico</b>. However, there are exceptions. While <b>Chile</b> often uses white center lines, there are rare occasions in which <b>all lines are yellow </b> (center & outer), which is 
     rather <b>exclusive</b> to Chile. Other notable countries with yellow center lines are <b>Thailand</b> and <b>Cambodia</b>.
 </p>
 
-<img
+<GuideQuiz
+  question='Where in South America was this image captured?'
+  answerOne="Brasil"
+  answerTwo="Uruguay"
+  answerThree="Argentina"
+  answerFour="Chile"
+  correctAnswer={4}>
+  <img
     alt="Chile road"
     src="/src/lib/assets/guides/chile_road.png"
-    class="rounded-xl w-full" />
-
-<p class="text-center mt-2 mb-4">A standard road in Chile with a double solid white line.</p>
+    class="rounded-lg w-full mb-4" />
+</GuideQuiz>
 
 <p class="mb-4">
     <b>Argentina</b> frequently uses <b>white lines </b>, although <b>yellow</b> ones are more common. <b>Uruguay</b> oftentimes uses a combination of white and yellow for their center line, which
