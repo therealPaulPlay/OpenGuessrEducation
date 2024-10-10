@@ -44,7 +44,7 @@
         Embark on an epic learning-adventure.
     </h1>
     <p class="mb-6">
-        Welcome to OpenGuessr Education, the <b>ultimate geography platform</b>
+        <b>Welcome to OpenGuessr Education</b>, the <b>ultimate geography platform</b>
         that will test your knowledge and sharpen up your geography guessing skills.
         Let's take a <b>quick tour</b> to find out what this site has to offer!
     </p>
