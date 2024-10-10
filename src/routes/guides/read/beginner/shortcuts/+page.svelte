@@ -4,9 +4,9 @@
 
 <h1 class="text-4xl font-bold mb-4">Keyboard Shortcuts</h1>
 <p class="mb-2">
-    These keyboard shortcuts will help you play <b>GeoGuessr</b>
+    These keyboard shortcuts will help you play <b>GeoGuessr</b> and <b>OpenGuessr</b>
     more quickly and effectively. Especially in time-limited multiplayer matches,
-    using these is highly recommended. These keyboard shortcuts are up-to-date and
+    using these is highly recommended. The GeoGuessr keyboard shortcuts are up-to-date and
     taken from the official
     <a
         class="text-secondary"
@@ -50,5 +50,15 @@
     </li>
     <li>
         Press <kbd class="kbd kbd-sm mx-2">Enter</kbd> to bring up the settings menu
+    </li>
+</ol>
+
+<h2 class="text-2xl font-bold mt-8 mb-2">OpenGuessr keyboard shortcuts</h2>
+<ol class="mb-2 list-disc list-inside">
+    <li>
+        Press <kbd class="kbd kbd-sm mx-2">Space</kbd> to lock in a guess
+    </li>
+    <li>
+        Use <kbd class="kbd kbd-sm ml-2">W</kbd>, <kbd class="kbd kbd-sm ml-2">A</kbd>, <kbd class="kbd kbd-sm mx-2">S</kbd> and <kbd class="kbd kbd-sm mx-2">D</kbd> to move
     </li>
 </ol>

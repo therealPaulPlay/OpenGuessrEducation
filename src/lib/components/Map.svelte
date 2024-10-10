@@ -10,7 +10,7 @@
     export let width = 800;
     export let height = 400;
     export let interactive = false;
-    export let highlightedFeature = null;
+    export let highlightedFeature = null; // Used for typing in the highlighted country in quizzes
     export let showLabels = false;
     export let minLabelZoom = 1;
     export let notHighlightedColor = "rgba(125,125,125, 0.2)";
@@ -109,7 +109,7 @@
 
     $: {
         if (highlightedFeature) {
-            highlightFeature(highlightedFeature, "oklch(var(--p))");
+            highlightFeature(highlightedFeature, "oklch(var(--b1))");
         }
     }
 

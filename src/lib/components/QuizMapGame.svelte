@@ -10,11 +10,14 @@
 
     let quizMap;
     let features = [];
-    let currentQuestion;
+    let currentQuestion = "loading...";
     let remainingFeatures = [];
     let gameMode = "click"; // 'click', 'type', or 'learn'
 
     let userInput = "";
+
+    // used as a key to reload and thereby reset the map
+    let uniqueMap = {};
 
     let score = 0;
     let errors = 0;
@@ -27,6 +30,15 @@
     let highlightedFeature = null;
 
     let timerRunning = false;
+
+    let inputPlaceholderHint = "Type your answer here...";
+
+    $: validOptions = [currentQuestion].concat(remainingFeatures);
+
+    $: regionNamesAutocomplete =
+        validOptions.sort().filter((regionName) =>
+            regionName.toLowerCase().startsWith(userInput.toLocaleLowerCase()),
+        ) || [];
 
     onMount(async () => {
         await loadFeatures();
@@ -48,16 +60,25 @@
     }
 
     function startGame() {
+        resetMap(); // Then wait till component has loaded
+        currentQuestion = "loading...";
         gameOver = false;
         score = 0;
         errors = 0;
         timer = 0;
         remainingFeatures = [...features];
-        nextQuestion();
+
+        setTimeout(() => {
+            nextQuestion();
+        }, 500);
 
         if (!timerRunning) {
             startTimer();
         }
+    }
+
+    function resetMap() {
+        uniqueMap = {};
     }
 
     function startTimer() {
@@ -81,15 +102,17 @@
 
         currentWrongAttempts = 0;
 
+        inputPlaceholderHint = "Type your answer here..."; // This can become a hint over time
+
         const index = Math.floor(Math.random() * remainingFeatures.length);
         currentQuestion = remainingFeatures[index];
         remainingFeatures.splice(index, 1);
 
-        highlightedFeature = gameMode === "type" ? currentQuestion : null;
+        highlightedFeature = gameMode == "type" ? currentQuestion : null;
     }
 
     function checkAnswer(answer) {
-        if (answer.toLowerCase() === currentQuestion.toLowerCase()) {
+        if (answer.toLowerCase() == currentQuestion.toLowerCase()) {
             score++;
 
             quizMap.disableFeatureInteractions(currentQuestion);
@@ -105,14 +128,33 @@
         } else {
             errors++;
             currentWrongAttempts++;
+
             quizMap.highlightFeature(answer, "oklch(var(--p))");
+
             if (gameMode != "learn") quizMap.brieflyShowName(answer);
+
             setTimeout(() => {
                 quizMap.highlightFeature(answer, "oklch(var(--s))");
             }, 500);
 
-            if (currentWrongAttempts >= 3) {
+            if (currentWrongAttempts >= 3 && gameMode != "type") {
                 highlightCorrectAnswer();
+            }
+
+            if (gameMode == "type") {
+                const correctAnswer = currentQuestion;
+
+                // Create the hint by revealing letters based on wrong attempts
+                const revealedLettersCount = Math.min(
+                    currentWrongAttempts,
+                    correctAnswer.length,
+                );
+
+                const revealedHint =
+                    correctAnswer.slice(0, revealedLettersCount) +
+                    "*".repeat(correctAnswer.length - revealedLettersCount);
+
+                inputPlaceholderHint = `Hint: ${revealedHint}`;
             }
         }
     }
@@ -130,7 +172,7 @@
 
     function handleInputSubmit() {
         if (gameMode === "type") {
-            checkAnswer(userInput);
+            checkAnswer(regionNamesAutocomplete[0] || "");
             userInput = "";
         }
     }
@@ -143,6 +185,16 @@
     function changeGameMode(mode) {
         gameMode = mode;
         startGame();
+    }
+
+    let showTypeAutoComplete = false;
+
+    function handleFocus() {
+        showTypeAutoComplete = true;
+    }
+
+    function handleBlur() {
+        showTypeAutoComplete = false;
     }
 
     $: accuracy = gameOver ? Math.round((score / (score + errors)) * 100) : 0;
@@ -186,29 +238,57 @@
     </div>
 
     <div class="map-wrapper">
-        <Map
-            bind:this={quizMap}
-            {region}
-            {zoom}
-            width={1000}
-            height={550}
-            on:click={handleMapClick}
-            interactive={true}
-            minLabelZoom=1
-            {highlightedFeature}
-            showLabels={gameMode === "learn"} />
+        {#key uniqueMap}
+            <Map
+                bind:this={quizMap}
+                {region}
+                {zoom}
+                width={1200}
+                height={650}
+                on:click={handleMapClick}
+                interactive={true}
+                minLabelZoom="1"
+                {highlightedFeature}
+                showLabels={gameMode === "learn"} />
+        {/key}
     </div>
 
     {#if gameMode === "type"}
-        <div class="mt-4">
+        <div class="mt-4 relative">
             <input
                 type="text"
                 bind:value={userInput}
+                on:focus={handleFocus}
+                on:blur={handleBlur}
                 on:keypress={(e) => e.key === "Enter" && handleInputSubmit()}
-                placeholder="Type your answer here"
+                on:keydown={(e) => {
+                    if (e.key === "Tab") userInput = regionNamesAutocomplete[0];
+                }}
+                placeholder={inputPlaceholderHint}
                 class="input input-bordered w-full" />
-            <button class="btn btn-primary mt-2" on:click={handleInputSubmit}
-                >Submit</button>
+            <button
+                class="btn btn-secondary btn-sm mt-2 mb-2 absolute right-2"
+                on:click={handleInputSubmit}>Submit</button>
+            <div
+                class="absolute w-full top-16 bg-accent shadow-lg transition-opacity p-4 flex flex-col gap-2 rounded-lg z-20 max-h-52 overflow-auto outline outline-accent {showTypeAutoComplete
+                    ? 'opacity-100'
+                    : 'opacity-0'}">
+                {#if regionNamesAutocomplete.length > 0}
+                    {#each regionNamesAutocomplete as regionName}
+                        <!-- svelte-ignore a11y-click-events-have-key-events -->
+                        <!-- svelte-ignore a11y-no-static-element-interactions -->
+                        <div
+                            class="rounded-md w-full px-2 bg-base-200 hover:bg-base-100 transition-colors cursor-pointer"
+                            on:click={() => {
+                                userInput = regionName;
+                            }}>
+                            <p>{regionName}</p>
+                        </div>
+                    {/each}
+                {:else}
+                    <p class="text-center">No matching entries.</p>
+                {/if}
+            </div>
         </div>
     {/if}
 
@@ -237,7 +317,7 @@
                         </div>
                     {/each}
                 </div>
-                <button class="btn btn-primary" on:click={startGame}
+                <button class="btn btn-secondary" on:click={startGame}
                     >Play Again</button>
             </div>
         </div>
@@ -247,9 +327,9 @@
 <style>
     .quiz-container {
         position: relative;
-        overflow: hidden;
         width: 100%;
     }
+
     .map-wrapper {
         width: 100%;
     }
