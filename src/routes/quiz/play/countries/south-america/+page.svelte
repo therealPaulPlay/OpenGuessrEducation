@@ -5,7 +5,6 @@
         title: "South American Countries",
         tags: ["South America"],
         region: "South America",
-        zoom: 1,
         category: determineCategory(new URL(import.meta.url).pathname)
     }
 </script>

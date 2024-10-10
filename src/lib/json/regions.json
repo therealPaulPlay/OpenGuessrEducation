@@ -116,7 +116,6 @@
         "Croatia",
         "Cyprus",
         "Czechia",
-        "Czech Republic",
         "Denmark",
         "Estonia",
         "Finland",
@@ -470,5 +469,55 @@
     "Hangul Alphabet": [
         "North Korea",
         "South Korea"
+    ],
+    "A-Profile": [
+        "Albania",
+        "Andorra",
+        "Austria",
+        "Belgium",
+        "Bulgaria",
+        "Estonia",
+        "Finland",
+        "France",
+        "Germany",
+        "Greece",
+        "Hungary",
+        "Iceland",
+        "Ireland",
+        "Italy",
+        "Latvia",
+        "Liechtenstein",
+        "Lithuania",
+        "Luxembourg",
+        "Malta",
+        "Monaco",
+        "Montenegro",
+        "Netherlands",
+        "North Macedonia",
+        "Macedonia",
+        "Norway",
+        "Poland",
+        "Portugal",
+        "Romania",
+        "San Marino",
+        "Slovakia",
+        "Slovenia",
+        "Spain",
+        "Sweden",
+        "Switzerland",
+        "Russia",
+        "United Kingdom",
+        "Ukraine",
+        "Vatican City"
+    ],
+    "B-Profile": [
+        "Poland",
+        "Croatia",
+        "Serbia",
+        "Denmark"
+    ],
+    "Thin B-Profile": [
+        "Czechia",
+        "Slovakia"
     ]
 }

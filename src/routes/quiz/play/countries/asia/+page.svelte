@@ -6,7 +6,6 @@
         title: "Asian Countries",
         tags: ["Asia"],
         region: "Asia",
-        zoom: 1,
         category: determineCategory(new URL(import.meta.url).pathname)
     }
 </script>

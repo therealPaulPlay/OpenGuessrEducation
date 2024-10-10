@@ -11,7 +11,8 @@
         ArrowDownUp,
         TrafficCone,
         BookA,
-        Footprints
+        Footprints,
+        Fence
     } from "lucide-svelte";
     import GuideCard from "$lib/components/GuideCard.svelte";
 </script>
@@ -105,6 +106,13 @@
             hueRotate="180">
             <Footprints class="w-28 h-28"></Footprints>
         </GuideCard>
+        <GuideCard
+        title="European Guardrails"
+        description="Find out which types of guardrails exist in Europe and where they are common."
+        href="/guides/read/intermediate/european-guardrails"
+        hueRotate="200">
+        <Fence class="w-28 h-28"></Fence>
+    </GuideCard>
         </div>
     </div>
 </article>

@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { ArrowLeftIcon } from "lucide-svelte";
   import QuizCard from "$lib/components/QuizCard.svelte";
-  import QuizMap from "$lib/components/QuizMap.svelte";
+  import Map from "$lib/components/Map.svelte";
   import { page } from "$app/stores"; // To get the current URL
 
   let metadata = {}; // Metadata of the current quiz
@@ -97,7 +97,7 @@
     {:else}
       {#each quizzesWithSimilarityScore as quiz (quiz.path)}
         <QuizCard title={quiz.title} tags={quiz.tags || []} path={quiz.path}>
-          <QuizMap
+          <Map
             region={quiz.region}
             zoom={quiz.zoom}
             width={192}

@@ -21,6 +21,7 @@
     let projection = geoMercator();
     let path = geoPath().projection(projection);
     let regionCountries;
+   
     let translateX = 0;
     let translateY = 0;
 
@@ -31,46 +32,13 @@
     const MIN_ZOOM = 0.5;
     const MAX_ZOOM = 20;
 
-    const regionBounds = {
-        World: [
-            [-180, -90],
-            [180, 90],
-        ],
-        Europe: [
-            [-45, 50],
-            [60, 60],
-        ],
-        Asia: [
-            [15, -20],
-            [180, 120],
-        ],
-        Africa: [
-            [-20, -50],
-            [45, 50],
-        ],
-        "North America": [
-            [-200, 40],
-            [-20, 65],
-        ],
-        "South America": [
-            [-90, -70],
-            [-30, 15],
-        ],
-        Oceania: [
-            [90, -60],
-            [180, 10],
-        ],
-        "Hebrew Alphabet": [
-            [20, 10],
-            [50, 50],
-        ],
-        "Greek Alphabet": [
-            [-45, 30],
-            [70, 50],
-        ]
-    };
+    let regionSettings = {};
 
-    let initialScale;
+    async function fetchRegionSettings() {
+        const regionSettingsJSON = await fetch("/src/lib/json/regionSettings.json");
+        return await regionSettingsJSON.json();
+    }
+
     let rect;
 
     export function highlightFeature(featureName, color) {
@@ -174,24 +142,24 @@
         }
     }
 
-    function updateProjection() {
-        const bounds = regionBounds[region] || regionBounds.World;
-        const [[x0, y0], [x1, y1]] = bounds;
+    async function updateProjection() {
+    if (!regionSettings) return;
 
-        const dx = x1 - x0;
-        const dy = y1 - y0;
-        const x = (x0 + x1) / 2;
-        const y = (y0 + y1) / 2;
+    const settings = regionSettings[region] || regionSettings.World;
+    const { center, zoom: regionZoom } = settings;
 
-        const scale = Math.min(width / dx, height / dy) * 0.8 * zoom * 70;
+    // Calculate the scale based on the map container size and region zoom
+    const minDimension = Math.min(width, height);
+    const baseScale = minDimension / 2;
+    const scale = baseScale * regionZoom * zoom;
 
-        projection
-            .scale(scale)
-            .translate([translateX, translateY])
-            .center([x, y]);
+    projection
+        .scale(scale)
+        .center([center.long, center.lat])
+        .translate([translateX, translateY]);
 
-        path = geoPath().projection(projection);
-    }
+    path = geoPath().projection(projection);
+}
 
     function generatePaths() {
         const highlightedCountries = highlightCountries();
@@ -322,31 +290,16 @@
     onMount(async () => {
         const geoData = await fetchTopoJSON();
         regionCountries = await fetchContinentCountries();
+        regionSettings = await fetchRegionSettings();
 
-        if (geoData && regionCountries) {
+        if (geoData && regionCountries && regionSettings) {
             features = geoData.features;
 
-            // Initialize translateX and translateY to center the map initially
-            const bounds = regionBounds[region] || regionBounds.World;
-            const [[x0, y0], [x1, y1]] = bounds;
-
-            // Calculate center of the region to position the map correctly
-            const x = (x0 + x1) / 2;
-            const y = (y0 + y1) / 2;
-
-            // Calculate initial translate values based on the width and height
+            // Initial translate is the center point
             translateX = width / 2;
             translateY = height / 2;
 
             // Apply initial projection settings
-            initialScale =
-                Math.min(width / (x1 - x0), height / (y1 - y0)) * 0.8 * 70;
-            projection
-                .center([x, y])
-                .scale(initialScale)
-                .translate([translateX, translateY]);
-
-            // Update the path generation after setting up the projection
             updateProjection();
             generatePaths();
             loaded = true;
@@ -355,14 +308,15 @@
 </script>
 
 <div
-    class="map-container rounded-lg relative"
+    class="map-container rounded-lg relative grow"
     bind:this={mapContainer}
-    style="width: w-full; height: w-full;"
     id="mapContainer">
     {#if !loaded}
         <div class="skeleton w-full h-full min-h-28 opacity-75 rounded-lg">
         </div>
     {:else}
+        <!-- background color -->
+        <div class="absolute w-full h-full bg-accent"></div>
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <svg
             bind:this={svgElement}
@@ -374,11 +328,10 @@
             on:mousemove={handleMouseMove}
             on:mouseup={handleMouseUp}
             on:mouseleave={handleMouseUp}
-            class="transition-opacity duration-300 {interactive
+            fill="oklch(var(--a))"
+            class="transition-opacity duration-300 relative {interactive
                 ? 'pointer-events-auto'
                 : 'pointer-events-none'}">
-            <rect {width} {height} fill="oklch(var(--a))" />
-
             <g>
                 {#each features as feature (feature.uniqueKey)}
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -471,11 +424,11 @@
 
     svg {
         display: block;
+        cursor: pointer;
     }
 
     path {
         vector-effect: non-scaling-stroke;
-        cursor: pointer;
     }
 
     path:hover {

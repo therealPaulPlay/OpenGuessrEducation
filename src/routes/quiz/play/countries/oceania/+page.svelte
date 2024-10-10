@@ -5,7 +5,6 @@
         title: "Oceanian Countries",
         tags: ["Oceania"],
         region: "Oceania",
-        zoom: 1,
         category: determineCategory(new URL(import.meta.url).pathname)
     }
 </script>

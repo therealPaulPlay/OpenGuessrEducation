@@ -9,7 +9,7 @@
     } from "lucide-svelte";
     import { onMount } from "svelte";
     import QuizCard from "$lib/components/QuizCard.svelte";
-    import QuizMap from "$lib/components/QuizMap.svelte";
+    import Map from "$lib/components/Map.svelte";
 
     const categories = [
         { name: "Countries", icon: Globe, folder: "countries" },
@@ -156,9 +156,8 @@
                             title={quiz.title}
                             tags={quiz.tags || []}
                             path={quiz.path}>
-                            <QuizMap
+                            <Map
                                 region={quiz.region}
-                                zoom={quiz.zoom}
                                 width={192}
                                 height={120} />
                         </QuizCard>

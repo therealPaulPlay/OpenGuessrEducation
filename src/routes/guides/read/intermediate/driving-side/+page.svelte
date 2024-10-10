@@ -1,5 +1,5 @@
 <script>
-    import QuizMap from "$lib/components/QuizMap.svelte";
+    import Map from "$lib/components/Map.svelte";
     import ArticleTip from "$lib/components/ArticleTip.svelte";
 </script>
 
@@ -21,7 +21,7 @@
     Zoom into the map to reveal country names!
 </ArticleTip>
 
-<QuizMap region="Driving Side" interactive=true showLabels=true minLabelZoom=3 notHighlightedColor="#67999e"/>
+<Map region="Driving Side" interactive=true showLabels=true minLabelZoom=3 notHighlightedColor="#67999e"/>
 
 <p class="text-center mt-2">Map comparing left-hand to right-hand traffic.</p>
 

@@ -6,12 +6,10 @@
         title: "African Countries",
         tags: ["Africa"],
         region: "Africa",
-        zoom: 1,
         category: determineCategory(new URL(import.meta.url).pathname)
     }
 </script>
 
 <QuizMapGame
     region={metadata.region}
-    zoom={metadata.zoom}
 />

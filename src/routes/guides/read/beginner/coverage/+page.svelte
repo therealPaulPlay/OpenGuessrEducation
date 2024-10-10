@@ -64,6 +64,7 @@
         src="https://www.google.com/maps/embed?pb=!4v1728514755294!6m8!1m7!1sp911ZWRxZVoLHeygG-nrEA!2m2!1d37.42310335412409!2d-122.0837562418647!3f129.23931806705627!4f-8.671825203818074!5f0.7820865974627469"
         loading="lazy"
         class="mb-4 rounded-lg w-full h-64"
+        title="Example panorama"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
 </GuideQuiz>
 

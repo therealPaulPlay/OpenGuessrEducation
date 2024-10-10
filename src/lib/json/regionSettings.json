@@ -1,0 +1,79 @@
+{
+    "World": {
+      "center": {
+        "lat": 5,
+        "long": 0
+      },
+      "zoom": 0.75
+    },
+    "Europe": {
+      "center": {
+        "lat": 53,
+        "long": 15
+      },
+      "zoom": 2
+    },
+    "Asia": {
+      "center": {
+        "lat": 34,
+        "long": 100
+      },
+      "zoom": 1.5
+    },
+    "Africa": {
+      "center": {
+        "lat": 0,
+        "long": 20
+      },
+      "zoom": 1.25
+    },
+    "North America": {
+      "center": {
+        "lat": 45,
+        "long": -100
+      },
+      "zoom": 1.25
+    },
+    "South America": {
+      "center": {
+        "lat": -25,
+        "long": -60
+      },
+      "zoom": 1.25
+    },
+    "Oceania": {
+      "center": {
+        "lat": -25,
+        "long": 135
+      },
+      "zoom": 2
+    },
+    "Hebrew Alphabet": {
+      "center": {
+        "lat": 31,
+        "long": 35
+      },
+      "zoom": 6
+    },
+    "Greek Alphabet": {
+      "center": {
+        "lat": 39,
+        "long": 22
+      },
+      "zoom": 6
+    },
+    "A-Profile": {
+      "center": {
+        "lat": 52,
+        "long": 15
+      },
+      "zoom": 2
+    },
+    "B-Profile": {
+      "center": {
+        "lat": 50,
+        "long": 15
+      },
+      "zoom": 4
+    }
+  }

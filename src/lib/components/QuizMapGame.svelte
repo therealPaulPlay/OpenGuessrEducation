@@ -3,7 +3,7 @@
     import { fade, scale } from "svelte/transition";
     import { quintOut } from "svelte/easing";
     import { Timer, Star } from "lucide-svelte";
-    import QuizMap from "$lib/components/QuizMap.svelte";
+    import Map from "$lib/components/Map.svelte";
 
     export let region = "World";
     export let zoom = 1;
@@ -186,7 +186,7 @@
     </div>
 
     <div class="map-wrapper">
-        <QuizMap
+        <Map
             bind:this={quizMap}
             {region}
             {zoom}

@@ -8,6 +8,12 @@ The unique combination of minigames, interactive guides and extensive country da
 This project uses Svelte (UI Framework) with SvelteKit (Web development framework). You can check out their [official docs](https://svelte.dev/) to get started.
 Moreover, Tailwind CSS (which is dependent on PostCSS) is used for utility classes.
 
+### Prerequisites
+
++ Have [Node.js](https://nodejs.org/en/download/package-manager) version >=16 installed
++ Install NPM (Node package manager) - usually installs together with Node.js
++ Install a Code Editor (Visual Studio Code, WebStorm, NeoVim etc.)
+
 ## How to contribute
 Contributions to the project are greatly appreciated.
 
