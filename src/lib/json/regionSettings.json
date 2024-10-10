@@ -55,12 +55,54 @@
       },
       "zoom": 6
     },
+    "Cyrillic Alphabet": {
+      "center": {
+        "lat": 60,
+        "long": 75
+      },
+      "zoom": 1
+    },
+    "Arabic Alphabet": {
+      "center": {
+        "lat": 30,
+        "long": 20
+      },
+      "zoom": 1.5
+    },
     "Greek Alphabet": {
       "center": {
         "lat": 39,
         "long": 22
       },
       "zoom": 6
+    },
+    "Devanagari Alphabet": {
+      "center": {
+        "lat": 15,
+        "long": 80
+      },
+      "zoom": 2
+    },
+    "Chinese Alphabet": {
+      "center": {
+        "lat": 35,
+        "long": 100
+      },
+      "zoom": 1.5
+    },
+    "Kanji Alphabet": {
+      "center": {
+        "lat": 35,
+        "long": 140
+      },
+      "zoom": 1.5
+    },
+    "Hangul Alphabet": {
+      "center": {
+        "lat": 35,
+        "long": 140
+      },
+      "zoom": 1.5
     },
     "A-Profile": {
       "center": {

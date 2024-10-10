@@ -12,7 +12,8 @@
         TrafficCone,
         BookA,
         Footprints,
-        Fence
+        Fence,
+        CarFront,
     } from "lucide-svelte";
     import GuideCard from "$lib/components/GuideCard.svelte";
 </script>
@@ -100,19 +101,26 @@
                 <BookA class="w-28 h-28"></BookA>
             </GuideCard>
             <GuideCard
-            title="Trekker Coverage"
-            description="Learn what Trekker coverage refers to and how it could be useful for guessing."
-            href="/guides/read/intermediate/trekker"
-            hueRotate="180">
-            <Footprints class="w-28 h-28"></Footprints>
-        </GuideCard>
-        <GuideCard
-        title="European Guardrails"
-        description="Find out which types of guardrails exist in Europe and where they are common."
-        href="/guides/read/intermediate/european-guardrails"
-        hueRotate="200">
-        <Fence class="w-28 h-28"></Fence>
-    </GuideCard>
+                title="Trekker Coverage"
+                description="Learn what Trekker coverage refers to and how it could be useful for guessing."
+                href="/guides/read/intermediate/trekker"
+                hueRotate="180">
+                <Footprints class="w-28 h-28"></Footprints>
+            </GuideCard>
+            <GuideCard
+                title="European Guardrails"
+                description="Find out which types of guardrails exist in Europe and where they are common."
+                href="/guides/read/intermediate/european-guardrails"
+                hueRotate="200">
+                <Fence class="w-28 h-28"></Fence>
+            </GuideCard>
+            <GuideCard
+                title="Follow Cars"
+                description="This guide explains how follow cars can be used as hints."
+                href="/guides/read/intermediate/follow-cars"
+                hueRotate="220">
+                <CarFront class="w-28 h-28"></CarFront>
+            </GuideCard>
         </div>
     </div>
 </article>
