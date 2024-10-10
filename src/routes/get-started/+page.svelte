@@ -107,7 +107,7 @@
         Got it, but what's OpenGuessr Education?
     </h2>
     <p class="mb-6">
-        <b>OpenGuessr Education</b> is a new <b>learning site</b> that helps you
+        <b>OpenGuessr Education</b> is a new <b>learning site</b> by OpenGuessr that helps you
         get better at geoguessing. Want to learn more about
         <a href="/countries/germany" class="text-secondary">Germany</a>, for
         example? There is a page for that.
