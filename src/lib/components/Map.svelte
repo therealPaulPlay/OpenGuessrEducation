@@ -15,6 +15,8 @@
     export let minLabelZoom = 1;
     export let notHighlightedColor = "rgba(125,125,125, 0.2)";
 
+    export let afterLoad = "";
+
     let svgElement;
     let mapContainer;
     let features = [];
@@ -304,6 +306,10 @@
             generatePaths();
             loaded = true;
         }
+
+        if (typeof(afterLoad) == "function") {
+            afterLoad();
+        }
     });
 </script>
 
@@ -360,7 +366,6 @@
                             )}
                             {@const textLength = text.length * 8}
                             <!-- Approximate width per character -->
-
                             <g>
                                 <!-- Background rectangle with dynamic width -->
                                 <rect

@@ -33,12 +33,18 @@
 
     let inputPlaceholderHint = "Type your answer here...";
 
+    let mapLoaded = false;
+
     $: validOptions = [currentQuestion].concat(remainingFeatures);
 
     $: regionNamesAutocomplete =
-        validOptions.sort().filter((regionName) =>
-            regionName.toLowerCase().startsWith(userInput.toLocaleLowerCase()),
-        ) || [];
+        validOptions
+            .sort()
+            .filter((regionName) =>
+                regionName
+                    .toLowerCase()
+                    .startsWith(userInput.toLocaleLowerCase()),
+            ) || [];
 
     onMount(async () => {
         await loadFeatures();
@@ -60,7 +66,7 @@
     }
 
     function startGame() {
-        resetMap(); // Then wait till component has loaded
+        resetMap();
         currentQuestion = "loading...";
         gameOver = false;
         score = 0;
@@ -68,9 +74,9 @@
         timer = 0;
         remainingFeatures = [...features];
 
-        setTimeout(() => {
+        if (mapLoaded) {
             nextQuestion();
-        }, 500);
+        }
 
         if (!timerRunning) {
             startTimer();
@@ -79,6 +85,12 @@
 
     function resetMap() {
         uniqueMap = {};
+        mapLoaded = false;
+    }
+
+    function handleMapLoad() {
+        mapLoaded = true;
+        nextQuestion();
     }
 
     function startTimer() {
@@ -116,7 +128,6 @@
             score++;
 
             quizMap.disableFeatureInteractions(currentQuestion);
-
             // Highlight region green if hint was not used, highlight yellow if hint was used
             if (currentWrongAttempts >= 3) {
                 quizMap.highlightFeature(currentQuestion, "oklch(var(--wa))");
@@ -143,7 +154,6 @@
 
             if (gameMode == "type") {
                 const correctAnswer = currentQuestion;
-
                 // Create the hint by revealing letters based on wrong attempts
                 const revealedLettersCount = Math.min(
                     currentWrongAttempts,
@@ -203,36 +213,42 @@
 </script>
 
 <div class="quiz-container bg-base-200 p-6 rounded-xl">
-    <div class="flex justify-between items-center mb-4 flex-wrap">
+    <div class="flex justify-between items-center mb-4 gap-3 flex-wrap">
         <h2 class="text-2xl font-bold">
-            <h2 class="text-2xl font-bold">
-                {#if gameOver}
-                    Quiz Complete!
-                {:else if gameMode === "learn"}
-                    Click on <span class="text-secondary"
-                        >{currentQuestion}</span>
-                {:else if gameMode === "click"}
-                    Click on <span class="text-secondary"
-                        >{currentQuestion}</span>
-                {:else if gameMode === "type"}
-                    Enter the name of the highlighted country
-                {/if}
-            </h2>
+            {#if gameOver}
+                Quiz Complete!
+            {:else if gameMode === "learn"}
+                Click on <span class="text-secondary">{currentQuestion}</span>
+            {:else if gameMode === "click"}
+                Click on <span class="text-secondary">{currentQuestion}</span>
+            {:else if gameMode === "type"}
+                Enter the name of the highlighted country
+            {/if}
         </h2>
-        <div class="flex justify-end gap-5">
-            <select
-                class="menu menu-vertical lg:menu-horizontal bg-base-300 rounded-lg outline-none"
-                on:change={(e) => changeGameMode(e.target.value)}>
-                <option value="click" selected={gameMode === "click"}
-                    >Click Mode</option>
-                <option value="type" selected={gameMode === "type"}
-                    >Type Mode</option>
-                <option value="learn" selected={gameMode === "learn"}
-                    >Learn Mode</option>
-            </select>
-            <div class="flex items-center gap-2">
-                <Timer class="w-6 h-6" />
-                <span class="text-xl min-w-10 text-center">{timeString}</span>
+        <div class="flex flex-wrap justify-end gap-3">
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <!-- svelte-ignore a11y-missing-attribute -->
+            <!-- svelte-ignore a11y-interactive-supports-focus -->
+            <div role="tablist" class="tabs tabs-boxed bg-base-300 custom-tabs">
+                <a
+                    role="tab"
+                    class="tab tab-sm"
+                    class:tab-active={gameMode === "click"}
+                    on:click={() => changeGameMode("click")}>Click</a>
+                <a
+                    role="tab"
+                    class="tab tab-sm"
+                    class:tab-active={gameMode === "type"}
+                    on:click={() => changeGameMode("type")}>Type</a>
+                <a
+                    role="tab"
+                    class="tab tab-sm"
+                    class:tab-active={gameMode === "learn"}
+                    on:click={() => changeGameMode("learn")}>Learn</a>
+            </div>
+            <div class="flex items-center gap-2 bg-base-300 rounded-lg p-1">
+                <Timer class="w-5 h-5" />
+                <span class="text-base min-w-10 text-center">{timeString}</span>
             </div>
         </div>
     </div>
@@ -249,7 +265,8 @@
                 interactive={true}
                 minLabelZoom="1"
                 {highlightedFeature}
-                showLabels={gameMode === "learn"} />
+                showLabels={gameMode === "learn"}
+                afterLoad={handleMapLoad} />
         {/key}
     </div>
 
@@ -291,7 +308,7 @@
             </div>
         </div>
     {/if}
-
+    <!-- result screen -->
     {#if gameOver}
         <div
             class="fixed inset-0 bg-base-300 bg-opacity-75 flex items-center justify-center z-50">
@@ -304,17 +321,15 @@
                 <p class="text-xl mb-4">Time: {timeString}</p>
                 <div class="flex justify-center mb-4">
                     {#each Array(3) as _, i}
-                        <div
-                            in:scale={{
-                                duration: 300,
-                                delay: i * 300,
-                                easing: quintOut,
-                            }}>
-                            <Star
-                                class="w-8 h-8 {i < stars
-                                    ? 'text-warning'
-                                    : 'text-base-300'}" />
-                        </div>
+                        {#if i < stars}
+                            <div>
+                                <Star class="w-8 h-8 text-warning" />
+                            </div>
+                        {:else}
+                            <div>
+                                <Star class="w-8 h-8 text-base-300" />
+                            </div>
+                        {/if}
                     {/each}
                 </div>
                 <button class="btn btn-secondary" on:click={startGame}
@@ -332,5 +347,21 @@
 
     .map-wrapper {
         width: 100%;
+    }
+
+    .custom-tabs {
+        padding: 0.25rem;
+    }
+
+    .custom-tabs .tab {
+        height: 2rem;
+        font-size: 0.875rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        border-radius: 0.4rem;
+    }
+
+    .custom-tabs .tab-active {
+        background-color: oklch(var(--s)) !important;
     }
 </style>
