@@ -6,9 +6,12 @@
     import Map from "$lib/components/Map.svelte";
 
     export let region = "World";
+
     export let zoom = 1;
 
     export let minLabelZoom = 1;
+
+    export let topoJsonName;
 
     let quizMap;
     let features = [];
@@ -267,6 +270,7 @@
                 interactive={true}
                 {minLabelZoom}
                 {highlightedFeature}
+                {topoJsonName}
                 showLabels={gameMode === "learn"}
                 afterLoad={handleMapLoad} />
         {/key}

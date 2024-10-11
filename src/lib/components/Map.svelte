@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import { geoPath, geoMercator } from "d3-geo";
+    import { geoPath, geoMercator, geoNaturalEarth1, geoEquirectangular, geoConicEqualArea, geoAlbersUsa } from "d3-geo";
     import { feature } from "topojson-client";
     import { createEventDispatcher } from "svelte";
     import { Plus, Minus } from "lucide-svelte";
@@ -15,15 +15,29 @@
     export let minLabelZoom = 1;
     export let notHighlightedColor = "rgba(125,125,125, 0.2)";
 
+    export let topoJsonName = "topojson-world-110m"; // Default world geojson (or topojson, which is an extension of geojson), but you can use any geojson that has labels (= a name property)
+
     export let afterLoad = "";
 
     let svgElement;
     let mapContainer;
     let features = [];
-    let projection = geoMercator();
+
+    let projectionType = "geoMercator";
+
+    const projectionFunctions = {
+        "geoMercator": geoMercator(),
+        "geoNaturalEarth1": geoNaturalEarth1(),
+        "geoEquirectangular": geoEquirectangular(),
+        "geoConicEqualArea": geoConicEqualArea(),
+        "geoAlbers": geoAlbersUsa(),
+    };
+
+    let projection = projectionFunctions[projectionType];
+
     let path = geoPath().projection(projection);
     let regionCountries;
-   
+
     let translateX = 0;
     let translateY = 0;
 
@@ -37,7 +51,9 @@
     let regionSettings = {};
 
     async function fetchRegionSettings() {
-        const regionSettingsJSON = await fetch("/src/lib/json/regionSettings.json");
+        const regionSettingsJSON = await fetch(
+            "/src/lib/json/regionSettings.json",
+        );
         return await regionSettingsJSON.json();
     }
 
@@ -123,11 +139,23 @@
 
     async function fetchTopoJSON() {
         try {
-            const response = await fetch(
-                "/src/lib/json/geojson-world-110m.json",
-            );
+            const response = await fetch(`/src/lib/json/${topoJsonName}.json`);
             const topology = await response.json();
-            const featureData = feature(topology, topology.objects.countries);
+
+            let featureData;
+
+            // Check if 'topology.objects.countries' exists (TopoJSON format)
+
+            const regionObjects = topology?.objects?.countries || topology?.objects?.states || topology?.objects?.regions;
+
+            if (topology && topology.objects && regionObjects) { // There must be some kind of object category
+                featureData = feature(topology, regionObjects);
+            } else {
+                // Fallback if topology is undefined or not in TopoJSON format (assuming GeoJSON)
+                featureData = topology; // Already in GeoJSON format
+                console.log("Falling back to feature data (geojson) as no valid object names were found, hovewer, the map is built for TopoJSON. Here is the object output:", topology?.objects);
+            }
+
             return featureData;
         } catch (error) {
             console.error("Error fetching topo json:", error);
@@ -145,23 +173,23 @@
     }
 
     async function updateProjection() {
-    if (!regionSettings) return;
+        if (!regionSettings) return;
 
-    const settings = regionSettings[region] || regionSettings.World;
-    const { center, zoom: regionZoom } = settings;
+        const settings = regionSettings[region] || regionSettings.World;
+        const { center, zoom: regionZoom } = settings;
 
-    // Calculate the scale based on the map container size and region zoom
-    const minDimension = Math.min(width, height);
-    const baseScale = minDimension / 2;
-    const scale = baseScale * regionZoom * zoom;
+        // Calculate the scale based on the map container size and region zoom
+        const minDimension = Math.min(width, height);
+        const baseScale = minDimension / 2;
+        const scale = baseScale * regionZoom * zoom;
 
-    projection
-        .scale(scale)
-        .center([center.long, center.lat])
-        .translate([translateX, translateY]);
+        projection
+            .scale(scale)
+            .center([center.long, center.lat])
+            .translate([translateX, translateY]);
 
-    path = geoPath().projection(projection);
-}
+        path = geoPath().projection(projection);
+    }
 
     function generatePaths() {
         const highlightedCountries = highlightCountries();
@@ -307,7 +335,7 @@
             loaded = true;
         }
 
-        if (typeof(afterLoad) == "function") {
+        if (typeof afterLoad == "function") {
             afterLoad();
         }
     });

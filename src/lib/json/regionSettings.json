@@ -117,5 +117,12 @@
         "long": 15
       },
       "zoom": 4
+    },
+    "US States": {
+      "center": {
+        "lat": 40,
+        "long": -110
+      },
+      "zoom": 2
     }
   }
