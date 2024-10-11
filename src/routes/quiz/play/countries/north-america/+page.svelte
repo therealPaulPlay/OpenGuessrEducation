@@ -6,10 +6,8 @@
         title: "North American Countries",
         tags: ["North America"],
         region: "North America",
-        category: determineCategory(new URL(import.meta.url).pathname)
-    }
+        category: determineCategory(new URL(import.meta.url).pathname),
+    };
 </script>
 
-<QuizMapGame
-    region={metadata.region}
-/>
+<QuizMapGame region={metadata.region} />

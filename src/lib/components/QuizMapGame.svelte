@@ -8,6 +8,8 @@
     export let region = "World";
     export let zoom = 1;
 
+    export let minLabelZoom = 1;
+
     let quizMap;
     let features = [];
     let currentQuestion = "loading...";
@@ -263,7 +265,7 @@
                 height={650}
                 on:click={handleMapClick}
                 interactive={true}
-                minLabelZoom="1"
+                {minLabelZoom}
                 {highlightedFeature}
                 showLabels={gameMode === "learn"}
                 afterLoad={handleMapLoad} />

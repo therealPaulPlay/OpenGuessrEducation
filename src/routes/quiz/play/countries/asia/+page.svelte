@@ -6,12 +6,8 @@
         title: "Asian Countries",
         tags: ["Asia"],
         region: "Asia",
-        category: determineCategory(new URL(import.meta.url).pathname)
-    }
+        category: determineCategory(new URL(import.meta.url).pathname),
+    };
 </script>
 
-<QuizMapGame
-    region={metadata.region}
-    zoom={metadata.zoom}
-/>
-
+<QuizMapGame region={metadata.region} zoom=0.75 minLabelZoom=0.75 />
