@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import { geoPath, geoMercator, geoConicEqualArea, geoAlbersUsa, geoOrthographic } from "d3-geo";
+    import { geoPath, geoMercator } from "d3-geo";
     import { feature } from "topojson-client";
     import { createEventDispatcher } from "svelte";
     import { Plus, Minus } from "lucide-svelte";
@@ -25,16 +25,7 @@
     let mapContainer;
     let features = [];
 
-    let projectionType = "geoMercator";
-
-    const projectionFunctions = {
-        "geoMercator": geoMercator(),
-        "geoConicEqualArea": geoConicEqualArea(),
-        "geoAlbers": geoAlbersUsa(),
-        "geoOrthographic": geoOrthographic()
-    };
-
-    let projection = projectionFunctions[projectionType];
+    let projection = geoMercator();
 
     let path = geoPath().projection(projection);
     let regionCountries;
