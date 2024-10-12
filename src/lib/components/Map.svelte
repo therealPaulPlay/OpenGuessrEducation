@@ -4,6 +4,8 @@
     import { feature } from "topojson-client";
     import { createEventDispatcher } from "svelte";
     import { Plus, Minus } from "lucide-svelte";
+    import { tweened } from "svelte/motion";
+    import { cubicOut } from "svelte/easing";
 
     export let region = "World";
     export let zoom = 1;
@@ -26,12 +28,16 @@
     let features = [];
 
     let projection = geoMercator();
-
     let path = geoPath().projection(projection);
     let regionCountries;
 
     let translateX = 0;
     let translateY = 0;
+
+    let flashingFeature = null;
+
+    let outlineFeature = null;
+    let outlineWidth = tweened(0, { duration: 500, easing: cubicOut });
 
     let loaded = false;
 
@@ -58,6 +64,17 @@
             }
             return feature;
         });
+    }
+
+    export function highlightFeatureOutline(featureName) {
+        const feature = features.find((f) => f.properties.name === featureName);
+        if (feature) {
+            outlineFeature = feature;
+            outlineWidth.set(10);
+            setTimeout(() => {
+                outlineWidth.set(0);
+            }, 50);
+        }
     }
 
     export function brieflyShowName(featureName) {
@@ -98,6 +115,7 @@
         const feature = features.find((f) => f.properties.name === featureName);
 
         if (feature) {
+            flashingFeature = feature;
             let flashCount = 0;
 
             clearInterval(flashInterval);
@@ -112,8 +130,9 @@
                     clearInterval(flashInterval);
                     feature.color = "oklch(var(--s))";
                     features = [...features];
+                    flashingFeature = null;
                 }
-            }, 300);
+            }, 150);
         }
     }
 
@@ -357,10 +376,13 @@
             on:mouseup={handleMouseUp}
             on:mouseleave={handleMouseUp}
             fill="oklch(var(--a))"
-            class="transition-opacity duration-300 relative {interactive
+            class="relative {interactive
                 ? 'pointer-events-auto'
                 : 'pointer-events-none'}">
             <g>
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
+                <!-- svelte-ignore a11y-no-static-element-interactions -->
+                <!-- svelte-ignore a11y-no-static-element-interactions -->
                 {#each features as feature (feature.uniqueKey)}
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
                     <path
@@ -372,6 +394,7 @@
                         on:click={() => handleRegionClick(feature)}
                         on:mouseenter={() => (feature.isHovered = true)}
                         on:mouseleave={() => (feature.isHovered = false)}
+                        class="feature-path"
                         style="filter: {feature.isHovered
                             ? 'brightness(1.1)'
                             : 'none'};" />
@@ -387,9 +410,7 @@
                                 feature.properties.name,
                             )}
                             {@const textLength = text.length * 8}
-                            <!-- Approximate width per character -->
                             <g>
-                                <!-- Background rectangle with dynamic width -->
                                 <rect
                                     x={x - textLength / 2 - 10}
                                     y={y - 12}
@@ -399,9 +420,8 @@
                                     ry="5"
                                     opacity="0.85"
                                     pointer-events="none"
-                                    fill="oklch(var(--b2))" />
-
-                                <!-- Text label, vertically centered -->
+                                    fill="oklch(var(--b2))"
+                                    class="label-background" />
                                 <text
                                     {x}
                                     y={y + 1}
@@ -410,7 +430,8 @@
                                     fill="oklch(var(--s))"
                                     font-size="15"
                                     font-weight="bold"
-                                    pointer-events="none">
+                                    pointer-events="none"
+                                    class="label-text">
                                     {text}
                                 </text>
                             </g>
@@ -418,6 +439,45 @@
                     {/if}
                 {/each}
             </g>
+
+            {#if flashingFeature}
+                {@const [cx, cy] = path.centroid(flashingFeature)}
+                {@const radius = Math.sqrt(
+                    path.area(flashingFeature) / Math.PI,
+                )}
+                <circle
+                    {cx}
+                    {cy}
+                    r={radius * 2}
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                    opacity="0"
+                    class="flash-circle">
+                    <animate
+                        attributeName="r"
+                        from={radius * 2}
+                        to={radius}
+                        dur="0.3s"
+                        fill="freeze" />
+                    <animate
+                        attributeName="opacity"
+                        from="0.8"
+                        to="0"
+                        dur="0.3s"
+                        fill="freeze" />
+                </circle>
+            {/if}
+            {#if outlineFeature}
+                <g>
+                    <path
+                        d={path(outlineFeature)}
+                        fill="none"
+                        stroke="white"
+                        stroke-width={$outlineWidth}
+                        vector-effect="non-scaling-stroke" />
+                </g>
+            {/if}
         </svg>
         {#if interactive}
             <div class="absolute bottom-4 right-4 flex flex-col gap-2">
@@ -460,5 +520,20 @@
 
     path:hover {
         color: oklch(var(--p));
+    }
+
+    .flash-circle {
+        pointer-events: none;
+    }
+
+    .feature-path {
+        transition:
+            fill 0.1s ease,
+            filter 0.1s ease;
+    }
+
+    .label-background,
+    .label-text {
+        transition: opacity 0.1s ease;
     }
 </style>

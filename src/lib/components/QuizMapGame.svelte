@@ -140,6 +140,7 @@
             score++;
 
             quizMap.disableFeatureInteractions(currentQuestion);
+            quizMap.highlightFeatureOutline(currentQuestion);
             // Highlight region green if hint was not used, highlight yellow if hint was used
             if (currentWrongAttempts >= 3) {
                 quizMap.highlightFeature(currentQuestion, "oklch(var(--wa))");
