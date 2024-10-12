@@ -101,7 +101,8 @@
             region={quiz.region}
             zoom={quiz.zoom}
             width={192}
-            height={120} />
+            height={120}
+            topoJsonName={quiz.topoJson} />
         </QuizCard>
       {/each}
     {/if}

@@ -141,7 +141,7 @@
     async function fetchTopoJSON() {
         try {
             const formattedTopoJsonName = topoJsonName.replace(".json", "");
-            const response = await fetch(`/src/lib/json/${formattedTopoJsonName}.json`);
+            const response = await fetch(`/src/lib/json/topojson/${formattedTopoJsonName}.json`);
             const topology = await response.json();
 
             let featureData;

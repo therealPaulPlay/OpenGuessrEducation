@@ -561,8 +561,8 @@
         "West Virginia",
         "Wisconsin",
         "Wyoming"
-      ],
-      "Australian States": [
+    ],
+    "Australian States": [
         "New South Wales",
         "Victoria",
         "Queensland",
@@ -571,5 +571,37 @@
         "Tasmania",
         "Australian Capital Territory",
         "Northern Territory"
+    ],
+    "United Kingdom Regions": [
+        "North East England",
+        "North West England",
+        "Yorkshire and The Humber",
+        "East Midlands",
+        "West Midlands",
+        "South West England",
+        "East of England",
+        "South East England",
+        "Greater London",
+        "Northern Ireland",
+        "Wales",
+        "Scotland"
+    ],
+    "German States": [
+        "Baden-Württemberg",
+        "Bayern",
+        "Berlin",
+        "Brandenburg",
+        "Bremen",
+        "Hamburg",
+        "Hessen",
+        "Mecklenburg-Vorpommern",
+        "Niedersachsen",
+        "Nordrhein-Westfalen",
+        "Rheinland-Pfalz",
+        "Saarland",
+        "Sachsen-Anhalt",
+        "Sachsen",
+        "Schleswig-Holstein",
+        "Thüringen"
       ]
 }

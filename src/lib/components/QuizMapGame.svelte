@@ -65,6 +65,10 @@
             regions = await regions.json();
 
             features = regions[region];
+
+            if (!features) {
+                console.log("Features is undefined. This is likely because this region doesn't have an entry in regions.json yet.");
+            }
         } catch (error) {
             console.error("Error fetching and processing region json:", error);
         }
@@ -325,7 +329,7 @@
                 class="bg-base-100 p-8 rounded-xl text-center"
                 in:scale={{ duration: 300, easing: quintOut }}>
                 <h3 class="text-3xl font-bold mb-4">Quiz Complete!</h3>
-                <p class="text-xl mb-2">Score: {score}/{score + errors}</p>
+                <p class="text-xl mb-2">Score: {score - (errors * 0.25)}/{score}</p>
                 <p class="text-xl mb-2">Accuracy: {accuracy}%</p>
                 <p class="text-xl mb-4">Time: {timeString}</p>
                 <div class="flex justify-center mb-4">
