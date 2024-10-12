@@ -155,11 +155,14 @@
                         <QuizCard
                             title={quiz.title}
                             tags={quiz.tags || []}
-                            path={quiz.path}>
+                            path={quiz.path}
+                            hueRotateDegree={index * 20}>
                             <Map
                                 region={quiz.region}
                                 width={192}
-                                height={120} />
+                                height={120}
+                                hueRotateDegree={index * 20}
+                                topoJsonName={quiz.topoJson} />
                         </QuizCard>
                     {/each}
                 </div>

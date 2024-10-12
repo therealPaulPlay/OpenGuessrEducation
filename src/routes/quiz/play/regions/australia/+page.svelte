@@ -3,11 +3,12 @@
     import QuizMapGame from "$lib/components/QuizMapGame.svelte";
 
     export const metadata = {
-        title: "US States",
-        tags: ["North America"],
-        region: "US States",
+        title: "Australian States & Territories",
+        tags: ["Oceania"],
+        region: "Australian States",
+        topoJson: "au-states-topo",
         category: determineCategory(new URL(import.meta.url).pathname)
     }
 </script>
 
-<QuizMapGame region={metadata.region} topoJsonName="us-states-10m" />
+<QuizMapGame region={metadata.region} topoJsonName={metadata.topoJson} />

@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import { geoPath, geoMercator, geoNaturalEarth1, geoEquirectangular, geoConicEqualArea, geoAlbersUsa } from "d3-geo";
+    import { geoPath, geoMercator, geoConicEqualArea, geoAlbersUsa, geoOrthographic } from "d3-geo";
     import { feature } from "topojson-client";
     import { createEventDispatcher } from "svelte";
     import { Plus, Minus } from "lucide-svelte";
@@ -15,6 +15,8 @@
     export let minLabelZoom = 1;
     export let notHighlightedColor = "rgba(125,125,125, 0.2)";
 
+    export let hueRotateDegree = 0;
+
     export let topoJsonName = "topojson-world-110m"; // Default world geojson (or topojson, which is an extension of geojson), but you can use any geojson that has labels (= a name property)
 
     export let afterLoad = "";
@@ -27,10 +29,9 @@
 
     const projectionFunctions = {
         "geoMercator": geoMercator(),
-        "geoNaturalEarth1": geoNaturalEarth1(),
-        "geoEquirectangular": geoEquirectangular(),
         "geoConicEqualArea": geoConicEqualArea(),
         "geoAlbers": geoAlbersUsa(),
+        "geoOrthographic": geoOrthographic()
     };
 
     let projection = projectionFunctions[projectionType];
@@ -139,14 +140,15 @@
 
     async function fetchTopoJSON() {
         try {
-            const response = await fetch(`/src/lib/json/${topoJsonName}.json`);
+            const formattedTopoJsonName = topoJsonName.replace(".json", "");
+            const response = await fetch(`/src/lib/json/${formattedTopoJsonName}.json`);
             const topology = await response.json();
 
             let featureData;
 
             // Check if 'topology.objects.countries' exists (TopoJSON format)
 
-            const regionObjects = topology?.objects?.countries || topology?.objects?.states || topology?.objects?.regions;
+            const regionObjects = topology?.objects?.countries || topology?.objects?.states || topology?.objects?.regions || topology?.objects[Object.keys(topology?.objects)[0]]; // Last one is a fallback option, which is the first key in the object
 
             if (topology && topology.objects && regionObjects) { // There must be some kind of object category
                 featureData = feature(topology, regionObjects);
@@ -357,6 +359,7 @@
             width="100%"
             height="100%"
             viewBox={`0 0 ${width} ${height}`}
+            style="filter: hue-rotate({hueRotateDegree}deg)"
             on:wheel={handleZoom}
             on:mousedown={handleMouseDown}
             on:mousemove={handleMouseMove}

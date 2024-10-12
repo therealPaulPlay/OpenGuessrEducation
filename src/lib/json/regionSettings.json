@@ -120,9 +120,16 @@
     },
     "US States": {
       "center": {
-        "lat": 40,
-        "long": -110
+        "lat": 38,
+        "long": -100
       },
-      "zoom": 2
+      "zoom": 2.5
+    },
+    "Australian States": {
+      "center": {
+        "lat": -28,
+        "long": 135
+      },
+      "zoom": 2.5
     }
   }

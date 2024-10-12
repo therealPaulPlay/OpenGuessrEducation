@@ -1,6 +1,7 @@
 <script>
     export let title = "Default title";
     export let path;
+    export let hueRotateDegree = 0;
     export let tags = [];
 </script>
 
@@ -21,6 +22,7 @@
         <div class="card-actions justify-end mt-auto">
             <a
                 href={path.replace("/+page.svelte", "")}
+                style="filter: hue-rotate({hueRotateDegree}deg)"
                 class="btn btn-secondary btn-md -mb-1 mt-2">Start Quiz</a>
         </div>
     </div>

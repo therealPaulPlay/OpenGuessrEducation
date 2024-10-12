@@ -70,8 +70,11 @@
         }
     }
 
+    let firstStart = true; // Don't reset the map if it's the first start
+
     function startGame() {
-        resetMap();
+        if (!firstStart) resetMap();
+        firstStart = false;
         currentQuestion = "loading...";
         gameOver = false;
         score = 0;

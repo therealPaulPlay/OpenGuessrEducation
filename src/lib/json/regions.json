@@ -561,5 +561,15 @@
         "West Virginia",
         "Wisconsin",
         "Wyoming"
+      ],
+      "Australian States": [
+        "New South Wales",
+        "Victoria",
+        "Queensland",
+        "South Australia",
+        "Western Australia",
+        "Tasmania",
+        "Australian Capital Territory",
+        "Northern Territory"
       ]
 }
