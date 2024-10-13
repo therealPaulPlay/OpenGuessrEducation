@@ -5,7 +5,7 @@
     import { createEventDispatcher } from "svelte";
     import { Plus, Minus } from "lucide-svelte";
     import { tweened } from "svelte/motion";
-    import { cubicOut } from "svelte/easing";
+    import { cubicOut, linear, backInOut } from "svelte/easing";
 
     export let region = "World";
     export let zoom = 1;
@@ -35,6 +35,9 @@
     let translateY = 0;
 
     let flashingFeature = null;
+    let flashCircle = null;
+    let flashCircleOpacity = tweened(0, { duration: 400, easing: linear });
+    let flashCircleRadius = tweened(0, { duration: 600, easing: backInOut });
 
     let outlineFeature = null;
     let outlineWidth = tweened(0, { duration: 500, easing: cubicOut });
@@ -121,6 +124,16 @@
             clearInterval(flashInterval);
             feature.color = "oklch(var(--s))";
 
+            flashCircle = feature;
+            let radius = Number(Math.sqrt(path.area(feature) / Math.PI));
+
+            // If he feature-encompassing circle would be less than 40 in radius, display it
+            if (radius < 20) { 
+                flashCircleOpacity.set(0.5);
+                flashCircleRadius.set(50);
+
+            }
+
             flashInterval = setInterval(() => {
                 feature.color =
                     flashCount % 2 == 0 ? "white" : "oklch(var(--s))";
@@ -130,7 +143,14 @@
                     clearInterval(flashInterval);
                     feature.color = "oklch(var(--s))";
                     features = [...features];
-                    flashingFeature = null;
+
+                    flashCircleOpacity.set(0);
+                    flashCircleRadius.set(20);
+
+                    setTimeout(() => {
+                        flashingFeature = null;
+                        flashCircle = null;
+                    }, 600);
                 }
             }, 150);
         }
@@ -138,7 +158,7 @@
 
     $: {
         if (highlightedFeature) {
-            highlightFeature(highlightedFeature, "oklch(var(--b1))");
+            highlightFeature(highlightedFeature, "white");
         }
     }
 
@@ -151,21 +171,31 @@
     async function fetchTopoJSON() {
         try {
             const formattedTopoJsonName = topoJsonName.replace(".json", "");
-            const response = await fetch(`/src/lib/json/topojson/${formattedTopoJsonName}.json`);
+            const response = await fetch(
+                `/src/lib/json/topojson/${formattedTopoJsonName}.json`,
+            );
             const topology = await response.json();
 
             let featureData;
 
             // Check if 'topology.objects.countries' exists (TopoJSON format)
 
-            const regionObjects = topology?.objects?.countries || topology?.objects?.states || topology?.objects?.regions || topology?.objects[Object.keys(topology?.objects)[0]]; // Last one is a fallback option, which is the first key in the object
+            const regionObjects =
+                topology?.objects?.countries ||
+                topology?.objects?.states ||
+                topology?.objects?.regions ||
+                topology?.objects[Object.keys(topology?.objects)[0]]; // Last one is a fallback option, which is the first key in the object
 
-            if (topology && topology.objects && regionObjects) { // There must be some kind of object category
+            if (topology && topology.objects && regionObjects) {
+                // There must be some kind of object category
                 featureData = feature(topology, regionObjects);
             } else {
                 // Fallback if topology is undefined or not in TopoJSON format (assuming GeoJSON)
                 featureData = topology; // Already in GeoJSON format
-                console.log("Falling back to feature data (geojson) as no valid object names were found, hovewer, the map is built for TopoJSON. Here is the object output:", topology?.objects);
+                console.log(
+                    "Falling back to feature data (geojson) as no valid object names were found, hovewer, the map is built for TopoJSON. Here is the object output:",
+                    topology?.objects,
+                );
             }
 
             return featureData;
@@ -214,7 +244,10 @@
                     region === "All";
                 const d = path(feature);
 
-                const interactivity = feature.isInteractive == null ? true : feature.isInteractive; // If there is a state defined for it already, it should take that - otherwise default isInteractive to true
+                const interactivity =
+                    feature.isInteractive == null
+                        ? true
+                        : feature.isInteractive; // If there is a state defined for it already, it should take that - otherwise default isInteractive to true
 
                 if (d) {
                     return {
@@ -471,6 +504,21 @@
                         fill="freeze" />
                 </circle>
             {/if}
+            {#if flashCircle}
+            {@const [cx, cy] = path.centroid(flashingFeature)}
+                <g style="pointer-events: none">
+                    <circle
+                        {cx}
+                        cy={cy}
+                        r={$flashCircleRadius}
+                        fill="none"
+                        stroke="white"
+                        stroke-width="4"
+                        opacity={$flashCircleOpacity}
+                        class="flash-circle">
+                    </circle>
+                </g>
+            {/if}
             {#if outlineFeature}
                 <g>
                     <path
@@ -531,5 +579,9 @@
     .label-background,
     .label-text {
         transition: opacity 0.1s ease;
+    }
+
+    .flash-circle {
+        vector-effect: non-scaling-stroke;
     }
 </style>
