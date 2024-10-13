@@ -29,7 +29,8 @@
 <p class="mb-2">
     <b>Trekker coverage</b> does not feature traditional hints like road signs or bollards.
     Instead, it is more important to observe <b>natural clues</b>, such as the type of vegetation, unique rock formations, or even specific styles of paths and walkways. 
-    Trekker coverage is quite common in <b>North America</b>, e. g. near the Niagara Falls, in <b>New Zealand</b> and <b>Thailand</b>.
+    Trekker coverage is quite common in <b>North America</b>, e. g. near the Niagara Falls, in <b>New Zealand</b> and <b>Thailand</b>. Moreover, <b>Belarus</b> currently <b>only</b> has 
+    <b>Trekker coverage</b>.
 </p>
 
 <ArticleTip>
