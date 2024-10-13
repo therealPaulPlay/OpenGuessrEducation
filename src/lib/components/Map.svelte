@@ -99,11 +99,11 @@
     }
 
     export function disableFeatureInteractions(featureName) {
-        const interactive = false;
+        const isInteractive = false;
 
         features = features.map((feature) => {
             if (feature.properties.name === featureName) {
-                return { ...feature, interactive };
+                return { ...feature, isInteractive };
             }
             return feature;
         });
@@ -143,7 +143,7 @@
     }
 
     function handleRegionClick(feature) {
-        if (feature.isHighlighted && feature.interactive) {
+        if (feature.isHighlighted && feature.isInteractive) {
             dispatch("click", { properties: feature.properties });
         }
     }
@@ -213,13 +213,16 @@
                     region === "World" ||
                     region === "All";
                 const d = path(feature);
+
+                const interactivity = feature.isInteractive == null ? true : feature.isInteractive; // If there is a state defined for it already, it should take that - otherwise default isInteractive to true
+
                 if (d) {
                     return {
                         ...feature,
                         uniqueKey: `feature-${index}-${feature.properties.name || "unnamed"}`,
                         d,
                         isHighlighted: isHighlighted,
-                        interactive: true,
+                        isInteractive: interactivity,
                         color: isHighlighted
                             ? feature.color || "oklch(var(--s))"
                             : notHighlightedColor,
@@ -453,7 +456,7 @@
                     stroke="white"
                     stroke-width="2"
                     opacity="0"
-                    class="flash-circle">
+                    class="pointer-events-none">
                     <animate
                         attributeName="r"
                         from={radius * 2}
@@ -475,6 +478,7 @@
                         fill="none"
                         stroke="white"
                         stroke-width={$outlineWidth}
+                        class="pointer-events-none"
                         vector-effect="non-scaling-stroke" />
                 </g>
             {/if}
@@ -514,16 +518,8 @@
         cursor: pointer;
     }
 
-    path {
-        vector-effect: non-scaling-stroke;
-    }
-
     path:hover {
         color: oklch(var(--p));
-    }
-
-    .flash-circle {
-        pointer-events: none;
     }
 
     .feature-path {
