@@ -1,7 +1,7 @@
 <!-- result screen / end screen for quizzes from the quiz page -->
 <script>
     import { onMount } from "svelte";
-    import { Star } from "lucide-svelte";
+    import { Star, ArrowLeft } from "lucide-svelte";
     import { scale } from "svelte/transition";
     import { quintOut } from "svelte/easing";
 
@@ -39,7 +39,7 @@
         in:scale={{ duration: 300, easing: quintOut }}>
         <h3 class="text-3xl font-bold mb-4">Quiz Complete!</h3>
         <div
-            class="flex justify-center flex-col items-center rounded-lg bg-base-200 my-4 mb-8 py-4">
+            class="flex justify-center flex-col items-center rounded-lg bg-base-200 my-4 mb-3 py-4">
             <p class="text-xl mb-2">
                 Score: {achievedScore}/{score}
             </p>
@@ -61,11 +61,11 @@
         </div>
         <div class="flex flex-col">
             {#if $isAuthenticated}
-                <div class="badge badge-success mx-auto mb-2">
+                <div class="badge badge-success mx-auto mb-8">
                     <p>Earned {experience} XP!</p>
                 </div>
             {:else}
-                <div class="badge badge-ghost mx-auto mb-2">
+                <div class="badge badge-ghost mx-auto mb-8">
                     <p>
                         <a
                             href="https://openguessr.com/signup"
@@ -73,8 +73,10 @@
                     </p>
                 </div>
             {/if}
-            <button class="btn btn-secondary" on:click={startGame}
+            <button class="btn btn-secondary mb-2" on:click={startGame}
                 >Play Again</button>
+            <a class="btn btn-sm" href="/quiz/"
+                ><ArrowLeft class="w-4 h-4" />Return to discover page</a>
         </div>
     </div>
 </div>
