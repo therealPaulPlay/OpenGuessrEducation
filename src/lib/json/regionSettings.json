@@ -145,5 +145,26 @@
         "long": 10
       },
       "zoom": 7
+    },
+    "Spanish Regions": {
+      "center": {
+        "lat": 36,
+        "long": -7
+      },
+      "zoom": 5
+    },
+    "Indonesian Provinces": {
+      "center": {
+        "lat": -4,
+        "long": 118
+      },
+      "zoom": 4
+    },
+    "Brazilian States": {
+      "center": {
+        "lat": -15,
+        "long": -55
+      },
+      "zoom": 2.5
     }
   }
