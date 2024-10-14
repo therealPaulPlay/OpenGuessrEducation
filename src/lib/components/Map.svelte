@@ -399,6 +399,9 @@
     {:else}
         <!-- background color -->
         <div class="absolute w-full h-full bg-accent"></div>
+         
+        <slot />
+
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <svg
             bind:this={svgElement}

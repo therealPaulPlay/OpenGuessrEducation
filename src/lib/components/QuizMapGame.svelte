@@ -4,6 +4,8 @@
     import Map from "$lib/components/Map.svelte";
     import QuizResult from "./QuizResult.svelte";
 
+    import * as Icon from "svelte-flag-icons";
+
     export let region = "World";
 
     export let zoom = 1;
@@ -27,6 +29,9 @@
     let errors = 0;
     let gameOver = false;
     let timer = 0;
+
+    let countryCodes;
+    let IconComponent;
 
     let currentWrongAttempts = 0;
 
@@ -72,6 +77,16 @@
             }
         } catch (error) {
             console.error("Error fetching and processing region json:", error);
+        }
+
+        try {
+            countryCodes = await fetch("/src/lib/json/countryCodes.json");
+            countryCodes = await countryCodes.json();
+        } catch (error) {
+            console.error(
+                "Error fetching and processing country code json:",
+                error,
+            );
         }
     }
 
@@ -119,7 +134,7 @@
         timerRunning = false;
     }
 
-    function nextQuestion() {
+    async function nextQuestion() {
         if (remainingFeatures.length === 0) {
             endGame();
             return;
@@ -134,6 +149,14 @@
         remainingFeatures.splice(index, 1);
 
         highlightedFeature = gameMode == "type" ? currentQuestion : null;
+
+        // Load flag if available
+        try {
+            IconComponent = Icon[countryCodes[currentQuestion]];
+        } catch (error) {
+            console.warn("Flag doesn't seem to exist:", error);
+            IconComponent = undefined;
+        }
     }
 
     function checkAnswer(answer) {
@@ -279,7 +302,14 @@
                 {highlightedFeature}
                 {topoJsonName}
                 showLabels={gameMode === "learn"}
-                afterLoad={handleMapLoad} />
+                afterLoad={handleMapLoad}>
+                {#if IconComponent}
+                    <div
+                        class="absolute z-20 top-3 right-3 rounded-md bg-base-200 py-0.5 p-2">
+                        <svelte:component this={IconComponent} size="50" />
+                    </div>
+                {/if}
+            </Map>
         {/key}
     </div>
 
