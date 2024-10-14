@@ -1,9 +1,8 @@
 <script>
     import { onMount } from "svelte";
-    import { fade, scale } from "svelte/transition";
-    import { quintOut } from "svelte/easing";
-    import { Timer, Star } from "lucide-svelte";
+    import { Timer } from "lucide-svelte";
     import Map from "$lib/components/Map.svelte";
+    import QuizResult from "./QuizResult.svelte";
 
     export let region = "World";
 
@@ -11,7 +10,7 @@
 
     export let minLabelZoom = 1;
 
-    export let topoJsonName;
+    export let topoJsonName = undefined;
 
     let quizMap;
     let features = [];
@@ -67,7 +66,9 @@
             features = regions[region];
 
             if (!features) {
-                console.log("Features is undefined. This is likely because this region doesn't have an entry in regions.json yet.");
+                console.log(
+                    "Features is undefined. This is likely because this region doesn't have an entry in regions.json yet.",
+                );
             }
         } catch (error) {
             console.error("Error fetching and processing region json:", error);
@@ -220,9 +221,7 @@
         showTypeAutoComplete = false;
     }
 
-    $: accuracy = gameOver ? Math.round((score / (score + errors)) * 100) : 0;
     $: timeString = `${Math.floor(timer / 60)}:${(timer % 60).toString().padStart(2, "0")}`;
-    $: stars = Math.min(3, Math.floor(accuracy / 33));
 </script>
 
 <div class="quiz-container bg-base-200 p-6 rounded-xl">
@@ -323,33 +322,9 @@
         </div>
     {/if}
     <!-- result screen -->
+    <!-- replace gameOver with true for testing -->
     {#if gameOver}
-        <div
-            class="fixed inset-0 bg-base-300 bg-opacity-75 flex items-center justify-center z-50">
-            <div
-                class="bg-base-100 p-8 rounded-xl text-center"
-                in:scale={{ duration: 300, easing: quintOut }}>
-                <h3 class="text-3xl font-bold mb-4">Quiz Complete!</h3>
-                <p class="text-xl mb-2">Score: {score - (errors * 0.25)}/{score}</p>
-                <p class="text-xl mb-2">Accuracy: {accuracy}%</p>
-                <p class="text-xl mb-4">Time: {timeString}</p>
-                <div class="flex justify-center mb-4">
-                    {#each Array(3) as _, i}
-                        {#if i < stars}
-                            <div>
-                                <Star class="w-8 h-8 text-warning" />
-                            </div>
-                        {:else}
-                            <div>
-                                <Star class="w-8 h-8 text-base-300" />
-                            </div>
-                        {/if}
-                    {/each}
-                </div>
-                <button class="btn btn-secondary" on:click={startGame}
-                    >Play Again</button>
-            </div>
-        </div>
+        <QuizResult {score} {errors} {timeString} {startGame} />
     {/if}
 </div>
 

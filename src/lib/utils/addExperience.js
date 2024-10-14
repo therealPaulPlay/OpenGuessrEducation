@@ -7,6 +7,11 @@ export async function addExperience(addAmount) {
         return
     }
 
+    if (!addAmount) {
+        console.warn("Amount to add is zero or not defined.");
+        return
+    }
+
     try {
         const requestBody = {
             id: localStorage.getItem("id"),

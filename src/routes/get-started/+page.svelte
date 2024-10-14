@@ -175,25 +175,6 @@
             tabindex="0"
             class="collapse collapse-arrow bg-base-200 bg-base-100 rounded-box mb-2">
             <div class="collapse-title text-lg font-medium">
-                How do I improve my geoguessing skills?
-            </div>
-            <div class="collapse-content">
-                <p>
-                    Improving your geoguessing skills takes practice and
-                    attention to detail. <a
-                        href="/guides"
-                        class="text-secondary">Guides</a> on OpenGuessr Education
-                    help you learn about common clues and strategies. Playing regularly
-                    and reviewing your guesses will also help you get better over
-                    time. Remember, practice makes perfect!
-                </p>
-            </div>
-        </div>
-        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-        <div
-            tabindex="0"
-            class="collapse collapse-arrow bg-base-200 bg-base-100 rounded-box mb-2">
-            <div class="collapse-title text-lg font-medium">
                 Why is OpenGuessr free?
             </div>
             <div class="collapse-content">

@@ -1,9 +1,7 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
   import { Check } from "lucide-svelte";
   import Toast from "./Toast.svelte";
-  import { isAuthenticated } from "$lib/stores/accountData.js";
-  import { addExperience } from "$lib/utils/addExperience.js";
 
   export let question = "";
   export let answerOne = "";
@@ -17,7 +15,7 @@
   let showToast = false;
   let quizId = "";
   let isLoggedIn = false;
-  isAuthenticated.subscribe((value) => {
+  const unsubscribe = isAuthenticated.subscribe((value) => {
     isLoggedIn = value;
   });
 
@@ -29,6 +27,10 @@
     if (isCompleted) {
       selectedAnswer = correctAnswer - 1;
     }
+  });
+
+  onDestroy(() => {
+    unsubscribe();
   });
 
   function getIndexLetter(i) {
