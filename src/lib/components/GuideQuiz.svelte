@@ -2,6 +2,7 @@
   import { onMount, onDestroy } from "svelte";
   import { Check } from "lucide-svelte";
   import Toast from "./Toast.svelte";
+  import { isAuthenticated } from "$lib/stores/accountData.js";
 
   export let question = "";
   export let answerOne = "";
