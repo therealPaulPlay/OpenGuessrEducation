@@ -78,7 +78,19 @@
             regions = await fetch("/src/lib/json/regions.json");
             regions = await regions.json();
 
-            features = regions[region];
+            // Current region or entire World
+            if (region !== "World") {
+                features = regions[region];
+            } else {
+                features = regions?.World.concat(
+                    regions.Europe,
+                    regions.Asia,
+                    regions.Africa,
+                    regions["South America"],
+                    regions["North America"],
+                    regions.Oceania
+                );
+            }
 
             if (!features) {
                 console.log(
@@ -310,8 +322,8 @@
                 {minLabelZoom}
                 {highlightedFeature}
                 {topoJsonName}
-                dynamicHeight=true
-                showPoints=true
+                dynamicHeight="true"
+                showPoints="true"
                 showLabels={gameMode === "learn"}
                 afterLoad={handleMapLoad}>
                 {#if IconComponent}

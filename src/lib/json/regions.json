@@ -1,4 +1,9 @@
 {
+    "World": [
+        "Kiribati",
+        "Tonga",
+        "Samoa"
+    ],
     "Africa": [
         "Algeria",
         "Angola",
@@ -139,7 +144,6 @@
         "Montenegro",
         "Netherlands",
         "North Macedonia",
-        "Macedonia",
         "Norway",
         "Poland",
         "Portugal",
@@ -176,16 +180,14 @@
     "Oceania": [
         "Australia",
         "Fiji",
-        "Kiribati",
         "Marshall Islands",
         "Micronesia",
         "Nauru",
+        "New Caledonia",
         "New Zealand",
         "Palau",
         "Papua New Guinea",
-        "Samoa",
         "Solomon Islands",
-        "Tonga",
         "Tuvalu",
         "Vanuatu"
     ],

@@ -62,7 +62,7 @@
         <div class="flex flex-col">
             {#if $isAuthenticated}
                 <div class="badge badge-success mx-auto mb-8">
-                    <p>Earned {experience} XP!</p>
+                    <p>Earned {experience.toLocaleString()} XP!</p>
                 </div>
             {:else}
                 <div class="badge badge-ghost mx-auto mb-8">

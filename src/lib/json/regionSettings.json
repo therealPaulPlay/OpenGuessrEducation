@@ -4,14 +4,146 @@
       "lat": 5,
       "long": 0
     },
-    "zoom": 0.75
+    "zoom": 0.46,
+    "points": {
+      "Tonga": {
+        "lat": -21.1789,
+        "long": -175.1982
+      },
+      "Kiribati": {
+        "lat": -3.3704,
+        "long": -168.7340
+      },
+      "Samoa": {
+        "lat": -13.7590,
+        "long": -172.1046
+      },
+      "Vatican City": {
+        "lat": 41.9029,
+        "long": 12.4534
+      },
+      "Malta": {
+        "lat": 35.9375,
+        "long": 14.3754
+      },
+      "San Marino": {
+        "lat": 43.9333,
+        "long": 12.4469
+      },
+      "Monaco": {
+        "lat": 43.7384,
+        "long": 7.4246
+      },
+      "Andorra": {
+        "lat": 42.5063,
+        "long": 1.5211
+      },
+      "Liechtenstein": {
+        "lat": 47.1415,
+        "long": 9.5215
+      },
+      "Maldives": {
+        "lat": 1.92,
+        "long": 73.39
+      },
+      "Singapore": {
+        "lat": 1.29,
+        "long": 103.85
+      },
+      "Brunei": {
+        "lat": 4.30,
+        "long": 114.40
+      },
+      "São Tomé and Príncipe": {
+        "lat": 0.26,
+        "long": 6.60
+      },
+      "Cape Verde": {
+        "lat": 16.54,
+        "long": -23.04
+      },
+      "Comoros": {
+        "lat": -11.87,
+        "long": 43.87
+      },
+      "Seychelles": {
+        "lat": 4.67,
+        "long": 55.49
+      },
+      "Mauritius": {
+        "lat": -20.17,
+        "long": 57.33
+      },
+      "Fiji": {
+        "lat": -17.7134,
+        "long": 178.0650
+      },
+      "Marshall Islands": {
+        "lat": 7.1095,
+        "long": 171.1945
+      },
+      "Micronesia": {
+        "lat": 6.9116,
+        "long": 158.2150
+      },
+      "Nauru": {
+        "lat": -0.5210,
+        "long": 166.9315
+      },
+      "New Caledonia": {
+        "lat": -22.3085,
+        "long": 166.5000
+      },
+      "Palau": {
+        "lat": 7.5000,
+        "long": 134.5915
+      },
+      "Solomon Islands": {
+        "lat": -9.7857,
+        "long": 160.0240
+      },
+      "Tuvalu": {
+        "lat": -7.1095,
+        "long": 179.1945
+      },
+      "Vanuatu": {
+        "lat": -15.3769,
+        "long": 166.9591
+      }
+    }
   },
   "Europe": {
     "center": {
       "lat": 53,
       "long": 15
     },
-    "zoom": 2
+    "zoom": 2,
+    "points": {
+      "Vatican City": {
+        "lat": 41.9029,
+        "long": 12.4534
+      },
+      "Malta": {
+        "lat": 35.9375,
+        "long": 14.3754
+      },
+      "San Marino": {
+        "lat": 43.9333,
+        "long": 12.4469
+      },
+      "Monaco": {
+        "lat": 43.7384,
+        "long": 7.4246
+      },
+      "Andorra": {
+        "lat": 42.5063,
+        "long": 1.5211
+      },
+      "Liechtenstein": {
+        "lat": 47.1415,
+        "long": 9.5215
+      }
+    }
   },
   "Asia": {
     "center": {
@@ -79,10 +211,48 @@
   },
   "Oceania": {
     "center": {
-      "lat": -25,
-      "long": 135
+      "lat": -20,
+      "long": 140
     },
-    "zoom": 2
+    "zoom": 1.75,
+    "points": {
+      "Fiji": {
+        "lat": -17.7134,
+        "long": 178.0650
+      },
+      "Marshall Islands": {
+        "lat": 7.1095,
+        "long": 171.1945
+      },
+      "Micronesia": {
+        "lat": 6.9116,
+        "long": 158.2150
+      },
+      "Nauru": {
+        "lat": -0.5210,
+        "long": 166.9315
+      },
+      "New Caledonia": {
+        "lat": -22.3085,
+        "long": 166.5000
+      },
+      "Palau": {
+        "lat": 7.5000,
+        "long": 134.5915
+      },
+      "Solomon Islands": {
+        "lat": -9.7857,
+        "long": 160.0240
+      },
+      "Tuvalu": {
+        "lat": -7.1095,
+        "long": 179.1945
+      },
+      "Vanuatu": {
+        "lat": -15.3769,
+        "long": 166.9591
+      }
+    }
   },
   "Hebrew Alphabet": {
     "center": {

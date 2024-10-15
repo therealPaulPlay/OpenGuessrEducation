@@ -365,8 +365,13 @@
         });
     }
 
+    function returnAllCountries() {
+        if (!regionCountries) return;
+        return regionCountries?.World.concat(regionCountries.Europe, regionCountries.Asia, regionCountries.Africa, regionCountries["South America"], regionCountries["North America"], regionCountries.Oceania);
+    }
+
     function highlightCountries() {
-        const countries = regionCountries[region] || [region];
+        const countries = region !== "World" ? regionCountries[region] : returnAllCountries();
         return countries;
     }
 
