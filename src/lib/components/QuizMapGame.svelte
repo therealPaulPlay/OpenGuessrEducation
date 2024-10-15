@@ -14,6 +14,9 @@
 
     export let topoJsonName = undefined;
 
+    let screenWidth = 1200;
+    let screenHeight = 650;
+
     let quizMap;
     let features = [];
     let currentQuestion = "loading...";
@@ -59,6 +62,13 @@
         await loadFeatures();
         remainingFeatures = [...features];
         startGame();
+
+        screenHeight = Math.min(window.innerHeight * 0.6, 1200);
+        screenWidth = Math.min(window.innerWidth * 0.6, 1200);
+        window.addEventListener("resize", () => {
+            screenHeight = Math.min(window.innerHeight * 0.6, 1200);
+            screenWidth = Math.min(window.innerWidth * 0.6, 1200);
+        });
     });
 
     async function loadFeatures() {
@@ -212,7 +222,6 @@
 
     function handleMapClick(event) {
         if (gameMode === "click" || gameMode === "learn") {
-            console.log(event.detail.properties.name);
             checkAnswer(event.detail.properties.name);
         }
     }
@@ -294,13 +303,15 @@
                 bind:this={quizMap}
                 {region}
                 {zoom}
-                width={1200}
-                height={650}
+                width={screenWidth}
+                height={screenHeight}
                 on:click={handleMapClick}
                 interactive={true}
                 {minLabelZoom}
                 {highlightedFeature}
                 {topoJsonName}
+                dynamicHeight=true
+                showPoints=true
                 showLabels={gameMode === "learn"}
                 afterLoad={handleMapLoad}>
                 {#if IconComponent}

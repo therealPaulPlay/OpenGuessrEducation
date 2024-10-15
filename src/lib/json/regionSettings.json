@@ -1,180 +1,220 @@
 {
-    "World": {
-      "center": {
-        "lat": 5,
-        "long": 0
-      },
-      "zoom": 0.75
+  "World": {
+    "center": {
+      "lat": 5,
+      "long": 0
     },
-    "Europe": {
-      "center": {
-        "lat": 53,
-        "long": 15
-      },
-      "zoom": 2
+    "zoom": 0.75
+  },
+  "Europe": {
+    "center": {
+      "lat": 53,
+      "long": 15
     },
-    "Asia": {
-      "center": {
-        "lat": 34,
-        "long": 100
-      },
-      "zoom": 1.5
+    "zoom": 2
+  },
+  "Asia": {
+    "center": {
+      "lat": 34,
+      "long": 100
     },
-    "Africa": {
-      "center": {
-        "lat": 0,
-        "long": 20
+    "zoom": 1.5,
+    "points": {
+      "Maldives": {
+        "lat": 1.92,
+        "long": 73.39
       },
-      "zoom": 1.25
-    },
-    "North America": {
-      "center": {
-        "lat": 45,
-        "long": -100
+      "Singapore": {
+        "lat": 1.29,
+        "long": 103.85
       },
-      "zoom": 1.25
-    },
-    "South America": {
-      "center": {
-        "lat": -25,
-        "long": -60
-      },
-      "zoom": 1.25
-    },
-    "Oceania": {
-      "center": {
-        "lat": -25,
-        "long": 135
-      },
-      "zoom": 2
-    },
-    "Hebrew Alphabet": {
-      "center": {
-        "lat": 31,
-        "long": 35
-      },
-      "zoom": 6
-    },
-    "Cyrillic Alphabet": {
-      "center": {
-        "lat": 60,
-        "long": 75
-      },
-      "zoom": 1
-    },
-    "Arabic Alphabet": {
-      "center": {
-        "lat": 30,
-        "long": 20
-      },
-      "zoom": 1.5
-    },
-    "Greek Alphabet": {
-      "center": {
-        "lat": 39,
-        "long": 22
-      },
-      "zoom": 6
-    },
-    "Devanagari Alphabet": {
-      "center": {
-        "lat": 15,
-        "long": 80
-      },
-      "zoom": 2
-    },
-    "Chinese Alphabet": {
-      "center": {
-        "lat": 35,
-        "long": 100
-      },
-      "zoom": 1.5
-    },
-    "Kanji Alphabet": {
-      "center": {
-        "lat": 35,
-        "long": 140
-      },
-      "zoom": 1.5
-    },
-    "Hangul Alphabet": {
-      "center": {
-        "lat": 35,
-        "long": 140
-      },
-      "zoom": 1.5
-    },
-    "A-Profile": {
-      "center": {
-        "lat": 52,
-        "long": 15
-      },
-      "zoom": 2
-    },
-    "B-Profile": {
-      "center": {
-        "lat": 50,
-        "long": 15
-      },
-      "zoom": 4
-    },
-    "US States": {
-      "center": {
-        "lat": 38,
-        "long": -100
-      },
-      "zoom": 2.5
-    },
-    "Australian States": {
-      "center": {
-        "lat": -28,
-        "long": 135
-      },
-      "zoom": 2.5
-    },
-    "United Kingdom Regions": {
-      "center": {
-        "lat": 55,
-        "long": -3
-      },
-      "zoom": 6
-    },
-    "German States": {
-      "center": {
-        "lat": 51,
-        "long": 10
-      },
-      "zoom": 7
-    },
-    "Spanish Regions": {
-      "center": {
-        "lat": 36,
-        "long": -7
-      },
-      "zoom": 5,
-      "points": {
-        "Ciudad Autónoma de Ceuta": {
-          "lat": 36,
-          "long": -7
-        },
-        "Ciudad Autónoma de Melilla": {
-          "lat": 36,
-          "long": -12
-        }
+      "Brunei": {
+        "lat": 4.30,
+        "long": 114.40
       }
-    },
-    "Indonesian Provinces": {
-      "center": {
-        "lat": -4,
-        "long": 118
-      },
-      "zoom": 4
-    },
-    "Brazilian States": {
-      "center": {
-        "lat": -15,
-        "long": -55
-      },
-      "zoom": 2.5
     }
+  },
+  "Africa": {
+    "center": {
+      "lat": 0,
+      "long": 20
+    },
+    "zoom": 1.25,
+    "points": {
+      "São Tomé and Príncipe": {
+        "lat": 0.26,
+        "long": 6.60
+      },
+      "Cape Verde": {
+        "lat": 16.54,
+        "long": -23.04
+      },
+      "Comoros": {
+        "lat": -11.87,
+        "long": 43.87
+      },
+      "Seychelles": {
+        "lat": 4.67,
+        "long": 55.49
+      },
+      "Mauritius": {
+        "lat": -20.17,
+        "long": 57.33
+      }
+    }
+  },
+  "North America": {
+    "center": {
+      "lat": 45,
+      "long": -100
+    },
+    "zoom": 1.25
+  },
+  "South America": {
+    "center": {
+      "lat": -25,
+      "long": -60
+    },
+    "zoom": 1.25
+  },
+  "Oceania": {
+    "center": {
+      "lat": -25,
+      "long": 135
+    },
+    "zoom": 2
+  },
+  "Hebrew Alphabet": {
+    "center": {
+      "lat": 31,
+      "long": 35
+    },
+    "zoom": 6
+  },
+  "Cyrillic Alphabet": {
+    "center": {
+      "lat": 60,
+      "long": 75
+    },
+    "zoom": 1
+  },
+  "Arabic Alphabet": {
+    "center": {
+      "lat": 30,
+      "long": 20
+    },
+    "zoom": 1.5
+  },
+  "Greek Alphabet": {
+    "center": {
+      "lat": 39,
+      "long": 22
+    },
+    "zoom": 6
+  },
+  "Devanagari Alphabet": {
+    "center": {
+      "lat": 15,
+      "long": 80
+    },
+    "zoom": 2
+  },
+  "Chinese Alphabet": {
+    "center": {
+      "lat": 35,
+      "long": 100
+    },
+    "zoom": 1.5
+  },
+  "Kanji Alphabet": {
+    "center": {
+      "lat": 35,
+      "long": 140
+    },
+    "zoom": 1.5
+  },
+  "Hangul Alphabet": {
+    "center": {
+      "lat": 35,
+      "long": 140
+    },
+    "zoom": 1.5
+  },
+  "A-Profile": {
+    "center": {
+      "lat": 52,
+      "long": 15
+    },
+    "zoom": 2
+  },
+  "B-Profile": {
+    "center": {
+      "lat": 50,
+      "long": 15
+    },
+    "zoom": 4
+  },
+  "US States": {
+    "center": {
+      "lat": 38,
+      "long": -100
+    },
+    "zoom": 2.5
+  },
+  "Australian States": {
+    "center": {
+      "lat": -28,
+      "long": 135
+    },
+    "zoom": 2.5
+  },
+  "United Kingdom Regions": {
+    "center": {
+      "lat": 55,
+      "long": -3
+    },
+    "zoom": 6
+  },
+  "German States": {
+    "center": {
+      "lat": 51,
+      "long": 10
+    },
+    "zoom": 7
+  },
+  "Spanish Regions": {
+    "center": {
+      "lat": 36,
+      "long": -7
+    },
+    "zoom": 5,
+    "points": {
+      "Gibraltar": {
+        "lat": 36.13,
+        "long": -5.35
+      },
+      "Ciudad Autónoma de Ceuta": {
+        "lat": 35.89,
+        "long": -5.35
+      },
+      "Ciudad Autónoma de Melilla": {
+        "lat": 35.28,
+        "long": -2.95
+      }
+    }
+  },
+  "Indonesian Provinces": {
+    "center": {
+      "lat": -4,
+      "long": 118
+    },
+    "zoom": 4
+  },
+  "Brazilian States": {
+    "center": {
+      "lat": -15,
+      "long": -55
+    },
+    "zoom": 2.5
   }
+}

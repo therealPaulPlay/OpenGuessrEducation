@@ -24,7 +24,7 @@
 
 <svelte:window on:scroll={checkScrollable} />
 
-<article class="container mx-auto p-6 max-w-3xl">
+<article class="container mx-auto p-6 px-1 max-w-3xl">
     <a
         class="text-lg flex gap-3 justify-items-start items-center hover:opacity-50 transition-opacity w-fit mb-4"
         href="/guides/">

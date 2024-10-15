@@ -111,7 +111,7 @@
     }
 </script>
 
-<article class="container mx-auto p-6">
+<article class="container mx-auto p-6 px-1">
     <h1 class="text-5xl font-bold mb-12">Discover Quizzes</h1>
 
     <div class="mb-8">

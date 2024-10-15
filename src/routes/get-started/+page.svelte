@@ -35,7 +35,7 @@
     }
 </script>
 
-<article class="container mx-auto p-6 max-w-5xl">
+<article class="container mx-auto p-6 px-1 max-w-5xl">
     <img
         src="/src/lib/assets/openguessr_jungle_adventure.png"
         alt="Geography adventure"

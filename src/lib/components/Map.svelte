@@ -16,6 +16,8 @@
     export let showLabels = false;
     export let minLabelZoom = 1;
     export let notHighlightedColor = "rgba(125,125,125, 0.2)";
+    export let dynamicHeight = false; // Dynamically adjust height to the screen size, used for Quizzes
+    export let showPoints = false;
 
     export let hueRotateDegree = 0;
 
@@ -226,10 +228,27 @@
         }
     }
 
-    function handleRegionClick(feature) {
+    function handleRegionClick(feature, event) {
         if (feature.isHighlighted && feature.isInteractive) {
             dispatch("click", { properties: feature.properties });
         }
+
+        rect = mapContainer.getBoundingClientRect();
+
+        const x = (event.clientX - rect.left) * (width / rect.width);
+        const y = (event.clientY - rect.top) * (height / rect.height);
+
+        // Invert the projection to get the longitude and latitude
+        let [longitude, latitude] = projection.invert([x, y]);
+        latitude = Math.round(latitude * 100) / 100;
+        longitude = Math.round(longitude * 100) / 100;
+
+        console.log(
+            "Coordinates: ",
+            { latitude, longitude },
+            "Region name: ",
+            feature.properties.name,
+        );
     }
 
     async function fetchTopoJSON() {
@@ -480,7 +499,9 @@
 </script>
 
 <div
-    class="map-container rounded-lg relative grow"
+    class="map-container rounded-lg relative grow {dynamicHeight
+        ? 'dynamic-viewport-height'
+        : ''}"
     bind:this={mapContainer}
     id="mapContainer">
     {#if !loaded}
@@ -518,7 +539,7 @@
                         stroke="oklch(var(--a))"
                         stroke-width="0.5"
                         vector-effect="non-scaling-stroke"
-                        on:click={() => handleRegionClick(feature)}
+                        on:click={(event) => handleRegionClick(feature, event)}
                         on:mouseenter={() => (feature.isHovered = true)}
                         on:mouseleave={() => (feature.isHovered = false)}
                         class="feature-path"
@@ -530,24 +551,29 @@
 
             <g>
                 <!-- svelte-ignore a11y-click-events-have-key-events -->
-                {#each points as point (point.uniqueKey)}
-                    <!-- svelte-ignore a11y-click-events-have-key-events -->
-                    <!-- svelte-ignore a11y-no-static-element-interactions -->
-                    <g
-                        on:click={() => handleRegionClick(point)}
-                        on:mouseenter={() => (point.isHovered = true)}
-                        on:mouseleave={() => (point.isHovered = false)}
-                        class="point-feature"
-                        transform={`translate(${point.x},${point.y})`}>
-                        <circle
-                            r={10 * width / 1200}
-                            fill={point.color || "oklch(var(--s))"}
-                            class="point-circle"
-                            style="filter: drop-shadow(2px 2px 4px rgba(50,50,50,0.3)) {point.isHovered
-                                ? 'brightness(1.2)'
-                                : ''};" />
-                    </g>
-                {/each}
+                {#if showPoints}
+                    {#each points as point (point.uniqueKey)}
+                        <!-- svelte-ignore a11y-click-events-have-key-events -->
+                        <!-- svelte-ignore a11y-no-static-element-interactions -->
+                        <g
+                            on:click={(event) =>
+                                handleRegionClick(point, event)}
+                            on:mouseenter={() => (point.isHovered = true)}
+                            on:mouseleave={() => (point.isHovered = false)}
+                            class="point-feature"
+                            stroke="oklch(var(--b2))"
+                            stroke-width="2"
+                            transform={`translate(${point.x},${point.y})`}>
+                            <circle
+                                r={5 + (10 * width) / 2000}
+                                fill={point.color || "oklch(var(--s))"}
+                                class="point-circle"
+                                style="filter: drop-shadow(2px 2px 4px rgba(50,50,50,0.3)) {point.isHovered
+                                    ? 'brightness(1.2)'
+                                    : ''};" />
+                        </g>
+                    {/each}
+                {/if}
             </g>
 
             <!-- text labels (country / region / city name)-->
@@ -589,7 +615,7 @@
                     {/if}
                 {/each}
                 {#each points as point (point.uniqueKey)}
-                    {#if point.isHighlighted && (showLabels || point.showLabel) && zoom >= minLabelZoom}
+                    {#if point.isHighlighted && point.showLabel && zoom >= minLabelZoom}
                         {@const text = shortenRegionName(point.properties.name)}
                         {@const textLength = text.length * 8}
                         <g transform={`translate(${point.x},${point.y})`}>
@@ -740,5 +766,9 @@
         transition:
             fill 0.1s ease,
             filter 0.1s ease;
+    }
+
+    .dynamic-viewport-height {
+        height: 60dvh;
     }
 </style>
