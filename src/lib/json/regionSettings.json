@@ -151,7 +151,17 @@
         "lat": 36,
         "long": -7
       },
-      "zoom": 5
+      "zoom": 5,
+      "points": {
+        "Ciudad Autónoma de Ceuta": {
+          "lat": 36,
+          "long": -7
+        },
+        "Ciudad Autónoma de Melilla": {
+          "lat": 36,
+          "long": -12
+        }
+      }
     },
     "Indonesian Provinces": {
       "center": {

@@ -12,20 +12,21 @@
     export let width = 800;
     export let height = 400;
     export let interactive = false;
-    export let highlightedFeature = null; // Used for typing in the highlighted country in quizzes
+    export let highlightedFeature = null;
     export let showLabels = false;
     export let minLabelZoom = 1;
     export let notHighlightedColor = "rgba(125,125,125, 0.2)";
 
     export let hueRotateDegree = 0;
 
-    export let topoJsonName = "topojson-world-110m"; // Default world geojson (or topojson, which is an extension of geojson), but you can use any geojson that has labels (= a name property)
+    export let topoJsonName = "topojson-world-110m";
 
     export let afterLoad = "";
 
     let svgElement;
     let mapContainer;
     let features = [];
+    let points = []; // New array to store point features
 
     let projection = geoMercator();
     let path = geoPath().projection(projection);
@@ -49,7 +50,8 @@
     const MIN_ZOOM = 0.5;
     const MAX_ZOOM = 20;
 
-    let regionSettings = {};
+    let allRegionSettings = {};
+    let regionPoints = {};
 
     async function fetchRegionSettings() {
         const regionSettingsJSON = await fetch(
@@ -67,6 +69,13 @@
             }
             return feature;
         });
+
+        points = points.map((point) => {
+            if (point.properties.name === featureName) {
+                return { ...point, color };
+            }
+            return point;
+        });
     }
 
     export function highlightFeatureOutline(featureName) {
@@ -82,12 +91,24 @@
 
     export function brieflyShowName(featureName) {
         let showLabel = true;
-        features = features.map((feature) => {
-            if (feature.properties.name === featureName) {
-                return { ...feature, showLabel };
+        let pointExists = false;
+
+        points = points.map((point) => {
+            if (point.properties.name === featureName) {
+                pointExists = true;
+                return { ...point, showLabel };
             }
-            return feature;
+            return point;
         });
+
+        if (!pointExists) {
+            features = features.map((feature) => {
+                if (feature.properties.name === featureName) {
+                    return { ...feature, showLabel };
+                }
+                return feature;
+            });
+        }
 
         setTimeout(() => {
             showLabel = false;
@@ -97,6 +118,12 @@
                     return { ...feature, showLabel };
                 }
                 return feature;
+            });
+            points = points.map((point) => {
+                if (point.properties.name === featureName) {
+                    return { ...point, showLabel };
+                }
+                return point;
             });
         }, 500);
     }
@@ -110,28 +137,36 @@
             }
             return feature;
         });
+
+        points = points.map((point) => {
+            if (point.properties.name === featureName) {
+                return { ...point, isInteractive };
+            }
+            return point;
+        });
     }
 
     let flashInterval;
 
     export function flashFeature(featureName) {
         const feature = features.find((f) => f.properties.name === featureName);
+        const point = points.find((p) => p.properties.name === featureName);
 
-        if (feature) {
+        /* If there is both a feature and a point to highlight (e.g. a very small region with a point above it to make it more accessible),
+        flash the point only. Flashing both would lead to issues. */
+        if (feature && !point) {
+            clearInterval(flashInterval);
             flashingFeature = feature;
             let flashCount = 0;
 
-            clearInterval(flashInterval);
             feature.color = "oklch(var(--s))";
 
             flashCircle = feature;
             let radius = Number(Math.sqrt(path.area(feature) / Math.PI));
 
-            // If he feature-encompassing circle would be less than 40 in radius, display it
-            if (radius < 20) { 
+            if (radius < 20) {
                 flashCircleOpacity.set(0.5);
                 flashCircleRadius.set(50);
-
             }
 
             flashInterval = setInterval(() => {
@@ -143,6 +178,35 @@
                     clearInterval(flashInterval);
                     feature.color = "oklch(var(--s))";
                     features = [...features];
+
+                    flashCircleOpacity.set(0);
+                    flashCircleRadius.set(20);
+
+                    setTimeout(() => {
+                        flashingFeature = null;
+                        flashCircle = null;
+                    }, 600);
+                }
+            }, 150);
+        }
+
+        if (point) {
+            clearInterval(flashInterval);
+            flashingFeature = point;
+            let flashCount = 0;
+            flashCircle = point;
+
+            flashCircleOpacity.set(0.5);
+            flashCircleRadius.set(50);
+
+            flashInterval = setInterval(() => {
+                point.color = flashCount % 2 == 0 ? "white" : "oklch(var(--s))";
+                points = [...points];
+                flashCount++;
+                if (flashCount >= 4) {
+                    clearInterval(flashInterval);
+                    point.color = "oklch(var(--s))";
+                    points = [...points];
 
                     flashCircleOpacity.set(0);
                     flashCircleRadius.set(20);
@@ -177,23 +241,21 @@
             const topology = await response.json();
 
             let featureData;
-
             // Check if 'topology.objects.countries' exists (TopoJSON format)
-
             const regionObjects =
                 topology?.objects?.countries ||
                 topology?.objects?.states ||
                 topology?.objects?.regions ||
-                topology?.objects[Object.keys(topology?.objects)[0]]; // Last one is a fallback option, which is the first key in the object
+                topology?.objects[Object.keys(topology?.objects)[0]];
 
+            // There must be some kind of object category
             if (topology && topology.objects && regionObjects) {
-                // There must be some kind of object category
                 featureData = feature(topology, regionObjects);
             } else {
                 // Fallback if topology is undefined or not in TopoJSON format (assuming GeoJSON)
-                featureData = topology; // Already in GeoJSON format
+                featureData = topology;
                 console.log(
-                    "Falling back to feature data (geojson) as no valid object names were found, hovewer, the map is built for TopoJSON. Here is the object output:",
+                    "Falling back to feature data (geojson) as no valid object names were found, however, the map is built for TopoJSON. Here is the object output:",
                     topology?.objects,
                 );
             }
@@ -215,9 +277,9 @@
     }
 
     async function updateProjection() {
-        if (!regionSettings) return;
+        if (!allRegionSettings) return;
 
-        const settings = regionSettings[region] || regionSettings.World;
+        const settings = allRegionSettings[region] || allRegionSettings.World;
         const { center, zoom: regionZoom } = settings;
 
         // Calculate the scale based on the map container size and region zoom
@@ -264,6 +326,24 @@
                 return null;
             })
             .filter((feature) => feature);
+
+        // Generate point features
+        points = points.map((point, index) => {
+            let [x, y] = projection([point.initX, point.initY]);
+
+            const interactivity =
+                point.isInteractive == null ? true : point.isInteractive;
+
+            return {
+                ...point,
+                uniqueKey: `point-${index}-${point.properties.name}`,
+                x,
+                y,
+                isHighlighted: true,
+                isInteractive: interactivity,
+                color: point.color || "oklch(var(--s))",
+            };
+        });
     }
 
     function highlightCountries() {
@@ -277,43 +357,31 @@
 
         rect = mapContainer.getBoundingClientRect();
 
-        // Get cursor position relative to the SVG container
         const cursorX = (event.clientX - rect.left) * (width / rect.width);
         const cursorY = (event.clientY - rect.top) * (height / rect.height);
 
-        // Determine the zoom direction
         const direction = event.deltaY > 0 ? -1 : 1;
 
-        // Detect if the input is from a touchpad
         const isTouchpad = Math.abs(event.deltaY) < 50;
 
-        // Calculate zoom change based on input type
         let zoomChange;
         if (isTouchpad) {
-            // Linear zoom change for touchpad
             zoomChange = 1 + direction * 0.03;
         } else {
-            // Exponential zoom change for mouse wheel (unchanged)
             zoomChange = Math.exp(direction * 0.1);
         }
 
-        // Save the old zoom level before applying the new zoom
         const oldZoom = zoom;
 
-        // Update zoom level, clamping within defined limits
         zoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, zoom * zoomChange));
 
-        // Calculate the new scale after zooming
         const scaleChange = zoom / oldZoom;
 
-        // Adjust translation to keep the point under the mouse fixed in geographical coordinates
         translateX -= (cursorX - translateX) * (scaleChange - 1);
         translateY -= (cursorY - translateY) * (scaleChange - 1);
 
-        // Apply the new translation and scale to the projection
         updateProjection();
 
-        // Update the projection to generate paths
         generatePaths();
     }
 
@@ -368,16 +436,38 @@
     onMount(async () => {
         const geoData = await fetchTopoJSON();
         regionCountries = await fetchContinentCountries();
-        regionSettings = await fetchRegionSettings();
+        allRegionSettings = await fetchRegionSettings();
 
-        if (geoData && regionCountries && regionSettings) {
+        const settings = allRegionSettings[region] || allRegionSettings.World;
+        regionPoints = settings?.points || {};
+
+        if (geoData && regionCountries && allRegionSettings) {
             features = geoData.features;
 
-            // Initial translate is the center point
+            points = Object.entries(regionPoints || {}).map(
+                ([name, coords], index) => {
+                    const [x, y] = projection([coords.long, coords.lat]);
+                    const initX = coords.long;
+                    const initY = coords.lat;
+
+                    return {
+                        type: "Point",
+                        properties: { name },
+                        uniqueKey: `point-${index}-${name}`,
+                        x,
+                        y,
+                        initX,
+                        initY,
+                        isHighlighted: true,
+                        isInteractive: true,
+                        color: "oklch(var(--s))",
+                    };
+                },
+            );
+
             translateX = width / 2;
             translateY = height / 2;
 
-            // Apply initial projection settings
             updateProjection();
             generatePaths();
             loaded = true;
@@ -396,10 +486,10 @@
     {#if !loaded}
         <div class="skeleton w-full h-full min-h-28 opacity-75 rounded-lg">
         </div>
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
     {:else}
-        <!-- background color -->
         <div class="absolute w-full h-full bg-accent"></div>
-         
+
         <slot />
 
         <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -419,11 +509,9 @@
                 ? 'pointer-events-auto'
                 : 'pointer-events-none'}">
             <g>
-                <!-- svelte-ignore a11y-click-events-have-key-events -->
-                <!-- svelte-ignore a11y-no-static-element-interactions -->
-                <!-- svelte-ignore a11y-no-static-element-interactions -->
                 {#each features as feature (feature.uniqueKey)}
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
+                    <!-- svelte-ignore a11y-no-static-element-interactions -->
                     <path
                         d={feature.d}
                         fill={feature.color || "oklch(var(--s))"}
@@ -440,6 +528,29 @@
                 {/each}
             </g>
 
+            <g>
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
+                {#each points as point (point.uniqueKey)}
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
+                    <!-- svelte-ignore a11y-no-static-element-interactions -->
+                    <g
+                        on:click={() => handleRegionClick(point)}
+                        on:mouseenter={() => (point.isHovered = true)}
+                        on:mouseleave={() => (point.isHovered = false)}
+                        class="point-feature"
+                        transform={`translate(${point.x},${point.y})`}>
+                        <circle
+                            r={10 * width / 1200}
+                            fill={point.color || "oklch(var(--s))"}
+                            class="point-circle"
+                            style="filter: drop-shadow(2px 2px 4px rgba(50,50,50,0.3)) {point.isHovered
+                                ? 'brightness(1.2)'
+                                : ''};" />
+                    </g>
+                {/each}
+            </g>
+
+            <!-- text labels (country / region / city name)-->
             <g>
                 {#each features as feature (feature.uniqueKey)}
                     {#if feature.isHighlighted && (showLabels || feature.showLabel) && zoom >= minLabelZoom}
@@ -477,13 +588,47 @@
                         {/if}
                     {/if}
                 {/each}
+                {#each points as point (point.uniqueKey)}
+                    {#if point.isHighlighted && (showLabels || point.showLabel) && zoom >= minLabelZoom}
+                        {@const text = shortenRegionName(point.properties.name)}
+                        {@const textLength = text.length * 8}
+                        <g transform={`translate(${point.x},${point.y})`}>
+                            <rect
+                                x={-textLength / 2 - 10}
+                                y={-24}
+                                width={textLength + 20}
+                                height="24"
+                                rx="10"
+                                ry="10"
+                                opacity="0.85"
+                                pointer-events="none"
+                                fill="oklch(var(--b2))"
+                                class="label-background" />
+                            <text
+                                y={-12}
+                                text-anchor="middle"
+                                dominant-baseline="middle"
+                                fill="oklch(var(--s))"
+                                font-size="15"
+                                font-weight="bold"
+                                pointer-events="none"
+                                class="label-text">
+                                {text}
+                            </text>
+                        </g>
+                    {/if}
+                {/each}
             </g>
 
             {#if flashingFeature}
-                {@const [cx, cy] = path.centroid(flashingFeature)}
-                {@const radius = Math.sqrt(
-                    path.area(flashingFeature) / Math.PI,
-                )}
+                {@const [cx, cy] =
+                    flashingFeature.type === "Point"
+                        ? [flashingFeature.x, flashingFeature.y]
+                        : path.centroid(flashingFeature)}
+                {@const radius =
+                    flashingFeature.type === "Point"
+                        ? 25
+                        : Math.sqrt(path.area(flashingFeature) / Math.PI)}
                 <circle
                     {cx}
                     {cy}
@@ -508,11 +653,14 @@
                 </circle>
             {/if}
             {#if flashCircle}
-            {@const [cx, cy] = path.centroid(flashingFeature)}
+                {@const [cx, cy] =
+                    flashingFeature.type === "Point"
+                        ? [flashingFeature.x, flashingFeature.y]
+                        : path.centroid(flashingFeature)}
                 <g style="pointer-events: none">
                     <circle
                         {cx}
-                        cy={cy}
+                        {cy}
                         r={$flashCircleRadius}
                         fill="none"
                         stroke="white"
@@ -586,5 +734,11 @@
 
     .flash-circle {
         vector-effect: non-scaling-stroke;
+    }
+
+    .point-circle {
+        transition:
+            fill 0.1s ease,
+            filter 0.1s ease;
     }
 </style>
