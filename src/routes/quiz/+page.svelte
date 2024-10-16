@@ -162,7 +162,9 @@
                                 width={192}
                                 height={120}
                                 hueRotateDegree={index * 20}
-                                topoJsonName={quiz.topoJson} />
+                                topoJsonName={quiz.topoJson}
+                                showPoints={category.name.toLowerCase() === "cities"}
+                                 />
                         </QuizCard>
                     {/each}
                 </div>

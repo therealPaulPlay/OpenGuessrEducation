@@ -581,10 +581,11 @@
                 {/if}
             </g>
 
-            <!-- text labels (country / region / city name)-->
+            <!-- text labels (country / region / city name) -->
             <g>
                 {#each features as feature (feature.uniqueKey)}
-                    {#if feature.isHighlighted && (showLabels || feature.showLabel) && zoom >= minLabelZoom}
+                <!-- check if the feature is even highlighted and part of the map, if all labels or its label should be shown, if the zoom is big enough and if there isn't a point with that label already -->
+                    {#if feature.isHighlighted && (showLabels || feature.showLabel) && zoom >= minLabelZoom && !points.some((point) => point.properties.name == feature.properties.name)}
                         {#if path.centroid(feature)}
                             {@const [x, y] = path.centroid(feature)}
                             {@const text = shortenRegionName(
@@ -597,8 +598,8 @@
                                     y={y - 12}
                                     width={textLength + 20}
                                     height="24"
-                                    rx="5"
-                                    ry="5"
+                                    rx="10"
+                                    ry="10"
                                     opacity="0.85"
                                     pointer-events="none"
                                     fill="oklch(var(--b2))"
@@ -620,13 +621,13 @@
                     {/if}
                 {/each}
                 {#each points as point (point.uniqueKey)}
-                    {#if point.isHighlighted && point.showLabel && zoom >= minLabelZoom}
+                    {#if point.isHighlighted && (showLabels || point.showLabel) && zoom >= minLabelZoom}
                         {@const text = shortenRegionName(point.properties.name)}
                         {@const textLength = text.length * 8}
                         <g transform={`translate(${point.x},${point.y})`}>
                             <rect
                                 x={-textLength / 2 - 10}
-                                y={-24}
+                                y={-43}
                                 width={textLength + 20}
                                 height="24"
                                 rx="10"
@@ -636,7 +637,7 @@
                                 fill="oklch(var(--b2))"
                                 class="label-background" />
                             <text
-                                y={-12}
+                                y={-30}
                                 text-anchor="middle"
                                 dominant-baseline="middle"
                                 fill="oklch(var(--s))"

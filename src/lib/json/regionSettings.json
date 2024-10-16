@@ -386,5 +386,368 @@
       "long": -55
     },
     "zoom": 2.5
+  },
+  "20 largest cities": {
+    "center": {
+      "lat": 5,
+      "long": 20
+    },
+    "zoom": 0.65,
+    "points": {
+      "Tokyo": {
+        "lat": 35.6762,
+        "long": 139.6503
+      },
+      "Delhi": {
+        "lat": 28.7041,
+        "long": 77.1025
+      },
+      "Shanghai": {
+        "lat": 31.2304,
+        "long": 121.4737
+      },
+      "São Paulo": {
+        "lat": -23.5505,
+        "long": -46.6333
+      },
+      "Mexico City": {
+        "lat": 19.4326,
+        "long": -99.1332
+      },
+      "Cairo": {
+        "lat": 30.0444,
+        "long": 31.2357
+      },
+      "Dhaka": {
+        "lat": 23.8103,
+        "long": 90.4125
+      },
+      "Mumbai": {
+        "lat": 19.0760,
+        "long": 72.8777
+      },
+      "Beijing": {
+        "lat": 39.9042,
+        "long": 116.4074
+      },
+      "Osaka": {
+        "lat": 34.6937,
+        "long": 135.5023
+      },
+      "Karachi": {
+        "lat": 24.8607,
+        "long": 67.0011
+      },
+      "Chongqing": {
+        "lat": 29.5630,
+        "long": 106.5516
+      },
+      "Istanbul": {
+        "lat": 41.0082,
+        "long": 28.9784
+      },
+      "Buenos Aires": {
+        "lat": -34.6037,
+        "long": -58.3816
+      },
+      "Kolkata": {
+        "lat": 22.5726,
+        "long": 88.3639
+      },
+      "Lagos": {
+        "lat": 6.5244,
+        "long": 3.3792
+      },
+      "Kinshasa": {
+        "lat": -4.4419,
+        "long": 15.2663
+      },
+      "Manila": {
+        "lat": 14.5995,
+        "long": 120.9842
+      },
+      "Tianjin": {
+        "lat": 39.3434,
+        "long": 117.3616
+      },
+      "Rio de Janeiro": {
+        "lat": -22.9068,
+        "long": -43.1729
+      }
+    }
+  },
+  "European Capitals": {
+    "center": {
+      "lat": 53,
+      "long": 15
+    },
+    "zoom": 2,
+    "points": {
+      "Vienna": {
+        "lat": 48.2082,
+        "long": 16.3738
+      },
+      "Berlin": {
+        "lat": 52.5200,
+        "long": 13.4050
+      },
+      "Brussels": {
+        "lat": 50.8503,
+        "long": 4.3517
+      },
+      "Sofia": {
+        "lat": 42.6977,
+        "long": 23.3219
+      },
+      "Zagreb": {
+        "lat": 45.8150,
+        "long": 15.9819
+      },
+      "Nicosia": {
+        "lat": 35.1856,
+        "long": 33.3823
+      },
+      "Prague": {
+        "lat": 50.0755,
+        "long": 14.4378
+      },
+      "Copenhagen": {
+        "lat": 55.6761,
+        "long": 12.5683
+      },
+      "Tallinn": {
+        "lat": 59.4370,
+        "long": 24.7536
+      },
+      "Helsinki": {
+        "lat": 60.1695,
+        "long": 24.9354
+      },
+      "Paris": {
+        "lat": 48.8566,
+        "long": 2.3522
+      },
+      "Athens": {
+        "lat": 37.9838,
+        "long": 23.7275
+      },
+      "Budapest": {
+        "lat": 47.4979,
+        "long": 19.0402
+      },
+      "Reykjavik": {
+        "lat": 64.1466,
+        "long": -21.9426
+      },
+      "Dublin": {
+        "lat": 53.3498,
+        "long": -6.2603
+      },
+      "Rome": {
+        "lat": 41.9028,
+        "long": 12.4964
+      },
+      "Riga": {
+        "lat": 56.9496,
+        "long": 24.1052
+      },
+      "Vilnius": {
+        "lat": 54.6872,
+        "long": 25.2797
+      },
+      "Luxembourg City": {
+        "lat": 49.6117,
+        "long": 6.1319
+      },
+      "Valletta": {
+        "lat": 35.8997,
+        "long": 14.5146
+      },
+      "Amsterdam": {
+        "lat": 52.3676,
+        "long": 4.9041
+      },
+      "Warsaw": {
+        "lat": 52.2297,
+        "long": 21.0122
+      },
+      "Lisbon": {
+        "lat": 38.7223,
+        "long": -9.1393
+      },
+      "Bucharest": {
+        "lat": 44.4268,
+        "long": 26.1025
+      },
+      "Bratislava": {
+        "lat": 48.1486,
+        "long": 17.1077
+      },
+      "Ljubljana": {
+        "lat": 46.0569,
+        "long": 14.5058
+      },
+      "Madrid": {
+        "lat": 40.4168,
+        "long": -3.7038
+      },
+      "Stockholm": {
+        "lat": 59.3293,
+        "long": 18.0686
+      },
+      "Bern": {
+        "lat": 46.9481,
+        "long": 7.4474
+      },
+      "London": {
+        "lat": 51.5074,
+        "long": -0.1278
+      },
+      "Oslo": {
+        "lat": 59.9139,
+        "long": 10.7522
+      },
+      "Moscow": {
+        "lat": 55.7558,
+        "long": 37.6173
+      },
+      "Minsk": {
+        "lat": 53.9006,
+        "long": 27.5590
+      },
+      "Kiev": {
+        "lat": 50.4501,
+        "long": 30.5234
+      },
+      "Chisinau": {
+        "lat": 47.0105,
+        "long": 28.8638
+      },
+      "Tirana": {
+        "lat": 41.3275,
+        "long": 19.8189
+      },
+      "Skopje": {
+        "lat": 41.9981,
+        "long": 21.4254
+      },
+      "Belgrade": {
+        "lat": 44.7866,
+        "long": 20.4489
+      },
+      "Sarajevo": {
+        "lat": 43.8563,
+        "long": 18.4131
+      },
+      "Podgorica": {
+        "lat": 42.4304,
+        "long": 19.2594
+      },
+      "Pristina": {
+        "lat": 42.6629,
+        "long": 21.1655
+      }
+    }
+  },
+  "North American Capitals": {
+    "center": {
+      "lat": 25,
+      "long": -90
+    },
+    "zoom": 2,
+    "points": {
+      "Washington, D.C.": {
+        "lat": 38.8951,
+        "long": -77.0364
+      },
+      "Ottawa": {
+        "lat": 45.4215,
+        "long": -75.6972
+      },
+      "Mexico City": {
+        "lat": 19.4326,
+        "long": -99.1332
+      },
+      "Guatemala City": {
+        "lat": 14.6349,
+        "long": -90.5069
+      },
+      "Belmopan": {
+        "lat": 17.2510,
+        "long": -88.7590
+      },
+      "Tegucigalpa": {
+        "lat": 14.0723,
+        "long": -87.1921
+      },
+      "San Salvador": {
+        "lat": 13.6929,
+        "long": -89.2182
+      },
+      "Managua": {
+        "lat": 12.1364,
+        "long": -86.2514
+      },
+      "San José": {
+        "lat": 9.9281,
+        "long": -84.0907
+      },
+      "Panama City": {
+        "lat": 8.9824,
+        "long": -79.5199
+      },
+      "Havana": {
+        "lat": 23.1136,
+        "long": -82.3666
+      },
+      "Kingston": {
+        "lat": 17.9712,
+        "long": -76.7936
+      },
+      "Port-au-Prince": {
+        "lat": 18.5944,
+        "long": -72.3074
+      },
+      "Santo Domingo": {
+        "lat": 18.4861,
+        "long": -69.9312
+      },
+      "Nassau": {
+        "lat": 25.0343,
+        "long": -77.3963
+      },
+      "Bridgetown": {
+        "lat": 13.0975,
+        "long": -59.6167
+      },
+      "Port of Spain": {
+        "lat": 10.6918,
+        "long": -61.2225
+      },
+      "Saint George's": {
+        "lat": 12.0561,
+        "long": -61.7486
+      },
+      "Roseau": {
+        "lat": 15.3092,
+        "long": -61.3794
+      },
+      "Castries": {
+        "lat": 14.0101,
+        "long": -60.9875
+      },
+      "Kingstown": {
+        "lat": 13.1600,
+        "long": -61.2248
+      },
+      "Basseterre": {
+        "lat": 17.3026,
+        "long": -62.7177
+      },
+      "Saint John's": {
+        "lat": 17.1274,
+        "long": -61.8468
+      }
+    }
   }
 }
