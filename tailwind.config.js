@@ -1,4 +1,3 @@
-// tailwind.config.cjs
 module.exports = {
   darkMode: 'class', // Enable dark mode switching via class
   content: [

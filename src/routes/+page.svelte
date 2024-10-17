@@ -43,7 +43,7 @@
         Welcome to OpenGuessr Education{yourName}.
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 mt-12">
         <div
             class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="card-body">
@@ -101,8 +101,8 @@
         </div>
     </div>
 
-    <div class="text-focused-section mb-16 mt-16 flex justify-center flex-col">
-        <h2 class="text-4xl font-bold mb-8 text-center">
+    <div class="text-focused-section mb-28 mt-28 flex justify-center flex-col">
+        <h2 class="text-4xl font-bold mb-10 text-center">
             The place to learn it all.
         </h2>
 
@@ -175,40 +175,11 @@
         </div>
     </div>
 
-    <div class="stats outline outline-1 outline-base-300 w-full mb-12">
-        <div class="stat">
-            <div class="stat-figure text-secondary">
-                <Users size={36} />
-            </div>
-            <div class="stat-title">Active Players</div>
-            <div class="stat-value">800,000+</div>
-            <div class="stat-desc">Learn from a large community.</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-figure text-secondary">
-                <MapPin size={36} />
-            </div>
-            <div class="stat-title">Countries Covered</div>
-            <div class="stat-value">83</div>
-            <div class="stat-desc">Out of 83 countries with Street View.</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-figure text-secondary">
-                <DollarSign size={36} />
-            </div>
-            <div class="stat-title">Open</div>
-            <div class="stat-value">Free & Open</div>
-            <div class="stat-desc">View the source code on <a class="text-secondary" href="https://github.com/therealPaulPlay/OpenGuessrEducation" target="_blank">Github</a>.</div>
-        </div>
-    </div>
-
     <div class="mb-12 text-center">
         <h2 class="text-4xl font-bold mb-2 text-center">
             Ready to become a pro?
         </h2>
-        <p class="text-xl mb-6">The journey will be legendary.</p>
+        <p class="text-lg mb-6">The journey will be legendary.</p>
         <button
             class="btn btn-secondary btn-lg relative overflow-hidden"
             on:mouseenter={() => (isHovered = true)}
@@ -234,10 +205,6 @@
 </article>
 
 <style>
-    .text-secondary {
-        color: var(--secondary-color);
-    }
-
     .text-focused-section {
         line-height: 1.6;
     }

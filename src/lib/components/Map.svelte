@@ -161,7 +161,7 @@
             flashingFeature = feature;
             let flashCount = 0;
 
-            feature.color = "oklch(var(--s))";
+            feature.flashColor = "";
 
             flashCircle = feature;
             let radius = Number(Math.sqrt(path.area(feature) / Math.PI));
@@ -172,14 +172,12 @@
             }
 
             flashInterval = setInterval(() => {
-                feature.color =
-                    flashCount % 2 == 0 ? "white" : "oklch(var(--s))";
+                feature.flashColor = flashCount % 2 == 0 ? "white" : "";
                 features = [...features];
                 flashCount++;
                 if (flashCount >= 4) {
                     clearInterval(flashInterval);
-                    feature.color = "oklch(var(--s))";
-                    features = [...features];
+                    feature.flashColor = "";
 
                     flashCircleOpacity.set(0);
                     flashCircleRadius.set(20);
@@ -202,13 +200,12 @@
             flashCircleRadius.set(50);
 
             flashInterval = setInterval(() => {
-                point.color = flashCount % 2 == 0 ? "white" : "oklch(var(--s))";
+                point.flashColor = flashCount % 2 == 0 ? "white" : "";
                 points = [...points];
                 flashCount++;
                 if (flashCount >= 4) {
                     clearInterval(flashInterval);
-                    point.color = "oklch(var(--s))";
-                    points = [...points];
+                    point.color = "";
 
                     flashCircleOpacity.set(0);
                     flashCircleRadius.set(20);
@@ -337,6 +334,7 @@
                         d,
                         isHighlighted: isHighlighted,
                         isInteractive: interactivity,
+                        flashColor: "",
                         color: isHighlighted
                             ? feature.color || "oklch(var(--s))"
                             : notHighlightedColor,
@@ -360,6 +358,7 @@
                 y,
                 isHighlighted: true,
                 isInteractive: interactivity,
+                flashColor: "",
                 color: point.color || "oklch(var(--s))",
             };
         });
@@ -367,11 +366,19 @@
 
     function returnAllCountries() {
         if (!regionCountries) return;
-        return regionCountries?.World.concat(regionCountries.Europe, regionCountries.Asia, regionCountries.Africa, regionCountries["South America"], regionCountries["North America"], regionCountries.Oceania);
+        return regionCountries?.World.concat(
+            regionCountries.Europe,
+            regionCountries.Asia,
+            regionCountries.Africa,
+            regionCountries["South America"],
+            regionCountries["North America"],
+            regionCountries.Oceania,
+        );
     }
 
     function highlightCountries() {
-        const countries = region !== "World" ? regionCountries[region] : returnAllCountries();
+        const countries =
+            region !== "World" ? regionCountries[region] : returnAllCountries();
         return countries;
     }
 
@@ -389,8 +396,9 @@
         const isTouchpad = Math.abs(event.deltaY) < 50;
 
         let zoomChange;
+
         if (isTouchpad) {
-            zoomChange = 1 + direction * 0.03;
+            zoomChange = 1 + direction * 0.05;
         } else {
             zoomChange = Math.exp(direction * 0.1);
         }
@@ -466,8 +474,10 @@
         regionPoints = settings?.points || {};
 
         if (geoData && regionCountries && allRegionSettings) {
+            // Init features
             features = geoData.features;
 
+            // Init points
             points = Object.entries(regionPoints || {}).map(
                 ([name, coords], index) => {
                     const [x, y] = projection([coords.long, coords.lat]);
@@ -484,6 +494,7 @@
                         initY,
                         isHighlighted: true,
                         isInteractive: true,
+                        flashColor: "",
                         color: "oklch(var(--s))",
                     };
                 },
@@ -540,7 +551,9 @@
                     <!-- svelte-ignore a11y-no-static-element-interactions -->
                     <path
                         d={feature.d}
-                        fill={feature.color || "oklch(var(--s))"}
+                        fill={feature.flashColor ||
+                            feature.color ||
+                            "oklch(var(--s))"}
                         stroke="oklch(var(--a))"
                         stroke-width="0.5"
                         vector-effect="non-scaling-stroke"
@@ -571,7 +584,9 @@
                             transform={`translate(${point.x},${point.y})`}>
                             <circle
                                 r={5 + (10 * width) / 2000}
-                                fill={point.color || "oklch(var(--s))"}
+                                fill={point.flashColor ||
+                                    point.color ||
+                                    "oklch(var(--s))"}
                                 class="point-circle"
                                 style="filter: drop-shadow(2px 2px 4px rgba(50,50,50,0.3)) {point.isHovered
                                     ? 'brightness(1.2)'
@@ -584,7 +599,7 @@
             <!-- text labels (country / region / city name) -->
             <g>
                 {#each features as feature (feature.uniqueKey)}
-                <!-- check if the feature is even highlighted and part of the map, if all labels or its label should be shown, if the zoom is big enough and if there isn't a point with that label already -->
+                    <!-- check if the feature is even highlighted and part of the map, if all labels or its label should be shown, if the zoom is big enough and if there isn't a point with that label already -->
                     {#if feature.isHighlighted && (showLabels || feature.showLabel) && zoom >= minLabelZoom && !points.some((point) => point.properties.name == feature.properties.name)}
                         {#if path.centroid(feature)}
                             {@const [x, y] = path.centroid(feature)}
@@ -620,6 +635,7 @@
                         {/if}
                     {/if}
                 {/each}
+
                 {#each points as point (point.uniqueKey)}
                     {#if point.isHighlighted && (showLabels || point.showLabel) && zoom >= minLabelZoom}
                         {@const text = shortenRegionName(point.properties.name)}
@@ -652,42 +668,13 @@
                 {/each}
             </g>
 
-            {#if flashingFeature}
-                {@const [cx, cy] =
-                    flashingFeature.type === "Point"
-                        ? [flashingFeature.x, flashingFeature.y]
-                        : path.centroid(flashingFeature)}
-                {@const radius =
-                    flashingFeature.type === "Point"
-                        ? 25
-                        : Math.sqrt(path.area(flashingFeature) / Math.PI)}
-                <circle
-                    {cx}
-                    {cy}
-                    r={radius * 2}
-                    fill="none"
-                    stroke="white"
-                    stroke-width="2"
-                    opacity="0"
-                    class="pointer-events-none">
-                    <animate
-                        attributeName="r"
-                        from={radius * 2}
-                        to={radius}
-                        dur="0.3s"
-                        fill="freeze" />
-                    <animate
-                        attributeName="opacity"
-                        from="0.8"
-                        to="0"
-                        dur="0.3s"
-                        fill="freeze" />
-                </circle>
-            {/if}
             {#if flashCircle}
                 {@const [cx, cy] =
                     flashingFeature.type === "Point"
-                        ? [flashingFeature.x, flashingFeature.y]
+                        ? projection([
+                              flashingFeature.initX,
+                              flashingFeature.initY,
+                          ])
                         : path.centroid(flashingFeature)}
                 <g style="pointer-events: none">
                     <circle
@@ -702,6 +689,7 @@
                     </circle>
                 </g>
             {/if}
+
             {#if outlineFeature}
                 <g>
                     <path
@@ -714,6 +702,7 @@
                 </g>
             {/if}
         </svg>
+
         {#if interactive}
             <div class="absolute bottom-4 right-4 flex flex-col gap-2">
                 <button

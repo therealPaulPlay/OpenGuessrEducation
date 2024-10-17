@@ -125,7 +125,7 @@
     </div>
 
     <div class="w-full">
-        <div class="rounded-xl p-2 flex items-center justify-center bg-base-200">
+        <div class="rounded-xl p-2 px-6 flex items-center justify-center bg-base-200 bg-opacity-50 mx-auto w-fit">
             <p class="text-wrap">More guides coming soon! Feel free to <a class="text-secondary" href="https://github.com/therealPaulPlay/OpenGuessrEducation" target="_blank">contribute</a> on Github.</p>
         </div>
     </div>
