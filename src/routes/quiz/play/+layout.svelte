@@ -102,7 +102,9 @@
             zoom={quiz.zoom}
             width={192}
             height={120}
-            topoJsonName={quiz.topoJson} />
+            topoJsonName={quiz.topoJson}
+            showPoints={!(quiz.category == "countries" || quiz.category == "regions")}
+            />
         </QuizCard>
       {/each}
     {/if}

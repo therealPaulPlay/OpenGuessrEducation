@@ -749,5 +749,537 @@
         "long": -61.8468
       }
     }
+  },
+  "Asian Capitals": {
+    "center": {
+      "lat": 34,
+      "long": 80
+    },
+    "zoom": 1,
+    "points": {
+      "Kabul": {
+        "lat": 34.5553,
+        "long": 69.2075
+      },
+      "Yerevan": {
+        "lat": 40.1792,
+        "long": 44.4991
+      },
+      "Baku": {
+        "lat": 40.4093,
+        "long": 49.8671
+      },
+      "Manama": {
+        "lat": 26.2285,
+        "long": 50.5861
+      },
+      "Dhaka": {
+        "lat": 23.8103,
+        "long": 90.4125
+      },
+      "Thimphu": {
+        "lat": 27.4712,
+        "long": 89.6339
+      },
+      "Bandar Seri Begawan": {
+        "lat": 4.9031,
+        "long": 114.9398
+      },
+      "Phnom Penh": {
+        "lat": 11.5564,
+        "long": 104.9282
+      },
+      "Beijing": {
+        "lat": 39.9042,
+        "long": 116.4074
+      },
+      "Nicosia": {
+        "lat": 35.1856,
+        "long": 33.3823
+      },
+      "Tbilisi": {
+        "lat": 41.7151,
+        "long": 44.8271
+      },
+      "New Delhi": {
+        "lat": 28.6139,
+        "long": 77.2090
+      },
+      "Jakarta": {
+        "lat": -6.2088,
+        "long": 106.8456
+      },
+      "Tehran": {
+        "lat": 35.6892,
+        "long": 51.3890
+      },
+      "Baghdad": {
+        "lat": 33.3152,
+        "long": 44.3661
+      },
+      "Tokyo": {
+        "lat": 35.6762,
+        "long": 139.6503
+      },
+      "Amman": {
+        "lat": 31.9539,
+        "long": 35.9106
+      },
+      "Nur-Sultan": {
+        "lat": 51.1694,
+        "long": 71.4491
+      },
+      "Kuwait City": {
+        "lat": 29.3759,
+        "long": 47.9774
+      },
+      "Bishkek": {
+        "lat": 42.8746,
+        "long": 74.5698
+      },
+      "Vientiane": {
+        "lat": 17.9757,
+        "long": 102.6331
+      },
+      "Beirut": {
+        "lat": 33.8938,
+        "long": 35.5018
+      },
+      "Kuala Lumpur": {
+        "lat": 3.1390,
+        "long": 101.6869
+      },
+      "Malé": {
+        "lat": 4.1755,
+        "long": 73.5093
+      },
+      "Ulaanbaatar": {
+        "lat": 47.8864,
+        "long": 106.9057
+      },
+      "Naypyidaw": {
+        "lat": 19.7633,
+        "long": 96.0785
+      },
+      "Kathmandu": {
+        "lat": 27.7172,
+        "long": 85.3240
+      },
+      "Pyongyang": {
+        "lat": 39.0392,
+        "long": 125.7625
+      },
+      "Muscat": {
+        "lat": 23.5880,
+        "long": 58.3829
+      },
+      "Islamabad": {
+        "lat": 33.6844,
+        "long": 73.0479
+      },
+      "Manila": {
+        "lat": 14.5995,
+        "long": 120.9842
+      },
+      "Doha": {
+        "lat": 25.2760,
+        "long": 51.5219
+      },
+      "Riyadh": {
+        "lat": 24.7136,
+        "long": 46.6753
+      },
+      "Seoul": {
+        "lat": 37.5665,
+        "long": 126.9780
+      },
+      "Colombo": {
+        "lat": 6.9271,
+        "long": 79.8612
+      },
+      "Damascus": {
+        "lat": 33.5138,
+        "long": 36.2765
+      },
+      "Taipei": {
+        "lat": 25.0330,
+        "long": 121.5654
+      },
+      "Dushanbe": {
+        "lat": 38.5598,
+        "long": 68.7870
+      },
+      "Bangkok": {
+        "lat": 13.7563,
+        "long": 100.5018
+      },
+      "Ankara": {
+        "lat": 39.9334,
+        "long": 32.8597
+      },
+      "Ashgabat": {
+        "lat": 37.9601,
+        "long": 58.3261
+      },
+      "Abu Dhabi": {
+        "lat": 24.4539,
+        "long": 54.3773
+      },
+      "Tashkent": {
+        "lat": 41.2995,
+        "long": 69.2401
+      },
+      "Hanoi": {
+        "lat": 21.0285,
+        "long": 105.8542
+      },
+      "Sana'a": {
+        "lat": 15.3694,
+        "long": 44.1910
+      }
+    }
+  },
+  "African Capitals": {
+    "center": {
+      "lat": 5,
+      "long": 20
+    },
+    "zoom": 1.2,
+    "points": {
+      "Algiers": {
+        "lat": 36.7372,
+        "long": 3.0866
+      },
+      "Luanda": {
+        "lat": -8.8383,
+        "long": 13.2344
+      },
+      "Porto-Novo": {
+        "lat": 6.4969,
+        "long": 2.6289
+      },
+      "Gaborone": {
+        "lat": -24.6282,
+        "long": 25.9231
+      },
+      "Ouagadougou": {
+        "lat": 12.3714,
+        "long": -1.5197
+      },
+      "Bujumbura": {
+        "lat": -3.3614,
+        "long": 29.3599
+      },
+      "Praia": {
+        "lat": 14.9331,
+        "long": -23.5133
+      },
+      "Yaoundé": {
+        "lat": 3.8480,
+        "long": 11.5021
+      },
+      "Bangui": {
+        "lat": 4.3947,
+        "long": 18.5582
+      },
+      "N'Djamena": {
+        "lat": 12.1348,
+        "long": 15.0557
+      },
+      "Moroni": {
+        "lat": -11.6835,
+        "long": 43.2530
+      },
+      "Kinshasa": {
+        "lat": -4.4419,
+        "long": 15.2663
+      },
+      "Brazzaville": {
+        "lat": -4.2634,
+        "long": 15.2429
+      },
+      "Djibouti": {
+        "lat": 11.5721,
+        "long": 43.1456
+      },
+      "Cairo": {
+        "lat": 30.0331,
+        "long": 31.2339
+      },
+      "Malabo": {
+        "lat": 3.7506,
+        "long": 8.7833
+      },
+      "Asmara": {
+        "lat": 15.3229,
+        "long": 38.9251
+      },
+      "Addis Ababa": {
+        "lat": 9.1450,
+        "long": 40.4897
+      },
+      "Libreville": {
+        "lat": 0.4162,
+        "long": 9.4673
+      },
+      "Banjul": {
+        "lat": 13.4549,
+        "long": -16.5790
+      },
+      "Accra": {
+        "lat": 5.6037,
+        "long": -0.1870
+      },
+      "Conakry": {
+        "lat": 9.6412,
+        "long": -13.5784
+      },
+      "Bissau": {
+        "lat": 11.8817,
+        "long": -15.6170
+      },
+      "Nairobi": {
+        "lat": -1.2864,
+        "long": 36.8172
+      },
+      "Maseru": {
+        "lat": -29.3156,
+        "long": 27.4884
+      },
+      "Monrovia": {
+        "lat": 6.2907,
+        "long": -10.7605
+      },
+      "Tripoli": {
+        "lat": 32.8872,
+        "long": 13.1913
+      },
+      "Antananarivo": {
+        "lat": -18.8792,
+        "long": 47.5079
+      },
+      "Lilongwe": {
+        "lat": -13.9626,
+        "long": 33.7741
+      },
+      "Bamako": {
+        "lat": 12.6392,
+        "long": -8.0029
+      },
+      "Nouakchott": {
+        "lat": 18.0790,
+        "long": -15.9650
+      },
+      "Port Louis": {
+        "lat": -20.1609,
+        "long": 57.5012
+      },
+      "Rabat": {
+        "lat": 34.0209,
+        "long": -6.8416
+      },
+      "Maputo": {
+        "lat": -25.9537,
+        "long": 32.5887
+      },
+      "Windhoek": {
+        "lat": -22.5593,
+        "long": 17.0832
+      },
+      "Niamey": {
+        "lat": 13.5124,
+        "long": 2.1128
+      },
+      "Abuja": {
+        "lat": 9.0579,
+        "long": 7.4951
+      },
+      "Kigali": {
+        "lat": -1.9441,
+        "long": 30.0619
+      },
+      "São Tomé": {
+        "lat": 0.3365,
+        "long": 6.7273
+      },
+      "Dakar": {
+        "lat": 14.6928,
+        "long": -17.4467
+      },
+      "Victoria": {
+        "lat": -4.6191,
+        "long": 55.4513
+      },
+      "Freetown": {
+        "lat": 8.4657,
+        "long": -13.2317
+      },
+      "Mogadishu": {
+        "lat": 2.0469,
+        "long": 45.3182
+      },
+      "Pretoria": {
+        "lat": -25.7479,
+        "long": 28.2293
+      },
+      "Juba": {
+        "lat": 4.8594,
+        "long": 31.5713
+      },
+      "Khartoum": {
+        "lat": 15.5007,
+        "long": 32.5599
+      },
+      "Mbabane": {
+        "lat": -26.3054,
+        "long": 31.1367
+      },
+      "Dodoma": {
+        "lat": -6.1630,
+        "long": 35.7516
+      },
+      "Lomé": {
+        "lat": 6.1725,
+        "long": 1.2314
+      },
+      "Tunis": {
+        "lat": 36.8065,
+        "long": 10.1815
+      },
+      "Kampala": {
+        "lat": 0.3476,
+        "long": 32.5825
+      },
+      "Lusaka": {
+        "lat": -15.3875,
+        "long": 28.3228
+      },
+      "Harare": {
+        "lat": -17.8252,
+        "long": 31.0335
+      }
+    }
+  },
+  "Oceanian Capitals": {
+    "center": {
+      "lat": -20,
+      "long": 160
+    },
+    "zoom": 1.2,
+    "points": {
+      "Canberra": {
+        "lat": -35.2820,
+        "long": 149.1286
+      },
+      "Suva": {
+        "lat": -18.1248,
+        "long": 178.4501
+      },
+      "Tarawa": {
+        "lat": 1.4518,
+        "long": 172.9790
+      },
+      "Majuro": {
+        "lat": 7.0897,
+        "long": 171.3803
+      },
+      "Palikir": {
+        "lat": 6.9175,
+        "long": 158.1850
+      },
+      "Yaren": {
+        "lat": -0.5477,
+        "long": 166.9209
+      },
+      "Nouméa": {
+        "lat": -22.2711,
+        "long": 166.4381
+      },
+      "Wellington": {
+        "lat": -41.2865,
+        "long": 174.7762
+      },
+      "Ngerulmud": {
+        "lat": 7.5000,
+        "long": 134.6242
+      },
+      "Port Moresby": {
+        "lat": -9.4438,
+        "long": 147.1803
+      },
+      "Honiara": {
+        "lat": -9.4307,
+        "long": 159.9606
+      },
+      "Funafuti": {
+        "lat": -8.5211,
+        "long": 179.1942
+      },
+      "Port Vila": {
+        "lat": -17.7333,
+        "long": 168.3273
+      }
+    }
+  },
+  "South American Capitals": {
+    "center": {
+      "lat": -15,
+      "long": -60
+    },
+    "zoom": 1.2,
+    "points": {
+      "Buenos Aires": {
+        "lat": -34.6118,
+        "long": -58.4173
+      },
+      "La Paz": {
+        "lat": -16.5000,
+        "long": -68.1500
+      },
+      "Sucre": {
+        "lat": -19.0333,
+        "long": -65.2627
+      },
+      "Brasília": {
+        "lat": -15.7942,
+        "long": -47.8822
+      },
+      "Santiago": {
+        "lat": -33.4489,
+        "long": -70.6693
+      },
+      "Bogotá": {
+        "lat": 4.7110,
+        "long": -74.0721
+      },
+      "Quito": {
+        "lat": -0.2299,
+        "long": -78.5249
+      },
+      "Georgetown": {
+        "lat": 6.8013,
+        "long": -58.1550
+      },
+      "Asunción": {
+        "lat": -25.3007,
+        "long": -57.6359
+      },
+      "Lima": {
+        "lat": -12.0464,
+        "long": -77.0428
+      },
+      "Paramaribo": {
+        "lat": 5.8520,
+        "long": -55.2038
+      },
+      "Montevideo": {
+        "lat": -34.9011,
+        "long": -56.1645
+      },
+      "Caracas": {
+        "lat": 10.4806,
+        "long": -66.9036
+      }
+    }
   }
 }

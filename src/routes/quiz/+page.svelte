@@ -163,7 +163,7 @@
                                 height={120}
                                 hueRotateDegree={index * 20}
                                 topoJsonName={quiz.topoJson}
-                                showPoints={category.name.toLowerCase() === "cities"}
+                                showPoints={!(category.name.toLowerCase() === "countries" || category.name.toLowerCase() === "regions")}
                                  />
                         </QuizCard>
                     {/each}
