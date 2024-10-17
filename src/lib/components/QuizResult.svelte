@@ -13,7 +13,7 @@
 
     export let score = 0;
     export let errors = 0;
-    export let timeString = "00:00";
+    export let timeString = undefined;
     export let startGame;
 
     let achievedScore = Math.max(score - errors * 0.25, 0);
@@ -44,7 +44,9 @@
                 Score: {achievedScore}/{score}
             </p>
             <p class="text-xl mb-2">Accuracy: {accuracy}%</p>
+            {#if timeString}
             <p class="text-xl mb-4">Time: {timeString}</p>
+            {/if}
             <div class="flex justify-center">
                 {#each Array(3) as _, i}
                     {#if i < stars}

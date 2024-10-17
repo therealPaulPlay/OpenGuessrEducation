@@ -67,14 +67,14 @@
     export function highlightFeature(featureName, color) {
         features = features.map((feature) => {
             if (feature.properties.name === featureName) {
-                return { ...feature, color };
+                return { ...feature, color, flashColor: "" };
             }
             return feature;
         });
 
         points = points.map((point) => {
             if (point.properties.name === featureName) {
-                return { ...point, color };
+                return { ...point, color, flashColor: "" };
             }
             return point;
         });
