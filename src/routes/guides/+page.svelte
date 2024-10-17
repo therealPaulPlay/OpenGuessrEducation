@@ -18,7 +18,7 @@
     import GuideCard from "$lib/components/GuideCard.svelte";
 </script>
 
-<article class="container mx-auto p-6 px-1">
+<article class="container mx-auto p-6 px-1 custom-width">
     <h1 class="text-5xl font-bold mb-12">Guides</h1>
 
     <div class="mb-12">
@@ -123,7 +123,16 @@
             </GuideCard>
         </div>
     </div>
+
+    <div class="w-full">
+        <div class="rounded-xl p-2 flex items-center justify-center bg-base-200">
+            <p class="text-wrap">More guides coming soon! Feel free to <a class="text-secondary" href="https://github.com/therealPaulPlay/OpenGuessrEducation" target="_blank">contribute</a> on Github.</p>
+        </div>
+    </div>
 </article>
 
 <style>
+    .custom-width {
+        max-width: 1055px;
+    }
 </style>

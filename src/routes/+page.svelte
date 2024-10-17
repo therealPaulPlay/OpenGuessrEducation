@@ -181,7 +181,7 @@
                 <Users size={36} />
             </div>
             <div class="stat-title">Active Players</div>
-            <div class="stat-value text-secondary">800,000+</div>
+            <div class="stat-value">800,000+</div>
             <div class="stat-desc">Learn from a large community.</div>
         </div>
 
@@ -190,7 +190,7 @@
                 <MapPin size={36} />
             </div>
             <div class="stat-title">Countries Covered</div>
-            <div class="stat-value text-secondary">83</div>
+            <div class="stat-value">83</div>
             <div class="stat-desc">Out of 83 countries with Street View.</div>
         </div>
 
@@ -198,9 +198,9 @@
             <div class="stat-figure text-secondary">
                 <DollarSign size={36} />
             </div>
-            <div class="stat-title">Cost</div>
-            <div class="stat-value text-secondary">Free</div>
-            <div class="stat-desc">OpenGuessr is committed to being free.</div>
+            <div class="stat-title">Open</div>
+            <div class="stat-value">Free & Open</div>
+            <div class="stat-desc">View the source code on <a class="text-secondary" href="https://github.com/therealPaulPlay/OpenGuessrEducation" target="_blank">Github</a>.</div>
         </div>
     </div>
 
