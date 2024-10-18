@@ -33,7 +33,7 @@
 
     function handleAnswer(index) {
         if (isCompleted) return;
-        
+
         isCompleted = true;
 
         selectedAnswer = index;
@@ -115,7 +115,8 @@
 </div>
 
 {#if gameOver}
-    <QuizResult score={questionAmount} {errors} {startGame} />
+    <!-- errors x4 because we want errors to count as 1 here, not 0.25 like it is for maps -->
+    <QuizResult score={questionAmount} errors={errors * 4} {startGame} />
 {/if}
 
 <style>

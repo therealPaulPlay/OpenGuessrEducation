@@ -10,12 +10,14 @@
     import { onMount } from "svelte";
     import QuizCard from "$lib/components/QuizCard.svelte";
     import Map from "$lib/components/Map.svelte";
+    import FlagStackPreview from "../../lib/components/FlagStackPreview.svelte";
 
+    // Category names have to match the path / folder names
     const categories = [
-        { name: "Countries", icon: Globe, folder: "countries" },
-        { name: "Regions", icon: MapPin, folder: "regions" },
-        { name: "Cities", icon: Building2, folder: "cities" },
-        { name: "Flags", icon: Flag, folder: "flags" },
+        { name: "countries", icon: Globe },
+        { name: "regions", icon: MapPin },
+        { name: "cities", icon: Building2 },
+        { name: "flags", icon: Flag },
     ];
 
     let quizCategories = [];
@@ -47,7 +49,7 @@
         quizCategories = categories.map((category) => ({
             ...category,
             quizzes: quizzes.filter(
-                (quiz) => quiz.category === category.folder,
+                (quiz) => quiz.category === category.name.toLocaleLowerCase(),
             ),
         }));
 
@@ -135,7 +137,7 @@
         <div class="mb-6">
             <h2 class="text-3xl font-semibold mb-2 flex items-center">
                 <svelte:component this={category.icon} class="w-8 h-8 mr-2" />
-                {category.name}
+                {category.name.charAt(0).toUpperCase() + category.name.slice(1)}
             </h2>
             <div class="relative">
                 {#if scrollButtonVisibility[index]?.left}
@@ -156,15 +158,24 @@
                             title={quiz.title}
                             tags={quiz.tags || []}
                             path={quiz.path}
-                            hueRotateDegree={index * 20}>
-                            <Map
-                                region={quiz.region}
-                                width={192}
-                                height={120}
-                                hueRotateDegree={index * 20}
-                                topoJsonName={quiz.topoJson}
-                                showPoints={!(category.name.toLowerCase() === "countries" || category.name.toLowerCase() === "regions")}
-                                 />
+                            hueRotateDegree={index * 30}>
+                            {#if category.name == "countries" || category.name == "cities" || category.name == "regions"}
+                                <Map
+                                    region={quiz.region}
+                                    width={192}
+                                    height={120}
+                                    hueRotateDegree={index * 30}
+                                    topoJsonName={quiz.topoJson}
+                                    showPoints={!(
+                                        category.name.toLowerCase() ===
+                                            "countries" ||
+                                        category.name.toLowerCase() ===
+                                            "regions"
+                                    )} />
+                            {/if}
+                            {#if category.name == "flags"}
+                                <FlagStackPreview hueRotateDegree={index * 30} region={quiz.region} />
+                            {/if}
                         </QuizCard>
                     {/each}
                 </div>

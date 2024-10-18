@@ -2,17 +2,30 @@
   import { onMount } from "svelte";
   import { ArrowLeftIcon } from "lucide-svelte";
   import QuizCard from "$lib/components/QuizCard.svelte";
+  import FlagStackPreview from "$lib/components/FlagStackPreview.svelte";
   import Map from "$lib/components/Map.svelte";
   import { page } from "$app/stores"; // To get the current URL
+
+  let currentRoute;
+
+  $: {
+    currentRoute = $page.url.pathname; // Current path, if it changes, re-load similar quizzes
+  }
+
+  $: if (currentRoute) {
+    loadSimilarQuizzes();
+  }
 
   let metadata = {}; // Metadata of the current quiz
   let quizzes = []; // All quizzes
   let quizzesWithSimilarityScore = []; // Quizzes sorted by similarity
   let loading = true; // Loading flag
 
-  onMount(async () => {
+  async function loadSimilarQuizzes() {
     const modules = import.meta.glob("/src/routes/quiz/play/**/*.svelte");
     const currentQuizPath = $page.url.pathname.replace("src/routes", "");
+
+    quizzesWithSimilarityScore = [];
 
     quizzes = await Promise.all(
       Object.entries(modules).map(async ([path, module]) => {
@@ -69,7 +82,7 @@
       .map(([quiz]) => quiz);
 
     loading = false;
-  });
+  }
 </script>
 
 <article class="container mx-auto p-6 px-1 max-w-5xl">
@@ -97,14 +110,20 @@
     {:else}
       {#each quizzesWithSimilarityScore as quiz (quiz.path)}
         <QuizCard title={quiz.title} tags={quiz.tags || []} path={quiz.path}>
-          <Map
-            region={quiz.region}
-            zoom={quiz.zoom}
-            width={192}
-            height={120}
-            topoJsonName={quiz.topoJson}
-            showPoints={!(quiz.category == "countries" || quiz.category == "regions")}
-            />
+          {#if quiz.category == "countries" || quiz.category == "cities" || quiz.category == "regions"}
+            <Map
+              region={quiz.region}
+              zoom={quiz.zoom}
+              width={192}
+              height={120}
+              topoJsonName={quiz.topoJson}
+              showPoints={!(
+                quiz.category == "countries" || quiz.category == "regions"
+              )} />
+          {/if}
+          {#if quiz.category == "flags"}
+            <FlagStackPreview region={quiz.region} />
+          {/if}
         </QuizCard>
       {/each}
     {/if}

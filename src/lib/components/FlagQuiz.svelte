@@ -26,7 +26,7 @@
                 questionsArray = questionsArray[region];
                 return [...questionsArray];
             }
-            return  [...questionsArray];
+            return [...questionsArray];
         } catch (error) {
             console.error(
                 "Error loading region - likely, that region does not exist. Error:",
@@ -64,45 +64,47 @@
     let IconComponent;
 
     function setQuizContent() {
-    const randomQuestionIndex = Math.floor(
-        Math.random() * remainingQuestionsArray.length,
-    );
-    const randomQuestion = remainingQuestionsArray[randomQuestionIndex];
-    remainingQuestionsArray.splice(randomQuestionIndex, 1); // remove the question
+        const randomQuestionIndex = Math.floor(
+            Math.random() * remainingQuestionsArray.length,
+        );
+        const randomQuestion = remainingQuestionsArray[randomQuestionIndex];
+        remainingQuestionsArray.splice(randomQuestionIndex, 1); // remove the question
 
-    try {
-        IconComponent = Icon[countryCodes[randomQuestion]];
-    } catch (error) {
-        console.warn("Flag doesn't seem to exist:", error);
-        IconComponent = undefined;
-    }
-
-    correctAnswer = 1 + Math.floor(Math.random() * 4);
-
-    // Pre-filtering the wrong answers, excluding only the correct answer from the full questions array
-    let wrongAnswersPool = questionsArray.filter(
-        (country) => country !== randomQuestion,
-    );
-
-    answers.forEach((_, index) => {
-        const answerIndex = index + 1;
-
-        if (answerIndex == correctAnswer) {
-            answers[index] = randomQuestion;
-        } else {
-            const randomCountryIndex = Math.floor(
-                Math.random() * wrongAnswersPool.length,
-            );
-            const randomCountry = wrongAnswersPool[randomCountryIndex];
-            // Splice --> removes entry from actual array, Slice --> removes entry only from new copy of array
-            wrongAnswersPool.splice(randomCountryIndex, 1); // Remove that one to avoid duplicates in the 3 wrong options
-            
-            answers[index] = randomCountry;
+        try {
+            IconComponent = Icon[countryCodes[randomQuestion]];
+        } catch (error) {
+            console.warn("Flag doesn't seem to exist:", error);
+            IconComponent = undefined;
         }
-    });
 
-    [a1, a2, a3, a4] = answers;
-}
+        correctAnswer = 1 + Math.floor(Math.random() * 4);
+
+        // Pre-filtering the wrong answers, excluding only the correct answer from the full questions array
+        let wrongAnswersPool = questionsArray.filter(
+            (country) => country !== randomQuestion,
+        );
+
+        answers.forEach((_, index) => {
+            const answerIndex = index + 1;
+
+            if (answerIndex == correctAnswer) {
+                answers[index] = randomQuestion;
+            } else {
+                const randomCountryIndex = Math.floor(
+                    Math.random() * wrongAnswersPool.length,
+                );
+                const randomCountry = wrongAnswersPool[randomCountryIndex];
+                // Splice --> removes entry from actual array, Slice --> removes entry only from new copy of array
+                wrongAnswersPool.splice(randomCountryIndex, 1); // Remove that one to avoid duplicates in the 3 wrong options
+
+                answers[index] = randomCountry;
+            }
+        });
+
+        console.log(randomQuestion);
+
+        [a1, a2, a3, a4] = answers;
+    }
 
     function handleNextQuestion() {
         setQuizContent();
