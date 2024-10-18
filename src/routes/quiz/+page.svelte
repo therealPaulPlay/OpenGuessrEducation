@@ -6,6 +6,7 @@
         Flag,
         MapPin,
         Building2,
+        Satellite
     } from "lucide-svelte";
     import { onMount } from "svelte";
     import QuizCard from "$lib/components/QuizCard.svelte";
@@ -18,6 +19,7 @@
         { name: "regions", icon: MapPin },
         { name: "cities", icon: Building2 },
         { name: "flags", icon: Flag },
+        { name: "satellite", icon: Satellite },
     ];
 
     let quizCategories = [];

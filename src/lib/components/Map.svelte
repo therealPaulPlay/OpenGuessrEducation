@@ -18,11 +18,9 @@
     export let notHighlightedColor = "rgba(125,125,125, 0.2)";
     export let dynamicHeight = false; // Dynamically adjust height to the screen size, used for Quizzes
     export let showPoints = false;
-
     export let hueRotateDegree = 0;
 
     export let topoJsonName = "topojson-world-110m";
-
     export let afterLoad = "";
 
     let svgElement;

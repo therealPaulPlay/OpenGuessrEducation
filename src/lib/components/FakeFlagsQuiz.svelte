@@ -5,7 +5,7 @@
 
     let correctAnswer = 1;
 
-    let question = "Which of these is DefaultCountry?";
+    let question = "Loading...";
 
     let questionsArray;
     let questionAmount = 0;
@@ -78,7 +78,7 @@
         const randomQuestion = remainingQuestionsArray[randomQuestionIndex];
         remainingQuestionsArray.splice(randomQuestionIndex, 1); // remove the question
 
-        question = `Which of these is ${randomQuestion}?`;
+        question = `Which flag belongs to ${randomQuestion}?`;
 
         correctAnswer = 1 + Math.floor(Math.random() * 4);
 

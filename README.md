@@ -6,7 +6,7 @@ The unique combination of minigames, interactive guides and extensive country da
 
 ## Getting started
 This project uses Svelte (UI Framework) with SvelteKit (Web development framework). You can check out their [official docs](https://svelte.dev/) to get started.
-Moreover, Tailwind CSS (which is dependent on PostCSS) is used for utility classes.
+Moreover, Tailwind CSS (which is dependent on PostCSS) is used for utility classes. If you need help, feel free to consult the Discord Server (Link found in the footer area on OpenGuessr Education or OpenGuessr).
 
 ### Prerequisites
 
@@ -33,7 +33,8 @@ If you have a suggestion that would enhance the project, please fork the repo an
 + Rather than submitting large contributions, split them up into smaller changes that can be reviewed more easily. Thank you.
 
 ## Creating a guide
-1. Guides are located in the ```/src/routes/guides/read/``` folders. Ensure to pick the right difficulty level for your guide - most will fall into the ```intermediate``` category, meaning the root folder for your guide would be ```/src/routes/guides/read/intermediate```.
+1. Guides are located in the ```/src/routes/guides/read/``` folders. Ensure to pick the right difficulty level for your guide - most will fall into the ```intermediate``` category, meaning the root folder for your guide would be ```/src/routes/guides/read/intermediate```. 
+If needed, more difficulty levels can be added, e.g. advanced, professional etc. This would simply invovle adding these on the quiz page with appropriate lucide-svelte icons.
 2. In that directory, create a subfolder that uses a simple, easily-distinguishable name for the route that your guide should have. Use ```-``` to connect two words, for example ```nmpz-strategies```. This would make the path ```/src/routes/guides/read/intermediate/nmpz-strategies```, in which your ```+page.svelte``` would be located. 
 3. You can refer to ```/src/routes/guides/read/example/tutorial``` for a guide template.
 4. After creating the guide, add it to the main guides page located under ```/src/routes/guides/+page.svelte```. This works by adding a new GuideCard component with an appropriate icon (see example below). Note that the compass component is a [lucide](https://lucide.dev/icons/) icon, you can simply import one that fits your guide. Moreover, you can adjust the coloring of your guide using the ```hueRotate``` property (takes a number between 0 - 360 as the input, will be converted in degrees).
@@ -54,6 +55,21 @@ If you have a suggestion that would enhance the project, please fork the repo an
 + Answers for Quizzes should **not** end in a ```., ? or !````
 + Highlight important words in **bold** using ```<b>word</b>```. As a rule of thumb, every concept should be understandable by just reading the words in bold.
 + Make use of article tips and article guides, but don't put too many inside of a guide. Ensure that content > components.
+
+## The Map
+The map component (Map.svelte) has a bunch of parameters. Let's go over the most important ones:
+
++ region: The region refers to the highlighted parts on the map. Regions are stored in ```/src/lib/json/regions.json``` as arrays inside of a JSON file. For example, the region Europe includes, and will therefore 
+highlight, all european countries on the map. Moreover, the region settings will be taken from ```/src/lib/json/regionSettings.json```. The region settings control, for example, the map center point (lat, long), zoom level and 
+points on the map (e. g. cities, that are so small, that they wouldn't be displayed at all or hard to see).
++ zoom: The zoom property controls the base zoom level of the map. Note that the zoom can be changed dynamically by the user.
++ width & height: These control the canvas size (svg viewbox) of the map, not its size on the page. Larger canvas sizes result in smaller labels etc.
++ interactive: Interactive maps can be zoomed and panned. When false, the map can not be interacted with at all and appears as a static image. This should, in most scenarios, only be used for previews and not in guides.
++ showLabels: Controls whether or not all labels should be shown by default. For example, this is true in the "Learn mode".
++ minLabelZoom: Controls the minimum zoom stage at which labels become visible / invisible.
++ dynamicHeight: Should only be true for Quizzes on the quiz-page, basically. Makes the map adjust to the screen size.
++ showPoints: Controls whether or not points from ```regionSettings.json``` should be displayed. 
++ topoJsonName: A ```topojson```is a special file that holds geometry data for regions. This is used to load the actual map data. A topojson for OpenGuessr Education will usually include a name property for all features, so that map highlights etc. work.
 
 ## About Svelte
 
