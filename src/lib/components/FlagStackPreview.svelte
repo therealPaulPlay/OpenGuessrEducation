@@ -14,7 +14,18 @@
             if (!regionsArray) {
                 regionsArray = await fetch("/src/lib/json/regions.json");
                 regionsArray = await regionsArray.json();
-                regionsArray = regionsArray[region];
+                if (region !== "All") {
+                    regionsArray = regionsArray[region];
+                } else {
+                    regionsArray = regionsArray?.Europe.concat(
+                        regionsArray["Africa"],
+                        regionsArray["Asia"],
+                        regionsArray["Oceania"],
+                        regionsArray["South America"],
+                        regionsArray["North America"],
+                    );
+                    shuffleArray(regionsArray);
+                }
             }
         } catch (error) {
             console.error(
@@ -102,6 +113,15 @@
     }
 
     loadPreviewFlags();
+
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i >= 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
 </script>
 
 <div

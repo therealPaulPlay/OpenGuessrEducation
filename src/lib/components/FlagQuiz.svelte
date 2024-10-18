@@ -1,5 +1,5 @@
 <script>
-    import { onMount, onDestroy } from "svelte";
+    import { onMount } from "svelte";
     import BaseOptionsQuiz from "$lib/components/BaseOptionsQuiz.svelte";
     import * as Icon from "svelte-flag-icons";
 
@@ -110,18 +110,19 @@
 
     onMount(() => {
         startFlagGame();
-        window.addEventListener("resize", adjustDynamicSize);
-    });
-
-    onDestroy(() => {
-        window.removeEventListener("resize", adjustDynamicSize);
+        if (window) {
+            adjustDynamicSize();
+            window.addEventListener("resize", adjustDynamicSize);
+        }
     });
 
     function adjustDynamicSize() {
-        if (window.innerWidth < 600) {
-            dynamicSize = 150;
-        } else {
-            dynamicSize = 300;
+        if (window) {
+            if (window.innerWidth < 600) {
+                dynamicSize = 150;
+            } else {
+                dynamicSize = 300;
+            }
         }
     }
 
