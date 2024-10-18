@@ -217,7 +217,7 @@
     }
 
     .scroll-container {
-        padding: 35px 15px;
+        padding: 35px 5px;
         padding-top: 20px;
         overflow-x: auto;
         overflow-y: visible;
@@ -229,7 +229,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100px;
+        width: 8vw;
         height: 100%;
         background: linear-gradient(
             to right,
@@ -244,7 +244,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: 100px;
+        width: 8vw;
         height: 100%;
         background: linear-gradient(
             to left,

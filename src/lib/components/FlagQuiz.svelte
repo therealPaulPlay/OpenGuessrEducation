@@ -1,5 +1,5 @@
 <script>
-    import { onMount } from "svelte";
+    import { onMount, onDestroy } from "svelte";
     import BaseOptionsQuiz from "$lib/components/BaseOptionsQuiz.svelte";
     import * as Icon from "svelte-flag-icons";
 
@@ -110,7 +110,22 @@
 
     onMount(() => {
         startFlagGame();
+        window.addEventListener("resize", adjustDynamicSize);
     });
+
+    onDestroy(() => {
+        window.removeEventListener("resize", adjustDynamicSize);
+    });
+
+    function adjustDynamicSize() {
+        if (window.innerWidth < 600) {
+            dynamicSize = 150;
+        } else {
+            dynamicSize = 300;
+        }
+    }
+
+    let dynamicSize = 300;
 </script>
 
 <BaseOptionsQuiz
@@ -125,7 +140,7 @@
     handleStartGame={startFlagGame}>
     <div class="w-full flex justify-center items-center mb-2">
         {#if IconComponent}
-            <svelte:component this={IconComponent} size="300" />
+            <svelte:component this={IconComponent} size={dynamicSize} />
         {/if}
     </div>
 </BaseOptionsQuiz>

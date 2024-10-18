@@ -158,14 +158,14 @@
             tabindex="0"
             class="collapse collapse-arrow bg-base-200 bg-base-100 rounded-box mb-2">
             <div class="collapse-title text-lg font-medium">
-                What is geoguessing?
+                What is "geoguessing"?
             </div>
             <div class="collapse-content">
                 <p>
-                    Geoguessing is the activity of guessing the location of a
-                    street view image. It involves analyzing the image for clues
-                    such as road signs, vegetation, and architectural styles to
-                    make an educated guess about the location. It's like being a
+                    Geo-Guessing is the activity of guessing the location of a
+                    panorama image. It involves analyzing the image for clues
+                    such as road signs, vegetation, and architectural styles to find out
+                    where the image was taken. It's like being a
                     detective, but for geography!
                 </p>
             </div>
