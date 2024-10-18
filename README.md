@@ -59,17 +59,17 @@ If needed, more difficulty levels can be added, e.g. advanced, professional etc.
 ## The Map
 The map component (Map.svelte) has a bunch of parameters. Let's go over the most important ones:
 
-+ region: The region refers to the highlighted parts on the map. Regions are stored in ```/src/lib/json/regions.json``` as arrays inside of a JSON file. For example, the region Europe includes, and will therefore 
++ **region**: The region refers to the highlighted parts on the map. Regions are stored in ```/src/lib/json/regions.json``` as arrays inside of a JSON file. For example, the region Europe includes, and will therefore 
 highlight, all european countries on the map. Moreover, the region settings will be taken from ```/src/lib/json/regionSettings.json```. The region settings control, for example, the map center point (lat, long), zoom level and 
 points on the map (e. g. cities, that are so small, that they wouldn't be displayed at all or hard to see).
-+ zoom: The zoom property controls the base zoom level of the map. Note that the zoom can be changed dynamically by the user.
-+ width & height: These control the canvas size (svg viewbox) of the map, not its size on the page. Larger canvas sizes result in smaller labels etc.
-+ interactive: Interactive maps can be zoomed and panned. When false, the map can not be interacted with at all and appears as a static image. This should, in most scenarios, only be used for previews and not in guides.
-+ showLabels: Controls whether or not all labels should be shown by default. For example, this is true in the "Learn mode".
-+ minLabelZoom: Controls the minimum zoom stage at which labels become visible / invisible.
-+ dynamicHeight: Should only be true for Quizzes on the quiz-page, basically. Makes the map adjust to the screen size.
-+ showPoints: Controls whether or not points from ```regionSettings.json``` should be displayed. 
-+ topoJsonName: A ```topojson```is a special file that holds geometry data for regions. This is used to load the actual map data. A topojson for OpenGuessr Education will usually include a name property for all features, so that map highlights etc. work.
++ **zoom**: The zoom property controls the base zoom level of the map. Note that the zoom can be changed dynamically by the user.
++ **width & height**: These control the canvas size (svg viewbox) of the map, not its size on the page. Larger canvas sizes result in smaller labels etc.
++ **interactive**: Interactive maps can be zoomed and panned. When false, the map can not be interacted with at all and appears as a static image. This should, in most scenarios, only be used for previews and not in guides.
++ **showLabels**: Controls whether or not all labels should be shown by default. For example, this is true in the "Learn mode".
++ **minLabelZoom**: Controls the minimum zoom stage at which labels become visible / invisible.
++ **dynamicHeight**: Should only be true for Quizzes on the quiz-page, basically. Makes the map adjust to the screen size.
++ **showPoints**: Controls whether or not points from ```regionSettings.json``` should be displayed. 
++ **topoJsonName**: A ```topojson```is a special file that holds geometry data for regions. This is used to load the actual map data. A topojson for OpenGuessr Education will usually include a name property for all features, so that map highlights etc. work.
 
 ## About Svelte
 
