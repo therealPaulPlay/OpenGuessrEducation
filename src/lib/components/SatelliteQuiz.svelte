@@ -31,7 +31,6 @@
             );
             const data = await response.json();
             locationsArray = data["Locations"];
-            console.log("Loaded locations:", locationsArray);
             return [...locationsArray];
         } catch (error) {
             console.error("Error loading region locations:", error);
@@ -56,7 +55,7 @@
             console.error("No locations loaded");
             return;
         }
-        remainingLocationsArray = shuffleArray(locationsArray).slice(0, 20);
+        remainingLocationsArray = shuffleArray(locationsArray).slice(0, 10);
         questionAmount = remainingLocationsArray.length;
         setQuizContent();
     }
@@ -67,6 +66,7 @@
             return;
         }
         currentLocation = remainingLocationsArray.pop();
+        
         console.log("Current location:", currentLocation);
 
         const otherLocations = shuffleArray(
@@ -82,8 +82,6 @@
         [a1, a2, a3, a4] = allOptions.map((loc) => loc.name);
 
         answers = [a1, a2, a3, a4];
-
-        console.log("Answers:", answers, "Correct:", correctAnswer);
 
         updateMap(currentLocation.lat, currentLocation.long);
     }
