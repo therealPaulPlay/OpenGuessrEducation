@@ -1,0 +1,54 @@
+{
+    "Locations": [
+      {
+        "name": "London",
+        "lat": 51.5074,
+        "long": -0.1278
+      },
+      {
+        "name": "Paris",
+        "lat": 48.8566,
+        "long": 2.3522
+      },
+      {
+        "name": "Berlin",
+        "lat": 52.5200,
+        "long": 13.4050
+      },
+      {
+        "name": "Rome",
+        "lat": 41.9028,
+        "long": 12.4964
+      },
+      {
+        "name": "Madrid",
+        "lat": 40.4168,
+        "long": -3.7038
+      },
+      {
+        "name": "Moscow",
+        "lat": 55.7558,
+        "long": 37.6173
+      },
+      {
+        "name": "Tokyo",
+        "lat": 35.6762,
+        "long": 139.6503
+      },
+      {
+        "name": "Beijing",
+        "lat": 39.9042,
+        "long": 116.4074
+      },
+      {
+        "name": "Washington D.C.",
+        "lat": 38.9072,
+        "long": -77.0369
+      },
+      {
+        "name": "Canberra",
+        "lat": -35.2809,
+        "long": 149.1300
+      }
+    ]
+  }

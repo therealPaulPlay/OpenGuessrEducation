@@ -80,7 +80,7 @@
             <span class="rounded-md bg-base-300 px-2 mt-0.5"
                 >{currentQuestionIndex}/{questionAmount}</span>
         </div>
-
+        
         <slot />
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

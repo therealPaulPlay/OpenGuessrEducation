@@ -25,6 +25,7 @@
 		"daisyui": "^4.12.10",
 		"globe.gl": "^2.32.6",
 		"lucide-svelte": "^0.446.0",
+		"ol": "^10.2.1",
 		"svelte-flag-icons": "^1.0.3",
 		"svelte-scrolling": "^1.4.0",
 		"theme-change": "^2.5.0",
