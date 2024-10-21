@@ -30,7 +30,7 @@
 
     $: stars = Math.min(3, Math.floor(accuracy / 33));
     $: accuracy =
-        score + errors ? Math.round((score / (score + errors)) * 100) : 0; // avoid divide by zero error with first check
+        score + errors ? Math.round(((1 - (errors / score))) * 100) : 0; // avoid divide by zero error with first check
 </script>
 
 <div

@@ -1,0 +1,14 @@
+<script>
+    export let path;
+</script>
+
+<div class="custom-size rounded-lg overflow-hidden grow bg-secondary">
+    <img alt="clue quiz preview" class="saturate-150" src="/src/lib/assets/clues/{path.replace("/src/lib/assets/clues", "")}" />
+</div>
+
+<style>
+    .custom-size {
+        width: 216px;
+        height: 135px;
+    }
+</style>

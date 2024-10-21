@@ -5,6 +5,7 @@
   import FlagStackPreview from "$lib/components/FlagStackPreview.svelte";
   import Map from "$lib/components/Map.svelte";
   import { page } from "$app/stores"; // To get the current URL
+  import QuizPreviewImage from "$lib/components/QuizPreviewImage.svelte";
 
   let currentRoute;
 
@@ -130,6 +131,10 @@
           {#if quiz.category == "flags"}
             <FlagStackPreview region={quiz.region} />
           {/if}
+          {#if quiz.category == "clues"}
+          <QuizPreviewImage
+              path={quiz.previewImagePath}/>
+      {/if}
         </QuizCard>
       {/each}
     {/if}

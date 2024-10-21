@@ -7,11 +7,13 @@
         MapPin,
         Building2,
         Satellite,
+        Lightbulb,
     } from "lucide-svelte";
     import { onMount } from "svelte";
     import QuizCard from "$lib/components/QuizCard.svelte";
     import Map from "$lib/components/Map.svelte";
-    import FlagStackPreview from "../../lib/components/FlagStackPreview.svelte";
+    import FlagStackPreview from "$lib/components/FlagStackPreview.svelte";
+    import QuizPreviewImage from "$lib/components/QuizPreviewImage.svelte";
 
     // Category names have to match the path / folder names
     const categories = [
@@ -20,6 +22,7 @@
         { name: "cities", icon: Building2 },
         { name: "flags", icon: Flag },
         { name: "satellite", icon: Satellite },
+        { name: "clues", icon: Lightbulb },
     ];
 
     let quizCategories = [];
@@ -146,7 +149,7 @@
                     <button
                         class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg items-center justify-center"
                         on:click={() =>
-                            scrollContainer(`scroll-container-${index}`, -450)}>
+                            scrollContainer(`scroll-container-${index}`, -460)}>
                         <ArrowLeft />
                     </button>
                 {/if}
@@ -168,7 +171,8 @@
                                     height={120}
                                     hueRotateDegree={index * 30}
                                     topoJsonName={quiz.topoJson}
-                                    projectionRotation={quiz.projectionRotation || undefined}
+                                    projectionRotation={quiz.projectionRotation ||
+                                        undefined}
                                     zoom={quiz.previewZoom || undefined}
                                     projectionType={category.name == "satellite"
                                         ? "geoOrthographic"
@@ -183,9 +187,11 @@
                                     )} />
                             {/if}
                             {#if category.name == "flags"}
-                                <FlagStackPreview
-                                    hueRotateDegree={index * 30}
-                                    region={quiz.region} />
+                                <FlagStackPreview region={quiz.region} />
+                            {/if}
+                            {#if category.name == "clues"}
+                                <QuizPreviewImage
+                                    path={quiz.previewImagePath} />
                             {/if}
                         </QuizCard>
                     {/each}
@@ -194,7 +200,7 @@
                     <button
                         class="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg items-center justify-center"
                         on:click={() =>
-                            scrollContainer(`scroll-container-${index}`, 450)}>
+                            scrollContainer(`scroll-container-${index}`, 460)}>
                         <ArrowRight />
                     </button>
                 {/if}
