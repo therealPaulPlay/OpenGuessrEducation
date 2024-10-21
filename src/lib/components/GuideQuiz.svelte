@@ -98,7 +98,7 @@
             </span>
           {/if}
           <span class="absolute left-2 rounded-full items-center flex justify-center bg-base-200 text-center align-middle w-7 h-7">
-            <p class="opacity-50">{getIndexLetter(index)}</p>
+            <p class="opacity-50 text-base-300 invert">{getIndexLetter(index)}</p>
           </span>
         </button>
       {/each}
