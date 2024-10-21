@@ -9,7 +9,7 @@
 
     // Function to determine the current globe texture based on the data-theme attribute
     const getThemeTexture = () => {
-        return document.documentElement.getAttribute("data-theme") === "dark"
+        return document.documentElement.getAttribute("data-theme") === "customDark"
             ? "/src/lib/assets/earth_dark.jpg" // Dark mode texture
             : "/src/lib/assets/earth_light.jpg"; // Light mode texture
     };

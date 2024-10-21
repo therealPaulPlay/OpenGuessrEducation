@@ -13,7 +13,7 @@
     <input
         type="checkbox"
         class="theme-controller"
-        data-toggle-theme="dark,light" 
+        data-toggle-theme="customDark,light" 
         data-act-class="ACTIVECLASS"
     />
 

@@ -36,7 +36,7 @@ module.exports = {
         },
       },
       {
-        dark: {
+        customDark: {
         ...require("daisyui/src/theming/themes")["dark"],
         'primary': '#ff0808',
         'secondary': '#d95252',
@@ -44,5 +44,5 @@ module.exports = {
       }},
     ],
   },
-  darkMode: ['class', '[data-theme="dark"]']
+  darkMode: ['class', '[data-theme="customDark"]']
 };
