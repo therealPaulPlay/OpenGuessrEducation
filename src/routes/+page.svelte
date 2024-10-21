@@ -147,7 +147,7 @@
                         class="w-8 h-8 text-secondary mr-4 mt-1 flex-shrink-0" />
                     <div>
                         <h3 class="text-xl font-semibold mb-2">
-                            Master GeoGuessing
+                            Master Geo-Guessing
                         </h3>
                         <p class="text-base">
                             Whether you're a fan of <b>GeoGuessr</b>,

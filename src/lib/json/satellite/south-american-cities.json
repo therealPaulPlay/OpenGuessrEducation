@@ -1,0 +1,1234 @@
+{
+  "Locations": [
+    {
+      "name": "S\u00e3o Paulo",
+      "lat": -23.5506507,
+      "long": -46.6333824
+    },
+    {
+      "name": "S\u00e3o Paulo",
+      "lat": -23.5506507,
+      "long": -46.6333824
+    },
+    {
+      "name": "S\u00e3o Paulo",
+      "lat": -23.5506507,
+      "long": -46.6333824
+    },
+    {
+      "name": "Buenos Aires",
+      "lat": -34.6083696,
+      "long": -58.4440583
+    },
+    {
+      "name": "Buenos Aires",
+      "lat": -34.6083696,
+      "long": -58.4440583
+    },
+    {
+      "name": "Buenos Aires",
+      "lat": -34.6083696,
+      "long": -58.4440583
+    },
+    {
+      "name": "Rio de Janeiro",
+      "lat": -22.9110137,
+      "long": -43.2093727
+    },
+    {
+      "name": "Rio de Janeiro",
+      "lat": -22.9110137,
+      "long": -43.2093727
+    },
+    {
+      "name": "Rio de Janeiro",
+      "lat": -22.9110137,
+      "long": -43.2093727
+    },
+    {
+      "name": "Lima",
+      "lat": -12.0621065,
+      "long": -77.0365256
+    },
+    {
+      "name": "Lima",
+      "lat": -12.0621065,
+      "long": -77.0365256
+    },
+    {
+      "name": "Lima",
+      "lat": -12.0621065,
+      "long": -77.0365256
+    },
+    {
+      "name": "Bogot\u00e1",
+      "lat": 4.6533816,
+      "long": -74.0836333
+    },
+    {
+      "name": "Bogot\u00e1",
+      "lat": 4.6533816,
+      "long": -74.0836333
+    },
+    {
+      "name": "Bogot\u00e1",
+      "lat": 4.6533816,
+      "long": -74.0836333
+    },
+    {
+      "name": "Santiago",
+      "lat": -33.4377756,
+      "long": -70.6504502
+    },
+    {
+      "name": "Santiago",
+      "lat": -33.4377756,
+      "long": -70.6504502
+    },
+    {
+      "name": "Santiago",
+      "lat": -33.4377756,
+      "long": -70.6504502
+    },
+    {
+      "name": "Caracas",
+      "lat": 10.5060934,
+      "long": -66.9146008
+    },
+    {
+      "name": "Caracas",
+      "lat": 10.5060934,
+      "long": -66.9146008
+    },
+    {
+      "name": "Caracas",
+      "lat": 10.5060934,
+      "long": -66.9146008
+    },
+    {
+      "name": "Bras\u00edlia",
+      "lat": -10.3333333,
+      "long": -53.2
+    },
+    {
+      "name": "Bras\u00edlia",
+      "lat": -10.3333333,
+      "long": -53.2
+    },
+    {
+      "name": "Bras\u00edlia",
+      "lat": -10.3333333,
+      "long": -53.2
+    },
+    {
+      "name": "Medell\u00edn",
+      "lat": 6.2443382,
+      "long": -75.573553
+    },
+    {
+      "name": "Medell\u00edn",
+      "lat": 6.2443382,
+      "long": -75.573553
+    },
+    {
+      "name": "Medell\u00edn",
+      "lat": 6.2443382,
+      "long": -75.573553
+    },
+    {
+      "name": "Quito",
+      "lat": -0.2201641,
+      "long": -78.5123274
+    },
+    {
+      "name": "Quito",
+      "lat": -0.2201641,
+      "long": -78.5123274
+    },
+    {
+      "name": "Quito",
+      "lat": -0.2201641,
+      "long": -78.5123274
+    },
+    {
+      "name": "La Paz",
+      "lat": -16.4955455,
+      "long": -68.1336229
+    },
+    {
+      "name": "La Paz",
+      "lat": -16.4955455,
+      "long": -68.1336229
+    },
+    {
+      "name": "La Paz",
+      "lat": -16.4955455,
+      "long": -68.1336229
+    },
+    {
+      "name": "Montevideo",
+      "lat": -34.9058916,
+      "long": -56.1913095
+    },
+    {
+      "name": "Montevideo",
+      "lat": -34.9058916,
+      "long": -56.1913095
+    },
+    {
+      "name": "Montevideo",
+      "lat": -34.9058916,
+      "long": -56.1913095
+    },
+    {
+      "name": "Asunci\u00f3n",
+      "lat": -25.2800459,
+      "long": -57.6343814
+    },
+    {
+      "name": "Asunci\u00f3n",
+      "lat": -25.2800459,
+      "long": -57.6343814
+    },
+    {
+      "name": "Asunci\u00f3n",
+      "lat": -25.2800459,
+      "long": -57.6343814
+    },
+    {
+      "name": "Guayaquil",
+      "lat": -2.1900563,
+      "long": -79.8868741
+    },
+    {
+      "name": "Guayaquil",
+      "lat": -2.1900563,
+      "long": -79.8868741
+    },
+    {
+      "name": "Guayaquil",
+      "lat": -2.1900563,
+      "long": -79.8868741
+    },
+    {
+      "name": "Salvador",
+      "lat": 13.8000382,
+      "long": -88.9140683
+    },
+    {
+      "name": "Salvador",
+      "lat": 13.8000382,
+      "long": -88.9140683
+    },
+    {
+      "name": "Salvador",
+      "lat": 13.8000382,
+      "long": -88.9140683
+    },
+    {
+      "name": "Fortaleza",
+      "lat": -3.7304512,
+      "long": -38.5217989
+    },
+    {
+      "name": "Fortaleza",
+      "lat": -3.7304512,
+      "long": -38.5217989
+    },
+    {
+      "name": "Fortaleza",
+      "lat": -3.7304512,
+      "long": -38.5217989
+    },
+    {
+      "name": "C\u00f3rdoba",
+      "lat": 37.8845813,
+      "long": -4.7760138
+    },
+    {
+      "name": "C\u00f3rdoba",
+      "lat": 37.8845813,
+      "long": -4.7760138
+    },
+    {
+      "name": "C\u00f3rdoba",
+      "lat": 37.8845813,
+      "long": -4.7760138
+    },
+    {
+      "name": "Curitiba",
+      "lat": -25.4295963,
+      "long": -49.2712724
+    },
+    {
+      "name": "Curitiba",
+      "lat": -25.4295963,
+      "long": -49.2712724
+    },
+    {
+      "name": "Curitiba",
+      "lat": -25.4295963,
+      "long": -49.2712724
+    },
+    {
+      "name": "Recife",
+      "lat": -8.0584933,
+      "long": -34.8848193
+    },
+    {
+      "name": "Recife",
+      "lat": -8.0584933,
+      "long": -34.8848193
+    },
+    {
+      "name": "Recife",
+      "lat": -8.0584933,
+      "long": -34.8848193
+    },
+    {
+      "name": "Maracaibo",
+      "lat": 10.6498095,
+      "long": -71.6443596
+    },
+    {
+      "name": "Maracaibo",
+      "lat": 10.6498095,
+      "long": -71.6443596
+    },
+    {
+      "name": "Maracaibo",
+      "lat": 10.6498095,
+      "long": -71.6443596
+    },
+    {
+      "name": "Porto Alegre",
+      "lat": -30.0324999,
+      "long": -51.2303767
+    },
+    {
+      "name": "Porto Alegre",
+      "lat": -30.0324999,
+      "long": -51.2303767
+    },
+    {
+      "name": "Porto Alegre",
+      "lat": -30.0324999,
+      "long": -51.2303767
+    },
+    {
+      "name": "Barranquilla",
+      "lat": 10.9938599,
+      "long": -74.7926118
+    },
+    {
+      "name": "Barranquilla",
+      "lat": 10.9938599,
+      "long": -74.7926118
+    },
+    {
+      "name": "Barranquilla",
+      "lat": 10.9938599,
+      "long": -74.7926118
+    },
+    {
+      "name": "Bel\u00e9m",
+      "lat": -1.45056,
+      "long": -48.4682453
+    },
+    {
+      "name": "Bel\u00e9m",
+      "lat": -1.45056,
+      "long": -48.4682453
+    },
+    {
+      "name": "Bel\u00e9m",
+      "lat": -1.45056,
+      "long": -48.4682453
+    },
+    {
+      "name": "Manaus",
+      "lat": -3.1316333,
+      "long": -59.9825041
+    },
+    {
+      "name": "Manaus",
+      "lat": -3.1316333,
+      "long": -59.9825041
+    },
+    {
+      "name": "Manaus",
+      "lat": -3.1316333,
+      "long": -59.9825041
+    },
+    {
+      "name": "Santa Cruz de la Sierra",
+      "lat": -17.7834217,
+      "long": -63.1820853
+    },
+    {
+      "name": "Santa Cruz de la Sierra",
+      "lat": -17.7834217,
+      "long": -63.1820853
+    },
+    {
+      "name": "Santa Cruz de la Sierra",
+      "lat": -17.7834217,
+      "long": -63.1820853
+    },
+    {
+      "name": "Mendoza",
+      "lat": -34.787093049999996,
+      "long": -68.43818677312292
+    },
+    {
+      "name": "Mendoza",
+      "lat": -34.787093049999996,
+      "long": -68.43818677312292
+    },
+    {
+      "name": "Mendoza",
+      "lat": -34.787093049999996,
+      "long": -68.43818677312292
+    },
+    {
+      "name": "Cali",
+      "lat": 3.4519988,
+      "long": -76.5325259
+    },
+    {
+      "name": "Cali",
+      "lat": 3.4519988,
+      "long": -76.5325259
+    },
+    {
+      "name": "Cali",
+      "lat": 3.4519988,
+      "long": -76.5325259
+    },
+    {
+      "name": "Rosario",
+      "lat": -32.9593609,
+      "long": -60.6617024
+    },
+    {
+      "name": "Rosario",
+      "lat": -32.9593609,
+      "long": -60.6617024
+    },
+    {
+      "name": "Rosario",
+      "lat": -32.9593609,
+      "long": -60.6617024
+    },
+    {
+      "name": "Valpara\u00edso",
+      "lat": -33.0458456,
+      "long": -71.6196749
+    },
+    {
+      "name": "Valpara\u00edso",
+      "lat": -33.0458456,
+      "long": -71.6196749
+    },
+    {
+      "name": "Valpara\u00edso",
+      "lat": -33.0458456,
+      "long": -71.6196749
+    },
+    {
+      "name": "Arequipa",
+      "lat": -16.3988667,
+      "long": -71.5369607
+    },
+    {
+      "name": "Arequipa",
+      "lat": -16.3988667,
+      "long": -71.5369607
+    },
+    {
+      "name": "Arequipa",
+      "lat": -16.3988667,
+      "long": -71.5369607
+    },
+    {
+      "name": "Barquisimeto",
+      "lat": 10.0774374,
+      "long": -69.3222293
+    },
+    {
+      "name": "Barquisimeto",
+      "lat": 10.0774374,
+      "long": -69.3222293
+    },
+    {
+      "name": "Barquisimeto",
+      "lat": 10.0774374,
+      "long": -69.3222293
+    },
+    {
+      "name": "Maracay",
+      "lat": 10.2375144,
+      "long": -67.5890216
+    },
+    {
+      "name": "Maracay",
+      "lat": 10.2375144,
+      "long": -67.5890216
+    },
+    {
+      "name": "Maracay",
+      "lat": 10.2375144,
+      "long": -67.5890216
+    },
+    {
+      "name": "Ciudad Guayana",
+      "lat": 8.3223763,
+      "long": -62.6896622
+    },
+    {
+      "name": "Ciudad Guayana",
+      "lat": 8.3223763,
+      "long": -62.6896622
+    },
+    {
+      "name": "Ciudad Guayana",
+      "lat": 8.3223763,
+      "long": -62.6896622
+    },
+    {
+      "name": "Campo Grande",
+      "lat": -20.4640173,
+      "long": -54.6162947
+    },
+    {
+      "name": "Campo Grande",
+      "lat": -20.4640173,
+      "long": -54.6162947
+    },
+    {
+      "name": "Campo Grande",
+      "lat": -20.4640173,
+      "long": -54.6162947
+    },
+    {
+      "name": "Florian\u00f3polis",
+      "lat": -27.5973002,
+      "long": -48.5496098
+    },
+    {
+      "name": "Florian\u00f3polis",
+      "lat": -27.5973002,
+      "long": -48.5496098
+    },
+    {
+      "name": "Florian\u00f3polis",
+      "lat": -27.5973002,
+      "long": -48.5496098
+    },
+    {
+      "name": "Natal",
+      "lat": -5.805398,
+      "long": -35.2080905
+    },
+    {
+      "name": "Natal",
+      "lat": -5.805398,
+      "long": -35.2080905
+    },
+    {
+      "name": "Natal",
+      "lat": -5.805398,
+      "long": -35.2080905
+    },
+    {
+      "name": "Teresina",
+      "lat": -5.0874608,
+      "long": -42.8049571
+    },
+    {
+      "name": "Teresina",
+      "lat": -5.0874608,
+      "long": -42.8049571
+    },
+    {
+      "name": "Teresina",
+      "lat": -5.0874608,
+      "long": -42.8049571
+    },
+    {
+      "name": "Jo\u00e3o Pessoa",
+      "lat": -7.1215981,
+      "long": -34.882028
+    },
+    {
+      "name": "Jo\u00e3o Pessoa",
+      "lat": -7.1215981,
+      "long": -34.882028
+    },
+    {
+      "name": "Jo\u00e3o Pessoa",
+      "lat": -7.1215981,
+      "long": -34.882028
+    },
+    {
+      "name": "Macei\u00f3",
+      "lat": -9.6476843,
+      "long": -35.7339264
+    },
+    {
+      "name": "Macei\u00f3",
+      "lat": -9.6476843,
+      "long": -35.7339264
+    },
+    {
+      "name": "Macei\u00f3",
+      "lat": -9.6476843,
+      "long": -35.7339264
+    },
+    {
+      "name": "San Salvador de Jujuy",
+      "lat": -24.1852569,
+      "long": -65.2994789
+    },
+    {
+      "name": "San Salvador de Jujuy",
+      "lat": -24.1852569,
+      "long": -65.2994789
+    },
+    {
+      "name": "San Salvador de Jujuy",
+      "lat": -24.1852569,
+      "long": -65.2994789
+    },
+    {
+      "name": "San Miguel de Tucum\u00e1n",
+      "lat": -26.8303703,
+      "long": -65.2038133
+    },
+    {
+      "name": "San Miguel de Tucum\u00e1n",
+      "lat": -26.8303703,
+      "long": -65.2038133
+    },
+    {
+      "name": "San Miguel de Tucum\u00e1n",
+      "lat": -26.8303703,
+      "long": -65.2038133
+    },
+    {
+      "name": "Neuqu\u00e9n",
+      "lat": -38.3695057,
+      "long": -69.832275
+    },
+    {
+      "name": "Neuqu\u00e9n",
+      "lat": -38.3695057,
+      "long": -69.832275
+    },
+    {
+      "name": "Neuqu\u00e9n",
+      "lat": -38.3695057,
+      "long": -69.832275
+    },
+    {
+      "name": "Temuco",
+      "lat": -38.7358908,
+      "long": -72.590538
+    },
+    {
+      "name": "Temuco",
+      "lat": -38.7358908,
+      "long": -72.590538
+    },
+    {
+      "name": "Temuco",
+      "lat": -38.7358908,
+      "long": -72.590538
+    },
+    {
+      "name": "Antofagasta",
+      "lat": -23.6463741,
+      "long": -70.3980033
+    },
+    {
+      "name": "Antofagasta",
+      "lat": -23.6463741,
+      "long": -70.3980033
+    },
+    {
+      "name": "Antofagasta",
+      "lat": -23.6463741,
+      "long": -70.3980033
+    },
+    {
+      "name": "Iquique",
+      "lat": -20.2140657,
+      "long": -70.1524646
+    },
+    {
+      "name": "Iquique",
+      "lat": -20.2140657,
+      "long": -70.1524646
+    },
+    {
+      "name": "Iquique",
+      "lat": -20.2140657,
+      "long": -70.1524646
+    },
+    {
+      "name": "Sucre",
+      "lat": -19.0477251,
+      "long": -65.2594306
+    },
+    {
+      "name": "Sucre",
+      "lat": -19.0477251,
+      "long": -65.2594306
+    },
+    {
+      "name": "Sucre",
+      "lat": -19.0477251,
+      "long": -65.2594306
+    },
+    {
+      "name": "Cochabamba",
+      "lat": -17.401245799999998,
+      "long": -66.16756808852
+    },
+    {
+      "name": "Cochabamba",
+      "lat": -17.401245799999998,
+      "long": -66.16756808852
+    },
+    {
+      "name": "Cochabamba",
+      "lat": -17.401245799999998,
+      "long": -66.16756808852
+    },
+    {
+      "name": "Cusco",
+      "lat": -13.5170887,
+      "long": -71.9785356
+    },
+    {
+      "name": "Cusco",
+      "lat": -13.5170887,
+      "long": -71.9785356
+    },
+    {
+      "name": "Cusco",
+      "lat": -13.5170887,
+      "long": -71.9785356
+    },
+    {
+      "name": "Trujillo",
+      "lat": -8.1116778,
+      "long": -79.0287742
+    },
+    {
+      "name": "Trujillo",
+      "lat": -8.1116778,
+      "long": -79.0287742
+    },
+    {
+      "name": "Trujillo",
+      "lat": -8.1116778,
+      "long": -79.0287742
+    },
+    {
+      "name": "Iquitos",
+      "lat": -3.749365,
+      "long": -73.2444145
+    },
+    {
+      "name": "Iquitos",
+      "lat": -3.749365,
+      "long": -73.2444145
+    },
+    {
+      "name": "Iquitos",
+      "lat": -3.749365,
+      "long": -73.2444145
+    },
+    {
+      "name": "Pereira",
+      "lat": 4.8143159,
+      "long": -75.6946778
+    },
+    {
+      "name": "Pereira",
+      "lat": 4.8143159,
+      "long": -75.6946778
+    },
+    {
+      "name": "Pereira",
+      "lat": 4.8143159,
+      "long": -75.6946778
+    },
+    {
+      "name": "Manizales",
+      "lat": 5.0743694,
+      "long": -75.50811667440546
+    },
+    {
+      "name": "Manizales",
+      "lat": 5.0743694,
+      "long": -75.50811667440546
+    },
+    {
+      "name": "Manizales",
+      "lat": 5.0743694,
+      "long": -75.50811667440546
+    },
+    {
+      "name": "Villavicencio",
+      "lat": 4.1347644,
+      "long": -73.6201517
+    },
+    {
+      "name": "Villavicencio",
+      "lat": 4.1347644,
+      "long": -73.6201517
+    },
+    {
+      "name": "Villavicencio",
+      "lat": 4.1347644,
+      "long": -73.6201517
+    },
+    {
+      "name": "C\u00facuta",
+      "lat": 7.8971458,
+      "long": -72.5080387
+    },
+    {
+      "name": "C\u00facuta",
+      "lat": 7.8971458,
+      "long": -72.5080387
+    },
+    {
+      "name": "C\u00facuta",
+      "lat": 7.8971458,
+      "long": -72.5080387
+    },
+    {
+      "name": "Santa Marta",
+      "lat": 11.2320944,
+      "long": -74.1950916
+    },
+    {
+      "name": "Santa Marta",
+      "lat": 11.2320944,
+      "long": -74.1950916
+    },
+    {
+      "name": "Santa Marta",
+      "lat": 11.2320944,
+      "long": -74.1950916
+    },
+    {
+      "name": "Valledupar",
+      "lat": 10.4651733,
+      "long": -73.2529512
+    },
+    {
+      "name": "Valledupar",
+      "lat": 10.4651733,
+      "long": -73.2529512
+    },
+    {
+      "name": "Valledupar",
+      "lat": 10.4651733,
+      "long": -73.2529512
+    },
+    {
+      "name": "Pasto",
+      "lat": 1.2140275,
+      "long": -77.2785096
+    },
+    {
+      "name": "Pasto",
+      "lat": 1.2140275,
+      "long": -77.2785096
+    },
+    {
+      "name": "Pasto",
+      "lat": 1.2140275,
+      "long": -77.2785096
+    },
+    {
+      "name": "Cartagena",
+      "lat": 10.4265566,
+      "long": -75.5441671
+    },
+    {
+      "name": "Cartagena",
+      "lat": 10.4265566,
+      "long": -75.5441671
+    },
+    {
+      "name": "Cartagena",
+      "lat": 10.4265566,
+      "long": -75.5441671
+    },
+    {
+      "name": "R\u00edo Gallegos",
+      "lat": -51.64607595,
+      "long": -69.26324254192167
+    },
+    {
+      "name": "R\u00edo Gallegos",
+      "lat": -51.64607595,
+      "long": -69.26324254192167
+    },
+    {
+      "name": "R\u00edo Gallegos",
+      "lat": -51.64607595,
+      "long": -69.26324254192167
+    },
+    {
+      "name": "Punta Arenas",
+      "lat": -53.1625688,
+      "long": -70.907822
+    },
+    {
+      "name": "Punta Arenas",
+      "lat": -53.1625688,
+      "long": -70.907822
+    },
+    {
+      "name": "Punta Arenas",
+      "lat": -53.1625688,
+      "long": -70.907822
+    },
+    {
+      "name": "Bariloche",
+      "lat": -41.1334421,
+      "long": -71.3098425
+    },
+    {
+      "name": "Bariloche",
+      "lat": -41.1334421,
+      "long": -71.3098425
+    },
+    {
+      "name": "Bariloche",
+      "lat": -41.1334421,
+      "long": -71.3098425
+    },
+    {
+      "name": "Puerto Montt",
+      "lat": -41.471798,
+      "long": -72.9395915
+    },
+    {
+      "name": "Puerto Montt",
+      "lat": -41.471798,
+      "long": -72.9395915
+    },
+    {
+      "name": "Puerto Montt",
+      "lat": -41.471798,
+      "long": -72.9395915
+    },
+    {
+      "name": "Arica",
+      "lat": -18.4785288,
+      "long": -70.3211394
+    },
+    {
+      "name": "Arica",
+      "lat": -18.4785288,
+      "long": -70.3211394
+    },
+    {
+      "name": "Arica",
+      "lat": -18.4785288,
+      "long": -70.3211394
+    },
+    {
+      "name": "Carapicu\u00edba",
+      "lat": -23.5234673,
+      "long": -46.8406808
+    },
+    {
+      "name": "Carapicu\u00edba",
+      "lat": -23.5234673,
+      "long": -46.8406808
+    },
+    {
+      "name": "Carapicu\u00edba",
+      "lat": -23.5234673,
+      "long": -46.8406808
+    },
+    {
+      "name": "Vila Velha",
+      "lat": -20.3297037,
+      "long": -40.2920174
+    },
+    {
+      "name": "Vila Velha",
+      "lat": -20.3297037,
+      "long": -40.2920174
+    },
+    {
+      "name": "Vila Velha",
+      "lat": -20.3297037,
+      "long": -40.2920174
+    },
+    {
+      "name": "S\u00e3o Lu\u00eds",
+      "lat": -2.5295265,
+      "long": -44.2963942
+    },
+    {
+      "name": "S\u00e3o Lu\u00eds",
+      "lat": -2.5295265,
+      "long": -44.2963942
+    },
+    {
+      "name": "S\u00e3o Lu\u00eds",
+      "lat": -2.5295265,
+      "long": -44.2963942
+    },
+    {
+      "name": "Santos",
+      "lat": -23.9335988,
+      "long": -46.3286399
+    },
+    {
+      "name": "Santos",
+      "lat": -23.9335988,
+      "long": -46.3286399
+    },
+    {
+      "name": "Santos",
+      "lat": -23.9335988,
+      "long": -46.3286399
+    },
+    {
+      "name": "Belo Horizonte",
+      "lat": -19.9227318,
+      "long": -43.9450948
+    },
+    {
+      "name": "Belo Horizonte",
+      "lat": -19.9227318,
+      "long": -43.9450948
+    },
+    {
+      "name": "Belo Horizonte",
+      "lat": -19.9227318,
+      "long": -43.9450948
+    },
+    {
+      "name": "Ribeir\u00e3o Preto",
+      "lat": -21.1776315,
+      "long": -47.8100983
+    },
+    {
+      "name": "Ribeir\u00e3o Preto",
+      "lat": -21.1776315,
+      "long": -47.8100983
+    },
+    {
+      "name": "Ribeir\u00e3o Preto",
+      "lat": -21.1776315,
+      "long": -47.8100983
+    },
+    {
+      "name": "Sorocaba",
+      "lat": -23.5003451,
+      "long": -47.4582864
+    },
+    {
+      "name": "Sorocaba",
+      "lat": -23.5003451,
+      "long": -47.4582864
+    },
+    {
+      "name": "Sorocaba",
+      "lat": -23.5003451,
+      "long": -47.4582864
+    },
+    {
+      "name": "Campos dos Goytacazes",
+      "lat": -21.7546,
+      "long": -41.3242
+    },
+    {
+      "name": "Campos dos Goytacazes",
+      "lat": -21.7546,
+      "long": -41.3242
+    },
+    {
+      "name": "Campos dos Goytacazes",
+      "lat": -21.7546,
+      "long": -41.3242
+    },
+    {
+      "name": "Joinville",
+      "lat": 48.4433253,
+      "long": 5.1377537
+    },
+    {
+      "name": "Joinville",
+      "lat": 48.4433253,
+      "long": 5.1377537
+    },
+    {
+      "name": "Joinville",
+      "lat": 48.4433253,
+      "long": 5.1377537
+    },
+    {
+      "name": "Uberl\u00e2ndia",
+      "lat": -18.9188041,
+      "long": -48.2767837
+    },
+    {
+      "name": "Uberl\u00e2ndia",
+      "lat": -18.9188041,
+      "long": -48.2767837
+    },
+    {
+      "name": "Uberl\u00e2ndia",
+      "lat": -18.9188041,
+      "long": -48.2767837
+    },
+    {
+      "name": "Ananindeua",
+      "lat": -1.374035,
+      "long": -48.4016623
+    },
+    {
+      "name": "Ananindeua",
+      "lat": -1.374035,
+      "long": -48.4016623
+    },
+    {
+      "name": "Ananindeua",
+      "lat": -1.374035,
+      "long": -48.4016623
+    },
+    {
+      "name": "Porto Velho",
+      "lat": -8.7494525,
+      "long": -63.8735438
+    },
+    {
+      "name": "Porto Velho",
+      "lat": -8.7494525,
+      "long": -63.8735438
+    },
+    {
+      "name": "Porto Velho",
+      "lat": -8.7494525,
+      "long": -63.8735438
+    },
+    {
+      "name": "Boa Vista",
+      "lat": 2.8208478,
+      "long": -60.6719582
+    },
+    {
+      "name": "Boa Vista",
+      "lat": 2.8208478,
+      "long": -60.6719582
+    },
+    {
+      "name": "Boa Vista",
+      "lat": 2.8208478,
+      "long": -60.6719582
+    },
+    {
+      "name": "Macap\u00e1",
+      "lat": 0.0401529,
+      "long": -51.0569588
+    },
+    {
+      "name": "Macap\u00e1",
+      "lat": 0.0401529,
+      "long": -51.0569588
+    },
+    {
+      "name": "Macap\u00e1",
+      "lat": 0.0401529,
+      "long": -51.0569588
+    },
+    {
+      "name": "Roraima",
+      "lat": 2.135138,
+      "long": -61.3631922
+    },
+    {
+      "name": "Roraima",
+      "lat": 2.135138,
+      "long": -61.3631922
+    },
+    {
+      "name": "Roraima",
+      "lat": 2.135138,
+      "long": -61.3631922
+    },
+    {
+      "name": "Rio Branco",
+      "lat": -9.9765362,
+      "long": -67.8220778
+    },
+    {
+      "name": "Rio Branco",
+      "lat": -9.9765362,
+      "long": -67.8220778
+    },
+    {
+      "name": "Rio Branco",
+      "lat": -9.9765362,
+      "long": -67.8220778
+    },
+    {
+      "name": "Salta",
+      "lat": -24.7892946,
+      "long": -65.4103194
+    },
+    {
+      "name": "Salta",
+      "lat": -24.7892946,
+      "long": -65.4103194
+    },
+    {
+      "name": "Salta",
+      "lat": -24.7892946,
+      "long": -65.4103194
+    },
+    {
+      "name": "Corrientes",
+      "lat": -28.99565115,
+      "long": -57.81245796667342
+    },
+    {
+      "name": "Corrientes",
+      "lat": -28.99565115,
+      "long": -57.81245796667342
+    },
+    {
+      "name": "Corrientes",
+      "lat": -28.99565115,
+      "long": -57.81245796667342
+    },
+    {
+      "name": "Posadas",
+      "lat": -27.3664824,
+      "long": -55.894295
+    },
+    {
+      "name": "Posadas",
+      "lat": -27.3664824,
+      "long": -55.894295
+    },
+    {
+      "name": "Posadas",
+      "lat": -27.3664824,
+      "long": -55.894295
+    }
+  ]
+}

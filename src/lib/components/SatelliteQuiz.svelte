@@ -62,12 +62,9 @@
 
     function setQuizContent() {
         if (remainingLocationsArray.length === 0) {
-            console.log("No more locations");
             return;
         }
         currentLocation = remainingLocationsArray.pop();
-        
-        console.log("Current location:", currentLocation);
 
         const otherLocations = shuffleArray(
             locationsArray.filter((loc) => loc.name !== currentLocation.name),
@@ -200,6 +197,6 @@
 <style>
     .custom-size {
         width: 100%;
-        height: 30vh;
+        height: 40dvh;
     }
 </style>

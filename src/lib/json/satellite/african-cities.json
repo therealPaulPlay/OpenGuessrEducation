@@ -1,0 +1,1389 @@
+{
+  "Locations": [
+    {
+      "name": "Cairo",
+      "lat": 30.0443879,
+      "long": 31.2357257
+    },
+    {
+      "name": "Cairo",
+      "lat": 30.0443879,
+      "long": 31.2357257
+    },
+    {
+      "name": "Cairo",
+      "lat": 30.0443879,
+      "long": 31.2357257
+    },
+    {
+      "name": "Lagos",
+      "lat": 6.4550575,
+      "long": 3.3941795
+    },
+    {
+      "name": "Lagos",
+      "lat": 6.4550575,
+      "long": 3.3941795
+    },
+    {
+      "name": "Lagos",
+      "lat": 6.4550575,
+      "long": 3.3941795
+    },
+    {
+      "name": "Kinshasa",
+      "lat": -4.3196982,
+      "long": 15.3424196
+    },
+    {
+      "name": "Kinshasa",
+      "lat": -4.3196982,
+      "long": 15.3424196
+    },
+    {
+      "name": "Kinshasa",
+      "lat": -4.3196982,
+      "long": 15.3424196
+    },
+    {
+      "name": "Johannesburg",
+      "lat": -26.205,
+      "long": 28.049722
+    },
+    {
+      "name": "Johannesburg",
+      "lat": -26.205,
+      "long": 28.049722
+    },
+    {
+      "name": "Johannesburg",
+      "lat": -26.205,
+      "long": 28.049722
+    },
+    {
+      "name": "Nairobi",
+      "lat": -1.3026148499999999,
+      "long": 36.82884201813725
+    },
+    {
+      "name": "Nairobi",
+      "lat": -1.3026148499999999,
+      "long": 36.82884201813725
+    },
+    {
+      "name": "Nairobi",
+      "lat": -1.3026148499999999,
+      "long": 36.82884201813725
+    },
+    {
+      "name": "Algiers",
+      "lat": 36.7729309,
+      "long": 3.0588291
+    },
+    {
+      "name": "Algiers",
+      "lat": 36.7729309,
+      "long": 3.0588291
+    },
+    {
+      "name": "Algiers",
+      "lat": 36.7729309,
+      "long": 3.0588291
+    },
+    {
+      "name": "Casablanca",
+      "lat": 33.5945144,
+      "long": -7.6200284
+    },
+    {
+      "name": "Casablanca",
+      "lat": 33.5945144,
+      "long": -7.6200284
+    },
+    {
+      "name": "Casablanca",
+      "lat": 33.5945144,
+      "long": -7.6200284
+    },
+    {
+      "name": "Cape Town",
+      "lat": -33.9288301,
+      "long": 18.4172197
+    },
+    {
+      "name": "Cape Town",
+      "lat": -33.9288301,
+      "long": 18.4172197
+    },
+    {
+      "name": "Cape Town",
+      "lat": -33.9288301,
+      "long": 18.4172197
+    },
+    {
+      "name": "Accra",
+      "lat": 5.5571096,
+      "long": -0.2012376
+    },
+    {
+      "name": "Accra",
+      "lat": 5.5571096,
+      "long": -0.2012376
+    },
+    {
+      "name": "Accra",
+      "lat": 5.5571096,
+      "long": -0.2012376
+    },
+    {
+      "name": "Addis Ababa",
+      "lat": 9.0358287,
+      "long": 38.7524127
+    },
+    {
+      "name": "Addis Ababa",
+      "lat": 9.0358287,
+      "long": 38.7524127
+    },
+    {
+      "name": "Addis Ababa",
+      "lat": 9.0358287,
+      "long": 38.7524127
+    },
+    {
+      "name": "Abidjan",
+      "lat": 5.320357,
+      "long": -4.016107
+    },
+    {
+      "name": "Abidjan",
+      "lat": 5.320357,
+      "long": -4.016107
+    },
+    {
+      "name": "Abidjan",
+      "lat": 5.320357,
+      "long": -4.016107
+    },
+    {
+      "name": "Dar es Salaam",
+      "lat": -6.8160837,
+      "long": 39.2803583
+    },
+    {
+      "name": "Dar es Salaam",
+      "lat": -6.8160837,
+      "long": 39.2803583
+    },
+    {
+      "name": "Kampala",
+      "lat": 0.3177137,
+      "long": 32.5813539
+    },
+    {
+      "name": "Kampala",
+      "lat": 0.3177137,
+      "long": 32.5813539
+    },
+    {
+      "name": "Kampala",
+      "lat": 0.3177137,
+      "long": 32.5813539
+    },
+    {
+      "name": "Luanda",
+      "lat": -8.8272699,
+      "long": 13.2439512
+    },
+    {
+      "name": "Luanda",
+      "lat": -8.8272699,
+      "long": 13.2439512
+    },
+    {
+      "name": "Luanda",
+      "lat": -8.8272699,
+      "long": 13.2439512
+    },
+    {
+      "name": "Dakar",
+      "lat": 14.693425,
+      "long": -17.447938
+    },
+    {
+      "name": "Dakar",
+      "lat": 14.693425,
+      "long": -17.447938
+    },
+    {
+      "name": "Dakar",
+      "lat": 14.693425,
+      "long": -17.447938
+    },
+    {
+      "name": "Khartoum",
+      "lat": 15.5635972,
+      "long": 32.5349123
+    },
+    {
+      "name": "Khartoum",
+      "lat": 15.5635972,
+      "long": 32.5349123
+    },
+    {
+      "name": "Khartoum",
+      "lat": 15.5635972,
+      "long": 32.5349123
+    },
+    {
+      "name": "Lusaka",
+      "lat": -15.4163395,
+      "long": 28.2818414
+    },
+    {
+      "name": "Lusaka",
+      "lat": -15.4163395,
+      "long": 28.2818414
+    },
+    {
+      "name": "Lusaka",
+      "lat": -15.4163395,
+      "long": 28.2818414
+    },
+    {
+      "name": "Harare",
+      "lat": -17.8567035,
+      "long": 31.0601584
+    },
+    {
+      "name": "Harare",
+      "lat": -17.8567035,
+      "long": 31.0601584
+    },
+    {
+      "name": "Harare",
+      "lat": -17.8567035,
+      "long": 31.0601584
+    },
+    {
+      "name": "Yaounde",
+      "lat": 3.8689867,
+      "long": 11.5213344
+    },
+    {
+      "name": "Yaounde",
+      "lat": 3.8689867,
+      "long": 11.5213344
+    },
+    {
+      "name": "Yaounde",
+      "lat": 3.8689867,
+      "long": 11.5213344
+    },
+    {
+      "name": "Douala",
+      "lat": 4.0429389,
+      "long": 9.7062018
+    },
+    {
+      "name": "Douala",
+      "lat": 4.0429389,
+      "long": 9.7062018
+    },
+    {
+      "name": "Douala",
+      "lat": 4.0429389,
+      "long": 9.7062018
+    },
+    {
+      "name": "Conakry",
+      "lat": 9.5170602,
+      "long": -13.6998434
+    },
+    {
+      "name": "Conakry",
+      "lat": 9.5170602,
+      "long": -13.6998434
+    },
+    {
+      "name": "Conakry",
+      "lat": 9.5170602,
+      "long": -13.6998434
+    },
+    {
+      "name": "Freetown",
+      "lat": 8.479004,
+      "long": -13.26795
+    },
+    {
+      "name": "Freetown",
+      "lat": 8.479004,
+      "long": -13.26795
+    },
+    {
+      "name": "Freetown",
+      "lat": 8.479004,
+      "long": -13.26795
+    },
+    {
+      "name": "Bamako",
+      "lat": 12.61326555,
+      "long": -7.984739136241295
+    },
+    {
+      "name": "Bamako",
+      "lat": 12.61326555,
+      "long": -7.984739136241295
+    },
+    {
+      "name": "Bamako",
+      "lat": 12.61326555,
+      "long": -7.984739136241295
+    },
+    {
+      "name": "Ouagadougou",
+      "lat": 12.3681873,
+      "long": -1.5270944
+    },
+    {
+      "name": "Ouagadougou",
+      "lat": 12.3681873,
+      "long": -1.5270944
+    },
+    {
+      "name": "Ouagadougou",
+      "lat": 12.3681873,
+      "long": -1.5270944
+    },
+    {
+      "name": "Bujumbura",
+      "lat": -3.3638125,
+      "long": 29.3675028
+    },
+    {
+      "name": "Bujumbura",
+      "lat": -3.3638125,
+      "long": 29.3675028
+    },
+    {
+      "name": "Bujumbura",
+      "lat": -3.3638125,
+      "long": 29.3675028
+    },
+    {
+      "name": "Antananarivo",
+      "lat": -18.9100122,
+      "long": 47.5255809
+    },
+    {
+      "name": "Antananarivo",
+      "lat": -18.9100122,
+      "long": 47.5255809
+    },
+    {
+      "name": "Antananarivo",
+      "lat": -18.9100122,
+      "long": 47.5255809
+    },
+    {
+      "name": "Port Louis",
+      "lat": -20.1624522,
+      "long": 57.5028044
+    },
+    {
+      "name": "Port Louis",
+      "lat": -20.1624522,
+      "long": 57.5028044
+    },
+    {
+      "name": "Port Louis",
+      "lat": -20.1624522,
+      "long": 57.5028044
+    },
+    {
+      "name": "Maputo",
+      "lat": -25.966213,
+      "long": 32.56745
+    },
+    {
+      "name": "Maputo",
+      "lat": -25.966213,
+      "long": 32.56745
+    },
+    {
+      "name": "Maputo",
+      "lat": -25.966213,
+      "long": 32.56745
+    },
+    {
+      "name": "Windhoek",
+      "lat": -22.5776104,
+      "long": 17.0772739
+    },
+    {
+      "name": "Windhoek",
+      "lat": -22.5776104,
+      "long": 17.0772739
+    },
+    {
+      "name": "Windhoek",
+      "lat": -22.5776104,
+      "long": 17.0772739
+    },
+    {
+      "name": "Gaborone",
+      "lat": -24.6581357,
+      "long": 25.9088474
+    },
+    {
+      "name": "Gaborone",
+      "lat": -24.6581357,
+      "long": 25.9088474
+    },
+    {
+      "name": "Gaborone",
+      "lat": -24.6581357,
+      "long": 25.9088474
+    },
+    {
+      "name": "Libreville",
+      "lat": 0.4086518,
+      "long": 9.4418849
+    },
+    {
+      "name": "Libreville",
+      "lat": 0.4086518,
+      "long": 9.4418849
+    },
+    {
+      "name": "Libreville",
+      "lat": 0.4086518,
+      "long": 9.4418849
+    },
+    {
+      "name": "Brazzaville",
+      "lat": -4.1875125,
+      "long": 15.262788
+    },
+    {
+      "name": "Brazzaville",
+      "lat": -4.1875125,
+      "long": 15.262788
+    },
+    {
+      "name": "Brazzaville",
+      "lat": -4.1875125,
+      "long": 15.262788
+    },
+    {
+      "name": "Lome",
+      "lat": 6.130419,
+      "long": 1.215829
+    },
+    {
+      "name": "Lome",
+      "lat": 6.130419,
+      "long": 1.215829
+    },
+    {
+      "name": "Lome",
+      "lat": 6.130419,
+      "long": 1.215829
+    },
+    {
+      "name": "Niamey",
+      "lat": 13.524834,
+      "long": 2.109823
+    },
+    {
+      "name": "Niamey",
+      "lat": 13.524834,
+      "long": 2.109823
+    },
+    {
+      "name": "Niamey",
+      "lat": 13.524834,
+      "long": 2.109823
+    },
+    {
+      "name": "Nouakchott",
+      "lat": 18.061891799999998,
+      "long": -15.931148157832908
+    },
+    {
+      "name": "Nouakchott",
+      "lat": 18.061891799999998,
+      "long": -15.931148157832908
+    },
+    {
+      "name": "Nouakchott",
+      "lat": 18.061891799999998,
+      "long": -15.931148157832908
+    },
+    {
+      "name": "Tripoli",
+      "lat": 32.896672,
+      "long": 13.1777923
+    },
+    {
+      "name": "Tripoli",
+      "lat": 32.896672,
+      "long": 13.1777923
+    },
+    {
+      "name": "Tripoli",
+      "lat": 32.896672,
+      "long": 13.1777923
+    },
+    {
+      "name": "Tunis",
+      "lat": 36.8002068,
+      "long": 10.1857757
+    },
+    {
+      "name": "Tunis",
+      "lat": 36.8002068,
+      "long": 10.1857757
+    },
+    {
+      "name": "Tunis",
+      "lat": 36.8002068,
+      "long": 10.1857757
+    },
+    {
+      "name": "Rabat",
+      "lat": 34.02236,
+      "long": -6.8340222
+    },
+    {
+      "name": "Rabat",
+      "lat": 34.02236,
+      "long": -6.8340222
+    },
+    {
+      "name": "Rabat",
+      "lat": 34.02236,
+      "long": -6.8340222
+    },
+    {
+      "name": "Monrovia",
+      "lat": 6.328034,
+      "long": -10.797788
+    },
+    {
+      "name": "Monrovia",
+      "lat": 6.328034,
+      "long": -10.797788
+    },
+    {
+      "name": "Monrovia",
+      "lat": 6.328034,
+      "long": -10.797788
+    },
+    {
+      "name": "Bangui",
+      "lat": 4.3635118,
+      "long": 18.5835913
+    },
+    {
+      "name": "Bangui",
+      "lat": 4.3635118,
+      "long": 18.5835913
+    },
+    {
+      "name": "Bangui",
+      "lat": 4.3635118,
+      "long": 18.5835913
+    },
+    {
+      "name": "Malabo",
+      "lat": 3.741877,
+      "long": 8.7740663
+    },
+    {
+      "name": "Malabo",
+      "lat": 3.741877,
+      "long": 8.7740663
+    },
+    {
+      "name": "Malabo",
+      "lat": 3.741877,
+      "long": 8.7740663
+    },
+    {
+      "name": "Asmara",
+      "lat": 15.3389667,
+      "long": 38.9326763
+    },
+    {
+      "name": "Asmara",
+      "lat": 15.3389667,
+      "long": 38.9326763
+    },
+    {
+      "name": "Asmara",
+      "lat": 15.3389667,
+      "long": 38.9326763
+    },
+    {
+      "name": "Djibouti",
+      "lat": 11.8145966,
+      "long": 42.8453061
+    },
+    {
+      "name": "Djibouti",
+      "lat": 11.8145966,
+      "long": 42.8453061
+    },
+    {
+      "name": "Djibouti",
+      "lat": 11.8145966,
+      "long": 42.8453061
+    },
+    {
+      "name": "Juba",
+      "lat": 4.8459246,
+      "long": 31.5959173
+    },
+    {
+      "name": "Juba",
+      "lat": 4.8459246,
+      "long": 31.5959173
+    },
+    {
+      "name": "Juba",
+      "lat": 4.8459246,
+      "long": 31.5959173
+    },
+    {
+      "name": "Mogadishu",
+      "lat": 2.0349312,
+      "long": 45.3419183
+    },
+    {
+      "name": "Mogadishu",
+      "lat": 2.0349312,
+      "long": 45.3419183
+    },
+    {
+      "name": "Mogadishu",
+      "lat": 2.0349312,
+      "long": 45.3419183
+    },
+    {
+      "name": "Victoria",
+      "lat": -36.5986096,
+      "long": 144.6780052
+    },
+    {
+      "name": "Victoria",
+      "lat": -36.5986096,
+      "long": 144.6780052
+    },
+    {
+      "name": "Victoria",
+      "lat": -36.5986096,
+      "long": 144.6780052
+    },
+    {
+      "name": "Moroni",
+      "lat": -11.6931255,
+      "long": 43.2543044
+    },
+    {
+      "name": "Moroni",
+      "lat": -11.6931255,
+      "long": 43.2543044
+    },
+    {
+      "name": "Moroni",
+      "lat": -11.6931255,
+      "long": 43.2543044
+    },
+    {
+      "name": "N'Djamena",
+      "lat": 12.1191543,
+      "long": 15.0502758
+    },
+    {
+      "name": "N'Djamena",
+      "lat": 12.1191543,
+      "long": 15.0502758
+    },
+    {
+      "name": "N'Djamena",
+      "lat": 12.1191543,
+      "long": 15.0502758
+    },
+    {
+      "name": "Sao Tome",
+      "lat": 0.3389242,
+      "long": 6.7313031
+    },
+    {
+      "name": "Sao Tome",
+      "lat": 0.3389242,
+      "long": 6.7313031
+    },
+    {
+      "name": "Sao Tome",
+      "lat": 0.3389242,
+      "long": 6.7313031
+    },
+    {
+      "name": "Bissau",
+      "lat": 11.87018055,
+      "long": -15.607704564772728
+    },
+    {
+      "name": "Bissau",
+      "lat": 11.87018055,
+      "long": -15.607704564772728
+    },
+    {
+      "name": "Bissau",
+      "lat": 11.87018055,
+      "long": -15.607704564772728
+    },
+    {
+      "name": "Mbabane",
+      "lat": -26.325745,
+      "long": 31.144663
+    },
+    {
+      "name": "Mbabane",
+      "lat": -26.325745,
+      "long": 31.144663
+    },
+    {
+      "name": "Mbabane",
+      "lat": -26.325745,
+      "long": 31.144663
+    },
+    {
+      "name": "Pretoria",
+      "lat": -25.7459277,
+      "long": 28.1879101
+    },
+    {
+      "name": "Pretoria",
+      "lat": -25.7459277,
+      "long": 28.1879101
+    },
+    {
+      "name": "Pretoria",
+      "lat": -25.7459277,
+      "long": 28.1879101
+    },
+    {
+      "name": "Durban",
+      "lat": -29.861825,
+      "long": 31.009909
+    },
+    {
+      "name": "Durban",
+      "lat": -29.861825,
+      "long": 31.009909
+    },
+    {
+      "name": "Durban",
+      "lat": -29.861825,
+      "long": 31.009909
+    },
+    {
+      "name": "Alexandria",
+      "lat": 44.83495335,
+      "long": 8.745030418605868
+    },
+    {
+      "name": "Alexandria",
+      "lat": 44.83495335,
+      "long": 8.745030418605868
+    },
+    {
+      "name": "Alexandria",
+      "lat": 44.83495335,
+      "long": 8.745030418605868
+    },
+    {
+      "name": "Kano",
+      "lat": 11.8948389,
+      "long": 8.5364136
+    },
+    {
+      "name": "Kano",
+      "lat": 11.8948389,
+      "long": 8.5364136
+    },
+    {
+      "name": "Kano",
+      "lat": 11.8948389,
+      "long": 8.5364136
+    },
+    {
+      "name": "Ibadan",
+      "lat": 7.3786064,
+      "long": 3.8969928
+    },
+    {
+      "name": "Ibadan",
+      "lat": 7.3786064,
+      "long": 3.8969928
+    },
+    {
+      "name": "Ibadan",
+      "lat": 7.3786064,
+      "long": 3.8969928
+    },
+    {
+      "name": "Port Harcourt",
+      "lat": 4.7676576,
+      "long": 7.0188527
+    },
+    {
+      "name": "Port Harcourt",
+      "lat": 4.7676576,
+      "long": 7.0188527
+    },
+    {
+      "name": "Port Harcourt",
+      "lat": 4.7676576,
+      "long": 7.0188527
+    },
+    {
+      "name": "Abuja",
+      "lat": 9.0643305,
+      "long": 7.4892974
+    },
+    {
+      "name": "Abuja",
+      "lat": 9.0643305,
+      "long": 7.4892974
+    },
+    {
+      "name": "Abuja",
+      "lat": 9.0643305,
+      "long": 7.4892974
+    },
+    {
+      "name": "Mombasa",
+      "lat": -4.05052,
+      "long": 39.667169
+    },
+    {
+      "name": "Mombasa",
+      "lat": -4.05052,
+      "long": 39.667169
+    },
+    {
+      "name": "Mombasa",
+      "lat": -4.05052,
+      "long": 39.667169
+    },
+    {
+      "name": "Antsirabe",
+      "lat": -19.871403,
+      "long": 47.034667
+    },
+    {
+      "name": "Antsirabe",
+      "lat": -19.871403,
+      "long": 47.034667
+    },
+    {
+      "name": "Antsirabe",
+      "lat": -19.871403,
+      "long": 47.034667
+    },
+    {
+      "name": "Blantyre",
+      "lat": -15.7862543,
+      "long": 35.0035694
+    },
+    {
+      "name": "Blantyre",
+      "lat": -15.7862543,
+      "long": 35.0035694
+    },
+    {
+      "name": "Blantyre",
+      "lat": -15.7862543,
+      "long": 35.0035694
+    },
+    {
+      "name": "Lilongwe",
+      "lat": -13.9875107,
+      "long": 33.768144
+    },
+    {
+      "name": "Lilongwe",
+      "lat": -13.9875107,
+      "long": 33.768144
+    },
+    {
+      "name": "Lilongwe",
+      "lat": -13.9875107,
+      "long": 33.768144
+    },
+    {
+      "name": "Beira",
+      "lat": -19.828707,
+      "long": 34.841782
+    },
+    {
+      "name": "Beira",
+      "lat": -19.828707,
+      "long": 34.841782
+    },
+    {
+      "name": "Beira",
+      "lat": -19.828707,
+      "long": 34.841782
+    },
+    {
+      "name": "Bulawayo",
+      "lat": -20.1053948,
+      "long": 28.5426856
+    },
+    {
+      "name": "Bulawayo",
+      "lat": -20.1053948,
+      "long": 28.5426856
+    },
+    {
+      "name": "Bulawayo",
+      "lat": -20.1053948,
+      "long": 28.5426856
+    },
+    {
+      "name": "Lubumbashi",
+      "lat": -11.6642316,
+      "long": 27.4826264
+    },
+    {
+      "name": "Lubumbashi",
+      "lat": -11.6642316,
+      "long": 27.4826264
+    },
+    {
+      "name": "Lubumbashi",
+      "lat": -11.6642316,
+      "long": 27.4826264
+    },
+    {
+      "name": "Maseru",
+      "lat": -29.310054,
+      "long": 27.478222
+    },
+    {
+      "name": "Maseru",
+      "lat": -29.310054,
+      "long": 27.478222
+    },
+    {
+      "name": "Maseru",
+      "lat": -29.310054,
+      "long": 27.478222
+    },
+    {
+      "name": "Tete",
+      "lat": -15.5205193,
+      "long": 32.7682742
+    },
+    {
+      "name": "Tete",
+      "lat": -15.5205193,
+      "long": 32.7682742
+    },
+    {
+      "name": "Tete",
+      "lat": -15.5205193,
+      "long": 32.7682742
+    },
+    {
+      "name": "Sekondi-Takoradi",
+      "lat": 4.927456,
+      "long": -1.7490216
+    },
+    {
+      "name": "Sekondi-Takoradi",
+      "lat": 4.927456,
+      "long": -1.7490216
+    },
+    {
+      "name": "Sekondi-Takoradi",
+      "lat": 4.927456,
+      "long": -1.7490216
+    },
+    {
+      "name": "Zinder",
+      "lat": 13.8063421,
+      "long": 8.9891659
+    },
+    {
+      "name": "Zinder",
+      "lat": 13.8063421,
+      "long": 8.9891659
+    },
+    {
+      "name": "Zinder",
+      "lat": 13.8063421,
+      "long": 8.9891659
+    },
+    {
+      "name": "Sokoto",
+      "lat": 13.0611195,
+      "long": 5.3152203
+    },
+    {
+      "name": "Sokoto",
+      "lat": 13.0611195,
+      "long": 5.3152203
+    },
+    {
+      "name": "Sokoto",
+      "lat": 13.0611195,
+      "long": 5.3152203
+    },
+    {
+      "name": "Goma",
+      "lat": -1.6665685,
+      "long": 29.225652
+    },
+    {
+      "name": "Goma",
+      "lat": -1.6665685,
+      "long": 29.225652
+    },
+    {
+      "name": "Goma",
+      "lat": -1.6665685,
+      "long": 29.225652
+    },
+    {
+      "name": "Pointe-Noire",
+      "lat": -4.7975373,
+      "long": 11.8503297
+    },
+    {
+      "name": "Pointe-Noire",
+      "lat": -4.7975373,
+      "long": 11.8503297
+    },
+    {
+      "name": "Pointe-Noire",
+      "lat": -4.7975373,
+      "long": 11.8503297
+    },
+    {
+      "name": "Saint-Louis",
+      "lat": 38.6280278,
+      "long": -90.1910154
+    },
+    {
+      "name": "Saint-Louis",
+      "lat": 38.6280278,
+      "long": -90.1910154
+    },
+    {
+      "name": "Saint-Louis",
+      "lat": 38.6280278,
+      "long": -90.1910154
+    },
+    {
+      "name": "Gitega",
+      "lat": -3.4284953,
+      "long": 29.9249718
+    },
+    {
+      "name": "Gitega",
+      "lat": -3.4284953,
+      "long": 29.9249718
+    },
+    {
+      "name": "Gitega",
+      "lat": -3.4284953,
+      "long": 29.9249718
+    },
+    {
+      "name": "Butare",
+      "lat": -1.0682481,
+      "long": 29.9399912
+    },
+    {
+      "name": "Butare",
+      "lat": -1.0682481,
+      "long": 29.9399912
+    },
+    {
+      "name": "Butare",
+      "lat": -1.0682481,
+      "long": 29.9399912
+    },
+    {
+      "name": "Toliara",
+      "lat": -23.354173,
+      "long": 43.66966
+    },
+    {
+      "name": "Toliara",
+      "lat": -23.354173,
+      "long": 43.66966
+    },
+    {
+      "name": "Toliara",
+      "lat": -23.354173,
+      "long": 43.66966
+    },
+    {
+      "name": "Bamenda",
+      "lat": 5.9614117,
+      "long": 10.1516505
+    },
+    {
+      "name": "Bamenda",
+      "lat": 5.9614117,
+      "long": 10.1516505
+    },
+    {
+      "name": "Bamenda",
+      "lat": 5.9614117,
+      "long": 10.1516505
+    },
+    {
+      "name": "Garoua",
+      "lat": 9.3070698,
+      "long": 13.3934527
+    },
+    {
+      "name": "Garoua",
+      "lat": 9.3070698,
+      "long": 13.3934527
+    },
+    {
+      "name": "Garoua",
+      "lat": 9.3070698,
+      "long": 13.3934527
+    },
+    {
+      "name": "Maiduguri",
+      "lat": 11.8395375,
+      "long": 13.1536214
+    },
+    {
+      "name": "Maiduguri",
+      "lat": 11.8395375,
+      "long": 13.1536214
+    },
+    {
+      "name": "Maiduguri",
+      "lat": 11.8395375,
+      "long": 13.1536214
+    },
+    {
+      "name": "Benin City",
+      "lat": 6.3330586,
+      "long": 5.6221058
+    },
+    {
+      "name": "Benin City",
+      "lat": 6.3330586,
+      "long": 5.6221058
+    },
+    {
+      "name": "Benin City",
+      "lat": 6.3330586,
+      "long": 5.6221058
+    },
+    {
+      "name": "Onitsha",
+      "lat": 6.1461619,
+      "long": 6.8019088
+    },
+    {
+      "name": "Onitsha",
+      "lat": 6.1461619,
+      "long": 6.8019088
+    },
+    {
+      "name": "Onitsha",
+      "lat": 6.1461619,
+      "long": 6.8019088
+    },
+    {
+      "name": "Ilorin",
+      "lat": 8.4963657,
+      "long": 4.5480484
+    },
+    {
+      "name": "Ilorin",
+      "lat": 8.4963657,
+      "long": 4.5480484
+    },
+    {
+      "name": "Ilorin",
+      "lat": 8.4963657,
+      "long": 4.5480484
+    },
+    {
+      "name": "Kaduna",
+      "lat": 10.3825318,
+      "long": 7.8533226
+    },
+    {
+      "name": "Kaduna",
+      "lat": 10.3825318,
+      "long": 7.8533226
+    },
+    {
+      "name": "Kaduna",
+      "lat": 10.3825318,
+      "long": 7.8533226
+    },
+    {
+      "name": "Jos",
+      "lat": 9.9175125,
+      "long": 8.8979401
+    },
+    {
+      "name": "Jos",
+      "lat": 9.9175125,
+      "long": 8.8979401
+    },
+    {
+      "name": "Jos",
+      "lat": 9.9175125,
+      "long": 8.8979401
+    },
+    {
+      "name": "Warri",
+      "lat": 5.5186186,
+      "long": 5.7480196
+    },
+    {
+      "name": "Warri",
+      "lat": 5.5186186,
+      "long": 5.7480196
+    },
+    {
+      "name": "Warri",
+      "lat": 5.5186186,
+      "long": 5.7480196
+    },
+    {
+      "name": "Enugu",
+      "lat": 6.5536094,
+      "long": 7.4143061
+    },
+    {
+      "name": "Enugu",
+      "lat": 6.5536094,
+      "long": 7.4143061
+    },
+    {
+      "name": "Enugu",
+      "lat": 6.5536094,
+      "long": 7.4143061
+    },
+    {
+      "name": "Benghazi",
+      "lat": 32.1060708,
+      "long": 20.0666748
+    },
+    {
+      "name": "Benghazi",
+      "lat": 32.1060708,
+      "long": 20.0666748
+    },
+    {
+      "name": "Benghazi",
+      "lat": 32.1060708,
+      "long": 20.0666748
+    },
+    {
+      "name": "Misrata",
+      "lat": 32.3745923,
+      "long": 15.0905803
+    },
+    {
+      "name": "Misrata",
+      "lat": 32.3745923,
+      "long": 15.0905803
+    },
+    {
+      "name": "Misrata",
+      "lat": 32.3745923,
+      "long": 15.0905803
+    },
+    {
+      "name": "Agadir",
+      "lat": 30.4205162,
+      "long": -9.5838532
+    },
+    {
+      "name": "Agadir",
+      "lat": 30.4205162,
+      "long": -9.5838532
+    },
+    {
+      "name": "Agadir",
+      "lat": 30.4205162,
+      "long": -9.5838532
+    },
+    {
+      "name": "Fez",
+      "lat": 47.66777675,
+      "long": 9.492583950436877
+    },
+    {
+      "name": "Fez",
+      "lat": 47.66777675,
+      "long": 9.492583950436877
+    },
+    {
+      "name": "Fez",
+      "lat": 47.66777675,
+      "long": 9.492583950436877
+    },
+    {
+      "name": "Tangier",
+      "lat": 35.7696302,
+      "long": -5.8033522
+    },
+    {
+      "name": "Tangier",
+      "lat": 35.7696302,
+      "long": -5.8033522
+    },
+    {
+      "name": "Tangier",
+      "lat": 35.7696302,
+      "long": -5.8033522
+    },
+    {
+      "name": "Marrakesh",
+      "lat": 31.6258257,
+      "long": -7.9891608
+    },
+    {
+      "name": "Marrakesh",
+      "lat": 31.6258257,
+      "long": -7.9891608
+    },
+    {
+      "name": "Oujda",
+      "lat": 34.677874,
+      "long": -1.929306
+    },
+    {
+      "name": "Oujda",
+      "lat": 34.677874,
+      "long": -1.929306
+    },
+    {
+      "name": "Oujda",
+      "lat": 34.677874,
+      "long": -1.929306
+    }
+  ]
+}

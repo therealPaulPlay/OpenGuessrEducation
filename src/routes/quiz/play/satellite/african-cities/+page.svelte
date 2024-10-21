@@ -3,12 +3,12 @@
     import SatelliteQuiz from "$lib/components/SatelliteQuiz.svelte";
 
     export const metadata = {
-        title: "Capital Cities from above",
-        tags: ["All"],
-        region: "Satellite World",
-        jsonName:"capital-cities",
+        title: "African Cities from above",
+        tags: ["Africa"],
+        region: "Africa",
+        jsonName:"african-cities",
         category: determineCategory(new URL(import.meta.url).pathname)
     }
 </script>
 
-<SatelliteQuiz jsonName={metadata.jsonName}/>
+<SatelliteQuiz jsonName={metadata.jsonName} />

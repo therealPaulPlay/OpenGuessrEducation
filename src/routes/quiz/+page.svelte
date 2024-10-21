@@ -6,7 +6,7 @@
         Flag,
         MapPin,
         Building2,
-        Satellite
+        Satellite,
     } from "lucide-svelte";
     import { onMount } from "svelte";
     import QuizCard from "$lib/components/QuizCard.svelte";
@@ -161,22 +161,31 @@
                             tags={quiz.tags || []}
                             path={quiz.path}
                             hueRotateDegree={index * 30}>
-                            {#if category.name == "countries" || category.name == "cities" || category.name == "regions"}
+                            {#if category.name == "countries" || category.name == "cities" || category.name == "regions" || category.name == "satellite"}
                                 <Map
                                     region={quiz.region}
                                     width={192}
                                     height={120}
                                     hueRotateDegree={index * 30}
                                     topoJsonName={quiz.topoJson}
+                                    projectionRotation={quiz.projectionRotation || undefined}
+                                    zoom={quiz.previewZoom || undefined}
+                                    projectionType={category.name == "satellite"
+                                        ? "geoOrthographic"
+                                        : "geoMercator"}
                                     showPoints={!(
                                         category.name.toLowerCase() ===
                                             "countries" ||
                                         category.name.toLowerCase() ===
-                                            "regions"
+                                            "regions" ||
+                                        category.name.toLowerCase() ===
+                                            "satellite"
                                     )} />
                             {/if}
                             {#if category.name == "flags"}
-                                <FlagStackPreview hueRotateDegree={index * 30} region={quiz.region} />
+                                <FlagStackPreview
+                                    hueRotateDegree={index * 30}
+                                    region={quiz.region} />
                             {/if}
                         </QuizCard>
                     {/each}

@@ -1,0 +1,1379 @@
+{
+  "Locations": [
+    {
+      "name": "New York",
+      "lat": 40.7127281,
+      "long": -74.0060152
+    },
+    {
+      "name": "New York",
+      "lat": 40.7127281,
+      "long": -74.0060152
+    },
+    {
+      "name": "New York",
+      "lat": 40.7127281,
+      "long": -74.0060152
+    },
+    {
+      "name": "Los Angeles",
+      "lat": 34.0536909,
+      "long": -118.242766
+    },
+    {
+      "name": "Los Angeles",
+      "lat": 34.0536909,
+      "long": -118.242766
+    },
+    {
+      "name": "Los Angeles",
+      "lat": 34.0536909,
+      "long": -118.242766
+    },
+    {
+      "name": "Chicago",
+      "lat": 41.8755616,
+      "long": -87.6244212
+    },
+    {
+      "name": "Chicago",
+      "lat": 41.8755616,
+      "long": -87.6244212
+    },
+    {
+      "name": "Chicago",
+      "lat": 41.8755616,
+      "long": -87.6244212
+    },
+    {
+      "name": "Houston",
+      "lat": 29.7589382,
+      "long": -95.3676974
+    },
+    {
+      "name": "Houston",
+      "lat": 29.7589382,
+      "long": -95.3676974
+    },
+    {
+      "name": "Houston",
+      "lat": 29.7589382,
+      "long": -95.3676974
+    },
+    {
+      "name": "Phoenix",
+      "lat": 33.4484367,
+      "long": -112.074141
+    },
+    {
+      "name": "Phoenix",
+      "lat": 33.4484367,
+      "long": -112.074141
+    },
+    {
+      "name": "Phoenix",
+      "lat": 33.4484367,
+      "long": -112.074141
+    },
+    {
+      "name": "Philadelphia",
+      "lat": 39.9527237,
+      "long": -75.1635262
+    },
+    {
+      "name": "Philadelphia",
+      "lat": 39.9527237,
+      "long": -75.1635262
+    },
+    {
+      "name": "Philadelphia",
+      "lat": 39.9527237,
+      "long": -75.1635262
+    },
+    {
+      "name": "San Antonio",
+      "lat": 29.4246002,
+      "long": -98.4951405
+    },
+    {
+      "name": "San Antonio",
+      "lat": 29.4246002,
+      "long": -98.4951405
+    },
+    {
+      "name": "San Antonio",
+      "lat": 29.4246002,
+      "long": -98.4951405
+    },
+    {
+      "name": "San Diego",
+      "lat": 32.7174202,
+      "long": -117.162772
+    },
+    {
+      "name": "San Diego",
+      "lat": 32.7174202,
+      "long": -117.162772
+    },
+    {
+      "name": "San Diego",
+      "lat": 32.7174202,
+      "long": -117.162772
+    },
+    {
+      "name": "Dallas",
+      "lat": 32.7762719,
+      "long": -96.7968559
+    },
+    {
+      "name": "Dallas",
+      "lat": 32.7762719,
+      "long": -96.7968559
+    },
+    {
+      "name": "Dallas",
+      "lat": 32.7762719,
+      "long": -96.7968559
+    },
+    {
+      "name": "San Jose",
+      "lat": 37.3361663,
+      "long": -121.890591
+    },
+    {
+      "name": "San Jose",
+      "lat": 37.3361663,
+      "long": -121.890591
+    },
+    {
+      "name": "San Jose",
+      "lat": 37.3361663,
+      "long": -121.890591
+    },
+    {
+      "name": "Austin",
+      "lat": 30.2711286,
+      "long": -97.7436995
+    },
+    {
+      "name": "Austin",
+      "lat": 30.2711286,
+      "long": -97.7436995
+    },
+    {
+      "name": "Austin",
+      "lat": 30.2711286,
+      "long": -97.7436995
+    },
+    {
+      "name": "Jacksonville",
+      "lat": 30.3321838,
+      "long": -81.655651
+    },
+    {
+      "name": "Jacksonville",
+      "lat": 30.3321838,
+      "long": -81.655651
+    },
+    {
+      "name": "Jacksonville",
+      "lat": 30.3321838,
+      "long": -81.655651
+    },
+    {
+      "name": "Fort Worth",
+      "lat": 32.753177,
+      "long": -97.3327459
+    },
+    {
+      "name": "Fort Worth",
+      "lat": 32.753177,
+      "long": -97.3327459
+    },
+    {
+      "name": "Fort Worth",
+      "lat": 32.753177,
+      "long": -97.3327459
+    },
+    {
+      "name": "Columbus",
+      "lat": 39.9622601,
+      "long": -83.0007065
+    },
+    {
+      "name": "Columbus",
+      "lat": 39.9622601,
+      "long": -83.0007065
+    },
+    {
+      "name": "Columbus",
+      "lat": 39.9622601,
+      "long": -83.0007065
+    },
+    {
+      "name": "Charlotte",
+      "lat": 35.2272086,
+      "long": -80.8430827
+    },
+    {
+      "name": "Charlotte",
+      "lat": 35.2272086,
+      "long": -80.8430827
+    },
+    {
+      "name": "Charlotte",
+      "lat": 35.2272086,
+      "long": -80.8430827
+    },
+    {
+      "name": "Indianapolis",
+      "lat": 39.7683331,
+      "long": -86.1583502
+    },
+    {
+      "name": "Indianapolis",
+      "lat": 39.7683331,
+      "long": -86.1583502
+    },
+    {
+      "name": "Indianapolis",
+      "lat": 39.7683331,
+      "long": -86.1583502
+    },
+    {
+      "name": "San Francisco",
+      "lat": 37.7792588,
+      "long": -122.4193286
+    },
+    {
+      "name": "San Francisco",
+      "lat": 37.7792588,
+      "long": -122.4193286
+    },
+    {
+      "name": "San Francisco",
+      "lat": 37.7792588,
+      "long": -122.4193286
+    },
+    {
+      "name": "Seattle",
+      "lat": 47.6038321,
+      "long": -122.330062
+    },
+    {
+      "name": "Seattle",
+      "lat": 47.6038321,
+      "long": -122.330062
+    },
+    {
+      "name": "Seattle",
+      "lat": 47.6038321,
+      "long": -122.330062
+    },
+    {
+      "name": "Denver",
+      "lat": 39.7392364,
+      "long": -104.984862
+    },
+    {
+      "name": "Denver",
+      "lat": 39.7392364,
+      "long": -104.984862
+    },
+    {
+      "name": "Denver",
+      "lat": 39.7392364,
+      "long": -104.984862
+    },
+    {
+      "name": "Washington D.C.",
+      "lat": 38.8950368,
+      "long": -77.0365427
+    },
+    {
+      "name": "Washington D.C.",
+      "lat": 38.8950368,
+      "long": -77.0365427
+    },
+    {
+      "name": "Washington D.C.",
+      "lat": 38.8950368,
+      "long": -77.0365427
+    },
+    {
+      "name": "Boston",
+      "lat": 42.3554334,
+      "long": -71.060511
+    },
+    {
+      "name": "Boston",
+      "lat": 42.3554334,
+      "long": -71.060511
+    },
+    {
+      "name": "Boston",
+      "lat": 42.3554334,
+      "long": -71.060511
+    },
+    {
+      "name": "El Paso",
+      "lat": 31.7601164,
+      "long": -106.4870404
+    },
+    {
+      "name": "El Paso",
+      "lat": 31.7601164,
+      "long": -106.4870404
+    },
+    {
+      "name": "El Paso",
+      "lat": 31.7601164,
+      "long": -106.4870404
+    },
+    {
+      "name": "Nashville",
+      "lat": 36.1622767,
+      "long": -86.7742984
+    },
+    {
+      "name": "Nashville",
+      "lat": 36.1622767,
+      "long": -86.7742984
+    },
+    {
+      "name": "Nashville",
+      "lat": 36.1622767,
+      "long": -86.7742984
+    },
+    {
+      "name": "Detroit",
+      "lat": 42.3315509,
+      "long": -83.0466403
+    },
+    {
+      "name": "Detroit",
+      "lat": 42.3315509,
+      "long": -83.0466403
+    },
+    {
+      "name": "Detroit",
+      "lat": 42.3315509,
+      "long": -83.0466403
+    },
+    {
+      "name": "Memphis",
+      "lat": 35.1460249,
+      "long": -90.0517638
+    },
+    {
+      "name": "Memphis",
+      "lat": 35.1460249,
+      "long": -90.0517638
+    },
+    {
+      "name": "Memphis",
+      "lat": 35.1460249,
+      "long": -90.0517638
+    },
+    {
+      "name": "Portland",
+      "lat": 45.5202471,
+      "long": -122.674194
+    },
+    {
+      "name": "Portland",
+      "lat": 45.5202471,
+      "long": -122.674194
+    },
+    {
+      "name": "Portland",
+      "lat": 45.5202471,
+      "long": -122.674194
+    },
+    {
+      "name": "Las Vegas",
+      "lat": 36.1672559,
+      "long": -115.148516
+    },
+    {
+      "name": "Las Vegas",
+      "lat": 36.1672559,
+      "long": -115.148516
+    },
+    {
+      "name": "Louisville",
+      "lat": 38.2542376,
+      "long": -85.759407
+    },
+    {
+      "name": "Louisville",
+      "lat": 38.2542376,
+      "long": -85.759407
+    },
+    {
+      "name": "Louisville",
+      "lat": 38.2542376,
+      "long": -85.759407
+    },
+    {
+      "name": "Baltimore",
+      "lat": 39.2908816,
+      "long": -76.610759
+    },
+    {
+      "name": "Baltimore",
+      "lat": 39.2908816,
+      "long": -76.610759
+    },
+    {
+      "name": "Baltimore",
+      "lat": 39.2908816,
+      "long": -76.610759
+    },
+    {
+      "name": "Milwaukee",
+      "lat": 43.0386475,
+      "long": -87.9090751
+    },
+    {
+      "name": "Milwaukee",
+      "lat": 43.0386475,
+      "long": -87.9090751
+    },
+    {
+      "name": "Milwaukee",
+      "lat": 43.0386475,
+      "long": -87.9090751
+    },
+    {
+      "name": "Albuquerque",
+      "lat": 35.0841034,
+      "long": -106.650985
+    },
+    {
+      "name": "Albuquerque",
+      "lat": 35.0841034,
+      "long": -106.650985
+    },
+    {
+      "name": "Albuquerque",
+      "lat": 35.0841034,
+      "long": -106.650985
+    },
+    {
+      "name": "Tucson",
+      "lat": 32.2228765,
+      "long": -110.974847
+    },
+    {
+      "name": "Tucson",
+      "lat": 32.2228765,
+      "long": -110.974847
+    },
+    {
+      "name": "Tucson",
+      "lat": 32.2228765,
+      "long": -110.974847
+    },
+    {
+      "name": "Fresno",
+      "lat": 36.7394421,
+      "long": -119.78483
+    },
+    {
+      "name": "Fresno",
+      "lat": 36.7394421,
+      "long": -119.78483
+    },
+    {
+      "name": "Fresno",
+      "lat": 36.7394421,
+      "long": -119.78483
+    },
+    {
+      "name": "Sacramento",
+      "lat": 38.5810606,
+      "long": -121.493895
+    },
+    {
+      "name": "Sacramento",
+      "lat": 38.5810606,
+      "long": -121.493895
+    },
+    {
+      "name": "Sacramento",
+      "lat": 38.5810606,
+      "long": -121.493895
+    },
+    {
+      "name": "Kansas City",
+      "lat": 39.100105,
+      "long": -94.5781416
+    },
+    {
+      "name": "Kansas City",
+      "lat": 39.100105,
+      "long": -94.5781416
+    },
+    {
+      "name": "Kansas City",
+      "lat": 39.100105,
+      "long": -94.5781416
+    },
+    {
+      "name": "Atlanta",
+      "lat": 33.7489924,
+      "long": -84.3902644
+    },
+    {
+      "name": "Atlanta",
+      "lat": 33.7489924,
+      "long": -84.3902644
+    },
+    {
+      "name": "Atlanta",
+      "lat": 33.7489924,
+      "long": -84.3902644
+    },
+    {
+      "name": "Miami",
+      "lat": 25.7741728,
+      "long": -80.19362
+    },
+    {
+      "name": "Miami",
+      "lat": 25.7741728,
+      "long": -80.19362
+    },
+    {
+      "name": "Miami",
+      "lat": 25.7741728,
+      "long": -80.19362
+    },
+    {
+      "name": "Cleveland",
+      "lat": 41.4996574,
+      "long": -81.6936772
+    },
+    {
+      "name": "Cleveland",
+      "lat": 41.4996574,
+      "long": -81.6936772
+    },
+    {
+      "name": "Cleveland",
+      "lat": 41.4996574,
+      "long": -81.6936772
+    },
+    {
+      "name": "Omaha",
+      "lat": 41.2587459,
+      "long": -95.9383758
+    },
+    {
+      "name": "Omaha",
+      "lat": 41.2587459,
+      "long": -95.9383758
+    },
+    {
+      "name": "Omaha",
+      "lat": 41.2587459,
+      "long": -95.9383758
+    },
+    {
+      "name": "Raleigh",
+      "lat": 35.7803977,
+      "long": -78.6390989
+    },
+    {
+      "name": "Raleigh",
+      "lat": 35.7803977,
+      "long": -78.6390989
+    },
+    {
+      "name": "Raleigh",
+      "lat": 35.7803977,
+      "long": -78.6390989
+    },
+    {
+      "name": "Colorado Springs",
+      "lat": 38.8339578,
+      "long": -104.825348
+    },
+    {
+      "name": "Colorado Springs",
+      "lat": 38.8339578,
+      "long": -104.825348
+    },
+    {
+      "name": "Colorado Springs",
+      "lat": 38.8339578,
+      "long": -104.825348
+    },
+    {
+      "name": "Virginia Beach",
+      "lat": 36.8496579,
+      "long": -75.9760751
+    },
+    {
+      "name": "Virginia Beach",
+      "lat": 36.8496579,
+      "long": -75.9760751
+    },
+    {
+      "name": "Virginia Beach",
+      "lat": 36.8496579,
+      "long": -75.9760751
+    },
+    {
+      "name": "Oakland",
+      "lat": 37.8044557,
+      "long": -122.271356
+    },
+    {
+      "name": "Oakland",
+      "lat": 37.8044557,
+      "long": -122.271356
+    },
+    {
+      "name": "Oakland",
+      "lat": 37.8044557,
+      "long": -122.271356
+    },
+    {
+      "name": "Minneapolis",
+      "lat": 44.9772995,
+      "long": -93.2654692
+    },
+    {
+      "name": "Minneapolis",
+      "lat": 44.9772995,
+      "long": -93.2654692
+    },
+    {
+      "name": "Minneapolis",
+      "lat": 44.9772995,
+      "long": -93.2654692
+    },
+    {
+      "name": "Tulsa",
+      "lat": 36.1563122,
+      "long": -95.9927516
+    },
+    {
+      "name": "Tulsa",
+      "lat": 36.1563122,
+      "long": -95.9927516
+    },
+    {
+      "name": "Tulsa",
+      "lat": 36.1563122,
+      "long": -95.9927516
+    },
+    {
+      "name": "Arlington",
+      "lat": 32.7355816,
+      "long": -97.1071186
+    },
+    {
+      "name": "Arlington",
+      "lat": 32.7355816,
+      "long": -97.1071186
+    },
+    {
+      "name": "Arlington",
+      "lat": 32.7355816,
+      "long": -97.1071186
+    },
+    {
+      "name": "New Orleans",
+      "lat": 29.9759983,
+      "long": -90.0782127
+    },
+    {
+      "name": "New Orleans",
+      "lat": 29.9759983,
+      "long": -90.0782127
+    },
+    {
+      "name": "New Orleans",
+      "lat": 29.9759983,
+      "long": -90.0782127
+    },
+    {
+      "name": "Wichita",
+      "lat": 37.6922361,
+      "long": -97.3375448
+    },
+    {
+      "name": "Wichita",
+      "lat": 37.6922361,
+      "long": -97.3375448
+    },
+    {
+      "name": "Wichita",
+      "lat": 37.6922361,
+      "long": -97.3375448
+    },
+    {
+      "name": "Bakersfield",
+      "lat": 35.3738712,
+      "long": -119.019463
+    },
+    {
+      "name": "Bakersfield",
+      "lat": 35.3738712,
+      "long": -119.019463
+    },
+    {
+      "name": "Bakersfield",
+      "lat": 35.3738712,
+      "long": -119.019463
+    },
+    {
+      "name": "Tampa",
+      "lat": 27.9477595,
+      "long": -82.458444
+    },
+    {
+      "name": "Tampa",
+      "lat": 27.9477595,
+      "long": -82.458444
+    },
+    {
+      "name": "Tampa",
+      "lat": 27.9477595,
+      "long": -82.458444
+    },
+    {
+      "name": "Honolulu",
+      "lat": 21.304547,
+      "long": -157.855676
+    },
+    {
+      "name": "Honolulu",
+      "lat": 21.304547,
+      "long": -157.855676
+    },
+    {
+      "name": "Honolulu",
+      "lat": 21.304547,
+      "long": -157.855676
+    },
+    {
+      "name": "Anaheim",
+      "lat": 33.8347516,
+      "long": -117.911732
+    },
+    {
+      "name": "Anaheim",
+      "lat": 33.8347516,
+      "long": -117.911732
+    },
+    {
+      "name": "Anaheim",
+      "lat": 33.8347516,
+      "long": -117.911732
+    },
+    {
+      "name": "Aurora",
+      "lat": 41.7571701,
+      "long": -88.3147539
+    },
+    {
+      "name": "Aurora",
+      "lat": 41.7571701,
+      "long": -88.3147539
+    },
+    {
+      "name": "Aurora",
+      "lat": 41.7571701,
+      "long": -88.3147539
+    },
+    {
+      "name": "Santa Ana",
+      "lat": 33.7494951,
+      "long": -117.873221
+    },
+    {
+      "name": "Santa Ana",
+      "lat": 33.7494951,
+      "long": -117.873221
+    },
+    {
+      "name": "Santa Ana",
+      "lat": 33.7494951,
+      "long": -117.873221
+    },
+    {
+      "name": "Corpus Christi",
+      "lat": 27.7635302,
+      "long": -97.4033191
+    },
+    {
+      "name": "Corpus Christi",
+      "lat": 27.7635302,
+      "long": -97.4033191
+    },
+    {
+      "name": "Corpus Christi",
+      "lat": 27.7635302,
+      "long": -97.4033191
+    },
+    {
+      "name": "Riverside",
+      "lat": 33.9824949,
+      "long": -117.374238
+    },
+    {
+      "name": "Riverside",
+      "lat": 33.9824949,
+      "long": -117.374238
+    },
+    {
+      "name": "Riverside",
+      "lat": 33.9824949,
+      "long": -117.374238
+    },
+    {
+      "name": "Lexington",
+      "lat": 38.0464066,
+      "long": -84.4970393
+    },
+    {
+      "name": "Lexington",
+      "lat": 38.0464066,
+      "long": -84.4970393
+    },
+    {
+      "name": "Lexington",
+      "lat": 38.0464066,
+      "long": -84.4970393
+    },
+    {
+      "name": "St. Louis",
+      "lat": 38.6280278,
+      "long": -90.1910154
+    },
+    {
+      "name": "St. Louis",
+      "lat": 38.6280278,
+      "long": -90.1910154
+    },
+    {
+      "name": "St. Louis",
+      "lat": 38.6280278,
+      "long": -90.1910154
+    },
+    {
+      "name": "Pittsburgh",
+      "lat": 40.4416941,
+      "long": -79.9900861
+    },
+    {
+      "name": "Pittsburgh",
+      "lat": 40.4416941,
+      "long": -79.9900861
+    },
+    {
+      "name": "Pittsburgh",
+      "lat": 40.4416941,
+      "long": -79.9900861
+    },
+    {
+      "name": "Stockton",
+      "lat": 37.9577016,
+      "long": -121.290779
+    },
+    {
+      "name": "Stockton",
+      "lat": 37.9577016,
+      "long": -121.290779
+    },
+    {
+      "name": "Stockton",
+      "lat": 37.9577016,
+      "long": -121.290779
+    },
+    {
+      "name": "Cincinnati",
+      "lat": 39.1014537,
+      "long": -84.5124602
+    },
+    {
+      "name": "Cincinnati",
+      "lat": 39.1014537,
+      "long": -84.5124602
+    },
+    {
+      "name": "Cincinnati",
+      "lat": 39.1014537,
+      "long": -84.5124602
+    },
+    {
+      "name": "Anchorage",
+      "lat": 61.2163129,
+      "long": -149.894852
+    },
+    {
+      "name": "Anchorage",
+      "lat": 61.2163129,
+      "long": -149.894852
+    },
+    {
+      "name": "Anchorage",
+      "lat": 61.2163129,
+      "long": -149.894852
+    },
+    {
+      "name": "Henderson",
+      "lat": 32.182598,
+      "long": -95.7893178
+    },
+    {
+      "name": "Henderson",
+      "lat": 32.182598,
+      "long": -95.7893178
+    },
+    {
+      "name": "Henderson",
+      "lat": 32.182598,
+      "long": -95.7893178
+    },
+    {
+      "name": "Orlando",
+      "lat": 28.5421109,
+      "long": -81.3790304
+    },
+    {
+      "name": "Orlando",
+      "lat": 28.5421109,
+      "long": -81.3790304
+    },
+    {
+      "name": "Orlando",
+      "lat": 28.5421109,
+      "long": -81.3790304
+    },
+    {
+      "name": "Greensboro",
+      "lat": 36.0726355,
+      "long": -79.7919754
+    },
+    {
+      "name": "Greensboro",
+      "lat": 36.0726355,
+      "long": -79.7919754
+    },
+    {
+      "name": "Greensboro",
+      "lat": 36.0726355,
+      "long": -79.7919754
+    },
+    {
+      "name": "Plano",
+      "lat": 33.0136764,
+      "long": -96.6925096
+    },
+    {
+      "name": "Plano",
+      "lat": 33.0136764,
+      "long": -96.6925096
+    },
+    {
+      "name": "Plano",
+      "lat": 33.0136764,
+      "long": -96.6925096
+    },
+    {
+      "name": "Lincoln",
+      "lat": 40.8088861,
+      "long": -96.7077751
+    },
+    {
+      "name": "Lincoln",
+      "lat": 40.8088861,
+      "long": -96.7077751
+    },
+    {
+      "name": "Lincoln",
+      "lat": 40.8088861,
+      "long": -96.7077751
+    },
+    {
+      "name": "Toledo",
+      "lat": 39.8560597,
+      "long": -4.0239356
+    },
+    {
+      "name": "Toledo",
+      "lat": 39.8560597,
+      "long": -4.0239356
+    },
+    {
+      "name": "Toledo",
+      "lat": 39.8560597,
+      "long": -4.0239356
+    },
+    {
+      "name": "Saint Paul",
+      "lat": 44.9497487,
+      "long": -93.0931028
+    },
+    {
+      "name": "Saint Paul",
+      "lat": 44.9497487,
+      "long": -93.0931028
+    },
+    {
+      "name": "Saint Paul",
+      "lat": 44.9497487,
+      "long": -93.0931028
+    },
+    {
+      "name": "Irvine",
+      "lat": 33.6856969,
+      "long": -117.825981
+    },
+    {
+      "name": "Irvine",
+      "lat": 33.6856969,
+      "long": -117.825981
+    },
+    {
+      "name": "Irvine",
+      "lat": 33.6856969,
+      "long": -117.825981
+    },
+    {
+      "name": "Newark",
+      "lat": 40.735657,
+      "long": -74.1723667
+    },
+    {
+      "name": "Newark",
+      "lat": 40.735657,
+      "long": -74.1723667
+    },
+    {
+      "name": "Newark",
+      "lat": 40.735657,
+      "long": -74.1723667
+    },
+    {
+      "name": "Durham",
+      "lat": 54.666667,
+      "long": -1.75
+    },
+    {
+      "name": "Durham",
+      "lat": 54.666667,
+      "long": -1.75
+    },
+    {
+      "name": "Durham",
+      "lat": 54.666667,
+      "long": -1.75
+    },
+    {
+      "name": "Buffalo",
+      "lat": 42.8867166,
+      "long": -78.8783922
+    },
+    {
+      "name": "Buffalo",
+      "lat": 42.8867166,
+      "long": -78.8783922
+    },
+    {
+      "name": "Buffalo",
+      "lat": 42.8867166,
+      "long": -78.8783922
+    },
+    {
+      "name": "Laredo",
+      "lat": 27.5056251,
+      "long": -99.5074517
+    },
+    {
+      "name": "Laredo",
+      "lat": 27.5056251,
+      "long": -99.5074517
+    },
+    {
+      "name": "Laredo",
+      "lat": 27.5056251,
+      "long": -99.5074517
+    },
+    {
+      "name": "Madison",
+      "lat": 43.074761,
+      "long": -89.3837613
+    },
+    {
+      "name": "Madison",
+      "lat": 43.074761,
+      "long": -89.3837613
+    },
+    {
+      "name": "Madison",
+      "lat": 43.074761,
+      "long": -89.3837613
+    },
+    {
+      "name": "Chandler",
+      "lat": 33.3062031,
+      "long": -111.841185
+    },
+    {
+      "name": "Chandler",
+      "lat": 33.3062031,
+      "long": -111.841185
+    },
+    {
+      "name": "Chandler",
+      "lat": 33.3062031,
+      "long": -111.841185
+    },
+    {
+      "name": "Lubbock",
+      "lat": 33.5855677,
+      "long": -101.8470215
+    },
+    {
+      "name": "Lubbock",
+      "lat": 33.5855677,
+      "long": -101.8470215
+    },
+    {
+      "name": "Lubbock",
+      "lat": 33.5855677,
+      "long": -101.8470215
+    },
+    {
+      "name": "Scottsdale",
+      "lat": 33.4942189,
+      "long": -111.926018
+    },
+    {
+      "name": "Scottsdale",
+      "lat": 33.4942189,
+      "long": -111.926018
+    },
+    {
+      "name": "Scottsdale",
+      "lat": 33.4942189,
+      "long": -111.926018
+    },
+    {
+      "name": "Reno",
+      "lat": 39.5261206,
+      "long": -119.8126581
+    },
+    {
+      "name": "Reno",
+      "lat": 39.5261206,
+      "long": -119.8126581
+    },
+    {
+      "name": "Reno",
+      "lat": 39.5261206,
+      "long": -119.8126581
+    },
+    {
+      "name": "Gilbert",
+      "lat": 33.3527632,
+      "long": -111.789037
+    },
+    {
+      "name": "Gilbert",
+      "lat": 33.3527632,
+      "long": -111.789037
+    },
+    {
+      "name": "Gilbert",
+      "lat": 33.3527632,
+      "long": -111.789037
+    },
+    {
+      "name": "Winston-Salem",
+      "lat": 36.0998131,
+      "long": -80.2440518
+    },
+    {
+      "name": "Winston-Salem",
+      "lat": 36.0998131,
+      "long": -80.2440518
+    },
+    {
+      "name": "Winston-Salem",
+      "lat": 36.0998131,
+      "long": -80.2440518
+    },
+    {
+      "name": "Glendale",
+      "lat": 34.1469416,
+      "long": -118.2478471
+    },
+    {
+      "name": "Glendale",
+      "lat": 34.1469416,
+      "long": -118.2478471
+    },
+    {
+      "name": "Glendale",
+      "lat": 34.1469416,
+      "long": -118.2478471
+    },
+    {
+      "name": "Hialeah",
+      "lat": 25.8575963,
+      "long": -80.2781057
+    },
+    {
+      "name": "Hialeah",
+      "lat": 25.8575963,
+      "long": -80.2781057
+    },
+    {
+      "name": "Hialeah",
+      "lat": 25.8575963,
+      "long": -80.2781057
+    },
+    {
+      "name": "Garland",
+      "lat": 32.912624,
+      "long": -96.6388833
+    },
+    {
+      "name": "Garland",
+      "lat": 32.912624,
+      "long": -96.6388833
+    },
+    {
+      "name": "Garland",
+      "lat": 32.912624,
+      "long": -96.6388833
+    },
+    {
+      "name": "Boise",
+      "lat": 43.6166163,
+      "long": -116.200886
+    },
+    {
+      "name": "Boise",
+      "lat": 43.6166163,
+      "long": -116.200886
+    },
+    {
+      "name": "Boise",
+      "lat": 43.6166163,
+      "long": -116.200886
+    },
+    {
+      "name": "Chesapeake",
+      "lat": 36.7168315,
+      "long": -76.2494453
+    },
+    {
+      "name": "Chesapeake",
+      "lat": 36.7168315,
+      "long": -76.2494453
+    },
+    {
+      "name": "Chesapeake",
+      "lat": 36.7168315,
+      "long": -76.2494453
+    },
+    {
+      "name": "Spokane",
+      "lat": 47.6571934,
+      "long": -117.42351
+    },
+    {
+      "name": "Spokane",
+      "lat": 47.6571934,
+      "long": -117.42351
+    },
+    {
+      "name": "Spokane",
+      "lat": 47.6571934,
+      "long": -117.42351
+    },
+    {
+      "name": "Norfolk",
+      "lat": 52.666667,
+      "long": 1.0
+    },
+    {
+      "name": "Norfolk",
+      "lat": 52.666667,
+      "long": 1.0
+    },
+    {
+      "name": "Norfolk",
+      "lat": 52.666667,
+      "long": 1.0
+    },
+    {
+      "name": "Fremont",
+      "lat": 37.5482697,
+      "long": -121.988571
+    },
+    {
+      "name": "Fremont",
+      "lat": 37.5482697,
+      "long": -121.988571
+    },
+    {
+      "name": "Fremont",
+      "lat": 37.5482697,
+      "long": -121.988571
+    },
+    {
+      "name": "Richmond",
+      "lat": 37.5385087,
+      "long": -77.43428
+    },
+    {
+      "name": "Richmond",
+      "lat": 37.5385087,
+      "long": -77.43428
+    },
+    {
+      "name": "Richmond",
+      "lat": 37.5385087,
+      "long": -77.43428
+    },
+    {
+      "name": "Baton Rouge",
+      "lat": 30.4494155,
+      "long": -91.1869659
+    },
+    {
+      "name": "Baton Rouge",
+      "lat": 30.4494155,
+      "long": -91.1869659
+    },
+    {
+      "name": "Baton Rouge",
+      "lat": 30.4494155,
+      "long": -91.1869659
+    },
+    {
+      "name": "Des Moines",
+      "lat": 41.5868654,
+      "long": -93.6249494
+    },
+    {
+      "name": "Des Moines",
+      "lat": 41.5868654,
+      "long": -93.6249494
+    },
+    {
+      "name": "Des Moines",
+      "lat": 41.5868654,
+      "long": -93.6249494
+    }
+  ]
+}

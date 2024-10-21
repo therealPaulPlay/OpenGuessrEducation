@@ -1,4 +1,11 @@
 {
+  "Default": {
+    "center": {
+      "lat": 0,
+      "long": 0
+    },
+    "zoom": 0.5
+  },
   "World": {
     "center": {
       "lat": 5,
@@ -111,6 +118,13 @@
         "long": 166.9591
       }
     }
+  },
+  "Satellite World": {
+    "center": {
+      "lat": 5,
+      "long": 0
+    },
+    "zoom": 0.8
   },
   "Europe": {
     "center": {
@@ -998,7 +1012,7 @@
         "lat": -4.2634,
         "long": 15.2429
       },
-      "Djibouti": {
+      "Djibouti City": {
         "lat": 11.5721,
         "long": 43.1456
       },

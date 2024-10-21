@@ -110,15 +110,21 @@
     {:else}
       {#each quizzesWithSimilarityScore as quiz (quiz.path)}
         <QuizCard title={quiz.title} tags={quiz.tags || []} path={quiz.path}>
-          {#if quiz.category == "countries" || quiz.category == "cities" || quiz.category == "regions"}
+          {#if quiz.category == "countries" || quiz.category == "cities" || quiz.category == "regions" || quiz.category == "satellite"}
             <Map
               region={quiz.region}
-              zoom={quiz.zoom}
               width={192}
               height={120}
               topoJsonName={quiz.topoJson}
+              zoom={quiz.previewZoom || undefined}
+              projectionType={quiz.category == "satellite"
+                ? "geoOrthographic"
+                : "geoMercator"}
+              projectionRotation={quiz.projectionRotation || undefined}
               showPoints={!(
-                quiz.category == "countries" || quiz.category == "regions"
+                quiz.category == "countries" ||
+                quiz.category == "regions" ||
+                quiz.category == "satellite"
               )} />
           {/if}
           {#if quiz.category == "flags"}

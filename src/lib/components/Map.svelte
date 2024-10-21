@@ -1,6 +1,11 @@
 <script>
     import { onMount } from "svelte";
-    import { geoPath, geoMercator } from "d3-geo";
+    import {
+        geoPath,
+        geoMercator,
+        geoOrthographic,
+        geoGraticule10,
+    } from "d3-geo";
     import { feature } from "topojson-client";
     import { createEventDispatcher } from "svelte";
     import { Plus, Minus } from "lucide-svelte";
@@ -23,12 +28,21 @@
     export let topoJsonName = "topojson-world-110m";
     export let afterLoad = "";
 
-    let svgElement;
+    export let projectionType = "geoMercator";
+    export let projectionRotation = 0; // [x, y, z] rotation, this takes an array with these values
+
     let mapContainer;
     let features = [];
     let points = []; // New array to store point features
 
-    let projection = geoMercator();
+    let projections = {
+        geoMercator: geoMercator(),
+        geoOrthographic: geoOrthographic().rotate(projectionRotation),
+    };
+
+    let backgroundCircle;
+
+    let projection = projections[projectionType];
     let path = geoPath().projection(projection);
     let regionCountries;
 
@@ -293,13 +307,17 @@
     async function updateProjection() {
         if (!allRegionSettings) return;
 
-        const settings = allRegionSettings[region] || allRegionSettings.World;
+        const settings = allRegionSettings[region] || allRegionSettings.Default;
         const { center, zoom: regionZoom } = settings;
 
         // Calculate the scale based on the map container size and region zoom
         const minDimension = Math.min(width, height);
         const baseScale = minDimension / 2;
         const scale = baseScale * regionZoom * zoom;
+
+        if (projectionType === "geoOrthographic") {
+            backgroundCircle = geoGraticule10();
+        }
 
         projection
             .scale(scale)
@@ -310,14 +328,15 @@
     }
 
     function generatePaths() {
-        const highlightedCountries = highlightCountries();
+        const highlightedCountries = highlightCountries() || "";
 
         features = features
             .map((feature, index) => {
                 const isHighlighted =
                     highlightedCountries.includes(feature.properties.name) ||
                     region === "World" ||
-                    region === "All";
+                    region === "All" ||
+                    region === "Satellite World";
                 const d = path(feature);
 
                 const interactivity =
@@ -468,7 +487,7 @@
         regionCountries = await fetchContinentCountries();
         allRegionSettings = await fetchRegionSettings();
 
-        const settings = allRegionSettings[region] || allRegionSettings.World;
+        const settings = allRegionSettings[region] || allRegionSettings.Default;
         regionPoints = settings?.points || {};
 
         if (geoData && regionCountries && allRegionSettings) {
@@ -529,7 +548,6 @@
 
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <svg
-            bind:this={svgElement}
             width="100%"
             height="100%"
             viewBox={`0 0 ${width} ${height}`}
@@ -544,71 +562,115 @@
                 ? 'pointer-events-auto'
                 : 'pointer-events-none'}">
             <g>
-                {#each features as feature (feature.uniqueKey)}
-                    <!-- svelte-ignore a11y-click-events-have-key-events -->
-                    <!-- svelte-ignore a11y-no-static-element-interactions -->
+                {#if projectionType === "geoOrthographic" && backgroundCircle}
                     <path
-                        d={feature.d}
-                        fill={feature.flashColor ||
-                            feature.color ||
-                            "oklch(var(--s))"}
-                        stroke="oklch(var(--a))"
-                        stroke-width="0.5"
-                        vector-effect="non-scaling-stroke"
-                        on:click={(event) => handleRegionClick(feature, event)}
-                        on:mouseenter={() => (feature.isHovered = true)}
-                        on:mouseleave={() => (feature.isHovered = false)}
-                        class="feature-path"
-                        style="filter: {feature.isHovered
-                            ? 'brightness(1.1)'
-                            : 'none'};" />
-                {/each}
-            </g>
-
-            <g>
-                <!-- svelte-ignore a11y-click-events-have-key-events -->
-                {#if showPoints}
-                    {#each points as point (point.uniqueKey)}
+                        d={path({ type: "Sphere" })}
+                        fill="rgba(0, 0, 0, 0.075)"
+                        stroke="none"
+                        class="planet-background" />
+                {/if}
+                <g>
+                    {#each features as feature (feature.uniqueKey)}
                         <!-- svelte-ignore a11y-click-events-have-key-events -->
                         <!-- svelte-ignore a11y-no-static-element-interactions -->
-                        <g
+                        <path
+                            d={feature.d}
+                            fill={feature.flashColor ||
+                                feature.color ||
+                                "oklch(var(--s))"}
+                            stroke="oklch(var(--a))"
+                            stroke-width="0.5"
+                            vector-effect="non-scaling-stroke"
                             on:click={(event) =>
-                                handleRegionClick(point, event)}
-                            on:mouseenter={() => (point.isHovered = true)}
-                            on:mouseleave={() => (point.isHovered = false)}
-                            class="point-feature"
-                            stroke="oklch(var(--b2))"
-                            stroke-width="2"
-                            transform={`translate(${point.x},${point.y})`}>
-                            <circle
-                                r={5 + (10 * width) / 2000}
-                                fill={point.flashColor ||
-                                    point.color ||
-                                    "oklch(var(--s))"}
-                                class="point-circle"
-                                style="filter: drop-shadow(2px 2px 4px rgba(50,50,50,0.3)) {point.isHovered
-                                    ? 'brightness(1.2)'
-                                    : ''};" />
-                        </g>
+                                handleRegionClick(feature, event)}
+                            on:mouseenter={() => (feature.isHovered = true)}
+                            on:mouseleave={() => (feature.isHovered = false)}
+                            class="feature-path"
+                            style="filter: {feature.isHovered
+                                ? 'brightness(1.1)'
+                                : 'none'};" />
                     {/each}
-                {/if}
-            </g>
+                </g>
 
-            <!-- text labels (country / region / city name) -->
-            <g>
-                {#each features as feature (feature.uniqueKey)}
-                    <!-- check if the feature is even highlighted and part of the map, if all labels or its label should be shown, if the zoom is big enough and if there isn't a point with that label already -->
-                    {#if feature.isHighlighted && (showLabels || feature.showLabel) && zoom >= minLabelZoom && !points.some((point) => point.properties.name == feature.properties.name)}
-                        {#if path.centroid(feature)}
-                            {@const [x, y] = path.centroid(feature)}
+                <g>
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
+                    {#if showPoints}
+                        {#each points as point (point.uniqueKey)}
+                            <!-- svelte-ignore a11y-click-events-have-key-events -->
+                            <!-- svelte-ignore a11y-no-static-element-interactions -->
+                            <g
+                                on:click={(event) =>
+                                    handleRegionClick(point, event)}
+                                on:mouseenter={() => (point.isHovered = true)}
+                                on:mouseleave={() => (point.isHovered = false)}
+                                class="point-feature"
+                                stroke="oklch(var(--b2))"
+                                stroke-width="2"
+                                transform={`translate(${point.x},${point.y})`}>
+                                <circle
+                                    r={5 + (10 * width) / 2000}
+                                    fill={point.flashColor ||
+                                        point.color ||
+                                        "oklch(var(--s))"}
+                                    class="point-circle"
+                                    style="filter: drop-shadow(2px 2px 4px rgba(50,50,50,0.3)) {point.isHovered
+                                        ? 'brightness(1.2)'
+                                        : ''};" />
+                            </g>
+                        {/each}
+                    {/if}
+                </g>
+
+                <!-- text labels (country / region / city name) -->
+                <g>
+                    {#each features as feature (feature.uniqueKey)}
+                        <!-- check if the feature is even highlighted and part of the map, if all labels or its label should be shown, if the zoom is big enough and if there isn't a point with that label already -->
+                        {#if feature.isHighlighted && (showLabels || feature.showLabel) && zoom >= minLabelZoom && !points.some((point) => point.properties.name == feature.properties.name)}
+                            {#if path.centroid(feature)}
+                                {@const [x, y] = path.centroid(feature)}
+                                {@const text = shortenRegionName(
+                                    feature.properties.name,
+                                )}
+                                {@const textLength = text.length * 8}
+                                <g>
+                                    <rect
+                                        x={x - textLength / 2 - 10}
+                                        y={y - 12}
+                                        width={textLength + 20}
+                                        height="24"
+                                        rx="10"
+                                        ry="10"
+                                        opacity="0.85"
+                                        pointer-events="none"
+                                        fill="oklch(var(--b2))"
+                                        class="label-background" />
+                                    <text
+                                        {x}
+                                        y={y + 1}
+                                        text-anchor="middle"
+                                        dominant-baseline="middle"
+                                        fill="oklch(var(--s))"
+                                        font-size="15"
+                                        font-weight="bold"
+                                        pointer-events="none"
+                                        class="label-text">
+                                        {text}
+                                    </text>
+                                </g>
+                            {/if}
+                        {/if}
+                    {/each}
+
+                    {#each points as point (point.uniqueKey)}
+                        {#if point.isHighlighted && (showLabels || point.showLabel) && zoom >= minLabelZoom}
                             {@const text = shortenRegionName(
-                                feature.properties.name,
+                                point.properties.name,
                             )}
                             {@const textLength = text.length * 8}
-                            <g>
+                            <g transform={`translate(${point.x},${point.y})`}>
                                 <rect
-                                    x={x - textLength / 2 - 10}
-                                    y={y - 12}
+                                    x={-textLength / 2 - 10}
+                                    y={-43}
                                     width={textLength + 20}
                                     height="24"
                                     rx="10"
@@ -618,8 +680,7 @@
                                     fill="oklch(var(--b2))"
                                     class="label-background" />
                                 <text
-                                    {x}
-                                    y={y + 1}
+                                    y={-30}
                                     text-anchor="middle"
                                     dominant-baseline="middle"
                                     fill="oklch(var(--s))"
@@ -631,74 +692,43 @@
                                 </text>
                             </g>
                         {/if}
-                    {/if}
-                {/each}
+                    {/each}
+                </g>
 
-                {#each points as point (point.uniqueKey)}
-                    {#if point.isHighlighted && (showLabels || point.showLabel) && zoom >= minLabelZoom}
-                        {@const text = shortenRegionName(point.properties.name)}
-                        {@const textLength = text.length * 8}
-                        <g transform={`translate(${point.x},${point.y})`}>
-                            <rect
-                                x={-textLength / 2 - 10}
-                                y={-43}
-                                width={textLength + 20}
-                                height="24"
-                                rx="10"
-                                ry="10"
-                                opacity="0.85"
-                                pointer-events="none"
-                                fill="oklch(var(--b2))"
-                                class="label-background" />
-                            <text
-                                y={-30}
-                                text-anchor="middle"
-                                dominant-baseline="middle"
-                                fill="oklch(var(--s))"
-                                font-size="15"
-                                font-weight="bold"
-                                pointer-events="none"
-                                class="label-text">
-                                {text}
-                            </text>
-                        </g>
-                    {/if}
-                {/each}
+                {#if flashCircle}
+                    {@const [cx, cy] =
+                        flashingFeature.type === "Point"
+                            ? projection([
+                                  flashingFeature.initX,
+                                  flashingFeature.initY,
+                              ])
+                            : path.centroid(flashingFeature)}
+                    <g style="pointer-events: none">
+                        <circle
+                            {cx}
+                            {cy}
+                            r={$flashCircleRadius}
+                            fill="none"
+                            stroke="white"
+                            stroke-width="4"
+                            opacity={$flashCircleOpacity}
+                            class="flash-circle">
+                        </circle>
+                    </g>
+                {/if}
+
+                {#if outlineFeature}
+                    <g>
+                        <path
+                            d={path(outlineFeature)}
+                            fill="none"
+                            stroke="white"
+                            stroke-width={$outlineWidth}
+                            class="pointer-events-none"
+                            vector-effect="non-scaling-stroke" />
+                    </g>
+                {/if}
             </g>
-
-            {#if flashCircle}
-                {@const [cx, cy] =
-                    flashingFeature.type === "Point"
-                        ? projection([
-                              flashingFeature.initX,
-                              flashingFeature.initY,
-                          ])
-                        : path.centroid(flashingFeature)}
-                <g style="pointer-events: none">
-                    <circle
-                        {cx}
-                        {cy}
-                        r={$flashCircleRadius}
-                        fill="none"
-                        stroke="white"
-                        stroke-width="4"
-                        opacity={$flashCircleOpacity}
-                        class="flash-circle">
-                    </circle>
-                </g>
-            {/if}
-
-            {#if outlineFeature}
-                <g>
-                    <path
-                        d={path(outlineFeature)}
-                        fill="none"
-                        stroke="white"
-                        stroke-width={$outlineWidth}
-                        class="pointer-events-none"
-                        vector-effect="non-scaling-stroke" />
-                </g>
-            {/if}
         </svg>
 
         {#if interactive}
@@ -763,5 +793,9 @@
 
     .dynamic-viewport-height {
         height: 60dvh;
+    }
+
+    .planet-background {
+        pointer-events: none;
     }
 </style>
