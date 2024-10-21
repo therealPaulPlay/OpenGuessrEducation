@@ -1,8 +1,7 @@
 module.exports = {
   darkMode: 'class', // Enable dark mode switching via class
   content: [
-    './src/**/*.{html,js,svelte,ts}',
-    './src/**/*.svelte',
+    './src/**/*.{html,js,svelte,ts}'
   ],
   theme: {
     extend: {
