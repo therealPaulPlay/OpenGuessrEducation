@@ -15,8 +15,9 @@
     export let errors = 0;
     export let timeString = undefined;
     export let startGame;
+    export let errorWeight = 0.25;
 
-    let achievedScore = Math.max(score - errors * 0.25, 0);
+    let achievedScore = Math.max(score - errors * errorWeight, 0);
     let experience = Math.floor(achievedScore * 50);
     let showToast = false;
 

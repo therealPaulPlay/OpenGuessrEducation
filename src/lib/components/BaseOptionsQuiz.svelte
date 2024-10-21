@@ -116,7 +116,7 @@
 
 {#if gameOver}
     <!-- errors x4 because we want errors to count as 1 here, not 0.25 like it is for maps -->
-    <QuizResult score={questionAmount} errors={errors * 4} {startGame} />
+    <QuizResult score={questionAmount} errors={errors} errorWeight=1 {startGame} />
 {/if}
 
 <style>
