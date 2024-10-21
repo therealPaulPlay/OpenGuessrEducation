@@ -164,7 +164,7 @@
 
         currentWrongAttempts = 0;
 
-        inputPlaceholderHint = "Type your answer here..."; // This can become a hint over time
+        inputPlaceholderHint = "Your answer..."; // This can become a hint over time
 
         const index = Math.floor(Math.random() * remainingFeatures.length);
         currentQuestion = remainingFeatures[index];
