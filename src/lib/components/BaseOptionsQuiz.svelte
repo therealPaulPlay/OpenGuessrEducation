@@ -103,7 +103,7 @@
             <span class="rounded-md bg-base-300 px-2 mt-0.5"
                 >{currentQuestionIndex}/{questionAmount}</span>
             <div class="flex justify-end ml-auto items-center gap-4">
-                <div class="lg:tooltip" data-tip="Disable to manually go to the next question">
+                <div class="lg:tooltip" data-tip="Automatically go to the next question">
                     <label class="label cursor-pointer">
                         <span class="label-text mr-2">Auto</span>
                         <input
