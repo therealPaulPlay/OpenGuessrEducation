@@ -48,7 +48,7 @@
             class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="card-body">
                 <Book class="w-12 h-12 text-secondary mb-4" />
-                <h2 class="card-title">Learn GeoGuessing</h2>
+                <h2 class="card-title">Learn Geo-Guessing</h2>
                 <p>
                     Master the art of location guessing with concise guides and fun quizzes.
                 </p>
