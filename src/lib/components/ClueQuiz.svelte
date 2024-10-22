@@ -4,6 +4,8 @@
     import * as Icon from "svelte-flag-icons";
 
     export let region;
+    export let assetFolder = "bollards";
+    export let filePrefix = "bollard";
 
     let [a1, a2, a3, a4] = "";
     const answers = [a1, a2, a3, a4];
@@ -23,7 +25,7 @@
                 questionsArray = await fetch("/src/lib/json/regions.json");
                 questionsArray = await questionsArray.json();
                 questionsArray = questionsArray[region];
-                return [...questionsArray];
+                return [...questionsArray] || [];
             }
             return [...questionsArray];
         } catch (error) {
@@ -116,11 +118,17 @@
         {#if randomQuestion}
             <img
                 alt="bollard"
-                class="h-52 rounded-md"
-                src="/src/lib/assets/clues/bollards/bollard-{randomQuestion.replace(
+                class="custom-height rounded-md"
+                src="/src/lib/assets/clues/{assetFolder}/{filePrefix}-{randomQuestion.replace(
                     ' ',
                     '-',
-                )}.jpg" />
+                ).toLowerCase()}.jpg" />
         {/if}
     </div>
 </BaseOptionsQuiz>
+
+<style>
+    .custom-height {
+        height: 25dvh;
+    }
+</style>

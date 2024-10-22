@@ -3,12 +3,12 @@
     import ClueQuiz from "$lib/components/ClueQuiz.svelte";
 
     export const metadata = {
-        title: "Bollards",
+        title: "Street Names",
         tags: ["All"],
-        region: "Bollards",
-        assetFolder: "bollards",
-        filePrefix: "bollard",
-        previewImagePath: "/bollards/bollard-estonia.jpg",
+        region: "Streetnames",
+        assetFolder: "street-names",
+        filePrefix: "streetname",
+        previewImagePath: "/street-names/streetname-australia.jpg",
         category: determineCategory(new URL(import.meta.url).pathname)
     }
 </script>

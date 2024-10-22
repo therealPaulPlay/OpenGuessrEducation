@@ -20,7 +20,7 @@
 <img
     alt="Follow car (Kenya)"
     src="/src/lib/assets/guides/nigeria_follow_car_2.png"
-    class="rounded-xl w-full mb-4" />
+    class="rounded-lg w-full mb-4" />
 </GuideQuiz>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Follow car in Nigeria</h2>
