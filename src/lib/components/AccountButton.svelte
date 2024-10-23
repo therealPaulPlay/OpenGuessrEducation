@@ -123,7 +123,6 @@
       <CircleUserRound />
     </div>
     <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-    <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
     <ul
       tabindex="0"
       class="dropdown-content menu bg-base-100 rounded-box z-[1] w-56 p-2 shadow-md mb-3">
