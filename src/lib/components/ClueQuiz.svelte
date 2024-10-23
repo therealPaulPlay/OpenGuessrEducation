@@ -9,7 +9,7 @@
 
     let correctAnswer = $state(1);
 
-    let question = `Where can you find this ${region.replace("s", "")}?`;
+    let question = `Where can you find this ${region.substring(0, region.length - 1)}?`;
 
     let questionsArray;
     let questionAmount = $state(0);

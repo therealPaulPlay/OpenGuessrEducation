@@ -1,7 +1,6 @@
 <script>
     import { ArrowLeftIcon } from "lucide-svelte";
     import { ArrowUp } from "lucide-svelte";
-    import { scrollTop } from "svelte-scrolling";
     import { onMount } from "svelte";
 
     let { children } = $props();
@@ -11,6 +10,15 @@
     function checkScrollable() {
         showScrollButton =
             document.documentElement.scrollHeight > window.innerHeight;
+    }
+
+    function scrollTop() {
+        if (window) {
+            window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        }
     }
 
     onMount(() => {
