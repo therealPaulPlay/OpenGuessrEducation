@@ -1,4 +1,6 @@
 <script>
+  import { run } from 'svelte/legacy';
+
   import { onMount } from "svelte";
   import { ArrowLeftIcon } from "lucide-svelte";
   import QuizCard from "$lib/components/QuizCard.svelte";
@@ -7,20 +9,16 @@
   import { page } from "$app/stores"; // To get the current URL
   import QuizPreviewImage from "$lib/components/QuizPreviewImage.svelte";
 
-  let currentRoute;
+  let { children } = $props();
 
-  $: {
-    currentRoute = $page.url.pathname; // Current path, if it changes, re-load similar quizzes
-  }
+  let currentRoute = $state();
 
-  $: if (currentRoute) {
-    loadSimilarQuizzes();
-  }
 
-  let metadata = {}; // Metadata of the current quiz
+
+  let metadata = $state({}); // Metadata of the current quiz
   let quizzes = []; // All quizzes
-  let quizzesWithSimilarityScore = []; // Quizzes sorted by similarity
-  let loading = true; // Loading flag
+  let quizzesWithSimilarityScore = $state([]); // Quizzes sorted by similarity
+  let loading = $state(true); // Loading flag
 
   async function loadSimilarQuizzes() {
     const modules = import.meta.glob("/src/routes/quiz/play/**/*.svelte");
@@ -84,6 +82,14 @@
 
     loading = false;
   }
+  run(() => {
+    currentRoute = $page.url.pathname; // Current path, if it changes, re-load similar quizzes
+  });
+  run(() => {
+    if (currentRoute) {
+      loadSimilarQuizzes();
+    }
+  });
 </script>
 
 <article class="container mx-auto p-6 px-1 max-w-5xl">
@@ -98,7 +104,7 @@
   <h1 class="text-4xl font-bold mb-8 mt-4">{metadata.title} Quiz</h1>
 
   <!-- Slot for quiz content -->
-  <slot />
+  {@render children?.()}
 
   <!-- Similar quizzes section -->
   <h3 class="text-2xl font-bold mt-12 mb-4">Similar quizzes:</h3>

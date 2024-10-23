@@ -3,12 +3,12 @@
     import BaseOptionsQuiz from "$lib/components/BaseOptionsQuiz.svelte";
     import * as Icon from "svelte-flag-icons";
 
-    let correctAnswer = 1;
+    let correctAnswer = $state(1);
 
-    let question = "Loading...";
+    let question = $state("Loading...");
 
     let questionsArray;
-    let questionAmount = 0;
+    let questionAmount = $state(0);
 
     let countryCodes;
 
@@ -65,10 +65,10 @@
         setQuizContent();
     }
 
-    let flag1Icon = "";
-    let flag2Icon = "";
-    let flag3Icon = "";
-    let flag4Icon = "";
+    let flag1Icon = $state("");
+    let flag2Icon = $state("");
+    let flag3Icon = $state("");
+    let flag4Icon = $state("");
 
     function setQuizContent() {
         const randomQuestionIndex = Math.floor(
@@ -160,7 +160,7 @@
         }
     }
 
-    let dynamicSize = 300;
+    let dynamicSize = $state(300);
 </script>
 
 <BaseOptionsQuiz
@@ -175,24 +175,28 @@
     handleStartGame={startFlagGame}>
     <div class="w-full flex justify-center items-center flex-col mb-2">
         {#if flag1Icon}
+            {@const SvelteComponent = flag1Icon}
+            {@const SvelteComponent_1 = flag2Icon}
             <div class="flex gap-5 relative">
                 <div class="flex relative">
                     <p class="absolute -left-5 top-7">1.</p>
-                    <svelte:component this={flag1Icon} size={dynamicSize} />
+                    <SvelteComponent size={dynamicSize} />
                 </div>
                 <div class="flex relative">
                     <p class="absolute -right-7 top-7">2.</p>
-                    <svelte:component this={flag2Icon} size={dynamicSize} />
+                    <SvelteComponent_1 size={dynamicSize} />
                 </div>
             </div>
+            {@const SvelteComponent_2 = flag3Icon}
+            {@const SvelteComponent_3 = flag4Icon}
             <div class="flex mt-8 gap-5 relative">
                 <div class="margin-adjust relative">
                     <p class="absolute -left-5 top-7">3.</p>
-                    <svelte:component this={flag3Icon} size={dynamicSize} />
+                    <SvelteComponent_2 size={dynamicSize} />
                 </div>
                 <div class="margin-adjust relative">
                     <p class="absolute -right-7 top-7">4.</p>
-                    <svelte:component this={flag4Icon} size={dynamicSize} />
+                    <SvelteComponent_3 size={dynamicSize} />
                 </div>
             </div>
         {/if}

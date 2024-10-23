@@ -3,8 +3,8 @@
     import { Sun } from "lucide-svelte";
     import ArticleBox from "./ArticleBox.svelte";
 
-    let sunPosition = "north";
-    let hemisphere = "Southern";
+    let sunPosition = $state("north");
+    let hemisphere = $state("Southern");
 
     function toggleSunPosition() {
         sunPosition = sunPosition === "north" ? "south" : "north";
@@ -36,7 +36,7 @@
         Hemisphere: <span class="font-bold">{hemisphere}</span>
     </p>
     <div class="card-actions mt-4">
-        <button class="btn btn-outline" on:click={toggleSunPosition}>
+        <button class="btn btn-outline" onclick={toggleSunPosition}>
             Switch sun position
         </button>
     </div>

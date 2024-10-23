@@ -19,8 +19,8 @@
     import { onMount } from "svelte";
 
     let welcomeText = "Master your geography skills.";
-    let yourName = "";
-    let isHovered = false;
+    let yourName = $state("");
+    let isHovered = $state(false);
 
     onMount(() => {
         if (localStorage.getItem("username")) {
@@ -55,7 +55,7 @@
                 <div class="card-actions justify-end">
                     <button
                         class="btn btn-secondary"
-                        on:click={() => {
+                        onclick={() => {
                             goto("/get-started");
                         }}>Get started</button>
                 </div>
@@ -74,7 +74,7 @@
                 <div class="card-actions justify-end">
                     <button
                         class="btn btn-secondary"
-                        on:click={() => {
+                        onclick={() => {
                             goto("/quiz");
                         }}>Take a Quiz</button>
                 </div>
@@ -93,7 +93,7 @@
                 <div class="card-actions justify-end">
                     <button
                         class="btn btn-secondary"
-                        on:click={() => {
+                        onclick={() => {
                             goto("/guides");
                         }}>Discover Guides</button>
                 </div>
@@ -182,9 +182,9 @@
         <p class="text-lg mb-6">The journey will be legendary.</p>
         <button
             class="btn btn-secondary btn-lg relative overflow-hidden"
-            on:mouseenter={() => (isHovered = true)}
-            on:mouseleave={() => (isHovered = false)}
-            on:click={() => {
+            onmouseenter={() => (isHovered = true)}
+            onmouseleave={() => (isHovered = false)}
+            onclick={() => {
                 goto("/get-started");
             }}>
             <span class="mr-2">Start learning</span>

@@ -6,57 +6,56 @@
 
     import * as Icon from "svelte-flag-icons";
 
-    export let region = "World";
+    let {
+        region = "World",
+        zoom = 1,
+        minLabelZoom = 1,
+        topoJsonName = undefined
+    } = $props();
 
-    export let zoom = 1;
+    let screenWidth = $state(1200);
+    let screenHeight = $state(650);
 
-    export let minLabelZoom = 1;
-
-    export let topoJsonName = undefined;
-
-    let screenWidth = 1200;
-    let screenHeight = 650;
-
-    let quizMap;
+    let quizMap = $state();
     let features = [];
-    let currentQuestion = "loading...";
-    let remainingFeatures = [];
-    let gameMode = "click"; // 'click', 'type', or 'learn'
+    let currentQuestion = $state("loading...");
+    let remainingFeatures = $state([]);
+    let gameMode = $state("click"); // 'click', 'type', or 'learn'
 
-    let userInput = "";
+    let userInput = $state("");
 
     // used as a key to reload and thereby reset the map
-    let uniqueMap = {};
+    let uniqueMap = $state({});
 
-    let score = 0;
-    let errors = 0;
-    let gameOver = false;
-    let timer = 0;
+    let score = $state(0);
+    let errors = $state(0);
+    let gameOver = $state(false);
+    let timer = $state(0);
 
     let countryCodes;
-    let IconComponent;
+    let IconComponent = $state();
 
     let currentWrongAttempts = 0;
 
     let timerInterval;
-    let highlightedFeature = null;
+    let highlightedFeature = $state(null);
 
     let timerRunning = false;
 
-    let inputPlaceholderHint = "Type your answer here...";
+    let inputPlaceholderHint = $state("Type your answer here...");
 
     let mapLoaded = false;
 
-    $: validOptions = [currentQuestion].concat(remainingFeatures);
+    let validOptions = $derived([currentQuestion].concat(remainingFeatures));
 
-    $: regionNamesAutocomplete =
-        validOptions
+    let regionNamesAutocomplete =
+        $derived(validOptions
             .sort()
             .filter((regionName) =>
                 regionName
                     .toLowerCase()
                     .startsWith(userInput.toLocaleLowerCase()),
-            ) || [];
+            ) || []);
 
     onMount(async () => {
         await loadFeatures();
@@ -255,7 +254,7 @@
         startGame();
     }
 
-    let showTypeAutoComplete = false;
+    let showTypeAutoComplete = $state(false);
 
     function handleFocus() {
         showTypeAutoComplete = true;
@@ -265,7 +264,7 @@
         showTypeAutoComplete = false;
     }
 
-    $: timeString = `${Math.floor(timer / 60)}:${(timer % 60).toString().padStart(2, "0")}`;
+    let timeString = $derived(`${Math.floor(timer / 60)}:${(timer % 60).toString().padStart(2, "0")}`);
 </script>
 
 <div class="quiz-container bg-base-200 p-6 rounded-xl">
@@ -282,25 +281,25 @@
             {/if}
         </h2>
         <div class="flex flex-wrap justify-end gap-3">
-            <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <!-- svelte-ignore a11y-missing-attribute -->
-            <!-- svelte-ignore a11y-interactive-supports-focus -->
+            <!-- svelte-ignore a11y_click_events_have_key_events -->
+            <!-- svelte-ignore a11y_missing_attribute -->
+            <!-- svelte-ignore a11y_interactive_supports_focus -->
             <div role="tablist" class="tabs tabs-boxed bg-base-300 custom-tabs">
                 <a
                     role="tab"
                     class="tab tab-sm"
                     class:tab-active={gameMode === "click"}
-                    on:click={() => changeGameMode("click")}>Click</a>
+                    onclick={() => changeGameMode("click")}>Click</a>
                 <a
                     role="tab"
                     class="tab tab-sm"
                     class:tab-active={gameMode === "type"}
-                    on:click={() => changeGameMode("type")}>Type</a>
+                    onclick={() => changeGameMode("type")}>Type</a>
                 <a
                     role="tab"
                     class="tab tab-sm"
                     class:tab-active={gameMode === "learn"}
-                    on:click={() => changeGameMode("learn")}>Learn</a>
+                    onclick={() => changeGameMode("learn")}>Learn</a>
             </div>
             <div class="flex items-center gap-2 bg-base-300 rounded-lg p-1">
                 <Timer class="w-5 h-5" />
@@ -329,7 +328,7 @@
                 {#if IconComponent}
                     <div
                         class="absolute z-20 top-3 right-3 rounded-md bg-base-200 py-0.5 p-2">
-                        <svelte:component this={IconComponent} size="50" />
+                        <IconComponent size="50" />
                     </div>
                 {/if}
             </Map>
@@ -341,28 +340,28 @@
             <input
                 type="text"
                 bind:value={userInput}
-                on:focus={handleFocus}
-                on:blur={handleBlur}
-                on:keypress={(e) => e.key === "Enter" && handleInputSubmit()}
-                on:keydown={(e) => {
+                onfocus={handleFocus}
+                onblur={handleBlur}
+                onkeypress={(e) => e.key === "Enter" && handleInputSubmit()}
+                onkeydown={(e) => {
                     if (e.key === "Tab") userInput = regionNamesAutocomplete[0];
                 }}
                 placeholder={inputPlaceholderHint}
                 class="input input-bordered w-full" />
             <button
                 class="btn btn-secondary btn-sm mt-2 mb-2 absolute right-2"
-                on:click={handleInputSubmit}>Submit</button>
+                onclick={handleInputSubmit}>Submit</button>
             <div
                 class="absolute w-full top-16 bg-accent shadow-lg transition-opacity p-4 flex flex-col gap-2 rounded-lg z-20 max-h-52 overflow-auto outline outline-accent {showTypeAutoComplete
                     ? 'opacity-100'
                     : 'opacity-0'}">
                 {#if regionNamesAutocomplete.length > 0}
                     {#each regionNamesAutocomplete as regionName}
-                        <!-- svelte-ignore a11y-click-events-have-key-events -->
-                        <!-- svelte-ignore a11y-no-static-element-interactions -->
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
+                        <!-- svelte-ignore a11y_no_static_element_interactions -->
                         <div
                             class="rounded-md w-full px-2 bg-base-200 hover:bg-base-100 transition-colors cursor-pointer"
-                            on:click={() => {
+                            onclick={() => {
                                 userInput = regionName;
                             }}>
                             <p>{regionName}</p>

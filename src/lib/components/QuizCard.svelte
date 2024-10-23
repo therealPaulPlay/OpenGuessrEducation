@@ -1,8 +1,11 @@
 <script>
-    export let title = "Default title";
-    export let path;
-    export let hueRotateDegree = 0;
-    export let tags = [];
+    let {
+        title = "Default title",
+        path,
+        hueRotateDegree = 0,
+        tags = [],
+        children // For components that work like layouts (with a render slot, in which HTML can be passed) - children needs to be specified as a prop
+    } = $props();
 </script>
 
 <div
@@ -17,7 +20,7 @@
                     <span class="badge badge-accent">{tag}</span>
                 {/each}
             </div>
-            <slot />
+            {@render children?.()}  <!-- formerly <slot /> in Svelte 4 -->
         </div>
         <div class="card-actions justify-end mt-auto">
             <a

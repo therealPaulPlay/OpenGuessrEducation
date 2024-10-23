@@ -25,18 +25,18 @@
         { name: "clues", icon: Lightbulb },
     ];
 
-    let quizCategories = [];
-    let selectedTags = new Set();
-    let scrollButtonVisibility = [];
+    let quizCategories = $state([]);
+    let selectedTags = $state(new Set());
+    let scrollButtonVisibility = $state([]);
 
-    $: filteredQuizCategories = quizCategories.map((category) => ({
+    let filteredQuizCategories = $derived(quizCategories.map((category) => ({
         ...category,
         quizzes: category.quizzes.filter(
             (quiz) =>
                 selectedTags.size === 0 ||
                 quiz.tags.some((tag) => selectedTags.has(tag)),
         ),
-    }));
+    })));
 
     onMount(async () => {
         const modules = import.meta.glob("/src/routes/quiz/play/**/*.svelte");
@@ -81,13 +81,13 @@
         setTimeout(updateAllButtonVisibility, 10);
     }
 
-    $: allTags = [
+    let allTags = $derived([
         ...new Set(
             quizCategories.flatMap((category) =>
                 category.quizzes.flatMap((quiz) => quiz.tags || []),
             ),
         ),
-    ];
+    ]);
 
     function scrollContainer(containerId, scrollAmount) {
         const container = document.getElementById(containerId);
@@ -130,7 +130,7 @@
                         class="btn btn-sm {selectedTags.has(tag)
                             ? 'btn-secondary'
                             : 'btn-outline'}"
-                        on:click={() => toggleTag(tag)}>
+                        onclick={() => toggleTag(tag)}>
                         {tag}
                     </button>
                 {/if}
@@ -141,14 +141,14 @@
     {#each filteredQuizCategories as category, index}
         <div class="mb-6">
             <h2 class="text-3xl font-semibold mb-2 flex items-center">
-                <svelte:component this={category.icon} class="w-8 h-8 mr-2" />
+                <category.icon class="w-8 h-8 mr-2" />
                 {category.name.charAt(0).toUpperCase() + category.name.slice(1)}
             </h2>
             <div class="relative">
                 {#if scrollButtonVisibility[index]?.left}
                     <button
                         class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg items-center justify-center"
-                        on:click={() =>
+                        onclick={() =>
                             scrollContainer(`scroll-container-${index}`, -460)}>
                         <ArrowLeft />
                     </button>
@@ -156,7 +156,7 @@
                 <div
                     id={`scroll-container-${index}`}
                     class="scroll-container flex space-x-4 overflow-x-auto flex-nowrap scrollbar-hide"
-                    on:scroll={() =>
+                    onscroll={() =>
                         updateButtonVisibility(`scroll-container-${index}`)}>
                     {#each category.quizzes as quiz (quiz.path)}
                         <QuizCard
@@ -199,7 +199,7 @@
                 {#if scrollButtonVisibility[index]?.right}
                     <button
                         class="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg items-center justify-center"
-                        on:click={() =>
+                        onclick={() =>
                             scrollContainer(`scroll-container-${index}`, 460)}>
                         <ArrowRight />
                     </button>

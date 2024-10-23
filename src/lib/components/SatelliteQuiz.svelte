@@ -7,16 +7,15 @@
     import XYZ from "ol/source/XYZ";
     import { fromLonLat, toLonLat } from "ol/proj";
 
-    export let jsonName = "capital-cities";
-    export let regionType = "city";
+    let { jsonName = "capital-cities", regionType = "city" } = $props();
 
-    let [a1, a2, a3, a4] = "";
+    let [a1, a2, a3, a4] = $state("");
     let answers = [a1, a2, a3, a4];
-    let correctAnswer = 1;
+    let correctAnswer = $state(1);
     let question = `Which ${regionType} does this image show?`;
 
     let locationsArray = [];
-    let questionAmount = 0;
+    let questionAmount = $state(0);
     let remainingLocationsArray = [];
     let currentLocation;
     let map;

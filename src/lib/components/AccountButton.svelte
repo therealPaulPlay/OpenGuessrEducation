@@ -4,15 +4,15 @@
   import { CircleUserRound } from "lucide-svelte";
   import { isAuthenticated } from "$lib/stores/accountData.js";
 
-  let isLoggedIn = false;
+  let isLoggedIn = $state(false);
 
-  let username = "Guest";
+  let username = $state("Guest");
   let userId = "-1";
-  let experience = "0";
+  let experience = $state("0");
 
-  let error = "No error";
+  let error = $state("No error");
 
-  let showError = false;
+  let showError = $state(false);
 
   // Global function that changes everything to logged in or signed out (all other sign-in functions are related to this)
   async function checkAuthenticationStatus() {
@@ -122,6 +122,7 @@
     <div tabindex="0" role="button" class="btn btn-accent">
       <CircleUserRound />
     </div>
+    <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
     <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
     <ul
       tabindex="0"
@@ -133,11 +134,9 @@
       <div class="bg-base-200 rounded-lg p-2 text-center mb-3">
         View and manage your account on <a href="https://openguessr.com" class="text-secondary">OpenGuessr</a>.
       </div>
-      <!-- svelte-ignore a11y-missing-attribute -->
       <li>
-        <button class="btn btn-sm btn-primary text-white" on:click={logOut}> Log out </button>
+        <button class="btn btn-sm btn-primary text-white" onclick={logOut}> Log out </button>
       </li>
-      <!-- svelte-ignore a11y-missing-attribute -->
     </ul>
   </div>
 {/if}

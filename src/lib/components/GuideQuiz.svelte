@@ -3,24 +3,28 @@
   import { Check } from "lucide-svelte";
   import Toast from "./Toast.svelte";
   import { isAuthenticated } from "$lib/stores/accountData.js";
+  import { addExperience } from "$lib/utils/addExperience.js";
 
-  export let question = "";
-  export let answerOne = "";
-  export let answerTwo = "";
-  export let answerThree = "";
-  export let answerFour = "";
-  export let correctAnswer = 1;
+  let {
+    question = "",
+    answerOne = "",
+    answerTwo = "",
+    answerThree = "",
+    answerFour = "",
+    correctAnswer = 1,
+    children // For components that work like layouts (with a render slot, in which HTML can be passed) - children needs to be specified as a prop
+  } = $props();
 
-  let selectedAnswer = null;
-  let isCompleted = false;
-  let showToast = false;
+  let selectedAnswer = $state(null);
+  let isCompleted = $state(false);
+  let showToast = $state(false);
   let quizId = "";
-  let isLoggedIn = false;
+  let isLoggedIn = $state(false);
   const unsubscribe = isAuthenticated.subscribe((value) => {
     isLoggedIn = value;
   });
 
-  $: answers = [answerOne, answerTwo, answerThree, answerFour];
+  let answers = $derived([answerOne, answerTwo, answerThree, answerFour]);
 
   onMount(() => {
     quizId = `${window.location.pathname}_${question.substring(0, 10)}`; // don't change this, would mess up all quiz saves
@@ -75,7 +79,7 @@
       <h2 class="text-xl font-bold">{question}</h2><div class="badge badge-success mt-1 transition-opacity {isCompleted ? "opacity-0" : ""}">500 XP</div>
     </div>
 
-    <slot />
+    {@render children?.()}
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       {#each answers as answer, index}
@@ -90,7 +94,7 @@
                    {isCompleted && index != correctAnswer - 1
             ? 'opacity-50 pointer-events-none'
             : ''}"
-          on:click={() => handleAnswer(index)}>
+          onclick={() => handleAnswer(index)}>
           {answer}
           {#if isCompleted && index === correctAnswer - 1}
             <span class="absolute right-2">

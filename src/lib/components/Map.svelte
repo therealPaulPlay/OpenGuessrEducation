@@ -1,4 +1,6 @@
 <script>
+    import { run } from 'svelte/legacy';
+
     import { onMount } from "svelte";
     import {
         geoPath,
@@ -12,52 +14,53 @@
     import { tweened } from "svelte/motion";
     import { cubicOut, linear, backInOut } from "svelte/easing";
 
-    export let region = "World";
-    export let zoom = 1;
-    export let width = 800;
-    export let height = 400;
-    export let interactive = false;
-    export let highlightedFeature = null;
-    export let showLabels = false;
-    export let minLabelZoom = 1;
-    export let notHighlightedColor = "rgba(125,125,125, 0.2)";
-    export let dynamicHeight = false; // Dynamically adjust height to the screen size, used for Quizzes
-    export let showPoints = false;
-    export let hueRotateDegree = 0;
+    let {
+        region = "World",
+        zoom = $bindable(1),
+        width = 800,
+        height = 400,
+        interactive = false,
+        highlightedFeature = null,
+        showLabels = false,
+        minLabelZoom = 1,
+        notHighlightedColor = "rgba(125,125,125, 0.2)",
+        dynamicHeight = false,
+        showPoints = false,
+        hueRotateDegree = 0,
+        topoJsonName = "topojson-world-110m",
+        afterLoad = "",
+        projectionType = "geoMercator",
+        projectionRotation = 0,
+        children // For components that work like layouts (with a render slot, in which HTML can be passed) - children needs to be specified as a prop
+    } = $props();
 
-    export let topoJsonName = "topojson-world-110m";
-    export let afterLoad = "";
-
-    export let projectionType = "geoMercator";
-    export let projectionRotation = 0; // [x, y, z] rotation, this takes an array with these values
-
-    let mapContainer;
-    let features = [];
-    let points = []; // New array to store point features
+    let mapContainer = $state();
+    let features = $state([]);
+    let points = $state([]); // New array to store point features
 
     let projections = {
         geoMercator: geoMercator(),
         geoOrthographic: geoOrthographic().rotate(projectionRotation),
     };
 
-    let backgroundCircle;
+    let backgroundCircle = $state();
 
     let projection = projections[projectionType];
-    let path = geoPath().projection(projection);
+    let path = $state(geoPath().projection(projection));
     let regionCountries;
 
     let translateX = 0;
     let translateY = 0;
 
-    let flashingFeature = null;
-    let flashCircle = null;
+    let flashingFeature = $state(null);
+    let flashCircle = $state(null);
     let flashCircleOpacity = tweened(0, { duration: 400, easing: linear });
     let flashCircleRadius = tweened(0, { duration: 600, easing: backInOut });
 
-    let outlineFeature = null;
+    let outlineFeature = $state(null);
     let outlineWidth = tweened(0, { duration: 500, easing: cubicOut });
 
-    let loaded = false;
+    let loaded = $state(false);
 
     const dispatch = createEventDispatcher();
 
@@ -231,11 +234,11 @@
         }
     }
 
-    $: {
+    run(() => {
         if (highlightedFeature) {
             highlightFeature(highlightedFeature, "white");
         }
-    }
+    });
 
     function handleRegionClick(feature, event) {
         if (feature.isHighlighted && feature.isInteractive) {
@@ -540,23 +543,23 @@
     {#if !loaded}
         <div class="skeleton w-full h-full min-h-28 opacity-75 rounded-lg">
         </div>
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
     {:else}
         <div class="absolute w-full h-full bg-accent"></div>
 
-        <slot />
+        {@render children?.()}
 
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
         <svg
             width="100%"
             height="100%"
             viewBox={`0 0 ${width} ${height}`}
             style="filter: hue-rotate({hueRotateDegree}deg)"
-            on:wheel={handleZoom}
-            on:mousedown={handleMouseDown}
-            on:mousemove={handleMouseMove}
-            on:mouseup={handleMouseUp}
-            on:mouseleave={handleMouseUp}
+            onwheel={handleZoom}
+            onmousedown={handleMouseDown}
+            onmousemove={handleMouseMove}
+            onmouseup={handleMouseUp}
+            onmouseleave={handleMouseUp}
             fill="oklch(var(--a))"
             class="relative {interactive
                 ? 'pointer-events-auto'
@@ -571,8 +574,8 @@
                 {/if}
                 <g>
                     {#each features as feature (feature.uniqueKey)}
-                        <!-- svelte-ignore a11y-click-events-have-key-events -->
-                        <!-- svelte-ignore a11y-no-static-element-interactions -->
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
+                        <!-- svelte-ignore a11y_no_static_element_interactions -->
                         <path
                             d={feature.d}
                             fill={feature.flashColor ||
@@ -581,10 +584,10 @@
                             stroke="oklch(var(--a))"
                             stroke-width="0.5"
                             vector-effect="non-scaling-stroke"
-                            on:click={(event) =>
+                            onclick={(event) =>
                                 handleRegionClick(feature, event)}
-                            on:mouseenter={() => (feature.isHovered = true)}
-                            on:mouseleave={() => (feature.isHovered = false)}
+                            onmouseenter={() => (feature.isHovered = true)}
+                            onmouseleave={() => (feature.isHovered = false)}
                             class="feature-path"
                             style="filter: {feature.isHovered
                                 ? 'brightness(1.1)'
@@ -593,16 +596,16 @@
                 </g>
 
                 <g>
-                    <!-- svelte-ignore a11y-click-events-have-key-events -->
+                    <!-- svelte-ignore a11y_click_events_have_key_events -->
                     {#if showPoints}
                         {#each points as point (point.uniqueKey)}
-                            <!-- svelte-ignore a11y-click-events-have-key-events -->
-                            <!-- svelte-ignore a11y-no-static-element-interactions -->
+                            <!-- svelte-ignore a11y_click_events_have_key_events -->
+                            <!-- svelte-ignore a11y_no_static_element_interactions -->
                             <g
-                                on:click={(event) =>
+                                onclick={(event) =>
                                     handleRegionClick(point, event)}
-                                on:mouseenter={() => (point.isHovered = true)}
-                                on:mouseleave={() => (point.isHovered = false)}
+                                onmouseenter={() => (point.isHovered = true)}
+                                onmouseleave={() => (point.isHovered = false)}
                                 class="point-feature"
                                 stroke="oklch(var(--b2))"
                                 stroke-width="2"
@@ -735,13 +738,13 @@
             <div class="absolute bottom-4 right-4 flex flex-col gap-2">
                 <button
                     class="btn btn-circle btn-base-200 btn-sm"
-                    on:click={handleZoomIn}
+                    onclick={handleZoomIn}
                     aria-label="Zoom in">
                     <Plus size={16} />
                 </button>
                 <button
                     class="btn btn-circle btn-base-200 btn-sm"
-                    on:click={handleZoomOut}
+                    onclick={handleZoomOut}
                     aria-label="Zoom out">
                     <Minus size={16} />
                 </button>

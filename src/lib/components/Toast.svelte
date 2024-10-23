@@ -2,13 +2,14 @@
     import { fade } from "svelte/transition";
     import { onMount } from "svelte";
 
-    export let message = "";
-    export let duration = 3000;
-    export let type = "success";
+    let {
+        message = "",
+        duration = 3000,
+        type = "success",
+        typeClass = $bindable("alert-success")
+    } = $props();
 
-    export let typeClass = "alert-success";
-
-    let visible = false;
+    let visible = $state(false);
 
     onMount(() => {
         visible = true;

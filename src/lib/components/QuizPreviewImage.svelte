@@ -1,5 +1,5 @@
 <script>
-    export let path;
+    let { path } = $props();
 </script>
 
 <div class="custom-size rounded-lg overflow-hidden grow bg-secondary">

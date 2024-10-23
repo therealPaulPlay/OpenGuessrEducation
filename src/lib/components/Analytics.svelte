@@ -1,7 +1,9 @@
 <script>
+    import { run } from 'svelte/legacy';
+
     import { page } from "$app/stores";
 
-    $: {
+    run(() => {
         if (typeof gtag !== "undefined") {
             gtag("config", "G-DXD64B7ZDX", {
                 page_title: document.title,
@@ -10,7 +12,7 @@
                 cookie_flags: "SameSite=None; Secure",
             });
         }
-    }
+    });
 </script>
 
 <svelte:head>

@@ -2,14 +2,15 @@
     import { onMount } from "svelte";
     import { onDestroy } from "svelte";
 
-    export let title = "This is an awesome guide.";
-    export let description =
-        "This guide will teach you the basics of creating guide cards, which is an important skill.";
-    export let href = "/";
+    let {
+        title = "This is an awesome guide.",
+        description = "This guide will teach you the basics of creating guide cards, which is an important skill.",
+        href = "/",
+        hueRotate = 0,
+        children // For components that work like layouts (with a slot, in which HTML can be passed) - children needs to be specified as a prop
+    } = $props();
 
-    export let hueRotate = 0;
-
-    let mobile = false;
+    let mobile = $state(false);
 
     const handleResize = () => {
         mobile = window.matchMedia("(max-width: 600px)").matches;
@@ -36,7 +37,7 @@
         <div class="absolute h-full w-full">
             <div
                 class="flex justify-center items-center w-full h-full text-base-200">
-                <slot />
+                {@render children?.()}  <!-- formerly <slot /> in Svelte 4 -->
             </div>
         </div>
     </figure>

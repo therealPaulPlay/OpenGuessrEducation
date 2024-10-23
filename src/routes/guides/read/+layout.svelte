@@ -4,7 +4,9 @@
     import { scrollTop } from "svelte-scrolling";
     import { onMount } from "svelte";
 
-    let showScrollButton = false;
+    let { children } = $props();
+
+    let showScrollButton = $state(false);
 
     function checkScrollable() {
         showScrollButton =
@@ -22,7 +24,7 @@
     });
 </script>
 
-<svelte:window on:scroll={checkScrollable} />
+<svelte:window onscroll={checkScrollable} />
 
 <article class="container mx-auto p-6 px-1 max-w-3xl">
     <a
@@ -31,10 +33,10 @@
         <ArrowLeftIcon />
         Back
     </a>
-    <slot />
+    {@render children?.()}
     {#if showScrollButton}
         <div class="w-full flex justify-center mt-12">
-            <button class="btn btn-wide btn-accent" on:click={scrollTop}>
+            <button class="btn btn-wide btn-accent" onclick={scrollTop}>
                 <ArrowUp /> Back to top
             </button>
         </div>

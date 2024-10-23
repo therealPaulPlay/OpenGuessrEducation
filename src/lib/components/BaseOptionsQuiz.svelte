@@ -3,36 +3,34 @@
     import QuizResult from "./QuizResult.svelte";
     import { onMount } from "svelte";
 
-    export let question = "Default Question";
+    let {
+        question = "Default Question",
+        answerOne = "Default answer",
+        answerTwo = "Default answer",
+        answerThree = "Default answer",
+        answerFour = "Default answer",
+        correctAnswer = 1,
+        isCompleted = $bindable(false),
+        questionAmount = 15,
+        handleNextQuestion = () => {},
+        handleStartGame = () => {},
+        children // For components that work like layouts (with a slot (now children?.()), in which HTML can be passed) - children needs to be specified as a prop
+    } = $props();
 
-    export let answerOne = "Default answer";
-    export let answerTwo = "Default answer";
-    export let answerThree = "Default answer";
-    export let answerFour = "Default answer";
+    let selectedAnswer = $state(-1);
+    let currentQuestionIndex = $state(1);
 
-    export let correctAnswer = 1;
+    let autoNext = $state(true); // Automatically skip to next question after answering last one
 
-    export let isCompleted = false;
-    export let questionAmount = 15;
-
-    // Use these functions in parent components
-    export let handleNextQuestion = () => {};
-    export let handleStartGame = () => {};
-
-    let selectedAnswer = -1;
-    let currentQuestionIndex = 1;
-
-    let autoNext = true; // Automatically skip to next question after answering last one
-
-    $: answers = [answerOne, answerTwo, answerThree, answerFour];
+    let answers = $derived([answerOne, answerTwo, answerThree, answerFour]);
 
     function getIndexLetter(i) {
         const letters = ["A", "B", "C", "D"];
         return letters[i];
     }
 
-    let errors = 0;
-    let gameOver = false;
+    let errors = $state(0);
+    let gameOver = $state(false);
 
     function handleAnswer(index) {
         if (isCompleted) return;
@@ -109,20 +107,20 @@
                         <input
                             type="checkbox"
                             bind:checked={autoNext}
-                            on:change={enableAutoNextQuestion}
+                            onchange={enableAutoNextQuestion}
                             class="checkbox checkbox-sm checkbox-accent" />
                     </label>
                 </div>
                 <button
                     class="btn btn-accent btn-sm {autoNext
                         ? 'opacity-50 pointer-events-none'
-                        : ""} {isCompleted ? "" : "opacity-50"}" on:click={manuallyGoToNextQuestion}>
+                        : ""} {isCompleted ? "" : "opacity-50"}" onclick={manuallyGoToNextQuestion}>
                     Next <ArrowRight />
                 </button>
             </div>
         </div>
 
-        <slot />
+        {@render children?.()} <!-- formerly <slot /> in Svelte 4 -->
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             {#each answers as answer, index}
@@ -138,7 +136,7 @@
                      {isCompleted && index != correctAnswer - 1
                         ? 'opacity-50 pointer-events-none'
                         : ''}"
-                    on:click={() => handleAnswer(index)}>
+                    onclick={() => handleAnswer(index)}>
                     {answer}
                     {#if index === correctAnswer - 1 && selectedAnswer != -1}
                         <span class="absolute right-2">

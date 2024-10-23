@@ -1,21 +1,18 @@
 <script>
     import { onMount } from "svelte";
     import BaseOptionsQuiz from "$lib/components/BaseOptionsQuiz.svelte";
-    import * as Icon from "svelte-flag-icons";
 
-    export let region;
-    export let assetFolder = "bollards";
-    export let filePrefix = "bollard";
+    let { region, assetFolder = "bollards", filePrefix = "bollard" } = $props();
 
-    let [a1, a2, a3, a4] = "";
+    let [a1, a2, a3, a4] = $state("");
     const answers = [a1, a2, a3, a4];
 
-    let correctAnswer = 1;
+    let correctAnswer = $state(1);
 
     let question = `Where can you find this ${region.replace("s", "")}?`;
 
     let questionsArray;
-    let questionAmount = 0;
+    let questionAmount = $state(0);
 
     let remainingQuestionsArray = [];
 
@@ -55,7 +52,7 @@
         }
     }
 
-    let randomQuestion;
+    let randomQuestion = $state();
 
     function setQuizContent() {
         // Select random questoin

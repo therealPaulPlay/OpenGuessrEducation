@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
     import { determineCategory } from "$lib/utils/quizMetadataHelper.js";
     import FlagQuiz from "$lib/components/FlagQuiz.svelte";
 

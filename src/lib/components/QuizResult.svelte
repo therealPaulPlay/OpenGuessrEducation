@@ -11,15 +11,17 @@
     import { isAuthenticated } from "$lib/stores/accountData.js";
     import { addExperience } from "$lib/utils/addExperience.js";
 
-    export let score = 0;
-    export let errors = 0;
-    export let timeString = undefined;
-    export let startGame;
-    export let errorWeight = 0.25;
+    let {
+        score = 0,
+        errors = 0,
+        timeString = undefined,
+        startGame,
+        errorWeight = 0.25
+    } = $props();
 
     let achievedScore = Math.max(score - errors * errorWeight, 0);
     let experience = Math.floor(achievedScore * 50);
-    let showToast = false;
+    let showToast = $state(false);
 
     onMount(() => {
         if ($isAuthenticated && achievedScore != 0) {
@@ -28,9 +30,9 @@
         }
     });
 
-    $: stars = Math.min(3, Math.floor(accuracy / 33));
-    $: accuracy =
-        score + errors ? Math.round(((1 - (errors / score))) * 100) : 0; // avoid divide by zero error with first check
+    let accuracy =
+        $derived(score + errors ? Math.max(Math.round(((1 - (errors * errorWeight / score))) * 100), 0) : 0); // avoid divide by zero error with first check
+    let stars = $derived(Math.min(3, Math.floor(accuracy / 33)));
 </script>
 
 <div
@@ -76,7 +78,7 @@
                     </p>
                 </div>
             {/if}
-            <button class="btn btn-secondary mb-2" on:click={startGame}
+            <button class="btn btn-secondary mb-2" onclick={startGame}
                 >Play Again</button>
             <a class="btn btn-sm" href="/quiz/"
                 ><ArrowLeft class="w-4 h-4" />Return to discover page</a>

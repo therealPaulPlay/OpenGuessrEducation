@@ -1,9 +1,9 @@
 <script>
     import { onMount, onDestroy } from "svelte";
 
-    let globeElement;
+    let globeElement = $state();
     let globe;
-    let isLoading = true;
+    let isLoading = $state(true);
     let isVisible = false;
     let observer;
 

@@ -1,10 +1,12 @@
 <script>
+    import { run } from 'svelte/legacy';
+
     import DarkModeToggle from "./DarkModeToggle.svelte";
     import AccountButton from "$lib/components/AccountButton.svelte";
     import { page } from "$app/stores";
     import { onMount } from 'svelte';
 
-    export let isOpen = false;
+    let { isOpen = $bindable(false) } = $props();
 
     let showCountries = false;
     let showGuides = false;
@@ -12,14 +14,14 @@
     let countries = ["England", "Germany", "USA", "Japan"];
     let guides = ["Create Maps", "Land a 5K"];
 
-    let activeButton = "";
-    let mounted = false;
+    let activeButton = $state("");
+    let mounted = $state(false);
 
     onMount(() => {
         mounted = true;
     });
 
-    $: {
+    run(() => {
         const currentPath = $page.url.pathname;
         if (currentPath === "/") {
             activeButton = "home";
@@ -33,7 +35,7 @@
             const country = currentPath.split("/").pop();
             activeButton = country.toLowerCase();
         }
-    }
+    });
 
     function switchSelection(buttonId) {
         activeButton = buttonId;
@@ -69,31 +71,31 @@
                 <a
                     class="btn normal-case text-lg {activeButton === 'home' ? 'btn-primary text-white' : 'btn-accent'}"
                     href="/"
-                    on:click={() => switchSelection('home')}>Home</a>
+                    onclick={() => switchSelection('home')}>Home</a>
             </li>
             <li>
                 <a
                     class="btn normal-case text-lg {activeButton === 'get-started' ? 'btn-primary text-white' : 'btn-accent'}"
                     href="/get-started"
-                    on:click={() => switchSelection('get-started')}>Get started</a>
+                    onclick={() => switchSelection('get-started')}>Get started</a>
             </li>
             <li>
                 <a
                     class="btn normal-case text-lg {activeButton === 'quiz' ? 'btn-primary text-white' : 'btn-accent'}"
                     href="/quiz"
-                    on:click={() => switchSelection('quiz')}>Quizzes</a>
+                    onclick={() => switchSelection('quiz')}>Quizzes</a>
             </li>
             <li>
                 <a
                     class="btn normal-case text-lg {activeButton === 'guides' ? 'btn-primary text-white' : 'btn-accent'}"
                     href="/guides"
-                    on:click={() => switchSelection('guides')}>Guides</a>
+                    onclick={() => switchSelection('guides')}>Guides</a>
             </li>
             <li>
                 <a
                     class="btn normal-case text-lg {activeButton === 'countries' ? 'btn-primary text-white' : 'btn-accent'}"
                     href="/countries"
-                    on:click={() => switchSelection('countries')}>Learn Countries</a>
+                    onclick={() => switchSelection('countries')}>Learn Countries</a>
             </li>
             <div class="divider">OR</div>
             <li>
@@ -113,5 +115,5 @@
 
 <!-- Overlay for mobile -->
 {#if isOpen}
-    <button class="fixed inset-0 bg-black bg-opacity-50 z-[99] lg:hidden" on:click={() => isOpen = false}></button>
+    <button class="fixed inset-0 bg-black bg-opacity-50 z-[99] lg:hidden" onclick={() => isOpen = false}></button>
 {/if}

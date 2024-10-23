@@ -1,12 +1,12 @@
 <script>
     import * as Icon from "svelte-flag-icons";
 
-    export let region = "Europe";
+    let { region = "Europe" } = $props();
 
     let countryCodes;
     let regionsArray;
 
-    let flagsLoaded = false;
+    let flagsLoaded = $state(false);
 
     async function fetchRegions() {
         try {
@@ -49,10 +49,10 @@
         }
     }
 
-    let Icon1;
-    let Icon2;
-    let Icon3;
-    let Icon4;
+    let Icon1 = $state();
+    let Icon2 = $state();
+    let Icon3 = $state();
+    let Icon4 = $state();
 
     async function loadPreviewFlags() {
         await fetchRegions();
@@ -109,14 +109,13 @@
         <div
             class="absolute w-full h-full flex justify-center items-center dark:brightness-75 z-[5]">
             {#if Icon1}
-                <svelte:component this={Icon1} class="z-50" size="110" />
+                <Icon1 class="z-50" size="110" />
             {/if}
         </div>
         <div
             class="absolute w-full h-full flex justify-center items-center dark:brightness-50 brightness-75 z-[4] rotate-1">
             {#if Icon2}
-                <svelte:component
-                    this={Icon2}
+                <Icon2
                     class="z-40 ml-1 mt-1"
                     size="110" />
             {/if}
@@ -124,8 +123,7 @@
         <div
             class="absolute w-full h-full flex justify-center items-center dark:brightness-50 brightness-75 z-[3]">
             {#if Icon3}
-                <svelte:component
-                    this={Icon3}
+                <Icon3
                     class="z-30 ml-2 mt-2"
                     size="110" />
             {/if}
@@ -133,8 +131,7 @@
         <div
             class="absolute w-full h-full flex justify-center items-center dark:brightness-50 brightness-50 z-[2] rotate-2">
             {#if Icon4}
-                <svelte:component
-                    this={Icon4}
+                <Icon4
                     class="z-20 ml-3 mt-3"
                     size="110" />
             {/if}

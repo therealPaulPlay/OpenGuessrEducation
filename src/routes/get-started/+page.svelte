@@ -1,8 +1,8 @@
 <script>
     import { onMount } from "svelte";
 
-    let message = "Guess where this is!";
-    let correct = false;
+    let message = $state("Guess where this is!");
+    let correct = $state(false);
     let buttons = [];
     const incorrectMessages = [
         "Nope, not it.",
@@ -79,23 +79,23 @@
             <div class="buttons-container flex flex-col space-y-2">
                 <button
                     class="btn btn-outline btn-sm streetview-minigame-button"
-                    on:click={(event) =>
+                    onclick={(event) =>
                         handleGuess("Washington", event.target)}>
                     Washington
                 </button>
                 <button
                     class="btn btn-outline btn-sm"
-                    on:click={(event) => handleGuess("New York", event.target)}>
+                    onclick={(event) => handleGuess("New York", event.target)}>
                     New York
                 </button>
                 <button
                     class="btn btn-outline btn-sm streetview-minigame-button"
-                    on:click={(event) => handleGuess("London", event.target)}>
+                    onclick={(event) => handleGuess("London", event.target)}>
                     London
                 </button>
                 <button
                     class="btn btn-outline btn-sm streetview-minigame-button"
-                    on:click={(event) =>
+                    onclick={(event) =>
                         handleGuess("Las Vegas", event.target)}>
                     Las Vegas
                 </button>
@@ -153,7 +153,7 @@
 
     <h3 class="text-2xl font-semibold mb-4">Frequently Asked Questions</h3>
     <div class="mb-6">
-        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+        <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
         <div
             tabindex="0"
             class="collapse collapse-arrow bg-base-200 bg-base-100 rounded-box mb-2">
@@ -170,7 +170,7 @@
                 </p>
             </div>
         </div>
-        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+        <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
         <div
             tabindex="0"
             class="collapse collapse-arrow bg-base-200 bg-base-100 rounded-box mb-2">
@@ -184,7 +184,7 @@
                 </p>
             </div>
         </div>
-        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+        <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
         <div
             tabindex="0"
             class="collapse collapse-arrow bg-base-200 bg-base-100 rounded-box mb-2">

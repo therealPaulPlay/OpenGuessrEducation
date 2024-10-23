@@ -3,16 +3,16 @@
     import BaseOptionsQuiz from "$lib/components/BaseOptionsQuiz.svelte";
     import * as Icon from "svelte-flag-icons";
 
-    export let region;
+    let { region } = $props();
 
-    let [a1, a2, a3, a4] = "";
+    let [a1, a2, a3, a4] = $state("");
     const answers = [a1, a2, a3, a4];
 
-    let correctAnswer = 1;
+    let correctAnswer = $state(1);
 
     let question = "Which country has this flag?";
     let questionsArray;
-    let questionAmount = 0;
+    let questionAmount = $state(0);
 
     let countryCodes;
 
@@ -61,7 +61,7 @@
         setQuizContent();
     }
 
-    let IconComponent;
+    let IconComponent = $state();
 
     function setQuizContent() {
         const randomQuestionIndex = Math.floor(
@@ -126,7 +126,7 @@
         }
     }
 
-    let dynamicSize = 300;
+    let dynamicSize = $state(300);
 </script>
 
 <BaseOptionsQuiz
@@ -141,7 +141,7 @@
     handleStartGame={startFlagGame}>
     <div class="w-full flex justify-center items-center mb-2">
         {#if IconComponent}
-            <svelte:component this={IconComponent} size={dynamicSize} />
+            <IconComponent size={dynamicSize} />
         {/if}
     </div>
 </BaseOptionsQuiz>
