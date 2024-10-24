@@ -10,6 +10,8 @@
     let { jsonName = "capital-cities", regionType = "city" } = $props();
 
     let [a1, a2, a3, a4] = $state("");
+    
+    // svelte-ignore state_referenced_locally
     let answers = [a1, a2, a3, a4];
     let correctAnswer = $state(1);
     let question = `Which ${regionType} does this image show?`;

@@ -2,10 +2,6 @@
     import Globe from "$lib/components/Globe.svelte";
     import { goto } from "$app/navigation";
     import {
-        MapPin,
-        Info,
-        Users,
-        Globe as GlobeIcon,
         Book,
         Trophy,
         Compass,
@@ -13,9 +9,7 @@
         Award,
         Map,
         Gamepad2,
-        ArrowRight,
     } from "lucide-svelte";
-    import DollarSign from "$lib/components/DollarSign.svelte";
     import { onMount } from "svelte";
 
     let welcomeText = "Master your geography skills.";
@@ -87,7 +81,7 @@
                 <Trophy class="w-12 h-12 text-secondary mb-4" />
                 <h2 class="card-title">Professional Guides</h2>
                 <p>
-                    Learn to play and discover tricks from top players to
+                    Learn to geo-guess and discover new tricks and strategies to
                     elevate your game.
                 </p>
                 <div class="card-actions justify-end">

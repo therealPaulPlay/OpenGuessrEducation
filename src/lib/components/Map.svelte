@@ -624,6 +624,7 @@
                     {/if}
                 </g>
 
+                {#if interactive}
                 <!-- text labels (country / region / city name) -->
                 <g>
                     {#each features as feature (feature.uniqueKey)}
@@ -730,6 +731,7 @@
                             class="pointer-events-none"
                             vector-effect="non-scaling-stroke" />
                     </g>
+                {/if}
                 {/if}
             </g>
         </svg>

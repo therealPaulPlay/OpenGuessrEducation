@@ -95,7 +95,7 @@
                 <a
                     class="btn normal-case text-lg {activeButton === 'countries' ? 'btn-primary text-white' : 'btn-accent'}"
                     href="/countries"
-                    onclick={() => switchSelection('countries')}>Learn Countries</a>
+                    onclick={() => switchSelection('countries')}>Countries</a>
             </li>
             <div class="divider">OR</div>
             <li>

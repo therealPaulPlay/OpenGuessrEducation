@@ -29,7 +29,7 @@
 
         // Add country polygons
         const response = await fetch(
-            "https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson",
+            "/src/lib/json/topojson/globe-data.json",
         );
         const countries = await response.json();
 

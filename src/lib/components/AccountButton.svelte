@@ -32,8 +32,11 @@
 
         // Load basic details
         const user = await getUser();
-        experience = user.experience;
-        username = user.userName;
+        
+        if (user) {
+          experience = user?.experience;
+          username = user?.userName;
+        }
 
         // Save experience to localstorage
         localStorage.setItem("experience", experience);
@@ -99,7 +102,7 @@
       // Check if the response is successful
       if (response.ok) {
         const data = await response.json();
-        return data.user;
+        return data?.user;
       } else {
         console.error("Fetch failed:", response.status);
         error = response.status;
@@ -127,14 +130,21 @@
       tabindex="0"
       class="dropdown-content menu bg-base-100 rounded-box z-[1] w-56 p-2 shadow-md mb-3">
       <div class="flex justify-center items-center mb-5 flex-col gap-x-2">
-        <h3 class="font-bold text-lg text-wrap truncate max-w-36 text-center">Hey, {username}</h3>
+        <h3 class="font-bold text-lg text-wrap truncate max-w-36 text-center">
+          Hey, {username}
+        </h3>
         <p>{experience.toLocaleString()} XP</p>
       </div>
       <div class="bg-base-200 rounded-lg p-2 text-center mb-3">
-        View and manage your account on <a href="https://openguessr.com" class="text-secondary">OpenGuessr</a>.
+        View and manage your account on <a
+          href="https://openguessr.com"
+          class="text-secondary">OpenGuessr</a
+        >.
       </div>
       <li>
-        <button class="btn btn-sm btn-primary text-white" onclick={logOut}> Log out </button>
+        <button class="btn btn-sm btn-primary text-white" onclick={logOut}>
+          Log out
+        </button>
       </li>
     </ul>
   </div>

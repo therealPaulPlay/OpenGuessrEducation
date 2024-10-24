@@ -44,7 +44,8 @@
         Embark on an epic learning-adventure.
     </h1>
     <p class="mb-6">
-        <b>Welcome to OpenGuessr Education</b>, the <b>ultimate geography platform</b>
+        <b>Welcome to OpenGuessr Education</b>, the
+        <b>ultimate geography platform</b>
         that will test your knowledge and sharpen up your geography guessing skills.
         Let's take a <b>quick tour</b> to find out what this site has to offer!
     </p>
@@ -95,8 +96,7 @@
                 </button>
                 <button
                     class="btn btn-outline btn-sm streetview-minigame-button"
-                    onclick={(event) =>
-                        handleGuess("Las Vegas", event.target)}>
+                    onclick={(event) => handleGuess("Las Vegas", event.target)}>
                     Las Vegas
                 </button>
             </div>
@@ -107,8 +107,8 @@
         Got it, but what's OpenGuessr Education?
     </h2>
     <p class="mb-6">
-        <b>OpenGuessr Education</b> is a new <b>learning site</b> by OpenGuessr that helps you
-        get better at geoguessing. Want to learn more about
+        <b>OpenGuessr Education</b> is a new <b>learning site</b> by OpenGuessr
+        that helps you get better at geoguessing. Want to learn more about
         <a href="/countries/germany" class="text-secondary">Germany</a>, for
         example? There is a page for that.
         <a href="/countries/england" class="text-secondary">England</a>? Yup.
@@ -155,8 +155,8 @@
     <div class="mb-6">
         <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
         <div
-            tabindex="0"
             class="collapse collapse-arrow bg-base-200 bg-base-100 rounded-box mb-2">
+            <input type="checkbox" />
             <div class="collapse-title text-lg font-medium">
                 What is "geoguessing"?
             </div>
@@ -164,16 +164,16 @@
                 <p>
                     Geo-Guessing is the activity of guessing the location of a
                     panorama image. It involves analyzing the image for clues
-                    such as road signs, vegetation, and architectural styles to find out
-                    where the image was taken. It's like being a
+                    such as road signs, vegetation, and architectural styles to
+                    find out where the image was taken. It's like being a
                     detective, but for geography!
                 </p>
             </div>
         </div>
         <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
         <div
-            tabindex="0"
             class="collapse collapse-arrow bg-base-200 bg-base-100 rounded-box mb-2">
+            <input type="checkbox" />
             <div class="collapse-title text-lg font-medium">
                 Why is OpenGuessr free?
             </div>
@@ -186,16 +186,28 @@
         </div>
         <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
         <div
-            tabindex="0"
             class="collapse collapse-arrow bg-base-200 bg-base-100 rounded-box mb-2">
+            <input type="checkbox" />
             <div class="collapse-title text-lg font-medium">
                 Where can I learn to play GeoGuessr?
             </div>
             <div class="collapse-content">
                 <p>
-                    OpenGuessr Education is a great place to learn new geography and GeoGuessr metas. Moreover, sites such as <a class="text-secondary" href="https://plonkit.net" target="_blank">Plonk It</a>, 
-                    <a class="text-secondary" href="https://geotips.net/" target="_blank">GeoTips</a> and <a class="text-secondary" href="https://geohints.com/" target="_blank">GeoHints</a> are other
-                    amazing resources.
+                    OpenGuessr Education is a great place to learn new geography
+                    and GeoGuessr metas. Moreover, sites such as <a
+                        class="text-secondary"
+                        href="https://plonkit.net"
+                        target="_blank">Plonk It</a
+                    >,
+                    <a
+                        class="text-secondary"
+                        href="https://geotips.net/"
+                        target="_blank">GeoTips</a>
+                    and
+                    <a
+                        class="text-secondary"
+                        href="https://geohints.com/"
+                        target="_blank">GeoHints</a> are other amazing resources.
                 </p>
             </div>
         </div>

@@ -6,6 +6,8 @@
     let { region } = $props();
 
     let [a1, a2, a3, a4] = $state("");
+    
+    // svelte-ignore state_referenced_locally
     const answers = [a1, a2, a3, a4];
 
     let correctAnswer = $state(1);
