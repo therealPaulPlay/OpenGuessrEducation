@@ -25,12 +25,14 @@
         minLabelZoom = 1,
         notHighlightedColor = "rgba(125,125,125, 0.2)",
         dynamicHeight = false,
+        smallDynamicHeight = false,
         showPoints = false,
         hueRotateDegree = 0,
         topoJsonName = "topojson-world-110m",
         afterLoad = "",
         projectionType = "geoMercator",
         projectionRotation = 0,
+        singleCountryRegion,
         children // For components that work like layouts (with a render slot, in which HTML can be passed) - children needs to be specified as a prop
     } = $props();
 
@@ -297,7 +299,7 @@
         }
     }
 
-    async function fetchContinentCountries() {
+    async function fetchRegionCountries() {
         try {
             const regionCountryData = await fetch("/src/lib/json/regions.json");
             const regionCountries = await regionCountryData.json();
@@ -397,9 +399,12 @@
     }
 
     function highlightCountries() {
-        const countries =
-            region !== "World" ? regionCountries[region] : returnAllCountries();
-        return countries;
+        if (!singleCountryRegion) {
+            const countries = region !== "World" ? regionCountries[region] : returnAllCountries();
+            return countries;
+        } else {
+            return singleCountryRegion;
+        }
     }
 
     function handleZoom(event) {
@@ -487,7 +492,7 @@
 
     onMount(async () => {
         const geoData = await fetchTopoJSON();
-        regionCountries = await fetchContinentCountries();
+        regionCountries = await fetchRegionCountries();
         allRegionSettings = await fetchRegionSettings();
 
         const settings = allRegionSettings[region] || allRegionSettings.Default;
@@ -537,6 +542,8 @@
 <div
     class="map-container rounded-lg relative grow {dynamicHeight
         ? 'dynamic-viewport-height'
+        : ''} {smallDynamicHeight
+        ? 'small-dynamic-viewport-height'
         : ''}"
     bind:this={mapContainer}
     id="mapContainer">
@@ -799,6 +806,12 @@
     .dynamic-viewport-height {
         height: 60dvh;
     }
+
+
+    .small-dynamic-viewport-height {
+        height: 30dvh;
+    }
+
 
     .planet-background {
         pointer-events: none;

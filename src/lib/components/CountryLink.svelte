@@ -32,7 +32,7 @@
 
 <a
     class="px-2 py-1 bg-base-200 rounded-md hover:scale-95 transition-all cursor-pointer"
-    href="/countries/{country.toLowerCase().replaceAll(' ', '-')}">
+    href="/countries/learn/{country.toLowerCase().replaceAll(' ', '-')}">
     <div class="flex gap-4 items-center">
         <p class="text-lg">
             {country}

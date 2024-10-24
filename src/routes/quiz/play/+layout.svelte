@@ -1,7 +1,4 @@
 <script>
-  import { run } from 'svelte/legacy';
-
-  import { onMount } from "svelte";
   import { ArrowLeftIcon } from "lucide-svelte";
   import QuizCard from "$lib/components/QuizCard.svelte";
   import FlagStackPreview from "$lib/components/FlagStackPreview.svelte";
@@ -82,10 +79,11 @@
 
     loading = false;
   }
-  run(() => {
+ $effect(() => {
     currentRoute = $page.url.pathname; // Current path, if it changes, re-load similar quizzes
   });
-  run(() => {
+
+  $effect(() => {
     if (currentRoute) {
       loadSimilarQuizzes();
     }

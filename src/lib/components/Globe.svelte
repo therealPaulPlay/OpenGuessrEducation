@@ -54,7 +54,7 @@
                         / /g,
                         "-",
                     );
-                    window.location.href = `/countries/${countryName}`;
+                    window.location.href = `/countries/learn/${countryName}`;
                 }
             });
 

@@ -139,7 +139,7 @@
     </div>
 
     {#each filteredQuizCategories as category, index}
-        <div class="mb-6">
+        <section class="mb-6" id={category.name}>
             <h2 class="text-3xl font-semibold mb-2 flex items-center">
                 <category.icon class="w-8 h-8 mr-2" />
                 {category.name.charAt(0).toUpperCase() + category.name.slice(1)}
@@ -219,7 +219,7 @@
                         : 'opacity-0'}">
                 </div>
             </div>
-        </div>
+        </section>
     {/each}
 </article>
 

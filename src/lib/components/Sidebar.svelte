@@ -1,6 +1,4 @@
 <script>
-    import { run } from 'svelte/legacy';
-
     import DarkModeToggle from "./DarkModeToggle.svelte";
     import AccountButton from "./AccountButton.svelte";
     import GlobalSearch from './GlobalSearch.svelte';
@@ -9,12 +7,6 @@
 
     let { isOpen = $bindable(false) } = $props();
 
-    let showCountries = false;
-    let showGuides = false;
-
-    let countries = ["England", "Germany", "USA", "Japan"];
-    let guides = ["Create Maps", "Land a 5K"];
-
     let activeButton = $state("");
     let mounted = $state(false);
 
@@ -22,7 +14,7 @@
         mounted = true;
     });
 
-    run(() => {
+    $effect(() => {
         const currentPath = $page.url.pathname;
         if (currentPath === "/") {
             activeButton = "home";
@@ -33,8 +25,7 @@
         } else if (currentPath.startsWith("/quiz")) {
             activeButton = "quiz";
         } else if (currentPath.startsWith("/countries")) {
-            const country = currentPath.split("/").pop();
-            activeButton = country.toLowerCase();
+            activeButton = "countries";
         }
     });
 
@@ -44,19 +35,11 @@
             isOpen = false;
         }
     }
-
-    function toggleCountries() {
-        showCountries = !showCountries;
-    }
-
-    function toggleGuides() {
-        showGuides = !showGuides;
-    }
 </script>
 
 <aside class="bg-base-200 w-64 h-full overflow-y-auto fixed left-0 top-0 bottom-0 z-[100] transition-transform duration-300 ease-in-out lg:translate-x-0"
        class:translate-x-0={isOpen}
-       class:-translate-x-full={!isOpen && mounted}>
+       class:-translate-x-full={!isOpen || !mounted}>
     <nav class="flex h-full flex-col justify-between p-4">
         <!-- Logo -->
         <div class="flex justify-center items-center mb-6 mt-5">
@@ -120,5 +103,6 @@
     .custom-max-height {
         max-height: 70dvh;
         overflow-y: auto;
+        overflow-x: hidden;
     }
 </style>

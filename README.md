@@ -71,6 +71,13 @@ points on the map (e. g. cities, that are so small, that they wouldn't be displa
 + **showPoints**: Controls whether or not points from ```regionSettings.json``` should be displayed. 
 + **topoJsonName**: A ```topojson```is a special file that holds geometry data for regions. This is used to load the actual map data. A topojson for OpenGuessr Education will usually include a name property for all features, so that map highlights etc. work.
 
+## Country Names
+Some countries have names that can be written differently. OpenGuessr Education uses the follwing ones:
++ United States (not USA, not United States of America, not United States Of America)
++ Czechia (not Czech Republic)
++ Bosnia and Herzegovina (not just Bosnia or without the "and")
++ Generally the full name, e.g. Democratic Republic of the Congo, Central African Republic (not C. A. R, not Central African Rep, not W. Sahara etc.)
+
 ## About Svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
