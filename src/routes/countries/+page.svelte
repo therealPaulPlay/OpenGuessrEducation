@@ -214,7 +214,7 @@
                     <CountryLink country="Mexico" />
                     <CountryLink country="Nicaragua" />
                     <CountryLink country="Panama" />
-                    <CountryLink country="United States of America" />
+                    <CountryLink country="United States" />
                 </div>
             </div>
         </div>

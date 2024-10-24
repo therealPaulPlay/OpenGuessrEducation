@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const PROJECT_ROOT = path.join(__dirname, '..');
 const ROUTES_DIR = path.join(PROJECT_ROOT, 'src', 'routes');
-const OUTPUT_FILE = path.join(PROJECT_ROOT, 'static', 'sitemap.xml');
+const OUTPUT_FILE = path.join(PROJECT_ROOT, 'src', 'routes', 'sitemap.xml');
 const BASE_URL = 'https://education.openguessr.com'; // Updated to your actual domain
 
 function getRoutes(dir, baseRoute = '') {

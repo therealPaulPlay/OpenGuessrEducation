@@ -2,7 +2,8 @@
     import { run } from 'svelte/legacy';
 
     import DarkModeToggle from "./DarkModeToggle.svelte";
-    import AccountButton from "$lib/components/AccountButton.svelte";
+    import AccountButton from "./AccountButton.svelte";
+    import GlobalSearch from './GlobalSearch.svelte';
     import { page } from "$app/stores";
     import { onMount } from 'svelte';
 
@@ -66,45 +67,42 @@
         </div>
 
         <!-- Navigation Links -->
-        <ul class="menu w-full space-y-4 p-0 mt-10 mb-5">
-            <li>
-                <a
-                    class="btn normal-case text-lg {activeButton === 'home' ? 'btn-primary text-white' : 'btn-accent'}"
-                    href="/"
-                    onclick={() => switchSelection('home')}>Home</a>
-            </li>
-            <li>
-                <a
-                    class="btn normal-case text-lg {activeButton === 'get-started' ? 'btn-primary text-white' : 'btn-accent'}"
-                    href="/get-started"
-                    onclick={() => switchSelection('get-started')}>Get started</a>
-            </li>
-            <li>
-                <a
-                    class="btn normal-case text-lg {activeButton === 'quiz' ? 'btn-primary text-white' : 'btn-accent'}"
-                    href="/quiz"
-                    onclick={() => switchSelection('quiz')}>Quizzes</a>
-            </li>
-            <li>
-                <a
-                    class="btn normal-case text-lg {activeButton === 'guides' ? 'btn-primary text-white' : 'btn-accent'}"
-                    href="/guides"
-                    onclick={() => switchSelection('guides')}>Guides</a>
-            </li>
-            <li>
-                <a
-                    class="btn normal-case text-lg {activeButton === 'countries' ? 'btn-primary text-white' : 'btn-accent'}"
-                    href="/countries"
-                    onclick={() => switchSelection('countries')}>Countries</a>
-            </li>
-            <div class="divider">OR</div>
-            <li>
-                <a
-                    class="btn normal-case text-lg btn-accent"
-                    href="https://openguessr.com" target="_blank">
-                    Play OpenGuessr</a>
-            </li>
-        </ul>
+        <div class="custom-max-height mt-10 mb-5">
+            <ul class="menu w-full space-y-4 p-0">
+                <GlobalSearch />
+                <li>
+                    <a
+                        class="btn normal-case text-lg {activeButton === 'home' ? 'btn-primary text-white' : 'btn-accent'}"
+                        href="/"
+                        onclick={() => switchSelection('home')}>Home</a>
+                </li>
+                <li>
+                    <a
+                        class="btn normal-case text-lg {activeButton === 'quiz' ? 'btn-primary text-white' : 'btn-accent'}"
+                        href="/quiz"
+                        onclick={() => switchSelection('quiz')}>Quizzes</a>
+                </li>
+                <li>
+                    <a
+                        class="btn normal-case text-lg {activeButton === 'guides' ? 'btn-primary text-white' : 'btn-accent'}"
+                        href="/guides"
+                        onclick={() => switchSelection('guides')}>Guides</a>
+                </li>
+                <li>
+                    <a
+                        class="btn normal-case text-lg {activeButton === 'countries' ? 'btn-primary text-white' : 'btn-accent'}"
+                        href="/countries"
+                        onclick={() => switchSelection('countries')}>Countries</a>
+                </li>
+                <div class="divider">OR</div>
+                <li>
+                    <a
+                        class="btn normal-case text-lg btn-accent"
+                        href="https://openguessr.com" target="_blank">
+                        Play OpenGuessr</a>
+                </li>
+            </ul>
+        </div>
 
         <div class="flex justify-between mt-auto">
             <DarkModeToggle />
@@ -117,3 +115,10 @@
 {#if isOpen}
     <button class="fixed inset-0 bg-black bg-opacity-50 z-[99] lg:hidden" onclick={() => isOpen = false} aria-label="Toggle Sidebar"></button>
 {/if}
+
+<style>
+    .custom-max-height {
+        max-height: 70dvh;
+        overflow-y: auto;
+    }
+</style>
