@@ -1,7 +1,7 @@
 <script>
     import { page } from "$app/stores"; // To get the current URL
     import Map from "$lib/components/Map.svelte";
-    import { ArrowLeftIcon, EthernetPort, Phone, Flag } from "lucide-svelte";
+    import { ArrowLeftIcon, EthernetPort, Phone, Flag, Languages, UsersRound, CircleDollarSign, Compass } from "lucide-svelte";
     import * as Icon from "svelte-flag-icons";
     import { onMount } from "svelte";
     
@@ -17,6 +17,9 @@
     let countryCodes = $state();
     let telephonePrefixes = $state();
     let topLevelDomains = $state();
+    let countryLanguages = $state();
+    let populationData = $state();
+    let countryGDP = $state();
 
     async function fetchCountryCodes() {
         if (countryCodes) return;
@@ -28,6 +31,9 @@
 
         telephonePrefixes = await fetch("/src/lib/json/country-data/telephone-prefixes.json").then(response => response.json());
         topLevelDomains = await fetch("/src/lib/json/country-data/country-tld.json").then(response => response.json());
+        countryLanguages = await fetch("/src/lib/json/country-data/country-languages.json").then(response => response.json());
+        populationData = await fetch("/src/lib/json/country-data/population-data.json").then(response => response.json());
+        countryGDP = await fetch("/src/lib/json/country-data/country-gdp.json").then(response => response.json());
     }
 
     // Fetch this all on the server
@@ -62,11 +68,23 @@
         <!-- statistics and other data -->
     <div class="w-full bg-base-300 rounded-lg flex flex-wrap items-center p-2 gap-2 mt-2">
             {#if topLevelDomains}
-            <div class="stat-pill"><EthernetPort /> {topLevelDomains[countryName]}</div>
+            <div class="stat-pill"><EthernetPort /> {topLevelDomains[countryName] || "-"}</div>
             {/if}
             {#if telephonePrefixes}
-            <div class="stat-pill"><Phone /> {telephonePrefixes[countryName]}</div>
+            <div class="stat-pill"><Phone /> {telephonePrefixes[countryName] || "-"}</div>
             {/if}
+            {#if populationData}
+            <div class="stat-pill"><UsersRound /> {populationData[countryName] || "-"}</div>
+            {/if}
+            {#if countryLanguages}
+            <div class="stat-pill"><Languages /> {countryLanguages[countryName] || "-"}</div>
+            {/if}
+            {#if countryGDP}
+            <div class="stat-pill"><CircleDollarSign /> {countryGDP[countryName] || "-"}Bln. USD</div>
+            {/if}
+            <a class="btn btn-secondary btn-sm custom-btn-height" href="https://openguessr.com/?play-map={countryName}" target="_blank">
+                <Compass size=25 /> Explore
+            </a>
     </div>
 
     <div class="flex items-end mt-8 mb-3 gap-2">
@@ -89,5 +107,11 @@
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
+    }
+
+    .custom-btn-height {
+        flex-grow: 1;
+        height: 2.3rem;
+        border-radius: 0.25rem;
     }
 </style>

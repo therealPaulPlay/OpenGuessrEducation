@@ -809,7 +809,7 @@
 
 
     .small-dynamic-viewport-height {
-        height: 30dvh;
+        height: 25dvh;
     }
 
 

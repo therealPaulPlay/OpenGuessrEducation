@@ -1295,5 +1295,1474 @@
         "long": -66.9036
       }
     }
+  },
+  "Afghanistan": {
+    "center": {
+      "lat": 33.9391,
+      "long": 67.7100
+    },
+    "zoom": 6
+  },
+  "Albania": {
+    "center": {
+      "lat": 41.3279,
+      "long": 19.8190
+    },
+    "zoom": 10
+  },
+  "Algeria": {
+    "center": {
+      "lat": 28.0339,
+      "long": 1.6596
+    },
+    "zoom": 5
+  },
+  "Andorra": {
+    "center": {
+      "lat": 42.5063,
+      "long": 1.5218
+    },
+    "zoom": 12,
+    "points": {
+      "Andorra": {
+        "lat": 42.5063,
+        "long": 1.5218
+      }
+    }
+  },
+  "Angola": {
+    "center": {
+      "lat": -11.2027,
+      "long": 17.8739
+    },
+    "zoom": 6
+  },
+  "Antigua and Barbuda": {
+    "center": {
+      "lat": 17.0608,
+      "long": -61.7964
+    },
+    "zoom": 10,
+    "points": {
+      "Antigua and Barbuda": {
+        "lat": 17.0608,
+        "long": -61.7964
+      }
+    }
+  },
+  "Argentina": {
+    "center": {
+      "lat": -38.4161,
+      "long": -63.6167
+    },
+    "zoom": 4
+  },
+  "Armenia": {
+    "center": {
+      "lat": 40.0691,
+      "long": 45.0382
+    },
+    "zoom": 8
+  },
+  "Australia": {
+    "center": {
+      "lat": -25.2744,
+      "long": 133.7751
+    },
+    "zoom": 4
+  },
+  "Austria": {
+    "center": {
+      "lat": 47.5162,
+      "long": 14.5501
+    },
+    "zoom": 7
+  },
+  "Azerbaijan": {
+    "center": {
+      "lat": 40.1431,
+      "long": 47.5769
+    },
+    "zoom": 7
+  },
+  "Bahamas": {
+    "center": {
+      "lat": 25.0343,
+      "long": -77.3963
+    },
+    "zoom": 9
+  },
+  "Bahrain": {
+    "center": {
+      "lat": 26.0667,
+      "long": 50.5577
+    },
+    "zoom": 11
+  },
+  "Bangladesh": {
+    "center": {
+      "lat": 23.685,
+      "long": 90.3563
+    },
+    "zoom": 6
+  },
+  "Barbados": {
+    "center": {
+      "lat": 13.1939,
+      "long": -59.5432
+    },
+    "zoom": 10
+  },
+  "Belarus": {
+    "center": {
+      "lat": 53.9045,
+      "long": 27.5590
+    },
+    "zoom": 6
+  },
+  "Belgium": {
+    "center": {
+      "lat": 50.8503,
+      "long": 4.3517
+    },
+    "zoom": 8
+  },
+  "Belize": {
+    "center": {
+      "lat": 17.1899,
+      "long": -88.4976
+    },
+    "zoom": 10
+  },
+  "Benin": {
+    "center": {
+      "lat": 9.3076,
+      "long": 2.3158
+    },
+    "zoom": 6
+  },
+  "Bhutan": {
+    "center": {
+      "lat": 27.5149,
+      "long": 90.4336
+    },
+    "zoom": 8
+  },
+  "Bolivia": {
+    "center": {
+      "lat": -16.5000,
+      "long": -68.1193
+    },
+    "zoom": 5
+  },
+  "Bosnia and Herzegovina": {
+    "center": {
+      "lat": 43.9159,
+      "long": 17.6791
+    },
+    "zoom": 8
+  },
+  "Botswana": {
+    "center": {
+      "lat": -22.3285,
+      "long": 24.6849
+    },
+    "zoom": 6
+  },
+  "Brazil": {
+    "center": {
+      "lat": -14.2350,
+      "long": -51.9253
+    },
+    "zoom": 4
+  },
+  "Brunei": {
+    "center": {
+      "lat": 4.5353,
+      "long": 114.7277
+    },
+    "zoom": 10
+  },
+  "Bulgaria": {
+    "center": {
+      "lat": 42.7339,
+      "long": 25.4858
+    },
+    "zoom": 7
+  },
+  "Burkina Faso": {
+    "center": {
+      "lat": 12.2383,
+      "long": -1.5616
+    },
+    "zoom": 6
+  },
+  "Burundi": {
+    "center": {
+      "lat": -3.3731,
+      "long": 29.9189
+    },
+    "zoom": 6
+  },
+  "Cambodia": {
+    "center": {
+      "lat": 12.5657,
+      "long": 104.9910
+    },
+    "zoom": 6
+  },
+  "Cameroon": {
+    "center": {
+      "lat": 7.3697,
+      "long": 12.3547
+    },
+    "zoom": 6
+  },
+  "Canada": {
+    "center": {
+      "lat": 56.1304,
+      "long": -106.3468
+    },
+    "zoom": 4
+  },
+  "Cape Verde": {
+    "center": {
+      "lat": 16.0020,
+      "long": -24.0132
+    },
+    "zoom": 10
+  },
+  "Central African Republic": {
+    "center": {
+      "lat": 4.3947,
+      "long": 18.5549
+    },
+    "zoom": 6
+  },
+  "Chad": {
+    "center": {
+      "lat": 15.4542,
+      "long": 18.7322
+    },
+    "zoom": 6
+  },
+  "Chile": {
+    "center": {
+      "lat": -35.6751,
+      "long": -71.5430
+    },
+    "zoom": 5
+  },
+  "China": {
+    "center": {
+      "lat": 35.8617,
+      "long": 104.1954
+    },
+    "zoom": 4
+  },
+  "Colombia": {
+    "center": {
+      "lat": 4.5709,
+      "long": -74.2973
+    },
+    "zoom": 5
+  },
+  "Comoros": {
+    "center": {
+      "lat": -11.6892,
+      "long": 43.3333
+    },
+    "zoom": 10
+  },
+  "Congo": {
+    "center": {
+      "lat": -0.2280,
+      "long": 15.8277
+    },
+    "zoom": 6
+  },
+  "Democratic Republic of the Congo": {
+    "center": {
+      "lat": -4.0383,
+      "long": 21.7587
+    },
+    "zoom": 5
+  },
+  "Costa Rica": {
+    "center": {
+      "lat": 9.7489,
+      "long": -83.7534
+    },
+    "zoom": 6
+  },
+  "Croatia": {
+    "center": {
+      "lat": 45.1,
+      "long": 15.2
+    },
+    "zoom": 8
+  },
+  "Cuba": {
+    "center": {
+      "lat": 21.5218,
+      "long": -77.7812
+    },
+    "zoom": 6
+  },
+  "Cyprus": {
+    "center": {
+      "lat": 35.1264,
+      "long": 33.4299
+    },
+    "zoom": 10
+  },
+  "Czechia": {
+    "center": {
+      "lat": 49.8175,
+      "long": 15.4730
+    },
+    "zoom": 7
+  },
+  "Denmark": {
+    "center": {
+      "lat": 56.2639,
+      "long": 9.5018
+    },
+    "zoom": 7
+  },
+  "Djibouti": {
+    "center": {
+      "lat": 11.8251,
+      "long": 42.5903
+    },
+    "zoom": 10
+  },
+  "Dominica": {
+    "center": {
+      "lat": 15.4150,
+      "long": -61.3710
+    },
+    "zoom": 10
+  },
+  "Dominican Republic": {
+    "center": {
+      "lat": 18.7357,
+      "long": -70.1627
+    },
+    "zoom": 7
+  },
+  "Ecuador": {
+    "center": {
+      "lat": -1.8312,
+      "long": -78.1834
+    },
+    "zoom": 6
+  },
+  "Egypt": {
+    "center": {
+      "lat": 26.8206,
+      "long": 30.8025
+    },
+    "zoom": 6
+  },
+  "El Salvador": {
+    "center": {
+      "lat": 13.7942,
+      "long": -88.8965
+    },
+    "zoom": 7
+  },
+  "Equatorial Guinea": {
+    "center": {
+      "lat": 1.6508,
+      "long": 10.2679
+    },
+    "zoom": 8
+  },
+  "Eritrea": {
+    "center": {
+      "lat": 15.1792,
+      "long": 39.7823
+    },
+    "zoom": 6
+  },
+  "Estonia": {
+    "center": {
+      "lat": 58.5953,
+      "long": 25.0136
+    },
+    "zoom": 8
+  },
+  "Eswatini": {
+    "center": {
+      "lat": -26.5225,
+      "long": 31.4659
+    },
+    "zoom": 7
+  },
+  "Ethiopia": {
+    "center": {
+      "lat": 9.1450,
+      "long": 40.4897
+    },
+    "zoom": 6
+  },
+  "Fiji": {
+    "center": {
+      "lat": -17.7134,
+      "long": 178.0650
+    },
+    "zoom": 6
+  },
+  "Finland": {
+    "center": {
+      "lat": 61.9241,
+      "long": 25.7482
+    },
+    "zoom": 6
+  },
+  "France": {
+    "center": {
+      "lat": 46.6034,
+      "long": 1.8883
+    },
+    "zoom": 5
+  },
+  "Gabon": {
+    "center": {
+      "lat": -0.8031,
+      "long": 11.6094
+    },
+    "zoom": 6
+  },
+  "Gambia": {
+    "center": {
+      "lat": 13.4662,
+      "long": -15.3875
+    },
+    "zoom": 8
+  },
+  "Georgia": {
+    "center": {
+      "lat": 42.3154,
+      "long": 43.3569
+    },
+    "zoom": 8
+  },
+  "Germany": {
+    "center": {
+      "lat": 51.1657,
+      "long": 10.4515
+    },
+    "zoom": 5
+  },
+  "Ghana": {
+    "center": {
+      "lat": 7.4462,
+      "long": -0.1922
+    },
+    "zoom": 6
+  },
+  "Greece": {
+    "center": {
+      "lat": 39.0742,
+      "long": 21.8243
+    },
+    "zoom": 6
+  },
+  "Grenada": {
+    "center": {
+      "lat": 12.1165,
+      "long": -61.6790
+    },
+    "zoom": 10
+  },
+  "Guatemala": {
+    "center": {
+      "lat": 15.7835,
+      "long": -90.2308
+    },
+    "zoom": 6
+  },
+  "Guinea": {
+    "center": {
+      "lat": 9.9456,
+      "long": -9.6966
+    },
+    "zoom": 6
+  },
+  "Guinea-Bissau": {
+    "center": {
+      "lat": 11.9032,
+      "long": -15.5972
+    },
+    "zoom": 7
+  },
+  "Guyana": {
+    "center": {
+      "lat": 4.8604,
+      "long": -58.9302
+    },
+    "zoom": 6
+  },
+  "Haiti": {
+    "center": {
+      "lat": 18.9712,
+      "long": -72.2852
+    },
+    "zoom": 6
+  },
+  "Honduras": {
+    "center": {
+      "lat": 15.1999,
+      "long": -86.2419
+    },
+    "zoom": 6
+  },
+  "Hungary": {
+    "center": {
+      "lat": 47.1625,
+      "long": 19.5033
+    },
+    "zoom": 6
+  },
+  "Iceland": {
+    "center": {
+      "lat": 64.9631,
+      "long": -19.0208
+    },
+    "zoom": 5
+  },
+  "India": {
+    "center": {
+      "lat": 20.5937,
+      "long": 78.9629
+    },
+    "zoom": 5
+  },
+  "Indonesia": {
+    "center": {
+      "lat": -0.7893,
+      "long": 113.9213
+    },
+    "zoom": 5
+  },
+  "Iran": {
+    "center": {
+      "lat": 32.4279,
+      "long": 53.6880
+    },
+    "zoom": 5
+  },
+  "Iraq": {
+    "center": {
+      "lat": 33.2232,
+      "long": 43.6793
+    },
+    "zoom": 6
+  },
+  "Ireland": {
+    "center": {
+      "lat": 53.4129,
+      "long": -8.2439
+    },
+    "zoom": 6
+  },
+  "Israel": {
+    "center": {
+      "lat": 31.0461,
+      "long": 34.8516
+    },
+    "zoom": 6
+  },
+  "Italy": {
+    "center": {
+      "lat": 41.8719,
+      "long": 12.5674
+    },
+    "zoom": 5
+  },
+  "Jamaica": {
+    "center": {
+      "lat": 18.1096,
+      "long": -77.2975
+    },
+    "zoom": 7
+  },
+  "Japan": {
+    "center": {
+      "lat": 36.2048,
+      "long": 138.2529
+    },
+    "zoom": 5
+  },
+  "Jordan": {
+    "center": {
+      "lat": 30.5852,
+      "long": 36.2384
+    },
+    "zoom": 6
+  },
+  "Kazakhstan": {
+    "center": {
+      "lat": 48.0196,
+      "long": 66.9237
+    },
+    "zoom": 5
+  },
+  "Kenya": {
+    "center": {
+      "lat": -0.0236,
+      "long": 37.9062
+    },
+    "zoom": 6
+  },
+  "Kiribati": {
+    "center": {
+      "lat": -3.3704,
+      "long": -168.7340
+    },
+    "zoom": 10
+  },
+  "Kuwait": {
+    "center": {
+      "lat": 29.3759,
+      "long": 47.9774
+    },
+    "zoom": 10
+  },
+  "Kyrgyzstan": {
+    "center": {
+      "lat": 41.2044,
+      "long": 74.7661
+    },
+    "zoom": 6
+  },
+  "Laos": {
+    "center": {
+      "lat": 19.8563,
+      "long": 102.4955
+    },
+    "zoom": 6
+  },
+  "Latvia": {
+    "center": {
+      "lat": 56.8796,
+      "long": 24.6032
+    },
+    "zoom": 8
+  },
+  "Lebanon": {
+    "center": {
+      "lat": 33.8547,
+      "long": 35.8623
+    },
+    "zoom": 6
+  },
+  "Lesotho": {
+    "center": {
+      "lat": -29.6090,
+      "long": 28.2336
+    },
+    "zoom": 7
+  },
+  "Liberia": {
+    "center": {
+      "lat": 6.4281,
+      "long": -9.4295
+    },
+    "zoom": 6
+  },
+  "Libya": {
+    "center": {
+      "lat": 26.3351,
+      "long": 17.2283
+    },
+    "zoom": 6
+  },
+  "Liechtenstein": {
+    "center": {
+      "lat": 47.1662,
+      "long": 9.5559
+    },
+    "zoom": 10,
+    "points": {
+      "Liechtenstein": {
+        "lat": 47.1662,
+        "long": 9.5559
+      }
+    }
+  },
+  "Lithuania": {
+    "center": {
+      "lat": 55.1694,
+      "long": 23.8813
+    },
+    "zoom": 8
+  },
+  "Luxembourg": {
+    "center": {
+      "lat": 49.6118,
+      "long": 6.1319
+    },
+    "zoom": 10
+  },
+  "Madagascar": {
+    "center": {
+      "lat": -18.7669,
+      "long": 46.8691
+    },
+    "zoom": 5
+  },
+  "Malawi": {
+    "center": {
+      "lat": -13.2543,
+      "long": 34.3015
+    },
+    "zoom": 6
+  },
+  "Malaysia": {
+    "center": {
+      "lat": 4.2105,
+      "long": 101.9758
+    },
+    "zoom": 5
+  },
+  "Maldives": {
+    "center": {
+      "lat": 3.2028,
+      "long": 73.2207
+    },
+    "zoom": 10
+  },
+  "Mali": {
+    "center": {
+      "lat": 17.5707,
+      "long": -3.9962
+    },
+    "zoom": 6
+  },
+  "Malta": {
+    "center": {
+      "lat": 35.9375,
+      "long": 14.3754
+    },
+    "zoom": 10
+  },
+  "Marshall Islands": {
+    "center": {
+      "lat": 7.1095,
+      "long": 171.1320
+    },
+    "zoom": 10,
+    "points": {
+      "Marshall Islands": {
+        "lat": 7.1095,
+        "long": 171.1320
+      }
+    }
+  },
+  "Mauritania": {
+    "center": {
+      "lat": 20.2540,
+      "long": -10.9408
+    },
+    "zoom": 6
+  },
+  "Mauritius": {
+    "center": {
+      "lat": -20.348404,
+      "long": 57.552152
+    },
+    "zoom": 7
+  },
+  "Mexico": {
+    "center": {
+      "lat": 23.6345,
+      "long": -102.5528
+    },
+    "zoom": 5
+  },
+  "Micronesia": {
+    "center": {
+      "lat": 7.4256,
+      "long": 150.5508
+    },
+    "zoom": 10,
+    "points": {
+      "Micronesia": {
+        "lat": 7.4256,
+        "long": 150.5508
+      }
+    }
+  },
+  "Moldova": {
+    "center": {
+      "lat": 47.4116,
+      "long": 28.3699
+    },
+    "zoom": 8
+  },
+  "Monaco": {
+    "center": {
+      "lat": 43.7384,
+      "long": 7.4246
+    },
+    "zoom": 12,
+    "points": {
+      "Monaco": {
+        "lat": 43.7384,
+        "long": 7.4246
+      }
+    }
+  },
+  "Mongolia": {
+    "center": {
+      "lat": 46.8625,
+      "long": 103.8467
+    },
+    "zoom": 5
+  },
+  "Montenegro": {
+    "center": {
+      "lat": 42.4411,
+      "long": 19.2636
+    },
+    "zoom": 7
+  },
+  "Morocco": {
+    "center": {
+      "lat": 31.7919,
+      "long": -7.0926
+    },
+    "zoom": 6
+  },
+  "Mozambique": {
+    "center": {
+      "lat": -18.6657,
+      "long": 35.5296
+    },
+    "zoom": 6
+  },
+  "Myanmar": {
+    "center": {
+      "lat": 21.9162,
+      "long": 95.9560
+    },
+    "zoom": 5
+  },
+  "Namibia": {
+    "center": {
+      "lat": -22.9576,
+      "long": 18.4904
+    },
+    "zoom": 6
+  },
+  "Nauru": {
+    "center": {
+      "lat": -0.5228,
+      "long": 166.9315
+    },
+    "zoom": 10,
+    "points": {
+      "Nauru": {
+        "lat": -0.5228,
+        "long": 166.9315
+      }
+    }
+  },
+  "Nepal": {
+    "center": {
+      "lat": 28.3949,
+      "long": 84.1240
+    },
+    "zoom": 5
+  },
+  "Netherlands": {
+    "center": {
+      "lat": 52.3784,
+      "long": 4.9009
+    },
+    "zoom": 5
+  },
+  "New Zealand": {
+    "center": {
+      "lat": -40.9006,
+      "long": 174.886
+    },
+    "zoom": 5
+  },
+  "Nicaragua": {
+    "center": {
+      "lat": 12.8654,
+      "long": -85.2072
+    },
+    "zoom": 6
+  },
+  "Niger": {
+    "center": {
+      "lat": 17.6078,
+      "long": 8.0817
+    },
+    "zoom": 6
+  },
+  "Nigeria": {
+    "center": {
+      "lat": 9.0820,
+      "long": 8.6753
+    },
+    "zoom": 6
+  },
+  "North Macedonia": {
+    "center": {
+      "lat": 41.6086,
+      "long": 21.7453
+    },
+    "zoom": 7
+  },
+  "Norway": {
+    "center": {
+      "lat": 60.4720,
+      "long": 8.4689
+    },
+    "zoom": 5
+  },
+  "Oman": {
+    "center": {
+      "lat": 21.5129,
+      "long": 55.9233
+    },
+    "zoom": 6
+  },
+  "Pakistan": {
+    "center": {
+      "lat": 30.3753,
+      "long": 69.3451
+    },
+    "zoom": 5
+  },
+  "Palau": {
+    "center": {
+      "lat": 7.5149,
+      "long": 134.5825
+    },
+    "zoom": 10,
+    "points": {
+      "Palau": {
+        "lat": 7.5149,
+        "long": 134.5825
+      }
+    }
+  },
+  "Panama": {
+    "center": {
+      "lat": 8.9824,
+      "long": -79.5199
+    },
+    "zoom": 6
+  },
+  "Papua New Guinea": {
+    "center": {
+      "lat": -6.3155,
+      "long": 143.9555
+    },
+    "zoom": 5
+  },
+  "Paraguay": {
+    "center": {
+      "lat": -23.4422,
+      "long": -58.4438
+    },
+    "zoom": 6
+  },
+  "Peru": {
+    "center": {
+      "lat": -9.19,
+      "long": -75.0152
+    },
+    "zoom": 5
+  },
+  "Philippines": {
+    "center": {
+      "lat": 12.8797,
+      "long": 121.7740
+    },
+    "zoom": 5
+  },
+  "Poland": {
+    "center": {
+      "lat": 51.9194,
+      "long": 19.1451
+    },
+    "zoom": 5
+  },
+  "Portugal": {
+    "center": {
+      "lat": 39.3999,
+      "long": -8.2245
+    },
+    "zoom": 5
+  },
+  "Qatar": {
+    "center": {
+      "lat": 25.276987,
+      "long": 51.520008
+    },
+    "zoom": 10
+  },
+  "Romania": {
+    "center": {
+      "lat": 45.9432,
+      "long": 24.9668
+    },
+    "zoom": 6
+  },
+  "Russia": {
+    "center": {
+      "lat": 61.5240,
+      "long": 105.3188
+    },
+    "zoom": 4
+  },
+  "Rwanda": {
+    "center": {
+      "lat": -1.9403,
+      "long": 29.8739
+    },
+    "zoom": 6
+  },
+  "Saint Kitts and Nevis": {
+    "center": {
+      "lat": 17.3578,
+      "long": -62.7829
+    },
+    "zoom": 10,
+    "points": {
+      "Saint Kitts and Nevis": {
+        "lat": 17.3578,
+        "long": -62.7829
+      }
+    }
+  },
+  "Saint Lucia": {
+    "center": {
+      "lat": 13.9094,
+      "long": -60.9789
+    },
+    "zoom": 10,
+    "points": {
+      "Saint Lucia": {
+        "lat": 13.9094,
+        "long": -60.9789
+      }
+    }
+  },
+  "Saint Vincent and the Grenadines": {
+    "center": {
+      "lat": 13.2528,
+      "long": -61.1971
+    },
+    "zoom": 10,
+    "points": {
+      "Saint Vincent and the Grenadines": {
+        "lat": 13.2528,
+        "long": -61.1971
+      }
+    }
+  },
+  "Samoa": {
+    "center": {
+      "lat": -13.7590,
+      "long": -172.1046
+    },
+    "zoom": 10,
+    "points": {
+      "Samoa": {
+        "lat": -13.7590,
+        "long": -172.1046
+      }
+    }
+  },
+  "San Marino": {
+    "center": {
+      "lat": 43.9333,
+      "long": 12.4467
+    },
+    "zoom": 10,
+    "points": {
+      "San Marino": {
+        "lat": 43.9333,
+        "long": 12.4467
+      }
+    }
+  },
+  "Sao Tome and Principe": {
+    "center": {
+      "lat": 0.3380,
+      "long": 6.7333
+    },
+    "zoom": 10,
+    "points": {
+      "Sao Tome and Principe": {
+        "lat": 0.3380,
+        "long": 6.7333
+      }
+    }
+  },
+  "Saudi Arabia": {
+    "center": {
+      "lat": 23.8859,
+      "long": 45.0792
+    },
+    "zoom": 5
+  },
+  "Senegal": {
+    "center": {
+      "lat": 14.4974,
+      "long": -14.4524
+    },
+    "zoom": 6
+  },
+  "Serbia": {
+    "center": {
+      "lat": 44.0165,
+      "long": 21.0059
+    },
+    "zoom": 6
+  },
+  "Seychelles": {
+    "center": {
+      "lat": -4.6796,
+      "long": 55.4915
+    },
+    "zoom": 10,
+    "points": {
+      "Seychelles": {
+        "lat": -4.6796,
+        "long": 55.4915
+      }
+    }
+  },
+  "Sierra Leone": {
+    "center": {
+      "lat": 8.4606,
+      "long": -11.7799
+    },
+    "zoom": 6
+  },
+  "Singapore": {
+    "center": {
+      "lat": 1.3521,
+      "long": 103.8198
+    },
+    "zoom": 10,
+    "points": {
+      "Singapore": {
+        "lat": 1.3521,
+        "long": 103.8198
+      }
+    }
+  },
+  "Slovakia": {
+    "center": {
+      "lat": 48.6690,
+      "long": 19.6990
+    },
+    "zoom": 6
+  },
+  "Slovenia": {
+    "center": {
+      "lat": 46.1512,
+      "long": 14.9955
+    },
+    "zoom": 6
+  },
+  "Solomon Islands": {
+    "center": {
+      "lat": -9.6457,
+      "long": 160.0000
+    },
+    "zoom": 10,
+    "points": {
+      "Solomon Islands": {
+        "lat": -9.6457,
+        "long": 160.0000
+      }
+    }
+  },
+  "Somalia": {
+    "center": {
+      "lat": 5.1521,
+      "long": 46.1996
+    },
+    "zoom": 6
+  },
+  "South Africa": {
+    "center": {
+      "lat": -30.5595,
+      "long": 22.9375
+    },
+    "zoom": 5
+  },
+  "South Korea": {
+    "center": {
+      "lat": 35.9078,
+      "long": 127.7669
+    },
+    "zoom": 5
+  },
+  "South Sudan": {
+    "center": {
+      "lat": 6.8770,
+      "long": 31.3070
+    },
+    "zoom": 6
+  },
+  "Spain": {
+    "center": {
+      "lat": 40.4637,
+      "long": -3.7492
+    },
+    "zoom": 5
+  },
+  "Sri Lanka": {
+    "center": {
+      "lat": 7.8731,
+      "long": 80.7718
+    },
+    "zoom": 6
+  },
+  "Sudan": {
+    "center": {
+      "lat": 12.8628,
+      "long": 30.2176
+    },
+    "zoom": 6
+  },
+  "Suriname": {
+    "center": {
+      "lat": 3.9193,
+      "long": -56.0273
+    },
+    "zoom": 6
+  },
+  "Sweden": {
+    "center": {
+      "lat": 60.1282,
+      "long": 18.6435
+    },
+    "zoom": 5
+  },
+  "Switzerland": {
+    "center": {
+      "lat": 46.8182,
+      "long": 8.2275
+    },
+    "zoom": 5
+  },
+  "Syria": {
+    "center": {
+      "lat": 34.8021,
+      "long": 38.9968
+    },
+    "zoom": 6
+  },
+  "Tajikistan": {
+    "center": {
+      "lat": 38.8610,
+      "long": 71.2761
+    },
+    "zoom": 5
+  },
+  "Tanzania": {
+    "center": {
+      "lat": -6.3690,
+      "long": 34.8888
+    },
+    "zoom": 5
+  },
+  "Thailand": {
+    "center": {
+      "lat": 15.8700,
+      "long": 100.9925
+    },
+    "zoom": 5
+  },
+  "Togo": {
+    "center": {
+      "lat": 8.6195,
+      "long": 0.8248
+    },
+    "zoom": 6
+  },
+  "Tonga": {
+    "center": {
+      "lat": -21.1789,
+      "long": -175.1982
+    },
+    "zoom": 10,
+    "points": {
+      "Tonga": {
+        "lat": -21.1789,
+        "long": -175.1982
+      }
+    }
+  },
+  "Trinidad and Tobago": {
+    "center": {
+      "lat": 10.6918,
+      "long": -61.2225
+    },
+    "zoom": 10,
+    "points": {
+      "Trinidad and Tobago": {
+        "lat": 10.6918,
+        "long": -61.2225
+      }
+    }
+  },
+  "Tunisia": {
+    "center": {
+      "lat": 33.8869,
+      "long": 9.5375
+    },
+    "zoom": 6
+  },
+  "Turkey": {
+    "center": {
+      "lat": 38.9637,
+      "long": 35.2433
+    },
+    "zoom": 5
+  },
+  "Turkmenistan": {
+    "center": {
+      "lat": 38.9697,
+      "long": 59.5560
+    },
+    "zoom": 5
+  },
+  "Tuvalu": {
+    "center": {
+      "lat": -7.1095,
+      "long": 179.1944
+    },
+    "zoom": 10,
+    "points": {
+      "Tuvalu": {
+        "lat": -7.1095,
+        "long": 179.1944
+      }
+    }
+  },
+  "Uganda": {
+    "center": {
+      "lat": 1.3733,
+      "long": 32.2903
+    },
+    "zoom": 6
+  },
+  "Ukraine": {
+    "center": {
+      "lat": 48.3794,
+      "long": 31.1656
+    },
+    "zoom": 5
+  },
+  "United Arab Emirates": {
+    "center": {
+      "lat": 23.4241,
+      "long": 53.8478
+    },
+    "zoom": 6
+  },
+  "United Kingdom": {
+    "center": {
+      "lat": 55.3781,
+      "long": -3.4360
+    },
+    "zoom": 5
+  },
+  "United States": {
+    "center": {
+      "lat": 37.0902,
+      "long": -95.7129
+    },
+    "zoom": 4
+  },
+  "Uruguay": {
+    "center": {
+      "lat": -32.5228,
+      "long": -55.7658
+    },
+    "zoom": 6
+  },
+  "Uzbekistan": {
+    "center": {
+      "lat": 41.3775,
+      "long": 64.5853
+    },
+    "zoom": 5
+  },
+  "Vanuatu": {
+    "center": {
+      "lat": -15.3763,
+      "long": 166.9591
+    },
+    "zoom": 10,
+    "points": {
+      "Vanuatu": {
+        "lat": -15.3763,
+        "long": 166.9591
+      }
+    }
+  },
+  "Vatican City": {
+    "center": {
+      "lat": 41.9029,
+      "long": 12.4534
+    },
+    "zoom": 10,
+    "points": {
+      "Vatican City": {
+        "lat": 41.9029,
+        "long": 12.4534
+      }
+    }
+  },
+  "Venezuela": {
+    "center": {
+      "lat": 6.4238,
+      "long": -66.5897
+    },
+    "zoom": 5
+  },
+  "Vietnam": {
+    "center": {
+      "lat": 14.0583,
+      "long": 108.2772
+    },
+    "zoom": 5
+  },
+  "Yemen": {
+    "center": {
+      "lat": 15.5524,
+      "long": 48.5164
+    },
+    "zoom": 6
+  },
+  "Zambia": {
+    "center": {
+      "lat": -13.1339,
+      "long": 27.8493
+    },
+    "zoom": 6
+  },
+  "Zimbabwe": {
+    "center": {
+      "lat": -19.0134,
+      "long": 29.1549
+    },
+    "zoom": 6
   }
 }
