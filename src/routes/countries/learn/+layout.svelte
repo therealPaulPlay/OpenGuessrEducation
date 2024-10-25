@@ -4,6 +4,7 @@
     import { ArrowLeftIcon, EthernetPort, Phone, Flag, Languages, UsersRound, CircleDollarSign, Compass } from "lucide-svelte";
     import * as Icon from "svelte-flag-icons";
     import { onMount } from "svelte";
+    import ScrollUp from "$lib/components/ScrollUp.svelte";
     
     let { children } = $props();
 
@@ -95,6 +96,9 @@
     </div>
 
     {@render children?.()}
+
+    <ScrollUp />
+
 </article>
 
 <style>
