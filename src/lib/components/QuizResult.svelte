@@ -16,7 +16,7 @@
         errors = 0,
         timeString = undefined,
         startGame,
-        errorWeight = 0.25
+        errorWeight = 0.25,
     } = $props();
 
     let achievedScore = Math.max(score - errors * errorWeight, 0);
@@ -30,8 +30,14 @@
         }
     });
 
-    let accuracy =
-        $derived(score + errors ? Math.max(Math.round(((1 - (errors * errorWeight / score))) * 100), 0) : 0); // avoid divide by zero error with first check
+    let accuracy = $derived(
+        score + errors
+            ? Math.max(
+                  Math.round((1 - (errors * errorWeight) / score) * 100),
+                  0,
+              )
+            : 0,
+    ); // avoid divide by zero error with first check
     let stars = $derived(Math.min(3, Math.floor(accuracy / 33)));
 </script>
 
@@ -48,7 +54,7 @@
             </p>
             <p class="text-xl mb-2">Accuracy: {accuracy}%</p>
             {#if timeString}
-            <p class="text-xl mb-4">Time: {timeString}</p>
+                <p class="text-xl mb-4">Time: {timeString}</p>
             {/if}
             <div class="flex justify-center">
                 {#each Array(3) as _, i}
