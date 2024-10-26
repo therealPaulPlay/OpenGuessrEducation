@@ -23,6 +23,8 @@
     let populationData = $state();
     let countryGDP = $state();
 
+    let childHasNoContent = $state(false);
+
     async function fetchCountryCodes() {
         if (countryCodes) return;
         countryCodes = await fetch("/src/lib/json/countryCodes.json").then(response => response.json());
@@ -53,6 +55,13 @@
         IconComponent = Icon[countryCodes[countryName]];
 
         await fetchJsonData(); // Then load all json data
+
+        const childrenContainer = document.getElementById("children-container");
+        
+        // Check if child +page has content
+        if (!childrenContainer || !childrenContainer.innerHTML == "") {
+            childHasNoContent = true;
+        }
     });
 
 </script>
@@ -98,7 +107,13 @@
         {/if}
     </div>
 
-    {@render children?.()}
+    <div class="w-full" id="children-container">
+        {@render children?.()}
+    </div>
+    
+    {#if childHasNoContent}
+    <p class="w-full text-center my-5 italic">There is no article for "{countryName}" yet. Feel free to <b>edit this page</b> and contribute content.</p>
+    {/if}
 
     <ScrollUp />
 
