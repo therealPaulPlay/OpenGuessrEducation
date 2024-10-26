@@ -9,6 +9,7 @@
   let username = $state("Guest");
   let userId = "-1";
   let experience = $state("0");
+  let supporterLevel = $state(0);
 
   let error = $state("No error");
 
@@ -36,10 +37,12 @@
         if (user) {
           experience = user?.experience;
           username = user?.userName;
+          supporterLevel = user?.supporter_level;
         }
 
         // Save experience to localstorage
         localStorage.setItem("experience", experience);
+        localStorage.setItem("supporterLevel", supporterLevel);
       }
     } else {
       isLoggedIn = false;
@@ -134,6 +137,9 @@
           Hey, {username}
         </h3>
         <p>{experience.toLocaleString()} XP</p>
+        {#if supporterLevel > 0}
+        <div class="badge badge-outline text-xs mt-0.5">TIER {supporterLevel} SUPPORTER</div>
+        {/if}
       </div>
       <div class="bg-base-200 rounded-lg p-2 text-center mb-3">
         View and manage your account on <a

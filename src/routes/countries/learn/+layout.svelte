@@ -86,7 +86,7 @@
             {#if countryGDP}
             <div class="stat-pill"><CircleDollarSign /> {countryGDP[countryName] || "-"}Bln. USD</div>
             {/if}
-            <a class="btn btn-secondary btn-sm custom-btn-height" href="https://openguessr.com/?play-map={countryName}" target="_blank">
+            <a class="btn btn-secondary btn-sm custom-btn-height" href="https://openguessr.com/?play-map={countryName.replaceAll(" ", "_")}" target="_blank">
                 <Compass size=25 /> Explore
             </a>
     </div>

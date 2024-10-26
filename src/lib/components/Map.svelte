@@ -548,7 +548,7 @@
     bind:this={mapContainer}
     id="mapContainer">
     {#if !loaded}
-        <div class="skeleton w-full h-full min-h-28 opacity-75 rounded-lg">
+        <div class="skeleton custom-loading-size opacity-75 rounded-lg">
         </div>
         <!-- svelte-ignore a11y_no_static_element_interactions -->
     {:else}
@@ -771,6 +771,12 @@
     .map-container {
         position: relative;
         overflow: hidden;
+    }
+
+    .custom-loading-size {
+        height: 100%;
+        width: 100%;
+        min-height: 135px;
     }
 
     svg {

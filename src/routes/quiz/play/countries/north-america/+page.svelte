@@ -1,6 +1,7 @@
 <script module>
     import { determineCategory } from "$lib/utils/quizMetadataHelper.js";
     import QuizMapGame from "$lib/components/QuizMapGame.svelte";
+    import ExploreInOpenGuessr from "$lib/components/ExploreInOpenGuessr.svelte";
 
     export const metadata = {
         title: "North American Countries",
@@ -11,3 +12,5 @@
 </script>
 
 <QuizMapGame region={metadata.region} />
+
+<ExploreInOpenGuessr mapName="North America" />
