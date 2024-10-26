@@ -1,9 +1,11 @@
 <script>
     import { onMount } from "svelte";
+    import { setTitle } from '$lib/utils/pageTitle.svelte.js';
 
     let message = $state("Guess where this is!");
     let correct = $state(false);
     let buttons = [];
+    
     const incorrectMessages = [
         "Nope, not it.",
         "Almost, try again.",
@@ -13,6 +15,7 @@
 
     onMount(() => {
         buttons = document.querySelectorAll(".streetview-minigame-button");
+        setTitle("Get started");
     });
 
     function handleGuess(guess, button) {

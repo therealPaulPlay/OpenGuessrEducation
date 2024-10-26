@@ -1,10 +1,16 @@
 <script>
     import CountryLink from "$lib/components/CountryLink.svelte";
     import { Info } from "lucide-svelte";
+    import { setTitle } from '$lib/utils/pageTitle.svelte.js';
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        setTitle("Learn Countries");
+    });
 </script>
 
 <article class="container mx-auto p-6 px-1">
-    <h1 class="text-5xl font-bold mb-6">Country Data</h1>
+    <h1 class="text-5xl font-bold mb-6">Learn Countries</h1>
 
     <div class="outline outline-1 px-4 py-2 rounded-lg w-fit opacity-75 flex items-center justify-center gap-3 mb-10 leading-snug">
         <Info></Info>Use the search field in the sidebar to quickly find a country!

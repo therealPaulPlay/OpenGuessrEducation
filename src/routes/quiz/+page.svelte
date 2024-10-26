@@ -14,6 +14,7 @@
     import Map from "$lib/components/Map.svelte";
     import FlagStackPreview from "$lib/components/FlagStackPreview.svelte";
     import QuizPreviewImage from "$lib/components/QuizPreviewImage.svelte";
+    import { setTitle } from '$lib/utils/pageTitle.svelte.js';
 
     // Category names have to match the path / folder names
     const categories = [
@@ -39,6 +40,7 @@
     })));
 
     onMount(async () => {
+        setTitle("Discover Quizzes");
         const modules = import.meta.glob("/src/routes/quiz/play/**/*.svelte");
         const quizzes = await Promise.all(
             Object.entries(modules).map(async ([path, module]) => {

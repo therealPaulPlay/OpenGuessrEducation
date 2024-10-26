@@ -11,12 +11,15 @@
         Gamepad2,
     } from "lucide-svelte";
     import { onMount } from "svelte";
+    import { setTitle } from '$lib/utils/pageTitle.svelte.js';
 
     let welcomeText = "Master your geography skills.";
     let yourName = $state("");
     let isHovered = $state(false);
 
     onMount(() => {
+        setTitle("Home");
+
         if (localStorage.getItem("username")) {
             yourName = ", " + localStorage.getItem("username");
         } else {

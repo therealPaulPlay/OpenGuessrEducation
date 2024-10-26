@@ -16,6 +16,12 @@
         CarFront,
     } from "lucide-svelte";
     import GuideCard from "$lib/components/GuideCard.svelte";
+    import { onMount } from "svelte";
+    import { setTitle } from '$lib/utils/pageTitle.svelte.js';
+
+    onMount(() => {
+        setTitle("Guides");
+    });
 </script>
 
 <article class="container mx-auto p-6 px-1 custom-width">

@@ -5,6 +5,7 @@
     import * as Icon from "svelte-flag-icons";
     import { onMount } from "svelte";
     import ScrollUp from "$lib/components/ScrollUp.svelte";
+    import { setTitle } from '$lib/utils/pageTitle.svelte.js';
     
     let { children } = $props();
 
@@ -46,6 +47,8 @@
         countryName = Object.keys(countryCodes).find(
             country => country.toLowerCase() === countryNameFromPath
             );
+
+        setTitle("Learn " + countryName);
 
         IconComponent = Icon[countryCodes[countryName]];
 

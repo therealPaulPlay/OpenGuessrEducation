@@ -48,6 +48,8 @@ If needed, more difficulty levels can be added, e.g. advanced, professional etc.
 </GuideCard>
 ```
 
+Make sure that the title matches the ```<h1>``` title from the page! Moreover, ensure that the folder path matches these names in a simpler form as well - For example, the path for a guide named "The Compass" is ```/compass/```.
+
 ### Guide Structure Rules
 + Please follow the structure seen in ```/src/routes/guides/read/example/tutorial```
 + Use proper spacing. Usually at least ```mb-2``` after text, ```mt-8``` for subheadings, ```mb-4``` on text if an image follows it etc. The guide tutorial shows this. 

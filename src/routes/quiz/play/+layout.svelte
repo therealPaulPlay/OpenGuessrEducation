@@ -5,12 +5,11 @@
   import Map from "$lib/components/Map.svelte";
   import { page } from "$app/stores"; // To get the current URL
   import QuizPreviewImage from "$lib/components/QuizPreviewImage.svelte";
+  import { setTitle } from '$lib/utils/pageTitle.svelte.js';
 
   let { children } = $props();
 
   let currentRoute = $state();
-
-
 
   let metadata = $state({}); // Metadata of the current quiz
   let quizzes = []; // All quizzes
@@ -41,6 +40,8 @@
         return { ...quizMetadata, category, path: formattedPath };
       }),
     );
+
+    setTitle(metadata.title + " Quiz"); // Set page title based on current quiz title
 
     // Calculate similarity scores for other quizzes
     quizzes.forEach((quiz) => {
@@ -79,6 +80,7 @@
 
     loading = false;
   }
+
  $effect(() => {
     currentRoute = $page.url.pathname; // Current path, if it changes, re-load similar quizzes
   });
