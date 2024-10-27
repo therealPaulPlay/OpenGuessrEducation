@@ -69,7 +69,7 @@
 
         // Fetch and parse sitemap
         if (!sitemapData) {
-            const response = await fetch("/src/routes/sitemap.xml");
+            const response = await fetch("/src/routes/sitemap.xml/sitemap.xml");
             const responseAsText = await response.text();
             sitemapData = new DOMParser().parseFromString(
                 responseAsText,
