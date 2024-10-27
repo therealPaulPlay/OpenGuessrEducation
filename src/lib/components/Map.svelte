@@ -333,7 +333,7 @@
     }
 
     function generatePaths() {
-        const highlightedCountries = highlightCountries() || "";
+        const highlightedCountries = highlightCountries() || [];
 
         features = features
             .map((feature, index) => {

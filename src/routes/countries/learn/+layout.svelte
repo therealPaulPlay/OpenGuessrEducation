@@ -24,7 +24,7 @@
     let countryGDP = $state();
     let videoSources = $state();
 
-    let childHasNoContent = $state(false);
+    let childrenContainer = $state();
 
     async function fetchCountryCodes() {
         if (countryCodes) return;
@@ -61,13 +61,14 @@
         IconComponent = Icon[countryCodes[countryName]];
 
         await fetchJsonData(); // Then load all json data
+    });
 
-        const childrenContainer = document.getElementById("children-container");
-        
-        // Check if child +page has content
-        if (!childrenContainer || !childrenContainer.innerHTML == "") {
-            childHasNoContent = true;
-        }
+    // Derived value for child content presence
+   let childHasNoContent = $state(false);
+
+    $effect(() => {
+        if (!childrenContainer) return;
+        childHasNoContent = (([...childrenContainer.childNodes].find(node => node.nodeType !== Node.COMMENT_NODE)?.outerHTML) ==  null);
     });
 
 </script>
@@ -114,17 +115,17 @@
     </div>
 
     <!-- Page Content -->
-    <div class="w-full" id="children-container">
+    <div bind:this={childrenContainer} class="w-full" id="children-container">
         {@render children?.()}
     </div>
     
     {#if childHasNoContent}
-    <p class="w-fit mx-auto text-center my-5 italic mt-20">There is no article for "{countryName}" yet. Feel free to <b>edit this page</b> and contribute content.</p>
+    <p class="w-fit mx-auto text-center my-5 italic mt-14">There is no article for "{countryName}" yet. Feel free to <b>edit this page</b> and contribute content.</p>
     {/if}
 
     <!-- Video content -->
     {#if videoSources}
-    <h3 class="text-xl font-bold ml-1 mt-20 mb-4">Featured videos:</h3>
+    <h3 class="text-xl font-bold ml-1 mt-14 mb-4">Featured videos:</h3>
     <div class="rounded-lg bg-base-200 p-2 w-fit">
         <div class="flex items-center flex-wrap gap-2">
             {#each videoSources as src}

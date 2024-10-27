@@ -114,7 +114,7 @@
         that helps you get better at geoguessing. Want to learn more about
         <a href="/countries/learn/germany" class="text-secondary">Germany</a>, for
         example? There is a page for that.
-        <a href="/countries/learn/england" class="text-secondary">England</a>? Yup.
+        <a href="/countries/learn/united-kingdom" class="text-secondary">England</a>? Yup.
         And there is more - let's take a look at guides and fun quizzes.
     </p>
 
