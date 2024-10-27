@@ -338,7 +338,7 @@
         features = features
             .map((feature, index) => {
                 const isHighlighted =
-                    highlightedCountries.includes(feature.properties.name) ||
+                    highlightedCountries.some((country) => country == feature.properties.name) ||
                     region === "World" ||
                     region === "All" ||
                     region === "Satellite World";
@@ -403,7 +403,7 @@
             const countries = region !== "World" ? regionCountries[region] : returnAllCountries();
             return countries;
         } else {
-            return singleCountryRegion;
+            return [singleCountryRegion];
         }
     }
 
