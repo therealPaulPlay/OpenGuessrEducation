@@ -121,7 +121,7 @@
                     <CountryLink country="Taiwan" />
                     <CountryLink country="Tajikistan" />
                     <CountryLink country="Thailand" />
-                    <CountryLink country="Timor-Leste" />
+                    <CountryLink country="East Timor" />
                     <CountryLink country="Turkey" />
                     <CountryLink country="Turkmenistan" />
                     <CountryLink country="United Arab Emirates" />
@@ -164,7 +164,7 @@
                     <CountryLink country="Gambia" />
                     <CountryLink country="Ghana" />
                     <CountryLink country="Guinea" />
-                    <CountryLink country="Guinea-Bissau" />
+                    <CountryLink country="Guinea Bissau" />
                     <CountryLink country="Ivory Coast" />
                     <CountryLink country="Kenya" />
                     <CountryLink country="Lesotho" />
@@ -181,7 +181,7 @@
                     <CountryLink country="Niger" />
                     <CountryLink country="Nigeria" />
                     <CountryLink country="Rwanda" />
-                    <CountryLink country="São Tomé and Príncipe" />
+                    <CountryLink country="Sao Tome and Principe" />
                     <CountryLink country="Senegal" />
                     <CountryLink country="Sierra Leone" />
                     <CountryLink country="Somalia" />

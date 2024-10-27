@@ -1355,7 +1355,7 @@
       "lat": -38.4161,
       "long": -63.6167
     },
-    "zoom": 4
+    "zoom": 3
   },
   "Armenia": {
     "center": {
@@ -1369,7 +1369,7 @@
       "lat": -25.2744,
       "long": 133.7751
     },
-    "zoom": 4
+    "zoom": 2
   },
   "Austria": {
     "center": {
@@ -1474,7 +1474,7 @@
       "lat": -14.2350,
       "long": -51.9253
     },
-    "zoom": 4
+    "zoom": 2.5
   },
   "Brunei": {
     "center": {
@@ -1523,7 +1523,7 @@
       "lat": 56.1304,
       "long": -106.3468
     },
-    "zoom": 4
+    "zoom": 3
   },
   "Cape Verde": {
     "center": {
@@ -1551,14 +1551,14 @@
       "lat": -35.6751,
       "long": -71.5430
     },
-    "zoom": 5
+    "zoom": 2
   },
   "China": {
     "center": {
       "lat": 35.8617,
       "long": 104.1954
     },
-    "zoom": 4
+    "zoom": 3
   },
   "Colombia": {
     "center": {
@@ -1572,7 +1572,13 @@
       "lat": -11.6892,
       "long": 43.3333
     },
-    "zoom": 10
+    "zoom": 10,
+    "points": {
+      "Comoros": {
+        "lat": -11.87,
+        "long": 43.87
+      }
+    }
   },
   "Congo": {
     "center": {
@@ -1700,6 +1706,13 @@
     },
     "zoom": 7
   },
+  "East Timor": {
+    "center": {
+      "lat": -8,
+      "long": 125
+    },
+    "zoom": 5
+  },
   "Ethiopia": {
     "center": {
       "lat": 9.1450,
@@ -1716,10 +1729,10 @@
   },
   "Finland": {
     "center": {
-      "lat": 61.9241,
+      "lat": 65.5241,
       "long": 25.7482
     },
-    "zoom": 6
+    "zoom": 4
   },
   "France": {
     "center": {
@@ -1838,7 +1851,7 @@
       "lat": 20.5937,
       "long": 78.9629
     },
-    "zoom": 5
+    "zoom": 4
   },
   "Indonesia": {
     "center": {
@@ -1891,8 +1904,15 @@
   },
   "Japan": {
     "center": {
-      "lat": 36.2048,
+      "lat": 38.2048,
       "long": 138.2529
+    },
+    "zoom": 5
+  },
+  "Taiwan": {
+    "center": {
+      "lat": 28.2048,
+      "long": 128.2529
     },
     "zoom": 5
   },
@@ -1900,6 +1920,13 @@
     "center": {
       "lat": 30.5852,
       "long": 36.2384
+    },
+    "zoom": 6
+  },
+  "Kosovo": {
+    "center": {
+      "lat": 42.66,
+      "long": 21.16
     },
     "zoom": 6
   },
@@ -2033,7 +2060,13 @@
       "lat": 3.2028,
       "long": 73.2207
     },
-    "zoom": 10
+    "zoom": 10,
+    "points": {
+      "Maldives": {
+        "lat": 3.2028,
+        "long": 73.2207
+      }
+    }
   },
   "Mali": {
     "center": {
@@ -2047,7 +2080,13 @@
       "lat": 35.9375,
       "long": 14.3754
     },
-    "zoom": 10
+    "zoom": 10,
+    "points": {
+      "Malta": {
+        "lat": 35.9375,
+        "long": 14.3754
+      }
+    }
   },
   "Marshall Islands": {
     "center": {
@@ -2137,6 +2176,13 @@
     },
     "zoom": 6
   },
+  "Western Sahara": {
+    "center": {
+      "lat": 27.7919,
+      "long": -7.0926
+    },
+    "zoom": 6
+  },
   "Mozambique": {
     "center": {
       "lat": -18.6657,
@@ -2191,6 +2237,19 @@
       "long": 174.886
     },
     "zoom": 5
+  },
+  "New Caledonia": {
+    "center": {
+      "lat": -22.3085,
+      "long": 166.5000
+    },
+    "zoom": 5,
+    "points": {
+      "New Caledonia": {
+        "lat": -22.3085,
+        "long": 166.5000
+      }
+    }
   },
   "Nicaragua": {
     "center": {
@@ -2303,6 +2362,13 @@
     },
     "zoom": 5
   },
+  "Palestine": {
+    "center": {
+      "lat": 31.0461,
+      "long": 34.8516
+    },
+    "zoom": 6
+  },
   "Qatar": {
     "center": {
       "lat": 25.276987,
@@ -2322,7 +2388,7 @@
       "lat": 61.5240,
       "long": 105.3188
     },
-    "zoom": 4
+    "zoom": 1
   },
   "Rwanda": {
     "center": {
@@ -2511,6 +2577,13 @@
     },
     "zoom": 5
   },
+  "North Korea": {
+    "center": {
+      "lat": 35.9078,
+      "long": 127.7669
+    },
+    "zoom": 5
+  },
   "South Sudan": {
     "center": {
       "lat": 6.8770,
@@ -2647,7 +2720,7 @@
       "lat": -7.1095,
       "long": 179.1944
     },
-    "zoom": 10,
+    "zoom": 5,
     "points": {
       "Tuvalu": {
         "lat": -7.1095,
@@ -2685,10 +2758,10 @@
   },
   "United States": {
     "center": {
-      "lat": 37.0902,
+      "lat": 45.0902,
       "long": -95.7129
     },
-    "zoom": 4
+    "zoom": 2
   },
   "Uruguay": {
     "center": {

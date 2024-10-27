@@ -19244,7 +19244,7 @@
         {
             "type": "Feature",
             "properties": {
-                "NAME": "Guinea-Bissau"
+                "NAME": "Guinea Bissau"
             },
             "bbox": [
                 -16.677452,
@@ -41269,7 +41269,7 @@
         {
             "type": "Feature",
             "properties": {
-                "NAME": "Timor-Leste"
+                "NAME": "East Timor"
             },
             "bbox": [
                 124.968682,

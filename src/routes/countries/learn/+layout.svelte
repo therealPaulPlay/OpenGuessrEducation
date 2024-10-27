@@ -22,6 +22,7 @@
     let countryLanguages = $state();
     let populationData = $state();
     let countryGDP = $state();
+    let videoSources = $state();
 
     let childHasNoContent = $state(false);
 
@@ -33,11 +34,16 @@
     async function fetchJsonData() {
         if (telephonePrefixes && topLevelDomains) return // if everything is already loaded, skip
 
-        telephonePrefixes = await fetch("/src/lib/json/country-data/telephone-prefixes.json").then(response => response.json());
-        topLevelDomains = await fetch("/src/lib/json/country-data/country-tld.json").then(response => response.json());
-        countryLanguages = await fetch("/src/lib/json/country-data/country-languages.json").then(response => response.json());
-        populationData = await fetch("/src/lib/json/country-data/population-data.json").then(response => response.json());
-        countryGDP = await fetch("/src/lib/json/country-data/country-gdp.json").then(response => response.json());
+        try {
+            telephonePrefixes = await fetch("/src/lib/json/country-data/telephone-prefixes.json").then(response => response.json());
+            topLevelDomains = await fetch("/src/lib/json/country-data/country-tld.json").then(response => response.json());
+            countryLanguages = await fetch("/src/lib/json/country-data/country-languages.json").then(response => response.json());
+            populationData = await fetch("/src/lib/json/country-data/population-data.json").then(response => response.json());
+            countryGDP = await fetch("/src/lib/json/country-data/country-gdp.json").then(response => response.json());
+            videoSources = await fetch("/src/lib/json/country-data/country-videos.json").then(response => response.json().then(response => response[countryName]));
+        } catch (error) {
+            console.error("Failed to fetch country json files:", error);
+        }
     }
 
     // Fetch this all on the server
@@ -75,10 +81,10 @@
     </a>
 
     {#if countryName}
-    <Map region={countryName} singleCountryRegion={countryName} smallDynamicHeight=true />
+    <Map region={countryName} singleCountryRegion={countryName} smallDynamicHeight=true showPoints=true />
     {/if}
 
-        <!-- statistics and other data -->
+    <!-- statistics and other data -->
     <div class="w-full bg-base-300 rounded-lg flex flex-wrap items-center p-2 gap-2 mt-2">
             {#if topLevelDomains}
             <div class="stat-pill"><EthernetPort /> {topLevelDomains[countryName] || "-"}</div>
@@ -93,7 +99,7 @@
             <div class="stat-pill"><Languages /> {countryLanguages[countryName] || "-"}</div>
             {/if}
             {#if countryGDP}
-            <div class="stat-pill"><CircleDollarSign /> {countryGDP[countryName] || "-"}Bln. USD</div>
+            <div class="stat-pill"><CircleDollarSign /> {countryGDP[countryName] || "-"} Bn. USD</div>
             {/if}
             <a class="btn btn-secondary btn-sm custom-btn-height" href="https://openguessr.com/?play-map={countryName.replaceAll(" ", "_")}" target="_blank">
                 <Compass size=25 /> Explore
@@ -107,13 +113,26 @@
         {/if}
     </div>
 
+    <!-- Page Content -->
     <div class="w-full" id="children-container">
         {@render children?.()}
     </div>
     
     {#if childHasNoContent}
-    <p class="w-full text-center my-5 italic">There is no article for "{countryName}" yet. Feel free to <b>edit this page</b> and contribute content.</p>
+    <p class="w-fit mx-auto text-center my-5 italic mt-20">There is no article for "{countryName}" yet. Feel free to <b>edit this page</b> and contribute content.</p>
     {/if}
+
+    <!-- Video content -->
+    {#if videoSources}
+    <h3 class="text-xl font-bold ml-1 mt-20 mb-4">Featured videos:</h3>
+    <div class="rounded-lg bg-base-200 p-2 w-fit">
+        <div class="flex items-center flex-wrap gap-2">
+            {#each videoSources as src}
+            <iframe class="rounded-md" width="356" height="200" {src} title="Video" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            {/each}
+        </div>
+    </div>
+   {/if} 
 
     <ScrollUp />
 
