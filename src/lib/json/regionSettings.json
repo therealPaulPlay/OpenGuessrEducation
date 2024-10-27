@@ -1804,7 +1804,7 @@
     },
     "zoom": 6
   },
-  "Guinea-Bissau": {
+  "Guinea Bissau": {
     "center": {
       "lat": 11.9032,
       "long": -15.5972
@@ -2667,6 +2667,13 @@
       "long": 0.8248
     },
     "zoom": 6
+  },
+  "Ivory Coast": {
+    "center": {
+      "lat": 8.6195,
+      "long": 0.8248
+    },
+    "zoom": 5
   },
   "Tonga": {
     "center": {
