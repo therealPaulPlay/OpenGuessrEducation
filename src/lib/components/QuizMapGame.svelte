@@ -3,6 +3,7 @@
     import { Timer } from "lucide-svelte";
     import Map from "$lib/components/Map.svelte";
     import QuizResult from "./QuizResult.svelte";
+    import { playSound } from "$lib/utils/playSound";
 
     import * as Icon from "svelte-flag-icons";
 
@@ -182,10 +183,14 @@
 
     function checkAnswer(answer) {
         if (answer.toLowerCase() == currentQuestion.toLowerCase()) {
+            // Correct Answer
+            playSound("answer_correct");
+            
             score++;
 
             quizMap.disableFeatureInteractions(currentQuestion);
             quizMap.highlightFeatureOutline(currentQuestion);
+            
             // Highlight region green if hint was not used, highlight yellow if hint was used
             if (currentWrongAttempts >= 3) {
                 quizMap.highlightFeature(currentQuestion, "oklch(var(--wa))");
@@ -195,6 +200,9 @@
 
             nextQuestion();
         } else {
+            // Wrong Answer
+            playSound("answer_wrong");
+
             errors++;
             currentWrongAttempts++;
 

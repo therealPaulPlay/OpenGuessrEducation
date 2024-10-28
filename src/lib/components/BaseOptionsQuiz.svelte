@@ -2,6 +2,7 @@
     import { Check, ArrowRight } from "lucide-svelte";
     import QuizResult from "./QuizResult.svelte";
     import { onMount } from "svelte";
+    import { playSound } from "$lib/utils/playSound";
 
     let {
         question = "Default Question",
@@ -39,8 +40,11 @@
 
         selectedAnswer = index;
 
+        // Check if answer is correct
         if (index === correctAnswer - 1) {
+            playSound("answer_correct");
         } else {
+            playSound("answer_wrong");
             errors++;
         }
 

@@ -4,6 +4,7 @@
   import Toast from "./Toast.svelte";
   import { isAuthenticated } from "$lib/stores/accountData.js";
   import { addExperience } from "$lib/utils/addExperience.js";
+  import { playSound } from "$lib/utils/playSound";
 
   let {
     question = "",
@@ -55,6 +56,9 @@
 
       // Guide quizzes can only be done when logged in, so no check needed here
       addExperience(500);
+      playSound("answer_correct");
+    } else {
+      playSound("answer_wrong");
     }
   }
 </script>
