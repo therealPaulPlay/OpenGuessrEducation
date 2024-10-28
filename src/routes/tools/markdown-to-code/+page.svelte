@@ -171,9 +171,16 @@
         showPreview = true;
     }
 
+    function saveMarkdownToStorage() {
+        if (localStorage) {
+            localStorage.setItem("markdownToCodeInput", markdown);
+        }
+    }
+
     onMount(() => {
         // Keyboard shortcuts
         if (window) {
+            markdown = localStorage.getItem("markdownToCodeInput") || ""; // Load input from storage
             window.addEventListener("keydown", (event) => {
                 if ((event.ctrlKey || event.metaKey) && event.key === "b") {
                     event.preventDefault();
@@ -283,6 +290,7 @@
                 <h2 class="text-lg font-bold mb-4 h-10">Markdown Editor</h2>
                 <textarea
                     bind:value={markdown}
+                    oninput={saveMarkdownToStorage}
                     class="w-full h-full p-4 bg-base-200 rounded-xl font-mono text-sm overflow-y-auto resize-none bg-base-300"
                     placeholder="Start typing your markdown here..."></textarea>
             </div>
