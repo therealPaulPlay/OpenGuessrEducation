@@ -8,6 +8,10 @@ The unique combination of minigames, interactive guides and extensive country da
 This project uses Svelte (UI Framework) with SvelteKit (Web development framework). You can check out their [official docs](https://svelte.dev/) to get started.
 Moreover, Tailwind CSS (which is dependent on PostCSS) is used for utility classes. If you need help, feel free to consult the Discord Server (Link found in the footer area on OpenGuessr Education or OpenGuessr).
 
+## License
+This project is licensed under the MIT License (with the Commons Clause) - see the [LICENSE](LICENSE) file for details.
+**Note**: This license permits non-commercial use only.
+
 ### Prerequisites
 
 + Have [Node.js](https://nodejs.org/en/download/package-manager) version >=16 installed
