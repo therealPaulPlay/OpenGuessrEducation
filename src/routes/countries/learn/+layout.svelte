@@ -2,6 +2,7 @@
     import { page } from "$app/stores"; // To get the current URL
     import Map from "$lib/components/Map.svelte";
     import { ArrowLeftIcon, EthernetPort, Phone, Flag, Languages, UsersRound, CircleDollarSign, Compass } from "lucide-svelte";
+    import ArticleEditButton from "$lib/components/ArticleEditButton.svelte";
     import * as Icon from "svelte-flag-icons";
     import { onMount } from "svelte";
     import ScrollUp from "$lib/components/ScrollUp.svelte";
@@ -112,6 +113,9 @@
         {#if IconComponent}
             <IconComponent size=40 />
         {/if}
+        <div class="ml-auto mb-0.5">
+            <ArticleEditButton path={$page.url.pathname} />
+        </div>
     </div>
 
     <!-- Page Content -->
