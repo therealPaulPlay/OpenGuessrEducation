@@ -5,7 +5,7 @@
 </script>
 
 <!-- main h1 header (only one per page) -->
-<h1 class="text-4xl font-bold mb-4">An example guide</h1>
+<h1 class="text-4xl font-bold mb-4">A guide example</h1>
 <p class="mb-2">
     This guide is a good <b>example</b> of how a finished guide should look like.
     Use this when you want to get into writing articles yourself.
@@ -18,7 +18,7 @@
 </p>
 
 <ArticleTip>
-    This is a highlighted tip. Please use target="_blank" for external links, thank you!
+    This is a highlighted Article Tip. Please use target="_blank" for external links, thank you!
 </ArticleTip>
 
 <img
@@ -33,7 +33,7 @@
 <p class="mb-2">This is a second header with example text.</p>
 
 <GuideQuiz
-  question="How many quizzes can a guide include?"
+  question="How many Guide Quizzes can a guide include?"
   answerOne="A single one"
   answerTwo="Up to ten"
   answerThree="At least one"
@@ -45,7 +45,7 @@
 <p class="mb-2">This is a third with example text.</p>
 
 <ArticleEmbedPanorama src="https://www.google.com/maps/embed?pb=!4v1730052032179!6m8!1m7!1sm67yOELuY_ilVgXXbmMRPQ!2m2!1d40.70986804443505!2d-73.99006038502898!3f203.5393579945816!4f5.933099209797788!5f0.7820865974627469" />
-<p class="text-center mt-2">An example embed. These embeds have a mt-4 by default.</p>
+<p class="text-center mt-2">An example Article Embed. These embeds have a mt-4 by default.</p>
 
 <h3 class="text-xl font-bold mt-8 mb-2">Example H3 header</h3>
 <p class="mb-2">This is an example that shows a H3 header with text.</p>

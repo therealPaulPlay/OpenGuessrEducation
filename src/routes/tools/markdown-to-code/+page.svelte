@@ -196,9 +196,9 @@
 
     <p class="mb-4 max-w-2xl">
         Use this markdown editor to create guides and articles without writing
-        code. Feel free to ask for help on the <b>Discord Server</b> if you
+        code. Feel free to ask for help on the <b>Discord Server</b> (link down below in the footer) if you
         struggle with using this converter or don't know how to create a pull
-        request with the finished code on GitHub. You can also
+        request with the finished code on GitHub. You can alsoa
         <b>send your finished article's code</b> to experienced people there, who
         can create the Fork with your changes and a Pull Request to the OpenGuessr
         Education Repository for you.
@@ -221,6 +221,13 @@
                 target="_blank"
                 href="https://github.com/therealPaulPlay/OpenGuessrEducation/blob/main/README.md"
                 >Readme</a> file.
+        </li>
+        <li>
+            Check out this example guide with <b>all components</b> <a
+            class="text-secondary"
+            target="_blank"
+            href="/guides/read/example/tutorial/"
+            >here</a>.
         </li>
     </ul>
 
@@ -292,7 +299,7 @@
                     bind:value={markdown}
                     oninput={saveMarkdownToStorage}
                     class="w-full h-full p-4 bg-base-200 rounded-xl font-mono text-sm overflow-y-auto resize-none bg-base-300"
-                    placeholder="Start typing your markdown here..."></textarea>
+                    placeholder="Start typing your pseudo-markdown text here..."></textarea>
             </div>
 
             <div class="w-1/2 p-4 min-w-52 grow h-[calc(100vh-16rem)] relative">
