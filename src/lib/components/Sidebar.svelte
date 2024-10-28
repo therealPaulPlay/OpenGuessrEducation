@@ -37,7 +37,7 @@
     }
 </script>
 
-<aside class="bg-base-200 w-64 h-full overflow-y-auto fixed left-0 top-0 bottom-0 z-[100] transition-transform duration-300 ease-in-out lg:translate-x-0"
+<aside class="bg-base-200 w-64 h-full overflow-y-auto fixed left-0 top-0 bottom-0 z-[100] transition-transform duration-300 ease-in-out lg:translate-x-0 overflow-x-hidden"
        class:translate-x-0={isOpen}
        class:-translate-x-full={!isOpen || !mounted}>
     <nav class="flex h-full flex-col justify-between p-4">

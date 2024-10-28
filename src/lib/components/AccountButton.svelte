@@ -15,6 +15,8 @@
 
   let showError = $state(false);
 
+  let loadIframeSource = $state(false);
+
   // Global function that changes everything to logged in or signed out (all other sign-in functions are related to this)
   async function checkAuthenticationStatus() {
     let bearerToken = localStorage.getItem("bearer");
@@ -33,14 +35,16 @@
 
         // Load basic details
         const user = await getUser();
-        
+
         if (user) {
           experience = user?.experience;
           username = user?.userName;
           supporterLevel = user?.supporter_level;
+          username = user?.userName;
         }
 
-        // Save experience to localstorage
+        // Save certain user values to localstorage
+        localStorage.setItem("username", username);
         localStorage.setItem("experience", experience);
         localStorage.setItem("supporterLevel", supporterLevel);
       }
@@ -76,6 +80,7 @@
     localStorage.removeItem("id");
     localStorage.removeItem("username");
     localStorage.removeItem("experience");
+    localStorage.removeItem("supporterLevel");
   }
 
   function logOut() {
@@ -118,8 +123,40 @@
     }
   }
 
+  function showModal() {
+    loadIframeSource = true;
+    login_modal.showModal();
+  }
+
   onMount(() => {
     checkAuthenticationStatus();
+
+    // Iframe messages
+    window.onmessage = function (e) {
+      try {
+        const data = String(e.data); // Ensure data is a string
+
+        switch (true) {
+          case data === "close":
+            login_modal.close();
+            loadIframeSource = false;
+            break;
+          case data.includes("token"):
+            localStorage.setItem("bearer", data.replace("token ", ""));
+            break;
+          case data.includes("id"):
+            localStorage.setItem("id", data.replace("id ", ""));
+            break;
+          case data == "loadAccountStatus":
+            setTimeout(() => {
+              checkAuthenticationStatus();
+            }, 200);
+            break;
+        }
+      } catch (error) {
+        console.error("Error processing window message: " + error);
+      }
+    };
   });
 </script>
 
@@ -138,7 +175,9 @@
         </h3>
         <p>{experience.toLocaleString()} XP</p>
         {#if supporterLevel > 0}
-        <div class="badge badge-outline text-xs mt-0.5">TIER {supporterLevel} SUPPORTER</div>
+          <div class="badge badge-outline text-xs mt-0.5">
+            TIER {supporterLevel} SUPPORTER
+          </div>
         {/if}
       </div>
       <div class="bg-base-200 rounded-lg p-2 text-center mb-3">
@@ -157,7 +196,7 @@
 {/if}
 
 {#if !isLoggedIn}
-  <a class="btn btn-accent" href="https://openguessr.com/signup">Log in</a>
+  <button class="btn btn-accent" onclick={showModal}>Log in</button>
 {/if}
 
 {#if showError}
@@ -167,3 +206,16 @@
     </div>
   </div>
 {/if}
+
+<dialog id="login_modal" class="modal h-full w-[calc(100vw-1rem)] mx-2 p-0">
+  <dialog id="my_modal_2" class="modal"></dialog>
+  <div class="modal-box h-[98%] max-h-full w-full p-0 bg-base-200">
+    <iframe
+      src={loadIframeSource ? "https://openguessr.com/signup" : ""}
+      class="w-full h-full {loadIframeSource
+        ? 'opacity-100'
+        : 'opacity-0'} transition-opacity duration-500"
+      title="Login and Sign up"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</dialog>

@@ -143,7 +143,7 @@
                 insertion = `[Component ArticleTip]\n${selectedText}\n[/Component]`;
                 break;
             case "embed":
-                insertion = `[Component ArticleEmbedPanorama]\nhttps://example.com/embed-url\n[/Component]`;
+                insertion = `[Component ArticleEmbedPanorama]\nhttps://example.com/\n[/Component]`;
                 break;
             case "quiz":
                 insertion = `[Component GuideQuiz]\nYour question here\nAnswer 1\nAnswer 2\nAnswer 3\nAnswer 4\nCorrect Answer: 1\n[/Component]`;
@@ -205,12 +205,16 @@
     </p>
 
     <p class="font-bold">Please read:</p>
-    <ul class="list list-disc list-inside mb-4">
+    <ul class="list list-disc list-inside mb-4 max-w-2xl">
         <li>
             You can only have <b>one</b> H1 header per article.
         </li>
         <li>
             Country Articles should <b>not</b> have a <b>H1 header</b>, as the country name will be added as such automatically.
+        </li>
+        <li>
+            For embedding Panoramas using Google Maps, please refer to <a class="text-secondary" target="_blank" href="https://youtu.be/wNOM52TtJTQ?si=Oz3WbTsLNwy6BYdC">this youtube video</a> and then extract
+            <b>only the URL</b> (after source=", until ") from the copied <b>iframe html</b>. Use this URL for the Article Embed Component.
         </li>
         <li>
             Only use <b>Guide Quizzes</b> in <b>Guides</b>.
@@ -328,7 +332,7 @@
         <div
             class="fixed inset-0 flex overflow-auto items-center justify-center bg-black bg-opacity-50">
             <div
-                class="bg-white max-h-[80dvh] overflow-auto rounded-lg p-4 w-11/12 md:w-3/4 lg:w-1/2">
+                class="bg-base-100 max-h-[80dvh] overflow-auto rounded-lg p-4 w-11/12 md:w-3/4 lg:w-1/2">
                 <div class="flex justify-between items-center">
                     <h2 class="text-lg font-bold">Preview</h2>
                     <button onclick={closePreview} class="btn btn-ghost">
@@ -336,7 +340,7 @@
                     </button>
                 </div>
                 <p class="mb-2">Please note that this is not an exact preview, just roughly how your article will look like. Components cannot be displayed properly, e.g. Guide Quizzes will not be rendered here at all.</p>
-                <div class="mt-4 p-4 border rounded">
+                <div class="mt-4 p-4 border rounded outline outline-accent border-none">
                     {@html generatedCode
                         .replaceAll("<ArticleTip>", "<mark>")
                         .replaceAll("</ArticleTip>", "</mark>")
