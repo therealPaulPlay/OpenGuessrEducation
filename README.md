@@ -58,6 +58,14 @@ Make sure that the title matches the ```<h1>``` title from the page! Moreover, e
 + Highlight important words in **bold** using ```<b>word</b>```. As a rule of thumb, every concept should be understandable by just reading the words in bold.
 + Make use of article tips and article guides, but don't put too many inside of a guide. Ensure that content > components.
 
+## Writing a Country Article
+Country Articles are quite similar to Guides. Therefore, please refer to the ```Guide Structure Rules``` from the previous paragraph. However, there are some differences:
++ Don't include Guide Quizzes: Guide Quizzes are **not** meant for Country Articles.
++ Don't use a H1 heading. The name of the country will be added as a H1 automatically.
+
+## Markdown-To-Code Converter
+To write Guides or Articles more easily and to get to know the structure rules, you can try out the [Markdown-To-Code editor](https://education.openguessr.com/tools/markdown-to-code). 
+
 ## The Map
 The map component (Map.svelte) has a bunch of parameters. Let's go over the most important ones:
 

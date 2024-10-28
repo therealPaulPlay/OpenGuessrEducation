@@ -6,12 +6,16 @@
         Frame,
         LucideGamepad,
         HelpCircle,
+        Captions,
+        X,
         Copy,
     } from "lucide-svelte";
 
     import { onMount } from "svelte";
 
     let markdown = $state("");
+
+    let showPreview = $state(false);
 
     function generateCode(markdown) {
         if (!markdown.trim()) return "";
@@ -50,7 +54,7 @@
                         code += `<GuideQuiz\n  question="${question}"\n  answerOne="${answers[0]}"\n  answerTwo="${answers[1]}"\n  answerThree="${answers[2]}"\n  answerFour="${answers[3]}"\n  correctAnswer={${answers[4]?.replace("Correct Answer: ", "") || 1}}\n/>\n`;
                         break;
                     case "ArticleEmbedPanorama":
-                        code += `<ArticleEmbedPanorama src="${componentContent[0]}" />\n`;
+                        code += `<ArticleEmbedPanorama src="${componentContent[0]}"></ArticleEmbedPanorama>\n`;
                         break;
                 }
                 componentContent = [];
@@ -71,6 +75,8 @@
                 code += `<h2 class="text-2xl font-bold mt-8 mb-2">${line.slice(3)}</h2>\n`;
             } else if (line.startsWith("### ")) {
                 code += `<h3 class="text-xl font-bold mt-8 mb-2">${line.slice(4)}</h3>\n`;
+            } else if (line.startsWith("__ ")) {
+                code += `<p class="text-center mt-2">${line.slice(3)}</p>\n`;
             } else if (line.startsWith("- ")) {
                 if (!isInList) {
                     code += `<ul class="mb-2 list-disc list-inside">\n`;
@@ -127,6 +133,9 @@
             case "bold":
                 insertion = `**${selectedText}**`;
                 break;
+            case "caption":
+                insertion = `__ ${selectedText}`;
+                break;   
             case "list":
                 insertion = `- ${selectedText}`;
                 break;
@@ -153,6 +162,15 @@
 
     let generatedCode = $derived(generateCode(markdown));
 
+    // Function to close the preview modal
+    function closePreview() {
+        showPreview = false;
+    }
+
+    function openPreview() {
+        showPreview = true;
+    }
+
     onMount(() => {
         // Keyboard shortcuts
         if (window) {
@@ -169,17 +187,23 @@
 <div class="container mx-auto p-6">
     <h1 class="text-4xl font-bold mb-8">Markdown-To-Code Converter</h1>
 
-    <p class="mb-2 max-w-2xl">
+    <p class="mb-4 max-w-2xl">
         Use this markdown editor to create guides and articles without writing
-        code. Feel free to ask for help on the <b>Discord Server</b> if you struggle
-        with using this converter or don't know how to create a pull request with
-        the finished code on GitHub.
+        code. Feel free to ask for help on the <b>Discord Server</b> if you
+        struggle with using this converter or don't know how to create a pull
+        request with the finished code on GitHub. You can also
+        <b>send your finished article's code</b> to experienced people there, who
+        can create the Fork with your changes and a Pull Request to the OpenGuessr
+        Education Repository for you.
     </p>
 
     <p class="font-bold">Please read:</p>
     <ul class="list list-disc list-inside mb-4">
         <li>
             You can only have <b>one</b> H1 header per article.
+        </li>
+        <li>
+            Country Articles should <b>not</b> have a <b>H1 header</b>, as the country name will be added as such automatically.
         </li>
         <li>
             Only use <b>Guide Quizzes</b> in <b>Guides</b>.
@@ -194,26 +218,29 @@
     </ul>
 
     <p class="mb-2 max-w-2xl">
-        Please note that this is <b>not a real markdown</b> editor and only uses a <b>simplified version</b> of the markdown syntax. All available features can be accessed
-        via the buttons in the tool bar. It is recommended to <b>first select</b> the text that you want to apply a style to and <b>then click</b> the button.
+        Please note that this is <b>not a real markdown</b> editor and only uses
+        a <b>simplified version</b> of the markdown syntax. All available
+        features can be accessed via the buttons in the tool bar. It is
+        recommended to <b>first select</b> the text that you want to apply a
+        style to and <b>then click</b> the button. Thank you!
     </p>
 
     <div class="h-fit pb-1 bg-base-100 rounded-xl bg-base-200 mt-10">
-        <div class="flex gap-2 p-4 bg-base-300 rounded-lg">
+        <div class="flex gap-2 p-4 bg-base-300 rounded-lg flex-wrap">
             <div class="lg:tooltip" data-tip="Heading 1 (large, only one)">
                 <button
                     onclick={() => insertMarkdown("h1")}
-                    class="btn btn-ghost btn-sm"><Hash size={20} />1</button>
+                    class="btn btn-ghost btn-sm">H1</button>
             </div>
             <div class="lg:tooltip" data-tip="Heading 2 (medium)">
                 <button
                     onclick={() => insertMarkdown("h2")}
-                    class="btn btn-ghost btn-sm"><Hash size={20} />2</button>
+                    class="btn btn-ghost btn-sm">H2</button>
             </div>
             <div class="lg:tooltip" data-tip="Heading 3 (small)">
                 <button
                     onclick={() => insertMarkdown("h3")}
-                    class="btn btn-ghost btn-sm"><Hash size={20} />3</button>
+                    class="btn btn-ghost btn-sm">H3</button>
             </div>
             <div class="lg:tooltip" data-tip="Bold">
                 <button
@@ -225,6 +252,12 @@
                     onclick={() => insertMarkdown("list")}
                     class="btn btn-ghost btn-sm"
                     ><ListOrdered size={20} /></button>
+            </div>
+            <div class="lg:tooltip" data-tip="Caption (For Article Embed or Images)">
+                <button
+                    onclick={() => insertMarkdown("caption")}
+                    class="btn btn-ghost btn-sm"
+                    ><Captions size={20} /></button>
             </div>
             <div class="lg:tooltip" data-tip="Article Tip">
                 <button
@@ -245,8 +278,8 @@
             </div>
         </div>
 
-        <div class="flex flex-1 h-fit pb-14">
-            <div class="w-1/2 p-4 h-[calc(100vh-16rem)] relative">
+        <div class="flex flex-1 h-fit pb-14 flex-wrap gap-y-12">
+            <div class="w-1/2 p-4 min-w-52 grow h-[calc(100vh-16rem)] relative">
                 <h2 class="text-lg font-bold mb-4 h-10">Markdown Editor</h2>
                 <textarea
                     bind:value={markdown}
@@ -254,12 +287,17 @@
                     placeholder="Start typing your markdown here..."></textarea>
             </div>
 
-            <div class="w-1/2 p-4 h-[calc(100vh-16rem)] relative">
+            <div class="w-1/2 p-4 min-w-52 grow h-[calc(100vh-16rem)] relative">
                 <h2 class="text-lg font-bold mb-4 flex items-center h-10">
-                    Generated Code
+                    Code
+                    <button
+                    class="btn btn-accent btn-sm ml-auto"
+                    onclick={openPreview}>
+                    Preview
+                </button>
                     <button
                         onclick={copyToClipboard}
-                        class="btn btn-accent btn-sm ml-auto"
+                        class="btn btn-accent btn-sm ml-2"
                         ><Copy size={16} />Copy</button>
                 </h2>
                 <code
@@ -269,4 +307,32 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal for Preview -->
+    {#if showPreview}
+        <div
+            class="fixed inset-0 flex overflow-auto items-center justify-center bg-black bg-opacity-50">
+            <div
+                class="bg-white max-h-[80dvh] overflow-auto rounded-lg p-4 w-11/12 md:w-3/4 lg:w-1/2">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-lg font-bold">Preview</h2>
+                    <button onclick={closePreview} class="btn btn-ghost">
+                        <X size={20} />
+                    </button>
+                </div>
+                <p class="mb-2">Please note that this is not an exact preview, just roughly how your article will look like. Components cannot be displayed properly, e.g. Guide Quizzes will not be rendered here at all.</p>
+                <div class="mt-4 p-4 border rounded">
+                    {@html generatedCode
+                        .replaceAll("<ArticleTip>", "<mark>")
+                        .replaceAll("</ArticleTip>", "</mark>")
+                        .replaceAll(
+                            "<ArticleEmbedPanorama",
+                            `<iframe style="width: 100%; height: 400px;"`,
+                        )
+                        .replaceAll("</ArticleEmbedPanorama>", "</iframe>")}
+                    <!-- Render the generated code as HTML -->
+                </div>
+            </div>
+        </div>
+    {/if}
 </div>
