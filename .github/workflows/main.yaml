@@ -1,0 +1,44 @@
+name: Deploy OpenGuessr Education with Node
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-primary:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Install SSH keys
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
+
+      - name: Connect to server, build image, and deploy
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            cd ${{ secrets.WORK_DIR }}
+
+            # Pull latest changes from Git
+            git checkout ${{ secrets.MAIN_BRANCH }}
+            git pull
+
+            # Build Docker image
+            docker build -t openguessreducation .
+
+            # Check if container openguessreducation exists
+            if ! docker ps -a --format '{{.Names}}' | grep -q "^openguessreducation$"; then
+              echo "Container openguessreducation does not exist, creating..."
+              docker run -d -p 3000:3000 --network host --restart unless-stopped --name openguessreducation openguessreducation
+            else
+              echo "Container openguessreducation exists, stopping and removing..."
+              docker stop openguessreducation || true
+              docker rm openguessreducation || true
+              docker run -d -p 3000:3000 --network host --restart unless-stopped --name openguessreducation openguessreducation
+            fi
+          EOF
+
+      - name: Cleanup SSH
+        run: rm -rf ~/.ssh
