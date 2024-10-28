@@ -59,7 +59,8 @@ Make sure that the title matches the ```<h1>``` title from the page! Moreover, e
 + Make use of article tips and article guides, but don't put too many inside of a guide. Ensure that content > components.
 
 ## Writing a Country Article
-Country Articles are quite similar to Guides. Therefore, please refer to the ```Guide Structure Rules``` from the previous paragraph. However, there are some differences:
+Country Articles are quite similar to Guides. Therefore, please refer to the ```Guide Structure Rules``` from the previous paragraph. Now, country pages are located in ```/src/routes/countries/learn/$countryName```. From there, you can edit
+the +page file. Note that this can be empty - all the surrounding info will be added through the layout. However, there are some differences compard to Guides:
 + Don't include Guide Quizzes: Guide Quizzes are **not** meant for Country Articles.
 + Don't use a H1 heading. The name of the country will be added as a H1 automatically.
 
