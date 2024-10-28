@@ -4,7 +4,7 @@
 </script>
 
 <div class="dropdown dropdown-top dropdown-end">
-    <div tabindex="0" role="button" class="btn btn-accent btn-sm">
+    <div tabindex="0" role="button" class="btn btn-accent btn-sm overflow-hidden h-fit flex gap-1 p-2">
         <Edit size="20" /> Edit this page
     </div>
     <!-- svelte-ignore a11y_no_noninteractive_tabindex -->

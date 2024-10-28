@@ -108,7 +108,7 @@
             </a>
     </div>
 
-    <div class="flex items-end mt-8 mb-3 gap-2">
+    <div class="flex flex-wrap items-end mt-8 mb-3 gap-4">
         <h1 class="text-4xl font-bold">{countryName || "Not defined"}</h1>
         {#if IconComponent}
             <IconComponent size=40 />
@@ -130,8 +130,8 @@
     <!-- Video content -->
     {#if videoSources}
     <h3 class="text-xl font-bold ml-1 mt-14 mb-4">Featured videos:</h3>
-    <div class="rounded-lg bg-base-200 p-2 w-fit">
-        <div class="flex items-center flex-wrap gap-2">
+    <div class="rounded-lg bg-base-200 p-2 w-fit max-w-full">
+        <div class="flex items-center flex-wrap gap-2 overflow-hidden">
             {#each videoSources as src}
             <iframe class="rounded-md" width="356" height="200" {src} title="Video" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             {/each}

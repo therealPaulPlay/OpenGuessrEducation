@@ -8,7 +8,7 @@
 
     // Instead of a banner, if one CMP already exists (e.g. for Ads), use TFC instead to listen to the consent from there
     // window["gtag_enable_tcf_support"] = true;
-
+    
     onMount(() => {
         // Check if the user has already accepted cookies
         const consent = localStorage.getItem("cookieConsent");
@@ -33,12 +33,22 @@
                 page_path: $page.url.pathname,
                 cookie_domain: location.hostname,
                 cookie_flags: "SameSite=None; Secure",
-                // Disable data collection if the user hasn't consented
-                ad_storage: hasConsent ? "granted" : "denied",
-                ad_personalization: hasConsent ? "granted" : "denied",
-                ad_user_data: hasConsent ? "granted" : "denied",
-                analytics_storage: hasConsent ? "granted" : "denied",
+                // Deny data collection by default
+                ad_storage: "denied",
+                ad_personalization: "denied",
+                ad_user_data: "denied",
+                analytics_storage: "denied",
             });
+
+            // Grant permissions if the user has accepted
+            if (hasConsent) {
+                gtag("config", "G-DXD64B7ZDX", {
+                    ad_storage: "granted",
+                    ad_personalization: "granted",
+                    ad_user_data: "granted",
+                    analytics_storage: "granted",
+                });
+            }
         } catch (error) {
             console.error("Error loading Google Analytics:", error);
         }
@@ -54,21 +64,24 @@
     function handleDeny() {
         cookieConsent = false;
         localStorage.setItem("cookieConsent", "false");
-        loadGoogleAnalytics(false);
         showBanner = false;
     }
 </script>
 
 <svelte:head>
     <script
-        src="https://www.googletagmanager.com/gtag/js?id=G-DXD64B7ZDX" async>
-    </script>
+        src="https://www.googletagmanager.com/gtag/js?id=G-DXD64B7ZDX"
+        async></script>
 </svelte:head>
 
 {#if showBanner}
-    <div role="alert" class="alert fixed w-fit m-2 bottom-2 right-2">
+    <div role="alert" class="alert fixed w-fit ml-4 m-2 bottom-2 bg-base-100 right-2 z-50 shadow-lg">
         <AlertCircle className="stroke-info h-6 w-6 shrink-0" />
-        <span>This website uses cookies according to these <a href="https://openguessr.com/legal/" class="text-secondary">policies</a>.</span>
+        <span
+            >This website uses cookies according to its <a
+                href="https://openguessr.com/legal"
+                class="text-secondary">privacy policy</a
+            >.</span>
         <div class="flex flex-wrap gap-2">
             <button onclick={handleDeny} class="btn btn-sm btn-accent"
                 >Only essential</button>
