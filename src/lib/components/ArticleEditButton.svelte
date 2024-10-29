@@ -5,7 +5,7 @@
 
 <div class="dropdown dropdown-top dropdown-end">
     <div tabindex="0" role="button" class="btn btn-accent btn-sm overflow-hidden h-fit flex gap-1 p-2">
-        <Edit size="20" /> Edit this page
+        <Edit size="20" /> <p class="hide-on-mobile">Edit this page</p>
     </div>
     <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
     <ul
@@ -51,3 +51,11 @@
         </div>
     </ul>
 </div>
+
+<style>
+    @media all and (max-width: 800px) {
+        .hide-on-mobile {
+            display: none;
+        }
+    }
+</style>

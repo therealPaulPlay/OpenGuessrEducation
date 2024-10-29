@@ -125,7 +125,7 @@
 
     <div class="mb-8">
         <h2 class="text-2xl font-semibold mb-4">Filter by Continent:</h2>
-        <div class="flex flex-wrap gap-2">
+        <div class="flex gap-2 overflow-x-auto">
             {#each allTags as tag}
                 {#if tag !== undefined}
                     <button

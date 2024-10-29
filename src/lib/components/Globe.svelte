@@ -10,7 +10,7 @@
     // Function to determine the current globe texture based on the data-theme attribute
     const getThemeTexture = () => {
         return document.documentElement.getAttribute("data-theme") === "customDark"
-            ? "/earth_dark.jpg" // Dark mode texture
+            ? "/assets/earth_dark.jpg" // Dark mode texture
             : "/assets/earth_light.jpg"; // Light mode texture
     };
 
@@ -24,7 +24,7 @@
             .backgroundColor("rgba(0, 0, 0, 0)")
             .lineHoverPrecision(0)
             .width(800)
-            .height(500)(globeElement)
+            .height(470)(globeElement)
             .atmosphereColor("red");
 
         // Add country polygons
@@ -131,9 +131,17 @@
 
 <style>
     .globe-container {
-        height: 400px;
+        height: 350px;
     }
     :global(.scene-container) {
         background-color: transparent !important;
     }
+
+    /* disable on small phones to allow for scrolling without spinning the globe */
+    @media all and (max-width: 600px) {
+        .globe-container {
+            pointer-events: none;
+        }
+    }
+
 </style>
