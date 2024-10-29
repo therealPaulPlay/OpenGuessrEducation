@@ -200,4 +200,10 @@
         width: 100%;
         height: 40dvh;
     }
+
+    @media (max-width: 700px) {
+        .custom-size {
+            height: 20dvh;
+        }
+    }
 </style>

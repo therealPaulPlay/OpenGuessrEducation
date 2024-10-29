@@ -75,7 +75,7 @@
 </svelte:head>
 
 {#if showBanner}
-    <div role="alert" class="alert fixed w-fit ml-4 m-2 bottom-2 bg-base-100 right-2 z-50 shadow-lg">
+    <div role="alert" class="alert fixed w-fit m-4 bottom-0 bg-base-100 right-0 z-50 shadow-lg">
         <AlertCircle className="stroke-info h-6 w-6 shrink-0" />
         <span
             >This website uses cookies according to its <a

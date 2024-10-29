@@ -27,8 +27,8 @@
 <div
     class="card {mobile
         ? 'image-full'
-        : 'card-side'} bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300 {mobile ? 'max-h-64' : ''} overflow-hidden">
-    <figure class="relative {mobile ? 'max-h-64' : ''}">
+        : 'card-side'} bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+    <figure class="relative">
         <img
             src="/assets/guide_preview.png"
             class="h-full {mobile ? 'w-64' : 'w-48'} dark:opacity-90"

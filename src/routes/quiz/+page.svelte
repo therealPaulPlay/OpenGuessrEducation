@@ -14,7 +14,7 @@
     import Map from "$lib/components/Map.svelte";
     import FlagStackPreview from "$lib/components/FlagStackPreview.svelte";
     import QuizPreviewImage from "$lib/components/QuizPreviewImage.svelte";
-    import { setTitle } from '$lib/utils/pageTitle.svelte.js';
+    import { setTitle } from "$lib/utils/pageTitle.svelte.js";
 
     // Category names have to match the path / folder names
     const categories = [
@@ -30,14 +30,16 @@
     let selectedTags = $state(new Set());
     let scrollButtonVisibility = $state([]);
 
-    let filteredQuizCategories = $derived(quizCategories.map((category) => ({
-        ...category,
-        quizzes: category.quizzes.filter(
-            (quiz) =>
-                selectedTags.size === 0 ||
-                quiz.tags.some((tag) => selectedTags.has(tag)),
-        ),
-    })));
+    let filteredQuizCategories = $derived(
+        quizCategories.map((category) => ({
+            ...category,
+            quizzes: category.quizzes.filter(
+                (quiz) =>
+                    selectedTags.size === 0 ||
+                    quiz.tags.some((tag) => selectedTags.has(tag)),
+            ),
+        })),
+    );
 
     onMount(async () => {
         setTitle("Discover Quizzes");
@@ -70,19 +72,6 @@
         setTimeout(updateAllButtonVisibility, 10);
     });
 
-    function toggleTag(tag) {
-        if (selectedTags.has(tag)) {
-            selectedTags.delete(tag);
-        } else {
-            selectedTags.add(tag);
-        }
-
-        selectedTags = selectedTags; // Trigger reactivity
-
-        // Delay visibility update to ensure elements are rendered
-        setTimeout(updateAllButtonVisibility, 10);
-    }
-
     let allTags = $derived([
         ...new Set(
             quizCategories.flatMap((category) =>
@@ -90,6 +79,23 @@
             ),
         ),
     ]);
+
+    function toggleTag(tag) {
+        if (selectedTags.has(tag)) {
+            selectedTags.delete(tag);
+        } else {
+            selectedTags.add(tag);
+        }
+
+        console.log(selectedTags);
+
+        const newSet = selectedTags;
+        selectedTags = new Set();
+        selectedTags = newSet;
+
+        // Delay visibility update to ensure elements are rendered
+        setTimeout(updateAllButtonVisibility, 10);
+    }
 
     function scrollContainer(containerId, scrollAmount) {
         const container = document.getElementById(containerId);
@@ -139,7 +145,6 @@
             {/each}
         </div>
     </div>
-
     {#each filteredQuizCategories as category, index}
         <section class="mb-6" id={category.name}>
             <h2 class="text-3xl font-semibold mb-2 flex items-center">
