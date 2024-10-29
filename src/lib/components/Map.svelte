@@ -497,6 +497,7 @@
 
 
     function handleTouchStart(event) {
+        if (!interactive) return;
         if (event.touches.length === 1) {
             isTouching = true;
             const touch = event.touches[0];
@@ -510,6 +511,8 @@
     }
 
     function handleTouchMove(event) {
+    if (!interactive) return;
+    
     if (isTouching && event.touches.length === 1) {
         event.preventDefault(); // Prevent page scroll
         rect = mapContainer.getBoundingClientRect();
@@ -567,12 +570,15 @@
     }
 
     function getTouchDistance(touches) {
+        if (!interactive) return;
+
         const dx = touches[0].clientX - touches[1].clientX;
         const dy = touches[0].clientY - touches[1].clientY;
         return Math.sqrt(dx * dx + dy * dy);
     }
 
     onMount(() => {
+        if (!interactive) return;
         mapContainer.addEventListener('touchstart', handleTouchStart);
         mapContainer.addEventListener('touchmove', handleTouchMove);
         mapContainer.addEventListener('touchend', handleTouchEnd);
