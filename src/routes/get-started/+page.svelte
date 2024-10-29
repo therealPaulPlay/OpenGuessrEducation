@@ -40,7 +40,7 @@
 
 <article class="container mx-auto p-6 px-1 max-w-4xl">
     <img
-        src="/src/lib/assets/openguessr_jungle_adventure.png"
+        src="/assets/openguessr_jungle_adventure.png"
         alt="Geography adventure"
         class="w-full rounded-xl mb-10" />
     <h1 class="text-4xl font-bold mb-4">
@@ -69,7 +69,7 @@
 
     <div class="game-container flex flex-wrap mb-8">
         <img
-            src="/src/lib/assets/streetview_example.png"
+            src="/assets/streetview_example.png"
             alt="Street View Example"
             class="rounded-xl mb-6 w-96" />
 
@@ -114,7 +114,7 @@
         that helps you get better at geoguessing. Want to learn more about
         <a href="/countries/learn/germany" class="text-secondary">Germany</a>, for
         example? There is a page for that.
-        <a href="/countries/learn/united-kingdom" class="text-secondary">England</a>? Yup.
+        <a href="/countries/learn/united-kingdom" class="text-secondary">United Kingdom</a>? Yup.
         And there is more - let's take a look at guides and fun quizzes.
     </p>
 

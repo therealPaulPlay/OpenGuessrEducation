@@ -23,7 +23,7 @@
 
 <img
     alt="street view example lining up"
-    src="/src/lib/assets/guides/example.jpg"
+    src="/assets/guides/example.jpg"
     class="rounded-xl w-full" />
 
 <!-- image description -->

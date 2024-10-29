@@ -2,7 +2,7 @@
     import { onMount } from "svelte";
     import BaseOptionsQuiz from "$lib/components/BaseOptionsQuiz.svelte";
 
-    let { region, textDataPath = "/src/lib/json/country-data/country-tld.json" } = $props();
+    let { region, textDataPath = "/json/country-data/country-tld.json" } = $props();
 
     let [a1, a2, a3, a4] = $state("");
 
@@ -24,7 +24,7 @@
     async function fetchQuestionsArray() {
         try {
             if (!questionsArray) {
-                questionsArray = await fetch("/src/lib/json/regions.json");
+                questionsArray = await fetch("/json/regions.json");
                 questionsArray = await questionsArray.json();
                 questionsArray = questionsArray[region];
                 return [...questionsArray] || [];

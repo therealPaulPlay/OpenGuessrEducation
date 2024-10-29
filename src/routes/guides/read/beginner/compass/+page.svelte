@@ -59,7 +59,7 @@
   correctAnswer={3}
 />
 
-<img alt="streetview example lining up" src="/src/lib/assets/guides/compass-streetview-example.jpg" class="rounded-xl">
+<img alt="streetview example lining up" src="/assets/guides/compass-streetview-example.jpg" class="rounded-xl">
 
 <h2 class="text-2xl font-bold mt-8 mb-2">The two hemispheres</h2>
 <p class="mb-2">

@@ -45,7 +45,7 @@
 
 <img
     alt="trekker camera example"
-    src="/src/lib/assets/guides/trekker_camera_example.png"
+    src="/assets/guides/trekker_camera_example.png"
     class="rounded-xl w-full" />
 
 <p class="text-center mt-2">A trekker camera in use (Source: Google).</p>

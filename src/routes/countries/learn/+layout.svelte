@@ -29,19 +29,19 @@
 
     async function fetchCountryCodes() {
         if (countryCodes) return;
-        countryCodes = await fetch("/src/lib/json/countryCodes.json").then(response => response.json());
+        countryCodes = await fetch("/json/countryCodes.json").then(response => response.json());
     }
 
     async function fetchJsonData() {
         if (telephonePrefixes && topLevelDomains) return // if everything is already loaded, skip
 
         try {
-            telephonePrefixes = await fetch("/src/lib/json/country-data/telephone-prefixes.json").then(response => response.json());
-            topLevelDomains = await fetch("/src/lib/json/country-data/country-tld.json").then(response => response.json());
-            countryLanguages = await fetch("/src/lib/json/country-data/country-languages.json").then(response => response.json());
-            populationData = await fetch("/src/lib/json/country-data/population-data.json").then(response => response.json());
-            countryGDP = await fetch("/src/lib/json/country-data/country-gdp.json").then(response => response.json());
-            videoSources = await fetch("/src/lib/json/country-data/country-videos.json").then(response => response.json().then(response => response[countryName]));
+            telephonePrefixes = await fetch("/json/country-data/telephone-prefixes.json").then(response => response.json());
+            topLevelDomains = await fetch("/json/country-data/country-tld.json").then(response => response.json());
+            countryLanguages = await fetch("/json/country-data/country-languages.json").then(response => response.json());
+            populationData = await fetch("/json/country-data/population-data.json").then(response => response.json());
+            countryGDP = await fetch("/json/country-data/country-gdp.json").then(response => response.json());
+            videoSources = await fetch("/json/country-data/country-videos.json").then(response => response.json().then(response => response[countryName]));
         } catch (error) {
             console.error("Failed to fetch country json files:", error);
         }

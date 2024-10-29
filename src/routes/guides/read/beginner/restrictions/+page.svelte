@@ -47,7 +47,7 @@ These are the ones that are exclusive:</p>
 
 <img
     alt="OpenGuessr restrictions"
-    src="/src/lib/assets/guides/openguessr_restrictions.png"
+    src="/assets/guides/openguessr_restrictions.png"
     class="rounded-xl w-full" />
 
 <p class="text-center mt-2">Restrictions in OpenGuessr.</p>

@@ -74,7 +74,7 @@
 
     async function fetchRegionSettings() {
         const regionSettingsJSON = await fetch(
-            "/src/lib/json/regionSettings.json",
+            "/json/regionSettings.json",
         );
         return await regionSettingsJSON.json();
     }
@@ -269,7 +269,7 @@
         try {
             const formattedTopoJsonName = topoJsonName.replace(".json", "");
             const response = await fetch(
-                `/src/lib/json/topojson/${formattedTopoJsonName}.json`,
+                `/json/topojson/${formattedTopoJsonName}.json`,
             );
             const topology = await response.json();
 
@@ -301,7 +301,7 @@
 
     async function fetchRegionCountries() {
         try {
-            const regionCountryData = await fetch("/src/lib/json/regions.json");
+            const regionCountryData = await fetch("/json/regions.json");
             const regionCountries = await regionCountryData.json();
             return regionCountries;
         } catch (error) {

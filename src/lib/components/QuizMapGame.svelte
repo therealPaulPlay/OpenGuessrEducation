@@ -75,7 +75,7 @@
         let regions;
 
         try {
-            regions = await fetch("/src/lib/json/regions.json");
+            regions = await fetch("/json/regions.json");
             regions = await regions.json();
 
             // Current region or entire World
@@ -102,7 +102,7 @@
         }
 
         try {
-            countryCodes = await fetch("/src/lib/json/countryCodes.json");
+            countryCodes = await fetch("/json/countryCodes.json");
             countryCodes = await countryCodes.json();
         } catch (error) {
             console.error(

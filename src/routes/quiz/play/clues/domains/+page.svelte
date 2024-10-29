@@ -7,7 +7,7 @@
         tags: ["All"],
         region: "Top Level Domains",
         previewImagePath: "/domains/domain-example.jpg",
-        textDataPath: "/src/lib/json/country-data/country-tld.json",
+        textDataPath: "/json/country-data/country-tld.json",
         category: determineCategory(new URL(import.meta.url).pathname)
     }
 </script>

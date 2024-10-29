@@ -33,7 +33,7 @@
     <Map region="A-Profile" interactive="true" />
     <img
         alt="A-profile"
-        src="/src/lib/assets/guides/a-profile-guardrail.png"
+        src="/assets/guides/a-profile-guardrail.png"
         class="rounded-lg h-44" />
 </div>
 
@@ -70,7 +70,7 @@
     <Map region="B-Profile" interactive="true" />
     <img
         alt="B-profile"
-        src="/src/lib/assets/guides/b-profile-guardrail.png"
+        src="/assets/guides/b-profile-guardrail.png"
         class="rounded-lg h-44" />
 </div>
 
@@ -105,6 +105,6 @@
     correctAnswer={3}>
     <img
         alt="Thin B-profile"
-        src="/src/lib/assets/guides/b-profile-thin-guardrail.png"
+        src="/assets/guides/b-profile-thin-guardrail.png"
         class="rounded-lg h-44 mb-4 mx-auto" />
 </GuideQuiz>

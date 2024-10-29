@@ -30,7 +30,7 @@
         : 'card-side'} bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
     <figure class="relative">
         <img
-            src="/src/lib/assets/guide_preview.png"
+            src="/assets/guide_preview.png"
             class="h-full {mobile ? 'w-64' : 'w-48'} dark:opacity-90"
             style="filter: hue-rotate({hueRotate}deg)"
             alt="Guide preview" />

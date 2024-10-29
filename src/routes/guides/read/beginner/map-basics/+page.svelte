@@ -48,7 +48,7 @@
 
 <img
     alt="street view example lining up"
-    src="/src/lib/assets/guides/geoguessr_map_page.png"
+    src="/assets/guides/geoguessr_map_page.png"
     class="rounded-xl w-full" />
 
 <p class="text-center mt-2">Official GeoGuessr maps.</p>

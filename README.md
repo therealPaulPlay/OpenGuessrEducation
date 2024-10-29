@@ -1,4 +1,4 @@
-![OpenGuessr Education cover image](src/lib/assets/openguessr_jungle_adventure.png?raw=true)
+![OpenGuessr Education cover image](src/static/assets/openguessr_jungle_adventure.png?raw=true)
 
 # OpenGuessr Education
 [OpenGuessr Education](https://education.openguessr.com) is a knowledge hub and quiz page for geography enthusiasts, created and managed by [PaulPlay](https://paulplay.studio)👋 The goal of the project is to build a site that teaches players how to improve their skills in geography-guessing games such as OpenGuessr, GeoGuessr or Geotastic and appeals to general geography fans as well.
@@ -74,8 +74,8 @@ To write Guides or Articles more easily and to get to know the structure rules, 
 ## The Map
 The map component (Map.svelte) has a bunch of parameters. Let's go over the most important ones:
 
-+ **region**: The region refers to the highlighted parts on the map. Regions are stored in ```/src/lib/json/regions.json``` as arrays inside of a JSON file. For example, the region Europe includes, and will therefore 
-highlight, all european countries on the map. Moreover, the region settings will be taken from ```/src/lib/json/regionSettings.json```. The region settings control, for example, the map center point (lat, long), zoom level and 
++ **region**: The region refers to the highlighted parts on the map. Regions are stored in ```/json/regions.json``` as arrays inside of a JSON file. For example, the region Europe includes, and will therefore 
+highlight, all european countries on the map. Moreover, the region settings will be taken from ```/json/regionSettings.json```. The region settings control, for example, the map center point (lat, long), zoom level and 
 points on the map (e. g. cities, that are so small, that they wouldn't be displayed at all or hard to see).
 + **zoom**: The zoom property controls the base zoom level of the map. Note that the zoom can be changed dynamically by the user.
 + **width & height**: These control the canvas size (svg viewbox) of the map, not its size on the page. Larger canvas sizes result in smaller labels etc.

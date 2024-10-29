@@ -10,7 +10,7 @@
     async function fetchCountryCodes() {
         try {
             if (!countryCodes) {
-                const codes = await fetch("/src/lib/json/countryCodes.json");
+                const codes = await fetch("/json/countryCodes.json");
                 const jsonCodes = await codes.json();
                 return jsonCodes;
             }

@@ -28,7 +28,7 @@
             jsonName.replace(".json", ""); // In case the .json is included, strip it out
 
             const response = await fetch(
-                `/src/lib/json/satellite/${jsonName}.json`,
+                `/json/satellite/${jsonName}.json`,
             );
             const data = await response.json();
             locationsArray = data["Locations"];

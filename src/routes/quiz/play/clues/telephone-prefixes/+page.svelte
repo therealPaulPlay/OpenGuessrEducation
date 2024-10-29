@@ -7,7 +7,7 @@
         tags: ["All"],
         region: "Telephone Prefixes",
         previewImagePath: "/telephone-prefixes/tel-number-example.jpg",
-        textDataPath: "/src/lib/json/country-data/telephone-prefixes.json",
+        textDataPath: "/json/country-data/telephone-prefixes.json",
         category: determineCategory(new URL(import.meta.url).pathname)
     }
 </script>

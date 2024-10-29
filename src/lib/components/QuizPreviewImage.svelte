@@ -3,7 +3,7 @@
 </script>
 
 <div class="custom-size rounded-lg overflow-hidden grow bg-base-300">
-    <img alt="clue quiz preview" class="h-full w-full" src="/src/lib/assets/clues/{path.replace("/src/lib/assets/clues", "")}" />
+    <img alt="clue quiz preview" class="h-full w-full" src="/assets/clues{path.replace("/assets/clues/", "")}" />
 </div>
 
 <style>

@@ -70,14 +70,14 @@
 
 <img
     alt="Street View Camera Generations"
-    src="/src/lib/assets/guides/coverage_types.png"
+    src="/assets/guides/coverage_types.png"
     class="rounded-xl w-full" />
 
 <p class="text-center mt-2 mb-4">Camera Generations (Source: geodummy.com).</p>
 
 <img
     alt="Street View Generations Map"
-    src="/src/lib/assets/guides/coverage_gen_map.png"
+    src="/assets/guides/coverage_gen_map.png"
     class="rounded-xl w-full" />
 
 <p class="text-center mt-2 mb-4">
@@ -104,7 +104,7 @@
 
 <img
     alt="Street View attribution - detecting unofficial coverage"
-    src="/src/lib/assets/guides/detect_official_coverage.png"
+    src="/assets/guides/detect_official_coverage.png"
     class="rounded-xl w-full" />
 
 <p class="text-center mt-2">Street View attribution.</p>
@@ -120,7 +120,7 @@
 
 <img
     alt="Ari coverage"
-    src="/src/lib/assets/guides/autori_streetview.png"
+    src="/assets/guides/autori_streetview.png"
     class="rounded-xl w-full" />
 
 <p class="text-center mt-2">A car from Autori (Source: Google).</p>

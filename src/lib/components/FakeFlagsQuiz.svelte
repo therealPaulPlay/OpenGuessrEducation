@@ -17,7 +17,7 @@
     async function fetchQuestionsArray() {
         try {
             if (!questionsArray) {
-                questionsArray = await fetch("/src/lib/json/regions.json");
+                questionsArray = await fetch("/json/regions.json");
                 questionsArray = await questionsArray.json();
                 questionsArray = questionsArray["Asia"].concat(
                     questionsArray["Africa"],
@@ -40,7 +40,7 @@
     async function fetchCountryCodes() {
         try {
             if (!countryCodes) {
-                const codes = await fetch("/src/lib/json/countryCodes.json");
+                const codes = await fetch("/json/countryCodes.json");
                 const jsonCodes = await codes.json();
                 return jsonCodes;
             }

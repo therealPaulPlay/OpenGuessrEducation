@@ -19,7 +19,7 @@
 >
 <img
     alt="Follow car (Kenya)"
-    src="/src/lib/assets/guides/nigeria_follow_car_2.png"
+    src="/assets/guides/nigeria_follow_car_2.png"
     class="rounded-lg w-full mb-4" />
 </GuideQuiz>
 
@@ -31,7 +31,7 @@
 
 <img
     alt="Follow car (Nigeria)"
-    src="/src/lib/assets/guides/nigeria_follow_car_1.png"
+    src="/assets/guides/nigeria_follow_car_1.png"
     class="rounded-xl w-full" />
 
 <p class="text-center mt-2">The Nigerian follow car (Source: geohints.com).</p>
@@ -48,7 +48,7 @@
 
 <img
     alt="Follow car (Kenya)"
-    src="/src/lib/assets/guides/kenya_follow_car.png"
+    src="/assets/guides/kenya_follow_car.png"
     class="rounded-xl w-full" />
 
 <p class="text-center mt-2">The follow car in Kenya (Source: geohints.com).</p>

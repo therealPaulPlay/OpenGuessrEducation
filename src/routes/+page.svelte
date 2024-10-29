@@ -187,12 +187,12 @@
             <span class="mr-2">Start learning</span>
             <div class="w-10 h-10 relative">
                 <img
-                    src="src/lib/assets/noob_player.png"
+                    src="/assets/noob_player.png"
                     alt="Beginner"
                     class="w-full h-full object-contain absolute transition-opacity duration-300 ease-in-out"
                     style="opacity: {isHovered ? 0 : 1}" />
                 <img
-                    src="src/lib/assets/chad_moai.png"
+                    src="/assets/chad_moai.png"
                     alt="Pro"
                     class="w-full h-full object-contain absolute transition-opacity duration-300 ease-in-out"
                     style="opacity: {isHovered ? 1 : 0}" />

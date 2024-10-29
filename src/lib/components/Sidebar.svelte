@@ -44,7 +44,7 @@
         <!-- Logo -->
         <div class="flex justify-center items-center mb-6 mt-5">
             <img
-                src="/src/lib/assets/openguessr_icon.png"
+                src="/assets/openguessr_icon.png"
                 alt="OpenGuessr Logo"
                 class="w-16 h-16 rounded-full p-2 bg-base-300" />
         </div>

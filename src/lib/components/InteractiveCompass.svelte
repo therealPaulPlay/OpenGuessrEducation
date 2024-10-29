@@ -21,7 +21,7 @@
     <div class="relative w-24 h-48">
         <img
             id="compass"
-            src="/src/lib/assets/guides/compass_example.png"
+            src="/assets/guides/compass_example.png"
             alt="Compass"
             class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 dark:invert" />
 

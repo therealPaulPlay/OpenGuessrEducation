@@ -11,7 +11,7 @@
     async function fetchRegions() {
         try {
             if (!regionsArray) {
-                regionsArray = await fetch("/src/lib/json/regions.json");
+                regionsArray = await fetch("/json/regions.json");
                 regionsArray = await regionsArray.json();
                 if (region !== "All") {
                     regionsArray = regionsArray[region];
@@ -38,7 +38,7 @@
     async function fetchCountryCodes() {
         try {
             if (!countryCodes) {
-                const codes = await fetch("/src/lib/json/countryCodes.json");
+                const codes = await fetch("/json/countryCodes.json");
                 countryCodes = await codes.json();
             }
         } catch (error) {

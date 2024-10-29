@@ -22,7 +22,7 @@
 
 <img
     alt="Sweden road"
-    src="/src/lib/assets/guides/swedish_road.png"
+    src="/assets/guides/swedish_road.png"
     class="rounded-xl w-full" />
 
 <p class="text-center mt-2 mb-4">White road lines in Sweden.</p>
@@ -34,7 +34,7 @@
 
 <img
     alt="Ireland road"
-    src="/src/lib/assets/guides/ireland_road.png"
+    src="/assets/guides/ireland_road.png"
     class="rounded-xl w-full" />
 
 <p class="text-center mt-2 mb-4">Dashed yellow outer lines in Ireland.</p>
@@ -56,7 +56,7 @@
   correctAnswer={4}>
   <img
     alt="Chile road"
-    src="/src/lib/assets/guides/chile_road.png"
+    src="/assets/guides/chile_road.png"
     class="rounded-lg w-full mb-4" />
 </GuideQuiz>
 
@@ -67,7 +67,7 @@
 
 <img
     alt="Uruguay road"
-    src="/src/lib/assets/guides/uruguay_road.png"
+    src="/assets/guides/uruguay_road.png"
     class="rounded-xl w-full" />
 
 <p class="text-center mt-2">Roads in the Phillipines and Uruguay sometimes combine yellow and white.</p>
@@ -81,7 +81,7 @@
 
 <img
     alt="Eswatini road"
-    src="/src/lib/assets/guides/eswatini_road.png"
+    src="/assets/guides/eswatini_road.png"
     class="rounded-xl w-full" />
 
 <p class="text-center mt-2">A road in Eswatini featuring yellow outer lines.</p>

@@ -20,7 +20,7 @@
 
 <img
     alt="example of a selected white arrow"
-    src="/src/lib/assets/guides/selected_arrow.png"
+    src="/assets/guides/selected_arrow.png"
     class="rounded-xl w-full" />
 <p class="text-center mt-2">A correctly selected arrow.</p>
 
@@ -47,5 +47,5 @@
 
 <img
     alt="example of a selected white arrow"
-    src="/src/lib/assets/guides/teleport_preview.png"
+    src="/assets/guides/teleport_preview.png"
     class="rounded-xl w-full" />

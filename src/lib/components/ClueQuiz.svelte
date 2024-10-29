@@ -20,7 +20,7 @@
     async function fetchQuestionsArray() {
         try {
             if (!questionsArray) {
-                questionsArray = await fetch("/src/lib/json/regions.json");
+                questionsArray = await fetch("/json/regions.json");
                 questionsArray = await questionsArray.json();
                 questionsArray = questionsArray[region];
                 return [...questionsArray] || [];
@@ -117,7 +117,7 @@
             <img
                 alt="bollard"
                 class="custom-height rounded-md"
-                src="/src/lib/assets/clues/{assetFolder}/{filePrefix}-{randomQuestion.replace(
+                src="/assets/clues/{assetFolder}/{filePrefix}-{randomQuestion.replace(
                     ' ',
                     '-',
                 ).toLowerCase()}.jpg" />

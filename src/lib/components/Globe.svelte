@@ -10,8 +10,8 @@
     // Function to determine the current globe texture based on the data-theme attribute
     const getThemeTexture = () => {
         return document.documentElement.getAttribute("data-theme") === "customDark"
-            ? "/src/lib/assets/earth_dark.jpg" // Dark mode texture
-            : "/src/lib/assets/earth_light.jpg"; // Light mode texture
+            ? "/earth_dark.jpg" // Dark mode texture
+            : "/assets/earth_light.jpg"; // Light mode texture
     };
 
     const loadGlobe = async () => {
@@ -29,7 +29,7 @@
 
         // Add country polygons
         const response = await fetch(
-            "/src/lib/json/topojson/globe-data.json",
+            "/json/topojson/globe-data.json",
         );
         const countries = await response.json();
 
