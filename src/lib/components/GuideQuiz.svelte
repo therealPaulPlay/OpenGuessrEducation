@@ -71,8 +71,7 @@
       </div>
       <div class="flex w-full h-full justify-center items-center">
         <p class="text-center text-lg z-10">
-          <a class="text-secondary" href="https://openguessr.com/signup"
-            >Log in / Sign up</a> to earn experience through guide quizzes.
+          <b>Log in</b> to earn experience through guide quizzes.
         </p>
       </div>
     </div>

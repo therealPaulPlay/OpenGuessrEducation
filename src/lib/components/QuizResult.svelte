@@ -87,9 +87,7 @@
             {:else}
                 <div class="badge badge-ghost mx-auto mb-8">
                     <p>
-                        <a
-                            href="https://openguessr.com/signup"
-                            class="text-secondary">Log in</a> to claim XP!
+                        Log in to claim XP!
                     </p>
                 </div>
             {/if}

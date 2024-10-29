@@ -1,7 +1,7 @@
 <!-- src/lib/components/AccountButton.svelte -->
 <script>
   import { onMount } from "svelte";
-  import { CircleUserRound } from "lucide-svelte";
+  import { CircleUserRound, LogIn } from "lucide-svelte";
   import { isAuthenticated } from "$lib/stores/accountData.js";
 
   let isLoggedIn = $state(false);
@@ -196,7 +196,7 @@
 {/if}
 
 {#if !isLoggedIn}
-  <button class="btn btn-accent" onclick={showModal}>Log in</button>
+  <button class="btn btn-accent" onclick={showModal}>Log in <LogIn /></button>
 {/if}
 
 {#if showError}
