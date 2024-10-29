@@ -28,7 +28,7 @@
     });
 </script>
 
-<article class="container mx-auto px-4 py-8">
+<article class="container mx-auto px-4 py-8 max-md:pt-0 max-md:-mt-5">
     <div class="mb-12">
         <Globe />
     </div>
@@ -49,7 +49,7 @@
                 <p>
                     Master the art of location guessing with concise guides and fun quizzes.
                 </p>
-                <div class="card-actions justify-end">
+                <div class="card-actions justify-end mt-2">
                     <button
                         class="btn btn-secondary"
                         onclick={() => {
@@ -68,7 +68,7 @@
                     Challenge yourself in engaging geography quizzes. Why not
                     give it a go now?
                 </p>
-                <div class="card-actions justify-end">
+                <div class="card-actions justify-end mt-2">
                     <button
                         class="btn btn-secondary"
                         onclick={() => {
@@ -87,7 +87,7 @@
                     Learn to geo-guess and discover new tricks and strategies to
                     elevate your game.
                 </p>
-                <div class="card-actions justify-end">
+                <div class="card-actions justify-end mt-2">
                     <button
                         class="btn btn-secondary"
                         onclick={() => {

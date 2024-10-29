@@ -108,6 +108,14 @@
         }
     }
 
+    function shortenRegionName(name) {
+        if (name.length > 14) {
+            name = name.substring(0, 10) + "..";
+        }
+
+        return name;
+    }
+
     export function brieflyShowName(featureName) {
         let showLabel = true;
         let pointExists = false;
@@ -407,6 +415,11 @@
         }
     }
 
+    // Drag & Zoom --------------------------------------------------------------------------------------------------------------------------
+
+    let isDragging = false;
+    let lastX, lastY;
+
     function handleZoom(event) {
         if (!interactive) return;
         event.preventDefault();
@@ -442,9 +455,6 @@
         generatePaths();
     }
 
-    let isDragging = false;
-    let lastX, lastY;
-
     function handleMouseDown(event) {
         if (!interactive) return;
         isDragging = true;
@@ -456,10 +466,8 @@
         if (!interactive || !isDragging) return;
         // Store the initial rect for reference
         rect = mapContainer.getBoundingClientRect();
-        const dx = (event.clientX - lastX) * (width / rect.width);
-        const dy = (event.clientY - lastY) * (height / rect.height);
-        translateX += dx;
-        translateY += dy;
+        translateX +=  (event.clientX - lastX) * (width / rect.width);
+        translateY += (event.clientY - lastY) * (height / rect.height);
         lastX = event.clientX;
         lastY = event.clientY;
         updateProjection();
@@ -468,14 +476,6 @@
 
     function handleMouseUp() {
         isDragging = false;
-    }
-
-    function shortenRegionName(name) {
-        if (name.length > 14) {
-            name = name.substring(0, 10) + "..";
-        }
-
-        return name;
     }
 
     function handleZoomIn() {
@@ -489,6 +489,107 @@
         updateProjection();
         generatePaths();
     }
+
+    // Touch Drag and zoom -----------------------------------
+
+    let isTouching = false;
+    let lastTouchDistance = null;
+
+
+    function handleTouchStart(event) {
+        if (event.touches.length === 1) {
+            isTouching = true;
+            const touch = event.touches[0];
+            lastX = touch.clientX;
+            lastY = touch.clientY;
+            lastTouchDistance = null;
+        } else if (event.touches.length === 2) {
+            isTouching = false; // Disable panning on multi-touch
+            lastTouchDistance = getTouchDistance(event.touches);
+        }
+    }
+
+    function handleTouchMove(event) {
+    if (isTouching && event.touches.length === 1) {
+        event.preventDefault(); // Prevent page scroll
+        rect = mapContainer.getBoundingClientRect();
+
+        const touch = event.touches[0];
+        const deltaX = touch.clientX - lastX;
+        const deltaY = touch.clientY - lastY;
+
+        translateX += deltaX * (width / rect.width);
+        translateY += deltaY * (height / rect.height);
+        
+        lastX = touch.clientX;
+        lastY = touch.clientY;
+        
+        updateProjection();
+        generatePaths();
+        
+    } else if (event.touches.length === 2) {
+    const currentDistance = getTouchDistance(event.touches);
+
+    if (lastTouchDistance) {
+        const distanceChange = currentDistance - lastTouchDistance;
+        const zoomFactor = 1 + (distanceChange / lastTouchDistance);
+
+        // Calculate the pinch midpoint as the zoom focus point [of the two touches]
+        const pinchMidX = (event.touches[0].clientX + event.touches[1].clientX) / 2;
+        const pinchMidY = (event.touches[0].clientY + event.touches[1].clientY) / 2;
+
+        // Get bounding rect for accurate translation calculation
+        rect = mapContainer.getBoundingClientRect();
+        const pinchMidXInMap = (pinchMidX - rect.left) * (width / rect.width);
+        const pinchMidYInMap = (pinchMidY - rect.top) * (height / rect.height);
+
+        // Apply zoom limit
+        const newZoom = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, zoom * zoomFactor));
+        const scaleChange = newZoom / zoom; // Calculate scale factor change
+
+        // Adjust translation to keep zoom centered on the pinch point
+        translateX -= (pinchMidXInMap - translateX) * (scaleChange - 1);
+        translateY -= (pinchMidYInMap - translateY) * (scaleChange - 1);
+
+        zoom = newZoom; // Update the zoom level
+        updateProjection();
+        generatePaths();
+    }
+
+    lastTouchDistance = currentDistance;
+}
+
+}
+
+    function handleTouchEnd(event) {
+        isTouching = false;
+        lastTouchDistance = null;
+    }
+
+    function getTouchDistance(touches) {
+        const dx = touches[0].clientX - touches[1].clientX;
+        const dy = touches[0].clientY - touches[1].clientY;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    onMount(() => {
+        mapContainer.addEventListener('touchstart', handleTouchStart);
+        mapContainer.addEventListener('touchmove', handleTouchMove);
+        mapContainer.addEventListener('touchend', handleTouchEnd);
+
+        // Disable page zooming on touch gestures
+        mapContainer.addEventListener('gesturestart', e => e.preventDefault());
+        mapContainer.addEventListener('gesturechange', e => e.preventDefault());
+        mapContainer.addEventListener('gestureend', e => e.preventDefault());
+
+        return () => {
+            mapContainer.removeEventListener('touchstart', handleTouchStart);
+            mapContainer.removeEventListener('touchmove', handleTouchMove);
+            mapContainer.removeEventListener('touchend', handleTouchEnd);
+        };
+    });
+
+    // Mount, draw initial map  --------------------------------------------------------------------------------------------------------------------------
 
     onMount(async () => {
         const geoData = await fetchTopoJSON();

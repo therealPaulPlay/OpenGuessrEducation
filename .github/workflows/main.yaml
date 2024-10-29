@@ -31,12 +31,12 @@ jobs:
             # Check if container openguessreducation exists
             if ! docker ps -a --format '{{.Names}}' | grep -q "^openguessreducation$"; then
               echo "Container openguessreducation does not exist, creating..."
-              docker run -d -p 3000:3000 --network host --restart unless-stopped --name openguessreducation openguessreducation
+              docker run -d -p 3000:3000 --network host --restart unless-stopped --name openguessreducation --cpus=2 openguessreducation
             else
               echo "Container openguessreducation exists, stopping and removing..."
               docker stop openguessreducation || true
               docker rm openguessreducation || true
-              docker run -d -p 3000:3000 --network host --restart unless-stopped --name openguessreducation openguessreducation
+              docker run -d -p 3000:3000 --network host --restart unless-stopped --name openguessreducation --cpus=2 openguessreducation
             fi
           EOF
 

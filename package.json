@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"generate-sitemap": "node ./scripts/generate-sitemap.js",
-		"dev": "vite dev --port 3000",
+		"dev": "vite dev --port 3000 --host",
 		"build": "vite build && npm run generate-sitemap",
 		"preview": "vite preview"
 	},

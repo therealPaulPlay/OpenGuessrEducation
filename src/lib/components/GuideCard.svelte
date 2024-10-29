@@ -28,10 +28,10 @@
     class="card {mobile
         ? 'image-full'
         : 'card-side'} bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300 {mobile ? 'max-h-64' : ''} overflow-hidden">
-    <figure class="relative {mobile ? 'max-h-64' : ''}">
+    <figure class="relative {mobile ? 'max-h-64' : ''} {mobile ? 'dark:brightness-50' : 'dark:opacity-80'}">
         <img
             src="/assets/guide_preview.png"
-            class="h-full {mobile ? 'w-64' : 'w-48'} dark:opacity-90"
+            class="h-full {mobile ? 'w-64' : 'w-48'}"
             style="filter: hue-rotate({hueRotate}deg)"
             alt="Guide preview" />
         <div class="absolute h-full w-full">

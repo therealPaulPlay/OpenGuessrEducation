@@ -202,6 +202,9 @@
                             {/if}
                         </QuizCard>
                     {/each}
+                    {#if category.quizzes.length == 0}
+                    <p class="p-4">No matching results in this category.</p>
+                    {/if}
                 </div>
                 {#if scrollButtonVisibility[index]?.right}
                     <button
