@@ -11,7 +11,7 @@
         region = "World",
         zoom = 1,
         minLabelZoom = 1,
-        topoJsonName = undefined
+        topoJsonName = undefined,
     } = $props();
 
     let screenWidth = $state(1200);
@@ -43,20 +43,26 @@
 
     let timerRunning = false;
 
-    let inputPlaceholderHint = $state("Type your answer here...");
+    let inputPlaceholderHint = $state("Type your answer...");
 
     let mapLoaded = false;
 
     let validOptions = $derived([currentQuestion].concat(remainingFeatures));
 
-    let regionNamesAutocomplete =
-        $derived(validOptions
-            .sort()
-            .filter((regionName) =>
-                regionName
-                    .toLowerCase()
-                    .startsWith(userInput.toLocaleLowerCase()),
-            ) || []);
+    let regionNamesAutocomplete = $derived(
+        validOptions.sort().filter((regionName) =>
+            regionName
+                .normalize("NFD") // Decompose letters with diacritics
+                .replace(/[\u0300-\u036f]/g, "") // Remove diacritical marks
+                .toLowerCase()
+                .startsWith(
+                    userInput
+                        .normalize("NFD")
+                        .replace(/[\u0300-\u036f]/g, "")
+                        .toLowerCase(),
+                ),
+        ) || [],
+    );
 
     onMount(async () => {
         await loadFeatures();
@@ -82,14 +88,18 @@
             if (region !== "World") {
                 features = regions[region];
             } else {
-                features = regions?.World.concat(
-                    regions.Europe,
-                    regions.Asia,
-                    regions.Africa,
-                    regions["South America"],
-                    regions["North America"],
-                    regions.Oceania
-                );
+                features = [
+                    ...new Set(
+                        (regions?.World || []).concat(
+                            regions?.Europe || [],
+                            regions?.Asia || [],
+                            regions?.Africa || [],
+                            regions?.["South America"] || [],
+                            regions?.["North America"] || [],
+                            regions?.Oceania || [],
+                        ),
+                    ),
+                ];
             }
 
             if (!features) {
@@ -185,12 +195,12 @@
         if (answer.toLowerCase() == currentQuestion.toLowerCase()) {
             // Correct Answer
             playSound("answer_correct");
-            
+
             score++;
 
             quizMap.disableFeatureInteractions(currentQuestion);
             quizMap.highlightFeatureOutline(currentQuestion);
-            
+
             // Highlight region green if hint was not used, highlight yellow if hint was used
             if (currentWrongAttempts >= 3) {
                 quizMap.highlightFeature(currentQuestion, "oklch(var(--wa))");
@@ -272,7 +282,9 @@
         showTypeAutoComplete = false;
     }
 
-    let timeString = $derived(`${Math.floor(timer / 60)}:${(timer % 60).toString().padStart(2, "0")}`);
+    let timeString = $derived(
+        `${Math.floor(timer / 60)}:${(timer % 60).toString().padStart(2, "0")}`,
+    );
 </script>
 
 <div class="quiz-container bg-base-200 p-6 rounded-xl">
