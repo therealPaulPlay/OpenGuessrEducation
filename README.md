@@ -1,4 +1,4 @@
-![OpenGuessr Education cover image](src/static/assets/openguessr_jungle_adventure.png?raw=true)
+![OpenGuessr Education cover image](static/assets/openguessr_jungle_adventure.png?raw=true)
 
 # OpenGuessr Education
 [OpenGuessr Education](https://education.openguessr.com) is a knowledge hub and quiz page for geography enthusiasts, created and managed by [PaulPlay](https://paulplay.studio)👋 The goal of the project is to build a site that teaches players how to improve their skills in geography-guessing games such as OpenGuessr, GeoGuessr or Geotastic and appeals to general geography fans as well.
