@@ -297,7 +297,7 @@
             {:else if gameMode === "click"}
                 Click on <span class="text-secondary">{currentQuestion}</span>
             {:else if gameMode === "type"}
-                Which country (or city) is highlighted?
+                Which region is highlighted?
             {/if}
         </h2>
         <div class="flex flex-wrap justify-end gap-3">
