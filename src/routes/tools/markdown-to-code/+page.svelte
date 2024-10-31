@@ -12,6 +12,7 @@
     } from "lucide-svelte";
 
     import { onMount } from "svelte";
+    import { setTitle } from '$lib/utils/pageTitle.svelte.js';
 
     let markdown = $state("");
 
@@ -178,6 +179,8 @@
     }
 
     onMount(() => {
+        setTitle("Markdown-To-Code");
+
         // Keyboard shortcuts
         if (window) {
             markdown = localStorage.getItem("markdownToCodeInput") || ""; // Load input from storage

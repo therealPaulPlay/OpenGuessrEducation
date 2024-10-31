@@ -727,7 +727,7 @@
                                 stroke-width="2"
                                 transform={`translate(${point.x},${point.y})`}>
                                 <circle
-                                    r={5 + (10 * width) / 2000}
+                                    r={5 + (15 * Math.max(width, height)) / 2000}
                                     fill={point.flashColor ||
                                         point.color ||
                                         "oklch(var(--s))"}
