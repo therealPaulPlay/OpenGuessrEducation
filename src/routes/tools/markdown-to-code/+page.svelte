@@ -201,8 +201,8 @@
         Use this markdown editor to create guides and articles without writing
         code. Feel free to ask for help on the <b>Discord Server</b> (link down below in the footer) if you
         struggle with using this converter or don't know how to create a pull
-        request with the finished code on GitHub. You can alsoa
-        <b>send your finished article's code</b> to experienced people there, who
+        request with the finished code on GitHub. You could also 
+        <b>send your finished article code</b> to experienced people there, who
         can create the Fork with your changes and a Pull Request to the OpenGuessr
         Education Repository for you.
     </p>
