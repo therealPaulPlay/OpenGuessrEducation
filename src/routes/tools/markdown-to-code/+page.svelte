@@ -194,7 +194,7 @@
     });
 </script>
 
-<div class="container mx-auto p-6">
+<div class="container mx-auto p-6 px-1">
     <h1 class="text-4xl font-bold mb-8">Markdown-To-Code Converter</h1>
 
     <p class="mb-4 max-w-2xl">
@@ -216,8 +216,7 @@
             Country Articles should <b>not</b> have a <b>H1 header</b>, as the country name will be added as such automatically.
         </li>
         <li>
-            For embedding Panoramas using Google Maps, please refer to <a class="text-secondary" target="_blank" href="https://youtu.be/wNOM52TtJTQ?si=Oz3WbTsLNwy6BYdC">this youtube video</a> and then extract
-            <b>only the URL</b> (after source=", until ") from the copied <b>iframe html</b>. Use this URL for the Article Embed Component.
+            For embedding Panoramas using Google Maps, please refer to <a class="text-secondary" href="/tools/acquire-embed-links">this guide</a>.
         </li>
         <li>
             Only use <b>Guide Quizzes</b> in <b>Guides</b>.
