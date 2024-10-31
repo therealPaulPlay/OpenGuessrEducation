@@ -12,6 +12,7 @@
     } from "lucide-svelte";
 
     import { onMount } from "svelte";
+    import { setTitle } from '$lib/utils/pageTitle.svelte.js';
 
     let markdown = $state("");
 
@@ -178,6 +179,8 @@
     }
 
     onMount(() => {
+        setTitle("Markdown-To-Code");
+
         // Keyboard shortcuts
         if (window) {
             markdown = localStorage.getItem("markdownToCodeInput") || ""; // Load input from storage
@@ -191,15 +194,15 @@
     });
 </script>
 
-<div class="container mx-auto p-6">
+<div class="container mx-auto p-6 px-1">
     <h1 class="text-4xl font-bold mb-8">Markdown-To-Code Converter</h1>
 
     <p class="mb-4 max-w-2xl">
         Use this markdown editor to create guides and articles without writing
         code. Feel free to ask for help on the <b>Discord Server</b> (link down below in the footer) if you
         struggle with using this converter or don't know how to create a pull
-        request with the finished code on GitHub. You can alsoa
-        <b>send your finished article's code</b> to experienced people there, who
+        request with the finished code on GitHub. You could also 
+        <b>send your finished article code</b> to experienced people there, who
         can create the Fork with your changes and a Pull Request to the OpenGuessr
         Education Repository for you.
     </p>
@@ -213,8 +216,7 @@
             Country Articles should <b>not</b> have a <b>H1 header</b>, as the country name will be added as such automatically.
         </li>
         <li>
-            For embedding Panoramas using Google Maps, please refer to <a class="text-secondary" target="_blank" href="https://youtu.be/wNOM52TtJTQ?si=Oz3WbTsLNwy6BYdC">this youtube video</a> and then extract
-            <b>only the URL</b> (after source=", until ") from the copied <b>iframe html</b>. Use this URL for the Article Embed Component.
+            For embedding Panoramas using Google Maps, please refer to <a class="text-secondary" href="/tools/acquire-embed-links">this guide</a>.
         </li>
         <li>
             Only use <b>Guide Quizzes</b> in <b>Guides</b>.

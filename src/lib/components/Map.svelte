@@ -1,6 +1,4 @@
 <script>
-    import { run } from 'svelte/legacy';
-
     import { onMount } from "svelte";
     import {
         geoPath,
@@ -244,9 +242,12 @@
         }
     }
 
-    run(() => {
-        if (highlightedFeature) {
+    let previousHighlightedFeature;
+
+    $effect(() => {
+        if (highlightedFeature && highlightedFeature !== previousHighlightedFeature) {
             highlightFeature(highlightedFeature, "white");
+            previousHighlightedFeature = highlightedFeature;
         }
     });
 
@@ -395,15 +396,16 @@
     }
 
     function returnAllCountries() {
-        if (!regionCountries) return;
-        return regionCountries?.World.concat(
-            regionCountries.Europe,
-            regionCountries.Asia,
-            regionCountries.Africa,
-            regionCountries["South America"],
-            regionCountries["North America"],
-            regionCountries.Oceania,
-        );
+    if (!regionCountries) return;
+        return [...new Set((regionCountries?.World || [])
+            .concat(
+                regionCountries?.Europe || [],
+                regionCountries?.Asia || [],
+                regionCountries?.Africa || [],
+                regionCountries?.["South America"] || [],
+                regionCountries?.["North America"] || [],
+                regionCountries?.Oceania || []
+            ))];
     }
 
     function highlightCountries() {
@@ -725,7 +727,7 @@
                                 stroke-width="2"
                                 transform={`translate(${point.x},${point.y})`}>
                                 <circle
-                                    r={5 + (10 * width) / 2000}
+                                    r={5 + (15 * Math.max(width, height)) / 2000}
                                     fill={point.flashColor ||
                                         point.color ||
                                         "oklch(var(--s))"}
