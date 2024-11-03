@@ -18,7 +18,7 @@
     let isHovered = $state(false);
 
     onMount(() => {
-        setTitle("Home");
+        setTitle("");
 
         if (localStorage.getItem("username")) {
             yourName = ", " + localStorage.getItem("username");
