@@ -1,6 +1,6 @@
 {
 	"name": "openguessreducation",
-	"version": "0.0.1",
+	"version": "1.0.1",
 	"private": true,
 	"scripts": {
 		"generate-sitemap": "node ./scripts/generate-sitemap.js",

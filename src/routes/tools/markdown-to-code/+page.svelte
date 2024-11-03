@@ -75,7 +75,7 @@
             } else if (line.startsWith("## ")) {
                 code += `<h2 class="text-2xl font-bold mt-8 mb-2">${line.slice(3)}</h2>\n`;
             } else if (line.startsWith("### ")) {
-                code += `<h3 class="text-xl font-bold mt-8 mb-2">${line.slice(4)}</h3>\n`;
+                code += `<h3 class="text-xl font-bold mt-6 mb-1">${line.slice(4)}</h3>\n`;
             } else if (line.startsWith("__ ")) {
                 code += `<p class="text-center mt-2">${line.slice(3)}</p>\n`;
             } else if (line.startsWith("- ")) {
@@ -219,6 +219,12 @@
             For embedding Panoramas using Google Maps, please refer to <a class="text-secondary" href="/tools/acquire-embed-links">this guide</a>.
         </li>
         <li>
+            Please <b>don't</b> create nested headers, so for example, don't put an <b>H3 after an H2 without any text</b> in <b>between</b>.
+        </li>
+        <li>
+            Please mark important words in <b>bold</b>.
+        </li>
+        <li>
             Only use <b>Guide Quizzes</b> in <b>Guides</b>.
         </li>
         <li>
@@ -238,9 +244,9 @@
     </ul>
 
     <p class="mb-2 max-w-2xl">
-        Please note that this is <b>not a real markdown</b> editor and only uses
+        Please note that this only uses
         a <b>simplified version</b> of the markdown syntax. All available
-        features can be accessed via the buttons in the tool bar. It is
+        features can be accessed via the tool bar. It is
         recommended to <b>first select</b> the text that you want to apply a
         style to and <b>then click</b> the button. Thank you!
     </p>
