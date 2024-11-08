@@ -14,10 +14,13 @@
         Footprints,
         Fence,
         CarFront,
+        FlaskConical,
+        MapPinned,
+        Trophy,
     } from "lucide-svelte";
     import GuideCard from "$lib/components/GuideCard.svelte";
     import { onMount } from "svelte";
-    import { setTitle } from '$lib/utils/pageTitle.svelte.js';
+    import { setTitle } from "$lib/utils/pageTitle.svelte.js";
 
     onMount(() => {
         setTitle("Guides");
@@ -128,11 +131,38 @@
                 <CarFront class="w-28 h-28"></CarFront>
             </GuideCard>
         </div>
+        <!-- Advanced Guides -->
+        <h2 class="text-3xl font-semibold mb-4 mt-12 flex items-center">
+            <FlaskConical class="w-8 h-8 mr-2" />
+            Advanced
+        </h2>
+        <div class="w-full flex gap-8 flex-wrap scrollbar-hide">
+            <GuideCard
+                title="Map Creation"
+                description="Discover the tools that professional map creators use and become one yourself."
+                href="/guides/read/advanced/map-creation"
+                hueRotate="240">
+                <MapPinned class="w-28 h-28"></MapPinned>
+            </GuideCard>
+            <GuideCard
+            title="Cups & Competitions"
+            description="Learn how you can put your skills to the test in cups and competitions."
+            href="/guides/read/advanced/cups-and-competitions"
+            hueRotate="260">
+            <Trophy class="w-28 h-28"></Trophy>
+        </GuideCard>
+        </div>
     </div>
 
     <div class="w-full">
-        <div class="rounded-xl p-2 px-6 flex items-center justify-center bg-base-200 bg-opacity-50 mx-auto w-fit">
-            <p class="text-wrap">More guides coming soon! Feel free to <a class="text-secondary" href="https://github.com/therealPaulPlay/OpenGuessrEducation" target="_blank">contribute</a> on Github.</p>
+        <div
+            class="rounded-xl p-2 px-6 flex items-center justify-center bg-base-200 bg-opacity-50 mx-auto w-fit">
+            <p class="text-wrap">
+                More guides coming soon! Feel free to <a
+                    class="text-secondary"
+                    href="https://github.com/therealPaulPlay/OpenGuessrEducation"
+                    target="_blank">contribute</a> on Github.
+            </p>
         </div>
     </div>
 </article>
