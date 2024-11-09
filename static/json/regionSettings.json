@@ -57,6 +57,10 @@
         "lat": 1.92,
         "long": 73.39
       },
+      "Bahrain": {
+        "lat": 26.06,
+        "long": 50.55
+      },
       "Singapore": {
         "lat": 1.29,
         "long": 103.85
@@ -163,6 +167,60 @@
       }
     }
   },
+  "European Union": {
+    "center": {
+      "lat": 53,
+      "long": 15
+    },
+    "zoom": 2,
+    "points": {
+      "Malta": {
+        "lat": 35.9375,
+        "long": 14.3754
+      }
+    }
+  },
+  "GCC": {
+    "center": {
+      "lat": 23.8859,
+      "long": 45.0792
+    },
+    "zoom": 4,
+    "points": {
+      "Bahrain": {
+        "lat": 26.06,
+        "long": 50.55
+      }
+    }
+  },
+  "Mercosur": {
+    "center": {
+      "lat": -25,
+      "long": -60
+    },
+    "zoom": 1.25
+  },
+  "RCEP": {
+    "center": {
+      "lat": -5,
+      "long": 110
+    },
+    "zoom": 1
+  },
+  "BRICS": {
+    "center": {
+      "lat": 30,
+      "long": 30
+    },
+    "zoom": 0.75
+  },
+  "USMCA": {
+    "center": {
+      "lat": 45,
+      "long": -100
+    },
+    "zoom": 1.25
+  },
   "Asia": {
     "center": {
       "lat": 34,
@@ -185,6 +243,10 @@
       "East Timor": {
         "lat": -8.65,
         "long": 126.21
+      },
+      "Bahrain": {
+        "lat": 26.06,
+        "long": 50.55
       }
     }
   },
