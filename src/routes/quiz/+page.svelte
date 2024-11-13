@@ -8,6 +8,7 @@
         Building2,
         Satellite,
         Lightbulb,
+        Handshake
     } from "lucide-svelte";
     import { onMount } from "svelte";
     import QuizCard from "$lib/components/QuizCard.svelte";
@@ -24,6 +25,7 @@
         { name: "flags", icon: Flag },
         { name: "satellite", icon: Satellite },
         { name: "clues", icon: Lightbulb },
+        { name: "multinational-alliances", icon: Handshake},
     ];
 
     let quizCategories = $state([]);
@@ -124,6 +126,15 @@
             updateButtonVisibility(`scroll-container-${index}`);
         });
     }
+
+    function formatCategoryName(input) {
+        return input
+            .replace(/-/g, " ") // Replace all hyphens with spaces
+            .toLowerCase()
+            .split(" ") // Split words by gap
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
+            .join(" "); // Join words back with a space
+    }
 </script>
 
 <article class="container mx-auto p-6 px-1">
@@ -149,7 +160,7 @@
         <section class="mb-6" id={category.name}>
             <h2 class="text-3xl font-semibold mb-2 flex items-center">
                 <category.icon class="w-8 h-8 mr-2" />
-                {category.name.charAt(0).toUpperCase() + category.name.slice(1)}
+                {formatCategoryName(category.name)}
             </h2>
             <div class="relative">
                 {#if scrollButtonVisibility[index]?.left}
@@ -171,7 +182,7 @@
                             tags={quiz.tags || []}
                             path={quiz.path}
                             hueRotateDegree={index * 30}>
-                            {#if category.name == "countries" || category.name == "cities" || category.name == "regions" || category.name == "satellite"}
+                            {#if category.name == "countries" || category.name == "cities" || category.name == "regions" || category.name == "satellite" || category.name == "multinational-alliances"}
                                 <Map
                                     region={quiz.region}
                                     width={192}
@@ -203,7 +214,7 @@
                         </QuizCard>
                     {/each}
                     {#if category.quizzes.length == 0}
-                    <p class="p-4">No matching results in this category.</p>
+                        <p class="p-4">No matching results in this category.</p>
                     {/if}
                 </div>
                 {#if scrollButtonVisibility[index]?.right}
