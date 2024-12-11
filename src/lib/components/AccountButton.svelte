@@ -4,34 +4,28 @@
   import { CircleUserRound, LogIn } from "lucide-svelte";
   import { isAuthenticated } from "$lib/stores/accountData.js";
 
-  let isLoggedIn = $state(false);
-
   let username = $state("Guest");
   let userId = "-1";
   let experience = $state("0");
   let supporterLevel = $state(0);
 
   let error = $state("No error");
-
   let showError = $state(false);
-
   let loadIframeSource = $state(false);
 
   // Global function that changes everything to logged in or signed out (all other sign-in functions are related to this)
   async function checkAuthenticationStatus() {
     let bearerToken = localStorage.getItem("bearer");
 
-    if (bearerToken != null && bearerToken != "") {
+    if (bearerToken) {
       if (isTokenExpired(bearerToken)) {
-        isLoggedIn = false;
+        isAuthenticated.set(false);
         resetLocalSave();
       } else {
-        isLoggedIn = true;
-        userId = localStorage.getItem("id") || "-1";
-        username = localStorage.getItem("username") || "Guest";
-
         // Set store data
         isAuthenticated.set(true);
+
+        userId = localStorage.getItem("id") || "-1";
 
         // Load basic details
         const user = await getUser();
@@ -49,7 +43,7 @@
         localStorage.setItem("supporterLevel", supporterLevel);
       }
     } else {
-      isLoggedIn = false;
+      isAuthenticated.set(false);
     }
   }
 
@@ -84,13 +78,12 @@
   }
 
   function logOut() {
-    isLoggedIn = false;
+    isAuthenticated.set(false);
     resetLocalSave();
   }
 
   function displayError() {
     showError = true;
-
     setTimeout(() => (showError = false), 2000);
   }
 
@@ -160,7 +153,7 @@
   });
 </script>
 
-{#if isLoggedIn}
+{#if $isAuthenticated}
   <div class="dropdown dropdown-top dropdown-end">
     <div tabindex="0" role="button" class="btn btn-accent">
       <CircleUserRound />
@@ -183,6 +176,7 @@
       <div class="bg-base-200 rounded-lg p-2 text-center mb-3">
         View and manage your account on <a
           href="https://openguessr.com"
+          target="_blank"
           class="text-secondary">OpenGuessr</a
         >.
       </div>
@@ -195,7 +189,7 @@
   </div>
 {/if}
 
-{#if !isLoggedIn}
+{#if !$isAuthenticated}
   <button class="btn btn-accent" onclick={showModal}>Log in <LogIn /></button>
 {/if}
 
