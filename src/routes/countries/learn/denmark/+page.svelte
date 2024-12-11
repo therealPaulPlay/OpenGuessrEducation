@@ -47,4 +47,4 @@
 <ArticleEmbedPanorama src="https://www.google.com/maps/embed?pb=!4v1733777624393!6m8!1m7!1sC5D6Q53lYImJqR9-1Xpy7Q!2m2!1d56.67743985281356!2d9.669265542420174!3f37.77!4f0.37000000000000455!5f0.7820865974627469" />
 <p class="text-center mt-2">The images might <b>look</b> especially lush <b>green since</b> most coverage is <b>Gen 4</b>.</p>
 
-<p class="italic mt-4">Written by IceB3r from the Discord Server</p>
+<p class="italic mt-4">Written by Ice_B3ar from the Discord Server</p>
