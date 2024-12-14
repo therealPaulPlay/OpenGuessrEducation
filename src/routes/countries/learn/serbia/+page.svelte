@@ -5,7 +5,7 @@
 
 
 <p class="mb-2">
-    <b>Serbia</b> is a landlocked country in Southeast Europe, situated at the crossroads of Central and Balkan Europe. It features diverse landscapes, including the <b>Pannonian Plain</b> to the north and mountainous regions to the south.
+    <b>Serbia</b> is a landlocked country in <b>Southeast Europe</b>, situated at the crossroads of Central and Balkan Europe. It features diverse landscapes, including the <b>Pannonian Plain</b> to the north and mountainous regions to the south.
     <br>
     The country uses the <b>Cyrillic alphabet</b> as one of its official scripts.
 </p>
