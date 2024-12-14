@@ -21,34 +21,61 @@
 
         reader.readAsText(file);
     }
-
     function convertJSON() {
         let inputJson = document.getElementById("inputJson").value.trim();
 
         try {
             let jsonData = JSON.parse(inputJson);
+            let coordinatesArray = [];
 
-            // Check if jsonData is an array
-            if (!Array.isArray(jsonData)) {
-                throw new Error("Input JSON is not an array");
+            // If the JSON starts directly with an array
+            if (Array.isArray(jsonData)) {
+                coordinatesArray = jsonData;
+            } else {
+                // Find the first array-like property in the JSON object
+                for (const key in jsonData) {
+                    if (Array.isArray(jsonData[key])) {
+                        coordinatesArray = jsonData[key];
+                        break;
+                    }
+                }
+
+                if (coordinatesArray.length === 0) {
+                    throw new Error("No array found in the JSON input");
+                }
             }
 
-            let newJson = jsonData.map(function (coordinate) {
-                if (!coordinate.lat || !coordinate.lng) {
+            // Mapping lat/lng data to the desired format
+            let newJson = coordinatesArray.map(function (coordinate) {
+                // Normalize latitude/longitude property names
+                let lat =
+                    coordinate.lat ||
+                    coordinate.latitude ||
+                    coordinate.latLng?.lat ||
+                    null;
+                let lng =
+                    coordinate.lng ||
+                    coordinate.long ||
+                    coordinate.longitude ||
+                    coordinate.latLng?.lng ||
+                    null;
+
+                if (lat === null || lng === null) {
                     throw new Error(
-                        "Missing lat or lng in one of the coordinate pairs",
+                        "Missing or unrecognized latitude/longitude in one of the coordinate pairs",
                     );
                 }
 
-                return [coordinate.lat, coordinate.lng];
+                return [lat.toString(), lng.toString()];
             });
 
-            var convertedJson = JSON.stringify({ locations: newJson }, null, 2);
+            // Generate the output JSON
+            let convertedJson = JSON.stringify({ locations: newJson }, null, 2);
 
             document.getElementById("outputJson").value = convertedJson;
         } catch (error) {
-            console.error(error);
-            errorMessage = error;
+            console.error("Conversion error:", error);
+            alert(`Error: ${error.message}`);
         }
     }
 
@@ -82,7 +109,8 @@
     {/if}
 
     <div class="flex items-center flex-col justify-start w-fit mt-8">
-        <div class="bg-base-200 rounded-xl p-4 flex justify-center gap-4 flex-wrap">
+        <div
+            class="bg-base-200 rounded-xl p-4 flex justify-center gap-4 flex-wrap">
             <input
                 type="file"
                 id="fileInput"
@@ -100,9 +128,11 @@
                 placeholder="...paste your JSON directly here"></textarea>
         </div>
 
-        <button class="btn btn-secondary my-4" onclick={convertJSON}>Convert <ArrowDown /></button>
+        <button class="btn btn-secondary my-4" onclick={convertJSON}
+            >Convert <ArrowDown /></button>
 
-        <div class="bg-base-200 rounded-xl p-4 flex justify-center gap-4 flex-wrap">
+        <div
+            class="bg-base-200 rounded-xl p-4 flex justify-center gap-4 flex-wrap">
             <textarea
                 id="outputJson"
                 rows="1"
