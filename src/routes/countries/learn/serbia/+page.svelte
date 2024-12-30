@@ -1,3 +1,4 @@
+<!-- Write or paste an article with HTML & Svelte here -->
 <script>
     import ArticleTip from "$lib/components/ArticleTip.svelte";
     import ArticleEmbedPanorama from "$lib/components/ArticleEmbedPanorama.svelte";
