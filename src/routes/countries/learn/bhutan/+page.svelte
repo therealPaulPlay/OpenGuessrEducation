@@ -49,7 +49,7 @@ class="rounded-xl w-full h-96 object-cover"
     These <b>stone blocks</b> are set up as a safety barrier since there are view no <b>guardrails</b>.
 </p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Srcipt</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Script</h2>
 <img
 alt="street view example lining up"
 src="/assets/articles/bhutan/script.jpg"

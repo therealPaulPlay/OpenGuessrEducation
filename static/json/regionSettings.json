@@ -1366,6 +1366,13 @@
       }
     }
   },
+  "SEAsia": {
+    "center": {
+      "lat": 5.56,
+      "long": 115.38
+    },
+    "zoom": 3
+  },
   "Afghanistan": {
     "center": {
       "lat": 33.9391,
