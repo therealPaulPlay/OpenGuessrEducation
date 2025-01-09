@@ -205,6 +205,11 @@
         "Uruguay",
         "Venezuela"
     ],
+    "South-East Asia": [
+        "Indonesia",
+        "Malaysia",
+        "Thailand"
+    ],
     "Driving Side": [
         "Antigua and Barbuda",
         "Australia",
@@ -1582,11 +1587,6 @@
         "Slovenia",
         "Spain",
         "Sweden"
-    ],
-    "SEAsia": [
-        "Indonesia", 
-        "Malaysia", 
-        "Thailand"
     ],
     "USMCA": [
         "Canada",
