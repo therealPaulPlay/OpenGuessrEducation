@@ -33,13 +33,13 @@ class="rounded-xl w-full h-96 object-cover"
     <b>Electricity poles</b> are thin and made of <b>metal</b>. 
 </p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Licence plates</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">License plates</h2>
 <img
 alt="street view example lining up"
 src="/assets/articles/bhutan/licenseplate.jpg"
 class="rounded-xl w-full h-96 object-cover" 
 />
-<p class="text-center mt-2"> <b>Licence plates</b> are <b>red</b>. 
+<p class="text-center mt-2"> <b>License plates</b> are <b>red</b>. 
     Although there are other countries that feature red plates, none of them have official <b>Street View</b>. 
 </p>
 
@@ -49,7 +49,7 @@ class="rounded-xl w-full h-96 object-cover"
     These <b>stone blocks</b> are set up as a safety barrier since there are view no <b>guardrails</b>.
 </p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Srcipt</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Script</h2>
 <img
 alt="street view example lining up"
 src="/assets/articles/bhutan/script.jpg"

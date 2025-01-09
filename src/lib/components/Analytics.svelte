@@ -8,7 +8,7 @@
 
     // Instead of a banner, if one CMP already exists (e.g. for Ads), use TFC instead to listen to the consent from there
     // window["gtag_enable_tcf_support"] = true;
-    
+
     onMount(() => {
         // Check if the user has already accepted cookies
         const consent = localStorage.getItem("cookieConsent");
@@ -75,8 +75,10 @@
 </svelte:head>
 
 {#if showBanner}
-    <div role="alert" class="alert fixed w-fit m-4 bottom-0 bg-base-100 right-0 z-50 shadow-lg">
-        <AlertCircle className="stroke-info h-6 w-6 shrink-0" />
+    <div
+        role="alert"
+        class="alert fixed w-fit m-4 bottom-0 bg-base-100 right-0 z-50 shadow-lg">
+        <AlertCircle />
         <span
             >This website uses cookies according to its <a
                 href="https://openguessr.com/legal"
