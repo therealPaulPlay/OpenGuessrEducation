@@ -52,7 +52,20 @@
     <li><b>PR-323:</b> Paraná State Highway 323.</li>
 </ul>
 <p class="mb-2">
-    The first digit of the number can indicate its category within the National Road System. For instance, numbers below 50 are typically located east of Brasília, while those above are found to the west.
+    The first digit of the number can indicate its category within the National Road System. For instance, numbers below 50 are typically located east of Brasília, while those above are found to the west. Specifically:
+</p>
+<ul class="mb-2 list-disc list-inside">
+    <li><b>000-099:</b> Radial highways that run from Brasília to the edges of the country.</li>
+    <li><b>100-199:</b> Longitudinal highways that run in a north-south direction.</li>
+    <li><b>200-299:</b> Transversal highways that run in an east-west direction.</li>
+    <li><b>300-399:</b> Diagonal highways that cross the country in two ways: northwest-southeast or northeast-southwest.</li>
+    <li><b>400-499:</b> Connecting highways that interconnect two major highways.</li>
+</ul>
+<p class="mb-2">
+    For example, the BR-101 is a major longitudinal highway running along the eastern coast, while the BR-230 (Transamazônica) runs from east to west across northern Brazil. Additionally, some states, like Santa Catarina (SC), have their local numbering systems that align with national ones, creating a sequence of numbers for easier navigation.
+</p>
+<p class="mb-2">
+    Understanding these numbering conventions can greatly assist in identifying your location while navigating Brazilian roads.
 </p>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Australia</h2>
