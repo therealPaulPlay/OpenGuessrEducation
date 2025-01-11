@@ -22,3 +22,5 @@
     <li>Cultural markers such as traditional wooden houses can be found in rural areas.</li>
     <li>Thousands of lakes and the untouched nature of Lapland are characteristic. The vegetation is similar to that in Sweden, with coniferous forests and birches in the north.</li>
 </ul>
+
+<p class="italic mt-4">Written by w0lfzk1nd from the Discord Server</p>
