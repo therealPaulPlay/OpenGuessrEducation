@@ -22,3 +22,5 @@
     <li>Cultural markers such as traditional stave churches can be found.</li>
     <li>Known for breathtaking fjords and mountain landscapes. The treeless tundra with boggy soil, dwarf shrubs, mosses and lichens is typical.</li>
 </ul>
+
+<p class="italic mt-4">Written by w0lfzk1nd from the Discord Server</p>
