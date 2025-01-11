@@ -34,6 +34,11 @@
     src="/assets/guides/nigeria_follow_car_1.png"
     class="rounded-xl w-full" />
 
+<img
+    alt="Follow car (Nigeria)"
+    src="/assets/guides/nigeria_follow_car_3.png"
+    class="rounded-xl w-full" />
+
 <p class="text-center mt-2">The Nigerian follow car (Source: geohints.com).</p>
 
 <ArticleTip>
