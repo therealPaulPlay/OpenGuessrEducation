@@ -86,3 +86,18 @@
 
 <p class="text-center mt-2">A road in Eswatini featuring yellow outer lines.</p>
 
+<h2 class="text-2xl font-bold mt-8 mb-2">Mixed Road Line Colors in Asia and Africa</h2>
+
+<p class="mb-4">
+    In regions like Asia and Africa, you will often encounter mixed line colors. For example, countries like the Philippines and Thailand frequently use concrete roads that can help identify their location. In Malaysia, you will typically find only white lines with frequent use of double white center lines. Indonesia often features a mix of both yellow and white lines.
+</p>
+
+<h3 class="text-xl font-bold mt-4 mb-2">Additional Tips for Identification:</h3>
+<ul class="mb-2 list-disc list-inside">
+    <li>The absence of outer lines does not exclude countries with characteristic outer lines.</li>
+    <li><strong><i>Estonia </i></strong>&nbsp;often has short dashed outer lines similar to Sweden but with more space from the roadside.</li>
+    <li>Paved concrete roads in Southeast Asia often indicate locations like the Philippines or Thailand.</li>
+    <li>The presence of cultural markers such as traditional architecture or signage can further help identify locations.</li>
+</ul>
+
+<p class="italic mt-4">Edited by w0lfzk1nd from Discord Server</p>
