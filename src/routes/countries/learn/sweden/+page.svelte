@@ -22,3 +22,5 @@
     <li>Parks filled with <b>birch trees</b> and beautiful flora.</li>
     <li>Extensive forests and numerous lakes characterize the landscape. In the south there are still beech and oak stands.</li>
 </ul>
+
+<p class="italic mt-4">Written by w0lfzk1nd from the Discord Server</p>
