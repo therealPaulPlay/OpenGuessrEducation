@@ -1,6 +1,16 @@
 <script>
     import ArticleEmbedPanorama from "$lib/components/ArticleEmbedPanorama.svelte";
+    import ArticleTip from "$lib/components/ArticleTip.svelte";
 </script>
+
+<p class="mb-2">
+    Finland is located in <b>Northern Europe</b> and is known as the "Land of a Thousand Lakes."<br>
+    It shares borders with <b>Sweden to the west, Norway to the north, and Russia to the east</b>.<br>
+    Its <b>southern coastline</b> is along the <b>Gulf of Finland</b>, and the country is famous for its vast forests and Arctic Lapland region.
+</p>
+<ArticleTip>
+    Keep in mind that Finland is home to the <b>Sauna culture</b> and has been consistently ranked as one of the happiest countries in the world.
+</ArticleTip>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Strategies</h2>
 <ul class="mb-2 list-disc list-inside">
