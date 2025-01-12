@@ -1,6 +1,16 @@
 <script>
     import ArticleEmbedPanorama from "$lib/components/ArticleEmbedPanorama.svelte";
+    import ArticleTip from "$lib/components/ArticleTip.svelte";
 </script>
+
+<p class="mb-2">
+    Norway is located in <b>Northern Europe</b> and occupies the western part of the Scandinavian Peninsula.<br>
+    It is famous for its dramatic fjords, mountains, and coastal landscapes.<br>
+    It is bordered by <b>Sweden to the east</b> and has <b><i>extensive coastlines along the North Atlantic Ocean and the Barents Sea</i></b>.
+</p>
+<ArticleTip>
+    Keep in mind that Norway is a major producer of <b>oil and natural gas</b> and is known for its commitment to sustainability and environmental conservation.
+</ArticleTip>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Strategies</h2>
 <ul class="mb-2 list-disc list-inside">
