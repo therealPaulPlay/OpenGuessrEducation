@@ -96,7 +96,7 @@
                 <ArrowDownUp class="w-28 h-28"></ArrowDownUp>
             </GuideCard>
             <GuideCard
-                title="Road lines"
+                title="Road Lines"
                 description="Distinguish road lines from another, differentiate between white and yellow lines."
                 href="/guides/read/intermediate/road-lines"
                 hueRotate="140">
