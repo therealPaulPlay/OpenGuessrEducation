@@ -1,6 +1,16 @@
 <script>
     import ArticleEmbedPanorama from "$lib/components/ArticleEmbedPanorama.svelte";
+    import ArticleTip from "$lib/components/ArticleTip.svelte";
 </script>
+
+<p class="mb-2">
+    Sweden is located in <b>Northern Europe</b> and occupies the eastern part of the Scandinavian Peninsula.<br>
+    It is known for its vast forests, numerous lakes, and the islands of Gotland and Öland.<br>
+    It is bordered by <b>Norway to the west</b> and <b>Finland to the east</b>, with coastlines along the Baltic Sea and the Gulf of Bothnia.
+</p>
+<ArticleTip>
+    Keep in mind that Sweden is renowned for its <b>high standard of living</b>, extensive welfare system, and innovations in design and technology.
+</ArticleTip>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Strategies</h2>
 <ul class="mb-2 list-disc list-inside">
