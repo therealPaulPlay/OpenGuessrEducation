@@ -45,31 +45,6 @@
       <tr>
         <th>Abbreviation</th>
         <th>Area</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td><b>I</b></td><td><b>USA</b></td><td>Interstate</td></tr>
-      <tr><td><b>US</b></td><td><b>USA</b></td><td>United States Route</td></tr>
-      <tr><td><b>S</b></td><td><b>USA</b></td><td>State Route</td></tr>
-      <tr><td><b>PTH</b></td><td><b>Canada</b></td><td>Provincial Trunk Highway</td></tr>
-      <tr><td><b>BR</b></td><td><b>Brazil</b></td><td>Brazilian Federal Highway</td></tr>
-      <tr><td><b>SP</b></td><td><b>Brazil</b></td><td>São Paulo State Highway</td></tr>
-      <tr><td><b>M</b></td><td><b>Australia</b></td><td>Motorway</td></tr>
-      <tr><td><b>RP</b></td><td><b>Argentina</b></td><td>Ruta Provincial</td></tr>
-      <tr><td><b>E</b></td><td><b>Europe</b></td><td>European Route</td></tr>
-      <tr><td><b>A</b></td><td><b>Germany</b></td><td><b>Used worldwide!</b> Germany Autobahn</td></tr>
-      <tr><td><b>BR-</b></td><td><b>Brazil</b></td><td>Federal Roads (e.g., BR-101)</td></tr>
-      <tr><td><b>AL-</b></td><td><b>Alabama, USA</b></td><td>State Route (commonly used in southern states)</td></tr>
-      <tr><td><b>R</b></td><td><b>Russia</b></td><td>Russian Federal Roads (e.g., R-123)</td></tr>
-      <tr><td><b>NH</b></td><td><b>India</b></td><td>National Highway (e.g., NH-44)</td></tr>
-      <tr><td><b>S</b></td><td><b>South Africa</b></td><td>Secondary Roads (e.g., S1)</td></tr>
-<div class="overflow-x-auto">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Abbreviation</th>
-        <th>Area</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
@@ -83,6 +58,7 @@
       <tr><td><b>SP</b></td><td><b>Brazil</b></td><td>Continental</td><td>São Paulo State Highway</td></tr>
       <tr><td><b>M</b></td><td><b>Australia</b></td><td>Worldwide</td><td>Motorway</td></tr>
       <tr><td><b>RP</b></td><td><b>Argentina</b></td><td>Country</td><td>Ruta Provincial</td></tr>
+      <tr><td><b>RPXXX</b></td><td><b>Argentina</b></td><td>Country</td><td>Ruta National <i>Missing the brazil typical <b>-</b>.</td></tr>
       <tr><td><b>E</b></td><td><b>Europe</b></td><td>Worldwide</td><td>European Route</td></tr>
       <tr><td><b>A</b></td><td><b>Germany</b></td><td>Worldwide</td><td>Germany Autobahn</td></tr>
       <tr><td><b>BR-</b></td><td><b>Brazil</b></td><td>Continental</td><td>Federal Roads (e.g., BR-101)</td></tr>
@@ -94,10 +70,6 @@
       <tr><td><b>Fv</b></td><td><b>Norway</b></td><td>Country</td><td>County Roads (Fylkesvei), often smaller and regional roads.</td></tr>
       <tr><td><b>CH</b></td><td><b>Chile</b></td><td>Country</td><td>Carreteras, national highways designated by numbers (e.g., CH-5).</td></tr>
       <tr><td><b>SH</b></td><td><b>New Zealand</b></td><td>Country</td><td>State Highways, the primary highway network in New Zealand.</td></tr>
-    </tbody>
-  </table>
-</div>
-<hr class="my-4 border-t-2 border-gray-300">
     </tbody>
   </table>
 </div>
@@ -212,6 +184,11 @@
     while the <b><i>BR-230</i></b> <i>(Transamazônica)</i> runs from <b>east to west across northern Brazil</b>.<br>
     Additionally, some states, like <b><i>Santa Catarina (SC)</i></b>, have their <b>local numbering systems</b> that align with national ones, creating a sequence of numbers for easier navigation.
 </p>
+
+<ArticleTip>
+    IMPORTANT: Highways with <b>RNXXX</b> <i>(ex: RN127)</i> are located in Argentina, not in <b><i>Rio Grande do Norte</i><b> <i>(north-east of brazil)</i><br>
+    Since it is missing the <b>-</b> similar to <b>RPXXX</b> <i>(ex: RP23)</i>.
+</ArticleTip>
 
 <h3 class="text-lg font-bold mt-4">Brazil Abbreviation List</h3>
 <div class="overflow-x-auto">
