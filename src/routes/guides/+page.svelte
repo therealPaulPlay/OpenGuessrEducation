@@ -17,6 +17,7 @@
         FlaskConical,
         MapPinned,
         Trophy,
+        Tag,
     } from "lucide-svelte";
     import GuideCard from "$lib/components/GuideCard.svelte";
     import { onMount } from "svelte";
@@ -89,13 +90,6 @@
         <div class="w-full flex gap-8 flex-wrap scrollbar-hide">
             <!-- Cards here -->
             <GuideCard
-                title="Highway Designations"
-                description="Designations of Highways in Canada, America and Australia."
-                href="/guides/read/intermediate/highway-designations"
-                hueRotate="100">
-                <CarFront class="w-28 h-28"></CarFront>
-            </GuideCard>
-            <GuideCard
                 title="Driving side"
                 description="Learn in which countries people drive on the left or right side of the road."
                 href="/guides/read/intermediate/driving-side"
@@ -152,12 +146,19 @@
                 <MapPinned class="w-28 h-28"></MapPinned>
             </GuideCard>
             <GuideCard
-            title="Cups & Competitions"
-            description="Learn how you can put your skills to the test in cups and competitions."
-            href="/guides/read/advanced/cups-and-competitions"
-            hueRotate="260">
-            <Trophy class="w-28 h-28"></Trophy>
-        </GuideCard>
+                title="Cups & Competitions"
+                description="Learn how you can put your skills to the test in cups and competitions."
+                href="/guides/read/advanced/cups-and-competitions"
+                hueRotate="260">
+                <Trophy class="w-28 h-28"></Trophy>
+            </GuideCard>
+            <GuideCard
+                title="Highway Designations"
+                description="Designations of Highways in Canada, America and Australia."
+                href="/guides/read/advanced/highway-designations"
+                hueRotate="280">
+                <Tag class="w-28 h-28"></Tag>
+            </GuideCard>
         </div>
     </div>
 
