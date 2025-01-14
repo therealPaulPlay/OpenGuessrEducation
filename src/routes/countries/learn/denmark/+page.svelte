@@ -36,7 +36,9 @@
 <br>
 <img alt="street view example lining up" src="/assets/articles/denmark/vej_sign.jpeg" class="rounded-xl w-full" />     
 <p class="text-center mt-2">
-    The ending <b>"vej" is </b>the equivelent of <b>"street"</b> in danish.
+    The ending <b>"vej" is </b>the equivelent of <b>"street"</b> in danish.<br>
+    You also see the ending <b>"-gade".</b><br>
+    Names can include: <b>æ, ø, å</b>.
 </p>
 <h2 class="text-2xl font-bold mt-8 mb-2">Landscape</h2>
 
