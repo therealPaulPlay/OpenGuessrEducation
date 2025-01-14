@@ -89,6 +89,13 @@
         <div class="w-full flex gap-8 flex-wrap scrollbar-hide">
             <!-- Cards here -->
             <GuideCard
+                title="Highway Designations"
+                description="Designations of Highways in Canada, America and Australia."
+                href="/guides/read/intermediate/highway-designations"
+                hueRotate="100">
+                <CarFront class="w-28 h-28"></CarFront>
+            </GuideCard>
+            <GuideCard
                 title="Driving side"
                 description="Learn in which countries people drive on the left or right side of the road."
                 href="/guides/read/intermediate/driving-side"
