@@ -9,7 +9,7 @@
 <p class="mb-2">
     Guardrails, often overlooked, can be a <b>valuable clue </b>for guessing the
     country. This guide focuses on <b>three main types</b> of guardrails found
-    in Europe: the<b>A-Profile, B-Profile, and Thin B-Profile</b> .
+    in Europe: the <b>A-Profile, B-Profile, and Thin B-Profile</b>.
 </p>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Why focus on Europe?</h2>
