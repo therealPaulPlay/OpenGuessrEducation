@@ -2,65 +2,29 @@
     import { Star } from "lucide-svelte";
     import { onMount } from "svelte";
     import * as Icon from "svelte-flag-icons";
+    import { countryStore } from '$lib/stores/countryStore';
+    
     let { country } = $props();
-
     let IconComponent = $state();
 
-    let countryCodes;
-    let favoriteCountries = $state();
-
-    async function fetchCountryCodes() {
-        try {
-            if (!countryCodes) {
-                const codes = await fetch("/json/countryCodes.json");
-                const jsonCodes = await codes.json();
-                return jsonCodes;
-            }
-
-            return countryCodes;
-        } catch (error) {
-            console.error(
-                "Error fetching and processing country code json:",
-                error,
-            );
-        }
-    }
-
-    async function fetchFavorites() {
-        try {
-            if (!favoriteCountries) {
-                const favorites = await fetch(
-                    "/json/country-data/favorite-countries.json",
-                );
-                const parsedFavorites = await favorites.json();
-                return parsedFavorites?.favorites;
-            }
-
-            return favoriteCountries;
-        } catch (error) {
-            console.error(
-                "Error fetching and processing country code json:",
-                error,
-            );
-        }
-    }
-
-    onMount(async () => {
-        countryCodes = await fetchCountryCodes();
-        favoriteCountries = await fetchFavorites();
-        IconComponent = Icon[countryCodes[country]] || undefined;
-    });
+    let countryCodes = $derived($countryStore.countryCodes);
+    let favoriteCountries = $derived($countryStore.favoriteCountries);
 
     let isFavorite = $derived(
-        favoriteCountries &&
-            favoriteCountries?.find(
-                (element) => element?.toLowerCase() == country?.toLowerCase(),
-            ),
+        favoriteCountries?.some(
+            element => element?.toLowerCase() === country?.toLowerCase()
+        )
     );
+
+    $effect(() => {
+        if (countryCodes) {
+            IconComponent = Icon[countryCodes[country]] || undefined;
+        }
+    });
 </script>
 
 <a
-    class="px-2 py-1 bg-base-200 rounded-md hover:scale-95 transition-all cursor-pointer box-border m-0.5 {isFavorite ? "outline outline-1 outline-secondary" : ""}"
+    class="px-2 py-1 bg-base-200 rounded-md hover:scale-95 transition-all cursor-pointer box-border m-0.5 {isFavorite ? 'outline outline-1 outline-secondary' : ''}"
     href="/countries/learn/{country.toLowerCase().replaceAll(' ', '-')}">
     <div class="flex gap-2 items-center">
         {#if isFavorite}

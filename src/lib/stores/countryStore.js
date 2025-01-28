@@ -1,0 +1,53 @@
+import { writable } from 'svelte/store';
+
+function createCountryStore() {
+   const { subscribe, set, update } = writable({
+      countryCodes: null,
+      favoriteCountries: [],
+   });
+
+   async function fetchCountryCodes() {
+      try {
+         const codes = await fetch("/json/countryCodes.json");
+         const jsonCodes = await codes.json();
+         update((state) => ({ 
+            ...state, 
+            countryCodes: jsonCodes,
+            pending: false,
+            error: null
+         }));
+      } catch (error) {
+         console.error(
+            "Error fetching and processing country code json:",
+            error,
+         );
+      }
+   }
+
+   async function fetchFavorites() {
+      try {
+         const favorites = await fetch(
+            "/json/country-data/favorite-countries.json",
+         );
+         const parsedFavorites = await favorites.json();
+         update((state) => ({ 
+            ...state, 
+            favoriteCountries: parsedFavorites?.favorites || [],
+         }));
+      } catch (error) {
+         console.error(
+            "Error fetching and processing country code json:",
+            error,
+         );
+      }
+   }
+
+   return {
+      subscribe,
+      fetchCountryCodes,
+      fetchFavorites,
+   };
+}
+
+// Create and export the store instance
+export const countryStore = createCountryStore();
