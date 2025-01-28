@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 
 function createCountryStore() {
-   const { subscribe, set, update } = writable({
+   const { subscribe, update } = writable({
       countryCodes: null,
       favoriteCountries: [],
    });

@@ -11,7 +11,7 @@
     let favoriteCountries = $derived($countryStore.favoriteCountries);
 
     let isFavorite = $derived(
-        favoriteCountries?.some(
+        favoriteCountries.some(
             element => element?.toLowerCase() === country?.toLowerCase()
         )
     );
