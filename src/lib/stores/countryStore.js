@@ -13,8 +13,6 @@ function createCountryStore() {
          update((state) => ({ 
             ...state, 
             countryCodes: jsonCodes,
-            pending: false,
-            error: null
          }));
       } catch (error) {
          console.error(
