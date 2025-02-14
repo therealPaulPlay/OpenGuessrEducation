@@ -1,81 +1,147 @@
 {
-    "Albania": ["https://www.youtube.com/embed/X2ygwbjaQ9k?si=lOKVD1sNtFEWU_xS"],
-    "Andorra": ["https://youtube.com/embed/N0U-99_JX2E?si=mdQRjRyquTj0ke2D", "https://youtube.com/embed/fuGHKbVrKP8?si=Yp7p7y_UZSXXb6Ia"],
-    "Austria": ["https://youtube.com/embed/-tFC_L70Xy4?si=WJDwvuwLSd8CCxYe"],
-    "Belgium": ["https://youtube.com/embed/H5lCQJgKrdg?si=1miIOcvAXHknPo6Q"],
-    "Bangladesh": ["https://youtube.com/embed/KrjeFMsTUvE?si=Re_ijAwEU6s5qu_i"],
-    "Bulgaria": ["https://youtube.com/embed/UCQg1LJOywc?si=Dbntp6xfBrFk9NDQ"],
-    "Croatia": ["https://youtube.com/embed/noT97_IIZIY?si=Ir1uRriyCTDn0aXk"],
-    "Czechia": ["https://youtube.com/embed/eDmb1_545w8?si=K5TB03Au-rKP6gGj"],
-    "Denmark": ["https://youtube.com/embed/0HoME_sY8JA?si=1N1rUVbz9T0WgSE8"],
-    "Estonia": ["https://youtube.com/embed/_Eyx80wvRMc?si=QoEDnTwhj0vc8QRh", "https://youtube.com/embed/pMgqa0mOExo?si=0-uTPFmqg7wIjq_L"],
-    "Finland": ["https://youtube.com/embed/YC7spTWVw2Y?si=3EtCnFGcEkf2rUmh", "https://youtube.com/embed/5Qm5DQquHTM?si=qbWovl2muW0symgG"],
-    "France": ["https://youtube.com/embed/BswGCUotJFU?si=KXYnYlkLq_xQylEA", "https://youtube.com/embed/5KbpacxtdF0?si=lg83LcIoMf3ERZwQ"],
-    "Germany": ["https://youtube.com/embed/wfBQadowkUg?si=vKJm2hXrcno87Sln", "https://youtube.com/embed/U7jXdzhOUNk?si=vnV_SX3rGvAS4YIa"],
-    "Greece": ["https://youtube.com/embed/kzLAiLWBdMg?si=UXfIFrr6HP4MDdBK"],
-    "Hungary": ["https://youtube.com/embedD_5Y5FrNJaE?si=yu0SyKN_Q7ew4aI3"],
-    "Iceland": ["https://youtube.com/embed/U25uRT0QaVI?si=Hvju6QMvM4FAl2o9", "https://youtube.com/embed/7ait9TOUPYA?si=7gehduZRzX3TLPUc"],
-    "Ireland": ["https://youtube.com/embed/ii29xPNBvyc?si=_wFCbWqxSuj7QVi3"],
-    "Israel": ["https://youtube.com/embed/Gg6OixaBAIg?si=Kashv8xMo4IgvCJF"],
-    "Italy": ["https://youtube.com/embed/jWog_DRO_b0?si=QYltzEdBasQ3MfI9"],
-    "Japan": ["https://youtube.com/embed/x1h_lh3Nr9U?si=0g7oaexYB-RM1g0c"],
-    "Latvia": ["https://youtube.com/embed/nuqUwvdZ30M?si=8UmEPXm0RtPWol_2", "https://youtube.com/embed/nuqUwvdZ30M?si=p5YNgYpoEOds2782"],
-    "Liechtenstein": ["https://youtube.com/embed/Jf8T8Ug6cM8?si=8VOze54X0PI1q_7w"],
-    "Lithuania": ["https://youtube.com/embed/_osOExSsNyk?si=oq9QKhu6oMrhLJB2"],
-    "Luxembourg": ["https://youtube.com/embed/nyHeQWnm8YA?si=d29pbrbmp_ECgqFG", "https://youtube.com/embed/0-1gI5pvYaw?si=kEvlj3ECkFyepXyb"],
-    "Malta": ["https://youtube.com/embed/PYIS36k50FM?si=vOxBPQrVjzo3eV_m"],
-    "Moldova": ["https://youtube.com/embed/cARe_1cRj6E?si=FxRYS1gH4yhbp6uS"],
-    "Monaco": ["https://youtube.com/embed/HdQjTia26y4?si=3AXxyO383gRH-e3h"],
-    "Montenegro": ["https://youtube.com/embed/uBjUOtlnm5Y?si=E86xtjNNqzwhLMXh"],
-    "Netherlands": ["https://youtube.com/embed/dtc0jl4UTL8?si=mnWpeSbuS1Y7h6mW"],
-    "North Macedonia": ["https://youtube.com/embed/RGK7NFtc4nA?si=ZMzdbEhSgBPr7xR4"],
-    "Mongolia": ["https://youtube.com/embed/KCqGiljuUR0?si=lr7caielbCGz24p1", "https://youtube.com/embed/lPbPdHuWzTg?si=ho3Do-kDztSEXrRh"],
-    "Norway": ["https://youtube.com/embed/NkSSz0Ick5M?si=DtEotsPSo9lOcJ2I"],
-    "Poland": ["https://youtube.com/embed/v1lx8hYHdI8?si=lFn79_8Fos4gQlRZ", "https://youtube.com/embed/qQyXQtLoGyE?si=OaXiyU1ou0pW3X_m"],
-    "Portugal": ["https://youtube.com/embed/Q9fqD4irGnE?si=EqtNFaqXErFTKScJ"],
-    "Romania": ["https://youtube.com/embed/2KgccO-k5-k?si=fKAbVghYYGz-_u-W"],
-    "Serbia": ["https://youtube.com/embed/obF2AR2e5P8?si=1RbobhnupKIt6rZA"],
-    "Kazakhstan": ["https://youtube.com/embed/OtFtelzrQ5k?si=STSpr8C9YKGlTSFc"],
-    "Slovakia": ["https://youtube.com/embed/m0e92O4DJKE?si=qeTc7iZjCT1DcYCq"],
-    "Slowenia": ["https://youtube.com/embed/UFC9tRe8qm4?si=8zgnrpUnbct8fYvE"],
-    "Spain": ["https://youtube.com/embed/RIVgvEE6v7o?si=BLQHIIOwckMs4aSF"],
-    "Sweden": ["https://youtube.com/embed/nLknBKI2PX0?si=KH2Gjh3mfjyqRhJj", "https://youtube.com/embed/zzBXXw8Qkt4?si=1_j678ajQVWhzvgS"],
-    "Switzerland": ["https://youtube.com/embed/dfNmUcZks7E?si=3MmdB4-k3U7kXOdN"],
-    "United Kingdom": ["https://youtube.com/embed/Gf9m7vdxTEo?si=PQYo-lY9BvZzLcvx", "https://youtube.com/embed/geJOhu7JCJ0?si=Hiz4xo2l7WTd1Oof"],
-    "Ukraine": ["https://youtube.com/embed/Y6dkTwqvXDg?si=Pkz4uLMBWZh9EdFa"],
-    "Botswana": ["https://youtube.com/embed/-FLhEAs1GfI?si=BC1IiKfDeg8GqFXX"],
-    "Eswatini": ["https://youtube.com/embed/CdsaagtotFA?si=9Eof4hbYbzU7v4eJ"],
-    "Ghana": ["https://youtube.com/embed/7n3j-Mx8A8g?si=5FtS9_vVKzAZpWQx"],
-    "Kenya": ["https://youtube.com/embed/qNrp9tH_Xfc?si=Yyak7HkW-px5nWmh"],
-    "Lesotho": ["https://youtube.com/embed/7wjukeY3BIU?si=-ukdyGRE6dzwxO1A"],
-    "Nigeria": ["https://youtube.com/embed/Js1HB1eDXKc?si=HXcJmNS721XrAByV"],
-    "Senegal": ["https://youtube.com/embed/KH4MuxF4DP4?si=iAEDN0s8ZCfU390c"],
-    "South Africa": ["https://youtube.com/embed/KHKKa_-arv0?si=AZ7_QczkTWizyMDP"],
-    "Uganda": ["https://youtube.com/embed/qclyDpIHM5I?si=kgH9UIYGhnuCyfwv"],
-    "Canada": ["https://youtube.com/embed/DL29o6lok6c?si=Bg8wegunkYZOD4dy", "https://youtube.com/embed/9f2ExXVIP0g?si=myUY8ZLlPBTxpYyM"],
-    "Cuba": ["https://youtube.com/embed/qh-_fq5rJMs?si=WaU_nQ5CHDBABRWN"],
-    "El Salvador": ["https://youtube.com/embed/-t5uzY77zwA?si=iEAvNLuZdq9JmUyy"],
-    "Guatemala": ["https://youtube.com/embed/klxM9Pq6wec?si=JAiaHEd9JQ_2M1wE"],
-    "Mexico": ["https://youtube.com/embed/pNfSHSyweGg?si=salsJVOaG4c2gYWG"],
-    "Malaysia": ["https://youtube.com/embed/z96X5YOnjHY?si=xVh30hTcQNioNK8p"],
-    "Philippines": ["https://youtube.com/embed/RTbiY9P4l8o?si=-syClxbq0_2AAq53"],
-    "Panama": ["https://youtube.com/embed/d4WQBB4VpM4?si=nfHMBpFIV5cShj0g"],
-    "Russia": ["https://youtube.com/embed/icPXMHreXE0?si=aNIRkx5xBNpI77_h", "https://youtube.com/embed/wkitGpmUkCs?si=kRZ90H8bMyIrMC4K"],
-    "Singapore": ["https://youtube.com/embed/Uwm-jtzVf08?si=BeZL-J7uWq6HXjGL"],
-    "Taiwan": ["https://youtube.com/embed/X2MYA-3XboU?si=8Tit7URICIX6fpIe"],
-    "Thailand": ["https://youtube.com/embed/pVcM0Rs7AwY?si=rUgmJBH2VSyUJsOw"],
-    "Indonesia": ["https://youtube.com/embed/blU_vkE2B_s?si=nBPCkYUOcAaSKM7p", "https://youtube.com/embed/clyvskvjN3k?si=e3amoltlg4XPZq6K"],
-    "India": ["https://youtube.com/embed/hYhn7Z1aDFA?si=RFgaq6pxiUBhzlbD", "https://youtube.com/embed/AVri-VWkqfI?si=48toj48Y3LDxnXMs"],
-    "United States": ["https://youtube.com/embed/Ur_cwyeMn2M?si=BUH7w9eDv29Jyu8n", "https://youtube.com/embed/QPrRWmfFV8E?si=5o1SxHF7OM4slJh_"],
-    "Argentina": ["https://youtube.com/embed/Eq1jKoQZF-g?si=eZky9UI04u0v07ia", "https://youtube.com/embed/6Y5NiiIADh0?si=7Sh5sZci7qsARnqR"],
-    "Bolivia": ["https://youtube.com/embed/tp0SCYwaPL8?si=wCXGWvRqGbdd3sJ5"],
-    "Brazil": ["https://youtube.com/embed/RQ9y44HoxQY?si=4D8oXP8wQCy2LP-S", "https://youtube.com/embed/WhdQ6AKXMbM?si=LaRCO7kTMIAEqCSY"],
-    "Chile": ["https://youtube.com/embed/e3Y7AAfFd1s?si=wBztU0R1KqQIzFlm"],
-    "Ecuador": ["https://youtube.com/embed/7jzB0YVBUOs?si=PGsoyNiS8WNt1Lbj"],
-    "Peru": ["https://youtube.com/embed/cMZD9azGfjc?si=iaOiw5bcvmah-kDI", "https://youtube.com/embed/j7vlc_6Rveo?si=SeVPM9nGqvC2IESG"],
-    "Uruguay": ["https://youtube.com/embed/cQ8QRxg5dWs?si=T4O7A1Elrf4QjKPd"],
-    "Australia": ["https://youtube.com/embed/UoRZGmLdbMM?si=AUOrmbzWuwmJXyyU", "https://youtube.com/embed/01Kxsh3zjjE?si=mtHs9SKWdDrI81iM"],
-    "New Zealand": ["https://youtube.com/embed/SyBAOCopJfI?si=YUq7sf14Oe39a3ef", "https://youtube.com/embed/WPZNjBiQ0cg?si=ytK966iKYDP8PM1X"],
-    "Vietnam": ["https://youtube.com/embed/Fyo1XDcfbzM?si=gF7dfhkMkLVDTkD6"],
-    "Papua New Guinea": ["https://youtube.com/embed/bushHvw__Mo?si=PMmmkGh2Qazc2u3F"]
+	"Albania": ["https://www.youtube.com/embed/X2ygwbjaQ9k?si=lOKVD1sNtFEWU_xS"],
+	"Andorra": [
+		"https://youtube.com/embed/N0U-99_JX2E?si=mdQRjRyquTj0ke2D",
+		"https://youtube.com/embed/fuGHKbVrKP8?si=Yp7p7y_UZSXXb6Ia"
+	],
+	"Austria": ["https://youtube.com/embed/-tFC_L70Xy4?si=WJDwvuwLSd8CCxYe"],
+	"Belgium": ["https://youtube.com/embed/H5lCQJgKrdg?si=1miIOcvAXHknPo6Q"],
+	"Bangladesh": ["https://youtube.com/embed/KrjeFMsTUvE?si=Re_ijAwEU6s5qu_i"],
+	"Bulgaria": ["https://youtube.com/embed/UCQg1LJOywc?si=Dbntp6xfBrFk9NDQ"],
+	"Croatia": ["https://youtube.com/embed/noT97_IIZIY?si=Ir1uRriyCTDn0aXk"],
+	"Czechia": ["https://youtube.com/embed/eDmb1_545w8?si=K5TB03Au-rKP6gGj"],
+	"Denmark": ["https://youtube.com/embed/0HoME_sY8JA?si=1N1rUVbz9T0WgSE8"],
+	"Estonia": [
+		"https://youtube.com/embed/_Eyx80wvRMc?si=QoEDnTwhj0vc8QRh",
+		"https://youtube.com/embed/pMgqa0mOExo?si=0-uTPFmqg7wIjq_L"
+	],
+	"Finland": [
+		"https://youtube.com/embed/YC7spTWVw2Y?si=3EtCnFGcEkf2rUmh",
+		"https://youtube.com/embed/5Qm5DQquHTM?si=qbWovl2muW0symgG"
+	],
+	"France": [
+		"https://youtube.com/embed/BswGCUotJFU?si=KXYnYlkLq_xQylEA",
+		"https://youtube.com/embed/5KbpacxtdF0?si=lg83LcIoMf3ERZwQ"
+	],
+	"Germany": [
+		"https://youtube.com/embed/wfBQadowkUg?si=vKJm2hXrcno87Sln",
+		"https://youtube.com/embed/U7jXdzhOUNk?si=vnV_SX3rGvAS4YIa"
+	],
+	"Greece": ["https://youtube.com/embed/kzLAiLWBdMg?si=UXfIFrr6HP4MDdBK"],
+	"Hungary": ["https://youtube.com/embedD_5Y5FrNJaE?si=yu0SyKN_Q7ew4aI3"],
+	"Iceland": [
+		"https://youtube.com/embed/U25uRT0QaVI?si=Hvju6QMvM4FAl2o9",
+		"https://youtube.com/embed/7ait9TOUPYA?si=7gehduZRzX3TLPUc"
+	],
+	"Ireland": ["https://youtube.com/embed/ii29xPNBvyc?si=_wFCbWqxSuj7QVi3"],
+	"Israel": ["https://youtube.com/embed/Gg6OixaBAIg?si=Kashv8xMo4IgvCJF"],
+	"Italy": ["https://youtube.com/embed/jWog_DRO_b0?si=QYltzEdBasQ3MfI9"],
+	"Japan": ["https://youtube.com/embed/x1h_lh3Nr9U?si=0g7oaexYB-RM1g0c"],
+	"Latvia": [
+		"https://youtube.com/embed/nuqUwvdZ30M?si=8UmEPXm0RtPWol_2",
+		"https://youtube.com/embed/nuqUwvdZ30M?si=p5YNgYpoEOds2782"
+	],
+	"Liechtenstein": ["https://youtube.com/embed/Jf8T8Ug6cM8?si=8VOze54X0PI1q_7w"],
+	"Lithuania": ["https://youtube.com/embed/_osOExSsNyk?si=oq9QKhu6oMrhLJB2"],
+	"Luxembourg": [
+		"https://youtube.com/embed/nyHeQWnm8YA?si=d29pbrbmp_ECgqFG",
+		"https://youtube.com/embed/0-1gI5pvYaw?si=kEvlj3ECkFyepXyb"
+	],
+	"Malta": ["https://youtube.com/embed/PYIS36k50FM?si=vOxBPQrVjzo3eV_m"],
+	"Moldova": ["https://youtube.com/embed/cARe_1cRj6E?si=FxRYS1gH4yhbp6uS"],
+	"Monaco": ["https://youtube.com/embed/HdQjTia26y4?si=3AXxyO383gRH-e3h"],
+	"Montenegro": ["https://youtube.com/embed/uBjUOtlnm5Y?si=E86xtjNNqzwhLMXh"],
+	"Netherlands": ["https://youtube.com/embed/dtc0jl4UTL8?si=mnWpeSbuS1Y7h6mW"],
+	"North Macedonia": ["https://youtube.com/embed/RGK7NFtc4nA?si=ZMzdbEhSgBPr7xR4"],
+	"Mongolia": [
+		"https://youtube.com/embed/KCqGiljuUR0?si=lr7caielbCGz24p1",
+		"https://youtube.com/embed/lPbPdHuWzTg?si=ho3Do-kDztSEXrRh"
+	],
+	"Norway": ["https://youtube.com/embed/NkSSz0Ick5M?si=DtEotsPSo9lOcJ2I"],
+	"Poland": [
+		"https://youtube.com/embed/v1lx8hYHdI8?si=lFn79_8Fos4gQlRZ",
+		"https://youtube.com/embed/qQyXQtLoGyE?si=OaXiyU1ou0pW3X_m"
+	],
+	"Portugal": ["https://youtube.com/embed/Q9fqD4irGnE?si=EqtNFaqXErFTKScJ"],
+	"Romania": ["https://youtube.com/embed/2KgccO-k5-k?si=fKAbVghYYGz-_u-W"],
+	"Serbia": ["https://youtube.com/embed/obF2AR2e5P8?si=1RbobhnupKIt6rZA"],
+	"Kazakhstan": ["https://youtube.com/embed/OtFtelzrQ5k?si=STSpr8C9YKGlTSFc"],
+	"Slovakia": ["https://youtube.com/embed/m0e92O4DJKE?si=qeTc7iZjCT1DcYCq"],
+	"Slowenia": ["https://youtube.com/embed/UFC9tRe8qm4?si=8zgnrpUnbct8fYvE"],
+	"Spain": ["https://youtube.com/embed/RIVgvEE6v7o?si=BLQHIIOwckMs4aSF"],
+	"Sweden": [
+		"https://youtube.com/embed/nLknBKI2PX0?si=KH2Gjh3mfjyqRhJj",
+		"https://youtube.com/embed/zzBXXw8Qkt4?si=1_j678ajQVWhzvgS"
+	],
+	"Switzerland": ["https://youtube.com/embed/dfNmUcZks7E?si=3MmdB4-k3U7kXOdN"],
+	"United Kingdom": [
+		"https://youtube.com/embed/Gf9m7vdxTEo?si=PQYo-lY9BvZzLcvx",
+		"https://youtube.com/embed/geJOhu7JCJ0?si=Hiz4xo2l7WTd1Oof"
+	],
+	"Ukraine": ["https://youtube.com/embed/Y6dkTwqvXDg?si=Pkz4uLMBWZh9EdFa"],
+	"Botswana": ["https://youtube.com/embed/-FLhEAs1GfI?si=BC1IiKfDeg8GqFXX"],
+	"Eswatini": ["https://youtube.com/embed/CdsaagtotFA?si=9Eof4hbYbzU7v4eJ"],
+	"Ghana": ["https://youtube.com/embed/7n3j-Mx8A8g?si=5FtS9_vVKzAZpWQx"],
+	"Kenya": ["https://youtube.com/embed/qNrp9tH_Xfc?si=Yyak7HkW-px5nWmh"],
+	"Lesotho": ["https://youtube.com/embed/7wjukeY3BIU?si=-ukdyGRE6dzwxO1A"],
+	"Nigeria": ["https://youtube.com/embed/Js1HB1eDXKc?si=HXcJmNS721XrAByV"],
+	"Senegal": ["https://youtube.com/embed/KH4MuxF4DP4?si=iAEDN0s8ZCfU390c"],
+	"South Africa": ["https://youtube.com/embed/KHKKa_-arv0?si=AZ7_QczkTWizyMDP"],
+	"Uganda": ["https://youtube.com/embed/qclyDpIHM5I?si=kgH9UIYGhnuCyfwv"],
+	"Canada": [
+		"https://youtube.com/embed/DL29o6lok6c?si=Bg8wegunkYZOD4dy",
+		"https://youtube.com/embed/9f2ExXVIP0g?si=myUY8ZLlPBTxpYyM"
+	],
+	"Cuba": ["https://youtube.com/embed/qh-_fq5rJMs?si=WaU_nQ5CHDBABRWN"],
+	"El Salvador": ["https://youtube.com/embed/-t5uzY77zwA?si=iEAvNLuZdq9JmUyy"],
+	"Guatemala": ["https://youtube.com/embed/klxM9Pq6wec?si=JAiaHEd9JQ_2M1wE"],
+	"Mexico": ["https://youtube.com/embed/pNfSHSyweGg?si=salsJVOaG4c2gYWG"],
+	"Malaysia": ["https://youtube.com/embed/z96X5YOnjHY?si=xVh30hTcQNioNK8p"],
+	"Philippines": ["https://youtube.com/embed/RTbiY9P4l8o?si=-syClxbq0_2AAq53"],
+	"Panama": ["https://youtube.com/embed/d4WQBB4VpM4?si=nfHMBpFIV5cShj0g"],
+	"Russia": [
+		"https://youtube.com/embed/icPXMHreXE0?si=aNIRkx5xBNpI77_h",
+		"https://youtube.com/embed/wkitGpmUkCs?si=kRZ90H8bMyIrMC4K"
+	],
+	"Singapore": ["https://youtube.com/embed/Uwm-jtzVf08?si=BeZL-J7uWq6HXjGL"],
+	"Taiwan": ["https://youtube.com/embed/X2MYA-3XboU?si=8Tit7URICIX6fpIe"],
+	"Thailand": ["https://youtube.com/embed/pVcM0Rs7AwY?si=rUgmJBH2VSyUJsOw"],
+	"Indonesia": [
+		"https://youtube.com/embed/blU_vkE2B_s?si=nBPCkYUOcAaSKM7p",
+		"https://youtube.com/embed/clyvskvjN3k?si=e3amoltlg4XPZq6K"
+	],
+	"India": [
+		"https://youtube.com/embed/hYhn7Z1aDFA?si=RFgaq6pxiUBhzlbD",
+		"https://youtube.com/embed/AVri-VWkqfI?si=48toj48Y3LDxnXMs"
+	],
+	"United States": [
+		"https://youtube.com/embed/Ur_cwyeMn2M?si=BUH7w9eDv29Jyu8n",
+		"https://youtube.com/embed/QPrRWmfFV8E?si=5o1SxHF7OM4slJh_"
+	],
+	"Argentina": [
+		"https://youtube.com/embed/Eq1jKoQZF-g?si=eZky9UI04u0v07ia",
+		"https://youtube.com/embed/6Y5NiiIADh0?si=7Sh5sZci7qsARnqR"
+	],
+	"Bolivia": ["https://youtube.com/embed/tp0SCYwaPL8?si=wCXGWvRqGbdd3sJ5"],
+	"Brazil": [
+		"https://youtube.com/embed/RQ9y44HoxQY?si=4D8oXP8wQCy2LP-S",
+		"https://youtube.com/embed/WhdQ6AKXMbM?si=LaRCO7kTMIAEqCSY"
+	],
+	"Chile": ["https://youtube.com/embed/e3Y7AAfFd1s?si=wBztU0R1KqQIzFlm"],
+	"Ecuador": ["https://youtube.com/embed/7jzB0YVBUOs?si=PGsoyNiS8WNt1Lbj"],
+	"Peru": [
+		"https://youtube.com/embed/cMZD9azGfjc?si=iaOiw5bcvmah-kDI",
+		"https://youtube.com/embed/j7vlc_6Rveo?si=SeVPM9nGqvC2IESG"
+	],
+	"Uruguay": ["https://youtube.com/embed/cQ8QRxg5dWs?si=T4O7A1Elrf4QjKPd"],
+	"Australia": [
+		"https://youtube.com/embed/UoRZGmLdbMM?si=AUOrmbzWuwmJXyyU",
+		"https://youtube.com/embed/01Kxsh3zjjE?si=mtHs9SKWdDrI81iM"
+	],
+	"New Zealand": [
+		"https://youtube.com/embed/SyBAOCopJfI?si=YUq7sf14Oe39a3ef",
+		"https://youtube.com/embed/WPZNjBiQ0cg?si=ytK966iKYDP8PM1X"
+	],
+	"Vietnam": ["https://youtube.com/embed/Fyo1XDcfbzM?si=gF7dfhkMkLVDTkD6"],
+	"Papua New Guinea": ["https://youtube.com/embed/bushHvw__Mo?si=PMmmkGh2Qazc2u3F"]
 }

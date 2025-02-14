@@ -1,18 +1,16 @@
 <script module>
-    import { determineCategory } from "$lib/utils/quizMetadataHelper.js";
-    import QuizMapGame from "$lib/components/QuizMapGame.svelte";
-    import ExploreInOpenGuessr from "$lib/components/ExploreInOpenGuessr.svelte";
+	import { determineCategory } from "$lib/utils/quizMetadataHelper.js";
+	import QuizMapGame from "$lib/components/QuizMapGame.svelte";
+	import ExploreInOpenGuessr from "$lib/components/ExploreInOpenGuessr.svelte";
 
-    export const metadata = {
-        title: "African Countries",
-        tags: ["Africa"],
-        region: "Africa",
-        category: determineCategory(new URL(import.meta.url).pathname)
-    }
+	export const metadata = {
+		title: "African Countries",
+		tags: ["Africa"],
+		region: "Africa",
+		category: determineCategory(new URL(import.meta.url).pathname),
+	};
 </script>
 
-<QuizMapGame
-    region={metadata.region}
-/>
+<QuizMapGame region={metadata.region} />
 
 <ExploreInOpenGuessr mapName="Africa" />

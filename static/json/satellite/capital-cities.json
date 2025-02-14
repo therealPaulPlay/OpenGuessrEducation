@@ -1,1224 +1,1224 @@
 {
-  "Locations": [
-    {
-      "name": "London",
-      "lat": 51.5074456,
-      "long": -0.1277653
-    },
-    {
-      "name": "London",
-      "lat": 51.5074456,
-      "long": -0.1277653
-    },
-    {
-      "name": "London",
-      "lat": 51.5074456,
-      "long": -0.1277653
-    },
-    {
-      "name": "Paris",
-      "lat": 48.8534951,
-      "long": 2.3483915
-    },
-    {
-      "name": "Paris",
-      "lat": 48.8534951,
-      "long": 2.3483915
-    },
-    {
-      "name": "Paris",
-      "lat": 48.8534951,
-      "long": 2.3483915
-    },
-    {
-      "name": "Berlin",
-      "lat": 52.510885,
-      "long": 13.3989367
-    },
-    {
-      "name": "Berlin",
-      "lat": 52.510885,
-      "long": 13.3989367
-    },
-    {
-      "name": "Berlin",
-      "lat": 52.510885,
-      "long": 13.3989367
-    },
-    {
-      "name": "Rome",
-      "lat": 41.8933203,
-      "long": 12.4829321
-    },
-    {
-      "name": "Rome",
-      "lat": 41.8933203,
-      "long": 12.4829321
-    },
-    {
-      "name": "Rome",
-      "lat": 41.8933203,
-      "long": 12.4829321
-    },
-    {
-      "name": "Madrid",
-      "lat": 40.4167047,
-      "long": -3.7035825
-    },
-    {
-      "name": "Madrid",
-      "lat": 40.4167047,
-      "long": -3.7035825
-    },
-    {
-      "name": "Madrid",
-      "lat": 40.4167047,
-      "long": -3.7035825
-    },
-    {
-      "name": "Moscow",
-      "lat": 55.7505412,
-      "long": 37.6174782
-    },
-    {
-      "name": "Moscow",
-      "lat": 55.7505412,
-      "long": 37.6174782
-    },
-    {
-      "name": "Moscow",
-      "lat": 55.7505412,
-      "long": 37.6174782
-    },
-    {
-      "name": "Tokyo",
-      "lat": 35.6768601,
-      "long": 139.7638947
-    },
-    {
-      "name": "Tokyo",
-      "lat": 35.6768601,
-      "long": 139.7638947
-    },
-    {
-      "name": "Tokyo",
-      "lat": 35.6768601,
-      "long": 139.7638947
-    },
-    {
-      "name": "Beijing",
-      "lat": 40.190632,
-      "long": 116.412144
-    },
-    {
-      "name": "Beijing",
-      "lat": 40.190632,
-      "long": 116.412144
-    },
-    {
-      "name": "Beijing",
-      "lat": 40.190632,
-      "long": 116.412144
-    },
-    {
-      "name": "Washington D.C.",
-      "lat": 38.8950368,
-      "long": -77.0365427
-    },
-    {
-      "name": "Washington D.C.",
-      "lat": 38.8950368,
-      "long": -77.0365427
-    },
-    {
-      "name": "Washington D.C.",
-      "lat": 38.8950368,
-      "long": -77.0365427
-    },
-    {
-      "name": "Canberra",
-      "lat": -35.2975906,
-      "long": 149.1012676
-    },
-    {
-      "name": "Canberra",
-      "lat": -35.2975906,
-      "long": 149.1012676
-    },
-    {
-      "name": "Canberra",
-      "lat": -35.2975906,
-      "long": 149.1012676
-    },
-    {
-      "name": "Ottawa",
-      "lat": 45.4208777,
-      "long": -75.6901106
-    },
-    {
-      "name": "Ottawa",
-      "lat": 45.4208777,
-      "long": -75.6901106
-    },
-    {
-      "name": "Ottawa",
-      "lat": 45.4208777,
-      "long": -75.6901106
-    },
-    {
-      "name": "Mexico City",
-      "lat": 19.4326296,
-      "long": -99.1331785
-    },
-    {
-      "name": "Mexico City",
-      "lat": 19.4326296,
-      "long": -99.1331785
-    },
-    {
-      "name": "Mexico City",
-      "lat": 19.4326296,
-      "long": -99.1331785
-    },
-    {
-      "name": "Brasilia",
-      "lat": -10.3333333,
-      "long": -53.2
-    },
-    {
-      "name": "Brasilia",
-      "lat": -10.3333333,
-      "long": -53.2
-    },
-    {
-      "name": "Brasilia",
-      "lat": -10.3333333,
-      "long": -53.2
-    },
-    {
-      "name": "Buenos Aires",
-      "lat": -34.6083696,
-      "long": -58.4440583
-    },
-    {
-      "name": "Buenos Aires",
-      "lat": -34.6083696,
-      "long": -58.4440583
-    },
-    {
-      "name": "Buenos Aires",
-      "lat": -34.6083696,
-      "long": -58.4440583
-    },
-    {
-      "name": "Santiago",
-      "lat": -33.4377756,
-      "long": -70.6504502
-    },
-    {
-      "name": "Santiago",
-      "lat": -33.4377756,
-      "long": -70.6504502
-    },
-    {
-      "name": "Santiago",
-      "lat": -33.4377756,
-      "long": -70.6504502
-    },
-    {
-      "name": "Lima",
-      "lat": -12.0621065,
-      "long": -77.0365256
-    },
-    {
-      "name": "Lima",
-      "lat": -12.0621065,
-      "long": -77.0365256
-    },
-    {
-      "name": "Lima",
-      "lat": -12.0621065,
-      "long": -77.0365256
-    },
-    {
-      "name": "Bogota",
-      "lat": 4.6533816,
-      "long": -74.0836333
-    },
-    {
-      "name": "Bogota",
-      "lat": 4.6533816,
-      "long": -74.0836333
-    },
-    {
-      "name": "Bogota",
-      "lat": 4.6533816,
-      "long": -74.0836333
-    },
-    {
-      "name": "Caracas",
-      "lat": 10.5060934,
-      "long": -66.9146008
-    },
-    {
-      "name": "Caracas",
-      "lat": 10.5060934,
-      "long": -66.9146008
-    },
-    {
-      "name": "Caracas",
-      "lat": 10.5060934,
-      "long": -66.9146008
-    },
-    {
-      "name": "Havana",
-      "lat": 23.135305,
-      "long": -82.3589631
-    },
-    {
-      "name": "Havana",
-      "lat": 23.135305,
-      "long": -82.3589631
-    },
-    {
-      "name": "Havana",
-      "lat": 23.135305,
-      "long": -82.3589631
-    },
-    {
-      "name": "Kingston",
-      "lat": 17.9712148,
-      "long": -76.7928128
-    },
-    {
-      "name": "Kingston",
-      "lat": 17.9712148,
-      "long": -76.7928128
-    },
-    {
-      "name": "Kingston",
-      "lat": 17.9712148,
-      "long": -76.7928128
-    },
-    {
-      "name": "Nassau",
-      "lat": 25.0782266,
-      "long": -77.3383438
-    },
-    {
-      "name": "Nassau",
-      "lat": 25.0782266,
-      "long": -77.3383438
-    },
-    {
-      "name": "Nassau",
-      "lat": 25.0782266,
-      "long": -77.3383438
-    },
-    {
-      "name": "Kingstown",
-      "lat": 13.1561864,
-      "long": -61.2279621
-    },
-    {
-      "name": "Kingstown",
-      "lat": 13.1561864,
-      "long": -61.2279621
-    },
-    {
-      "name": "Kingstown",
-      "lat": 13.1561864,
-      "long": -61.2279621
-    },
-    {
-      "name": "Bridgetown",
-      "lat": 13.0977832,
-      "long": -59.6184184
-    },
-    {
-      "name": "Bridgetown",
-      "lat": 13.0977832,
-      "long": -59.6184184
-    },
-    {
-      "name": "Bridgetown",
-      "lat": 13.0977832,
-      "long": -59.6184184
-    },
-    {
-      "name": "Castries",
-      "lat": 43.6779101,
-      "long": 3.9868904
-    },
-    {
-      "name": "Castries",
-      "lat": 43.6779101,
-      "long": 3.9868904
-    },
-    {
-      "name": "Castries",
-      "lat": 43.6779101,
-      "long": 3.9868904
-    },
-    {
-      "name": "Port of Spain",
-      "lat": 10.6572678,
-      "long": -61.5180173
-    },
-    {
-      "name": "Port of Spain",
-      "lat": 10.6572678,
-      "long": -61.5180173
-    },
-    {
-      "name": "Port of Spain",
-      "lat": 10.6572678,
-      "long": -61.5180173
-    },
-    {
-      "name": "Georgetown",
-      "lat": 6.8137426,
-      "long": -58.1624465
-    },
-    {
-      "name": "Georgetown",
-      "lat": 6.8137426,
-      "long": -58.1624465
-    },
-    {
-      "name": "Georgetown",
-      "lat": 6.8137426,
-      "long": -58.1624465
-    },
-    {
-      "name": "Paramaribo",
-      "lat": 5.8247628,
-      "long": -55.1703941
-    },
-    {
-      "name": "Paramaribo",
-      "lat": 5.8247628,
-      "long": -55.1703941
-    },
-    {
-      "name": "Paramaribo",
-      "lat": 5.8247628,
-      "long": -55.1703941
-    },
-    {
-      "name": "Cairo",
-      "lat": 30.0443879,
-      "long": 31.2357257
-    },
-    {
-      "name": "Cairo",
-      "lat": 30.0443879,
-      "long": 31.2357257
-    },
-    {
-      "name": "Cairo",
-      "lat": 30.0443879,
-      "long": 31.2357257
-    },
-    {
-      "name": "Nairobi",
-      "lat": -1.3026148499999999,
-      "long": 36.82884201813725
-    },
-    {
-      "name": "Nairobi",
-      "lat": -1.3026148499999999,
-      "long": 36.82884201813725
-    },
-    {
-      "name": "Nairobi",
-      "lat": -1.3026148499999999,
-      "long": 36.82884201813725
-    },
-    {
-      "name": "Pretoria",
-      "lat": -25.7459277,
-      "long": 28.1879101
-    },
-    {
-      "name": "Pretoria",
-      "lat": -25.7459277,
-      "long": 28.1879101
-    },
-    {
-      "name": "Pretoria",
-      "lat": -25.7459277,
-      "long": 28.1879101
-    },
-    {
-      "name": "Accra",
-      "lat": 5.5571096,
-      "long": -0.2012376
-    },
-    {
-      "name": "Accra",
-      "lat": 5.5571096,
-      "long": -0.2012376
-    },
-    {
-      "name": "Accra",
-      "lat": 5.5571096,
-      "long": -0.2012376
-    },
-    {
-      "name": "Abuja",
-      "lat": 9.0643305,
-      "long": 7.4892974
-    },
-    {
-      "name": "Abuja",
-      "lat": 9.0643305,
-      "long": 7.4892974
-    },
-    {
-      "name": "Abuja",
-      "lat": 9.0643305,
-      "long": 7.4892974
-    },
-    {
-      "name": "Addis Ababa",
-      "lat": 9.0358287,
-      "long": 38.7524127
-    },
-    {
-      "name": "Addis Ababa",
-      "lat": 9.0358287,
-      "long": 38.7524127
-    },
-    {
-      "name": "Addis Ababa",
-      "lat": 9.0358287,
-      "long": 38.7524127
-    },
-    {
-      "name": "Algiers",
-      "lat": 36.7729309,
-      "long": 3.0588291
-    },
-    {
-      "name": "Algiers",
-      "lat": 36.7729309,
-      "long": 3.0588291
-    },
-    {
-      "name": "Algiers",
-      "lat": 36.7729309,
-      "long": 3.0588291
-    },
-    {
-      "name": "Tripoli",
-      "lat": 32.896672,
-      "long": 13.1777923
-    },
-    {
-      "name": "Tripoli",
-      "lat": 32.896672,
-      "long": 13.1777923
-    },
-    {
-      "name": "Tripoli",
-      "lat": 32.896672,
-      "long": 13.1777923
-    },
-    {
-      "name": "Rabat",
-      "lat": 34.02236,
-      "long": -6.8340222
-    },
-    {
-      "name": "Rabat",
-      "lat": 34.02236,
-      "long": -6.8340222
-    },
-    {
-      "name": "Rabat",
-      "lat": 34.02236,
-      "long": -6.8340222
-    },
-    {
-      "name": "Tunis",
-      "lat": 36.8002068,
-      "long": 10.1857757
-    },
-    {
-      "name": "Tunis",
-      "lat": 36.8002068,
-      "long": 10.1857757
-    },
-    {
-      "name": "Tunis",
-      "lat": 36.8002068,
-      "long": 10.1857757
-    },
-    {
-      "name": "Kinshasa",
-      "lat": -4.3217055,
-      "long": 15.3125974
-    },
-    {
-      "name": "Kinshasa",
-      "lat": -4.3217055,
-      "long": 15.3125974
-    },
-    {
-      "name": "Kinshasa",
-      "lat": -4.3217055,
-      "long": 15.3125974
-    },
-    {
-      "name": "Khartoum",
-      "lat": 15.5635972,
-      "long": 32.5349123
-    },
-    {
-      "name": "Khartoum",
-      "lat": 15.5635972,
-      "long": 32.5349123
-    },
-    {
-      "name": "Khartoum",
-      "lat": 15.5635972,
-      "long": 32.5349123
-    },
-    {
-      "name": "Maputo",
-      "lat": -25.966213,
-      "long": 32.56745
-    },
-    {
-      "name": "Maputo",
-      "lat": -25.966213,
-      "long": 32.56745
-    },
-    {
-      "name": "Maputo",
-      "lat": -25.966213,
-      "long": 32.56745
-    },
-    {
-      "name": "Windhoek",
-      "lat": -22.5776104,
-      "long": 17.0772739
-    },
-    {
-      "name": "Windhoek",
-      "lat": -22.5776104,
-      "long": 17.0772739
-    },
-    {
-      "name": "Windhoek",
-      "lat": -22.5776104,
-      "long": 17.0772739
-    },
-    {
-      "name": "Dodoma",
-      "lat": -6.1791181,
-      "long": 35.7468174
-    },
-    {
-      "name": "Dodoma",
-      "lat": -6.1791181,
-      "long": 35.7468174
-    },
-    {
-      "name": "Dodoma",
-      "lat": -6.1791181,
-      "long": 35.7468174
-    },
-    {
-      "name": "Luanda",
-      "lat": -8.8272699,
-      "long": 13.2439512
-    },
-    {
-      "name": "Luanda",
-      "lat": -8.8272699,
-      "long": 13.2439512
-    },
-    {
-      "name": "Luanda",
-      "lat": -8.8272699,
-      "long": 13.2439512
-    },
-    {
-      "name": "Gaborone",
-      "lat": -24.6581357,
-      "long": 25.9088474
-    },
-    {
-      "name": "Gaborone",
-      "lat": -24.6581357,
-      "long": 25.9088474
-    },
-    {
-      "name": "Gaborone",
-      "lat": -24.6581357,
-      "long": 25.9088474
-    },
-    {
-      "name": "Kigali",
-      "lat": -1.8859597,
-      "long": 30.1296751
-    },
-    {
-      "name": "Kigali",
-      "lat": -1.8859597,
-      "long": 30.1296751
-    },
-    {
-      "name": "Kigali",
-      "lat": -1.8859597,
-      "long": 30.1296751
-    },
-    {
-      "name": "Dakar",
-      "lat": 14.693425,
-      "long": -17.447938
-    },
-    {
-      "name": "Dakar",
-      "lat": 14.693425,
-      "long": -17.447938
-    },
-    {
-      "name": "Dakar",
-      "lat": 14.693425,
-      "long": -17.447938
-    },
-    {
-      "name": "Freetown",
-      "lat": 8.479004,
-      "long": -13.26795
-    },
-    {
-      "name": "Freetown",
-      "lat": 8.479004,
-      "long": -13.26795
-    },
-    {
-      "name": "Freetown",
-      "lat": 8.479004,
-      "long": -13.26795
-    },
-    {
-      "name": "Bamako",
-      "lat": 12.649319,
-      "long": -8.000337
-    },
-    {
-      "name": "Bamako",
-      "lat": 12.649319,
-      "long": -8.000337
-    },
-    {
-      "name": "Bamako",
-      "lat": 12.649319,
-      "long": -8.000337
-    },
-    {
-      "name": "Lusaka",
-      "lat": -15.4163395,
-      "long": 28.2818414
-    },
-    {
-      "name": "Lusaka",
-      "lat": -15.4163395,
-      "long": 28.2818414
-    },
-    {
-      "name": "Lusaka",
-      "lat": -15.4163395,
-      "long": 28.2818414
-    },
-    {
-      "name": "Harare",
-      "lat": -17.831773,
-      "long": 31.045686
-    },
-    {
-      "name": "Harare",
-      "lat": -17.831773,
-      "long": 31.045686
-    },
-    {
-      "name": "Harare",
-      "lat": -17.831773,
-      "long": 31.045686
-    },
-    {
-      "name": "Antananarivo",
-      "lat": -18.9100122,
-      "long": 47.5255809
-    },
-    {
-      "name": "Antananarivo",
-      "lat": -18.9100122,
-      "long": 47.5255809
-    },
-    {
-      "name": "Antananarivo",
-      "lat": -18.9100122,
-      "long": 47.5255809
-    },
-    {
-      "name": "Port Louis",
-      "lat": -20.1624522,
-      "long": 57.5028044
-    },
-    {
-      "name": "Port Louis",
-      "lat": -20.1624522,
-      "long": 57.5028044
-    },
-    {
-      "name": "Port Louis",
-      "lat": -20.1624522,
-      "long": 57.5028044
-    },
-    {
-      "name": "Victoria",
-      "lat": -36.5986096,
-      "long": 144.6780052
-    },
-    {
-      "name": "Victoria",
-      "lat": -36.5986096,
-      "long": 144.6780052
-    },
-    {
-      "name": "Victoria",
-      "lat": -36.5986096,
-      "long": 144.6780052
-    },
-    {
-      "name": "Abu Dhabi",
-      "lat": 24.4538352,
-      "long": 54.3774014
-    },
-    {
-      "name": "Abu Dhabi",
-      "lat": 24.4538352,
-      "long": 54.3774014
-    },
-    {
-      "name": "Abu Dhabi",
-      "lat": 24.4538352,
-      "long": 54.3774014
-    },
-    {
-      "name": "Riyadh",
-      "lat": 24.638916,
-      "long": 46.7160104
-    },
-    {
-      "name": "Riyadh",
-      "lat": 24.638916,
-      "long": 46.7160104
-    },
-    {
-      "name": "Riyadh",
-      "lat": 24.638916,
-      "long": 46.7160104
-    },
-    {
-      "name": "Doha",
-      "lat": 25.2856329,
-      "long": 51.5264162
-    },
-    {
-      "name": "Doha",
-      "lat": 25.2856329,
-      "long": 51.5264162
-    },
-    {
-      "name": "Doha",
-      "lat": 25.2856329,
-      "long": 51.5264162
-    },
-    {
-      "name": "Manama",
-      "lat": 26.201,
-      "long": 50.6068
-    },
-    {
-      "name": "Kuwait City",
-      "lat": 29.3796532,
-      "long": 47.9734174
-    },
-    {
-      "name": "Kuwait City",
-      "lat": 29.3796532,
-      "long": 47.9734174
-    },
-    {
-      "name": "Kuwait City",
-      "lat": 29.3796532,
-      "long": 47.9734174
-    },
-    {
-      "name": "Amman",
-      "lat": 31.9515694,
-      "long": 35.9239625
-    },
-    {
-      "name": "Amman",
-      "lat": 31.9515694,
-      "long": 35.9239625
-    },
-    {
-      "name": "Amman",
-      "lat": 31.9515694,
-      "long": 35.9239625
-    },
-    {
-      "name": "Jerusalem",
-      "lat": 31.7788242,
-      "long": 35.2257626
-    },
-    {
-      "name": "Jerusalem",
-      "lat": 31.7788242,
-      "long": 35.2257626
-    },
-    {
-      "name": "Jerusalem",
-      "lat": 31.7788242,
-      "long": 35.2257626
-    },
-    {
-      "name": "Damascus",
-      "lat": 45.4220856,
-      "long": -122.42831112768494
-    },
-    {
-      "name": "Damascus",
-      "lat": 45.4220856,
-      "long": -122.42831112768494
-    },
-    {
-      "name": "Damascus",
-      "lat": 45.4220856,
-      "long": -122.42831112768494
-    },
-    {
-      "name": "Baghdad",
-      "lat": 33.3061701,
-      "long": 44.3872213
-    },
-    {
-      "name": "Baghdad",
-      "lat": 33.3061701,
-      "long": 44.3872213
-    },
-    {
-      "name": "Baghdad",
-      "lat": 33.3061701,
-      "long": 44.3872213
-    },
-    {
-      "name": "Tehran",
-      "lat": 35.6892523,
-      "long": 51.3896004
-    },
-    {
-      "name": "Tehran",
-      "lat": 35.6892523,
-      "long": 51.3896004
-    },
-    {
-      "name": "Tehran",
-      "lat": 35.6892523,
-      "long": 51.3896004
-    },
-    {
-      "name": "Ankara",
-      "lat": 39.7160439,
-      "long": 32.7059948
-    },
-    {
-      "name": "Ankara",
-      "lat": 39.7160439,
-      "long": 32.7059948
-    },
-    {
-      "name": "Ankara",
-      "lat": 39.7160439,
-      "long": 32.7059948
-    },
-    {
-      "name": "Athens",
-      "lat": 33.9597677,
-      "long": -83.376398
-    },
-    {
-      "name": "Athens",
-      "lat": 33.9597677,
-      "long": -83.376398
-    },
-    {
-      "name": "Athens",
-      "lat": 33.9597677,
-      "long": -83.376398
-    },
-    {
-      "name": "Sofia",
-      "lat": 42.6977028,
-      "long": 23.3217359
-    },
-    {
-      "name": "Sofia",
-      "lat": 42.6977028,
-      "long": 23.3217359
-    },
-    {
-      "name": "Sofia",
-      "lat": 42.6977028,
-      "long": 23.3217359
-    },
-    {
-      "name": "Warsaw",
-      "lat": 52.2337172,
-      "long": 21.071432235636493
-    },
-    {
-      "name": "Warsaw",
-      "lat": 52.2337172,
-      "long": 21.071432235636493
-    },
-    {
-      "name": "Warsaw",
-      "lat": 52.2337172,
-      "long": 21.071432235636493
-    },
-    {
-      "name": "Prague",
-      "lat": 50.0596288,
-      "long": 14.446459273258009
-    },
-    {
-      "name": "Prague",
-      "lat": 50.0596288,
-      "long": 14.446459273258009
-    },
-    {
-      "name": "Prague",
-      "lat": 50.0596288,
-      "long": 14.446459273258009
-    },
-    {
-      "name": "Vienna",
-      "lat": 48.2083537,
-      "long": 16.3725042
-    },
-    {
-      "name": "Vienna",
-      "lat": 48.2083537,
-      "long": 16.3725042
-    },
-    {
-      "name": "Vienna",
-      "lat": 48.2083537,
-      "long": 16.3725042
-    },
-    {
-      "name": "Budapest",
-      "lat": 47.48138955,
-      "long": 19.14609412691246
-    },
-    {
-      "name": "Budapest",
-      "lat": 47.48138955,
-      "long": 19.14609412691246
-    },
-    {
-      "name": "Budapest",
-      "lat": 47.48138955,
-      "long": 19.14609412691246
-    },
-    {
-      "name": "Brussels",
-      "lat": 50.8465573,
-      "long": 4.351697
-    },
-    {
-      "name": "Brussels",
-      "lat": 50.8465573,
-      "long": 4.351697
-    },
-    {
-      "name": "Brussels",
-      "lat": 50.8465573,
-      "long": 4.351697
-    },
-    {
-      "name": "Amsterdam",
-      "lat": 52.3730796,
-      "long": 4.8924534
-    },
-    {
-      "name": "Amsterdam",
-      "lat": 52.3730796,
-      "long": 4.8924534
-    },
-    {
-      "name": "Amsterdam",
-      "lat": 52.3730796,
-      "long": 4.8924534
-    },
-    {
-      "name": "Oslo",
-      "lat": 59.9133301,
-      "long": 10.7389701
-    },
-    {
-      "name": "Oslo",
-      "lat": 59.9133301,
-      "long": 10.7389701
-    },
-    {
-      "name": "Oslo",
-      "lat": 59.9133301,
-      "long": 10.7389701
-    },
-    {
-      "name": "Stockholm",
-      "lat": 59.3251172,
-      "long": 18.0710935
-    },
-    {
-      "name": "Stockholm",
-      "lat": 59.3251172,
-      "long": 18.0710935
-    },
-    {
-      "name": "Stockholm",
-      "lat": 59.3251172,
-      "long": 18.0710935
-    },
-    {
-      "name": "Copenhagen",
-      "lat": 55.6867243,
-      "long": 12.5700724
-    },
-    {
-      "name": "Copenhagen",
-      "lat": 55.6867243,
-      "long": 12.5700724
-    },
-    {
-      "name": "Copenhagen",
-      "lat": 55.6867243,
-      "long": 12.5700724
-    },
-    {
-      "name": "Helsinki",
-      "lat": 60.1674881,
-      "long": 24.9427473
-    },
-    {
-      "name": "Helsinki",
-      "lat": 60.1674881,
-      "long": 24.9427473
-    },
-    {
-      "name": "Helsinki",
-      "lat": 60.1674881,
-      "long": 24.9427473
-    },
-    {
-      "name": "Tallinn",
-      "lat": 59.4372155,
-      "long": 24.7453688
-    },
-    {
-      "name": "Tallinn",
-      "lat": 59.4372155,
-      "long": 24.7453688
-    },
-    {
-      "name": "Tallinn",
-      "lat": 59.4372155,
-      "long": 24.7453688
-    },
-    {
-      "name": "Riga",
-      "lat": 56.9493977,
-      "long": 24.1051846
-    },
-    {
-      "name": "Riga",
-      "lat": 56.9493977,
-      "long": 24.1051846
-    },
-    {
-      "name": "Riga",
-      "lat": 56.9493977,
-      "long": 24.1051846
-    },
-    {
-      "name": "Vilnius",
-      "lat": 54.6870458,
-      "long": 25.2829111
-    },
-    {
-      "name": "Vilnius",
-      "lat": 54.6870458,
-      "long": 25.2829111
-    },
-    {
-      "name": "Vilnius",
-      "lat": 54.6870458,
-      "long": 25.2829111
-    },
-    {
-      "name": "Minsk",
-      "lat": 53.9024716,
-      "long": 27.5618225
-    },
-    {
-      "name": "Minsk",
-      "lat": 53.9024716,
-      "long": 27.5618225
-    },
-    {
-      "name": "Minsk",
-      "lat": 53.9024716,
-      "long": 27.5618225
-    },
-    {
-      "name": "Kiev",
-      "lat": 50.4500336,
-      "long": 30.5241361
-    },
-    {
-      "name": "Kiev",
-      "lat": 50.4500336,
-      "long": 30.5241361
-    },
-    {
-      "name": "Kiev",
-      "lat": 50.4500336,
-      "long": 30.5241361
-    },
-    {
-      "name": "Chisinau",
-      "lat": 47.0245117,
-      "long": 28.8322923
-    },
-    {
-      "name": "Chisinau",
-      "lat": 47.0245117,
-      "long": 28.8322923
-    },
-    {
-      "name": "Chisinau",
-      "lat": 47.0245117,
-      "long": 28.8322923
-    }
-  ]
+	"Locations": [
+		{
+			"name": "London",
+			"lat": 51.5074456,
+			"long": -0.1277653
+		},
+		{
+			"name": "London",
+			"lat": 51.5074456,
+			"long": -0.1277653
+		},
+		{
+			"name": "London",
+			"lat": 51.5074456,
+			"long": -0.1277653
+		},
+		{
+			"name": "Paris",
+			"lat": 48.8534951,
+			"long": 2.3483915
+		},
+		{
+			"name": "Paris",
+			"lat": 48.8534951,
+			"long": 2.3483915
+		},
+		{
+			"name": "Paris",
+			"lat": 48.8534951,
+			"long": 2.3483915
+		},
+		{
+			"name": "Berlin",
+			"lat": 52.510885,
+			"long": 13.3989367
+		},
+		{
+			"name": "Berlin",
+			"lat": 52.510885,
+			"long": 13.3989367
+		},
+		{
+			"name": "Berlin",
+			"lat": 52.510885,
+			"long": 13.3989367
+		},
+		{
+			"name": "Rome",
+			"lat": 41.8933203,
+			"long": 12.4829321
+		},
+		{
+			"name": "Rome",
+			"lat": 41.8933203,
+			"long": 12.4829321
+		},
+		{
+			"name": "Rome",
+			"lat": 41.8933203,
+			"long": 12.4829321
+		},
+		{
+			"name": "Madrid",
+			"lat": 40.4167047,
+			"long": -3.7035825
+		},
+		{
+			"name": "Madrid",
+			"lat": 40.4167047,
+			"long": -3.7035825
+		},
+		{
+			"name": "Madrid",
+			"lat": 40.4167047,
+			"long": -3.7035825
+		},
+		{
+			"name": "Moscow",
+			"lat": 55.7505412,
+			"long": 37.6174782
+		},
+		{
+			"name": "Moscow",
+			"lat": 55.7505412,
+			"long": 37.6174782
+		},
+		{
+			"name": "Moscow",
+			"lat": 55.7505412,
+			"long": 37.6174782
+		},
+		{
+			"name": "Tokyo",
+			"lat": 35.6768601,
+			"long": 139.7638947
+		},
+		{
+			"name": "Tokyo",
+			"lat": 35.6768601,
+			"long": 139.7638947
+		},
+		{
+			"name": "Tokyo",
+			"lat": 35.6768601,
+			"long": 139.7638947
+		},
+		{
+			"name": "Beijing",
+			"lat": 40.190632,
+			"long": 116.412144
+		},
+		{
+			"name": "Beijing",
+			"lat": 40.190632,
+			"long": 116.412144
+		},
+		{
+			"name": "Beijing",
+			"lat": 40.190632,
+			"long": 116.412144
+		},
+		{
+			"name": "Washington D.C.",
+			"lat": 38.8950368,
+			"long": -77.0365427
+		},
+		{
+			"name": "Washington D.C.",
+			"lat": 38.8950368,
+			"long": -77.0365427
+		},
+		{
+			"name": "Washington D.C.",
+			"lat": 38.8950368,
+			"long": -77.0365427
+		},
+		{
+			"name": "Canberra",
+			"lat": -35.2975906,
+			"long": 149.1012676
+		},
+		{
+			"name": "Canberra",
+			"lat": -35.2975906,
+			"long": 149.1012676
+		},
+		{
+			"name": "Canberra",
+			"lat": -35.2975906,
+			"long": 149.1012676
+		},
+		{
+			"name": "Ottawa",
+			"lat": 45.4208777,
+			"long": -75.6901106
+		},
+		{
+			"name": "Ottawa",
+			"lat": 45.4208777,
+			"long": -75.6901106
+		},
+		{
+			"name": "Ottawa",
+			"lat": 45.4208777,
+			"long": -75.6901106
+		},
+		{
+			"name": "Mexico City",
+			"lat": 19.4326296,
+			"long": -99.1331785
+		},
+		{
+			"name": "Mexico City",
+			"lat": 19.4326296,
+			"long": -99.1331785
+		},
+		{
+			"name": "Mexico City",
+			"lat": 19.4326296,
+			"long": -99.1331785
+		},
+		{
+			"name": "Brasilia",
+			"lat": -10.3333333,
+			"long": -53.2
+		},
+		{
+			"name": "Brasilia",
+			"lat": -10.3333333,
+			"long": -53.2
+		},
+		{
+			"name": "Brasilia",
+			"lat": -10.3333333,
+			"long": -53.2
+		},
+		{
+			"name": "Buenos Aires",
+			"lat": -34.6083696,
+			"long": -58.4440583
+		},
+		{
+			"name": "Buenos Aires",
+			"lat": -34.6083696,
+			"long": -58.4440583
+		},
+		{
+			"name": "Buenos Aires",
+			"lat": -34.6083696,
+			"long": -58.4440583
+		},
+		{
+			"name": "Santiago",
+			"lat": -33.4377756,
+			"long": -70.6504502
+		},
+		{
+			"name": "Santiago",
+			"lat": -33.4377756,
+			"long": -70.6504502
+		},
+		{
+			"name": "Santiago",
+			"lat": -33.4377756,
+			"long": -70.6504502
+		},
+		{
+			"name": "Lima",
+			"lat": -12.0621065,
+			"long": -77.0365256
+		},
+		{
+			"name": "Lima",
+			"lat": -12.0621065,
+			"long": -77.0365256
+		},
+		{
+			"name": "Lima",
+			"lat": -12.0621065,
+			"long": -77.0365256
+		},
+		{
+			"name": "Bogota",
+			"lat": 4.6533816,
+			"long": -74.0836333
+		},
+		{
+			"name": "Bogota",
+			"lat": 4.6533816,
+			"long": -74.0836333
+		},
+		{
+			"name": "Bogota",
+			"lat": 4.6533816,
+			"long": -74.0836333
+		},
+		{
+			"name": "Caracas",
+			"lat": 10.5060934,
+			"long": -66.9146008
+		},
+		{
+			"name": "Caracas",
+			"lat": 10.5060934,
+			"long": -66.9146008
+		},
+		{
+			"name": "Caracas",
+			"lat": 10.5060934,
+			"long": -66.9146008
+		},
+		{
+			"name": "Havana",
+			"lat": 23.135305,
+			"long": -82.3589631
+		},
+		{
+			"name": "Havana",
+			"lat": 23.135305,
+			"long": -82.3589631
+		},
+		{
+			"name": "Havana",
+			"lat": 23.135305,
+			"long": -82.3589631
+		},
+		{
+			"name": "Kingston",
+			"lat": 17.9712148,
+			"long": -76.7928128
+		},
+		{
+			"name": "Kingston",
+			"lat": 17.9712148,
+			"long": -76.7928128
+		},
+		{
+			"name": "Kingston",
+			"lat": 17.9712148,
+			"long": -76.7928128
+		},
+		{
+			"name": "Nassau",
+			"lat": 25.0782266,
+			"long": -77.3383438
+		},
+		{
+			"name": "Nassau",
+			"lat": 25.0782266,
+			"long": -77.3383438
+		},
+		{
+			"name": "Nassau",
+			"lat": 25.0782266,
+			"long": -77.3383438
+		},
+		{
+			"name": "Kingstown",
+			"lat": 13.1561864,
+			"long": -61.2279621
+		},
+		{
+			"name": "Kingstown",
+			"lat": 13.1561864,
+			"long": -61.2279621
+		},
+		{
+			"name": "Kingstown",
+			"lat": 13.1561864,
+			"long": -61.2279621
+		},
+		{
+			"name": "Bridgetown",
+			"lat": 13.0977832,
+			"long": -59.6184184
+		},
+		{
+			"name": "Bridgetown",
+			"lat": 13.0977832,
+			"long": -59.6184184
+		},
+		{
+			"name": "Bridgetown",
+			"lat": 13.0977832,
+			"long": -59.6184184
+		},
+		{
+			"name": "Castries",
+			"lat": 43.6779101,
+			"long": 3.9868904
+		},
+		{
+			"name": "Castries",
+			"lat": 43.6779101,
+			"long": 3.9868904
+		},
+		{
+			"name": "Castries",
+			"lat": 43.6779101,
+			"long": 3.9868904
+		},
+		{
+			"name": "Port of Spain",
+			"lat": 10.6572678,
+			"long": -61.5180173
+		},
+		{
+			"name": "Port of Spain",
+			"lat": 10.6572678,
+			"long": -61.5180173
+		},
+		{
+			"name": "Port of Spain",
+			"lat": 10.6572678,
+			"long": -61.5180173
+		},
+		{
+			"name": "Georgetown",
+			"lat": 6.8137426,
+			"long": -58.1624465
+		},
+		{
+			"name": "Georgetown",
+			"lat": 6.8137426,
+			"long": -58.1624465
+		},
+		{
+			"name": "Georgetown",
+			"lat": 6.8137426,
+			"long": -58.1624465
+		},
+		{
+			"name": "Paramaribo",
+			"lat": 5.8247628,
+			"long": -55.1703941
+		},
+		{
+			"name": "Paramaribo",
+			"lat": 5.8247628,
+			"long": -55.1703941
+		},
+		{
+			"name": "Paramaribo",
+			"lat": 5.8247628,
+			"long": -55.1703941
+		},
+		{
+			"name": "Cairo",
+			"lat": 30.0443879,
+			"long": 31.2357257
+		},
+		{
+			"name": "Cairo",
+			"lat": 30.0443879,
+			"long": 31.2357257
+		},
+		{
+			"name": "Cairo",
+			"lat": 30.0443879,
+			"long": 31.2357257
+		},
+		{
+			"name": "Nairobi",
+			"lat": -1.3026148499999999,
+			"long": 36.82884201813725
+		},
+		{
+			"name": "Nairobi",
+			"lat": -1.3026148499999999,
+			"long": 36.82884201813725
+		},
+		{
+			"name": "Nairobi",
+			"lat": -1.3026148499999999,
+			"long": 36.82884201813725
+		},
+		{
+			"name": "Pretoria",
+			"lat": -25.7459277,
+			"long": 28.1879101
+		},
+		{
+			"name": "Pretoria",
+			"lat": -25.7459277,
+			"long": 28.1879101
+		},
+		{
+			"name": "Pretoria",
+			"lat": -25.7459277,
+			"long": 28.1879101
+		},
+		{
+			"name": "Accra",
+			"lat": 5.5571096,
+			"long": -0.2012376
+		},
+		{
+			"name": "Accra",
+			"lat": 5.5571096,
+			"long": -0.2012376
+		},
+		{
+			"name": "Accra",
+			"lat": 5.5571096,
+			"long": -0.2012376
+		},
+		{
+			"name": "Abuja",
+			"lat": 9.0643305,
+			"long": 7.4892974
+		},
+		{
+			"name": "Abuja",
+			"lat": 9.0643305,
+			"long": 7.4892974
+		},
+		{
+			"name": "Abuja",
+			"lat": 9.0643305,
+			"long": 7.4892974
+		},
+		{
+			"name": "Addis Ababa",
+			"lat": 9.0358287,
+			"long": 38.7524127
+		},
+		{
+			"name": "Addis Ababa",
+			"lat": 9.0358287,
+			"long": 38.7524127
+		},
+		{
+			"name": "Addis Ababa",
+			"lat": 9.0358287,
+			"long": 38.7524127
+		},
+		{
+			"name": "Algiers",
+			"lat": 36.7729309,
+			"long": 3.0588291
+		},
+		{
+			"name": "Algiers",
+			"lat": 36.7729309,
+			"long": 3.0588291
+		},
+		{
+			"name": "Algiers",
+			"lat": 36.7729309,
+			"long": 3.0588291
+		},
+		{
+			"name": "Tripoli",
+			"lat": 32.896672,
+			"long": 13.1777923
+		},
+		{
+			"name": "Tripoli",
+			"lat": 32.896672,
+			"long": 13.1777923
+		},
+		{
+			"name": "Tripoli",
+			"lat": 32.896672,
+			"long": 13.1777923
+		},
+		{
+			"name": "Rabat",
+			"lat": 34.02236,
+			"long": -6.8340222
+		},
+		{
+			"name": "Rabat",
+			"lat": 34.02236,
+			"long": -6.8340222
+		},
+		{
+			"name": "Rabat",
+			"lat": 34.02236,
+			"long": -6.8340222
+		},
+		{
+			"name": "Tunis",
+			"lat": 36.8002068,
+			"long": 10.1857757
+		},
+		{
+			"name": "Tunis",
+			"lat": 36.8002068,
+			"long": 10.1857757
+		},
+		{
+			"name": "Tunis",
+			"lat": 36.8002068,
+			"long": 10.1857757
+		},
+		{
+			"name": "Kinshasa",
+			"lat": -4.3217055,
+			"long": 15.3125974
+		},
+		{
+			"name": "Kinshasa",
+			"lat": -4.3217055,
+			"long": 15.3125974
+		},
+		{
+			"name": "Kinshasa",
+			"lat": -4.3217055,
+			"long": 15.3125974
+		},
+		{
+			"name": "Khartoum",
+			"lat": 15.5635972,
+			"long": 32.5349123
+		},
+		{
+			"name": "Khartoum",
+			"lat": 15.5635972,
+			"long": 32.5349123
+		},
+		{
+			"name": "Khartoum",
+			"lat": 15.5635972,
+			"long": 32.5349123
+		},
+		{
+			"name": "Maputo",
+			"lat": -25.966213,
+			"long": 32.56745
+		},
+		{
+			"name": "Maputo",
+			"lat": -25.966213,
+			"long": 32.56745
+		},
+		{
+			"name": "Maputo",
+			"lat": -25.966213,
+			"long": 32.56745
+		},
+		{
+			"name": "Windhoek",
+			"lat": -22.5776104,
+			"long": 17.0772739
+		},
+		{
+			"name": "Windhoek",
+			"lat": -22.5776104,
+			"long": 17.0772739
+		},
+		{
+			"name": "Windhoek",
+			"lat": -22.5776104,
+			"long": 17.0772739
+		},
+		{
+			"name": "Dodoma",
+			"lat": -6.1791181,
+			"long": 35.7468174
+		},
+		{
+			"name": "Dodoma",
+			"lat": -6.1791181,
+			"long": 35.7468174
+		},
+		{
+			"name": "Dodoma",
+			"lat": -6.1791181,
+			"long": 35.7468174
+		},
+		{
+			"name": "Luanda",
+			"lat": -8.8272699,
+			"long": 13.2439512
+		},
+		{
+			"name": "Luanda",
+			"lat": -8.8272699,
+			"long": 13.2439512
+		},
+		{
+			"name": "Luanda",
+			"lat": -8.8272699,
+			"long": 13.2439512
+		},
+		{
+			"name": "Gaborone",
+			"lat": -24.6581357,
+			"long": 25.9088474
+		},
+		{
+			"name": "Gaborone",
+			"lat": -24.6581357,
+			"long": 25.9088474
+		},
+		{
+			"name": "Gaborone",
+			"lat": -24.6581357,
+			"long": 25.9088474
+		},
+		{
+			"name": "Kigali",
+			"lat": -1.8859597,
+			"long": 30.1296751
+		},
+		{
+			"name": "Kigali",
+			"lat": -1.8859597,
+			"long": 30.1296751
+		},
+		{
+			"name": "Kigali",
+			"lat": -1.8859597,
+			"long": 30.1296751
+		},
+		{
+			"name": "Dakar",
+			"lat": 14.693425,
+			"long": -17.447938
+		},
+		{
+			"name": "Dakar",
+			"lat": 14.693425,
+			"long": -17.447938
+		},
+		{
+			"name": "Dakar",
+			"lat": 14.693425,
+			"long": -17.447938
+		},
+		{
+			"name": "Freetown",
+			"lat": 8.479004,
+			"long": -13.26795
+		},
+		{
+			"name": "Freetown",
+			"lat": 8.479004,
+			"long": -13.26795
+		},
+		{
+			"name": "Freetown",
+			"lat": 8.479004,
+			"long": -13.26795
+		},
+		{
+			"name": "Bamako",
+			"lat": 12.649319,
+			"long": -8.000337
+		},
+		{
+			"name": "Bamako",
+			"lat": 12.649319,
+			"long": -8.000337
+		},
+		{
+			"name": "Bamako",
+			"lat": 12.649319,
+			"long": -8.000337
+		},
+		{
+			"name": "Lusaka",
+			"lat": -15.4163395,
+			"long": 28.2818414
+		},
+		{
+			"name": "Lusaka",
+			"lat": -15.4163395,
+			"long": 28.2818414
+		},
+		{
+			"name": "Lusaka",
+			"lat": -15.4163395,
+			"long": 28.2818414
+		},
+		{
+			"name": "Harare",
+			"lat": -17.831773,
+			"long": 31.045686
+		},
+		{
+			"name": "Harare",
+			"lat": -17.831773,
+			"long": 31.045686
+		},
+		{
+			"name": "Harare",
+			"lat": -17.831773,
+			"long": 31.045686
+		},
+		{
+			"name": "Antananarivo",
+			"lat": -18.9100122,
+			"long": 47.5255809
+		},
+		{
+			"name": "Antananarivo",
+			"lat": -18.9100122,
+			"long": 47.5255809
+		},
+		{
+			"name": "Antananarivo",
+			"lat": -18.9100122,
+			"long": 47.5255809
+		},
+		{
+			"name": "Port Louis",
+			"lat": -20.1624522,
+			"long": 57.5028044
+		},
+		{
+			"name": "Port Louis",
+			"lat": -20.1624522,
+			"long": 57.5028044
+		},
+		{
+			"name": "Port Louis",
+			"lat": -20.1624522,
+			"long": 57.5028044
+		},
+		{
+			"name": "Victoria",
+			"lat": -36.5986096,
+			"long": 144.6780052
+		},
+		{
+			"name": "Victoria",
+			"lat": -36.5986096,
+			"long": 144.6780052
+		},
+		{
+			"name": "Victoria",
+			"lat": -36.5986096,
+			"long": 144.6780052
+		},
+		{
+			"name": "Abu Dhabi",
+			"lat": 24.4538352,
+			"long": 54.3774014
+		},
+		{
+			"name": "Abu Dhabi",
+			"lat": 24.4538352,
+			"long": 54.3774014
+		},
+		{
+			"name": "Abu Dhabi",
+			"lat": 24.4538352,
+			"long": 54.3774014
+		},
+		{
+			"name": "Riyadh",
+			"lat": 24.638916,
+			"long": 46.7160104
+		},
+		{
+			"name": "Riyadh",
+			"lat": 24.638916,
+			"long": 46.7160104
+		},
+		{
+			"name": "Riyadh",
+			"lat": 24.638916,
+			"long": 46.7160104
+		},
+		{
+			"name": "Doha",
+			"lat": 25.2856329,
+			"long": 51.5264162
+		},
+		{
+			"name": "Doha",
+			"lat": 25.2856329,
+			"long": 51.5264162
+		},
+		{
+			"name": "Doha",
+			"lat": 25.2856329,
+			"long": 51.5264162
+		},
+		{
+			"name": "Manama",
+			"lat": 26.201,
+			"long": 50.6068
+		},
+		{
+			"name": "Kuwait City",
+			"lat": 29.3796532,
+			"long": 47.9734174
+		},
+		{
+			"name": "Kuwait City",
+			"lat": 29.3796532,
+			"long": 47.9734174
+		},
+		{
+			"name": "Kuwait City",
+			"lat": 29.3796532,
+			"long": 47.9734174
+		},
+		{
+			"name": "Amman",
+			"lat": 31.9515694,
+			"long": 35.9239625
+		},
+		{
+			"name": "Amman",
+			"lat": 31.9515694,
+			"long": 35.9239625
+		},
+		{
+			"name": "Amman",
+			"lat": 31.9515694,
+			"long": 35.9239625
+		},
+		{
+			"name": "Jerusalem",
+			"lat": 31.7788242,
+			"long": 35.2257626
+		},
+		{
+			"name": "Jerusalem",
+			"lat": 31.7788242,
+			"long": 35.2257626
+		},
+		{
+			"name": "Jerusalem",
+			"lat": 31.7788242,
+			"long": 35.2257626
+		},
+		{
+			"name": "Damascus",
+			"lat": 45.4220856,
+			"long": -122.42831112768494
+		},
+		{
+			"name": "Damascus",
+			"lat": 45.4220856,
+			"long": -122.42831112768494
+		},
+		{
+			"name": "Damascus",
+			"lat": 45.4220856,
+			"long": -122.42831112768494
+		},
+		{
+			"name": "Baghdad",
+			"lat": 33.3061701,
+			"long": 44.3872213
+		},
+		{
+			"name": "Baghdad",
+			"lat": 33.3061701,
+			"long": 44.3872213
+		},
+		{
+			"name": "Baghdad",
+			"lat": 33.3061701,
+			"long": 44.3872213
+		},
+		{
+			"name": "Tehran",
+			"lat": 35.6892523,
+			"long": 51.3896004
+		},
+		{
+			"name": "Tehran",
+			"lat": 35.6892523,
+			"long": 51.3896004
+		},
+		{
+			"name": "Tehran",
+			"lat": 35.6892523,
+			"long": 51.3896004
+		},
+		{
+			"name": "Ankara",
+			"lat": 39.7160439,
+			"long": 32.7059948
+		},
+		{
+			"name": "Ankara",
+			"lat": 39.7160439,
+			"long": 32.7059948
+		},
+		{
+			"name": "Ankara",
+			"lat": 39.7160439,
+			"long": 32.7059948
+		},
+		{
+			"name": "Athens",
+			"lat": 33.9597677,
+			"long": -83.376398
+		},
+		{
+			"name": "Athens",
+			"lat": 33.9597677,
+			"long": -83.376398
+		},
+		{
+			"name": "Athens",
+			"lat": 33.9597677,
+			"long": -83.376398
+		},
+		{
+			"name": "Sofia",
+			"lat": 42.6977028,
+			"long": 23.3217359
+		},
+		{
+			"name": "Sofia",
+			"lat": 42.6977028,
+			"long": 23.3217359
+		},
+		{
+			"name": "Sofia",
+			"lat": 42.6977028,
+			"long": 23.3217359
+		},
+		{
+			"name": "Warsaw",
+			"lat": 52.2337172,
+			"long": 21.071432235636493
+		},
+		{
+			"name": "Warsaw",
+			"lat": 52.2337172,
+			"long": 21.071432235636493
+		},
+		{
+			"name": "Warsaw",
+			"lat": 52.2337172,
+			"long": 21.071432235636493
+		},
+		{
+			"name": "Prague",
+			"lat": 50.0596288,
+			"long": 14.446459273258009
+		},
+		{
+			"name": "Prague",
+			"lat": 50.0596288,
+			"long": 14.446459273258009
+		},
+		{
+			"name": "Prague",
+			"lat": 50.0596288,
+			"long": 14.446459273258009
+		},
+		{
+			"name": "Vienna",
+			"lat": 48.2083537,
+			"long": 16.3725042
+		},
+		{
+			"name": "Vienna",
+			"lat": 48.2083537,
+			"long": 16.3725042
+		},
+		{
+			"name": "Vienna",
+			"lat": 48.2083537,
+			"long": 16.3725042
+		},
+		{
+			"name": "Budapest",
+			"lat": 47.48138955,
+			"long": 19.14609412691246
+		},
+		{
+			"name": "Budapest",
+			"lat": 47.48138955,
+			"long": 19.14609412691246
+		},
+		{
+			"name": "Budapest",
+			"lat": 47.48138955,
+			"long": 19.14609412691246
+		},
+		{
+			"name": "Brussels",
+			"lat": 50.8465573,
+			"long": 4.351697
+		},
+		{
+			"name": "Brussels",
+			"lat": 50.8465573,
+			"long": 4.351697
+		},
+		{
+			"name": "Brussels",
+			"lat": 50.8465573,
+			"long": 4.351697
+		},
+		{
+			"name": "Amsterdam",
+			"lat": 52.3730796,
+			"long": 4.8924534
+		},
+		{
+			"name": "Amsterdam",
+			"lat": 52.3730796,
+			"long": 4.8924534
+		},
+		{
+			"name": "Amsterdam",
+			"lat": 52.3730796,
+			"long": 4.8924534
+		},
+		{
+			"name": "Oslo",
+			"lat": 59.9133301,
+			"long": 10.7389701
+		},
+		{
+			"name": "Oslo",
+			"lat": 59.9133301,
+			"long": 10.7389701
+		},
+		{
+			"name": "Oslo",
+			"lat": 59.9133301,
+			"long": 10.7389701
+		},
+		{
+			"name": "Stockholm",
+			"lat": 59.3251172,
+			"long": 18.0710935
+		},
+		{
+			"name": "Stockholm",
+			"lat": 59.3251172,
+			"long": 18.0710935
+		},
+		{
+			"name": "Stockholm",
+			"lat": 59.3251172,
+			"long": 18.0710935
+		},
+		{
+			"name": "Copenhagen",
+			"lat": 55.6867243,
+			"long": 12.5700724
+		},
+		{
+			"name": "Copenhagen",
+			"lat": 55.6867243,
+			"long": 12.5700724
+		},
+		{
+			"name": "Copenhagen",
+			"lat": 55.6867243,
+			"long": 12.5700724
+		},
+		{
+			"name": "Helsinki",
+			"lat": 60.1674881,
+			"long": 24.9427473
+		},
+		{
+			"name": "Helsinki",
+			"lat": 60.1674881,
+			"long": 24.9427473
+		},
+		{
+			"name": "Helsinki",
+			"lat": 60.1674881,
+			"long": 24.9427473
+		},
+		{
+			"name": "Tallinn",
+			"lat": 59.4372155,
+			"long": 24.7453688
+		},
+		{
+			"name": "Tallinn",
+			"lat": 59.4372155,
+			"long": 24.7453688
+		},
+		{
+			"name": "Tallinn",
+			"lat": 59.4372155,
+			"long": 24.7453688
+		},
+		{
+			"name": "Riga",
+			"lat": 56.9493977,
+			"long": 24.1051846
+		},
+		{
+			"name": "Riga",
+			"lat": 56.9493977,
+			"long": 24.1051846
+		},
+		{
+			"name": "Riga",
+			"lat": 56.9493977,
+			"long": 24.1051846
+		},
+		{
+			"name": "Vilnius",
+			"lat": 54.6870458,
+			"long": 25.2829111
+		},
+		{
+			"name": "Vilnius",
+			"lat": 54.6870458,
+			"long": 25.2829111
+		},
+		{
+			"name": "Vilnius",
+			"lat": 54.6870458,
+			"long": 25.2829111
+		},
+		{
+			"name": "Minsk",
+			"lat": 53.9024716,
+			"long": 27.5618225
+		},
+		{
+			"name": "Minsk",
+			"lat": 53.9024716,
+			"long": 27.5618225
+		},
+		{
+			"name": "Minsk",
+			"lat": 53.9024716,
+			"long": 27.5618225
+		},
+		{
+			"name": "Kiev",
+			"lat": 50.4500336,
+			"long": 30.5241361
+		},
+		{
+			"name": "Kiev",
+			"lat": 50.4500336,
+			"long": 30.5241361
+		},
+		{
+			"name": "Kiev",
+			"lat": 50.4500336,
+			"long": 30.5241361
+		},
+		{
+			"name": "Chisinau",
+			"lat": 47.0245117,
+			"long": 28.8322923
+		},
+		{
+			"name": "Chisinau",
+			"lat": 47.0245117,
+			"long": 28.8322923
+		},
+		{
+			"name": "Chisinau",
+			"lat": 47.0245117,
+			"long": 28.8322923
+		}
+	]
 }
