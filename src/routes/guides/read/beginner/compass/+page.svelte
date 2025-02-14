@@ -45,7 +45,7 @@
 </p>
 
 <GuideQuiz
-	question="When would "lining up" be beneficial?"
+	question="When would lining up be beneficial?"
 	answerOne="When the round starts"
 	answerTwo="Always, to determine the hemisphere"
 	answerThree="When searching for the right road"
