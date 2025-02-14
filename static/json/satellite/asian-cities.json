@@ -1,1444 +1,1444 @@
 {
-  "Locations": [
-    {
-      "name": "Tokyo",
-      "lat": 35.6768601,
-      "long": 139.7638947
-    },
-    {
-      "name": "Tokyo",
-      "lat": 35.6768601,
-      "long": 139.7638947
-    },
-    {
-      "name": "Tokyo",
-      "lat": 35.6768601,
-      "long": 139.7638947
-    },
-    {
-      "name": "Seoul",
-      "lat": 37.5666791,
-      "long": 126.9782914
-    },
-    {
-      "name": "Seoul",
-      "lat": 37.5666791,
-      "long": 126.9782914
-    },
-    {
-      "name": "Seoul",
-      "lat": 37.5666791,
-      "long": 126.9782914
-    },
-    {
-      "name": "Beijing",
-      "lat": 40.190632,
-      "long": 116.412144
-    },
-    {
-      "name": "Beijing",
-      "lat": 40.190632,
-      "long": 116.412144
-    },
-    {
-      "name": "Beijing",
-      "lat": 40.190632,
-      "long": 116.412144
-    },
-    {
-      "name": "Shanghai",
-      "lat": 31.2323437,
-      "long": 121.4691024
-    },
-    {
-      "name": "Shanghai",
-      "lat": 31.2323437,
-      "long": 121.4691024
-    },
-    {
-      "name": "Shanghai",
-      "lat": 31.2323437,
-      "long": 121.4691024
-    },
-    {
-      "name": "Mumbai",
-      "lat": 19.0785451,
-      "long": 72.878176
-    },
-    {
-      "name": "Mumbai",
-      "lat": 19.0785451,
-      "long": 72.878176
-    },
-    {
-      "name": "Mumbai",
-      "lat": 19.0785451,
-      "long": 72.878176
-    },
-    {
-      "name": "Delhi",
-      "lat": 28.6273928,
-      "long": 77.1716954
-    },
-    {
-      "name": "Delhi",
-      "lat": 28.6273928,
-      "long": 77.1716954
-    },
-    {
-      "name": "Delhi",
-      "lat": 28.6273928,
-      "long": 77.1716954
-    },
-    {
-      "name": "Bangalore",
-      "lat": 12.98815675,
-      "long": 77.62260003796
-    },
-    {
-      "name": "Bangalore",
-      "lat": 12.98815675,
-      "long": 77.62260003796
-    },
-    {
-      "name": "Bangalore",
-      "lat": 12.98815675,
-      "long": 77.62260003796
-    },
-    {
-      "name": "Jakarta",
-      "lat": -6.175247,
-      "long": 106.8270488
-    },
-    {
-      "name": "Jakarta",
-      "lat": -6.175247,
-      "long": 106.8270488
-    },
-    {
-      "name": "Jakarta",
-      "lat": -6.175247,
-      "long": 106.8270488
-    },
-    {
-      "name": "Manila",
-      "lat": 14.5904492,
-      "long": 120.9803621
-    },
-    {
-      "name": "Manila",
-      "lat": 14.5904492,
-      "long": 120.9803621
-    },
-    {
-      "name": "Manila",
-      "lat": 14.5904492,
-      "long": 120.9803621
-    },
-    {
-      "name": "Bangkok",
-      "lat": 13.7524938,
-      "long": 100.4935089
-    },
-    {
-      "name": "Bangkok",
-      "lat": 13.7524938,
-      "long": 100.4935089
-    },
-    {
-      "name": "Bangkok",
-      "lat": 13.7524938,
-      "long": 100.4935089
-    },
-    {
-      "name": "Kuala Lumpur",
-      "lat": 3.1516964,
-      "long": 101.6942371
-    },
-    {
-      "name": "Kuala Lumpur",
-      "lat": 3.1516964,
-      "long": 101.6942371
-    },
-    {
-      "name": "Kuala Lumpur",
-      "lat": 3.1516964,
-      "long": 101.6942371
-    },
-    {
-      "name": "Singapore",
-      "lat": 1.357107,
-      "long": 103.8194992
-    },
-    {
-      "name": "Singapore",
-      "lat": 1.357107,
-      "long": 103.8194992
-    },
-    {
-      "name": "Singapore",
-      "lat": 1.357107,
-      "long": 103.8194992
-    },
-    {
-      "name": "Dhaka",
-      "lat": 23.7644025,
-      "long": 90.389015
-    },
-    {
-      "name": "Dhaka",
-      "lat": 23.7644025,
-      "long": 90.389015
-    },
-    {
-      "name": "Dhaka",
-      "lat": 23.7644025,
-      "long": 90.389015
-    },
-    {
-      "name": "Karachi",
-      "lat": 24.8546842,
-      "long": 67.0207055
-    },
-    {
-      "name": "Karachi",
-      "lat": 24.8546842,
-      "long": 67.0207055
-    },
-    {
-      "name": "Karachi",
-      "lat": 24.8546842,
-      "long": 67.0207055
-    },
-    {
-      "name": "Chennai",
-      "lat": 13.0836939,
-      "long": 80.270186
-    },
-    {
-      "name": "Chennai",
-      "lat": 13.0836939,
-      "long": 80.270186
-    },
-    {
-      "name": "Chennai",
-      "lat": 13.0836939,
-      "long": 80.270186
-    },
-    {
-      "name": "Ahmedabad",
-      "lat": 23.0215374,
-      "long": 72.5800568
-    },
-    {
-      "name": "Ahmedabad",
-      "lat": 23.0215374,
-      "long": 72.5800568
-    },
-    {
-      "name": "Ahmedabad",
-      "lat": 23.0215374,
-      "long": 72.5800568
-    },
-    {
-      "name": "Kolkata",
-      "lat": 22.5726459,
-      "long": 88.3638953
-    },
-    {
-      "name": "Kolkata",
-      "lat": 22.5726459,
-      "long": 88.3638953
-    },
-    {
-      "name": "Kolkata",
-      "lat": 22.5726459,
-      "long": 88.3638953
-    },
-    {
-      "name": "Hyderabad",
-      "lat": 17.360589,
-      "long": 78.4740613
-    },
-    {
-      "name": "Hyderabad",
-      "lat": 17.360589,
-      "long": 78.4740613
-    },
-    {
-      "name": "Hyderabad",
-      "lat": 17.360589,
-      "long": 78.4740613
-    },
-    {
-      "name": "Ho Chi Minh City",
-      "lat": 10.7763897,
-      "long": 106.7011391
-    },
-    {
-      "name": "Ho Chi Minh City",
-      "lat": 10.7763897,
-      "long": 106.7011391
-    },
-    {
-      "name": "Ho Chi Minh City",
-      "lat": 10.7763897,
-      "long": 106.7011391
-    },
-    {
-      "name": "Hanoi",
-      "lat": 21.0283334,
-      "long": 105.854041
-    },
-    {
-      "name": "Hanoi",
-      "lat": 21.0283334,
-      "long": 105.854041
-    },
-    {
-      "name": "Hanoi",
-      "lat": 21.0283334,
-      "long": 105.854041
-    },
-    {
-      "name": "Riyadh",
-      "lat": 24.638916,
-      "long": 46.7160104
-    },
-    {
-      "name": "Riyadh",
-      "lat": 24.638916,
-      "long": 46.7160104
-    },
-    {
-      "name": "Riyadh",
-      "lat": 24.638916,
-      "long": 46.7160104
-    },
-    {
-      "name": "Dubai",
-      "lat": 25.2653471,
-      "long": 55.2924914
-    },
-    {
-      "name": "Dubai",
-      "lat": 25.2653471,
-      "long": 55.2924914
-    },
-    {
-      "name": "Dubai",
-      "lat": 25.2653471,
-      "long": 55.2924914
-    },
-    {
-      "name": "Doha",
-      "lat": 25.2856329,
-      "long": 51.5264162
-    },
-    {
-      "name": "Doha",
-      "lat": 25.2856329,
-      "long": 51.5264162
-    },
-    {
-      "name": "Doha",
-      "lat": 25.2856329,
-      "long": 51.5264162
-    },
-    {
-      "name": "Abu Dhabi",
-      "lat": 24.4538352,
-      "long": 54.3774014
-    },
-    {
-      "name": "Abu Dhabi",
-      "lat": 24.4538352,
-      "long": 54.3774014
-    },
-    {
-      "name": "Abu Dhabi",
-      "lat": 24.4538352,
-      "long": 54.3774014
-    },
-    {
-      "name": "Muscat",
-      "lat": 23.5882019,
-      "long": 58.3829448
-    },
-    {
-      "name": "Muscat",
-      "lat": 23.5882019,
-      "long": 58.3829448
-    },
-    {
-      "name": "Muscat",
-      "lat": 23.5882019,
-      "long": 58.3829448
-    },
-    {
-      "name": "Kathmandu",
-      "lat": 27.708317,
-      "long": 85.3205817
-    },
-    {
-      "name": "Kathmandu",
-      "lat": 27.708317,
-      "long": 85.3205817
-    },
-    {
-      "name": "Kathmandu",
-      "lat": 27.708317,
-      "long": 85.3205817
-    },
-    {
-      "name": "Islamabad",
-      "lat": 33.6938118,
-      "long": 73.0651511
-    },
-    {
-      "name": "Islamabad",
-      "lat": 33.6938118,
-      "long": 73.0651511
-    },
-    {
-      "name": "Islamabad",
-      "lat": 33.6938118,
-      "long": 73.0651511
-    },
-    {
-      "name": "Lahore",
-      "lat": 31.5656822,
-      "long": 74.3141829
-    },
-    {
-      "name": "Lahore",
-      "lat": 31.5656822,
-      "long": 74.3141829
-    },
-    {
-      "name": "Lahore",
-      "lat": 31.5656822,
-      "long": 74.3141829
-    },
-    {
-      "name": "Tashkent",
-      "lat": 41.3123363,
-      "long": 69.2787079
-    },
-    {
-      "name": "Tashkent",
-      "lat": 41.3123363,
-      "long": 69.2787079
-    },
-    {
-      "name": "Tashkent",
-      "lat": 41.3123363,
-      "long": 69.2787079
-    },
-    {
-      "name": "Tehran",
-      "lat": 35.6892523,
-      "long": 51.3896004
-    },
-    {
-      "name": "Tehran",
-      "lat": 35.6892523,
-      "long": 51.3896004
-    },
-    {
-      "name": "Tehran",
-      "lat": 35.6892523,
-      "long": 51.3896004
-    },
-    {
-      "name": "Baghdad",
-      "lat": 33.3061701,
-      "long": 44.3872213
-    },
-    {
-      "name": "Baghdad",
-      "lat": 33.3061701,
-      "long": 44.3872213
-    },
-    {
-      "name": "Baghdad",
-      "lat": 33.3061701,
-      "long": 44.3872213
-    },
-    {
-      "name": "Damascus",
-      "lat": 45.4220856,
-      "long": -122.42831112768494
-    },
-    {
-      "name": "Damascus",
-      "lat": 45.4220856,
-      "long": -122.42831112768494
-    },
-    {
-      "name": "Damascus",
-      "lat": 45.4220856,
-      "long": -122.42831112768494
-    },
-    {
-      "name": "Amman",
-      "lat": 31.9515694,
-      "long": 35.9239625
-    },
-    {
-      "name": "Amman",
-      "lat": 31.9515694,
-      "long": 35.9239625
-    },
-    {
-      "name": "Amman",
-      "lat": 31.9515694,
-      "long": 35.9239625
-    },
-    {
-      "name": "Beirut",
-      "lat": 33.88922645,
-      "long": 35.50255852895232
-    },
-    {
-      "name": "Beirut",
-      "lat": 33.88922645,
-      "long": 35.50255852895232
-    },
-    {
-      "name": "Beirut",
-      "lat": 33.88922645,
-      "long": 35.50255852895232
-    },
-    {
-      "name": "Kuwait City",
-      "lat": 29.3796532,
-      "long": 47.9734174
-    },
-    {
-      "name": "Kuwait City",
-      "lat": 29.3796532,
-      "long": 47.9734174
-    },
-    {
-      "name": "Kuwait City",
-      "lat": 29.3796532,
-      "long": 47.9734174
-    },
-    {
-      "name": "Phnom Penh",
-      "lat": 11.568271,
-      "long": 104.9224426
-    },
-    {
-      "name": "Phnom Penh",
-      "lat": 11.568271,
-      "long": 104.9224426
-    },
-    {
-      "name": "Phnom Penh",
-      "lat": 11.568271,
-      "long": 104.9224426
-    },
-    {
-      "name": "Vientiane",
-      "lat": 17.9640988,
-      "long": 102.6133707
-    },
-    {
-      "name": "Vientiane",
-      "lat": 17.9640988,
-      "long": 102.6133707
-    },
-    {
-      "name": "Vientiane",
-      "lat": 17.9640988,
-      "long": 102.6133707
-    },
-    {
-      "name": "Ulaanbaatar",
-      "lat": 47.940974049999994,
-      "long": 106.91796375225584
-    },
-    {
-      "name": "Ulaanbaatar",
-      "lat": 47.940974049999994,
-      "long": 106.91796375225584
-    },
-    {
-      "name": "Ulaanbaatar",
-      "lat": 47.940974049999994,
-      "long": 106.91796375225584
-    },
-    {
-      "name": "Yerevan",
-      "lat": 40.1777112,
-      "long": 44.5126233
-    },
-    {
-      "name": "Yerevan",
-      "lat": 40.1777112,
-      "long": 44.5126233
-    },
-    {
-      "name": "Yerevan",
-      "lat": 40.1777112,
-      "long": 44.5126233
-    },
-    {
-      "name": "Baku",
-      "lat": 40.3755885,
-      "long": 49.8328009
-    },
-    {
-      "name": "Baku",
-      "lat": 40.3755885,
-      "long": 49.8328009
-    },
-    {
-      "name": "Baku",
-      "lat": 40.3755885,
-      "long": 49.8328009
-    },
-    {
-      "name": "Tbilisi",
-      "lat": 41.6934591,
-      "long": 44.8014495
-    },
-    {
-      "name": "Tbilisi",
-      "lat": 41.6934591,
-      "long": 44.8014495
-    },
-    {
-      "name": "Tbilisi",
-      "lat": 41.6934591,
-      "long": 44.8014495
-    },
-    {
-      "name": "Astana",
-      "lat": 51.1282205,
-      "long": 71.4306682
-    },
-    {
-      "name": "Astana",
-      "lat": 51.1282205,
-      "long": 71.4306682
-    },
-    {
-      "name": "Astana",
-      "lat": 51.1282205,
-      "long": 71.4306682
-    },
-    {
-      "name": "Almaty",
-      "lat": 43.2363924,
-      "long": 76.9457275
-    },
-    {
-      "name": "Almaty",
-      "lat": 43.2363924,
-      "long": 76.9457275
-    },
-    {
-      "name": "Almaty",
-      "lat": 43.2363924,
-      "long": 76.9457275
-    },
-    {
-      "name": "Colombo",
-      "lat": 6.9388614,
-      "long": 79.8542005
-    },
-    {
-      "name": "Colombo",
-      "lat": 6.9388614,
-      "long": 79.8542005
-    },
-    {
-      "name": "Colombo",
-      "lat": 6.9388614,
-      "long": 79.8542005
-    },
-    {
-      "name": "Male",
-      "lat": 4.1779879,
-      "long": 73.5107387
-    },
-    {
-      "name": "Male",
-      "lat": 4.1779879,
-      "long": 73.5107387
-    },
-    {
-      "name": "Male",
-      "lat": 4.1779879,
-      "long": 73.5107387
-    },
-    {
-      "name": "Thimphu",
-      "lat": 27.4713546,
-      "long": 89.6336729
-    },
-    {
-      "name": "Thimphu",
-      "lat": 27.4713546,
-      "long": 89.6336729
-    },
-    {
-      "name": "Thimphu",
-      "lat": 27.4713546,
-      "long": 89.6336729
-    },
-    {
-      "name": "Dushanbe",
-      "lat": 38.5762709,
-      "long": 68.7863573
-    },
-    {
-      "name": "Dushanbe",
-      "lat": 38.5762709,
-      "long": 68.7863573
-    },
-    {
-      "name": "Dushanbe",
-      "lat": 38.5762709,
-      "long": 68.7863573
-    },
-    {
-      "name": "Ashgabat",
-      "lat": 37.9404648,
-      "long": 58.3823487
-    },
-    {
-      "name": "Ashgabat",
-      "lat": 37.9404648,
-      "long": 58.3823487
-    },
-    {
-      "name": "Ashgabat",
-      "lat": 37.9404648,
-      "long": 58.3823487
-    },
-    {
-      "name": "Sana'a",
-      "lat": 15.35,
-      "long": 44.2
-    },
-    {
-      "name": "Sana'a",
-      "lat": 15.35,
-      "long": 44.2
-    },
-    {
-      "name": "Sana'a",
-      "lat": 15.35,
-      "long": 44.2
-    },
-    {
-      "name": "Mecca",
-      "lat": 21.420847,
-      "long": 39.826869
-    },
-    {
-      "name": "Mecca",
-      "lat": 21.420847,
-      "long": 39.826869
-    },
-    {
-      "name": "Mecca",
-      "lat": 21.420847,
-      "long": 39.826869
-    },
-    {
-      "name": "Medina",
-      "lat": 29.2836281,
-      "long": -99.1126826
-    },
-    {
-      "name": "Medina",
-      "lat": 29.2836281,
-      "long": -99.1126826
-    },
-    {
-      "name": "Medina",
-      "lat": 29.2836281,
-      "long": -99.1126826
-    },
-    {
-      "name": "Surabaya",
-      "lat": -7.2459717,
-      "long": 112.7378266
-    },
-    {
-      "name": "Surabaya",
-      "lat": -7.2459717,
-      "long": 112.7378266
-    },
-    {
-      "name": "Surabaya",
-      "lat": -7.2459717,
-      "long": 112.7378266
-    },
-    {
-      "name": "Pune",
-      "lat": 18.5213738,
-      "long": 73.8545071
-    },
-    {
-      "name": "Pune",
-      "lat": 18.5213738,
-      "long": 73.8545071
-    },
-    {
-      "name": "Pune",
-      "lat": 18.5213738,
-      "long": 73.8545071
-    },
-    {
-      "name": "Nagoya",
-      "lat": 35.1851045,
-      "long": 136.8998438
-    },
-    {
-      "name": "Nagoya",
-      "lat": 35.1851045,
-      "long": 136.8998438
-    },
-    {
-      "name": "Nagoya",
-      "lat": 35.1851045,
-      "long": 136.8998438
-    },
-    {
-      "name": "Osaka",
-      "lat": 34.6937569,
-      "long": 135.5014539
-    },
-    {
-      "name": "Osaka",
-      "lat": 34.6937569,
-      "long": 135.5014539
-    },
-    {
-      "name": "Osaka",
-      "lat": 34.6937569,
-      "long": 135.5014539
-    },
-    {
-      "name": "Sapporo",
-      "lat": 43.061936,
-      "long": 141.3542924
-    },
-    {
-      "name": "Sapporo",
-      "lat": 43.061936,
-      "long": 141.3542924
-    },
-    {
-      "name": "Sapporo",
-      "lat": 43.061936,
-      "long": 141.3542924
-    },
-    {
-      "name": "Busan",
-      "lat": 35.1799528,
-      "long": 129.0752365
-    },
-    {
-      "name": "Busan",
-      "lat": 35.1799528,
-      "long": 129.0752365
-    },
-    {
-      "name": "Busan",
-      "lat": 35.1799528,
-      "long": 129.0752365
-    },
-    {
-      "name": "Incheon",
-      "lat": 37.456,
-      "long": 126.7052
-    },
-    {
-      "name": "Incheon",
-      "lat": 37.456,
-      "long": 126.7052
-    },
-    {
-      "name": "Incheon",
-      "lat": 37.456,
-      "long": 126.7052
-    },
-    {
-      "name": "Kaohsiung",
-      "lat": 22.6203348,
-      "long": 120.3120375
-    },
-    {
-      "name": "Kaohsiung",
-      "lat": 22.6203348,
-      "long": 120.3120375
-    },
-    {
-      "name": "Kaohsiung",
-      "lat": 22.6203348,
-      "long": 120.3120375
-    },
-    {
-      "name": "Taipei",
-      "lat": 25.0375198,
-      "long": 121.5636796
-    },
-    {
-      "name": "Taipei",
-      "lat": 25.0375198,
-      "long": 121.5636796
-    },
-    {
-      "name": "Taipei",
-      "lat": 25.0375198,
-      "long": 121.5636796
-    },
-    {
-      "name": "Shenzhen",
-      "lat": 22.5445741,
-      "long": 114.0545429
-    },
-    {
-      "name": "Shenzhen",
-      "lat": 22.5445741,
-      "long": 114.0545429
-    },
-    {
-      "name": "Shenzhen",
-      "lat": 22.5445741,
-      "long": 114.0545429
-    },
-    {
-      "name": "Guangzhou",
-      "lat": 23.1301964,
-      "long": 113.2592945
-    },
-    {
-      "name": "Guangzhou",
-      "lat": 23.1301964,
-      "long": 113.2592945
-    },
-    {
-      "name": "Guangzhou",
-      "lat": 23.1301964,
-      "long": 113.2592945
-    },
-    {
-      "name": "Chongqing",
-      "lat": 30.05518,
-      "long": 107.8748712
-    },
-    {
-      "name": "Chongqing",
-      "lat": 30.05518,
-      "long": 107.8748712
-    },
-    {
-      "name": "Chongqing",
-      "lat": 30.05518,
-      "long": 107.8748712
-    },
-    {
-      "name": "Wuhan",
-      "lat": 30.5951051,
-      "long": 114.2999353
-    },
-    {
-      "name": "Wuhan",
-      "lat": 30.5951051,
-      "long": 114.2999353
-    },
-    {
-      "name": "Wuhan",
-      "lat": 30.5951051,
-      "long": 114.2999353
-    },
-    {
-      "name": "Nanjing",
-      "lat": 32.0438284,
-      "long": 118.7788631
-    },
-    {
-      "name": "Nanjing",
-      "lat": 32.0438284,
-      "long": 118.7788631
-    },
-    {
-      "name": "Nanjing",
-      "lat": 32.0438284,
-      "long": 118.7788631
-    },
-    {
-      "name": "Chengdu",
-      "lat": 30.6598628,
-      "long": 104.0633717
-    },
-    {
-      "name": "Chengdu",
-      "lat": 30.6598628,
-      "long": 104.0633717
-    },
-    {
-      "name": "Chengdu",
-      "lat": 30.6598628,
-      "long": 104.0633717
-    },
-    {
-      "name": "Xi'an",
-      "lat": 34.261004,
-      "long": 108.9423363
-    },
-    {
-      "name": "Xi'an",
-      "lat": 34.261004,
-      "long": 108.9423363
-    },
-    {
-      "name": "Xi'an",
-      "lat": 34.261004,
-      "long": 108.9423363
-    },
-    {
-      "name": "Suzhou",
-      "lat": 31.311123,
-      "long": 120.6212881
-    },
-    {
-      "name": "Suzhou",
-      "lat": 31.311123,
-      "long": 120.6212881
-    },
-    {
-      "name": "Suzhou",
-      "lat": 31.311123,
-      "long": 120.6212881
-    },
-    {
-      "name": "Tianjin",
-      "lat": 39.3032619,
-      "long": 117.4163641
-    },
-    {
-      "name": "Tianjin",
-      "lat": 39.3032619,
-      "long": 117.4163641
-    },
-    {
-      "name": "Tianjin",
-      "lat": 39.3032619,
-      "long": 117.4163641
-    },
-    {
-      "name": "Harbin",
-      "lat": 45.7593633,
-      "long": 126.6276177
-    },
-    {
-      "name": "Harbin",
-      "lat": 45.7593633,
-      "long": 126.6276177
-    },
-    {
-      "name": "Harbin",
-      "lat": 45.7593633,
-      "long": 126.6276177
-    },
-    {
-      "name": "Changsha",
-      "lat": 28.1450774,
-      "long": 113.2384362
-    },
-    {
-      "name": "Changsha",
-      "lat": 28.1450774,
-      "long": 113.2384362
-    },
-    {
-      "name": "Changsha",
-      "lat": 28.1450774,
-      "long": 113.2384362
-    },
-    {
-      "name": "Zhengzhou",
-      "lat": 23.246071,
-      "long": 107.2297041
-    },
-    {
-      "name": "Zhengzhou",
-      "lat": 23.246071,
-      "long": 107.2297041
-    },
-    {
-      "name": "Zhengzhou",
-      "lat": 23.246071,
-      "long": 107.2297041
-    },
-    {
-      "name": "Jeddah",
-      "lat": 21.5504432,
-      "long": 39.1742363
-    },
-    {
-      "name": "Jeddah",
-      "lat": 21.5504432,
-      "long": 39.1742363
-    },
-    {
-      "name": "Jeddah",
-      "lat": 21.5504432,
-      "long": 39.1742363
-    },
-    {
-      "name": "Basra",
-      "lat": 30.4952371,
-      "long": 47.8090981
-    },
-    {
-      "name": "Basra",
-      "lat": 30.4952371,
-      "long": 47.8090981
-    },
-    {
-      "name": "Basra",
-      "lat": 30.4952371,
-      "long": 47.8090981
-    },
-    {
-      "name": "Erbil",
-      "lat": 36.1911744,
-      "long": 44.0094145
-    },
-    {
-      "name": "Erbil",
-      "lat": 36.1911744,
-      "long": 44.0094145
-    },
-    {
-      "name": "Erbil",
-      "lat": 36.1911744,
-      "long": 44.0094145
-    },
-    {
-      "name": "Mashhad",
-      "lat": 36.2974945,
-      "long": 59.6059232
-    },
-    {
-      "name": "Mashhad",
-      "lat": 36.2974945,
-      "long": 59.6059232
-    },
-    {
-      "name": "Mashhad",
-      "lat": 36.2974945,
-      "long": 59.6059232
-    },
-    {
-      "name": "Tabriz",
-      "lat": 38.0738612,
-      "long": 46.2978789
-    },
-    {
-      "name": "Tabriz",
-      "lat": 38.0738612,
-      "long": 46.2978789
-    },
-    {
-      "name": "Tabriz",
-      "lat": 38.0738612,
-      "long": 46.2978789
-    },
-    {
-      "name": "Esfahan",
-      "lat": 33.1881386,
-      "long": 52.4981635
-    },
-    {
-      "name": "Esfahan",
-      "lat": 33.1881386,
-      "long": 52.4981635
-    },
-    {
-      "name": "Esfahan",
-      "lat": 33.1881386,
-      "long": 52.4981635
-    },
-    {
-      "name": "Shiraz",
-      "lat": 29.6060218,
-      "long": 52.5378041
-    },
-    {
-      "name": "Shiraz",
-      "lat": 29.6060218,
-      "long": 52.5378041
-    },
-    {
-      "name": "Shiraz",
-      "lat": 29.6060218,
-      "long": 52.5378041
-    },
-    {
-      "name": "Karaj",
-      "lat": 48.7005763,
-      "long": 17.6871599
-    },
-    {
-      "name": "Karaj",
-      "lat": 48.7005763,
-      "long": 17.6871599
-    },
-    {
-      "name": "Karaj",
-      "lat": 48.7005763,
-      "long": 17.6871599
-    },
-    {
-      "name": "Faisalabad",
-      "lat": 31.4220558,
-      "long": 73.0923253
-    },
-    {
-      "name": "Faisalabad",
-      "lat": 31.4220558,
-      "long": 73.0923253
-    },
-    {
-      "name": "Faisalabad",
-      "lat": 31.4220558,
-      "long": 73.0923253
-    },
-    {
-      "name": "Multan",
-      "lat": 30.197838,
-      "long": 71.4719683
-    },
-    {
-      "name": "Multan",
-      "lat": 30.197838,
-      "long": 71.4719683
-    },
-    {
-      "name": "Multan",
-      "lat": 30.197838,
-      "long": 71.4719683
-    },
-    {
-      "name": "Rawalpindi",
-      "lat": 33.5914237,
-      "long": 73.0535122
-    },
-    {
-      "name": "Rawalpindi",
-      "lat": 33.5914237,
-      "long": 73.0535122
-    },
-    {
-      "name": "Rawalpindi",
-      "lat": 33.5914237,
-      "long": 73.0535122
-    },
-    {
-      "name": "Peshawar",
-      "lat": 34.0123846,
-      "long": 71.5787458
-    },
-    {
-      "name": "Peshawar",
-      "lat": 34.0123846,
-      "long": 71.5787458
-    },
-    {
-      "name": "Peshawar",
-      "lat": 34.0123846,
-      "long": 71.5787458
-    },
-    {
-      "name": "Quetta",
-      "lat": 30.1916569,
-      "long": 67.0006542
-    },
-    {
-      "name": "Quetta",
-      "lat": 30.1916569,
-      "long": 67.0006542
-    },
-    {
-      "name": "Quetta",
-      "lat": 30.1916569,
-      "long": 67.0006542
-    },
-    {
-      "name": "Lucknow",
-      "lat": 26.8381,
-      "long": 80.9346001
-    },
-    {
-      "name": "Lucknow",
-      "lat": 26.8381,
-      "long": 80.9346001
-    },
-    {
-      "name": "Lucknow",
-      "lat": 26.8381,
-      "long": 80.9346001
-    },
-    {
-      "name": "Kanpur",
-      "lat": 26.4609135,
-      "long": 80.3217588
-    },
-    {
-      "name": "Kanpur",
-      "lat": 26.4609135,
-      "long": 80.3217588
-    },
-    {
-      "name": "Kanpur",
-      "lat": 26.4609135,
-      "long": 80.3217588
-    },
-    {
-      "name": "Surat",
-      "lat": 45.9383,
-      "long": 3.2553
-    },
-    {
-      "name": "Surat",
-      "lat": 45.9383,
-      "long": 3.2553
-    },
-    {
-      "name": "Surat",
-      "lat": 45.9383,
-      "long": 3.2553
-    },
-    {
-      "name": "Jaipur",
-      "lat": 26.9154576,
-      "long": 75.8189817
-    },
-    {
-      "name": "Jaipur",
-      "lat": 26.9154576,
-      "long": 75.8189817
-    },
-    {
-      "name": "Jaipur",
-      "lat": 26.9154576,
-      "long": 75.8189817
-    },
-    {
-      "name": "Patna",
-      "lat": 25.6093239,
-      "long": 85.1235252
-    },
-    {
-      "name": "Patna",
-      "lat": 25.6093239,
-      "long": 85.1235252
-    },
-    {
-      "name": "Patna",
-      "lat": 25.6093239,
-      "long": 85.1235252
-    },
-    {
-      "name": "Indore",
-      "lat": 22.7203616,
-      "long": 75.8681996
-    },
-    {
-      "name": "Indore",
-      "lat": 22.7203616,
-      "long": 75.8681996
-    },
-    {
-      "name": "Indore",
-      "lat": 22.7203616,
-      "long": 75.8681996
-    },
-    {
-      "name": "Vadodara",
-      "lat": 22.2973142,
-      "long": 73.1942567
-    },
-    {
-      "name": "Vadodara",
-      "lat": 22.2973142,
-      "long": 73.1942567
-    },
-    {
-      "name": "Vadodara",
-      "lat": 22.2973142,
-      "long": 73.1942567
-    },
-    {
-      "name": "Visakhapatnam",
-      "lat": 17.7231276,
-      "long": 83.3012842
-    },
-    {
-      "name": "Visakhapatnam",
-      "lat": 17.7231276,
-      "long": 83.3012842
-    },
-    {
-      "name": "Visakhapatnam",
-      "lat": 17.7231276,
-      "long": 83.3012842
-    },
-    {
-      "name": "Coimbatore",
-      "lat": 11.0018115,
-      "long": 76.9628425
-    },
-    {
-      "name": "Coimbatore",
-      "lat": 11.0018115,
-      "long": 76.9628425
-    },
-    {
-      "name": "Coimbatore",
-      "lat": 11.0018115,
-      "long": 76.9628425
-    },
-    {
-      "name": "Ludhiana",
-      "lat": 30.9090157,
-      "long": 75.851601
-    },
-    {
-      "name": "Ludhiana",
-      "lat": 30.9090157,
-      "long": 75.851601
-    },
-    {
-      "name": "Ludhiana",
-      "lat": 30.9090157,
-      "long": 75.851601
-    },
-    {
-      "name": "Agra",
-      "lat": 27.1752554,
-      "long": 78.0098161
-    },
-    {
-      "name": "Agra",
-      "lat": 27.1752554,
-      "long": 78.0098161
-    },
-    {
-      "name": "Agra",
-      "lat": 27.1752554,
-      "long": 78.0098161
-    }
-  ]
+	"Locations": [
+		{
+			"name": "Tokyo",
+			"lat": 35.6768601,
+			"long": 139.7638947
+		},
+		{
+			"name": "Tokyo",
+			"lat": 35.6768601,
+			"long": 139.7638947
+		},
+		{
+			"name": "Tokyo",
+			"lat": 35.6768601,
+			"long": 139.7638947
+		},
+		{
+			"name": "Seoul",
+			"lat": 37.5666791,
+			"long": 126.9782914
+		},
+		{
+			"name": "Seoul",
+			"lat": 37.5666791,
+			"long": 126.9782914
+		},
+		{
+			"name": "Seoul",
+			"lat": 37.5666791,
+			"long": 126.9782914
+		},
+		{
+			"name": "Beijing",
+			"lat": 40.190632,
+			"long": 116.412144
+		},
+		{
+			"name": "Beijing",
+			"lat": 40.190632,
+			"long": 116.412144
+		},
+		{
+			"name": "Beijing",
+			"lat": 40.190632,
+			"long": 116.412144
+		},
+		{
+			"name": "Shanghai",
+			"lat": 31.2323437,
+			"long": 121.4691024
+		},
+		{
+			"name": "Shanghai",
+			"lat": 31.2323437,
+			"long": 121.4691024
+		},
+		{
+			"name": "Shanghai",
+			"lat": 31.2323437,
+			"long": 121.4691024
+		},
+		{
+			"name": "Mumbai",
+			"lat": 19.0785451,
+			"long": 72.878176
+		},
+		{
+			"name": "Mumbai",
+			"lat": 19.0785451,
+			"long": 72.878176
+		},
+		{
+			"name": "Mumbai",
+			"lat": 19.0785451,
+			"long": 72.878176
+		},
+		{
+			"name": "Delhi",
+			"lat": 28.6273928,
+			"long": 77.1716954
+		},
+		{
+			"name": "Delhi",
+			"lat": 28.6273928,
+			"long": 77.1716954
+		},
+		{
+			"name": "Delhi",
+			"lat": 28.6273928,
+			"long": 77.1716954
+		},
+		{
+			"name": "Bangalore",
+			"lat": 12.98815675,
+			"long": 77.62260003796
+		},
+		{
+			"name": "Bangalore",
+			"lat": 12.98815675,
+			"long": 77.62260003796
+		},
+		{
+			"name": "Bangalore",
+			"lat": 12.98815675,
+			"long": 77.62260003796
+		},
+		{
+			"name": "Jakarta",
+			"lat": -6.175247,
+			"long": 106.8270488
+		},
+		{
+			"name": "Jakarta",
+			"lat": -6.175247,
+			"long": 106.8270488
+		},
+		{
+			"name": "Jakarta",
+			"lat": -6.175247,
+			"long": 106.8270488
+		},
+		{
+			"name": "Manila",
+			"lat": 14.5904492,
+			"long": 120.9803621
+		},
+		{
+			"name": "Manila",
+			"lat": 14.5904492,
+			"long": 120.9803621
+		},
+		{
+			"name": "Manila",
+			"lat": 14.5904492,
+			"long": 120.9803621
+		},
+		{
+			"name": "Bangkok",
+			"lat": 13.7524938,
+			"long": 100.4935089
+		},
+		{
+			"name": "Bangkok",
+			"lat": 13.7524938,
+			"long": 100.4935089
+		},
+		{
+			"name": "Bangkok",
+			"lat": 13.7524938,
+			"long": 100.4935089
+		},
+		{
+			"name": "Kuala Lumpur",
+			"lat": 3.1516964,
+			"long": 101.6942371
+		},
+		{
+			"name": "Kuala Lumpur",
+			"lat": 3.1516964,
+			"long": 101.6942371
+		},
+		{
+			"name": "Kuala Lumpur",
+			"lat": 3.1516964,
+			"long": 101.6942371
+		},
+		{
+			"name": "Singapore",
+			"lat": 1.357107,
+			"long": 103.8194992
+		},
+		{
+			"name": "Singapore",
+			"lat": 1.357107,
+			"long": 103.8194992
+		},
+		{
+			"name": "Singapore",
+			"lat": 1.357107,
+			"long": 103.8194992
+		},
+		{
+			"name": "Dhaka",
+			"lat": 23.7644025,
+			"long": 90.389015
+		},
+		{
+			"name": "Dhaka",
+			"lat": 23.7644025,
+			"long": 90.389015
+		},
+		{
+			"name": "Dhaka",
+			"lat": 23.7644025,
+			"long": 90.389015
+		},
+		{
+			"name": "Karachi",
+			"lat": 24.8546842,
+			"long": 67.0207055
+		},
+		{
+			"name": "Karachi",
+			"lat": 24.8546842,
+			"long": 67.0207055
+		},
+		{
+			"name": "Karachi",
+			"lat": 24.8546842,
+			"long": 67.0207055
+		},
+		{
+			"name": "Chennai",
+			"lat": 13.0836939,
+			"long": 80.270186
+		},
+		{
+			"name": "Chennai",
+			"lat": 13.0836939,
+			"long": 80.270186
+		},
+		{
+			"name": "Chennai",
+			"lat": 13.0836939,
+			"long": 80.270186
+		},
+		{
+			"name": "Ahmedabad",
+			"lat": 23.0215374,
+			"long": 72.5800568
+		},
+		{
+			"name": "Ahmedabad",
+			"lat": 23.0215374,
+			"long": 72.5800568
+		},
+		{
+			"name": "Ahmedabad",
+			"lat": 23.0215374,
+			"long": 72.5800568
+		},
+		{
+			"name": "Kolkata",
+			"lat": 22.5726459,
+			"long": 88.3638953
+		},
+		{
+			"name": "Kolkata",
+			"lat": 22.5726459,
+			"long": 88.3638953
+		},
+		{
+			"name": "Kolkata",
+			"lat": 22.5726459,
+			"long": 88.3638953
+		},
+		{
+			"name": "Hyderabad",
+			"lat": 17.360589,
+			"long": 78.4740613
+		},
+		{
+			"name": "Hyderabad",
+			"lat": 17.360589,
+			"long": 78.4740613
+		},
+		{
+			"name": "Hyderabad",
+			"lat": 17.360589,
+			"long": 78.4740613
+		},
+		{
+			"name": "Ho Chi Minh City",
+			"lat": 10.7763897,
+			"long": 106.7011391
+		},
+		{
+			"name": "Ho Chi Minh City",
+			"lat": 10.7763897,
+			"long": 106.7011391
+		},
+		{
+			"name": "Ho Chi Minh City",
+			"lat": 10.7763897,
+			"long": 106.7011391
+		},
+		{
+			"name": "Hanoi",
+			"lat": 21.0283334,
+			"long": 105.854041
+		},
+		{
+			"name": "Hanoi",
+			"lat": 21.0283334,
+			"long": 105.854041
+		},
+		{
+			"name": "Hanoi",
+			"lat": 21.0283334,
+			"long": 105.854041
+		},
+		{
+			"name": "Riyadh",
+			"lat": 24.638916,
+			"long": 46.7160104
+		},
+		{
+			"name": "Riyadh",
+			"lat": 24.638916,
+			"long": 46.7160104
+		},
+		{
+			"name": "Riyadh",
+			"lat": 24.638916,
+			"long": 46.7160104
+		},
+		{
+			"name": "Dubai",
+			"lat": 25.2653471,
+			"long": 55.2924914
+		},
+		{
+			"name": "Dubai",
+			"lat": 25.2653471,
+			"long": 55.2924914
+		},
+		{
+			"name": "Dubai",
+			"lat": 25.2653471,
+			"long": 55.2924914
+		},
+		{
+			"name": "Doha",
+			"lat": 25.2856329,
+			"long": 51.5264162
+		},
+		{
+			"name": "Doha",
+			"lat": 25.2856329,
+			"long": 51.5264162
+		},
+		{
+			"name": "Doha",
+			"lat": 25.2856329,
+			"long": 51.5264162
+		},
+		{
+			"name": "Abu Dhabi",
+			"lat": 24.4538352,
+			"long": 54.3774014
+		},
+		{
+			"name": "Abu Dhabi",
+			"lat": 24.4538352,
+			"long": 54.3774014
+		},
+		{
+			"name": "Abu Dhabi",
+			"lat": 24.4538352,
+			"long": 54.3774014
+		},
+		{
+			"name": "Muscat",
+			"lat": 23.5882019,
+			"long": 58.3829448
+		},
+		{
+			"name": "Muscat",
+			"lat": 23.5882019,
+			"long": 58.3829448
+		},
+		{
+			"name": "Muscat",
+			"lat": 23.5882019,
+			"long": 58.3829448
+		},
+		{
+			"name": "Kathmandu",
+			"lat": 27.708317,
+			"long": 85.3205817
+		},
+		{
+			"name": "Kathmandu",
+			"lat": 27.708317,
+			"long": 85.3205817
+		},
+		{
+			"name": "Kathmandu",
+			"lat": 27.708317,
+			"long": 85.3205817
+		},
+		{
+			"name": "Islamabad",
+			"lat": 33.6938118,
+			"long": 73.0651511
+		},
+		{
+			"name": "Islamabad",
+			"lat": 33.6938118,
+			"long": 73.0651511
+		},
+		{
+			"name": "Islamabad",
+			"lat": 33.6938118,
+			"long": 73.0651511
+		},
+		{
+			"name": "Lahore",
+			"lat": 31.5656822,
+			"long": 74.3141829
+		},
+		{
+			"name": "Lahore",
+			"lat": 31.5656822,
+			"long": 74.3141829
+		},
+		{
+			"name": "Lahore",
+			"lat": 31.5656822,
+			"long": 74.3141829
+		},
+		{
+			"name": "Tashkent",
+			"lat": 41.3123363,
+			"long": 69.2787079
+		},
+		{
+			"name": "Tashkent",
+			"lat": 41.3123363,
+			"long": 69.2787079
+		},
+		{
+			"name": "Tashkent",
+			"lat": 41.3123363,
+			"long": 69.2787079
+		},
+		{
+			"name": "Tehran",
+			"lat": 35.6892523,
+			"long": 51.3896004
+		},
+		{
+			"name": "Tehran",
+			"lat": 35.6892523,
+			"long": 51.3896004
+		},
+		{
+			"name": "Tehran",
+			"lat": 35.6892523,
+			"long": 51.3896004
+		},
+		{
+			"name": "Baghdad",
+			"lat": 33.3061701,
+			"long": 44.3872213
+		},
+		{
+			"name": "Baghdad",
+			"lat": 33.3061701,
+			"long": 44.3872213
+		},
+		{
+			"name": "Baghdad",
+			"lat": 33.3061701,
+			"long": 44.3872213
+		},
+		{
+			"name": "Damascus",
+			"lat": 45.4220856,
+			"long": -122.42831112768494
+		},
+		{
+			"name": "Damascus",
+			"lat": 45.4220856,
+			"long": -122.42831112768494
+		},
+		{
+			"name": "Damascus",
+			"lat": 45.4220856,
+			"long": -122.42831112768494
+		},
+		{
+			"name": "Amman",
+			"lat": 31.9515694,
+			"long": 35.9239625
+		},
+		{
+			"name": "Amman",
+			"lat": 31.9515694,
+			"long": 35.9239625
+		},
+		{
+			"name": "Amman",
+			"lat": 31.9515694,
+			"long": 35.9239625
+		},
+		{
+			"name": "Beirut",
+			"lat": 33.88922645,
+			"long": 35.50255852895232
+		},
+		{
+			"name": "Beirut",
+			"lat": 33.88922645,
+			"long": 35.50255852895232
+		},
+		{
+			"name": "Beirut",
+			"lat": 33.88922645,
+			"long": 35.50255852895232
+		},
+		{
+			"name": "Kuwait City",
+			"lat": 29.3796532,
+			"long": 47.9734174
+		},
+		{
+			"name": "Kuwait City",
+			"lat": 29.3796532,
+			"long": 47.9734174
+		},
+		{
+			"name": "Kuwait City",
+			"lat": 29.3796532,
+			"long": 47.9734174
+		},
+		{
+			"name": "Phnom Penh",
+			"lat": 11.568271,
+			"long": 104.9224426
+		},
+		{
+			"name": "Phnom Penh",
+			"lat": 11.568271,
+			"long": 104.9224426
+		},
+		{
+			"name": "Phnom Penh",
+			"lat": 11.568271,
+			"long": 104.9224426
+		},
+		{
+			"name": "Vientiane",
+			"lat": 17.9640988,
+			"long": 102.6133707
+		},
+		{
+			"name": "Vientiane",
+			"lat": 17.9640988,
+			"long": 102.6133707
+		},
+		{
+			"name": "Vientiane",
+			"lat": 17.9640988,
+			"long": 102.6133707
+		},
+		{
+			"name": "Ulaanbaatar",
+			"lat": 47.940974049999994,
+			"long": 106.91796375225584
+		},
+		{
+			"name": "Ulaanbaatar",
+			"lat": 47.940974049999994,
+			"long": 106.91796375225584
+		},
+		{
+			"name": "Ulaanbaatar",
+			"lat": 47.940974049999994,
+			"long": 106.91796375225584
+		},
+		{
+			"name": "Yerevan",
+			"lat": 40.1777112,
+			"long": 44.5126233
+		},
+		{
+			"name": "Yerevan",
+			"lat": 40.1777112,
+			"long": 44.5126233
+		},
+		{
+			"name": "Yerevan",
+			"lat": 40.1777112,
+			"long": 44.5126233
+		},
+		{
+			"name": "Baku",
+			"lat": 40.3755885,
+			"long": 49.8328009
+		},
+		{
+			"name": "Baku",
+			"lat": 40.3755885,
+			"long": 49.8328009
+		},
+		{
+			"name": "Baku",
+			"lat": 40.3755885,
+			"long": 49.8328009
+		},
+		{
+			"name": "Tbilisi",
+			"lat": 41.6934591,
+			"long": 44.8014495
+		},
+		{
+			"name": "Tbilisi",
+			"lat": 41.6934591,
+			"long": 44.8014495
+		},
+		{
+			"name": "Tbilisi",
+			"lat": 41.6934591,
+			"long": 44.8014495
+		},
+		{
+			"name": "Astana",
+			"lat": 51.1282205,
+			"long": 71.4306682
+		},
+		{
+			"name": "Astana",
+			"lat": 51.1282205,
+			"long": 71.4306682
+		},
+		{
+			"name": "Astana",
+			"lat": 51.1282205,
+			"long": 71.4306682
+		},
+		{
+			"name": "Almaty",
+			"lat": 43.2363924,
+			"long": 76.9457275
+		},
+		{
+			"name": "Almaty",
+			"lat": 43.2363924,
+			"long": 76.9457275
+		},
+		{
+			"name": "Almaty",
+			"lat": 43.2363924,
+			"long": 76.9457275
+		},
+		{
+			"name": "Colombo",
+			"lat": 6.9388614,
+			"long": 79.8542005
+		},
+		{
+			"name": "Colombo",
+			"lat": 6.9388614,
+			"long": 79.8542005
+		},
+		{
+			"name": "Colombo",
+			"lat": 6.9388614,
+			"long": 79.8542005
+		},
+		{
+			"name": "Male",
+			"lat": 4.1779879,
+			"long": 73.5107387
+		},
+		{
+			"name": "Male",
+			"lat": 4.1779879,
+			"long": 73.5107387
+		},
+		{
+			"name": "Male",
+			"lat": 4.1779879,
+			"long": 73.5107387
+		},
+		{
+			"name": "Thimphu",
+			"lat": 27.4713546,
+			"long": 89.6336729
+		},
+		{
+			"name": "Thimphu",
+			"lat": 27.4713546,
+			"long": 89.6336729
+		},
+		{
+			"name": "Thimphu",
+			"lat": 27.4713546,
+			"long": 89.6336729
+		},
+		{
+			"name": "Dushanbe",
+			"lat": 38.5762709,
+			"long": 68.7863573
+		},
+		{
+			"name": "Dushanbe",
+			"lat": 38.5762709,
+			"long": 68.7863573
+		},
+		{
+			"name": "Dushanbe",
+			"lat": 38.5762709,
+			"long": 68.7863573
+		},
+		{
+			"name": "Ashgabat",
+			"lat": 37.9404648,
+			"long": 58.3823487
+		},
+		{
+			"name": "Ashgabat",
+			"lat": 37.9404648,
+			"long": 58.3823487
+		},
+		{
+			"name": "Ashgabat",
+			"lat": 37.9404648,
+			"long": 58.3823487
+		},
+		{
+			"name": "Sana'a",
+			"lat": 15.35,
+			"long": 44.2
+		},
+		{
+			"name": "Sana'a",
+			"lat": 15.35,
+			"long": 44.2
+		},
+		{
+			"name": "Sana'a",
+			"lat": 15.35,
+			"long": 44.2
+		},
+		{
+			"name": "Mecca",
+			"lat": 21.420847,
+			"long": 39.826869
+		},
+		{
+			"name": "Mecca",
+			"lat": 21.420847,
+			"long": 39.826869
+		},
+		{
+			"name": "Mecca",
+			"lat": 21.420847,
+			"long": 39.826869
+		},
+		{
+			"name": "Medina",
+			"lat": 29.2836281,
+			"long": -99.1126826
+		},
+		{
+			"name": "Medina",
+			"lat": 29.2836281,
+			"long": -99.1126826
+		},
+		{
+			"name": "Medina",
+			"lat": 29.2836281,
+			"long": -99.1126826
+		},
+		{
+			"name": "Surabaya",
+			"lat": -7.2459717,
+			"long": 112.7378266
+		},
+		{
+			"name": "Surabaya",
+			"lat": -7.2459717,
+			"long": 112.7378266
+		},
+		{
+			"name": "Surabaya",
+			"lat": -7.2459717,
+			"long": 112.7378266
+		},
+		{
+			"name": "Pune",
+			"lat": 18.5213738,
+			"long": 73.8545071
+		},
+		{
+			"name": "Pune",
+			"lat": 18.5213738,
+			"long": 73.8545071
+		},
+		{
+			"name": "Pune",
+			"lat": 18.5213738,
+			"long": 73.8545071
+		},
+		{
+			"name": "Nagoya",
+			"lat": 35.1851045,
+			"long": 136.8998438
+		},
+		{
+			"name": "Nagoya",
+			"lat": 35.1851045,
+			"long": 136.8998438
+		},
+		{
+			"name": "Nagoya",
+			"lat": 35.1851045,
+			"long": 136.8998438
+		},
+		{
+			"name": "Osaka",
+			"lat": 34.6937569,
+			"long": 135.5014539
+		},
+		{
+			"name": "Osaka",
+			"lat": 34.6937569,
+			"long": 135.5014539
+		},
+		{
+			"name": "Osaka",
+			"lat": 34.6937569,
+			"long": 135.5014539
+		},
+		{
+			"name": "Sapporo",
+			"lat": 43.061936,
+			"long": 141.3542924
+		},
+		{
+			"name": "Sapporo",
+			"lat": 43.061936,
+			"long": 141.3542924
+		},
+		{
+			"name": "Sapporo",
+			"lat": 43.061936,
+			"long": 141.3542924
+		},
+		{
+			"name": "Busan",
+			"lat": 35.1799528,
+			"long": 129.0752365
+		},
+		{
+			"name": "Busan",
+			"lat": 35.1799528,
+			"long": 129.0752365
+		},
+		{
+			"name": "Busan",
+			"lat": 35.1799528,
+			"long": 129.0752365
+		},
+		{
+			"name": "Incheon",
+			"lat": 37.456,
+			"long": 126.7052
+		},
+		{
+			"name": "Incheon",
+			"lat": 37.456,
+			"long": 126.7052
+		},
+		{
+			"name": "Incheon",
+			"lat": 37.456,
+			"long": 126.7052
+		},
+		{
+			"name": "Kaohsiung",
+			"lat": 22.6203348,
+			"long": 120.3120375
+		},
+		{
+			"name": "Kaohsiung",
+			"lat": 22.6203348,
+			"long": 120.3120375
+		},
+		{
+			"name": "Kaohsiung",
+			"lat": 22.6203348,
+			"long": 120.3120375
+		},
+		{
+			"name": "Taipei",
+			"lat": 25.0375198,
+			"long": 121.5636796
+		},
+		{
+			"name": "Taipei",
+			"lat": 25.0375198,
+			"long": 121.5636796
+		},
+		{
+			"name": "Taipei",
+			"lat": 25.0375198,
+			"long": 121.5636796
+		},
+		{
+			"name": "Shenzhen",
+			"lat": 22.5445741,
+			"long": 114.0545429
+		},
+		{
+			"name": "Shenzhen",
+			"lat": 22.5445741,
+			"long": 114.0545429
+		},
+		{
+			"name": "Shenzhen",
+			"lat": 22.5445741,
+			"long": 114.0545429
+		},
+		{
+			"name": "Guangzhou",
+			"lat": 23.1301964,
+			"long": 113.2592945
+		},
+		{
+			"name": "Guangzhou",
+			"lat": 23.1301964,
+			"long": 113.2592945
+		},
+		{
+			"name": "Guangzhou",
+			"lat": 23.1301964,
+			"long": 113.2592945
+		},
+		{
+			"name": "Chongqing",
+			"lat": 30.05518,
+			"long": 107.8748712
+		},
+		{
+			"name": "Chongqing",
+			"lat": 30.05518,
+			"long": 107.8748712
+		},
+		{
+			"name": "Chongqing",
+			"lat": 30.05518,
+			"long": 107.8748712
+		},
+		{
+			"name": "Wuhan",
+			"lat": 30.5951051,
+			"long": 114.2999353
+		},
+		{
+			"name": "Wuhan",
+			"lat": 30.5951051,
+			"long": 114.2999353
+		},
+		{
+			"name": "Wuhan",
+			"lat": 30.5951051,
+			"long": 114.2999353
+		},
+		{
+			"name": "Nanjing",
+			"lat": 32.0438284,
+			"long": 118.7788631
+		},
+		{
+			"name": "Nanjing",
+			"lat": 32.0438284,
+			"long": 118.7788631
+		},
+		{
+			"name": "Nanjing",
+			"lat": 32.0438284,
+			"long": 118.7788631
+		},
+		{
+			"name": "Chengdu",
+			"lat": 30.6598628,
+			"long": 104.0633717
+		},
+		{
+			"name": "Chengdu",
+			"lat": 30.6598628,
+			"long": 104.0633717
+		},
+		{
+			"name": "Chengdu",
+			"lat": 30.6598628,
+			"long": 104.0633717
+		},
+		{
+			"name": "Xi'an",
+			"lat": 34.261004,
+			"long": 108.9423363
+		},
+		{
+			"name": "Xi'an",
+			"lat": 34.261004,
+			"long": 108.9423363
+		},
+		{
+			"name": "Xi'an",
+			"lat": 34.261004,
+			"long": 108.9423363
+		},
+		{
+			"name": "Suzhou",
+			"lat": 31.311123,
+			"long": 120.6212881
+		},
+		{
+			"name": "Suzhou",
+			"lat": 31.311123,
+			"long": 120.6212881
+		},
+		{
+			"name": "Suzhou",
+			"lat": 31.311123,
+			"long": 120.6212881
+		},
+		{
+			"name": "Tianjin",
+			"lat": 39.3032619,
+			"long": 117.4163641
+		},
+		{
+			"name": "Tianjin",
+			"lat": 39.3032619,
+			"long": 117.4163641
+		},
+		{
+			"name": "Tianjin",
+			"lat": 39.3032619,
+			"long": 117.4163641
+		},
+		{
+			"name": "Harbin",
+			"lat": 45.7593633,
+			"long": 126.6276177
+		},
+		{
+			"name": "Harbin",
+			"lat": 45.7593633,
+			"long": 126.6276177
+		},
+		{
+			"name": "Harbin",
+			"lat": 45.7593633,
+			"long": 126.6276177
+		},
+		{
+			"name": "Changsha",
+			"lat": 28.1450774,
+			"long": 113.2384362
+		},
+		{
+			"name": "Changsha",
+			"lat": 28.1450774,
+			"long": 113.2384362
+		},
+		{
+			"name": "Changsha",
+			"lat": 28.1450774,
+			"long": 113.2384362
+		},
+		{
+			"name": "Zhengzhou",
+			"lat": 23.246071,
+			"long": 107.2297041
+		},
+		{
+			"name": "Zhengzhou",
+			"lat": 23.246071,
+			"long": 107.2297041
+		},
+		{
+			"name": "Zhengzhou",
+			"lat": 23.246071,
+			"long": 107.2297041
+		},
+		{
+			"name": "Jeddah",
+			"lat": 21.5504432,
+			"long": 39.1742363
+		},
+		{
+			"name": "Jeddah",
+			"lat": 21.5504432,
+			"long": 39.1742363
+		},
+		{
+			"name": "Jeddah",
+			"lat": 21.5504432,
+			"long": 39.1742363
+		},
+		{
+			"name": "Basra",
+			"lat": 30.4952371,
+			"long": 47.8090981
+		},
+		{
+			"name": "Basra",
+			"lat": 30.4952371,
+			"long": 47.8090981
+		},
+		{
+			"name": "Basra",
+			"lat": 30.4952371,
+			"long": 47.8090981
+		},
+		{
+			"name": "Erbil",
+			"lat": 36.1911744,
+			"long": 44.0094145
+		},
+		{
+			"name": "Erbil",
+			"lat": 36.1911744,
+			"long": 44.0094145
+		},
+		{
+			"name": "Erbil",
+			"lat": 36.1911744,
+			"long": 44.0094145
+		},
+		{
+			"name": "Mashhad",
+			"lat": 36.2974945,
+			"long": 59.6059232
+		},
+		{
+			"name": "Mashhad",
+			"lat": 36.2974945,
+			"long": 59.6059232
+		},
+		{
+			"name": "Mashhad",
+			"lat": 36.2974945,
+			"long": 59.6059232
+		},
+		{
+			"name": "Tabriz",
+			"lat": 38.0738612,
+			"long": 46.2978789
+		},
+		{
+			"name": "Tabriz",
+			"lat": 38.0738612,
+			"long": 46.2978789
+		},
+		{
+			"name": "Tabriz",
+			"lat": 38.0738612,
+			"long": 46.2978789
+		},
+		{
+			"name": "Esfahan",
+			"lat": 33.1881386,
+			"long": 52.4981635
+		},
+		{
+			"name": "Esfahan",
+			"lat": 33.1881386,
+			"long": 52.4981635
+		},
+		{
+			"name": "Esfahan",
+			"lat": 33.1881386,
+			"long": 52.4981635
+		},
+		{
+			"name": "Shiraz",
+			"lat": 29.6060218,
+			"long": 52.5378041
+		},
+		{
+			"name": "Shiraz",
+			"lat": 29.6060218,
+			"long": 52.5378041
+		},
+		{
+			"name": "Shiraz",
+			"lat": 29.6060218,
+			"long": 52.5378041
+		},
+		{
+			"name": "Karaj",
+			"lat": 48.7005763,
+			"long": 17.6871599
+		},
+		{
+			"name": "Karaj",
+			"lat": 48.7005763,
+			"long": 17.6871599
+		},
+		{
+			"name": "Karaj",
+			"lat": 48.7005763,
+			"long": 17.6871599
+		},
+		{
+			"name": "Faisalabad",
+			"lat": 31.4220558,
+			"long": 73.0923253
+		},
+		{
+			"name": "Faisalabad",
+			"lat": 31.4220558,
+			"long": 73.0923253
+		},
+		{
+			"name": "Faisalabad",
+			"lat": 31.4220558,
+			"long": 73.0923253
+		},
+		{
+			"name": "Multan",
+			"lat": 30.197838,
+			"long": 71.4719683
+		},
+		{
+			"name": "Multan",
+			"lat": 30.197838,
+			"long": 71.4719683
+		},
+		{
+			"name": "Multan",
+			"lat": 30.197838,
+			"long": 71.4719683
+		},
+		{
+			"name": "Rawalpindi",
+			"lat": 33.5914237,
+			"long": 73.0535122
+		},
+		{
+			"name": "Rawalpindi",
+			"lat": 33.5914237,
+			"long": 73.0535122
+		},
+		{
+			"name": "Rawalpindi",
+			"lat": 33.5914237,
+			"long": 73.0535122
+		},
+		{
+			"name": "Peshawar",
+			"lat": 34.0123846,
+			"long": 71.5787458
+		},
+		{
+			"name": "Peshawar",
+			"lat": 34.0123846,
+			"long": 71.5787458
+		},
+		{
+			"name": "Peshawar",
+			"lat": 34.0123846,
+			"long": 71.5787458
+		},
+		{
+			"name": "Quetta",
+			"lat": 30.1916569,
+			"long": 67.0006542
+		},
+		{
+			"name": "Quetta",
+			"lat": 30.1916569,
+			"long": 67.0006542
+		},
+		{
+			"name": "Quetta",
+			"lat": 30.1916569,
+			"long": 67.0006542
+		},
+		{
+			"name": "Lucknow",
+			"lat": 26.8381,
+			"long": 80.9346001
+		},
+		{
+			"name": "Lucknow",
+			"lat": 26.8381,
+			"long": 80.9346001
+		},
+		{
+			"name": "Lucknow",
+			"lat": 26.8381,
+			"long": 80.9346001
+		},
+		{
+			"name": "Kanpur",
+			"lat": 26.4609135,
+			"long": 80.3217588
+		},
+		{
+			"name": "Kanpur",
+			"lat": 26.4609135,
+			"long": 80.3217588
+		},
+		{
+			"name": "Kanpur",
+			"lat": 26.4609135,
+			"long": 80.3217588
+		},
+		{
+			"name": "Surat",
+			"lat": 45.9383,
+			"long": 3.2553
+		},
+		{
+			"name": "Surat",
+			"lat": 45.9383,
+			"long": 3.2553
+		},
+		{
+			"name": "Surat",
+			"lat": 45.9383,
+			"long": 3.2553
+		},
+		{
+			"name": "Jaipur",
+			"lat": 26.9154576,
+			"long": 75.8189817
+		},
+		{
+			"name": "Jaipur",
+			"lat": 26.9154576,
+			"long": 75.8189817
+		},
+		{
+			"name": "Jaipur",
+			"lat": 26.9154576,
+			"long": 75.8189817
+		},
+		{
+			"name": "Patna",
+			"lat": 25.6093239,
+			"long": 85.1235252
+		},
+		{
+			"name": "Patna",
+			"lat": 25.6093239,
+			"long": 85.1235252
+		},
+		{
+			"name": "Patna",
+			"lat": 25.6093239,
+			"long": 85.1235252
+		},
+		{
+			"name": "Indore",
+			"lat": 22.7203616,
+			"long": 75.8681996
+		},
+		{
+			"name": "Indore",
+			"lat": 22.7203616,
+			"long": 75.8681996
+		},
+		{
+			"name": "Indore",
+			"lat": 22.7203616,
+			"long": 75.8681996
+		},
+		{
+			"name": "Vadodara",
+			"lat": 22.2973142,
+			"long": 73.1942567
+		},
+		{
+			"name": "Vadodara",
+			"lat": 22.2973142,
+			"long": 73.1942567
+		},
+		{
+			"name": "Vadodara",
+			"lat": 22.2973142,
+			"long": 73.1942567
+		},
+		{
+			"name": "Visakhapatnam",
+			"lat": 17.7231276,
+			"long": 83.3012842
+		},
+		{
+			"name": "Visakhapatnam",
+			"lat": 17.7231276,
+			"long": 83.3012842
+		},
+		{
+			"name": "Visakhapatnam",
+			"lat": 17.7231276,
+			"long": 83.3012842
+		},
+		{
+			"name": "Coimbatore",
+			"lat": 11.0018115,
+			"long": 76.9628425
+		},
+		{
+			"name": "Coimbatore",
+			"lat": 11.0018115,
+			"long": 76.9628425
+		},
+		{
+			"name": "Coimbatore",
+			"lat": 11.0018115,
+			"long": 76.9628425
+		},
+		{
+			"name": "Ludhiana",
+			"lat": 30.9090157,
+			"long": 75.851601
+		},
+		{
+			"name": "Ludhiana",
+			"lat": 30.9090157,
+			"long": 75.851601
+		},
+		{
+			"name": "Ludhiana",
+			"lat": 30.9090157,
+			"long": 75.851601
+		},
+		{
+			"name": "Agra",
+			"lat": 27.1752554,
+			"long": 78.0098161
+		},
+		{
+			"name": "Agra",
+			"lat": 27.1752554,
+			"long": 78.0098161
+		},
+		{
+			"name": "Agra",
+			"lat": 27.1752554,
+			"long": 78.0098161
+		}
+	]
 }

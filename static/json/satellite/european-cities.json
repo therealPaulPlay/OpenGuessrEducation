@@ -1,1169 +1,1169 @@
 {
-  "Locations": [
-    {
-      "name": "Paris",
-      "lat": 48.8534951,
-      "long": 2.3483915
-    },
-    {
-      "name": "Paris",
-      "lat": 48.8534951,
-      "long": 2.3483915
-    },
-    {
-      "name": "Paris",
-      "lat": 48.8534951,
-      "long": 2.3483915
-    },
-    {
-      "name": "Berlin",
-      "lat": 52.510885,
-      "long": 13.3989367
-    },
-    {
-      "name": "Berlin",
-      "lat": 52.510885,
-      "long": 13.3989367
-    },
-    {
-      "name": "Berlin",
-      "lat": 52.510885,
-      "long": 13.3989367
-    },
-    {
-      "name": "Madrid",
-      "lat": 40.4167047,
-      "long": -3.7035825
-    },
-    {
-      "name": "Madrid",
-      "lat": 40.4167047,
-      "long": -3.7035825
-    },
-    {
-      "name": "Madrid",
-      "lat": 40.4167047,
-      "long": -3.7035825
-    },
-    {
-      "name": "Rome",
-      "lat": 41.8933203,
-      "long": 12.4829321
-    },
-    {
-      "name": "Rome",
-      "lat": 41.8933203,
-      "long": 12.4829321
-    },
-    {
-      "name": "Rome",
-      "lat": 41.8933203,
-      "long": 12.4829321
-    },
-    {
-      "name": "Vienna",
-      "lat": 48.2083537,
-      "long": 16.3725042
-    },
-    {
-      "name": "Vienna",
-      "lat": 48.2083537,
-      "long": 16.3725042
-    },
-    {
-      "name": "Vienna",
-      "lat": 48.2083537,
-      "long": 16.3725042
-    },
-    {
-      "name": "Budapest",
-      "lat": 47.4978789,
-      "long": 19.0402383
-    },
-    {
-      "name": "Budapest",
-      "lat": 47.4978789,
-      "long": 19.0402383
-    },
-    {
-      "name": "Budapest",
-      "lat": 47.4978789,
-      "long": 19.0402383
-    },
-    {
-      "name": "Prague",
-      "lat": 50.0874654,
-      "long": 14.4212535
-    },
-    {
-      "name": "Prague",
-      "lat": 50.0874654,
-      "long": 14.4212535
-    },
-    {
-      "name": "Prague",
-      "lat": 50.0874654,
-      "long": 14.4212535
-    },
-    {
-      "name": "Warsaw",
-      "lat": 52.2337172,
-      "long": 21.071432235636493
-    },
-    {
-      "name": "Warsaw",
-      "lat": 52.2337172,
-      "long": 21.071432235636493
-    },
-    {
-      "name": "Warsaw",
-      "lat": 52.2337172,
-      "long": 21.071432235636493
-    },
-    {
-      "name": "Brussels",
-      "lat": 50.8465573,
-      "long": 4.351697
-    },
-    {
-      "name": "Brussels",
-      "lat": 50.8465573,
-      "long": 4.351697
-    },
-    {
-      "name": "Brussels",
-      "lat": 50.8465573,
-      "long": 4.351697
-    },
-    {
-      "name": "Stockholm",
-      "lat": 59.3251172,
-      "long": 18.0710935
-    },
-    {
-      "name": "Stockholm",
-      "lat": 59.3251172,
-      "long": 18.0710935
-    },
-    {
-      "name": "Stockholm",
-      "lat": 59.3251172,
-      "long": 18.0710935
-    },
-    {
-      "name": "Oslo",
-      "lat": 59.9133301,
-      "long": 10.7389701
-    },
-    {
-      "name": "Oslo",
-      "lat": 59.9133301,
-      "long": 10.7389701
-    },
-    {
-      "name": "Oslo",
-      "lat": 59.9133301,
-      "long": 10.7389701
-    },
-    {
-      "name": "Copenhagen",
-      "lat": 55.6867243,
-      "long": 12.5700724
-    },
-    {
-      "name": "Copenhagen",
-      "lat": 55.6867243,
-      "long": 12.5700724
-    },
-    {
-      "name": "Copenhagen",
-      "lat": 55.6867243,
-      "long": 12.5700724
-    },
-    {
-      "name": "Helsinki",
-      "lat": 60.1674881,
-      "long": 24.9427473
-    },
-    {
-      "name": "Helsinki",
-      "lat": 60.1674881,
-      "long": 24.9427473
-    },
-    {
-      "name": "Helsinki",
-      "lat": 60.1674881,
-      "long": 24.9427473
-    },
-    {
-      "name": "Athens",
-      "lat": 33.9597677,
-      "long": -83.376398
-    },
-    {
-      "name": "Athens",
-      "lat": 33.9597677,
-      "long": -83.376398
-    },
-    {
-      "name": "Athens",
-      "lat": 33.9597677,
-      "long": -83.376398
-    },
-    {
-      "name": "Lisbon",
-      "lat": 38.7077507,
-      "long": -9.1365919
-    },
-    {
-      "name": "Dublin",
-      "lat": 53.3493795,
-      "long": -6.2605593
-    },
-    {
-      "name": "Dublin",
-      "lat": 53.3493795,
-      "long": -6.2605593
-    },
-    {
-      "name": "Dublin",
-      "lat": 53.3493795,
-      "long": -6.2605593
-    },
-    {
-      "name": "Zurich",
-      "lat": 47.3744489,
-      "long": 8.5410422
-    },
-    {
-      "name": "Zurich",
-      "lat": 47.3744489,
-      "long": 8.5410422
-    },
-    {
-      "name": "Zurich",
-      "lat": 47.3744489,
-      "long": 8.5410422
-    },
-    {
-      "name": "Munich",
-      "lat": 48.1371079,
-      "long": 11.5753822
-    },
-    {
-      "name": "Munich",
-      "lat": 48.1371079,
-      "long": 11.5753822
-    },
-    {
-      "name": "Munich",
-      "lat": 48.1371079,
-      "long": 11.5753822
-    },
-    {
-      "name": "Barcelona",
-      "lat": 41.3828939,
-      "long": 2.1774322
-    },
-    {
-      "name": "Barcelona",
-      "lat": 41.3828939,
-      "long": 2.1774322
-    },
-    {
-      "name": "Barcelona",
-      "lat": 41.3828939,
-      "long": 2.1774322
-    },
-    {
-      "name": "Milan",
-      "lat": 45.4641943,
-      "long": 9.1896346
-    },
-    {
-      "name": "Milan",
-      "lat": 45.4641943,
-      "long": 9.1896346
-    },
-    {
-      "name": "Milan",
-      "lat": 45.4641943,
-      "long": 9.1896346
-    },
-    {
-      "name": "Frankfurt",
-      "lat": 50.1106444,
-      "long": 8.6820917
-    },
-    {
-      "name": "Frankfurt",
-      "lat": 50.1106444,
-      "long": 8.6820917
-    },
-    {
-      "name": "Frankfurt",
-      "lat": 50.1106444,
-      "long": 8.6820917
-    },
-    {
-      "name": "Rotterdam",
-      "lat": 51.9244424,
-      "long": 4.47775
-    },
-    {
-      "name": "Rotterdam",
-      "lat": 51.9244424,
-      "long": 4.47775
-    },
-    {
-      "name": "Rotterdam",
-      "lat": 51.9244424,
-      "long": 4.47775
-    },
-    {
-      "name": "Hamburg",
-      "lat": 53.550341,
-      "long": 10.000654
-    },
-    {
-      "name": "Hamburg",
-      "lat": 53.550341,
-      "long": 10.000654
-    },
-    {
-      "name": "Hamburg",
-      "lat": 53.550341,
-      "long": 10.000654
-    },
-    {
-      "name": "Manchester",
-      "lat": 53.4794892,
-      "long": -2.2451148
-    },
-    {
-      "name": "Manchester",
-      "lat": 53.4794892,
-      "long": -2.2451148
-    },
-    {
-      "name": "Manchester",
-      "lat": 53.4794892,
-      "long": -2.2451148
-    },
-    {
-      "name": "Glasgow",
-      "lat": 55.861155,
-      "long": -4.2501687
-    },
-    {
-      "name": "Glasgow",
-      "lat": 55.861155,
-      "long": -4.2501687
-    },
-    {
-      "name": "Glasgow",
-      "lat": 55.861155,
-      "long": -4.2501687
-    },
-    {
-      "name": "Valencia",
-      "lat": 39.4697065,
-      "long": -0.3763353
-    },
-    {
-      "name": "Valencia",
-      "lat": 39.4697065,
-      "long": -0.3763353
-    },
-    {
-      "name": "Valencia",
-      "lat": 39.4697065,
-      "long": -0.3763353
-    },
-    {
-      "name": "Seville",
-      "lat": 37.3886303,
-      "long": -5.9953403
-    },
-    {
-      "name": "Seville",
-      "lat": 37.3886303,
-      "long": -5.9953403
-    },
-    {
-      "name": "Seville",
-      "lat": 37.3886303,
-      "long": -5.9953403
-    },
-    {
-      "name": "Lyon",
-      "lat": 45.7578137,
-      "long": 4.8320114
-    },
-    {
-      "name": "Lyon",
-      "lat": 45.7578137,
-      "long": 4.8320114
-    },
-    {
-      "name": "Lyon",
-      "lat": 45.7578137,
-      "long": 4.8320114
-    },
-    {
-      "name": "Marseille",
-      "lat": 43.2961743,
-      "long": 5.3699525
-    },
-    {
-      "name": "Marseille",
-      "lat": 43.2961743,
-      "long": 5.3699525
-    },
-    {
-      "name": "Marseille",
-      "lat": 43.2961743,
-      "long": 5.3699525
-    },
-    {
-      "name": "Birmingham",
-      "lat": 52.4796992,
-      "long": -1.9026911
-    },
-    {
-      "name": "Birmingham",
-      "lat": 52.4796992,
-      "long": -1.9026911
-    },
-    {
-      "name": "Birmingham",
-      "lat": 52.4796992,
-      "long": -1.9026911
-    },
-    {
-      "name": "Cologne",
-      "lat": 43.7218277,
-      "long": 0.9774958
-    },
-    {
-      "name": "Cologne",
-      "lat": 43.7218277,
-      "long": 0.9774958
-    },
-    {
-      "name": "Cologne",
-      "lat": 43.7218277,
-      "long": 0.9774958
-    },
-    {
-      "name": "D\u00fcsseldorf",
-      "lat": 51.2254018,
-      "long": 6.7763137
-    },
-    {
-      "name": "D\u00fcsseldorf",
-      "lat": 51.2254018,
-      "long": 6.7763137
-    },
-    {
-      "name": "D\u00fcsseldorf",
-      "lat": 51.2254018,
-      "long": 6.7763137
-    },
-    {
-      "name": "Naples",
-      "lat": 40.8358846,
-      "long": 14.2487679
-    },
-    {
-      "name": "Naples",
-      "lat": 40.8358846,
-      "long": 14.2487679
-    },
-    {
-      "name": "Naples",
-      "lat": 40.8358846,
-      "long": 14.2487679
-    },
-    {
-      "name": "Turin",
-      "lat": 45.0677551,
-      "long": 7.6824892
-    },
-    {
-      "name": "Turin",
-      "lat": 45.0677551,
-      "long": 7.6824892
-    },
-    {
-      "name": "Turin",
-      "lat": 45.0677551,
-      "long": 7.6824892
-    },
-    {
-      "name": "Stuttgart",
-      "lat": 48.7784485,
-      "long": 9.1800132
-    },
-    {
-      "name": "Stuttgart",
-      "lat": 48.7784485,
-      "long": 9.1800132
-    },
-    {
-      "name": "Stuttgart",
-      "lat": 48.7784485,
-      "long": 9.1800132
-    },
-    {
-      "name": "Bordeaux",
-      "lat": 44.841225,
-      "long": -0.5800364
-    },
-    {
-      "name": "Bordeaux",
-      "lat": 44.841225,
-      "long": -0.5800364
-    },
-    {
-      "name": "Bordeaux",
-      "lat": 44.841225,
-      "long": -0.5800364
-    },
-    {
-      "name": "Florence",
-      "lat": 43.7697955,
-      "long": 11.2556404
-    },
-    {
-      "name": "Florence",
-      "lat": 43.7697955,
-      "long": 11.2556404
-    },
-    {
-      "name": "Florence",
-      "lat": 43.7697955,
-      "long": 11.2556404
-    },
-    {
-      "name": "Venice",
-      "lat": 45.4371908,
-      "long": 12.3345898
-    },
-    {
-      "name": "Venice",
-      "lat": 45.4371908,
-      "long": 12.3345898
-    },
-    {
-      "name": "Venice",
-      "lat": 45.4371908,
-      "long": 12.3345898
-    },
-    {
-      "name": "Geneva",
-      "lat": 46.2017559,
-      "long": 6.1466014
-    },
-    {
-      "name": "Geneva",
-      "lat": 46.2017559,
-      "long": 6.1466014
-    },
-    {
-      "name": "Geneva",
-      "lat": 46.2017559,
-      "long": 6.1466014
-    },
-    {
-      "name": "Zurich",
-      "lat": 47.3744489,
-      "long": 8.5410422
-    },
-    {
-      "name": "Zurich",
-      "lat": 47.3744489,
-      "long": 8.5410422
-    },
-    {
-      "name": "Zurich",
-      "lat": 47.3744489,
-      "long": 8.5410422
-    },
-    {
-      "name": "Leipzig",
-      "lat": 51.3406321,
-      "long": 12.3747329
-    },
-    {
-      "name": "Leipzig",
-      "lat": 51.3406321,
-      "long": 12.3747329
-    },
-    {
-      "name": "Leipzig",
-      "lat": 51.3406321,
-      "long": 12.3747329
-    },
-    {
-      "name": "Nuremberg",
-      "lat": 49.453872,
-      "long": 11.077298
-    },
-    {
-      "name": "Nuremberg",
-      "lat": 49.453872,
-      "long": 11.077298
-    },
-    {
-      "name": "Nuremberg",
-      "lat": 49.453872,
-      "long": 11.077298
-    },
-    {
-      "name": "Dresden",
-      "lat": 51.0493286,
-      "long": 13.7381437
-    },
-    {
-      "name": "Dresden",
-      "lat": 51.0493286,
-      "long": 13.7381437
-    },
-    {
-      "name": "Dresden",
-      "lat": 51.0493286,
-      "long": 13.7381437
-    },
-    {
-      "name": "Bratislava",
-      "lat": 48.1516988,
-      "long": 17.1093063
-    },
-    {
-      "name": "Bratislava",
-      "lat": 48.1516988,
-      "long": 17.1093063
-    },
-    {
-      "name": "Bratislava",
-      "lat": 48.1516988,
-      "long": 17.1093063
-    },
-    {
-      "name": "Ljubljana",
-      "lat": 46.0500268,
-      "long": 14.5069289
-    },
-    {
-      "name": "Ljubljana",
-      "lat": 46.0500268,
-      "long": 14.5069289
-    },
-    {
-      "name": "Ljubljana",
-      "lat": 46.0500268,
-      "long": 14.5069289
-    },
-    {
-      "name": "Zagreb",
-      "lat": 45.8130967,
-      "long": 15.9772795
-    },
-    {
-      "name": "Zagreb",
-      "lat": 45.8130967,
-      "long": 15.9772795
-    },
-    {
-      "name": "Zagreb",
-      "lat": 45.8130967,
-      "long": 15.9772795
-    },
-    {
-      "name": "Belgrade",
-      "lat": 44.8178131,
-      "long": 20.4568974
-    },
-    {
-      "name": "Belgrade",
-      "lat": 44.8178131,
-      "long": 20.4568974
-    },
-    {
-      "name": "Belgrade",
-      "lat": 44.8178131,
-      "long": 20.4568974
-    },
-    {
-      "name": "Sofia",
-      "lat": 42.6977028,
-      "long": 23.3217359
-    },
-    {
-      "name": "Sofia",
-      "lat": 42.6977028,
-      "long": 23.3217359
-    },
-    {
-      "name": "Sofia",
-      "lat": 42.6977028,
-      "long": 23.3217359
-    },
-    {
-      "name": "Skopje",
-      "lat": 41.9961816,
-      "long": 21.4319213
-    },
-    {
-      "name": "Skopje",
-      "lat": 41.9961816,
-      "long": 21.4319213
-    },
-    {
-      "name": "Skopje",
-      "lat": 41.9961816,
-      "long": 21.4319213
-    },
-    {
-      "name": "Sarajevo",
-      "lat": 43.8519774,
-      "long": 18.3866868
-    },
-    {
-      "name": "Sarajevo",
-      "lat": 43.8519774,
-      "long": 18.3866868
-    },
-    {
-      "name": "Sarajevo",
-      "lat": 43.8519774,
-      "long": 18.3866868
-    },
-    {
-      "name": "Tirana",
-      "lat": 41.3281482,
-      "long": 19.8184435
-    },
-    {
-      "name": "Tirana",
-      "lat": 41.3281482,
-      "long": 19.8184435
-    },
-    {
-      "name": "Tirana",
-      "lat": 41.3281482,
-      "long": 19.8184435
-    },
-    {
-      "name": "Chisinau",
-      "lat": 47.0245117,
-      "long": 28.8322923
-    },
-    {
-      "name": "Chisinau",
-      "lat": 47.0245117,
-      "long": 28.8322923
-    },
-    {
-      "name": "Chisinau",
-      "lat": 47.0245117,
-      "long": 28.8322923
-    },
-    {
-      "name": "Kiev",
-      "lat": 50.4500336,
-      "long": 30.5241361
-    },
-    {
-      "name": "Kiev",
-      "lat": 50.4500336,
-      "long": 30.5241361
-    },
-    {
-      "name": "Kiev",
-      "lat": 50.4500336,
-      "long": 30.5241361
-    },
-    {
-      "name": "Minsk",
-      "lat": 53.9024716,
-      "long": 27.5618225
-    },
-    {
-      "name": "Minsk",
-      "lat": 53.9024716,
-      "long": 27.5618225
-    },
-    {
-      "name": "Minsk",
-      "lat": 53.9024716,
-      "long": 27.5618225
-    },
-    {
-      "name": "Riga",
-      "lat": 56.9493977,
-      "long": 24.1051846
-    },
-    {
-      "name": "Riga",
-      "lat": 56.9493977,
-      "long": 24.1051846
-    },
-    {
-      "name": "Riga",
-      "lat": 56.9493977,
-      "long": 24.1051846
-    },
-    {
-      "name": "Vilnius",
-      "lat": 54.6870458,
-      "long": 25.2829111
-    },
-    {
-      "name": "Vilnius",
-      "lat": 54.6870458,
-      "long": 25.2829111
-    },
-    {
-      "name": "Vilnius",
-      "lat": 54.6870458,
-      "long": 25.2829111
-    },
-    {
-      "name": "Tallinn",
-      "lat": 59.4372155,
-      "long": 24.7453688
-    },
-    {
-      "name": "Tallinn",
-      "lat": 59.4372155,
-      "long": 24.7453688
-    },
-    {
-      "name": "Tallinn",
-      "lat": 59.4372155,
-      "long": 24.7453688
-    },
-    {
-      "name": "Reykjavik",
-      "lat": 64.145981,
-      "long": -21.9422367
-    },
-    {
-      "name": "Reykjavik",
-      "lat": 64.145981,
-      "long": -21.9422367
-    },
-    {
-      "name": "Reykjavik",
-      "lat": 64.145981,
-      "long": -21.9422367
-    },
-    {
-      "name": "Luxembourg",
-      "lat": 49.6112768,
-      "long": 6.129799
-    },
-    {
-      "name": "Luxembourg",
-      "lat": 49.6112768,
-      "long": 6.129799
-    },
-    {
-      "name": "Luxembourg",
-      "lat": 49.6112768,
-      "long": 6.129799
-    },
-    {
-      "name": "Lille",
-      "lat": 50.6365654,
-      "long": 3.0635282
-    },
-    {
-      "name": "Lille",
-      "lat": 50.6365654,
-      "long": 3.0635282
-    },
-    {
-      "name": "Lille",
-      "lat": 50.6365654,
-      "long": 3.0635282
-    },
-    {
-      "name": "Nice",
-      "lat": 43.7009358,
-      "long": 7.2683912
-    },
-    {
-      "name": "Nice",
-      "lat": 43.7009358,
-      "long": 7.2683912
-    },
-    {
-      "name": "Nice",
-      "lat": 43.7009358,
-      "long": 7.2683912
-    },
-    {
-      "name": "Gothenburg",
-      "lat": 57.7072326,
-      "long": 11.9670171
-    },
-    {
-      "name": "Gothenburg",
-      "lat": 57.7072326,
-      "long": 11.9670171
-    },
-    {
-      "name": "Gothenburg",
-      "lat": 57.7072326,
-      "long": 11.9670171
-    },
-    {
-      "name": "Malmo",
-      "lat": 55.6052931,
-      "long": 13.0001566
-    },
-    {
-      "name": "Malmo",
-      "lat": 55.6052931,
-      "long": 13.0001566
-    },
-    {
-      "name": "Malmo",
-      "lat": 55.6052931,
-      "long": 13.0001566
-    },
-    {
-      "name": "Turku",
-      "lat": 60.4517531,
-      "long": 22.2670522
-    },
-    {
-      "name": "Turku",
-      "lat": 60.4517531,
-      "long": 22.2670522
-    },
-    {
-      "name": "Turku",
-      "lat": 60.4517531,
-      "long": 22.2670522
-    },
-    {
-      "name": "Porto",
-      "lat": 41.1494512,
-      "long": -8.6107884
-    },
-    {
-      "name": "Porto",
-      "lat": 41.1494512,
-      "long": -8.6107884
-    },
-    {
-      "name": "Porto",
-      "lat": 41.1494512,
-      "long": -8.6107884
-    },
-    {
-      "name": "Brno",
-      "lat": 49.1922443,
-      "long": 16.6113382
-    },
-    {
-      "name": "Brno",
-      "lat": 49.1922443,
-      "long": 16.6113382
-    },
-    {
-      "name": "Brno",
-      "lat": 49.1922443,
-      "long": 16.6113382
-    },
-    {
-      "name": "Krakow",
-      "lat": 50.0619474,
-      "long": 19.9368564
-    },
-    {
-      "name": "Krakow",
-      "lat": 50.0619474,
-      "long": 19.9368564
-    },
-    {
-      "name": "Krakow",
-      "lat": 50.0619474,
-      "long": 19.9368564
-    },
-    {
-      "name": "Gdansk",
-      "lat": 54.42880315,
-      "long": 18.79832701217957
-    },
-    {
-      "name": "Wroclaw",
-      "lat": 51.1089776,
-      "long": 17.0326689
-    },
-    {
-      "name": "Wroclaw",
-      "lat": 51.1089776,
-      "long": 17.0326689
-    },
-    {
-      "name": "Wroclaw",
-      "lat": 51.1089776,
-      "long": 17.0326689
-    },
-    {
-      "name": "Cluj-Napoca",
-      "lat": 46.769379,
-      "long": 23.5899542
-    },
-    {
-      "name": "Cluj-Napoca",
-      "lat": 46.769379,
-      "long": 23.5899542
-    },
-    {
-      "name": "Cluj-Napoca",
-      "lat": 46.769379,
-      "long": 23.5899542
-    },
-    {
-      "name": "Timisoara",
-      "lat": 45.7538355,
-      "long": 21.2257474
-    },
-    {
-      "name": "Timisoara",
-      "lat": 45.7538355,
-      "long": 21.2257474
-    },
-    {
-      "name": "Timisoara",
-      "lat": 45.7538355,
-      "long": 21.2257474
-    },
-    {
-      "name": "Bucharest",
-      "lat": 44.4361414,
-      "long": 26.1027202
-    },
-    {
-      "name": "Bucharest",
-      "lat": 44.4361414,
-      "long": 26.1027202
-    },
-    {
-      "name": "Bucharest",
-      "lat": 44.4361414,
-      "long": 26.1027202
-    },
-    {
-      "name": "Plovdiv",
-      "lat": 42.1418541,
-      "long": 24.7499297
-    },
-    {
-      "name": "Plovdiv",
-      "lat": 42.1418541,
-      "long": 24.7499297
-    },
-    {
-      "name": "Plovdiv",
-      "lat": 42.1418541,
-      "long": 24.7499297
-    },
-    {
-      "name": "Novi Sad",
-      "lat": 45.2551338,
-      "long": 19.8451756
-    },
-    {
-      "name": "Novi Sad",
-      "lat": 45.2551338,
-      "long": 19.8451756
-    },
-    {
-      "name": "Novi Sad",
-      "lat": 45.2551338,
-      "long": 19.8451756
-    },
-    {
-      "name": "Podgorica",
-      "lat": 42.4415238,
-      "long": 19.2621081
-    },
-    {
-      "name": "Podgorica",
-      "lat": 42.4415238,
-      "long": 19.2621081
-    },
-    {
-      "name": "Podgorica",
-      "lat": 42.4415238,
-      "long": 19.2621081
-    },
-    {
-      "name": "Pristina",
-      "lat": 42.6638771,
-      "long": 21.1640849
-    },
-    {
-      "name": "Pristina",
-      "lat": 42.6638771,
-      "long": 21.1640849
-    },
-    {
-      "name": "Pristina",
-      "lat": 42.6638771,
-      "long": 21.1640849
-    },
-    {
-      "name": "Toulouse",
-      "lat": 43.6044622,
-      "long": 1.4442469
-    },
-    {
-      "name": "Toulouse",
-      "lat": 43.6044622,
-      "long": 1.4442469
-    },
-    {
-      "name": "Toulouse",
-      "lat": 43.6044622,
-      "long": 1.4442469
-    },
-    {
-      "name": "Lausanne",
-      "lat": 46.5218269,
-      "long": 6.6327025
-    },
-    {
-      "name": "Lausanne",
-      "lat": 46.5218269,
-      "long": 6.6327025
-    },
-    {
-      "name": "Lausanne",
-      "lat": 46.5218269,
-      "long": 6.6327025
-    },
-    {
-      "name": "The Hague",
-      "lat": 52.07494555,
-      "long": 4.2696802205364515
-    },
-    {
-      "name": "The Hague",
-      "lat": 52.07494555,
-      "long": 4.2696802205364515
-    },
-    {
-      "name": "The Hague",
-      "lat": 52.07494555,
-      "long": 4.2696802205364515
-    }
-  ]
+	"Locations": [
+		{
+			"name": "Paris",
+			"lat": 48.8534951,
+			"long": 2.3483915
+		},
+		{
+			"name": "Paris",
+			"lat": 48.8534951,
+			"long": 2.3483915
+		},
+		{
+			"name": "Paris",
+			"lat": 48.8534951,
+			"long": 2.3483915
+		},
+		{
+			"name": "Berlin",
+			"lat": 52.510885,
+			"long": 13.3989367
+		},
+		{
+			"name": "Berlin",
+			"lat": 52.510885,
+			"long": 13.3989367
+		},
+		{
+			"name": "Berlin",
+			"lat": 52.510885,
+			"long": 13.3989367
+		},
+		{
+			"name": "Madrid",
+			"lat": 40.4167047,
+			"long": -3.7035825
+		},
+		{
+			"name": "Madrid",
+			"lat": 40.4167047,
+			"long": -3.7035825
+		},
+		{
+			"name": "Madrid",
+			"lat": 40.4167047,
+			"long": -3.7035825
+		},
+		{
+			"name": "Rome",
+			"lat": 41.8933203,
+			"long": 12.4829321
+		},
+		{
+			"name": "Rome",
+			"lat": 41.8933203,
+			"long": 12.4829321
+		},
+		{
+			"name": "Rome",
+			"lat": 41.8933203,
+			"long": 12.4829321
+		},
+		{
+			"name": "Vienna",
+			"lat": 48.2083537,
+			"long": 16.3725042
+		},
+		{
+			"name": "Vienna",
+			"lat": 48.2083537,
+			"long": 16.3725042
+		},
+		{
+			"name": "Vienna",
+			"lat": 48.2083537,
+			"long": 16.3725042
+		},
+		{
+			"name": "Budapest",
+			"lat": 47.4978789,
+			"long": 19.0402383
+		},
+		{
+			"name": "Budapest",
+			"lat": 47.4978789,
+			"long": 19.0402383
+		},
+		{
+			"name": "Budapest",
+			"lat": 47.4978789,
+			"long": 19.0402383
+		},
+		{
+			"name": "Prague",
+			"lat": 50.0874654,
+			"long": 14.4212535
+		},
+		{
+			"name": "Prague",
+			"lat": 50.0874654,
+			"long": 14.4212535
+		},
+		{
+			"name": "Prague",
+			"lat": 50.0874654,
+			"long": 14.4212535
+		},
+		{
+			"name": "Warsaw",
+			"lat": 52.2337172,
+			"long": 21.071432235636493
+		},
+		{
+			"name": "Warsaw",
+			"lat": 52.2337172,
+			"long": 21.071432235636493
+		},
+		{
+			"name": "Warsaw",
+			"lat": 52.2337172,
+			"long": 21.071432235636493
+		},
+		{
+			"name": "Brussels",
+			"lat": 50.8465573,
+			"long": 4.351697
+		},
+		{
+			"name": "Brussels",
+			"lat": 50.8465573,
+			"long": 4.351697
+		},
+		{
+			"name": "Brussels",
+			"lat": 50.8465573,
+			"long": 4.351697
+		},
+		{
+			"name": "Stockholm",
+			"lat": 59.3251172,
+			"long": 18.0710935
+		},
+		{
+			"name": "Stockholm",
+			"lat": 59.3251172,
+			"long": 18.0710935
+		},
+		{
+			"name": "Stockholm",
+			"lat": 59.3251172,
+			"long": 18.0710935
+		},
+		{
+			"name": "Oslo",
+			"lat": 59.9133301,
+			"long": 10.7389701
+		},
+		{
+			"name": "Oslo",
+			"lat": 59.9133301,
+			"long": 10.7389701
+		},
+		{
+			"name": "Oslo",
+			"lat": 59.9133301,
+			"long": 10.7389701
+		},
+		{
+			"name": "Copenhagen",
+			"lat": 55.6867243,
+			"long": 12.5700724
+		},
+		{
+			"name": "Copenhagen",
+			"lat": 55.6867243,
+			"long": 12.5700724
+		},
+		{
+			"name": "Copenhagen",
+			"lat": 55.6867243,
+			"long": 12.5700724
+		},
+		{
+			"name": "Helsinki",
+			"lat": 60.1674881,
+			"long": 24.9427473
+		},
+		{
+			"name": "Helsinki",
+			"lat": 60.1674881,
+			"long": 24.9427473
+		},
+		{
+			"name": "Helsinki",
+			"lat": 60.1674881,
+			"long": 24.9427473
+		},
+		{
+			"name": "Athens",
+			"lat": 33.9597677,
+			"long": -83.376398
+		},
+		{
+			"name": "Athens",
+			"lat": 33.9597677,
+			"long": -83.376398
+		},
+		{
+			"name": "Athens",
+			"lat": 33.9597677,
+			"long": -83.376398
+		},
+		{
+			"name": "Lisbon",
+			"lat": 38.7077507,
+			"long": -9.1365919
+		},
+		{
+			"name": "Dublin",
+			"lat": 53.3493795,
+			"long": -6.2605593
+		},
+		{
+			"name": "Dublin",
+			"lat": 53.3493795,
+			"long": -6.2605593
+		},
+		{
+			"name": "Dublin",
+			"lat": 53.3493795,
+			"long": -6.2605593
+		},
+		{
+			"name": "Zurich",
+			"lat": 47.3744489,
+			"long": 8.5410422
+		},
+		{
+			"name": "Zurich",
+			"lat": 47.3744489,
+			"long": 8.5410422
+		},
+		{
+			"name": "Zurich",
+			"lat": 47.3744489,
+			"long": 8.5410422
+		},
+		{
+			"name": "Munich",
+			"lat": 48.1371079,
+			"long": 11.5753822
+		},
+		{
+			"name": "Munich",
+			"lat": 48.1371079,
+			"long": 11.5753822
+		},
+		{
+			"name": "Munich",
+			"lat": 48.1371079,
+			"long": 11.5753822
+		},
+		{
+			"name": "Barcelona",
+			"lat": 41.3828939,
+			"long": 2.1774322
+		},
+		{
+			"name": "Barcelona",
+			"lat": 41.3828939,
+			"long": 2.1774322
+		},
+		{
+			"name": "Barcelona",
+			"lat": 41.3828939,
+			"long": 2.1774322
+		},
+		{
+			"name": "Milan",
+			"lat": 45.4641943,
+			"long": 9.1896346
+		},
+		{
+			"name": "Milan",
+			"lat": 45.4641943,
+			"long": 9.1896346
+		},
+		{
+			"name": "Milan",
+			"lat": 45.4641943,
+			"long": 9.1896346
+		},
+		{
+			"name": "Frankfurt",
+			"lat": 50.1106444,
+			"long": 8.6820917
+		},
+		{
+			"name": "Frankfurt",
+			"lat": 50.1106444,
+			"long": 8.6820917
+		},
+		{
+			"name": "Frankfurt",
+			"lat": 50.1106444,
+			"long": 8.6820917
+		},
+		{
+			"name": "Rotterdam",
+			"lat": 51.9244424,
+			"long": 4.47775
+		},
+		{
+			"name": "Rotterdam",
+			"lat": 51.9244424,
+			"long": 4.47775
+		},
+		{
+			"name": "Rotterdam",
+			"lat": 51.9244424,
+			"long": 4.47775
+		},
+		{
+			"name": "Hamburg",
+			"lat": 53.550341,
+			"long": 10.000654
+		},
+		{
+			"name": "Hamburg",
+			"lat": 53.550341,
+			"long": 10.000654
+		},
+		{
+			"name": "Hamburg",
+			"lat": 53.550341,
+			"long": 10.000654
+		},
+		{
+			"name": "Manchester",
+			"lat": 53.4794892,
+			"long": -2.2451148
+		},
+		{
+			"name": "Manchester",
+			"lat": 53.4794892,
+			"long": -2.2451148
+		},
+		{
+			"name": "Manchester",
+			"lat": 53.4794892,
+			"long": -2.2451148
+		},
+		{
+			"name": "Glasgow",
+			"lat": 55.861155,
+			"long": -4.2501687
+		},
+		{
+			"name": "Glasgow",
+			"lat": 55.861155,
+			"long": -4.2501687
+		},
+		{
+			"name": "Glasgow",
+			"lat": 55.861155,
+			"long": -4.2501687
+		},
+		{
+			"name": "Valencia",
+			"lat": 39.4697065,
+			"long": -0.3763353
+		},
+		{
+			"name": "Valencia",
+			"lat": 39.4697065,
+			"long": -0.3763353
+		},
+		{
+			"name": "Valencia",
+			"lat": 39.4697065,
+			"long": -0.3763353
+		},
+		{
+			"name": "Seville",
+			"lat": 37.3886303,
+			"long": -5.9953403
+		},
+		{
+			"name": "Seville",
+			"lat": 37.3886303,
+			"long": -5.9953403
+		},
+		{
+			"name": "Seville",
+			"lat": 37.3886303,
+			"long": -5.9953403
+		},
+		{
+			"name": "Lyon",
+			"lat": 45.7578137,
+			"long": 4.8320114
+		},
+		{
+			"name": "Lyon",
+			"lat": 45.7578137,
+			"long": 4.8320114
+		},
+		{
+			"name": "Lyon",
+			"lat": 45.7578137,
+			"long": 4.8320114
+		},
+		{
+			"name": "Marseille",
+			"lat": 43.2961743,
+			"long": 5.3699525
+		},
+		{
+			"name": "Marseille",
+			"lat": 43.2961743,
+			"long": 5.3699525
+		},
+		{
+			"name": "Marseille",
+			"lat": 43.2961743,
+			"long": 5.3699525
+		},
+		{
+			"name": "Birmingham",
+			"lat": 52.4796992,
+			"long": -1.9026911
+		},
+		{
+			"name": "Birmingham",
+			"lat": 52.4796992,
+			"long": -1.9026911
+		},
+		{
+			"name": "Birmingham",
+			"lat": 52.4796992,
+			"long": -1.9026911
+		},
+		{
+			"name": "Cologne",
+			"lat": 43.7218277,
+			"long": 0.9774958
+		},
+		{
+			"name": "Cologne",
+			"lat": 43.7218277,
+			"long": 0.9774958
+		},
+		{
+			"name": "Cologne",
+			"lat": 43.7218277,
+			"long": 0.9774958
+		},
+		{
+			"name": "D\u00fcsseldorf",
+			"lat": 51.2254018,
+			"long": 6.7763137
+		},
+		{
+			"name": "D\u00fcsseldorf",
+			"lat": 51.2254018,
+			"long": 6.7763137
+		},
+		{
+			"name": "D\u00fcsseldorf",
+			"lat": 51.2254018,
+			"long": 6.7763137
+		},
+		{
+			"name": "Naples",
+			"lat": 40.8358846,
+			"long": 14.2487679
+		},
+		{
+			"name": "Naples",
+			"lat": 40.8358846,
+			"long": 14.2487679
+		},
+		{
+			"name": "Naples",
+			"lat": 40.8358846,
+			"long": 14.2487679
+		},
+		{
+			"name": "Turin",
+			"lat": 45.0677551,
+			"long": 7.6824892
+		},
+		{
+			"name": "Turin",
+			"lat": 45.0677551,
+			"long": 7.6824892
+		},
+		{
+			"name": "Turin",
+			"lat": 45.0677551,
+			"long": 7.6824892
+		},
+		{
+			"name": "Stuttgart",
+			"lat": 48.7784485,
+			"long": 9.1800132
+		},
+		{
+			"name": "Stuttgart",
+			"lat": 48.7784485,
+			"long": 9.1800132
+		},
+		{
+			"name": "Stuttgart",
+			"lat": 48.7784485,
+			"long": 9.1800132
+		},
+		{
+			"name": "Bordeaux",
+			"lat": 44.841225,
+			"long": -0.5800364
+		},
+		{
+			"name": "Bordeaux",
+			"lat": 44.841225,
+			"long": -0.5800364
+		},
+		{
+			"name": "Bordeaux",
+			"lat": 44.841225,
+			"long": -0.5800364
+		},
+		{
+			"name": "Florence",
+			"lat": 43.7697955,
+			"long": 11.2556404
+		},
+		{
+			"name": "Florence",
+			"lat": 43.7697955,
+			"long": 11.2556404
+		},
+		{
+			"name": "Florence",
+			"lat": 43.7697955,
+			"long": 11.2556404
+		},
+		{
+			"name": "Venice",
+			"lat": 45.4371908,
+			"long": 12.3345898
+		},
+		{
+			"name": "Venice",
+			"lat": 45.4371908,
+			"long": 12.3345898
+		},
+		{
+			"name": "Venice",
+			"lat": 45.4371908,
+			"long": 12.3345898
+		},
+		{
+			"name": "Geneva",
+			"lat": 46.2017559,
+			"long": 6.1466014
+		},
+		{
+			"name": "Geneva",
+			"lat": 46.2017559,
+			"long": 6.1466014
+		},
+		{
+			"name": "Geneva",
+			"lat": 46.2017559,
+			"long": 6.1466014
+		},
+		{
+			"name": "Zurich",
+			"lat": 47.3744489,
+			"long": 8.5410422
+		},
+		{
+			"name": "Zurich",
+			"lat": 47.3744489,
+			"long": 8.5410422
+		},
+		{
+			"name": "Zurich",
+			"lat": 47.3744489,
+			"long": 8.5410422
+		},
+		{
+			"name": "Leipzig",
+			"lat": 51.3406321,
+			"long": 12.3747329
+		},
+		{
+			"name": "Leipzig",
+			"lat": 51.3406321,
+			"long": 12.3747329
+		},
+		{
+			"name": "Leipzig",
+			"lat": 51.3406321,
+			"long": 12.3747329
+		},
+		{
+			"name": "Nuremberg",
+			"lat": 49.453872,
+			"long": 11.077298
+		},
+		{
+			"name": "Nuremberg",
+			"lat": 49.453872,
+			"long": 11.077298
+		},
+		{
+			"name": "Nuremberg",
+			"lat": 49.453872,
+			"long": 11.077298
+		},
+		{
+			"name": "Dresden",
+			"lat": 51.0493286,
+			"long": 13.7381437
+		},
+		{
+			"name": "Dresden",
+			"lat": 51.0493286,
+			"long": 13.7381437
+		},
+		{
+			"name": "Dresden",
+			"lat": 51.0493286,
+			"long": 13.7381437
+		},
+		{
+			"name": "Bratislava",
+			"lat": 48.1516988,
+			"long": 17.1093063
+		},
+		{
+			"name": "Bratislava",
+			"lat": 48.1516988,
+			"long": 17.1093063
+		},
+		{
+			"name": "Bratislava",
+			"lat": 48.1516988,
+			"long": 17.1093063
+		},
+		{
+			"name": "Ljubljana",
+			"lat": 46.0500268,
+			"long": 14.5069289
+		},
+		{
+			"name": "Ljubljana",
+			"lat": 46.0500268,
+			"long": 14.5069289
+		},
+		{
+			"name": "Ljubljana",
+			"lat": 46.0500268,
+			"long": 14.5069289
+		},
+		{
+			"name": "Zagreb",
+			"lat": 45.8130967,
+			"long": 15.9772795
+		},
+		{
+			"name": "Zagreb",
+			"lat": 45.8130967,
+			"long": 15.9772795
+		},
+		{
+			"name": "Zagreb",
+			"lat": 45.8130967,
+			"long": 15.9772795
+		},
+		{
+			"name": "Belgrade",
+			"lat": 44.8178131,
+			"long": 20.4568974
+		},
+		{
+			"name": "Belgrade",
+			"lat": 44.8178131,
+			"long": 20.4568974
+		},
+		{
+			"name": "Belgrade",
+			"lat": 44.8178131,
+			"long": 20.4568974
+		},
+		{
+			"name": "Sofia",
+			"lat": 42.6977028,
+			"long": 23.3217359
+		},
+		{
+			"name": "Sofia",
+			"lat": 42.6977028,
+			"long": 23.3217359
+		},
+		{
+			"name": "Sofia",
+			"lat": 42.6977028,
+			"long": 23.3217359
+		},
+		{
+			"name": "Skopje",
+			"lat": 41.9961816,
+			"long": 21.4319213
+		},
+		{
+			"name": "Skopje",
+			"lat": 41.9961816,
+			"long": 21.4319213
+		},
+		{
+			"name": "Skopje",
+			"lat": 41.9961816,
+			"long": 21.4319213
+		},
+		{
+			"name": "Sarajevo",
+			"lat": 43.8519774,
+			"long": 18.3866868
+		},
+		{
+			"name": "Sarajevo",
+			"lat": 43.8519774,
+			"long": 18.3866868
+		},
+		{
+			"name": "Sarajevo",
+			"lat": 43.8519774,
+			"long": 18.3866868
+		},
+		{
+			"name": "Tirana",
+			"lat": 41.3281482,
+			"long": 19.8184435
+		},
+		{
+			"name": "Tirana",
+			"lat": 41.3281482,
+			"long": 19.8184435
+		},
+		{
+			"name": "Tirana",
+			"lat": 41.3281482,
+			"long": 19.8184435
+		},
+		{
+			"name": "Chisinau",
+			"lat": 47.0245117,
+			"long": 28.8322923
+		},
+		{
+			"name": "Chisinau",
+			"lat": 47.0245117,
+			"long": 28.8322923
+		},
+		{
+			"name": "Chisinau",
+			"lat": 47.0245117,
+			"long": 28.8322923
+		},
+		{
+			"name": "Kiev",
+			"lat": 50.4500336,
+			"long": 30.5241361
+		},
+		{
+			"name": "Kiev",
+			"lat": 50.4500336,
+			"long": 30.5241361
+		},
+		{
+			"name": "Kiev",
+			"lat": 50.4500336,
+			"long": 30.5241361
+		},
+		{
+			"name": "Minsk",
+			"lat": 53.9024716,
+			"long": 27.5618225
+		},
+		{
+			"name": "Minsk",
+			"lat": 53.9024716,
+			"long": 27.5618225
+		},
+		{
+			"name": "Minsk",
+			"lat": 53.9024716,
+			"long": 27.5618225
+		},
+		{
+			"name": "Riga",
+			"lat": 56.9493977,
+			"long": 24.1051846
+		},
+		{
+			"name": "Riga",
+			"lat": 56.9493977,
+			"long": 24.1051846
+		},
+		{
+			"name": "Riga",
+			"lat": 56.9493977,
+			"long": 24.1051846
+		},
+		{
+			"name": "Vilnius",
+			"lat": 54.6870458,
+			"long": 25.2829111
+		},
+		{
+			"name": "Vilnius",
+			"lat": 54.6870458,
+			"long": 25.2829111
+		},
+		{
+			"name": "Vilnius",
+			"lat": 54.6870458,
+			"long": 25.2829111
+		},
+		{
+			"name": "Tallinn",
+			"lat": 59.4372155,
+			"long": 24.7453688
+		},
+		{
+			"name": "Tallinn",
+			"lat": 59.4372155,
+			"long": 24.7453688
+		},
+		{
+			"name": "Tallinn",
+			"lat": 59.4372155,
+			"long": 24.7453688
+		},
+		{
+			"name": "Reykjavik",
+			"lat": 64.145981,
+			"long": -21.9422367
+		},
+		{
+			"name": "Reykjavik",
+			"lat": 64.145981,
+			"long": -21.9422367
+		},
+		{
+			"name": "Reykjavik",
+			"lat": 64.145981,
+			"long": -21.9422367
+		},
+		{
+			"name": "Luxembourg",
+			"lat": 49.6112768,
+			"long": 6.129799
+		},
+		{
+			"name": "Luxembourg",
+			"lat": 49.6112768,
+			"long": 6.129799
+		},
+		{
+			"name": "Luxembourg",
+			"lat": 49.6112768,
+			"long": 6.129799
+		},
+		{
+			"name": "Lille",
+			"lat": 50.6365654,
+			"long": 3.0635282
+		},
+		{
+			"name": "Lille",
+			"lat": 50.6365654,
+			"long": 3.0635282
+		},
+		{
+			"name": "Lille",
+			"lat": 50.6365654,
+			"long": 3.0635282
+		},
+		{
+			"name": "Nice",
+			"lat": 43.7009358,
+			"long": 7.2683912
+		},
+		{
+			"name": "Nice",
+			"lat": 43.7009358,
+			"long": 7.2683912
+		},
+		{
+			"name": "Nice",
+			"lat": 43.7009358,
+			"long": 7.2683912
+		},
+		{
+			"name": "Gothenburg",
+			"lat": 57.7072326,
+			"long": 11.9670171
+		},
+		{
+			"name": "Gothenburg",
+			"lat": 57.7072326,
+			"long": 11.9670171
+		},
+		{
+			"name": "Gothenburg",
+			"lat": 57.7072326,
+			"long": 11.9670171
+		},
+		{
+			"name": "Malmo",
+			"lat": 55.6052931,
+			"long": 13.0001566
+		},
+		{
+			"name": "Malmo",
+			"lat": 55.6052931,
+			"long": 13.0001566
+		},
+		{
+			"name": "Malmo",
+			"lat": 55.6052931,
+			"long": 13.0001566
+		},
+		{
+			"name": "Turku",
+			"lat": 60.4517531,
+			"long": 22.2670522
+		},
+		{
+			"name": "Turku",
+			"lat": 60.4517531,
+			"long": 22.2670522
+		},
+		{
+			"name": "Turku",
+			"lat": 60.4517531,
+			"long": 22.2670522
+		},
+		{
+			"name": "Porto",
+			"lat": 41.1494512,
+			"long": -8.6107884
+		},
+		{
+			"name": "Porto",
+			"lat": 41.1494512,
+			"long": -8.6107884
+		},
+		{
+			"name": "Porto",
+			"lat": 41.1494512,
+			"long": -8.6107884
+		},
+		{
+			"name": "Brno",
+			"lat": 49.1922443,
+			"long": 16.6113382
+		},
+		{
+			"name": "Brno",
+			"lat": 49.1922443,
+			"long": 16.6113382
+		},
+		{
+			"name": "Brno",
+			"lat": 49.1922443,
+			"long": 16.6113382
+		},
+		{
+			"name": "Krakow",
+			"lat": 50.0619474,
+			"long": 19.9368564
+		},
+		{
+			"name": "Krakow",
+			"lat": 50.0619474,
+			"long": 19.9368564
+		},
+		{
+			"name": "Krakow",
+			"lat": 50.0619474,
+			"long": 19.9368564
+		},
+		{
+			"name": "Gdansk",
+			"lat": 54.42880315,
+			"long": 18.79832701217957
+		},
+		{
+			"name": "Wroclaw",
+			"lat": 51.1089776,
+			"long": 17.0326689
+		},
+		{
+			"name": "Wroclaw",
+			"lat": 51.1089776,
+			"long": 17.0326689
+		},
+		{
+			"name": "Wroclaw",
+			"lat": 51.1089776,
+			"long": 17.0326689
+		},
+		{
+			"name": "Cluj-Napoca",
+			"lat": 46.769379,
+			"long": 23.5899542
+		},
+		{
+			"name": "Cluj-Napoca",
+			"lat": 46.769379,
+			"long": 23.5899542
+		},
+		{
+			"name": "Cluj-Napoca",
+			"lat": 46.769379,
+			"long": 23.5899542
+		},
+		{
+			"name": "Timisoara",
+			"lat": 45.7538355,
+			"long": 21.2257474
+		},
+		{
+			"name": "Timisoara",
+			"lat": 45.7538355,
+			"long": 21.2257474
+		},
+		{
+			"name": "Timisoara",
+			"lat": 45.7538355,
+			"long": 21.2257474
+		},
+		{
+			"name": "Bucharest",
+			"lat": 44.4361414,
+			"long": 26.1027202
+		},
+		{
+			"name": "Bucharest",
+			"lat": 44.4361414,
+			"long": 26.1027202
+		},
+		{
+			"name": "Bucharest",
+			"lat": 44.4361414,
+			"long": 26.1027202
+		},
+		{
+			"name": "Plovdiv",
+			"lat": 42.1418541,
+			"long": 24.7499297
+		},
+		{
+			"name": "Plovdiv",
+			"lat": 42.1418541,
+			"long": 24.7499297
+		},
+		{
+			"name": "Plovdiv",
+			"lat": 42.1418541,
+			"long": 24.7499297
+		},
+		{
+			"name": "Novi Sad",
+			"lat": 45.2551338,
+			"long": 19.8451756
+		},
+		{
+			"name": "Novi Sad",
+			"lat": 45.2551338,
+			"long": 19.8451756
+		},
+		{
+			"name": "Novi Sad",
+			"lat": 45.2551338,
+			"long": 19.8451756
+		},
+		{
+			"name": "Podgorica",
+			"lat": 42.4415238,
+			"long": 19.2621081
+		},
+		{
+			"name": "Podgorica",
+			"lat": 42.4415238,
+			"long": 19.2621081
+		},
+		{
+			"name": "Podgorica",
+			"lat": 42.4415238,
+			"long": 19.2621081
+		},
+		{
+			"name": "Pristina",
+			"lat": 42.6638771,
+			"long": 21.1640849
+		},
+		{
+			"name": "Pristina",
+			"lat": 42.6638771,
+			"long": 21.1640849
+		},
+		{
+			"name": "Pristina",
+			"lat": 42.6638771,
+			"long": 21.1640849
+		},
+		{
+			"name": "Toulouse",
+			"lat": 43.6044622,
+			"long": 1.4442469
+		},
+		{
+			"name": "Toulouse",
+			"lat": 43.6044622,
+			"long": 1.4442469
+		},
+		{
+			"name": "Toulouse",
+			"lat": 43.6044622,
+			"long": 1.4442469
+		},
+		{
+			"name": "Lausanne",
+			"lat": 46.5218269,
+			"long": 6.6327025
+		},
+		{
+			"name": "Lausanne",
+			"lat": 46.5218269,
+			"long": 6.6327025
+		},
+		{
+			"name": "Lausanne",
+			"lat": 46.5218269,
+			"long": 6.6327025
+		},
+		{
+			"name": "The Hague",
+			"lat": 52.07494555,
+			"long": 4.2696802205364515
+		},
+		{
+			"name": "The Hague",
+			"lat": 52.07494555,
+			"long": 4.2696802205364515
+		},
+		{
+			"name": "The Hague",
+			"lat": 52.07494555,
+			"long": 4.2696802205364515
+		}
+	]
 }

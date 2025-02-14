@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        @apply text-lg;
-    }
+	html {
+		@apply text-lg;
+	}
 }
 
 body {
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	transition:
+		background-color 0.2s ease-in-out,
+		color 0.2s ease-in-out;
 }

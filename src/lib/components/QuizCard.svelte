@@ -1,76 +1,70 @@
 <script>
-  import { onMount, onDestroy } from 'svelte';
-  
-  let {
-      title = "Default title",
-      path,
-      hueRotateDegree = 0,
-      tags = [],
-      children
-  } = $props();
-  
-  let containerRef;
-  let hasBeenVisible = $state(false);  // Changed from isVisible to hasBeenVisible
-  let observer;
-  
-  onMount(() => {
-      observer = new IntersectionObserver(
-          (entries) => {
-              entries.forEach(entry => {
-                  if (entry.isIntersecting) {
-                      // Once visible, set to true and disconnect the observer
-                      hasBeenVisible = true;
-                      // We can disconnect the observer since we don't need it anymore
-                      observer.disconnect();
-                  }
-              });
-          },
-          {
-              root: null,
-              rootMargin: '50px',
-              threshold: 0.1
-          }
-      );
-  
-      if (containerRef) {
-          observer.observe(containerRef);
-      }
-  });
-  
-  onDestroy(() => {
-      if (observer) {
-          observer.disconnect();
-      }
-  });
-  </script>
-  
-  <div
-      bind:this={containerRef}
-      class="card w-64 bg-base-200 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300"
-  >
-      <div class="card-body flex flex-col h-full">
-          <div class="flex-grow">
-              <h3 class="card-title text-xl mb-6 text-wrap h-10 items-start">
-                  {title}
-              </h3>
-              <div class="flex flex-wrap gap-2 mb-2">
-                  {#each tags || [] as tag}
-                      <span class="badge badge-accent">{tag}</span>
-                  {/each}
-              </div>
-              <!-- Render children once it has been visible -->
-              {#if hasBeenVisible}
-                  {@render children?.()}
-              {/if}
-          </div>
-          <div class="card-actions justify-end mt-auto">
-              <a
-                  href={path.replace("/+page.svelte", "")}
-                  style="filter: hue-rotate({hueRotateDegree}deg)"
-                  class="btn btn-secondary btn-md -mb-1 mt-2"
-              >
-                  Start Quiz
-              </a>
-          </div>
-      </div>
-  </div>
+	import { onMount, onDestroy } from "svelte";
+
+	let { title = "Default title", path, hueRotateDegree = 0, tags = [], children } = $props();
+
+	let containerRef;
+	let hasBeenVisible = $state(false); // Changed from isVisible to hasBeenVisible
+	let observer;
+
+	onMount(() => {
+		observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// Once visible, set to true and disconnect the observer
+						hasBeenVisible = true;
+						// We can disconnect the observer since we don't need it anymore
+						observer.disconnect();
+					}
+				});
+			},
+			{
+				root: null,
+				rootMargin: "50px",
+				threshold: 0.1,
+			},
+		);
+
+		if (containerRef) {
+			observer.observe(containerRef);
+		}
+	});
+
+	onDestroy(() => {
+		if (observer) {
+			observer.disconnect();
+		}
+	});
+</script>
+
+<div
+	bind:this={containerRef}
+	class="card w-64 bg-base-200 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300"
+>
+	<div class="card-body flex flex-col h-full">
+		<div class="flex-grow">
+			<h3 class="card-title text-xl mb-6 text-wrap h-10 items-start">
+				{title}
+			</h3>
+			<div class="flex flex-wrap gap-2 mb-2">
+				{#each tags || [] as tag}
+					<span class="badge badge-accent">{tag}</span>
+				{/each}
+			</div>
+			<!-- Render children once it has been visible -->
+			{#if hasBeenVisible}
+				{@render children?.()}
+			{/if}
+		</div>
+		<div class="card-actions justify-end mt-auto">
+			<a
+				href={path.replace("/+page.svelte", "")}
+				style="filter: hue-rotate({hueRotateDegree}deg)"
+				class="btn btn-secondary btn-md -mb-1 mt-2"
+			>
+				Start Quiz
+			</a>
+		</div>
+	</div>
+</div>
