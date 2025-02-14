@@ -3,9 +3,17 @@
 	import { Info } from "lucide-svelte";
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
 	import { onMount } from "svelte";
+	import { countryStore } from "$lib/stores/countryStore";
 
-	onMount(() => {
+	onMount(async () => {
 		setTitle("Learn Countries");
+		// Only fetch if data isn't already in store
+		if (!$countryStore.countryCodes) {
+			await countryStore.fetchCountryCodes();
+		}
+		if (!$countryStore.favoriteCountries.length) {
+			await countryStore.fetchFavorites();
+		}
 	});
 </script>
 
@@ -281,6 +289,3 @@
 		</div>
 	</div>
 </article>
-
-<style>
-</style>
