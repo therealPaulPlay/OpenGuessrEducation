@@ -10,8 +10,8 @@ function createCountryStore() {
       try {
          const codes = await fetch("/json/countryCodes.json");
          const jsonCodes = await codes.json();
-         update((state) => ({ 
-            ...state, 
+         update((state) => ({
+            ...state,
             countryCodes: jsonCodes,
          }));
       } catch (error) {
@@ -28,8 +28,8 @@ function createCountryStore() {
             "/json/country-data/favorite-countries.json",
          );
          const parsedFavorites = await favorites.json();
-         update((state) => ({ 
-            ...state, 
+         update((state) => ({
+            ...state,
             favoriteCountries: parsedFavorites?.favorites || [],
          }));
       } catch (error) {

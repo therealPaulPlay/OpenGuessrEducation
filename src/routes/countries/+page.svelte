@@ -1,20 +1,20 @@
 <script>
-    import CountryLink from "$lib/components/CountryLink.svelte";
-    import { Info } from "lucide-svelte";
-    import { setTitle } from '$lib/utils/pageTitle.svelte.js';
-    import { onMount } from "svelte";
-    import { countryStore } from '$lib/stores/countryStore';
+	import CountryLink from "$lib/components/CountryLink.svelte";
+	import { Info } from "lucide-svelte";
+	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
+	import { onMount } from "svelte";
+	import { countryStore } from "$lib/stores/countryStore";
 
-    onMount(async () => {
-        setTitle("Learn Countries");
-        // Only fetch if data isn't already in store
-        if (!$countryStore.countryCodes) {
-            await countryStore.fetchCountryCodes();
-        }
-        if (!$countryStore.favoriteCountries.length) {
-            await countryStore.fetchFavorites();
-        }
-    });
+	onMount(async () => {
+		setTitle("Learn Countries");
+		// Only fetch if data isn't already in store
+		if (!$countryStore.countryCodes) {
+			await countryStore.fetchCountryCodes();
+		}
+		if (!$countryStore.favoriteCountries.length) {
+			await countryStore.fetchFavorites();
+		}
+	});
 </script>
 
 <article class="container mx-auto p-6 px-1">
@@ -289,6 +289,3 @@
 		</div>
 	</div>
 </article>
-
-<style>
-</style>
