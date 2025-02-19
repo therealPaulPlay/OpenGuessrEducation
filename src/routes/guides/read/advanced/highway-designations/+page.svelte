@@ -46,87 +46,208 @@
       <tr
         ><td><b>I</b></td><td><b>USA</b></td><td>Continental</td><td
           >Interstate</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>US</b></td><td><b>USA</b></td><td>Continental</td><td
           >United States Route</td
-        ></tr>
+        ></tr
+      >
+      <tr
+        ><td><b>Rd</b></td><td
+          ><b>United States, Australia, Thailand, Canada</b></td
+        ><td>Continental</td><td>Road</td></tr
+      >
+      <tr
+        ><td><b>Dr</b></td><td><b>USA</b></td><td>Continental</td><td
+          >Driveway/Drive</td
+        ></tr
+      >
+      <tr
+        ><td><b>Hwy</b></td><td><b>USA</b></td><td>Continental</td><td
+          >Highway</td
+        ></tr
+      >
       <tr
         ><td><b>S</b></td><td><b>USA</b></td><td>Continental</td><td
           >State Route</td
-        ></tr>
+        ></tr
+      >
+      <tr
+        ><td><b>D</b></td><td><b>France, Turkey</b></td><td>Europe</td><td>-</td
+        ></tr
+      >
       <tr
         ><td><b>PTH</b></td><td><b>Canada</b></td><td>Continental</td><td
           >Provincial Trunk Highway</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>BR</b></td><td><b>Brazil</b></td><td>Continental</td><td
           >Brazilian Federal Highway</td
-        ></tr>
+        ></tr
+      >
       <tr
-        ><td><b>SP</b></td><td><b>Brazil</b></td><td>Continental</td><td
-          >São Paulo State Highway</td
-        ></tr>
+        ><td><b>SP</b></td><td><b>Brazil, Italy</b></td><td>Continental</td><td
+          >São Paulo State Highway (Or italy)</td
+        ></tr
+      >
       <tr
         ><td><b>M</b></td><td><b>Australia</b></td><td>Worldwide</td><td
           >Motorway</td
-        ></tr>
-      <tr
-        ><td><b>RP</b></td><td><b>Argentina</b></td><td>Country</td><td
-          >Ruta Provincial</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>RPXXX</b></td><td><b>Argentina</b></td><td>Country</td><td
+          >Ruta Provincial</td
+        ></tr
+      >
+      <tr
+        ><td><b>RNXXX</b></td><td><b>Argentina</b></td><td>Country</td><td
           >Ruta National Missing the brazil typical <b>-</b>.</td
-        ></tr>
+        ></tr
+      >
       <tr
-        ><td><b>E</b></td><td><b>Europe</b></td><td>Worldwide</td><td
-          >European Route</td
-        ></tr>
+        ><td><b>E</b></td><td
+          ><b
+            >Turkey, Belgium, Spain, Italy, Ukraine, Croatia, Montenegro, Russia</b
+          ></td
+        ><td>Europe</td><td>European Route</td></tr
+      >
       <tr
-        ><td><b>A</b></td><td><b>Germany</b></td><td>Worldwide</td><td
-          >Germany Autobahn</td
-        ></tr>
+        ><td><b>E-</b></td><td><b>Spain</b></td><td>Europe</td><td
+          >Spanish Road has the dash <b>-</b></td
+        ></tr
+      >
+      <tr><td><b>N-</b></td><td><b>Spain</b></td><td>Europe</td><td>-</td></tr>
+      <tr
+        ><td><b>Cam.</b></td><td><b>Spain, Mexico</b></td><td>Contry</td><td
+          >Camio</td
+        ></tr
+      >
+      <tr
+        ><td><b>IP</b></td><td><b>Portugal</b></td><td>Contry</td><td>-</td></tr
+      >
+      <tr
+        ><td><b>AB-</b></td><td><b>Alberta (Canada), Spain</b></td><td
+          >Continental</td
+        ><td>-</td></tr
+      >
+      <tr><td><b>AP-</b></td><td><b>Spain</b></td><td>Country</td><td>-</td></tr
+      >
+      <tr
+        ><td><b>N</b></td><td><b>France, Netherlands, Ireland, Spain</b></td><td
+          >Europe</td
+        ><td>-</td></tr
+      >
+      <tr
+        ><td><b>B</b></td><td><b>Germany, Namibia</b></td><td>Europe</td><td
+          >German Bundesstraße</td
+        ></tr
+      >
+      <tr><td><b>H</b></td><td><b>Ukraine</b></td><td>Europe</td><td>-</td></tr>
+      <tr
+        ><td><b>P</b></td><td><b>Ukraine, Lativa, Russia</b></td><td>Europe</td
+        ><td>-</td></tr
+      >
+      <tr><td><b>T</b></td><td><b>Ukraine</b></td><td>Europe</td><td>-</td></tr>
+      <tr
+        ><td><b>M</b></td><td
+          ><b>England, Ireland, Hungary, Ukraine, Australia</b></td
+        ><td>Worldwide</td><td>-</td></tr
+      >
+      <tr><td><b>M-</b></td><td><b>Russia</b></td><td>Europe</td><td>-</td></tr>
+      <tr
+        ><td><b>M.</b></td><td><b>Bosnia and Herzegovina</b></td><td>Europe</td
+        ><td>-</td></tr
+      >
+      <tr><td><b>Ma</b></td><td><b>Palma</b></td><td>Europe</td><td>-</td></tr>
+      <tr><td><b>SS</b></td><td><b>Italy</b></td><td>Europe</td><td>-</td></tr>
+      <tr
+        ><td><b>A</b></td><td
+          ><b
+            >France, South Africa, Germany, Netherlands, England, Portugal,
+            Spain, Italy</b
+          ></td
+        ><td>Worldwide</td><td>Germany Autobahn</td></tr
+      >
       <tr
         ><td><b>BR-</b></td><td><b>Brazil</b></td><td>Continental</td><td
           >Federal Roads (e.g., BR-101)</td
-        ></tr>
-      <tr
-        ><td><b>AL-</b></td><td><b>Alabama, USA</b></td><td>Continental</td><td
-          >State Route (commonly used in southern states)</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>R</b></td><td><b>Russia</b></td><td>Country</td><td
           >Russian Federal Roads (e.g., R-123)</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>NH</b></td><td><b>India</b></td><td>Country</td><td
           >National Highway (e.g., NH-44)</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>S</b></td><td><b>South Africa</b></td><td>Worldwide</td><td
           >Secondary Roads (e.g., S1)</td
-        ></tr>
+        ></tr
+      >
+      <tr><td><b>CM-</b></td><td><b>Spain</b></td><td>Country</td><td>-</td></tr
+      >
+      <tr
+        ><td><b>CU-V-</b></td><td><b>Spain</b></td><td>Country</td><td>-</td
+        ></tr
+      >
+      <tr
+        ><td><b>CUV-</b></td><td><b>Spain</b></td><td>Country</td><td>-</td></tr
+      >
+      <tr
+        ><td><b>Rue</b></td><td><b>France</b></td><td>Country</td><td
+          >French street</td
+        ></tr
+      >
+      <tr
+        ><td><b>Strada</b></td><td><b>Italy</b></td><td>Country</td><td
+          >Italian street</td
+        ></tr
+      >
+      <tr
+        ><td><b>Via</b></td><td><b>Italy</b></td><td>Country</td><td
+          >Italian street</td
+        ></tr
+      >
+      <tr
+        ><td><b>Straße</b></td><td><b>Germany, Switzerland, Austria</b></td><td>Country</td><td
+          >Mostlikely Germany streets</td
+        ></tr
+      >
+      <tr
+        ><td><b>Weg</b></td><td><b>Germany, Switzerland, Austria</b></td><td>Country</td><td
+          >-</td
+        ></tr
+      >
       <tr
         ><td><b>Rv</b></td><td><b>Norway</b></td><td>Country</td><td
           >Stands for "Riksvei," meaning National Road.</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>Fv</b></td><td><b>Norway</b></td><td>Country</td><td
           >County Roads (Fylkesvei), often smaller and regional roads.</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>CH</b></td><td><b>Chile</b></td><td>Country</td><td
           >Carreteras, national highways designated by numbers (e.g., CH-5).</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>SH</b></td><td><b>New Zealand</b></td><td>Country</td><td
           >State Highways, the primary highway network in New Zealand.</td
-        ></tr>
+        ></tr
+      >
     </tbody>
   </table>
 </div>
-<hr class="my-4 border-t-2 border-gray-300" />
 
 <!-- Australian Highways -->
 <h2 id="australia" class="text-2xl font-bold mt-8 mb-2">Australia</h2>
@@ -156,11 +277,13 @@
           >The major motorway connecting cities along <b
             >Australia's east coast.</b
           ></td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>A1</b></td><td
           >The national route that <b>circumnavigates Australia.</b></td
-        ></tr>
+        ></tr
+      >
       <tr><td><b>B100</b></td><td>A regional road designation.</td></tr>
     </tbody>
   </table>
@@ -185,7 +308,8 @@
       <tr
         ><td><b>ACT</b></td><td>Australian Capital Territory</td><td
           >Southeast</td
-        ></tr>
+        ></tr
+      >
       <tr><td><b>NSW</b></td><td>New South Wales</td><td>Southeast</td></tr>
       <tr><td><b>NT</b></td><td>Northern Territory</td><td>North</td></tr>
       <tr><td><b>QLD</b></td><td>Queensland</td><td>Northeast</td></tr>
@@ -196,7 +320,6 @@
     </tbody>
   </table>
 </div>
-<hr class="my-4 border-t-2 border-gray-300" />
 
 <!-- Brazilian Highways -->
 <h2 id="brazil" class="text-2xl font-bold mt-8 mb-2">Brazil</h2>
@@ -246,24 +369,29 @@
       <tr
         ><td><b>000-099</b></td><td
           >Radial highways that run <b>from Brasília to the edges</b> of the country.</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>100-199</b></td><td
           >Longitudinal highways that run in a <b>north-south direction.</b></td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>200-299</b></td><td
           >Transversal highways that run in an <b>east-west direction.</b></td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>300-399</b></td><td
           ><b>Diagonal highways</b> that cross the country in two ways:
           <b>northwest-southeast or northeast-southwest.</b></td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>400-499</b></td><td
           ><b>Connecting highways</b> that interconnect two major highways.</td
-        ></tr>
+        ></tr
+      >
     </tbody>
   </table>
 </div>
@@ -280,7 +408,8 @@
 
 <ArticleTip>
   Highways with <b>RNXXX</b> (ex: RN127) are located in Argentina, not in
-  <b>Rio Grande do Norte</b>.</ArticleTip>
+  <b>Rio Grande do Norte</b>.</ArticleTip
+>
 
 <h3 class="text-lg font-bold mt-4">Brazil Abbreviation List</h3>
 <div class="overflow-x-auto">
@@ -304,8 +433,8 @@
       <tr><td><b>GO</b></td><td>Goiás</td><td>Central-West</td></tr>
       <tr><td><b>MA</b></td><td>Maranhão</td><td>North-East</td></tr>
       <tr><td><b>MT</b></td><td>Mato Grosso</td><td>Central-West</td></tr>
-      <tr
-        ><td><b>MS</b></td><td>Mato Grosso do Sul</td><td>Central-West</td></tr>
+      <tr><td><b>MS</b></td><td>Mato Grosso do Sul</td><td>Central-West</td></tr
+      >
       <tr><td><b>MG</b></td><td>Minas Gerais</td><td>Southeast</td></tr>
       <tr><td><b>PA</b></td><td>Pará</td><td>North</td></tr>
       <tr><td><b>PB</b></td><td>Paraíba</td><td>North-East</td></tr>
@@ -321,7 +450,6 @@
     </tbody>
   </table>
 </div>
-<hr class="my-4 border-t-2 border-gray-300" />
 
 <!-- Canadian Highways -->
 <h2 id="canada" class="text-xl font-bold mt-4 mb-2">Canada</h2>
@@ -343,16 +471,19 @@
       <tr
         ><td><b>ON-401</b></td><td
           >Ontario Highway 401, one of the busiest highways in North America.</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>AB-2</b></td><td
           >Alberta Highway 2, a major north-south route.</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>PTH 1</b></td><td
           >Provincial Trunk Highway 1 in Manitoba, part of the Trans-Canada
           Highway.</td
-        ></tr>
+        ></tr
+      >
     </tbody>
   </table>
 </div>
@@ -381,24 +512,24 @@
       <tr><td><b>NB</b></td><td>New Brunswick</td><td>East Canada</td></tr>
       <tr
         ><td><b>NL</b></td><td>Newfoundland and Labrador</td><td>East Canada</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>NT</b></td><td>Northwest Territories</td><td>North Canada</td
-        ></tr>
+        ></tr
+      >
       <tr><td><b>NS</b></td><td>Nova Scotia</td><td>East Canada</td></tr>
       <tr><td><b>NU</b></td><td>Nunavut</td><td>North Canada</td></tr>
       <tr><td><b>ON</b></td><td>Ontario</td><td>Central Canada</td></tr>
       <tr
-        ><td><b>PE</b></td><td>Prince Edward Island</td><td>East Canada</td
-        ></tr>
+        ><td><b>PE</b></td><td>Prince Edward Island</td><td>East Canada</td></tr
+      >
       <tr><td><b>QC</b></td><td>Quebec</td><td>East Canada</td></tr>
       <tr><td><b>SK</b></td><td>Saskatchewan</td><td>Central Canada</td></tr>
       <tr><td><b>YT</b></td><td>Yukon Territory</td><td>North Canada</td></tr>
     </tbody>
   </table>
 </div>
-
-<hr class="my-4 border-t-2 border-gray-300" />
 
 <!-- United States Highways -->
 <h2 id="united-states" class="text-xl font-bold mt-4 mb-2">United States</h2>
@@ -421,14 +552,16 @@
     <tbody>
       <tr
         ><td><b>I-95</b></td><td>Interstate 95 runs along the East Coast.</td
-        ></tr>
+        ></tr
+      >
       <tr
         ><td><b>US 66</b></td><td
           >Historic Route 66, known as "Main Street of America."</td
-        ></tr>
+        ></tr
+      >
       <tr
-        ><td><b>SR 520</b></td><td>State Route 520 in Washington State.</td
-        ></tr>
+        ><td><b>SR 520</b></td><td>State Route 520 in Washington State.</td></tr
+      >
       <tr><td><b>AR-15</b></td><td>Arkansas Highway 15.</td></tr>
     </tbody>
   </table>
@@ -507,7 +640,6 @@
     </tbody>
   </table>
 </div>
-<hr class="my-4 border-t-2 border-gray-300" />
 
 <GuideQuiz
   question="Where could the highway 'NY-8' be located?"
@@ -515,7 +647,7 @@
   answerTwo="Kansas"
   answerThree="New York"
   answerFour="Texas"
-  correctAnswer={3}>
-</GuideQuiz>
+  correctAnswer={3}
+></GuideQuiz>
 
-<p class="italic mt-4">Written by w0lfzk1nd from the Discord Server</p>
+<p class="italic mt-4">Written by w0lfzk1nd, Enhanced by Zander from the Discord Server</p>
