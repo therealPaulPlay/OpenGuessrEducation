@@ -107,10 +107,10 @@
 	/>
 </div>
 <p class="text-center mb-4">
-	Swiss languages 
+	Swiss languages. (Source: 
 	<a href="https://commons.wikimedia.org/wiki/File:Map_Languages_CH.png" target="_blank" class="text-secondary">
-		(Source: Wikimedia).</a
-	>
+		Wikimedia</a
+	>).
 </p>
 <ul class="mb-2 list-disc list-inside">
 	<li><b>German-speaking region:</b> Covers the <b>north</b> and <b>center</b> of Switzerland.</li>
@@ -135,14 +135,14 @@
 	/>
 </div>
 <p class="text-center mb-4">
-	Swiss wooden chalet 
+	Swiss wooden chalet. (Source: 
 	<a
 		href="https://commons.wikimedia.org/wiki/File:Chalet,_Weisstannen-Oberdorf_SG_20220806-jag9889.jpg"
 		target="_blank"
 		class="text-secondary"
 	>
-		(Source: Wikimedia).</a
-	>
+		Wikimedia</a
+	>).
 </p>
 
 <h3 class="text-xl font-bold mt-8 mb-2">Landscape & mountains</h3>
@@ -180,15 +180,15 @@
 </div>
 <p class="text-center mb-4">
 	Typical swiss <b
-		>PostAuto Bus 
+		>PostAuto Bus</b>. (Source: 
 		<a
 			href="https://commons.wikimedia.org/wiki/File:MAN_Lion%27s_City_in_Sion_VS.jpg"
 			target="_blank"
 			class="text-secondary"
 		>
-			(Source: Wikimedia).</a
-		>
-	</b>
+			Wikimedia</a
+		>).
+	
 </p>
 <p class="mb-2">
 	<b>Bus cars:</b> <b>Yellow post (PostAuto) buses</b> are common but <b>not useful</b> for location identification. Sometimes can also be <b>green</b> busses.
@@ -198,7 +198,7 @@
 <ArticleEmbedPanorama
 	src="https://www.google.com/maps/embed?pb=!4v1740935186858!6m8!1m7!1s4HE_526mhQouIvCeUW439A!2m2!1d47.55906336708236!2d7.599000236224938!3f310.75863344643045!4f-9.002818312533904!5f2.4387869201839716"
 />
-<p class="text-left mt-2 mb-4">Typical swiss roadlines and crosswalks.</p>
+<p class="text-center mt-2 mb-4">Typical swiss roadlines and crosswalks.</p>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">License plates & codes</h2>
 <div class="flex flex-wrap justify-left items-left">
@@ -209,13 +209,13 @@
 	/>
 </div>
 <p class="text-left mt-2 mb-4 ml-2">
-	Licenseplate of switzerland (bern) <a
+	Licenseplate of switzerland (bern). (Source: <a
 		href="https://commons.wikimedia.org/wiki/File:Swiss_license_plates_for_dealers.JPG"
 		target="_blank"
 		class="text-secondary"
 	>
-		(Source: Wikimedia).</a
-	>
+		Wikimedia</a
+	>).
 </p>
 <p>Swiss license plates do not have the blue stripe on the left, like most countries in europe.</p>
 <p>Cars in switzerland commonly have a <b>CH</b> sticker on the rear window or on the trunk.</p>
@@ -228,13 +228,13 @@
 	/>
 </div>
 <p class="text-center mt-2 mb-4 ml-2">
-	Swiss CH sticker for cars <a
+	Swiss CH sticker for cars. (Source: <a
 		href="https://commons.wikimedia.org/wiki/File:CH_international_vehicle_registration_oval.svg"
 		target="_blank"
 		class="text-secondary"
 	>
-		(Source: Wikimedia).</a
-	>
+		Wikimedia</a
+	>).
 </p>
 
 <ul class="mb-2 list-disc list-inside">
