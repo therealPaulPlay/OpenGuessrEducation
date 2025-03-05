@@ -27,6 +27,9 @@
 <ArticleEmbedPanorama
 	src="https://www.google.com/maps/embed?pb=!4v1730050531195!6m8!1m7!1sCoiClDnLS-FzE6IQfQ1PcA!2m2!1d41.31649709254255!2d19.83984365534879!3f231.53028426853183!4f0.9043993737237344!5f0.7820865974627469"
 />
+<ArticleEmbedPanorama
+	src="https://www.google.com/maps/embed?pb=!4v1730050531195!6m8!1m7!1sCoiClDnLS-FzE6IQfQ1PcA!2m2!1d41.31649709254255!2d19.83984365534879!3f231.53028426853183!4f0.9043993737237344!5f0.7820865974627469"
+/>
 <p class="text-center mt-2">A drop in Tirana.</p>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Strategies</h2>

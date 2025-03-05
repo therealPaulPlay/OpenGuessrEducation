@@ -1,35 +1,30 @@
 <script>
-  import ArticleTip from "$lib/components/ArticleTip.svelte";
-  import GuideQuiz from "$lib/components/GuideQuiz.svelte";
+	import ArticleTip from "$lib/components/ArticleTip.svelte";
+	import GuideQuiz from "$lib/components/GuideQuiz.svelte";
 </script>
 
 <h1 class="text-4xl font-bold mb-4">Highway Designations</h1>
 
 <p class="mb-2">
-  Understanding highway naming conventions is crucial for navigation and
-  geographical identification.<br />
-  This guide covers the naming systems used in <b>North America</b> (USA and
-  Canada), <b>Brazil</b>, <b>Australia</b> and some from
-  <b>around the world</b>, highlighting state abbreviations and unique
-  identifiers.
+	Understanding highway naming conventions is crucial for navigation and geographical identification.<br />
+	This guide covers the naming systems used in <b>North America</b> (USA and Canada), <b>Brazil</b>, <b>Australia</b>
+	and some from
+	<b>around the world</b>, highlighting state abbreviations and unique identifiers.
 </p>
 
 <ArticleTip>
-  Keep in mind that highway naming conventions can vary significantly between
-  regions, so it's essential to familiarize yourself with local practices.
+	Keep in mind that highway naming conventions can vary significantly between regions, so it's essential to familiarize
+	yourself with local practices.
 </ArticleTip>
 
 <!-- Abbreviations for Road Types Worldwide -->
-<h2 id="world-wide" class="text-xl font-bold mt-4 mb-2">
-  Highway Designations Worldwide
-</h2>
+<h2 id="world-wide" class="text-xl font-bold mt-4 mb-2">Highway Designations Worldwide</h2>
 <p class="mb-2">
-  All countries and areas of the world have some kind of designation for the
-  names of their highways and roads.<br />
-  Please note that many of these <b>worldwide</b> abbreviations can be used
-  <b>in multiple regions!</b><br />
-  These <b>are not</b> definitive indicators of a specific country.<br />
-  Some of them are listed here:
+	All countries and areas of the world have some kind of designation for the names of their highways and roads.<br />
+	Please note that many of these <b>worldwide</b> abbreviations can be used
+	<b>in multiple regions!</b><br />
+	These <b>are not</b> definitive indicators of a specific country.<br />
+	Some of them are listed here:
 </p>
 
 <div class="overflow-x-auto">
@@ -252,15 +247,11 @@
 <!-- Australian Highways -->
 <h2 id="australia" class="text-2xl font-bold mt-8 mb-2">Australia</h2>
 <p class="mb-2">
-  Australian highways are designated using a <b
-    >combination of letters and numbers.</b
-  ><br />
-  <b>Major highways</b> are often prefixed with an
-  <b>"M" for motorway</b>
-  or <b>"A" for national routes.</b><br />
-  <i
-    >Keep in mind that <b>A</b> is used in a lot of areas of the world! For example:
-  </i>
+	Australian highways are designated using a <b>combination of letters and numbers.</b><br />
+	<b>Major highways</b> are often prefixed with an
+	<b>"M" for motorway</b>
+	or <b>"A" for national routes.</b><br />
+	<i>Keep in mind that <b>A</b> is used in a lot of areas of the world! For example: </i>
 </p>
 
 <div class="overflow-x-auto">
@@ -290,8 +281,8 @@
 </div>
 
 <p class="mb-2">
-  Each state may also have its own numbering system for local roads, which can
-  include state abbreviations (e.g., "NSW" for New South Wales).
+	Each state may also have its own numbering system for local roads, which can include state abbreviations (e.g., "NSW"
+	for New South Wales).
 </p>
 
 <h3 class="text-lg font-bold mt-4">Australia Abbreviation List</h3>
@@ -324,37 +315,36 @@
 <!-- Brazilian Highways -->
 <h2 id="brazil" class="text-2xl font-bold mt-8 mb-2">Brazil</h2>
 <p class="mb-2">
-  In Brazil, <b>federal highways</b> are designated with the prefix
-  <b>BR</b>, followed by <b>a number</b> (e.g., <b>BR-101</b>).<br />
-  <b>State highways</b> typically follow the format of <b>YY-XXX</b>, where YY
-  is the state's abbreviation and XXX is a number.<br />
-  For example:
+	In Brazil, <b>federal highways</b> are designated with the prefix
+	<b>BR</b>, followed by <b>a number</b> (e.g., <b>BR-101</b>).<br />
+	<b>State highways</b> typically follow the format of <b>YY-XXX</b>, where YY is the state's abbreviation and XXX is a
+	number.<br />
+	For example:
 </p>
 
 <div class="overflow-x-auto">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Abbreviation</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td><b>SP-280</b></td><td>São Paulo State Highway 280.</td></tr>
-      <tr><td><b>RJ-116</b></td><td>Rio de Janeiro State Highway 116.</td></tr>
-      <tr><td><b>PR-323</b></td><td>Paraná State Highway 323.</td></tr>
-    </tbody>
-  </table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Abbreviation</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr><td><b>SP-280</b></td><td>São Paulo State Highway 280.</td></tr>
+			<tr><td><b>RJ-116</b></td><td>Rio de Janeiro State Highway 116.</td></tr>
+			<tr><td><b>PR-323</b></td><td>Paraná State Highway 323.</td></tr>
+		</tbody>
+	</table>
 </div>
 
 <p class="mb-2">
-  The first digit of the number can indicate its category within the National
-  Road System.<br />
-  For instance, numbers <b>below 50</b> are typically located
-  <b>east of Brasília</b>,<br />
-  while those <b>above 50</b> are found to <b>the west.</b><br /><br />
-  Understanding these numbering conventions can greatly assist in identifying your
-  location while navigating Brazilian roads. Specifically:
+	The first digit of the number can indicate its category within the National Road System.<br />
+	For instance, numbers <b>below 50</b> are typically located
+	<b>east of Brasília</b>,<br />
+	while those <b>above 50</b> are found to <b>the west.</b><br /><br />
+	Understanding these numbering conventions can greatly assist in identifying your location while navigating Brazilian roads.
+	Specifically:
 </p>
 
 <div class="overflow-x-auto">
@@ -397,13 +387,12 @@
 </div>
 
 <p class="my-2">
-  For example, the <b>BR-101</b> is a major <b>longitudinal highway</b>
-  running along the <b>eastern coast</b>,<br />
-  while the <b>BR-230</b> (Transamazônica) runs from
-  <b>east to west across northern Brazil</b>.<br /><br />
-  Additionally, some states, like <b>Santa Catarina (SC)</b>, have their
-  <b>local numbering systems</b> that align with national ones, creating a sequence
-  of numbers for easier navigation.
+	For example, the <b>BR-101</b> is a major <b>longitudinal highway</b>
+	running along the <b>eastern coast</b>,<br />
+	while the <b>BR-230</b> (Transamazônica) runs from
+	<b>east to west across northern Brazil</b>.<br /><br />
+	Additionally, some states, like <b>Santa Catarina (SC)</b>, have their
+	<b>local numbering systems</b> that align with national ones, creating a sequence of numbers for easier navigation.
 </p>
 
 <ArticleTip>
@@ -454,9 +443,9 @@
 <!-- Canadian Highways -->
 <h2 id="canada" class="text-xl font-bold mt-4 mb-2">Canada</h2>
 <p class="mb-2">
-  Canadian highways follow a <b>similar convention to the United States</b>
-  but often <b>include the province's abbreviation.</b><br />
-  For example:
+	Canadian highways follow a <b>similar convention to the United States</b>
+	but often <b>include the province's abbreviation.</b><br />
+	For example:
 </p>
 
 <div class="overflow-x-auto">
@@ -489,10 +478,8 @@
 </div>
 
 <p class="mb-2">
-  <br />The Trans-Canada Highway is a significant route that crosses all
-  provinces, marked as <b>TCH</b>.<br />
-  Provincial highways often use different designations depending on the province
-  (e.g., <b>"Hwy"</b> or <b>"Rte"</b>).
+	<br />The Trans-Canada Highway is a significant route that crosses all provinces, marked as <b>TCH</b>.<br />
+	Provincial highways often use different designations depending on the province (e.g., <b>"Hwy"</b> or <b>"Rte"</b>).
 </p>
 
 <h3 class="text-lg font-bold mt-4">Canada Abbreviation List</h3>
@@ -534,11 +521,11 @@
 <!-- United States Highways -->
 <h2 id="united-states" class="text-xl font-bold mt-4 mb-2">United States</h2>
 <p class="mb-2">
-  In the United States, <b>highways</b> are typically designated by
-  <b>a number</b>, often preceded by <b>a letter or two</b> indicating the
-  <b>type of road</b>
-  or <b>the state</b> they are in.<br />
-  For example:
+	In the United States, <b>highways</b> are typically designated by
+	<b>a number</b>, often preceded by <b>a letter or two</b> indicating the
+	<b>type of road</b>
+	or <b>the state</b> they are in.<br />
+	For example:
 </p>
 
 <div class="overflow-x-auto">
@@ -568,77 +555,77 @@
 </div>
 
 <p class="mb-2">
-  <br /><b>Highways</b> are often numbered such that
-  <b>odd numbers run north-south</b>
-  and <b>even numbers run east-west.</b><br />
-  <b>State highways</b> may also include the state abbreviation, such as
-  <b>CA-1</b>
-  for California Highway 1.
+	<br /><b>Highways</b> are often numbered such that
+	<b>odd numbers run north-south</b>
+	and <b>even numbers run east-west.</b><br />
+	<b>State highways</b> may also include the state abbreviation, such as
+	<b>CA-1</b>
+	for California Highway 1.
 </p>
 
 <h3 class="text-xl font-bold mt-4 mb-2">United States Abbreviation List</h3>
 <div class="overflow-x-auto">
-  <table class="table-sm">
-    <thead>
-      <tr>
-        <th>Abbreviation</th>
-        <th>State/Province</th>
-        <th>Region</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td><b>AL</b></td><td>Alabama</td><td>South</td></tr>
-      <tr><td><b>AK</b></td><td>Alaska</td><td>West</td></tr>
-      <tr><td><b>AZ</b></td><td>Arizona</td><td>West</td></tr>
-      <tr><td><b>AR</b></td><td>Arkansas</td><td>South</td></tr>
-      <tr><td><b>CA</b></td><td>California</td><td>West</td></tr>
-      <tr><td><b>CO</b></td><td>Colorado</td><td>West</td></tr>
-      <tr><td><b>CT</b></td><td>Connecticut</td><td>Northeast</td></tr>
-      <tr><td><b>DE</b></td><td>Delaware</td><td>South</td></tr>
-      <tr><td><b>FL</b></td><td>Florida</td><td>South</td></tr>
-      <tr><td><b>GA</b></td><td>Georgia</td><td>South</td></tr>
-      <tr><td><b>HI</b></td><td>Hawaii</td><td>West</td></tr>
-      <tr><td><b>ID</b></td><td>Idaho</td><td>West</td></tr>
-      <tr><td><b>IL</b></td><td>Illinois</td><td>Midwest</td></tr>
-      <tr><td><b>IN</b></td><td>Indiana</td><td>Midwest</td></tr>
-      <tr><td><b>IA</b></td><td>Iowa</td><td>Midwest</td></tr>
-      <tr><td><b>KS</b></td><td>Kansas</td><td>Midwest</td></tr>
-      <tr><td><b>KY</b></td><td>Kentucky</td><td>South</td></tr>
-      <tr><td><b>LA</b></td><td>Louisiana</td><td>South</td></tr>
-      <tr><td><b>ME</b></td><td>Maine</td><td>Northeast</td></tr>
-      <tr><td><b>MD</b></td><td>Maryland</td><td>South</td></tr>
-      <tr><td><b>MA</b></td><td>Massachusetts</td><td>Northeast</td></tr>
-      <tr><td><b>MI</b></td><td>Michigan</td><td>Midwest</td></tr>
-      <tr><td><b>MN</b></td><td>Minnesota</td><td>Midwest</td></tr>
-      <tr><td><b>MS</b></td><td>Mississippi</td><td>South</td></tr>
-      <tr><td><b>MO</b></td><td>Missouri</td><td>Midwest</td></tr>
-      <tr><td><b>MT</b></td><td>Montana</td><td>West</td></tr>
-      <tr><td><b>NE</b></td><td>Nebraska</td><td>Midwest</td></tr>
-      <tr><td><b>NV</b></td><td>Nevada</td><td>West</td></tr>
-      <tr><td><b>NH</b></td><td>New Hampshire</td><td>Northeast</td></tr>
-      <tr><td><b>NJ</b></td><td>New Jersey</td><td>Northeast</td></tr>
-      <tr><td><b>NM</b></td><td>New Mexico</td><td>West</td></tr>
-      <tr><td><b>NY</b></td><td>New York</td><td>Northeast</td></tr>
-      <tr><td><b>NC</b></td><td>North Carolina</td><td>South</td></tr>
-      <tr><td><b>ND</b></td><td>North Dakota</td><td>Midwest</td></tr>
-      <tr><td><b>OH</b></td><td>Ohio</td><td>Midwest</td></tr>
-      <tr><td><b>OK</b></td><td>Oklahoma</td><td>South</td></tr>
-      <tr><td><b>OR</b></td><td>Oregon</td><td>West</td></tr>
-      <tr><td><b>PA</b></td><td>Pennsylvania</td><td>Northeast</td></tr>
-      <tr><td><b>RI</b></td><td>Rhode Island</td><td>Northeast</td></tr>
-      <tr><td><b>SC</b></td><td>South Carolina</td><td>South</td></tr>
-      <tr><td><b>SD</b></td><td>South Dakota</td><td>Midwest</td></tr>
-      <tr><td><b>TN</b></td><td>Tennessee</td><td>South</td></tr>
-      <tr><td><b>TX</b></td><td>Texas</td><td>South</td></tr>
-      <tr><td><b>UT</b></td><td>Utah</td><td>West</td></tr>
-      <tr><td><b>VT</b></td><td>Vermont</td><td>Northeast</td></tr>
-      <tr><td><b>VA</b></td><td>Virginia</td><td>South</td></tr>
-      <tr><td><b>WA</b></td><td>Washington</td><td>West</td></tr>
-      <tr><td><b>WV</b></td><td>West Virginia</td><td>South</td></tr>
-      <tr><td><b>WI</b></td><td>Wisconsin</td><td>Midwest</td></tr>
-      <tr><td><b>WY</b></td><td>Wyoming</td><td>West</td></tr>
-    </tbody>
-  </table>
+	<table class="table-sm">
+		<thead>
+			<tr>
+				<th>Abbreviation</th>
+				<th>State/Province</th>
+				<th>Region</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr><td><b>AL</b></td><td>Alabama</td><td>South</td></tr>
+			<tr><td><b>AK</b></td><td>Alaska</td><td>West</td></tr>
+			<tr><td><b>AZ</b></td><td>Arizona</td><td>West</td></tr>
+			<tr><td><b>AR</b></td><td>Arkansas</td><td>South</td></tr>
+			<tr><td><b>CA</b></td><td>California</td><td>West</td></tr>
+			<tr><td><b>CO</b></td><td>Colorado</td><td>West</td></tr>
+			<tr><td><b>CT</b></td><td>Connecticut</td><td>Northeast</td></tr>
+			<tr><td><b>DE</b></td><td>Delaware</td><td>South</td></tr>
+			<tr><td><b>FL</b></td><td>Florida</td><td>South</td></tr>
+			<tr><td><b>GA</b></td><td>Georgia</td><td>South</td></tr>
+			<tr><td><b>HI</b></td><td>Hawaii</td><td>West</td></tr>
+			<tr><td><b>ID</b></td><td>Idaho</td><td>West</td></tr>
+			<tr><td><b>IL</b></td><td>Illinois</td><td>Midwest</td></tr>
+			<tr><td><b>IN</b></td><td>Indiana</td><td>Midwest</td></tr>
+			<tr><td><b>IA</b></td><td>Iowa</td><td>Midwest</td></tr>
+			<tr><td><b>KS</b></td><td>Kansas</td><td>Midwest</td></tr>
+			<tr><td><b>KY</b></td><td>Kentucky</td><td>South</td></tr>
+			<tr><td><b>LA</b></td><td>Louisiana</td><td>South</td></tr>
+			<tr><td><b>ME</b></td><td>Maine</td><td>Northeast</td></tr>
+			<tr><td><b>MD</b></td><td>Maryland</td><td>South</td></tr>
+			<tr><td><b>MA</b></td><td>Massachusetts</td><td>Northeast</td></tr>
+			<tr><td><b>MI</b></td><td>Michigan</td><td>Midwest</td></tr>
+			<tr><td><b>MN</b></td><td>Minnesota</td><td>Midwest</td></tr>
+			<tr><td><b>MS</b></td><td>Mississippi</td><td>South</td></tr>
+			<tr><td><b>MO</b></td><td>Missouri</td><td>Midwest</td></tr>
+			<tr><td><b>MT</b></td><td>Montana</td><td>West</td></tr>
+			<tr><td><b>NE</b></td><td>Nebraska</td><td>Midwest</td></tr>
+			<tr><td><b>NV</b></td><td>Nevada</td><td>West</td></tr>
+			<tr><td><b>NH</b></td><td>New Hampshire</td><td>Northeast</td></tr>
+			<tr><td><b>NJ</b></td><td>New Jersey</td><td>Northeast</td></tr>
+			<tr><td><b>NM</b></td><td>New Mexico</td><td>West</td></tr>
+			<tr><td><b>NY</b></td><td>New York</td><td>Northeast</td></tr>
+			<tr><td><b>NC</b></td><td>North Carolina</td><td>South</td></tr>
+			<tr><td><b>ND</b></td><td>North Dakota</td><td>Midwest</td></tr>
+			<tr><td><b>OH</b></td><td>Ohio</td><td>Midwest</td></tr>
+			<tr><td><b>OK</b></td><td>Oklahoma</td><td>South</td></tr>
+			<tr><td><b>OR</b></td><td>Oregon</td><td>West</td></tr>
+			<tr><td><b>PA</b></td><td>Pennsylvania</td><td>Northeast</td></tr>
+			<tr><td><b>RI</b></td><td>Rhode Island</td><td>Northeast</td></tr>
+			<tr><td><b>SC</b></td><td>South Carolina</td><td>South</td></tr>
+			<tr><td><b>SD</b></td><td>South Dakota</td><td>Midwest</td></tr>
+			<tr><td><b>TN</b></td><td>Tennessee</td><td>South</td></tr>
+			<tr><td><b>TX</b></td><td>Texas</td><td>South</td></tr>
+			<tr><td><b>UT</b></td><td>Utah</td><td>West</td></tr>
+			<tr><td><b>VT</b></td><td>Vermont</td><td>Northeast</td></tr>
+			<tr><td><b>VA</b></td><td>Virginia</td><td>South</td></tr>
+			<tr><td><b>WA</b></td><td>Washington</td><td>West</td></tr>
+			<tr><td><b>WV</b></td><td>West Virginia</td><td>South</td></tr>
+			<tr><td><b>WI</b></td><td>Wisconsin</td><td>Midwest</td></tr>
+			<tr><td><b>WY</b></td><td>Wyoming</td><td>West</td></tr>
+		</tbody>
+	</table>
 </div>
 
 <GuideQuiz

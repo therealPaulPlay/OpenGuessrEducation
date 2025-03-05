@@ -1,12 +1,12 @@
 // routes/sitemap.xml/+server.js
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 export async function GET() {
-    const filePath = path.resolve('./static/sitemap.xml');
-    const xml = fs.readFileSync(filePath, 'utf-8');
+	const filePath = path.resolve("./static/sitemap.xml");
+	const xml = fs.readFileSync(filePath, "utf-8");
 
-    return new Response(xml, {
-        headers: { 'Content-Type': 'application/xml' }
-    });
+	return new Response(xml, {
+		headers: { "Content-Type": "application/xml" },
+	});
 }
