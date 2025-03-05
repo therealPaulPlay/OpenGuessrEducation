@@ -37,80 +37,69 @@
 </ul>
 
 <ArticleEmbedPanorama src="https://www.google.com/maps/embed?pb=!4v1730051802424!6m8!1m7!1sVS3kXPSfmU8uR4VtfmZgZA!2m2!1d41.11137968057349!2d20.0819716044217!3f195.42901557805902!4f7.429448022263529!5f2.868877958143495"/>
-<p class="text-center mt-2">Water heaters in Elbasan.</p>
-<br>
+<p class="text-center mt-2 mb-4">Water heaters in Elbasan.</p>
 
-<div class="flex flex-wrap justify-center w-full gap-6">
-    <div class="flex flex-col items-center w-full sm:w-1/2 lg:w-1/3">
-        <img alt="albania camera rift" src="/assets/articles/albania/albania_camerarift.jpg" class="rounded-xl w-full object-cover"/>
-        <p class="text-center mt-2">Rift at the top of camera view.</p>
+<div class="grid grid-cols-2 gap-4 w-full mt-6">
+    <div class="flex flex-col items-center">
+        <img alt="albania guardrail" src="/assets/articles/albania/albania_guardrail.jpg" class="rounded-xl w-full h-48 object-cover"/>
+        <p class="text-center mt-2 mb-4">Albanian <b>flat and wide</b> guardrail ending.</p>
+    </div>
+    <div class="flex flex-col items-center">
+        <img alt="albania chevron" src="/assets/articles/albania/albania_chevron.jpg" class="rounded-xl w-full h-48 object-cover"/>
+        <p class="text-center mt-2 mb-4">Albanian chevron also used by Italy, Greece, and Spain.</p>
     </div>
 </div>
-<br>
-<div class="flex flex-wrap justify-center w-full gap-6">
-    <div class="flex flex-col items-center w-full sm:w-1/2 lg:w-1/3">
-        <img alt="albania riftmap" src="/assets/articles/albania/albania_riftmap.jpg" class="rounded-xl w-full object-cover"/>
-        <p class="text-center">
-            <a href="https://en.wikipedia.org/wiki/Highways_in_Albania#/media/File:Transport_in_Albania.png" target="_blank" class="text-blue-500 underline">Original Image [Wikipedia]</a>
+
+<div class="grid grid-cols-3 gap-4 w-full mt-4">
+    <div class="flex flex-col items-center">
+        <img alt="albania bollard" src="/assets/articles/albania/albania_bollard.jpg" class="rounded-xl w-full h-48 object-cover"/>
+        <p class="text-center mt-2 mb-4">Albanian bollard has a <b>black top</b> with a <b>grey and red reflector</b>.</p>
+    </div>
+    <div class="flex flex-col items-center">
+        <img alt="albania backsign" src="/assets/articles/albania/albania_backsign.jpg" class="rounded-xl w-full h-48 object-cover"/>
+        <p class="text-center mt-2 mb-4"><b>Backside</b> of signs are often <b>painted black.</b></p>
+    </div>
+    <div class="flex flex-col items-center">
+        <img alt="albania stopsign" src="/assets/articles/albania/albania_stopsign.jpg" class="rounded-xl w-full h-48 object-cover object-top"/>
+        <p class="text-center mt-2 mb-4">Albanian stopsign with <b>short endings on S</b>.</p>
+    </div>
+</div>
+
+<div class="grid grid-cols-3 gap-4 w-full mt-4">
+    <div class="flex flex-col items-center">
+        <img alt="albania utilitypole" src="/assets/articles/albania/albania_utilitypole1.jpg" class="rounded-xl w-full h-64 object-cover"/>
+    </div>
+    <div class="flex flex-col items-center">
+        <img alt="albania utilitypole" src="/assets/articles/albania/albania_utilitypole2.jpg" class="rounded-xl w-full h-64 object-cover"/>
+    </div>
+    <div class="flex flex-col items-center">
+        <img alt="albania utilitypole" src="/assets/articles/albania/albania_utilitypole3.jpg" class="rounded-xl w-full h-64 object-cover"/>
+    </div>
+</div>
+<p class="text-center mt-2 mb-4">Albanian utility poles with <b>upside-down triangles</b> or <b>horizontal bars</b>.</p>
+
+<div class="flex grid grid-cols-1 sm:grid-cols-2 w-full gap-4 justify-center">
+
+    <div class="flex flex-col mb-2">
+        <img alt="albania camera rift" src="/assets/articles/albania/albania_camerarift.jpg" class="rounded-xl w-full h-64 object-cover"/>
+        <p class="text-center mt-2 mb-2">Rift at the top of camera view.</p>
+        <p class="text-left mt-2 mb-2">There are two types of car and camera meta in Albania:</p>
+        <ul class="list-disc list-inside">
+            <li><b>Blue lines:</b><br>Coverage where the Google car has a <b>long antenna</b> and you can see <b>rifts in the sky</b>.<br>These are older images from google mapping</li>
+            <li><b>Red lines:</b><br>Coverage where the Google car has a <b>short antenna</b> and <b>no rifts</b>.<br>These are newer images from google mapping</li>
+        </ul>
+    </div>
+
+    <div class="flex flex-col mb-2 text-center">
+        <img alt="albania riftmap" src="/assets/articles/albania/albania_riftmap.jpg" class="rounded-xl w-full sm:w-full lg:w-full object-contain"/>
+        <p class="mt-2">
+            <a href="https://en.wikipedia.org/wiki/Highways_in_Albania#/media/File:Transport_in_Albania.png" target="_blank" class="text-secondary">(Source: Wikipedia)</a>
         </p>
-        <p class="text-center mt-2"><b>Blue:</b> Rifts and long antenna.<br><b>Red:</b> No rifts and short antenna.</p>
     </div>
+
 </div>
 
-<br>
-<div class="flex flex-wrap justify-center w-full gap-4">
-    <div class="flex flex-col items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div class="h-48 w-full">
-            <img alt="albania guardrail" src="/assets/articles/albania/albania_guardrail.jpg" class="rounded-xl w-full h-full object-cover"/>
-        </div>
-        <p class="text-center mt-2">Albanian <b>flat and wide</b> guardrail ending.</p>
-    </div>
-    <div class="flex flex-col items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div class="h-48 w-full">
-            <img alt="albania chevron" src="/assets/articles/albania/albania_chevron.jpg" class="rounded-xl w-full h-full object-cover"/>
-        </div>
-        <p class="text-center mt-2">Albanian chevron also used by Italy, Greece, and Spain.</p>
-    </div>
-    <div class="flex flex-col items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div class="h-48 w-full">
-            <img alt="albania bollard" src="/assets/articles/albania/albania_bollard.jpg" class="rounded-xl w-full h-full object-cover"/>
-        </div>
-        <p class="text-center mt-2">Albanian bollard have a <b>black top</b> with a <b>grey and red reflector</b></p>
-    </div>
-    <div class="flex flex-col items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div class="h-48 w-full">
-            <img alt="albania chevron" src="/assets/articles/albania/albania_backsign.jpg" class="rounded-xl w-full h-full object-cover"/>
-        </div>
-        <p class="text-center mt-2"><b>Backside</b> of signs are often <b>painted black.</b></p>
-    </div>
-    <div class="flex flex-col items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div class="h-48 w-full">
-            <img alt="albania stopsign" src="/assets/articles/albania/albania_stopsign.jpg" class="rounded-xl w-full h-full object-cover object-top"/>
-        </div>
-        <p class="text-center mt-2">Albanian stopsign with <b>short endings on S</b>.</p>
-    </div>
-</div>
-
-<div class="flex flex-wrap justify-center w-full gap-4 mt-4">
-    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div class="h-48 w-full">
-            <img alt="albania utilitypole" src="/assets/articles/albania/albania_utilitypole1.jpg" class="rounded-xl w-full h-full object-top"/>
-        </div>
-    </div>
-    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div class="h-48 w-full">
-            <img alt="albania utilitypole" src="/assets/articles/albania/albania_utilitypole2.jpg" class="rounded-xl w-full h-full object-cover"/>
-        </div>
-    </div>
-    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div class="h-48 w-full">
-            <img alt="albania utilitypole" src="/assets/articles/albania/albania_utilitypole3.jpg" class="rounded-xl w-full h-full object-cover"/>
-        </div>
-    </div>
-</div>
-<p class="text-center mt-2">Albanian utilitypoles with <b>upside down triangles</b> or <b>horizontal bars</b>.</p>
-<br>
-<h2 class="text-2xl font-bold mt-8 mb-2">Features</h2>
+<h2 class="text-2xl font-bold mt-2 mb-2">Features</h2>
 <ul class="mb-2 list-disc list-inside">
     <li>Street signs in <b>Albanian language</b>.</li>
     <li>Public transportation vehicles with <b>Albanian symbols</b>.</li>
@@ -119,7 +108,6 @@
     <li><b>Mercedes</b> is the most popular car brand. (Often a Sedan.)</li>
     <li><b>Gen 3 coverage only</b>, limited to <b>main cities and roads</b>.</li>
 </ul>
-<br>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Language</h2>
 <ul class="mb-2 list-disc list-inside">
@@ -130,7 +118,6 @@
     <img alt="albania letters" src="/assets/articles/albania/albania_letters.jpg" class="rounded-xl w-1/2"/>
 </div>
 <p class="text-center mt-2">Albanian letters</p>
-<br>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">License Plates</h2>
 <ul class="mb-2 list-disc list-inside">
@@ -140,14 +127,13 @@
 <div class="flex justify-center w-full">
     <img alt="albania new license plate" src="/assets/articles/albania/albania_license_current.jpg" class="w-1/2"/>
 </div>
-<p class="text-center mt-2">Albanian current license plate</p>
+<p class="text-center mt-2 mb-4">Albanian current license plate</p>
 <div class="flex justify-center w-full">
     <img alt="albania old license plate" src="/assets/articles/albania/albania_license_old.jpg" class="w-1/2"/>
 </div>
-<p class="text-center mt-2">Albanian license plate before 2011</p>
-<br>
+<p class="text-center mt-2 mb-4">Albanian license plate before 2011</p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Region Guessing</h2>
+<h2 class="text-2xl font-bold mt-4 mb-2">Region Guessing</h2>
 <div class="overflow-x-auto">
     <table class="table">
         <thead>
@@ -188,7 +174,6 @@
         </tbody>
     </table>
 </div>
-<br>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Divided Highways</h2>
 <div class="overflow-x-auto">
@@ -234,21 +219,20 @@
     <li><b>State Road</b> (Rrugë Shtetërore): <b>SHX</b> (SH2, SH3,...), has blue background.</li>
 </ul>
 
-<div class="flex flex-col sm:flex-row justify-center w-full gap-4">
+<div class="flex flex-col sm:flex-row justify-center w-full gap-4 mt-4">
     <div class="flex flex-col items-center w-full sm:w-1/2">
         <div class="w-full h-64 sm:h-80 md:h-96">
             <img alt="albania highways" src="/assets/articles/albania/albania_highways.jpg" class="rounded-xl w-full h-full object-contain"/>
         </div>
-        <p class="text-center mt-2"><b>Green:</b> Motorways. <b>Blue:</b> State Roads </p>
+        <p class="text-center mt-2 mb-4"><b>Green:</b> Motorways. <b>Blue:</b> State Roads </p>
     </div>
     <div class="flex flex-col items-center w-full sm:w-1/2">
         <div class="w-full h-64 sm:h-80 md:h-96">
             <img alt="albania coverage" src="/assets/articles/albania/albania_coverage.jpg" class="rounded-xl w-full h-full object-contain"/>
         </div>
-        <p class="text-center mt-2">Albanian streetview coverage</p>
+        <p class="text-center mt-2 mb-4">Albanian streetview coverage</p>
     </div>
 </div>
-<br>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Motorways</h2>
 <ul class="mb-2 list-disc list-inside">
