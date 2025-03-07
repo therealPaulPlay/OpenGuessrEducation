@@ -26,6 +26,7 @@
 	let IconComponent = $state();
 
 	// JSON data
+	let jsonDataLoading = $state(true);
 	let countryCodes = $state();
 	let telephonePrefixes = $state();
 	let topLevelDomains = $state();
@@ -54,6 +55,7 @@
 					fetch("/json/country-data/country-gdp.json").then((response) => response.json()),
 					fetch("/json/country-data/country-videos.json").then((response) => response.json()),
 				]);
+			jsonDataLoading = false;
 		} catch (error) {
 			console.error("Failed to fetch country json files:", error);
 		}
@@ -99,43 +101,45 @@
 
 	<!-- statistics and other data -->
 	<div class="w-full bg-base-300 rounded-lg flex flex-wrap items-center p-2 gap-2 mt-2">
-		{#if topLevelDomains}
-			<div class="stat-pill">
-				<EthernetPort />
-				{topLevelDomains[countryName] || "-"}
-			</div>
+		{#if !jsonDataLoading}
+			{#if topLevelDomains}
+				<div class="stat-pill">
+					<EthernetPort />
+					{topLevelDomains[countryName] || "-"}
+				</div>
+			{/if}
+			{#if telephonePrefixes}
+				<div class="stat-pill">
+					<Phone />
+					{telephonePrefixes[countryName] || "-"}
+				</div>
+			{/if}
+			{#if populationData}
+				<div class="stat-pill">
+					<UsersRound />
+					{populationData[countryName] || "-"}
+				</div>
+			{/if}
+			{#if countryLanguages}
+				<div class="stat-pill">
+					<Languages />
+					{countryLanguages[countryName] || "-"}
+				</div>
+			{/if}
+			{#if countryGDP}
+				<div class="stat-pill">
+					<CircleDollarSign />
+					{countryGDP[countryName] || "-"} Bn. USD
+				</div>
+			{/if}
+			<a
+				class="btn btn-secondary btn-sm custom-btn-height"
+				href="https://openguessr.com/?play-map={countryName.replaceAll(' ', '_')}"
+				target="_blank"
+			>
+				<Compass size="25" /> Explore
+			</a>
 		{/if}
-		{#if telephonePrefixes}
-			<div class="stat-pill">
-				<Phone />
-				{telephonePrefixes[countryName] || "-"}
-			</div>
-		{/if}
-		{#if populationData}
-			<div class="stat-pill">
-				<UsersRound />
-				{populationData[countryName] || "-"}
-			</div>
-		{/if}
-		{#if countryLanguages}
-			<div class="stat-pill">
-				<Languages />
-				{countryLanguages[countryName] || "-"}
-			</div>
-		{/if}
-		{#if countryGDP}
-			<div class="stat-pill">
-				<CircleDollarSign />
-				{countryGDP[countryName] || "-"} Bn. USD
-			</div>
-		{/if}
-		<a
-			class="btn btn-secondary btn-sm custom-btn-height"
-			href="https://openguessr.com/?play-map={countryName.replaceAll(' ', '_')}"
-			target="_blank"
-		>
-			<Compass size="25" /> Explore
-		</a>
 	</div>
 
 	<div class="flex flex-wrap items-end mt-8 mb-3 gap-4">
