@@ -45,14 +45,15 @@
 		if (telephonePrefixes && topLevelDomains) return; // if everything is already loaded, skip
 
 		try {
-			telephonePrefixes = await fetch("/json/country-data/telephone-prefixes.json").then((response) => response.json());
-			topLevelDomains = await fetch("/json/country-data/country-tld.json").then((response) => response.json());
-			countryLanguages = await fetch("/json/country-data/country-languages.json").then((response) => response.json());
-			populationData = await fetch("/json/country-data/population-data.json").then((response) => response.json());
-			countryGDP = await fetch("/json/country-data/country-gdp.json").then((response) => response.json());
-			videoSources = await fetch("/json/country-data/country-videos.json").then((response) =>
-				response.json().then((response) => response[countryName]),
-			);
+			[telephonePrefixes, topLevelDomains, countryLanguages, populationData, countryGDP, videoSources] =
+				await Promise.all([
+					fetch("/json/country-data/telephone-prefixes.json").then((response) => response.json()),
+					fetch("/json/country-data/country-tld.json").then((response) => response.json()),
+					fetch("/json/country-data/country-languages.json").then((response) => response.json()),
+					fetch("/json/country-data/population-data.json").then((response) => response.json()),
+					fetch("/json/country-data/country-gdp.json").then((response) => response.json()),
+					fetch("/json/country-data/country-videos.json").then((response) => response.json()),
+				]);
 		} catch (error) {
 			console.error("Failed to fetch country json files:", error);
 		}
