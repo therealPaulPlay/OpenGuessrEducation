@@ -55,7 +55,6 @@
 					fetch("/json/country-data/country-gdp.json").then((response) => response.json()),
 					fetch("/json/country-data/country-videos.json").then((response) => response.json()),
 				]);
-			jsonDataLoading = false;
 		} catch (error) {
 			console.error("Failed to fetch country json files:", error);
 		}
@@ -74,6 +73,7 @@
 		IconComponent = Icon[countryCodes[countryName]];
 
 		await fetchJsonData(); // Then load all json data
+		jsonDataLoading = false;
 	});
 
 	// Derived value for child content presence
