@@ -73,7 +73,10 @@
 		"https://youtube.com/embed/nLknBKI2PX0?si=KH2Gjh3mfjyqRhJj",
 		"https://youtube.com/embed/zzBXXw8Qkt4?si=1_j678ajQVWhzvgS"
 	],
-	"Switzerland": ["https://youtube.com/embed/dfNmUcZks7E?si=3MmdB4-k3U7kXOdN"],
+	"Switzerland": [
+		"https://youtube.com/embed/dfNmUcZks7E?si=3MmdB4-k3U7kXOdN",
+		"https://www.youtube.com/embed/tuoS9f83ldo?si=PBdQWhk40SGEd_iQ"
+	],
 	"United Kingdom": [
 		"https://youtube.com/embed/Gf9m7vdxTEo?si=PQYo-lY9BvZzLcvx",
 		"https://youtube.com/embed/geJOhu7JCJ0?si=Hiz4xo2l7WTd1Oof"
