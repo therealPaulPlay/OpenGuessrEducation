@@ -16,7 +16,7 @@
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Strategies</h2>
 <ul class="mb-2 list-disc list-inside">
-	<li>Road signs/names often end with <b>-gata</b> or <b>-veien.</b></li>
+	<li>Road signs/names often end with <b>-gata</b>, <b>-vegen</b> or <b>-veien.</b></li>
 	<li>The use of characters like <b>æ, ø, å</b>.</li>
 	<li>Diverse landscapes ranging from <b>mountains</b> to <b>coastal areas.</b></li>
 	<li><b>Paved roads</b> with distinctive markings indicating road types.</li>
