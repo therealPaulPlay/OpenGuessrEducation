@@ -132,14 +132,14 @@
 					{countryGDP[countryName] || "-"} Bn. USD
 				</div>
 			{/if}
-			<a
-				class="btn btn-secondary btn-sm custom-btn-height"
-				href="https://openguessr.com/?play-map={countryName.replaceAll(' ', '_')}"
-				target="_blank"
-			>
-				<Compass size="25" /> Explore
-			</a>
 		{/if}
+		<a
+			class="btn btn-secondary btn-sm custom-btn-height {jsonDataLoading ? 'invisible' : ''}"
+			href="https://openguessr.com/?play-map={countryName.replaceAll(' ', '_')}"
+			target="_blank"
+		>
+			<Compass size="25" /> Explore
+		</a>
 	</div>
 
 	<div class="flex flex-wrap items-end mt-8 mb-3 gap-4">
