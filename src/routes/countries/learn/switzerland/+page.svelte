@@ -107,7 +107,7 @@
 	/>
 </div>
 <p class="text-center mb-4">
-	Swiss languages. (Source: 
+	Swiss languages (Source: 
 	<a href="https://commons.wikimedia.org/wiki/File:Map_Languages_CH.png" target="_blank" class="text-secondary">
 		Wikimedia</a
 	>).
@@ -135,7 +135,7 @@
 	/>
 </div>
 <p class="text-center mb-4">
-	Swiss wooden chalet. (Source: 
+	Swiss wooden chalet (Source: 
 	<a
 		href="https://commons.wikimedia.org/wiki/File:Chalet,_Weisstannen-Oberdorf_SG_20220806-jag9889.jpg"
 		target="_blank"
@@ -180,7 +180,7 @@
 </div>
 <p class="text-center mb-4">
 	Typical swiss <b
-		>PostAuto Bus</b>. (Source: 
+		>PostAuto Bus</b> (Source: 
 		<a
 			href="https://commons.wikimedia.org/wiki/File:MAN_Lion%27s_City_in_Sion_VS.jpg"
 			target="_blank"
@@ -209,7 +209,7 @@
 	/>
 </div>
 <p class="text-left mt-2 mb-4 ml-2">
-	Licenseplate of switzerland (bern). (Source: <a
+	Licenseplate of switzerland (bern) (Source: <a
 		href="https://commons.wikimedia.org/wiki/File:Swiss_license_plates_for_dealers.JPG"
 		target="_blank"
 		class="text-secondary"
@@ -228,7 +228,7 @@
 	/>
 </div>
 <p class="text-center mt-2 mb-4 ml-2">
-	Swiss CH sticker for cars. (Source: <a
+	Swiss CH sticker for cars (Source: <a
 		href="https://commons.wikimedia.org/wiki/File:CH_international_vehicle_registration_oval.svg"
 		target="_blank"
 		class="text-secondary"
