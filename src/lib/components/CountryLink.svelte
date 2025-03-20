@@ -26,11 +26,6 @@
 	href="/countries/learn/{country.toLowerCase().replaceAll(' ', '-')}"
 >
 	<div class="flex gap-2 items-center">
-		{#if isFavorite}
-			<div class="p-1 flex items-center justify-center text-secondary">
-				<Star strokeWidth={1.5} />
-			</div>
-		{/if}
 		<p class="text-lg">
 			{country}
 		</p>
