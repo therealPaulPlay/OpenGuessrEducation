@@ -1,5 +1,4 @@
 <script>
-	import { Star } from "lucide-svelte";
 	import { onMount } from "svelte";
 	import * as Icon from "svelte-flag-icons";
 	import { countryStore } from "$lib/stores/countryStore";
