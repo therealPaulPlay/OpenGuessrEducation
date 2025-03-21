@@ -2,10 +2,10 @@
 	import ArticleEmbedPanorama from "$lib/components/ArticleEmbedPanorama.svelte";
 </script>
 
+<b>Austria</b> is a <b>landlocked country</b> in <b>Central Europe</b> known for its <b>imperial history</b> and
+<b>alpine landscapes</b>.
 <h2 class="text-2xl font-bold mb-2">Common locations</h2>
 <p class="mb-2">
-	<b>Austria</b> is a <b>landlocked country</b> in <b>Central Europe</b> known for its <b>imperial history</b> and
-	<b>alpine landscapes</b>.<br />
 	Here are some of the most <b>common locations</b> in Austria:
 </p>
 <ul class="mb-2 list-disc list-inside">
@@ -25,9 +25,9 @@
 <ArticleEmbedPanorama
 	src="https://www.google.com/maps/embed?pb=!4v1742315121466!6m8!1m7!1s6X_tFPnYI0HYF-TVQl6Z7w!2m2!1d48.20374552052797!2d16.3699360669743!3f117.89240511729409!4f3.077596508395814!5f0.7820865974627469"
 />
-<p class="text-center mt-2 mb-2">Vienna city.</p>
+<p class="text-center mt-2">Vienna city.</p>
 
-<div class="flex flex-col items-center">
+<div class="flex flex-col items-center mt-8">
 	<img
 		alt="vienna districs"
 		src="/assets/articles/austria/austria_viennaDistrics.jpg"
@@ -35,15 +35,13 @@
 	/>
 	<p class="text-center mt-2">
 		Vienna district numbering (Source:
-		<a
-			href="https://commons.wikimedia.org/wiki/File:Wien_Bezirke.svg"
-			target="_blank"
-			class="text-secondary">Wikimedia</a
+		<a href="https://commons.wikimedia.org/wiki/File:Wien_Bezirke.svg" target="_blank" class="text-secondary"
+			>Wikimedia</a
 		>).
 	</p>
 </div>
 
-<h2 class="text-2xl font-bold mb-2">Geographical Features</h2>
+<h2 class="text-2xl font-bold mt-8">Geographical Features</h2>
 <p class="mb-2">
 	<b>Mountainous Terrain:</b> Austria is characterized by its <b>mountainous landscape</b>, especially in the
 	<b>western regions</b>.<br />
@@ -55,14 +53,14 @@
 <ArticleEmbedPanorama
 	src="https://www.google.com/maps/embed?pb=!4v1742316162314!6m8!1m7!1sJdmqeg2G-oMYAnM_RXdnAw!2m2!1d47.55332592823915!2d13.64793447034438!3f246.9099966422529!4f7.724145250801399!5f0.7820865974627469"
 />
-<p class="text-center mt-2 mb-2">Alpine drop in Hallstatt with alpine architecture.</p>
+<p class="text-center mt-2">Alpine drop in Hallstatt with alpine architecture.</p>
 
-<h2 class="text-2xl font-bold mb-2">Road and Traffic Signs</h2>
+<h2 class="text-2xl font-bold mb-2 mt-8">Road and Traffic Signs</h2>
 <p class="mb-2">
-	Some austrian road signs and traffic signs are unique and can help you identify the country you are in.<br>
-	Austria uses the <b>german alphabet</b>, which has the letters <b>ä, ö, ü and ß</b>, and is used in germany, austria and switzerland.<br>
-	The letter <b>ß</b> is only used in the german alphabet and is a ligature of <b>ss</b>.<br>
-	The german word for <b>street is "Straße"</b> and can be found in germany and austria, switzerland uses "Strasse".
+	Some austrian road signs and traffic signs are unique and can help you identify the country you are in. Austria uses
+	the <b>german alphabet</b>, which has the letters <b>ä, ö, ü and ß</b>, and is used in germany, austria and
+	switzerland. The letter <b>ß</b> is only used in the german alphabet and is a ligature of <b>ss</b>. The german word
+	for <b>street is "Straße"</b> and can be found in germany and austria, switzerland uses "Strasse".
 </p>
 <ul class="mb-2 list-disc list-inside">
 	<li>
@@ -136,7 +134,10 @@
 			src="/assets/articles/austria/austria_bollard1.jpg"
 			class="rounded-xl w-full h-64 aspect-[382/615] object-contain"
 		/>
-		<p class="text-center mt-2">Austria uses <b>white bollards</b>, with a <b>black top</b>. The colour of the reflector is <b>(dark) red or dark grey</b>.</p>
+		<p class="text-center mt-2">
+			Austria uses <b>white bollards</b>, with a <b>black top</b>. The colour of the reflector is
+			<b>(dark) red or dark grey</b>.
+		</p>
 	</div>
 	<div class="flex flex-col items-center">
 		<img
@@ -148,14 +149,16 @@
 	</div>
 </div>
 
-<div class="grid grid-cols-2 gap-4 w-full mb-4">
+<div class="grid grid-cols-2 gap-4 w-full">
 	<div class="flex flex-col items-center">
 		<img
 			alt="austrian pedestrian sign"
 			src="/assets/articles/austria/austria_pedestriansign.jpg"
 			class="rounded-xl w-full h-3/4 aspect-[460/415] object-contain"
 		/>
-		<p class="text-center mt-2">Austrias pedestrian signs use <b>two horizontal dashed lines</b> which is very unique.</p>
+		<p class="text-center mt-2">
+			Austrias pedestrian signs use <b>two horizontal dashed lines</b> which is very unique.
+		</p>
 	</div>
 	<div class="flex flex-col items-center">
 		<img
@@ -163,22 +166,24 @@
 			src="/assets/articles/austria/austria_facilitysign.jpg"
 			class="rounded-xl w-full h-3/4 object-contain aspect-[571/222]"
 		/>
-		<p class="text-center mt-2"><b>Green signs with white text</b> are commonly used to give directions for different <b>local facilities</b>.</p>
+		<p class="text-center mt-2">
+			<b>Green signs with white text</b> are commonly used to give directions for different <b>local facilities</b>.
+		</p>
 	</div>
 </div>
 
-<h2 class="text-2xl font-bold mb-2">License plate</h2>
+<h2 class="text-2xl font-bold mb-2 mt-8">License plate</h2>
 <p class="mb-2">
 	Austrian vehicles have <b>long, white</b> license plates with a <b>blue strip on the left</b>, which is common in
 	europe, and <b>2 red thin stripes</b> at the <b>top and bottom</b>.
 </p>
-<div class="flex flex-col items-center">
+<div class="flex flex-col items-center mt-2">
 	<img
 		alt="austrian licenseplate"
 		src="/assets/articles/austria/austria_licenseplate.jpg"
 		class="rounded-xl w-3/4 h-auto aspect-[128/29] object-contain"
 	/>
-	<p class="text-center mb-4">
+	<p class="text-center">
 		Austrian license plate (Source:
 		<a href="https://commons.wikimedia.org/wiki/File:Austria_police_plate_01.JPG" target="_blank" class="text-secondary"
 			>Wikimedia</a
@@ -186,10 +191,11 @@
 	</p>
 </div>
 
-<h2 class="text-2xl font-bold mb-2">Additional tips</h2>
+<h2 class="text-2xl font-bold mb-2 mt-8">Additional tips</h2>
 <ul class="mb-2 list-disc list-inside">
 	<li>
-		<b>Driving on the right:</b> In Austria, you must drive on the <b>right-hand side of the road</b> and overtake on the
+		<b>Driving on the right:</b> In Austria, you must drive on the <b>right-hand side of the road</b> and overtake on
+		the
 		<b>left</b>.
 	</li>
 	<li>
@@ -197,4 +203,4 @@
 	</li>
 </ul>
 
-<p class="italic mt-4">Written by w0lfzk1nd and eryk from Discord</p>
+<p class="italic mt-4">Written by w0lfzk1nd and Eryk from Discord</p>
