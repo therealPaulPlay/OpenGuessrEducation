@@ -2,9 +2,11 @@
 	import ArticleEmbedPanorama from "$lib/components/ArticleEmbedPanorama.svelte";
 </script>
 
-<b>Austria</b> is a <b>landlocked country</b> in <b>Central Europe</b> known for its <b>imperial history</b> and
-<b>alpine landscapes</b>.
-<h2 class="text-2xl font-bold mb-2">Common locations</h2>
+<p class="mb-2">
+	<b>Austria</b> is a <b>landlocked country</b> in <b>Central Europe</b> known for its <b>imperial history</b> and
+	<b>alpine landscapes</b>.
+</p>
+<h2 class="text-2xl font-bold mt-8 mb-2">Common places</h2>
 <p class="mb-2">
 	Here are some of the most <b>common locations</b> in Austria:
 </p>
@@ -41,10 +43,10 @@
 	</p>
 </div>
 
-<h2 class="text-2xl font-bold mt-8">Geographical Features</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Geographical Features</h2>
 <p class="mb-2">
 	<b>Mountainous Terrain:</b> Austria is characterized by its <b>mountainous landscape</b>, especially in the
-	<b>western regions</b>.<br />
+	<b>western regions</b>.
 	<b>Alpine Architecture:</b> The presence of <b>alpine-style buildings</b> with <b>steeply pitched roofs</b>,
 	<b>wooden balconies</b>
 	with <b>intricate carvings</b> and <b>sturdy stone or timber</b> construction is a strong indicator of Austria.
@@ -55,7 +57,7 @@
 />
 <p class="text-center mt-2">Alpine drop in Hallstatt with alpine architecture.</p>
 
-<h2 class="text-2xl font-bold mb-2 mt-8">Road and Traffic Signs</h2>
+<h2 class="text-2xl font-bold mb-2 mt-8 mb-2">Road and Traffic Signs</h2>
 <p class="mb-2">
 	Some austrian road signs and traffic signs are unique and can help you identify the country you are in. Austria uses
 	the <b>german alphabet</b>, which has the letters <b>ä, ö, ü and ß</b>, and is used in germany, austria and
@@ -82,7 +84,7 @@
 	</li>
 </ul>
 
-<div class="grid grid-cols-2 gap-4 w-full mt-4 mb-4">
+<div class="grid grid-cols-2 gap-4 w-full mt-4 mb-2">
 	<div class="flex flex-col items-center">
 		<img
 			alt="vienna streetsign"
@@ -177,7 +179,7 @@
 	Austrian vehicles have <b>long, white</b> license plates with a <b>blue strip on the left</b>, which is common in
 	europe, and <b>2 red thin stripes</b> at the <b>top and bottom</b>.
 </p>
-<div class="flex flex-col items-center mt-2">
+<div class="flex flex-col items-center mt-4">
 	<img
 		alt="austrian licenseplate"
 		src="/assets/articles/austria/austria_licenseplate.jpg"
