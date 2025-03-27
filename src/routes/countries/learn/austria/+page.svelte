@@ -4,11 +4,14 @@
 
 <p class="mb-2">
 	<b>Austria</b> is a <b>landlocked country</b> in <b>Central Europe</b> known for its <b>imperial history</b> and
-	<b>alpine landscapes</b>.
+	<b>alpine landscapes</b>. It shares borders with <b>eight countries</b> and features diverse geography, from the towering 
+	Alps to rolling hills and plains. Austria is famous for its cultural heritage, classical music, and picturesque 
+	villages.
 </p>
+
 <h2 class="text-2xl font-bold mt-8 mb-2">Common places</h2>
 <p class="mb-2">
-	Here are some of the most <b>common locations</b> in Austria:
+	These are some of the most <b>famous locations</b> you may encounter in Austria:
 </p>
 <ul class="mb-2 list-disc list-inside">
 	<li>
@@ -84,14 +87,14 @@
 	</li>
 </ul>
 
-<div class="grid grid-cols-2 gap-4 w-full mt-4 mb-2">
+<div class="tems-center w-full mt-4 mb-4">
 	<div class="flex flex-col items-center">
 		<img
 			alt="vienna streetsign"
 			src="/assets/articles/austria/austria_viennastreetsign.jpg"
 			class="rounded-xl w-full h-auto aspect-[512/199] object-contain"
 		/>
-		<p class="text-center mt-2">
+		<p class="text-center">
 			Vienna street signs with district numbering<br />(Source:
 			<a
 				href="https://commons.wikimedia.org/wiki/File:Straßenschild_Kunkegasse_(Wien).jpg"
@@ -100,13 +103,16 @@
 			>).
 		</p>
 	</div>
+</div>
+
+<div class="tems-center w-full mt-4 mb-4">
 	<div class="flex flex-col items-center">
 		<img
 			alt="austrian town entry sign"
 			src="/assets/articles/austria/austria_townentrysign.jpg"
 			class="rounded-xl w-full h-auto object-contain aspect-[4/3]"
 		/>
-		<p class="text-center mt-2">Austrian town entry sign.</p>
+		<p class="text-center">Austrian town entry sign.</p>
 	</div>
 </div>
 
