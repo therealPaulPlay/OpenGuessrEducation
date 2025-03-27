@@ -63,9 +63,9 @@
 <h2 class="text-2xl font-bold mb-2 mt-8 mb-2">Road and Traffic Signs</h2>
 <p class="mb-2">
 	Some austrian road signs and traffic signs are unique and can help you identify the country you are in. Austria uses
-	the <b>german alphabet</b>, which has the letters <b>ä, ö, ü and ß</b>, and is used in germany, austria and
-	switzerland. The letter <b>ß</b> is only used in the german alphabet and is a ligature of <b>ss</b>. The german word
-	for <b>street is "Straße"</b> and can be found in germany and austria, switzerland uses "Strasse".
+	the <b>german alphabet</b>, which has the letters <b>ä, ö, ü and ß</b>, and is used in Germany, Austria and
+	Switzerland. The letter <b>ß</b> is only used in the german alphabet and is a ligature of <b>ss</b>. The german word
+	for <b>street is "Straße"</b> and can be found in Germany and Austria, Switzerland uses "Strasse".
 </p>
 <ul class="mb-2 list-disc list-inside">
 	<li>
@@ -95,7 +95,7 @@
 			class="rounded-xl w-full h-auto aspect-[512/199] object-contain"
 		/>
 		<p class="text-center">
-			Vienna street signs with district numbering<br />(Source:
+			Vienna street signs with district numbering (Source:
 			<a
 				href="https://commons.wikimedia.org/wiki/File:Straßenschild_Kunkegasse_(Wien).jpg"
 				target="_blank"
@@ -183,7 +183,7 @@
 <h2 class="text-2xl font-bold mb-2 mt-8">License plate</h2>
 <p class="mb-2">
 	Austrian vehicles have <b>long, white</b> license plates with a <b>blue strip on the left</b>, which is common in
-	europe, and <b>2 red thin stripes</b> at the <b>top and bottom</b>.
+	Europe, and <b>2 red thin stripes</b> at the <b>top and bottom</b>.
 </p>
 <div class="flex flex-col items-center mt-4">
 	<img
