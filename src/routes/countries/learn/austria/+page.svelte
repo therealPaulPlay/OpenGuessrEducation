@@ -62,9 +62,9 @@
 
 <h2 class="text-2xl font-bold mb-2 mt-8 mb-2">Road and Traffic Signs</h2>
 <p class="mb-2">
-	Some austrian road signs and traffic signs are unique and can help you identify the country you are in. Austria uses
-	the <b>german alphabet</b>, which has the letters <b>ä, ö, ü and ß</b>, and is used in Germany, Austria and
-	Switzerland. The letter <b>ß</b> is only used in the german alphabet and is a ligature of <b>ss</b>. The german word
+	Some Austrian road signs and traffic signs are unique and can help you identify the country you are in. Austria uses
+	the <b>German alphabet</b>, which has the letters <b>ä, ö, ü and ß</b>, and is used in Germany, Austria and
+	Switzerland. The letter <b>ß</b> is only used in the German alphabet and is a ligature of <b>ss</b>. The German word
 	for <b>street is "Straße"</b> and can be found in Germany and Austria, Switzerland uses "Strasse".
 </p>
 <ul class="mb-2 list-disc list-inside">
