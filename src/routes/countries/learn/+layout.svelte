@@ -26,6 +26,7 @@
 	let IconComponent = $state();
 
 	// JSON data
+	let jsonDataLoading = $state(true);
 	let countryCodes = $state();
 	let telephonePrefixes = $state();
 	let topLevelDomains = $state();
@@ -45,14 +46,15 @@
 		if (telephonePrefixes && topLevelDomains) return; // if everything is already loaded, skip
 
 		try {
-			telephonePrefixes = await fetch("/json/country-data/telephone-prefixes.json").then((response) => response.json());
-			topLevelDomains = await fetch("/json/country-data/country-tld.json").then((response) => response.json());
-			countryLanguages = await fetch("/json/country-data/country-languages.json").then((response) => response.json());
-			populationData = await fetch("/json/country-data/population-data.json").then((response) => response.json());
-			countryGDP = await fetch("/json/country-data/country-gdp.json").then((response) => response.json());
-			videoSources = await fetch("/json/country-data/country-videos.json").then((response) =>
-				response.json().then((response) => response[countryName]),
-			);
+			[telephonePrefixes, topLevelDomains, countryLanguages, populationData, countryGDP, videoSources] =
+				await Promise.all([
+					fetch("/json/country-data/telephone-prefixes.json").then((response) => response.json()),
+					fetch("/json/country-data/country-tld.json").then((response) => response.json()),
+					fetch("/json/country-data/country-languages.json").then((response) => response.json()),
+					fetch("/json/country-data/population-data.json").then((response) => response.json()),
+					fetch("/json/country-data/country-gdp.json").then((response) => response.json()),
+					fetch("/json/country-data/country-videos.json").then((response) => response.json()),
+				]);
 		} catch (error) {
 			console.error("Failed to fetch country json files:", error);
 		}
@@ -71,6 +73,7 @@
 		IconComponent = Icon[countryCodes[countryName]];
 
 		await fetchJsonData(); // Then load all json data
+		jsonDataLoading = false;
 	});
 
 	// Derived value for child content presence
@@ -98,38 +101,40 @@
 
 	<!-- statistics and other data -->
 	<div class="w-full bg-base-300 rounded-lg flex flex-wrap items-center p-2 gap-2 mt-2">
-		{#if topLevelDomains}
-			<div class="stat-pill">
-				<EthernetPort />
-				{topLevelDomains[countryName] || "-"}
-			</div>
-		{/if}
-		{#if telephonePrefixes}
-			<div class="stat-pill">
-				<Phone />
-				{telephonePrefixes[countryName] || "-"}
-			</div>
-		{/if}
-		{#if populationData}
-			<div class="stat-pill">
-				<UsersRound />
-				{populationData[countryName] || "-"}
-			</div>
-		{/if}
-		{#if countryLanguages}
-			<div class="stat-pill">
-				<Languages />
-				{countryLanguages[countryName] || "-"}
-			</div>
-		{/if}
-		{#if countryGDP}
-			<div class="stat-pill">
-				<CircleDollarSign />
-				{countryGDP[countryName] || "-"} Bn. USD
-			</div>
+		{#if !jsonDataLoading}
+			{#if topLevelDomains}
+				<div class="stat-pill">
+					<EthernetPort />
+					{topLevelDomains[countryName] || "-"}
+				</div>
+			{/if}
+			{#if telephonePrefixes}
+				<div class="stat-pill">
+					<Phone />
+					{telephonePrefixes[countryName] || "-"}
+				</div>
+			{/if}
+			{#if populationData}
+				<div class="stat-pill">
+					<UsersRound />
+					{populationData[countryName] || "-"}
+				</div>
+			{/if}
+			{#if countryLanguages}
+				<div class="stat-pill">
+					<Languages />
+					{countryLanguages[countryName] || "-"}
+				</div>
+			{/if}
+			{#if countryGDP}
+				<div class="stat-pill">
+					<CircleDollarSign />
+					{countryGDP[countryName] || "-"} Bn. USD
+				</div>
+			{/if}
 		{/if}
 		<a
-			class="btn btn-secondary btn-sm custom-btn-height"
+			class="btn btn-secondary btn-sm custom-btn-height {jsonDataLoading ? 'invisible' : ''}"
 			href="https://openguessr.com/?play-map={countryName.replaceAll(' ', '_')}"
 			target="_blank"
 		>
