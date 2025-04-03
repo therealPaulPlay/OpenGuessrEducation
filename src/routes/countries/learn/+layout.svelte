@@ -53,7 +53,9 @@
 					fetch("/json/country-data/country-languages.json").then((response) => response.json()),
 					fetch("/json/country-data/population-data.json").then((response) => response.json()),
 					fetch("/json/country-data/country-gdp.json").then((response) => response.json()),
-					fetch("/json/country-data/country-videos.json").then((response) => response.json()),
+					fetch("/json/country-data/country-videos.json").then((response) =>
+						response.json().then((response) => response[countryName]),
+					),
 				]);
 		} catch (error) {
 			console.error("Failed to fetch country json files:", error);
