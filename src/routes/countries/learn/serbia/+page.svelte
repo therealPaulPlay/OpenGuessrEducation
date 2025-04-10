@@ -89,4 +89,4 @@
 	Serbia exclusively uses the <b>B-Type guardrail</b>. Keep in mind that Croatia and Montenegro also use this type!
 </p>
 
-<p class="italic mt-4">Written by IceB3r from the Discord Server</p>
+<p class="italic mt-4">Written by IceB3r from the Discord server</p>

@@ -61,4 +61,4 @@
 <p class="text-center mt-2">
 	The <b>Dzongkha language</b> is seen all over the country.
 </p>
-<p class="italic mt-4">Written by IceB3r from the Discord Server</p>
+<p class="italic mt-4">Written by IceB3r from the Discord server</p>

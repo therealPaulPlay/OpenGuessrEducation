@@ -183,7 +183,7 @@
 
 	<p class="mb-4 max-w-2xl">
 		Use this markdown editor to create guides and articles without writing code. Feel free to ask for help on the <b
-			>Discord Server</b
+			>Discord server</b
 		>
 		(link down below in the footer) if you struggle with using this converter or don't know how to create a pull request
 		with the finished code on GitHub. You could also

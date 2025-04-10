@@ -222,4 +222,4 @@
 	<b>red reflectors</b>.
 </p>
 
-<p class="italic mt-4">Written by Gomes from the Discord Server</p>
+<p class="italic mt-4">Written by Gomes from the Discord server</p>

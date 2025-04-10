@@ -109,4 +109,4 @@
 	<b>white car</b>
 	with the <b>antenna visible</b>.
 </p>
-<p class="italic mt-4">Written by IceB3r from the Discord Server</p>
+<p class="italic mt-4">Written by IceB3r from the Discord server</p>
