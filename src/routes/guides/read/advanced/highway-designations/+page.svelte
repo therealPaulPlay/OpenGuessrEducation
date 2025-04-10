@@ -424,4 +424,4 @@
 	correctAnswer={3}
 ></GuideQuiz>
 
-<p class="italic mt-4">Written by w0lfzk1nd from the Discord Server</p>
+<p class="italic mt-4">Written by w0lfzk1nd from the Discord server</p>

@@ -23,7 +23,7 @@
 <p class="mb-2">
 	On the PlonkIt website, you can compete against others in their own <b>ranked format</b>. There, the game modes are
 	different compared to GeoGuessr's ranked Duels mode, and you will be matched up against other players by
-	<b>community members</b> on their Discord Server. Moreover, you can also try to beat records on their leaderboards for
+	<b>community members</b> on their Discord server. Moreover, you can also try to beat records on their leaderboards for
 	GeoGuessr maps.
 </p>
 

@@ -65,4 +65,4 @@
 	The images might <b>look</b> especially lush <b>green since</b> most coverage is <b>Gen 4</b>.
 </p>
 
-<p class="italic mt-4">Written by Ice_B3ar from the Discord Server</p>
+<p class="italic mt-4">Written by Ice_B3ar from the Discord server</p>

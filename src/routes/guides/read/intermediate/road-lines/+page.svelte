@@ -110,4 +110,4 @@
 	</li>
 </ul>
 
-<p class="italic mt-4">Edited by w0lfzk1nd from Discord Server</p>
+<p class="italic mt-4">Edited by w0lfzk1nd from Discord server</p>

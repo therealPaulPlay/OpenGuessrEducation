@@ -93,4 +93,4 @@
 <ArticleEmbedPanorama
 	src="https://www.google.com/maps/embed?pb=!4v1730413075753!6m8!1m7!1smzU492bp4Lwr3KGG6LuphA!2m2!1d42.50532033225401!2d1.528045715605865!3f306.35028646667604!4f0.6895735865835775!5f1.695989278551835"
 ></ArticleEmbedPanorama>
-<p class="italic mt-4">Written by Nacho17 from the Discord Server</p>
+<p class="italic mt-4">Written by Nacho17 from the Discord server</p>
