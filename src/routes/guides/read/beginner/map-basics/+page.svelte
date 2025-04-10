@@ -1,4 +1,4 @@
-<h1 class="text-4xl font-bold mb-4">Map Basics</h1>
+<h1 class="text-4xl font-bold mb-4">Map basics</h1>
 <p class="mb-2">
 	A map refers to a <b>set of locations</b> that will be chosen
 	<b>at random</b> when you play - well, it's not quite random, as the game keeps track of your previous locations to prevent

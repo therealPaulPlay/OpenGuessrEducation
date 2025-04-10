@@ -13,7 +13,7 @@
 </p>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Bollard</h2>
-<div class="flex space-x-4 w-full">
+<div class="flex w-full max-md:flex-wrap gap-4">
 	<img
 		alt="street view example lining up"
 		src="/assets/articles/serbia/bollard1.jpg"
@@ -30,16 +30,16 @@
 </p>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Electricity Poles</h2>
-<div class="flex space-x-4 w-full">
+<div class="flex w-full max-md:flex-wrap gap-4">
 	<img
 		alt="street view example lining up"
 		src="/assets/articles/serbia/serbia_pole.jpg"
-		class="rounded-xl w-full h-96 object-cover"
+		class="rounded-xl grow w-full h-96 object-cover"
 	/>
 	<img
 		alt="street view example lining up"
 		src="/assets/articles/serbia/serbia_pole2.jpg"
-		class="rounded-xl w-full h-96 object-cover"
+		class="rounded-xl grow w-full h-96 object-cover"
 	/>
 </div>
 <p class="text-center mt-2">
@@ -53,7 +53,7 @@
 </ArticleTip>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">Housing</h2>
-<div class="flex space-x-4 w-full">
+<div class="flex gap-4 w-full max-md:flex-wrap">
 	<img
 		alt="street view example lining up"
 		src="/assets/articles/serbia/polished_house.jpg"

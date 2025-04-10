@@ -3,7 +3,7 @@
 	import ClueQuiz from "$lib/components/ClueQuiz.svelte";
 
 	export const metadata = {
-		title: "Street Names",
+		title: "Street names",
 		tags: ["All"],
 		region: "Streetnames",
 		assetFolder: "street-names",

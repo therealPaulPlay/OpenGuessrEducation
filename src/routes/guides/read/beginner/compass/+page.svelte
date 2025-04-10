@@ -4,7 +4,7 @@
 	import GuideQuiz from "$lib/components/GuideQuiz.svelte";
 </script>
 
-<h1 class="text-4xl font-bold mb-4">The Compass</h1>
+<h1 class="text-4xl font-bold mb-4">The compass</h1>
 <p class="mb-2">
 	The compass is a powerful tool for quickly gaining a <b>general sense</b>
 	for where a location might be and comes in handy when trying to

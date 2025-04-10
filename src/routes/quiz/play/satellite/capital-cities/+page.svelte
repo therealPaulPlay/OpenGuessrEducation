@@ -3,7 +3,7 @@
 	import SatelliteQuiz from "$lib/components/SatelliteQuiz.svelte";
 
 	export const metadata = {
-		title: "Capital Cities from above",
+		title: "Capital cities from above",
 		tags: ["All"],
 		region: "Satellite World",
 		jsonName: "capital-cities",

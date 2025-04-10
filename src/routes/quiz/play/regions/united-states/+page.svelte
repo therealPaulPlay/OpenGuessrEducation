@@ -3,7 +3,7 @@
 	import QuizMapGame from "$lib/components/QuizMapGame.svelte";
 
 	export const metadata = {
-		title: "US States",
+		title: "US states",
 		tags: ["North America"],
 		region: "US States",
 		topoJson: "us-states-10m", // optional property, needed for maps that don't use the default world topojson

@@ -4,7 +4,7 @@
 	import Map from "$lib/components/Map.svelte";
 </script>
 
-<h1 class="text-4xl font-bold mb-4">European Guardrails</h1>
+<h1 class="text-4xl font-bold mb-4">European guardrails</h1>
 
 <p class="mb-2">
 	Guardrails, often overlooked, can be a <b>valuable clue </b>for guessing the country. This guide focuses on

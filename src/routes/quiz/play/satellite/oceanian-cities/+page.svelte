@@ -3,7 +3,7 @@
 	import SatelliteQuiz from "$lib/components/SatelliteQuiz.svelte";
 
 	export const metadata = {
-		title: "Oceanian Cities from above",
+		title: "Oceanian cities from above",
 		tags: ["Oceania"],
 		region: "Oceania",
 		jsonName: "oceanian-cities",

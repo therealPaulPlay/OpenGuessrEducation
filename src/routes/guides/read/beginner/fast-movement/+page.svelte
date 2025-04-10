@@ -2,7 +2,7 @@
 	import GuideQuiz from "$lib/components/GuideQuiz.svelte";
 </script>
 
-<h1 class="text-4xl font-bold mb-4">Fast Movement</h1>
+<h1 class="text-4xl font-bold mb-4">Fast movement</h1>
 <p class="mb-2">
 	Picture this - you're starting a new round and get a location in the middle of nowhere. <b>No hints</b>, not even road
 	signs. This is exactly when <b>moving fast</b> can make a tangible difference in determining who comes out victorious.

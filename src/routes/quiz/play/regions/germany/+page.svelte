@@ -3,7 +3,7 @@
 	import QuizMapGame from "$lib/components/QuizMapGame.svelte";
 
 	export const metadata = {
-		title: "German States (Bundesländer)",
+		title: "German states (Bundesländer)",
 		tags: ["Europe"],
 		region: "German States",
 		topoJson: "german-states",

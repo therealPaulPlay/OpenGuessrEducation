@@ -68,7 +68,7 @@
 		<div class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
 			<div class="card-body">
 				<Trophy class="w-12 h-12 text-secondary mb-4" />
-				<h2 class="card-title">Professional Guides</h2>
+				<h2 class="card-title">Professional guides</h2>
 				<p>Learn to geo-guess and discover new tricks and strategies to elevate your game.</p>
 				<div class="card-actions justify-end mt-2">
 					<button
@@ -90,7 +90,7 @@
 				<div class="flex items-start">
 					<Compass class="w-8 h-8 text-secondary mr-4 mt-1 flex-shrink-0" />
 					<div>
-						<h3 class="text-xl font-semibold mb-2">Explore the World</h3>
+						<h3 class="text-xl font-semibold mb-2">Explore the world</h3>
 						<p class="text-base">
 							Dive into our <b>educational (but fun!) content</b>
 							to learn about different <b>locations</b>,
@@ -103,7 +103,7 @@
 				<div class="flex items-start">
 					<Flag class="w-8 h-8 text-secondary mr-4 mt-1 flex-shrink-0" />
 					<div>
-						<h3 class="text-xl font-semibold mb-2">Learn through Play</h3>
+						<h3 class="text-xl font-semibold mb-2">Learn through play</h3>
 						<p class="text-base">
 							The platform makes learning <b>fun</b> and
 							<b>exciting</b>
@@ -129,7 +129,7 @@
 				<div class="flex items-start">
 					<Map class="w-8 h-8 text-secondary mr-4 mt-1 flex-shrink-0" />
 					<div>
-						<h3 class="text-xl font-semibold mb-2">Become a Geography Expert</h3>
+						<h3 class="text-xl font-semibold mb-2">Become a geography expert</h3>
 						<p class="text-base">
 							Become a staple of the geography <b>community</b>. The discord is full of cool nerds that want to learn
 							more about our planet.

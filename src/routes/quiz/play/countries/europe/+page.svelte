@@ -4,7 +4,7 @@
 	import ExploreInOpenGuessr from "$lib/components/ExploreInOpenGuessr.svelte";
 
 	export const metadata = {
-		title: "European Countries",
+		title: "European countries",
 		tags: ["Europe"],
 		region: "Europe",
 		category: determineCategory(new URL(import.meta.url).pathname),

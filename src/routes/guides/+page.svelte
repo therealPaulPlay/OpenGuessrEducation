@@ -40,7 +40,7 @@
 		<div class="w-full flex gap-8 flex-wrap scrollbar-hide">
 			<!-- Cards here -->
 			<GuideCard
-				title="The Compass"
+				title="The compass"
 				description="Learn how to use the compass, determine the hemisphere and line up."
 				href="/guides/read/beginner/compass"
 				hueRotate="0"
@@ -48,7 +48,7 @@
 				<Compass class="w-28 h-28"></Compass>
 			</GuideCard>
 			<GuideCard
-				title="Keyboard Shortcuts"
+				title="Keyboard shortcuts"
 				description="A cheat sheet for the most useful keyboard shortcuts in GeoGuessr."
 				href="/guides/read/beginner/shortcuts"
 				hueRotate="20"
@@ -56,7 +56,7 @@
 				<Keyboard class="w-28 h-28"></Keyboard>
 			</GuideCard>
 			<GuideCard
-				title="Fast Movement"
+				title="Fast movement"
 				description="Find out how to move a lot more quickly inside of the Street View."
 				href="/guides/read/beginner/fast-movement"
 				hueRotate="40"
@@ -64,7 +64,7 @@
 				<Rabbit class="w-28 h-28"></Rabbit>
 			</GuideCard>
 			<GuideCard
-				title="Map Basics"
+				title="Map basics"
 				description="Learn what maps are, what coverage is and how community maps differ."
 				href="/guides/read/beginner/map-basics"
 				hueRotate="60"
@@ -72,7 +72,7 @@
 				<Map class="w-28 h-28"></Map>
 			</GuideCard>
 			<GuideCard
-				title="Street View Coverage"
+				title="Street View coverage"
 				description="Find out where coverage exist, which cameras where used and what generations are."
 				href="/guides/read/beginner/coverage"
 				hueRotate="80"
@@ -104,7 +104,7 @@
 				<ArrowDownUp class="w-28 h-28"></ArrowDownUp>
 			</GuideCard>
 			<GuideCard
-				title="Road Lines"
+				title="Road lines"
 				description="Distinguish road lines from another, differentiate between white and yellow lines."
 				href="/guides/read/intermediate/road-lines"
 				hueRotate="140"
@@ -120,7 +120,7 @@
 				<BookA class="w-28 h-28"></BookA>
 			</GuideCard>
 			<GuideCard
-				title="Trekker Coverage"
+				title="Trekker coverage"
 				description="Learn what Trekker coverage refers to and how it could be useful for guessing."
 				href="/guides/read/intermediate/trekker"
 				hueRotate="180"
@@ -128,7 +128,7 @@
 				<Footprints class="w-28 h-28"></Footprints>
 			</GuideCard>
 			<GuideCard
-				title="European Guardrails"
+				title="European guardrails"
 				description="Find out which types of guardrails exist in Europe and where they are common."
 				href="/guides/read/intermediate/european-guardrails"
 				hueRotate="200"
@@ -136,7 +136,7 @@
 				<Fence class="w-28 h-28"></Fence>
 			</GuideCard>
 			<GuideCard
-				title="Follow Cars"
+				title="Follow cars"
 				description="This guide explains how follow cars can be used as hints."
 				href="/guides/read/intermediate/follow-cars"
 				hueRotate="220"
@@ -151,7 +151,7 @@
 		</h2>
 		<div class="w-full flex gap-8 flex-wrap scrollbar-hide">
 			<GuideCard
-				title="Map Creation"
+				title="Map creation"
 				description="Discover the tools that professional map creators use and become one yourself."
 				href="/guides/read/advanced/map-creation"
 				hueRotate="240"
@@ -159,7 +159,7 @@
 				<MapPinned class="w-28 h-28"></MapPinned>
 			</GuideCard>
 			<GuideCard
-				title="Cups & Competitions"
+				title="Cups & competitions"
 				description="Learn how you can put your skills to the test in cups and competitions."
 				href="/guides/read/advanced/cups-and-competitions"
 				hueRotate="260"
@@ -167,7 +167,7 @@
 				<Trophy class="w-28 h-28"></Trophy>
 			</GuideCard>
 			<GuideCard
-				title="Highway Designations"
+				title="Highway designations"
 				description="Designations of Highways in Canada, America and Australia."
 				href="/guides/read/advanced/highway-designations"
 				hueRotate="280"

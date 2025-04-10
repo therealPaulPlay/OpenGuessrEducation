@@ -3,7 +3,7 @@
 	import QuizMapGame from "$lib/components/QuizMapGame.svelte";
 
 	export const metadata = {
-		title: "All Countries",
+		title: "All countries",
 		tags: ["All"],
 		region: "World",
 		category: determineCategory(new URL(import.meta.url).pathname),

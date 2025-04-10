@@ -4,7 +4,7 @@
 	import ExploreInOpenGuessr from "$lib/components/ExploreInOpenGuessr.svelte";
 
 	export const metadata = {
-		title: "North American Countries",
+		title: "North American countries",
 		tags: ["North America"],
 		region: "North America",
 		category: determineCategory(new URL(import.meta.url).pathname),

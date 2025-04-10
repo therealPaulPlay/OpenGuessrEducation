@@ -3,7 +3,7 @@
 	import QuizMapGame from "$lib/components/QuizMapGame.svelte";
 
 	export const metadata = {
-		title: "North American Capitals",
+		title: "North American capitals",
 		tags: ["North America"],
 		region: "North American Capitals",
 		category: determineCategory(new URL(import.meta.url).pathname),

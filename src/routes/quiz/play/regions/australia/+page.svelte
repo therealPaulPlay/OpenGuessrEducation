@@ -3,7 +3,7 @@
 	import QuizMapGame from "$lib/components/QuizMapGame.svelte";
 
 	export const metadata = {
-		title: "Australian States & Territories",
+		title: "Australian states & territories",
 		tags: ["Oceania"],
 		region: "Australian States",
 		topoJson: "au-states-topo",

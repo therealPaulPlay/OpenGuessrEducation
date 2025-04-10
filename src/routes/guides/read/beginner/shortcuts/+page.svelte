@@ -2,7 +2,7 @@
 	import ArticleTip from "$lib/components/ArticleTip.svelte";
 </script>
 
-<h1 class="text-4xl font-bold mb-4">Keyboard Shortcuts</h1>
+<h1 class="text-4xl font-bold mb-4">Keyboard shortcuts</h1>
 <p class="mb-2">
 	These keyboard shortcuts will help you play <b>GeoGuessr</b> and <b>OpenGuessr</b>
 	more quickly and effectively. Especially in time-limited multiplayer matches, using these is highly recommended. The GeoGuessr

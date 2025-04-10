@@ -3,7 +3,7 @@
 	import TextQuiz from "$lib/components/TextQuiz.svelte";
 
 	export const metadata = {
-		title: "Top Level Domains",
+		title: "Top level domains",
 		tags: ["All"],
 		region: "Top Level Domains",
 		previewImagePath: "/domains/domain-example.jpg",

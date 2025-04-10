@@ -95,7 +95,7 @@
 		take a look at guides and fun quizzes.
 	</p>
 
-	<h3 class="text-xl font-semibold mb-2">Understanding Quizzes</h3>
+	<h3 class="text-xl font-semibold mb-2">Understanding quizzes</h3>
 	<p class="mb-6">
 		<b>Quizzes</b> on OpenGuessr Education are a great way to
 		<b>test your knowledge</b>
@@ -103,28 +103,28 @@
 		the map. Quizzes help you
 		<b>memorize</b>
 		country <b>names, shapes, states, flags, cities</b> and more depending on the quiz type. To start a quiz, visit the
-		<a href="/quiz" class="text-secondary">Quizzes</a> page.
+		<a href="/quiz" class="text-secondary">quiz</a> page.
 	</p>
 
-	<h3 class="text-xl font-semibold mb-2">About Guides</h3>
+	<h3 class="text-xl font-semibold mb-2">About guides</h3>
 	<p class="mb-6">
 		Want to <b>improve</b> your <b>geo-guessing skills</b> and gain knowledge about the game? <b>Check out</b>
-		the comprehensive <a href="/guides" class="text-secondary">Guides</a>
+		the comprehensive <a href="/guides" class="text-secondary">guides</a>
 		section. Guides are <b>packed with tips</b> and tricks to help you become the next Rainbolt. They are frequently
 		updated, so you'll always have the latest strategies at your fingertips. Whether you're looking to
 		<b>score more 5ks</b>, win more duels or want to learn how to use the compass effectively, these guides have got you
 		covered.
 	</p>
 
-	<h3 class="text-xl font-semibold mb-2">Join the Community</h3>
+	<h3 class="text-xl font-semibold mb-2">Join the community</h3>
 	<p class="mb-6">
 		<b>Connect</b> with other <b>geography enthusiasts</b> and share your experiences. Join the
-		<a href="https://discord.com/invite/CSc3MbDrZ8" target="_blank" class="text-secondary">Discord Server</a> to participate
+		<a href="https://discord.com/invite/CSc3MbDrZ8" target="_blank" class="text-secondary">Discord server</a> to participate
 		in discussions, share tips, and compete in challenges. It's a virtual hangout for geography nerds - chances are, you'll
 		like it there!
 	</p>
 
-	<h3 class="text-2xl font-semibold mb-4">Frequently Asked Questions</h3>
+	<h3 class="text-2xl font-semibold mb-4">Frequently asked questions</h3>
 	<div class="mb-6">
 		<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 		<div class="collapse collapse-arrow bg-base-200 bg-base-100 rounded-box mb-2">

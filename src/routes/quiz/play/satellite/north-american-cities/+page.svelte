@@ -3,7 +3,7 @@
 	import SatelliteQuiz from "$lib/components/SatelliteQuiz.svelte";
 
 	export const metadata = {
-		title: "North American Cities from above",
+		title: "North American cities from above",
 		tags: ["North America"],
 		region: "North America",
 		jsonName: "north-american-cities",

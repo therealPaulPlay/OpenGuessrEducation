@@ -3,7 +3,7 @@
 	import ClueQuiz from "$lib/components/ClueQuiz.svelte";
 
 	export const metadata = {
-		title: "Utility Poles",
+		title: "Utility poles",
 		tags: ["All"],
 		region: "Utility Poles",
 		assetFolder: "utility-poles",

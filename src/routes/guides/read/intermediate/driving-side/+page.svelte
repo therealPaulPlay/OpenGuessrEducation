@@ -3,7 +3,7 @@
 	import ArticleTip from "$lib/components/ArticleTip.svelte";
 </script>
 
-<h1 class="text-4xl font-bold mb-4">Driving Side</h1>
+<h1 class="text-4xl font-bold mb-4">Driving side</h1>
 
 <p class="mb-2">
 	Determining the driving side can be an <b>extremely useful clue</b> for finding out where a panorama image was taken.

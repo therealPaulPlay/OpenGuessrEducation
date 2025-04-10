@@ -3,7 +3,7 @@
 	import GuideQuiz from "$lib/components/GuideQuiz.svelte";
 </script>
 
-<h1 class="text-4xl font-bold mb-4">Highway Designations</h1>
+<h1 class="text-4xl font-bold mb-4">Highway designations</h1>
 
 <p class="mb-2">
 	Understanding highway naming conventions is crucial for navigation and geographical identification.<br />
@@ -18,7 +18,7 @@
 </ArticleTip>
 
 <!-- Abbreviations for Road Types Worldwide -->
-<h2 id="world-wide" class="text-xl font-bold mt-4 mb-2">Highway Designations Worldwide</h2>
+<h2 id="world-wide" class="text-xl font-bold mt-4 mb-2">Highway designations worldwide</h2>
 <p class="mb-2">
 	All countries and areas of the world have some kind of designation for the names of their highways and roads.<br />
 	Please note that many of these <b>worldwide</b> abbreviations can be used
@@ -117,7 +117,7 @@
 	for New South Wales).
 </p>
 
-<h3 class="text-lg font-bold mt-4">Australia Abbreviation List</h3>
+<h3 class="text-lg font-bold mt-4">Australia abbreviation list</h3>
 <div class="overflow-x-auto">
 	<table class="table-sm">
 		<thead>
@@ -214,7 +214,7 @@
 	<b>Rio Grande do Norte</b>.</ArticleTip
 >
 
-<h3 class="text-lg font-bold mt-4">Brazil Abbreviation List</h3>
+<h3 class="text-lg font-bold mt-4">Brazil abbreviation list</h3>
 <div class="overflow-x-auto">
 	<table class="table-sm">
 		<thead>
@@ -283,7 +283,7 @@
 	Provincial highways often use different designations depending on the province (e.g., <b>"Hwy"</b> or <b>"Rte"</b>).
 </p>
 
-<h3 class="text-lg font-bold mt-4">Canada Abbreviation List</h3>
+<h3 class="text-lg font-bold mt-4">Canada abbreviation list</h3>
 <div class="overflow-x-auto">
 	<table class="table-sm">
 		<thead>
@@ -349,7 +349,7 @@
 	for California Highway 1.
 </p>
 
-<h3 class="text-xl font-bold mt-4 mb-2">United States Abbreviation List</h3>
+<h3 class="text-xl font-bold mt-4 mb-2">United States abbreviation list</h3>
 <div class="overflow-x-auto">
 	<table class="table-sm">
 		<thead>
