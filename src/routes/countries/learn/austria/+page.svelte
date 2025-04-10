@@ -94,7 +94,7 @@
 			src="/assets/articles/austria/austria_viennastreetsign.jpg"
 			class="rounded-xl w-full h-auto aspect-[512/199] object-contain"
 		/>
-		<p class="text-center">
+		<p class="text-center mt-2">
 			Vienna street signs with district numbering (Source:
 			<a
 				href="https://commons.wikimedia.org/wiki/File:Straßenschild_Kunkegasse_(Wien).jpg"
@@ -112,7 +112,7 @@
 			src="/assets/articles/austria/austria_townentrysign.jpg"
 			class="rounded-xl w-full h-auto object-contain aspect-[4/3]"
 		/>
-		<p class="text-center">Austrian town entry sign.</p>
+		<p class="text-center mt-2">Austrian town entry sign.</p>
 	</div>
 </div>
 
@@ -191,7 +191,7 @@
 		src="/assets/articles/austria/austria_licenseplate.jpg"
 		class="rounded-xl w-3/4 h-auto aspect-[128/29] object-contain"
 	/>
-	<p class="text-center">
+	<p class="text-center mt-2">
 		Austrian license plate (Source:
 		<a href="https://commons.wikimedia.org/wiki/File:Austria_police_plate_01.JPG" target="_blank" class="text-secondary"
 			>Wikimedia</a
