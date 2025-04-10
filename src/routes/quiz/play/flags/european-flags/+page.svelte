@@ -3,7 +3,7 @@
 	import FlagQuiz from "$lib/components/FlagQuiz.svelte";
 
 	export const metadata = {
-		title: "European Flags",
+		title: "European flags",
 		tags: ["Europe"],
 		region: "Europe",
 		category: determineCategory(new URL(import.meta.url).pathname),

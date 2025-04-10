@@ -3,7 +3,7 @@
 	import QuizMapGame from "$lib/components/QuizMapGame.svelte";
 
 	export const metadata = {
-		title: "Spanish Regiones Autónomas",
+		title: "Spanish regiones autónomas",
 		tags: ["Europe"],
 		region: "Spanish Regions",
 		topoJson: "spanish-regions",

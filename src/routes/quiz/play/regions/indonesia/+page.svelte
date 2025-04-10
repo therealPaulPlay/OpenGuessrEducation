@@ -3,7 +3,7 @@
 	import QuizMapGame from "$lib/components/QuizMapGame.svelte";
 
 	export const metadata = {
-		title: "Indonesian Provinces (Provinsi)",
+		title: "Indonesian provinces (Provinsi)",
 		tags: ["Asia"],
 		region: "Indonesian Provinces",
 		topoJson: "indonesian-provinces",

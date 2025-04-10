@@ -3,7 +3,7 @@
 	import GuideQuiz from "$lib/components/GuideQuiz.svelte";
 </script>
 
-<h1 class="text-4xl font-bold mb-4">Cups and Competitions</h1>
+<h1 class="text-4xl font-bold mb-4">Cups and competitions</h1>
 <p class="mb-2">
 	At some point in your Geo-Guessing journey you might <b>feel ready</b> to put your skills to test. In this guide, we
 	will find out how you can <b>compete</b> against other professional players.

@@ -4,7 +4,7 @@
 	import ArticleEmbedPanorama from "$lib/components/ArticleEmbedPanorama.svelte";
 </script>
 
-<h1 class="text-4xl font-bold mb-4">Map Creation</h1>
+<h1 class="text-4xl font-bold mb-4">Map creation</h1>
 <p class="mb-2">
 	In OpenGuessr, making maps by <b>uploading a few Street View links</b> is easy, however, professional map-makers use
 	more <b>sophisticated tools</b> for their efforts. These allow them to create <b>larger maps</b> using generators and pick

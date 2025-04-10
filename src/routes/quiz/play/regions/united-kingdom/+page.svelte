@@ -3,7 +3,7 @@
 	import QuizMapGame from "$lib/components/QuizMapGame.svelte";
 
 	export const metadata = {
-		title: "United Kingdom Regions",
+		title: "United Kingdom regions",
 		tags: ["Europe"],
 		region: "United Kingdom Regions",
 		topoJson: "uk-regions",

@@ -3,7 +3,7 @@
 	import GuideQuiz from "$lib/components/GuideQuiz.svelte";
 </script>
 
-<h1 class="text-4xl font-bold mb-4">Trekker Coverage</h1>
+<h1 class="text-4xl font-bold mb-4">Trekker coverage</h1>
 <p class="mb-2">
 	<b>Trekker coverage</b> refers to imagery captured in places where vehicles are unable to travel. Using a
 	<b>Trekker camera</b>, often carried by a person on foot, these systems are used to map and photograph areas that are

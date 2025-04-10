@@ -8,7 +8,7 @@
 </script>
 
 <article class="container mx-auto p-6 px-1">
-	<h1 class="text-4xl font-bold mb-8">How to get Embed Links from Google Street View</h1>
+	<h1 class="text-4xl font-bold mb-8">How to get embed links from Google Street View</h1>
 
 	<p class="mb-4 max-w-2xl">
 		Let's take a quick look at how you can get the <b>correct link</b> to use for embeds in your article from Google Street

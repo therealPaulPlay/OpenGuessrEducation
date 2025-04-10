@@ -3,7 +3,7 @@
 	import GuideQuiz from "$lib/components/GuideQuiz.svelte";
 </script>
 
-<h1 class="text-4xl font-bold mb-4">Road Lines</h1>
+<h1 class="text-4xl font-bold mb-4">Road lines</h1>
 
 <p class="mb-2">
 	Learning road line types is a very <b>effective</b> and, at the same time, beginner-friendly way to quickly gasp a

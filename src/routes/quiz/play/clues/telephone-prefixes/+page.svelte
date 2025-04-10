@@ -3,7 +3,7 @@
 	import TextQuiz from "$lib/components/TextQuiz.svelte";
 
 	export const metadata = {
-		title: "Telephone Prefixes",
+		title: "Telephone prefixes",
 		tags: ["All"],
 		region: "Telephone Prefixes",
 		previewImagePath: "/telephone-prefixes/tel-number-example.jpg",

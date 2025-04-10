@@ -3,7 +3,7 @@
 	import QuizMapGame from "$lib/components/QuizMapGame.svelte";
 
 	export const metadata = {
-		title: "Brazilian States (Estados)",
+		title: "Brazilian states (Estados)",
 		tags: ["South America"],
 		region: "Brazilian States",
 		topoJson: "brazilian-states",
