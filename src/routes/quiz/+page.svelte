@@ -42,7 +42,7 @@
 	);
 
 	onMount(async () => {
-		setTitle("Discover Quizzes");
+		setTitle("Discover quizzes");
 		const modules = import.meta.glob("/src/routes/quiz/play/**/*.svelte");
 		const quizzes = await Promise.all(
 			Object.entries(modules).map(async ([path, module]) => {
@@ -120,19 +120,21 @@
 
 	function formatCategoryName(input) {
 		return input
-			.replace(/-/g, " ") // Replace all hyphens with spaces
+			.replace(/-/g, " ")
 			.toLowerCase()
-			.split(" ") // Split words by gap
-			.map((word) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
-			.join(" "); // Join words back with a space
+			.split(" ")
+			.map((word, index) => {
+				return index === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word.toLowerCase();
+			})
+			.join(" ");
 	}
 </script>
 
 <article class="container mx-auto p-6 px-1">
-	<h1 class="text-5xl font-bold mb-12">Discover Quizzes</h1>
+	<h1 class="text-5xl font-bold mb-12">Discover quizzes</h1>
 
 	<div class="mb-8">
-		<h2 class="text-2xl font-semibold mb-4">Filter by Continent:</h2>
+		<h2 class="text-2xl font-semibold mb-4">Filter by continent:</h2>
 		<div class="flex gap-2 overflow-x-auto">
 			{#each allTags as tag}
 				{#if tag !== undefined}

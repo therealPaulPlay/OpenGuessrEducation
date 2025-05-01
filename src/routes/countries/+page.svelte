@@ -6,7 +6,7 @@
 	import { countryStore } from "$lib/stores/countryStore";
 
 	onMount(async () => {
-		setTitle("Learn Countries");
+		setTitle("Learn countries");
 		// Only fetch if data isn't already in store
 		if (!$countryStore.countryCodes) {
 			await countryStore.fetchCountryCodes();
@@ -18,7 +18,7 @@
 </script>
 
 <article class="container mx-auto p-6 px-1">
-	<h1 class="text-5xl font-bold mb-6">Learn Countries</h1>
+	<h1 class="text-5xl font-bold mb-6">Learn countries</h1>
 
 	<div
 		class="outline outline-1 px-4 py-2 rounded-lg w-fit opacity-75 flex items-center justify-center gap-3 mb-10 leading-snug"

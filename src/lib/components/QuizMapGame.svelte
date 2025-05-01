@@ -277,11 +277,11 @@
 	<div class="flex justify-between items-center mb-4 gap-3 flex-wrap">
 		<h2 class="text-2xl font-bold">
 			{#if gameOver}
-				Quiz Complete!
+				Quiz completed.
 			{:else if gameMode === "learn"}
-				Click on <span class="text-secondary">{currentQuestion}</span>
+				Click on <span class="text-secondary">{currentQuestion}</span>.
 			{:else if gameMode === "click"}
-				Click on <span class="text-secondary">{currentQuestion}</span>
+				Click on <span class="text-secondary">{currentQuestion}</span>.
 			{:else if gameMode === "type"}
 				Which region is highlighted?
 			{/if}
