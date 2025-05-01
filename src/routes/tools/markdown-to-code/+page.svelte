@@ -268,7 +268,7 @@
 
 		<div class="flex flex-1 h-fit pb-14 flex-wrap gap-y-12">
 			<div class="w-1/2 p-4 min-w-52 grow h-[calc(100vh-16rem)] relative">
-				<h2 class="text-lg font-bold mb-4 h-10">Markdown Editor</h2>
+				<h2 class="text-lg font-bold mb-4 h-10 flex items-center">Markdown editor</h2>
 				<textarea
 					bind:value={markdown}
 					oninput={saveMarkdownToStorage}

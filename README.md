@@ -33,7 +33,7 @@ If you have a suggestion that would enhance the project, please fork the repo an
 4. Push to the Branch (git push origin suggestion/newSuggestion)
 5. Open a Pull Request to the suggestion branch (not main!)
 
-### Contribution Rules
+### Contribution rules
 
 - The contribution must fit the project and the geography context
 - Information has to be factual, articles solely written by AI are not permitted
@@ -61,7 +61,7 @@ If you have a suggestion that would enhance the project, please fork the repo an
 
 Make sure that the title matches the `<h1>` title from the page! Moreover, ensure that the folder path matches these names in a simpler form as well - For example, the path for a guide named "The Compass" is `/compass/`.
 
-### Guide Structure Rules
+### Guide structure rules
 
 - Please follow the structure seen in `/src/routes/guides/read/example/tutorial`
 - Use proper spacing. Usually at least `mb-2` after text, `mt-8` for subheadings, `mb-4` on text if an image follows it etc. The guide tutorial shows this.
@@ -70,7 +70,7 @@ Make sure that the title matches the `<h1>` title from the page! Moreover, ensur
 - Highlight important words in **bold** using `<b>word</b>`. As a rule of thumb, every concept should be understandable by just reading the words in bold.
 - Make use of article tips and article guides, but don't put too many inside of a guide. Ensure that content > components.
 
-## Writing a Country Article
+## Writing a country article
 
 Country Articles are quite similar to Guides. Therefore, please refer to the `Guide Structure Rules` from the previous paragraph. Now, country pages are located in `/src/routes/countries/learn/$countryName`. From there, you can edit
 the +page file. Note that this can be empty - all the surrounding info will be added through the layout. However, there are some differences compard to Guides:
@@ -78,11 +78,11 @@ the +page file. Note that this can be empty - all the surrounding info will be a
 - Don't include Guide Quizzes: Guide Quizzes are **not** meant for Country Articles.
 - Don't use a H1 heading. The name of the country will be added as a H1 automatically.
 
-## Markdown-To-Code Converter
+## Markdown-To-Code converter
 
 To write Guides or Articles more easily and to get to know the structure rules, you can try out the [Markdown-To-Code editor](https://education.openguessr.com/tools/markdown-to-code).
 
-## The Map
+## The map
 
 The map component (Map.svelte) has a bunch of parameters. Let's go over the most important ones:
 
@@ -98,7 +98,7 @@ The map component (Map.svelte) has a bunch of parameters. Let's go over the most
 - **showPoints**: Controls whether or not points from `regionSettings.json` should be displayed.
 - **topoJsonName**: A `topojson`is a special file that holds geometry data for regions. This is used to load the actual map data. A topojson for OpenGuessr Education will usually include a name property for all features, so that map highlights etc. work.
 
-## Country Names
+## Country names
 
 Some countries have names that can be written differently. OpenGuessr Education uses the follwing ones:
 
