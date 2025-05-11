@@ -1,11 +1,4 @@
 export async function addExperience(addAmount) {
-	const currentExperience = Number(localStorage.getItem("experience"));
-
-	if (!currentExperience) {
-		console.error("Couldn't retrieve experience");
-		return;
-	}
-
 	if (!addAmount) {
 		console.warn("Amount to add is zero or not defined.");
 		return;
@@ -14,10 +7,10 @@ export async function addExperience(addAmount) {
 	try {
 		const requestBody = {
 			id: localStorage.getItem("id"),
-			experience: currentExperience + Number(addAmount),
+			experience: Number(addAmount),
 		};
 
-		const experienceEndpoint = "https://accounts.openguessr.com/accounts/update/experience";
+		const experienceEndpoint = "https://accounts.openguessr.com/accounts/update/add-experience";
 
 		// Make the PUT request using Fetch API
 		const response = await fetch(experienceEndpoint, {
