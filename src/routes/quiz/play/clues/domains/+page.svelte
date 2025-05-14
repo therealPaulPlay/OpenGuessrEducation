@@ -5,7 +5,7 @@
 	export const metadata = {
 		title: "Top level domains",
 		tags: ["All"],
-		region: "Top Level Domains",
+		region: "Top level domains",
 		previewImagePath: "/domains/domain-example.jpg",
 		textDataPath: "/json/country-data/country-tld.json",
 		category: determineCategory(new URL(import.meta.url).pathname),
