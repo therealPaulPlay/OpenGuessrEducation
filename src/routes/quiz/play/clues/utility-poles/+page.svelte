@@ -5,7 +5,7 @@
 	export const metadata = {
 		title: "Utility poles",
 		tags: ["All"],
-		region: "Utility Poles",
+		region: "Utility poles",
 		assetFolder: "utility-poles",
 		filePrefix: "pole",
 		previewImagePath: "/utility-poles/pole-indonesia.jpg",

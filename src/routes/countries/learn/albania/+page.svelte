@@ -174,7 +174,7 @@
 </div>
 <p class="text-center mt-2">Albanian letters.</p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">License Plates</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">License plates</h2>
 <ul class="mb-2 list-disc list-inside">
 	<li><b>Current</b> (since 2011): <b>Two blue stripes</b> on either side with <b>white center</b>.</li>
 	<li><b>Old</b> (pre-2011): <b>Red stripe on the left</b> with <b>white to the right</b> (unique in Europe).</li>

@@ -5,7 +5,7 @@
 	export const metadata = {
 		title: "Street names",
 		tags: ["All"],
-		region: "Streetnames",
+		region: "Street names",
 		assetFolder: "street-names",
 		filePrefix: "streetname",
 		previewImagePath: "/street-names/streetname-australia.jpg",

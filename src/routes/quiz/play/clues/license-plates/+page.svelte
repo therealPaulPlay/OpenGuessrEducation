@@ -5,7 +5,7 @@
 	export const metadata = {
 		title: "License plates",
 		tags: ["All"],
-		region: "License Plates",
+		region: "License plates",
 		assetFolder: "license-plates",
 		filePrefix: "license-plate",
 		previewImagePath: "/license-plates/license-plate-thailand.jpg",
