@@ -205,7 +205,13 @@
 			"lat": -5,
 			"long": 110
 		},
-		"zoom": 1
+		"zoom": 1,
+		"points": {
+			"Singapore": {
+				"lat": 1.29,
+				"long": 103.85
+			}
+		}
 	},
 	"BRICS": {
 		"center": {
