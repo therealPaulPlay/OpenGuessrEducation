@@ -27,9 +27,10 @@ export async function addExperience(addAmount) {
 			const data = await response.json();
 			if (data?.user?.experience) localStorage.setItem("experience", data?.user?.experience);
 		} else {
-			console.error("Experience update failed, Status: " + response.status + ", Error " + response?.error);
+			throw new Error(response.status);
 		}
+		
 	} catch (error) {
-		console.error("Error occurred during experience update: ", error);
+		console.error("Error occurred updating player experience:", error);
 	}
 }
