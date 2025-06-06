@@ -55,7 +55,7 @@
 					throw new Error("Missing or unrecognized latitude/longitude in one of the coordinate pairs");
 				}
 
-				return [lat.toString(), lng.toString()];
+				return [Number(lat), Number(lng)];
 			});
 
 			// Generate the output JSON

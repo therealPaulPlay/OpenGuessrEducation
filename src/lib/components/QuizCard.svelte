@@ -14,7 +14,6 @@
 					if (entry.isIntersecting) {
 						// Once visible, set to true and disconnect the observer
 						hasBeenVisible = true;
-						// We can disconnect the observer since we don't need it anymore
 						observer.disconnect();
 					}
 				});
@@ -26,15 +25,11 @@
 			},
 		);
 
-		if (containerRef) {
-			observer.observe(containerRef);
-		}
+		if (containerRef) observer.observe(containerRef);
 	});
 
 	onDestroy(() => {
-		if (observer) {
-			observer.disconnect();
-		}
+		if (observer) observer.disconnect();
 	});
 </script>
 
