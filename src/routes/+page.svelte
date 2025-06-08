@@ -31,7 +31,7 @@
 	</p>
 
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 mt-12">
-		<div class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
+		<div class="card bg-base-300 shadow-md hover:shadow-xl transition-shadow duration-300">
 			<div class="card-body">
 				<Book class="w-12 h-12 text-secondary mb-4" />
 				<h2 class="card-title">Learn Geo-Guessing</h2>
@@ -47,7 +47,7 @@
 			</div>
 		</div>
 
-		<div class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
+		<div class="card bg-base-300 shadow-md hover:shadow-xl transition-shadow duration-300">
 			<div class="card-body">
 				<Gamepad2 class="w-12 h-12 text-secondary mb-4" />
 				<h2 class="card-title">Quizzes</h2>
@@ -63,7 +63,7 @@
 			</div>
 		</div>
 
-		<div class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
+		<div class="card bg-base-300 shadow-md hover:shadow-xl transition-shadow duration-300">
 			<div class="card-body">
 				<Trophy class="w-12 h-12 text-secondary mb-4" />
 				<h2 class="card-title">Professional guides</h2>

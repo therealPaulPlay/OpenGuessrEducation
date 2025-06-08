@@ -35,7 +35,7 @@
 
 <div
 	bind:this={containerRef}
-	class="card w-64 bg-base-200 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300"
+	class="card w-64 bg-base-300 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300"
 >
 	<div class="card-body flex flex-col h-full">
 		<div class="flex-grow">

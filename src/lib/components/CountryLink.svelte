@@ -19,13 +19,13 @@
 </script>
 
 <a
-	class="px-2 py-1 bg-base-200 rounded-md hover:scale-95 transition-all cursor-pointer box-border m-0.5 {isFavorite
+	class="px-2 py-1 bg-base-300 rounded-md hover:scale-95 transition-all cursor-pointer box-border m-0.5 {isFavorite
 		? 'outline outline-1 outline-secondary'
 		: ''}"
 	href="/countries/learn/{country.toLowerCase().replaceAll(' ', '-')}"
 >
 	<div class="flex gap-2 items-center">
-		<p class="text-lg">
+		<p>
 			{country}
 		</p>
 		{#if IconComponent}

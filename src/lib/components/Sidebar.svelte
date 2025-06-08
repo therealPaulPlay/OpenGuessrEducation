@@ -99,7 +99,7 @@
 <!-- Overlay for mobile -->
 {#if isOpen}
 	<button
-		class="fixed inset-0 bg-black bg-opacity-50 z-[99] lg:hidden"
+		class="fixed inset-0 bg-black opacity-50 z-99 lg:hidden transition"
 		onclick={() => (isOpen = false)}
 		aria-label="Toggle Sidebar"
 	></button>

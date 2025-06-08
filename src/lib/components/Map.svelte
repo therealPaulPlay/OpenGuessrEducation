@@ -346,7 +346,7 @@
 						isHighlighted: isHighlighted,
 						isInteractive: interactivity,
 						flashColor: "",
-						color: isHighlighted ? feature.color || "oklch(var(--s))" : notHighlightedColor,
+						color: isHighlighted ? feature.color || "var(--color-secondary)" : notHighlightedColor,
 					};
 				}
 				return null;
@@ -367,7 +367,7 @@
 				isHighlighted: true,
 				isInteractive: interactivity,
 				flashColor: "",
-				color: point.color || "oklch(var(--s))",
+				color: point.color || "var(--color-secondary)",
 			};
 		});
 	}
@@ -605,7 +605,7 @@
 					isHighlighted: true,
 					isInteractive: true,
 					flashColor: "",
-					color: "oklch(var(--s))",
+					color: "var(--color-secondary))",
 				};
 			});
 
@@ -631,7 +631,7 @@
 	id="mapContainer"
 >
 	{#if !loaded}
-		<div class="skeleton custom-loading-size opacity-75 rounded-lg"></div>
+		<div class="skeleton custom-loading-size opacity-75 rounded-lg bg-accent"></div>
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 	{:else}
 		<div class="absolute w-full h-full bg-accent"></div>
@@ -649,7 +649,7 @@
 			onmousemove={handleMouseMove}
 			onmouseup={handleMouseUp}
 			onmouseleave={handleMouseUp}
-			fill="oklch(var(--a))"
+			fill="var(--color-secondary)"
 			class="relative {interactive ? 'pointer-events-auto' : 'pointer-events-none'}"
 		>
 			<g>
@@ -662,8 +662,8 @@
 						<!-- svelte-ignore a11y_no_static_element_interactions -->
 						<path
 							d={feature.d}
-							fill={feature.flashColor || feature.color || "oklch(var(--s))"}
-							stroke="oklch(var(--a))"
+							fill={feature.flashColor || feature.color || "var(--color-accent)"}
+							stroke="var(--color-accent)"
 							stroke-width="0.5"
 							vector-effect="non-scaling-stroke"
 							onclick={(event) => handleRegionClick(feature, event)}
@@ -686,13 +686,13 @@
 								onmouseenter={() => (point.isHovered = true)}
 								onmouseleave={() => (point.isHovered = false)}
 								class="point-feature"
-								stroke="oklch(var(--b2))"
+								stroke="var(--color-base-200)"
 								stroke-width="2"
 								transform={`translate(${point.x},${point.y})`}
 							>
 								<circle
 									r={5 + (15 * Math.max(width, height)) / 2000}
-									fill={point.flashColor || point.color || "oklch(var(--s))"}
+									fill={point.flashColor || point.color || "var(--color-secondary)"}
 									class="point-circle"
 									style="filter: drop-shadow(2px 2px 4px rgba(50,50,50,0.3)) {point.isHovered
 										? 'brightness(1.2)'
@@ -723,7 +723,7 @@
 											ry="10"
 											opacity="0.85"
 											pointer-events="none"
-											fill="oklch(var(--b2))"
+											fill="var(--color-base-300)"
 											class="label-background"
 										/>
 										<text
@@ -731,7 +731,7 @@
 											y={y + 1}
 											text-anchor="middle"
 											dominant-baseline="middle"
-											fill="oklch(var(--s))"
+											fill="var(--color-secondary)"
 											font-size="15"
 											font-weight="bold"
 											pointer-events="none"
@@ -758,14 +758,14 @@
 										ry="10"
 										opacity="0.85"
 										pointer-events="none"
-										fill="oklch(var(--b2))"
+										fill="var(--color-base-300)"
 										class="label-background"
 									/>
 									<text
 										y={-30}
 										text-anchor="middle"
 										dominant-baseline="middle"
-										fill="oklch(var(--s))"
+										fill="var(--color-secondary)"
 										font-size="15"
 										font-weight="bold"
 										pointer-events="none"
@@ -850,7 +850,7 @@
 	}
 
 	path:hover {
-		color: oklch(var(--p));
+		color: var(--color-primary);
 	}
 
 	.feature-path {

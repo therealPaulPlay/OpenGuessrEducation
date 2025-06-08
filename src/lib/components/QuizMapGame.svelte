@@ -195,9 +195,9 @@
 
 			// Highlight region green if hint was not used, highlight yellow if hint was used
 			if (currentWrongAttempts >= 3) {
-				quizMap.highlightFeature(currentQuestion, "oklch(var(--wa))");
+				quizMap.highlightFeature(currentQuestion, "var(--color-warning)");
 			} else {
-				quizMap.highlightFeature(currentQuestion, "oklch(var(--su))");
+				quizMap.highlightFeature(currentQuestion, "var(--color-success)");
 			}
 
 			nextQuestion();
@@ -208,12 +208,12 @@
 			errors++;
 			currentWrongAttempts++;
 
-			quizMap.highlightFeature(answer, "oklch(var(--p))");
+			quizMap.highlightFeature(answer, "var(--color-primary)");
 
 			if (gameMode != "learn") quizMap.brieflyShowName(answer);
 
 			setTimeout(() => {
-				quizMap.highlightFeature(answer, "oklch(var(--s))");
+				quizMap.highlightFeature(answer, "var(--color-secondary)");
 			}, 500);
 
 			if (currentWrongAttempts >= 3 && gameMode != "type") {
@@ -290,7 +290,7 @@
 			<!-- svelte-ignore a11y_click_events_have_key_events -->
 			<!-- svelte-ignore a11y_missing_attribute -->
 			<!-- svelte-ignore a11y_interactive_supports_focus -->
-			<div role="tablist" class="tabs tabs-boxed bg-base-300 custom-tabs">
+			<div role="tablist" class="tabs tabs-box bg-base-300 custom-tabs">
 				<a role="tab" class="tab tab-sm" class:tab-active={gameMode === "click"} onclick={() => changeGameMode("click")}
 					>Click</a
 				>
@@ -349,7 +349,7 @@
 				placeholder={inputPlaceholderHint}
 				class="input input-bordered w-full"
 			/>
-			<button class="btn btn-secondary btn-sm mt-2 mb-2 absolute right-2" onclick={handleInputSubmit}>Submit</button>
+			<button class="btn btn-secondary btn-sm mt-1 mb-1 absolute right-1" onclick={handleInputSubmit}>Submit</button>
 			<div
 				class="absolute w-full top-16 bg-accent shadow-lg transition-opacity p-4 flex flex-col gap-2 rounded-lg z-20 max-h-52 overflow-auto outline outline-accent {showTypeAutoComplete
 					? 'opacity-100'
@@ -404,6 +404,6 @@
 	}
 
 	.custom-tabs .tab-active {
-		background-color: oklch(var(--s)) !important;
+		background-color: var(--color-secondary) !important;
 	}
 </style>

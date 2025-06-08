@@ -31,7 +31,7 @@
 		<div class="collapse-title p-0">
 			<h2 class="text-3xl font-semibold">Europe</h2>
 		</div>
-		<div class="collapse-content p-0">
+		<div class="collapse-content p-0 pt-4">
 			<div class="flex flex-wrap w-full gap-3">
 				<CountryLink country="Albania" />
 				<CountryLink country="Andorra" />
@@ -86,7 +86,7 @@
 		<div class="collapse-title p-0">
 			<h2 class="text-3xl font-semibold">Asia</h2>
 		</div>
-		<div class="collapse-content p-0">
+		<div class="collapse-content p-0 pt-4">
 			<div class="flex flex-wrap w-full gap-3">
 				<div class="flex flex-wrap w-full gap-3">
 					<CountryLink country="Afghanistan" />
@@ -148,7 +148,7 @@
 		<div class="collapse-title p-0">
 			<h2 class="text-3xl font-semibold">Africa</h2>
 		</div>
-		<div class="collapse-content p-0">
+		<div class="collapse-content p-0 pt-4">
 			<div class="flex flex-wrap w-full gap-3">
 				<div class="flex flex-wrap w-full gap-3">
 					<CountryLink country="Algeria" />
@@ -216,7 +216,7 @@
 		<div class="collapse-title p-0">
 			<h2 class="text-3xl font-semibold">North America</h2>
 		</div>
-		<div class="collapse-content p-0">
+		<div class="collapse-content p-0 pt-4">
 			<div class="flex flex-wrap w-full gap-3">
 				<div class="flex flex-wrap w-full gap-3">
 					<CountryLink country="Bahamas" />
@@ -244,7 +244,7 @@
 		<div class="collapse-title p-0">
 			<h2 class="text-3xl font-semibold">South America</h2>
 		</div>
-		<div class="collapse-content p-0">
+		<div class="collapse-content p-0 pt-4">
 			<div class="flex flex-wrap w-full gap-3">
 				<div class="flex flex-wrap w-full gap-3">
 					<CountryLink country="Argentina" />
@@ -269,7 +269,7 @@
 		<div class="collapse-title p-0">
 			<h2 class="text-3xl font-semibold">Oceania</h2>
 		</div>
-		<div class="collapse-content p-0">
+		<div class="collapse-content p-0 pt-4">
 			<div class="flex flex-wrap w-full gap-3">
 				<div class="flex flex-wrap w-full gap-3">
 					<CountryLink country="Australia" />

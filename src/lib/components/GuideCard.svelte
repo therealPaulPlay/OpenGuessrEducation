@@ -27,7 +27,7 @@
 <div
 	class="card {mobile
 		? 'image-full'
-		: 'card-side'} bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300 {mobile
+		: 'card-side'} bg-base-300 shadow-md hover:shadow-xl transition-shadow duration-300 {mobile
 		? 'max-h-64'
 		: ''} overflow-hidden"
 >

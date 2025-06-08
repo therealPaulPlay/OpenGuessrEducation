@@ -105,42 +105,42 @@
 	<div class="w-full bg-base-300 rounded-lg flex flex-wrap items-center p-2 gap-2 mt-2">
 		{#if !jsonDataLoading}
 			{#if topLevelDomains}
-				<div class="stat-pill">
+				<div class="stat-pill text-sm">
 					<EthernetPort />
 					{topLevelDomains[countryName] || "-"}
 				</div>
 			{/if}
 			{#if telephonePrefixes}
-				<div class="stat-pill">
+				<div class="stat-pill text-sm">
 					<Phone />
 					{telephonePrefixes[countryName] || "-"}
 				</div>
 			{/if}
 			{#if populationData}
-				<div class="stat-pill">
+				<div class="stat-pill text-sm">
 					<UsersRound />
 					{populationData[countryName] || "-"}
 				</div>
 			{/if}
 			{#if countryLanguages}
-				<div class="stat-pill">
+				<div class="stat-pill text-sm">
 					<Languages />
 					{countryLanguages[countryName] || "-"}
 				</div>
 			{/if}
 			{#if countryGDP}
-				<div class="stat-pill">
+				<div class="stat-pill text-sm">
 					<CircleDollarSign />
 					{countryGDP[countryName] || "-"} Bn. USD
 				</div>
 			{/if}
 		{/if}
 		<a
-			class="btn btn-secondary btn-sm custom-btn-height {jsonDataLoading ? 'invisible' : ''}"
+			class="btn btn-secondary custom-btn-height {jsonDataLoading ? 'invisible' : ''}"
 			href="https://openguessr.com/?play-map={countryName.replaceAll(' ', '_')}"
 			target="_blank"
 		>
-			<Compass size="25" /> Explore
+			Explore
 		</a>
 	</div>
 
@@ -192,7 +192,7 @@
 
 <style>
 	.stat-pill {
-		background-color: oklch(var(--b2));
+		background-color: var(--color-base-200);
 		border-radius: 0.25rem;
 		padding: 0.25rem;
 		padding-inline: 0.5rem;
@@ -200,11 +200,12 @@
 		justify-content: center;
 		align-items: center;
 		gap: 0.5rem;
+		height: 2.2em;
 	}
 
 	.custom-btn-height {
 		flex-grow: 1;
-		height: 2.3rem;
+		height: 2rem;
 		border-radius: 0.25rem;
 	}
 </style>

@@ -8,7 +8,7 @@ The unique combination of minigames, interactive guides and extensive country da
 ## Getting started
 
 This project uses Svelte (UI Framework) with SvelteKit (Web development framework). You can check out their [official docs](https://svelte.dev/) to get started.
-Moreover, Tailwind CSS (which is dependent on PostCSS) is used for utility classes. If you need help, feel free to consult the Discord server (Link found in the footer area on OpenGuessr Education or OpenGuessr).
+Moreover, Tailwind CSS is used for utility classes. If you need help, feel free to consult the Discord server (Link found in the footer area on OpenGuessr Education or OpenGuessr).
 
 ## License
 

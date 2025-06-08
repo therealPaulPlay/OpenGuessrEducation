@@ -10,7 +10,7 @@
 
 <label class="swap swap-rotate btn btn-accent">
 	<!-- this hidden checkbox controls the state -->
-	<input type="checkbox" class="theme-controller" data-toggle-theme="customDark,light" data-act-class="ACTIVECLASS" />
+	<input type="checkbox" class="theme-controller" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" />
 
 	<!-- sun icon -->
 	<svg class="swap-off h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
