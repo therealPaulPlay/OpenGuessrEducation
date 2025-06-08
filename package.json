@@ -1,7 +1,6 @@
 {
 	"name": "openguessreducation",
 	"version": "1.0.1",
-	"private": true,
 	"scripts": {
 		"generate-sitemap": "node ./scripts/generate-sitemap.js",
 		"dev": "vite dev --port 3000 --host",
@@ -10,7 +9,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.3.0",
-		"@sveltejs/adapter-node": "^5.2.9",
+		"@sveltejs/adapter-static": "^3.0.6",
 		"@sveltejs/kit": "^2.7.2",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
 		"autoprefixer": "^10.4.20",
@@ -22,7 +21,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-static": "^3.0.6",
 		"d3-geo": "^3.1.1",
 		"daisyui": "^4.12.10",
 		"globe.gl": "^2.32.6",

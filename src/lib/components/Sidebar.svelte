@@ -45,7 +45,7 @@
 	<nav class="flex h-full flex-col justify-between p-4">
 		<!-- Logo -->
 		<div class="flex justify-center items-center mb-6 mt-5">
-			<img src="/assets/openguessr_icon.png" alt="OpenGuessr Logo" class="w-16 h-16 rounded-full p-2 bg-base-300" />
+			<img src="/assets/home/openguessr_icon.png" alt="OpenGuessr Logo" class="w-16 h-16 rounded-full p-2 bg-base-300" />
 		</div>
 
 		<!-- Navigation Links -->

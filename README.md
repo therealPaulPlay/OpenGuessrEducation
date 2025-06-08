@@ -1,4 +1,4 @@
-![OpenGuessr Education cover image](static/assets/openguessr_jungle_adventure.png?raw=true)
+![OpenGuessr Education cover image](static/assets/home/openguessr_jungle_adventure.png?raw=true)
 
 # OpenGuessr Education
 

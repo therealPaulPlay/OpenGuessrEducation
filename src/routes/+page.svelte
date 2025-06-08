@@ -4,19 +4,17 @@
 	import { Book, Trophy, Compass, Flag, Award, Map, Gamepad2 } from "lucide-svelte";
 	import { onMount } from "svelte";
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
+	import { username } from "$lib/stores/accountData";
 
 	let welcomeText = "Master your geography skills.";
-	let yourName = $state("");
+	let yourNameString = $state("");
 	let isHovered = $state(false);
 
 	onMount(() => {
 		setTitle("");
 
-		if (localStorage.getItem("username")) {
-			yourName = ", " + localStorage.getItem("username");
-		} else {
-			yourName = "";
-		}
+		if ($username && $username !== "Guest") yourNameString = ", " + $username;
+		else yourNameString = "";
 	});
 </script>
 
@@ -29,7 +27,7 @@
 		{welcomeText}
 	</h1>
 	<p class="text-xl text-center mb-8">
-		Welcome to OpenGuessr Education{yourName}.
+		Welcome to OpenGuessr Education{yourNameString}.
 	</p>
 
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 mt-12">
@@ -154,13 +152,13 @@
 			<span class="mr-2">Start learning</span>
 			<div class="w-10 h-10 relative">
 				<img
-					src="/assets/noob_player.png"
+					src="/assets/home/noob_player.png"
 					alt="Beginner"
 					class="w-full h-full object-contain absolute transition-opacity duration-300 ease-in-out"
 					style="opacity: {isHovered ? 0 : 1}"
 				/>
 				<img
-					src="/assets/chad_moai.png"
+					src="/assets/home/chad_moai.png"
 					alt="Pro"
 					class="w-full h-full object-contain absolute transition-opacity duration-300 ease-in-out"
 					style="opacity: {isHovered ? 1 : 0}"

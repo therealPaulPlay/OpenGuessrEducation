@@ -33,7 +33,7 @@
 >
 	<figure class="relative {mobile ? 'max-h-64' : ''} {mobile ? 'dark:brightness-50' : 'dark:opacity-80'}">
 		<img
-			src="/assets/guide_preview.png"
+			src="/assets/home/guide_preview.png"
 			class="h-full {mobile ? 'w-64' : 'w-48'}"
 			style="filter: hue-rotate({hueRotate}deg)"
 			alt="Guide preview"
