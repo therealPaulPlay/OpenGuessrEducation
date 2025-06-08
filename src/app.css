@@ -57,7 +57,7 @@
 }
 
 @layer utilities {
-	p {
+	p, a {
 		@apply text-base;
 	}
 }

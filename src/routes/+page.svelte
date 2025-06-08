@@ -150,7 +150,7 @@
 			}}
 		>
 			<span class="mr-2">Start learning</span>
-			<div class="w-10 h-10 relative">
+			<div class="w-8 h-8 relative">
 				<img
 					src="/assets/home/noob_player.png"
 					alt="Beginner"

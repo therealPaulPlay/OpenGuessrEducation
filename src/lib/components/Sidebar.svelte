@@ -54,35 +54,35 @@
 				<GlobalSearch />
 				<li>
 					<a
-						class="btn normal-case text-lg {activeButton === 'home' ? 'btn-primary text-white' : 'btn-accent'}"
+						class="btn normal-case text-lg {activeButton === 'home' ? 'btn-primary text-white' : 'bg-base-300'}"
 						href="/"
 						onclick={() => switchSelection("home")}>Home</a
 					>
 				</li>
 				<li>
 					<a
-						class="btn normal-case text-lg {activeButton === 'quiz' ? 'btn-primary text-white' : 'btn-accent'}"
+						class="btn normal-case text-lg {activeButton === 'quiz' ? 'btn-primary text-white' : 'bg-base-300'}"
 						href="/quiz"
 						onclick={() => switchSelection("quiz")}>Quizzes</a
 					>
 				</li>
 				<li>
 					<a
-						class="btn normal-case text-lg {activeButton === 'guides' ? 'btn-primary text-white' : 'btn-accent'}"
+						class="btn normal-case text-lg {activeButton === 'guides' ? 'btn-primary text-white' : 'bg-base-300'}"
 						href="/guides"
 						onclick={() => switchSelection("guides")}>Guides</a
 					>
 				</li>
 				<li>
 					<a
-						class="btn normal-case text-lg {activeButton === 'countries' ? 'btn-primary text-white' : 'btn-accent'}"
+						class="btn normal-case text-lg {activeButton === 'countries' ? 'btn-primary text-white' : 'bg-base-300'}"
 						href="/countries"
 						onclick={() => switchSelection("countries")}>Countries</a
 					>
 				</li>
 				<div class="divider">OR</div>
 				<li>
-					<a class="btn normal-case text-lg btn-accent" href="https://openguessr.com" target="_blank">
+					<a class="btn normal-case text-lg bg-base-300" href="https://openguessr.com" target="_blank">
 						Play OpenGuessr</a
 					>
 				</li>

@@ -8,7 +8,7 @@
 	});
 </script>
 
-<label class="swap swap-rotate btn btn-accent">
+<label class="swap swap-rotate btn bg-base-300">
 	<!-- this hidden checkbox controls the state -->
 	<input type="checkbox" class="theme-controller" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" />
 

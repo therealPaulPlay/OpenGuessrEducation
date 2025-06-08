@@ -57,7 +57,7 @@
 		<img src="/assets/home/streetview_example.png" alt="Street View Example" class="rounded-xl mb-6 w-96" />
 
 		<div class="info-container flex flex-col ml-4">
-			<h3 class="text-lg font-semibold mb-4 {correct ? 'text-secondary' : ''}">
+			<h3 class="text-lg font-semibold mb-4">
 				{message}
 			</h3>
 			<div class="buttons-container flex flex-col space-y-2">

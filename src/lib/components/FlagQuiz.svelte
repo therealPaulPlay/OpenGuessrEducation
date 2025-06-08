@@ -5,19 +5,12 @@
 
 	let { region } = $props();
 
-	let [a1, a2, a3, a4] = $state("");
-
-	// svelte-ignore state_referenced_locally
-	const answers = [a1, a2, a3, a4];
-
+	let answers = $state(["", "", "", ""]);
 	let correctAnswer = $state(1);
-
 	let question = "Which country has this flag?";
 	let questionsArray;
 	let questionAmount = $state(0);
-
 	let countryCodes;
-
 	let remainingQuestionsArray = [];
 
 	async function fetchQuestionsArray() {
@@ -41,7 +34,6 @@
 				const jsonCodes = await codes.json();
 				return jsonCodes;
 			}
-
 			return countryCodes;
 		} catch (error) {
 			console.error("Error fetching and processing country code json:", error);
@@ -51,9 +43,7 @@
 	async function startFlagGame() {
 		remainingQuestionsArray = await fetchQuestionsArray();
 		countryCodes = await fetchCountryCodes();
-
 		questionAmount = remainingQuestionsArray.length;
-
 		setQuizContent();
 	}
 
@@ -75,23 +65,22 @@
 
 		// Pre-filtering the wrong answers, excluding only the correct answer from the full questions array
 		let wrongAnswersPool = questionsArray.filter((country) => country !== randomQuestion);
+		const newAnswers = ["", "", "", ""];
 
-		answers.forEach((_, index) => {
+		newAnswers.forEach((_, index) => {
 			const answerIndex = index + 1;
-
 			if (answerIndex == correctAnswer) {
-				answers[index] = randomQuestion;
+				newAnswers[index] = randomQuestion;
 			} else {
 				const randomCountryIndex = Math.floor(Math.random() * wrongAnswersPool.length);
 				const randomCountry = wrongAnswersPool[randomCountryIndex];
 				// Splice --> removes entry from actual array, Slice --> removes entry only from new copy of array
 				wrongAnswersPool.splice(randomCountryIndex, 1); // Remove that one to avoid duplicates in the 3 wrong options
-
-				answers[index] = randomCountry;
+				newAnswers[index] = randomCountry;
 			}
 		});
 
-		[a1, a2, a3, a4] = answers;
+		answers = newAnswers;
 	}
 
 	function handleNextQuestion() {
@@ -100,19 +89,15 @@
 
 	onMount(() => {
 		startFlagGame();
-		if (window) {
-			adjustDynamicSize();
-			window.addEventListener("resize", adjustDynamicSize);
-		}
+		adjustDynamicSize();
+		window.addEventListener("resize", adjustDynamicSize);
 	});
 
 	function adjustDynamicSize() {
-		if (window) {
-			if (window.innerWidth < 600) {
-				dynamicSize = 150;
-			} else {
-				dynamicSize = 300;
-			}
+		if (window.innerWidth < 600) {
+			dynamicSize = 150;
+		} else {
+			dynamicSize = 300;
 		}
 	}
 
@@ -120,10 +105,10 @@
 </script>
 
 <BaseOptionsQuiz
-	answerOne={a1}
-	answerTwo={a2}
-	answerThree={a3}
-	answerFour={a4}
+	answerOne={answers[0]}
+	answerTwo={answers[1]}
+	answerThree={answers[2]}
+	answerFour={answers[3]}
 	{questionAmount}
 	{question}
 	{correctAnswer}

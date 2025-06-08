@@ -137,7 +137,7 @@
 
 {#if $isAuthenticated}
 	<div class="dropdown dropdown-top dropdown-end">
-		<div tabindex="0" role="button" class="btn btn-accent">
+		<div tabindex="0" role="button" class="btn bg-base-300">
 			<CircleUserRound />
 		</div>
 		<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
@@ -159,14 +159,14 @@
 				>.
 			</div>
 			<li>
-				<button class="btn btn-sm btn-primary text-white" onclick={logOut}> Log out </button>
+				<button class="btn btn-primary text-white" onclick={logOut}> Log out </button>
 			</li>
 		</ul>
 	</div>
 {/if}
 
 {#if !$isAuthenticated}
-	<button class="btn btn-accent" onclick={showModal}>Log in <LogIn /></button>
+	<button class="btn bg-base-300" onclick={showModal}>Log in <LogIn /></button>
 {/if}
 
 {#if showError}

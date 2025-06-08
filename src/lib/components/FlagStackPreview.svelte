@@ -95,7 +95,7 @@
 	}
 </script>
 
-<div class="custom-size rounded-lg overflow-hidden grow bg-base-300 relative">
+<div class="custom-size rounded-lg overflow-hidden grow bg-accent relative">
 	{#if flagsLoaded}
 		<div class="absolute w-full h-full flex justify-center items-center dark:brightness-75 z-[5]">
 			{#if Icon1}

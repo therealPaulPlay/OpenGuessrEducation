@@ -9,10 +9,7 @@
 
 	let { jsonName = "capital-cities", regionType = "city" } = $props();
 
-	let [a1, a2, a3, a4] = $state("");
-
-	// svelte-ignore state_referenced_locally
-	let answers = [a1, a2, a3, a4];
+	let answers = $state(["", "", "", ""]);
 	let correctAnswer = $state(1);
 	let question = `Which ${regionType} does this image show?`;
 
@@ -70,10 +67,7 @@
 		const allOptions = shuffleArray([currentLocation, ...otherLocations]);
 
 		correctAnswer = allOptions.findIndex((loc) => loc.name === currentLocation.name) + 1;
-
-		[a1, a2, a3, a4] = allOptions.map((loc) => loc.name);
-
-		answers = [a1, a2, a3, a4];
+		answers = allOptions.map((loc) => loc.name);
 
 		updateMap(currentLocation.lat, currentLocation.long);
 	}
@@ -163,10 +157,10 @@
 </script>
 
 <BaseOptionsQuiz
-	answerOne={a1}
-	answerTwo={a2}
-	answerThree={a3}
-	answerFour={a4}
+	answerOne={answers[0]}
+	answerTwo={answers[1]}
+	answerThree={answers[2]}
+	answerFour={answers[3]}
 	{questionAmount}
 	{question}
 	{correctAnswer}
