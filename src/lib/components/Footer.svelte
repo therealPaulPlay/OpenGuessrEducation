@@ -1,4 +1,4 @@
-<footer class="footer place-items-center sm:footer-horizontal bg-base-300 p-5">
+<footer class="footer place-items-center bg-base-300 p-5">
 	<nav class="grid grid-flow-col gap-4">
 		<a class="link link-hover" href="https://openguessr.com/legal">Legal</a>
 		<a class="link link-hover" href="https://openguessr.com">Play OpenGuessr</a>

@@ -131,7 +131,7 @@
 </script>
 
 <article class="container mx-auto p-6 px-1">
-	<h1 class="text-5xl font-bold mb-12">Discover quizzes</h1>
+	<h1 class="text-5xl font-bold mb-8">Discover quizzes</h1>
 
 	<div class="mb-8">
 		<h2 class="text-2xl font-semibold mb-4">Filter by continent:</h2>
