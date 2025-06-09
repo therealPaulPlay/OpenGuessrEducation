@@ -129,7 +129,7 @@
 		<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 		<div class="collapse collapse-arrow bg-base-200 bg-base-100 rounded-box mb-2">
 			<input type="checkbox" />
-			<div class="collapse-title text-lg font-medium">What is "geoguessing"?</div>
+			<div class="collapse-title text-lg font-medium">What is Geo-Guessing?</div>
 			<div class="collapse-content">
 				<p>
 					Geo-Guessing is the activity of guessing the location of a panorama image. It involves analyzing the image for

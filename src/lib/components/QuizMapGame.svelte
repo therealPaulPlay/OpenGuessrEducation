@@ -273,7 +273,7 @@
 	let timeString = $derived(`${Math.floor(timer / 60)}:${(timer % 60).toString().padStart(2, "0")}`);
 </script>
 
-<div class="quiz-container bg-base-200 p-6 rounded-xl">
+<div class="quiz-container bg-base-200 p-4 rounded-xl">
 	<div class="flex justify-between items-center mb-4 gap-3 flex-wrap">
 		<h2 class="text-2xl font-bold">
 			{#if gameOver}
@@ -327,7 +327,7 @@
 				afterLoad={handleMapLoad}
 			>
 				{#if IconComponent}
-					<div class="absolute z-20 top-3 right-3 rounded-md bg-base-200 py-0.5 p-2">
+					<div class="absolute z-20 top-3 right-3 rounded-md bg-base-200 py-0 p-1.5">
 						<IconComponent size="50" />
 					</div>
 				{/if}

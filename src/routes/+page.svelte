@@ -57,7 +57,7 @@
 						class="btn btn-secondary"
 						onclick={() => {
 							goto("/quiz");
-						}}>Take a Quiz</button
+						}}>Take a quiz</button
 					>
 				</div>
 			</div>
@@ -73,7 +73,7 @@
 						class="btn btn-secondary"
 						onclick={() => {
 							goto("/guides");
-						}}>Discover Guides</button
+						}}>Discover guides</button
 					>
 				</div>
 			</div>

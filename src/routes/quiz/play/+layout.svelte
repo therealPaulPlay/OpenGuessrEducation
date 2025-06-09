@@ -1,11 +1,11 @@
 <script>
-	import { ArrowLeftIcon } from "lucide-svelte";
 	import QuizCard from "$lib/components/QuizCard.svelte";
 	import FlagStackPreview from "$lib/components/FlagStackPreview.svelte";
 	import Map from "$lib/components/Map.svelte";
 	import { page } from "$app/stores"; // To get the current URL
 	import QuizPreviewImage from "$lib/components/QuizPreviewImage.svelte";
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
+	import GoBack from "$lib/components/GoBack.svelte";
 
 	let { children } = $props();
 
@@ -88,16 +88,10 @@
 </script>
 
 <article class="container mx-auto p-6 px-1 max-w-5xl">
-	<a
-		class="text-lg flex gap-3 justify-items-start items-center hover:opacity-50 transition-opacity w-fit"
-		href="/quiz/"
-	>
-		<ArrowLeftIcon />
-		Back
-	</a>
+	<GoBack href="/quiz/" />
 
 	<!-- Display the current quiz title -->
-	<h1 class="text-4xl font-bold mb-8 mt-4">{metadata.title} Quiz</h1>
+	<h1 class="text-4xl font-bold mb-8">{metadata.title} Quiz</h1>
 
 	<!-- Slot for quiz content -->
 	{@render children?.()}

@@ -12,20 +12,18 @@
 	let isFavorite = $derived(favoriteCountries.some((element) => element?.toLowerCase() === country?.toLowerCase()));
 
 	$effect(() => {
-		if (countryCodes) {
-			IconComponent = Icon[countryCodes[country]] || undefined;
-		}
+		if (countryCodes) IconComponent = Icon[countryCodes[country]] || undefined;
 	});
 </script>
 
 <a
-	class="px-2 py-1 bg-base-300 rounded-md hover:scale-95 transition-all cursor-pointer box-border m-0.5 {isFavorite
+	class="px-2 py-1 bg-base-300 rounded-md hover:scale-95 transition-all cursor-pointer box-border m-0.5 flex relative {isFavorite
 		? 'outline outline-1 outline-secondary'
 		: ''}"
 	href="/countries/learn/{country.toLowerCase().replaceAll(' ', '-')}"
 >
-	<div class="flex gap-2 items-center">
-		<p>
+	<div class="flex gap-2 items-center mx-auto overflow-hidden flex justify-center">
+		<p class="truncate text-nowrap max-w-6/9">
 			{country}
 		</p>
 		{#if IconComponent}

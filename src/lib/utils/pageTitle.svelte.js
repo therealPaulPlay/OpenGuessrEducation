@@ -11,11 +11,8 @@ export const titleState = $state({
 export function setTitle(mainTitle) {
 	titleState.mainTitle = mainTitle;
 
-	if (mainTitle) {
-		document.title = mainTitle + titleState.suffix;
-	} else {
-		document.title = titleState.homeTitle;
-	}
+	if (mainTitle) document.title = mainTitle + titleState.suffix;
+	else document.title = titleState.homeTitle;
 }
 
 // Optional function for manual updates, like dynamic suffix changes

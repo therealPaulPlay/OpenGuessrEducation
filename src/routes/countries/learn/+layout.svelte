@@ -2,7 +2,6 @@
 	import { page } from "$app/stores"; // To get the current URL
 	import Map from "$lib/components/Map.svelte";
 	import {
-		ArrowLeftIcon,
 		EthernetPort,
 		Phone,
 		Flag,
@@ -16,13 +15,12 @@
 	import { onMount } from "svelte";
 	import ScrollUp from "$lib/components/ScrollUp.svelte";
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
+	import GoBack from "$lib/components/GoBack.svelte";
 
 	let { children } = $props();
 
 	let countryNameFromPath;
-
 	let countryName = $state("Loading...");
-
 	let IconComponent = $state();
 
 	// JSON data
@@ -89,13 +87,7 @@
 </script>
 
 <article class="container mx-auto p-6 px-1 max-w-3xl">
-	<a
-		class="text-lg flex gap-3 justify-items-start items-center hover:opacity-50 transition-opacity w-fit mb-4"
-		href="/countries/"
-	>
-		<ArrowLeftIcon />
-		Back
-	</a>
+	<GoBack href="/countries/" />
 
 	{#if countryName}
 		<Map region={countryName} singleCountryRegion={countryName} smallDynamicHeight="true" showPoints="true" />
@@ -201,6 +193,7 @@
 		align-items: center;
 		gap: 0.5rem;
 		height: 2.2em;
+		flex-grow: 1;
 	}
 
 	.custom-btn-height {

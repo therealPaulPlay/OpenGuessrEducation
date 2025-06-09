@@ -33,7 +33,7 @@
 	let stars = $derived(Math.min(3, Math.floor(accuracy / 33)));
 </script>
 
-<div class="fixed inset-0 bg-base-300 bg-opacity-75 flex items-center justify-center z-50">
+<div class="fixed inset-0 bg-base-300/75 flex items-center justify-center z-50">
 	<div class="bg-base-100 p-8 rounded-xl text-center" in:scale={{ duration: 300, easing: quintOut }}>
 		<h3 class="text-3xl font-bold mb-4">Quiz complete!</h3>
 		<div class="flex justify-center flex-col items-center rounded-lg bg-base-200 my-4 mb-3 py-4">

@@ -23,7 +23,7 @@
 			id="compass"
 			src="/assets/guides/compass_example.png"
 			alt="Compass"
-			class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 dark:invert"
+			class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 invert-in-dark-mode"
 		/>
 
 		<Sun
@@ -39,3 +39,9 @@
 		<button class="btn btn-outline" onclick={toggleSunPosition}> Switch sun position </button>
 	</div>
 </ArticleBox>
+
+<style>
+	:global([data-theme="dark"] .invert-in-dark-mode) {
+		filter: invert();
+	}
+</style>

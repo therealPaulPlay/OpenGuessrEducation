@@ -135,17 +135,19 @@
 
 	<div class="mb-8">
 		<h2 class="text-2xl font-semibold mb-4">Filter by continent:</h2>
-		<div class="flex gap-2 overflow-x-auto">
-			{#each allTags as tag}
-				{#if tag !== undefined}
-					<button
-						class="btn btn-sm {selectedTags.has(tag) ? 'btn-secondary' : 'btn-outline'}"
-						onclick={() => toggleTag(tag)}
-					>
-						{tag}
-					</button>
-				{/if}
-			{/each}
+		<div class="w-fit max-sm:mask-x-from-93% max-sm:mask-x-to-100% mr-auto max-w-full max-sm:-ml-2">
+			<div class="flex gap-2 overflow-x-auto max-sm:px-2">
+				{#each allTags as tag}
+					{#if tag !== undefined}
+						<button
+							class="btn btn-sm {selectedTags.has(tag) ? 'btn-secondary' : 'btn-outline'}"
+							onclick={() => toggleTag(tag)}
+						>
+							{tag}
+						</button>
+					{/if}
+				{/each}
+			</div>
 		</div>
 	</div>
 	{#each filteredQuizCategories as category, index}
@@ -241,9 +243,9 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 8vw;
+		width: 12vw;
 		height: 100%;
-		background: linear-gradient(to right, oklch(var(--b1)), rgba(255, 255, 255, 0));
+		background: linear-gradient(to right, var(--color-base-100), rgba(255, 255, 255, 0));
 		pointer-events: none;
 		z-index: 10; /* Ensure it appears above the scroll container */
 	}
@@ -252,9 +254,9 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 8vw;
+		width: 12vw;
 		height: 100%;
-		background: linear-gradient(to left, oklch(var(--b1)), rgba(255, 255, 255, 0));
+		background: linear-gradient(to left, var(--color-base-100), rgba(255, 255, 255, 0));
 		pointer-events: none; /* Prevent interaction */
 		z-index: 10; /* Ensure it appears above the scroll container */
 	}

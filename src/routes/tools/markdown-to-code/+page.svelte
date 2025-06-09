@@ -267,7 +267,7 @@
 		</div>
 
 		<div class="flex flex-1 h-fit pb-14 flex-wrap gap-y-12">
-			<div class="w-1/2 p-4 min-w-52 grow h-[calc(100vh-16rem)] relative">
+			<div class="w-1/2 p-4 min-w-52 grow h-[calc(100vh-16rem)] relative pr-2">
 				<h2 class="text-lg font-bold mb-4 h-10 flex items-center">Markdown editor</h2>
 				<textarea
 					bind:value={markdown}
@@ -277,7 +277,7 @@
 				></textarea>
 			</div>
 
-			<div class="w-1/2 p-4 min-w-52 grow h-[calc(100vh-16rem)] relative">
+			<div class="w-1/2 p-4 min-w-52 grow h-[calc(100vh-16rem)] relative pl-2">
 				<h2 class="text-lg font-bold mb-4 flex items-center h-10">
 					Code
 					<button class="btn btn-accent btn-sm ml-auto" onclick={openPreview}> Preview </button>
@@ -294,7 +294,7 @@
 
 	<!-- Modal for Preview -->
 	{#if showPreview}
-		<div class="fixed inset-0 flex overflow-auto items-center justify-center bg-black bg-opacity-50">
+		<div class="fixed inset-0 flex overflow-auto items-center justify-center bg-black/50">
 			<div class="bg-base-100 max-h-[80dvh] overflow-auto rounded-lg p-4 w-11/12 md:w-3/4 lg:w-1/2">
 				<div class="flex justify-between items-center">
 					<h2 class="text-lg font-bold">Preview</h2>
