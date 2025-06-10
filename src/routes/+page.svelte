@@ -34,14 +34,14 @@
 		<div class="card bg-base-300 shadow-md hover:shadow-xl transition-shadow duration-300">
 			<div class="card-body">
 				<Book class="w-12 h-12 text-secondary mb-4" />
-				<h2 class="card-title">Learn Geo-Guessing</h2>
-				<p>Master the art of location guessing with concise guides and fun quizzes.</p>
+				<h2 class="card-title">Recognize countries</h2>
+				<p>Study country metas, common locations and regions with country articles.</p>
 				<div class="card-actions justify-end mt-2">
 					<button
 						class="btn btn-secondary"
 						onclick={() => {
-							goto("/get-started");
-						}}>Get started</button
+							goto("/countries");
+						}}>See countries</button
 					>
 				</div>
 			</div>
