@@ -13,7 +13,7 @@
 
 <style>
 	.custom-size {
-		width: 216px;
-		height: 135px;
+		width: 100%;
+		height: 130px;
 	}
 </style>

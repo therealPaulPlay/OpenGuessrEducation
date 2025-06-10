@@ -4,14 +4,14 @@
 
 	let { region, textDataPath = "/json/country-data/country-tld.json" } = $props();
 
-	let [a1, a2, a3, a4] = $state("");
-
-	// svelte-ignore state_referenced_locally
-	const answers = [a1, a2, a3, a4];
-
+	let answers = $state(["", "", "", ""]);
 	let correctAnswer = $state(1);
 
-	let question = `Which country has this ${region.substring(0, region.length - 1)}?`;
+	function removePlural(word) {
+		return word.endsWith("es") ? word.substring(0, word.length - 2) : word.substring(0, word.length - 1);
+	}
+
+	let question = `Which country has this ${removePlural(region)}?`;
 
 	let questionsArray;
 	let questionAmount = $state(0);
@@ -72,33 +72,29 @@
 	function setQuizContent() {
 		// Select random question
 		const randomQuestionIndex = Math.floor(Math.random() * remainingQuestionsArray.length);
-
 		randomQuestion = remainingQuestionsArray[randomQuestionIndex];
-		remainingQuestionsArray.splice(randomQuestionIndex, 1); // remove the question
+		remainingQuestionsArray.splice(randomQuestionIndex, 1);
 
 		// Randomize the correct answer
 		correctAnswer = 1 + Math.floor(Math.random() * 4);
 
-		// Pre-filtering the wrong answers, excluding only the correct answer from the full questions array
+		// Pre-filtering the wrong answers
 		let wrongAnswersPool = questionsArray.filter((country) => country !== randomQuestion);
 
-		answers.forEach((_, index) => {
+		const newAnswers = ["", "", "", ""];
+		newAnswers.forEach((_, index) => {
 			const answerIndex = index + 1;
-
 			if (answerIndex == correctAnswer) {
-				answers[index] = randomQuestion;
+				newAnswers[index] = randomQuestion;
 			} else {
 				const randomCountryIndex = Math.floor(Math.random() * wrongAnswersPool.length);
-
 				const randomCountry = wrongAnswersPool[randomCountryIndex];
-				// Splice --> removes entry from actual array, Slice --> removes entry only from new copy of array
-				wrongAnswersPool.splice(randomCountryIndex, 1); // Remove that one to avoid duplicates in the 3 wrong options
-
-				answers[index] = randomCountry;
+				wrongAnswersPool.splice(randomCountryIndex, 1);
+				newAnswers[index] = randomCountry;
 			}
 		});
 
-		[a1, a2, a3, a4] = answers;
+		answers = newAnswers; // This triggers reactivity properly
 	}
 
 	function handleNextQuestion() {
@@ -111,10 +107,10 @@
 </script>
 
 <BaseOptionsQuiz
-	answerOne={a1}
-	answerTwo={a2}
-	answerThree={a3}
-	answerFour={a4}
+	answerOne={answers[0]}
+	answerTwo={answers[1]}
+	answerThree={answers[2]}
+	answerFour={answers[3]}
 	{questionAmount}
 	{question}
 	{correctAnswer}
