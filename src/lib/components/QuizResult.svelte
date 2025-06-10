@@ -73,7 +73,7 @@
 					<p>Log in to claim XP!</p>
 				</div>
 			{/if}
-			<button class="btn btn-secondary mb-2" onclick={startGame}>Play Again</button>
+			<button class="btn btn-secondary mb-2" onclick={startGame}>Play again</button>
 			<a class="btn btn-sm" href="/quiz/"><ArrowLeft class="w-4 h-4" />Return to discover page</a>
 		</div>
 	</div>
