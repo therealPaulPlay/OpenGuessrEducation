@@ -153,7 +153,7 @@
 					</div>
 				{/if}
 			</div>
-			<div class="bg-base-200 rounded-lg p-2 text-center mb-3">
+			<div class="bg-base-200 rounded-md p-2 text-center mb-3">
 				View and manage your account on <a href="https://openguessr.com" target="_blank" class="text-secondary"
 					>OpenGuessr</a
 				>.

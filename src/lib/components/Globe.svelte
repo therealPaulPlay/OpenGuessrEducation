@@ -1,4 +1,5 @@
 <script>
+	import { goto } from "$app/navigation";
 	import { onMount, onDestroy } from "svelte";
 
 	let globeElement = $state();
@@ -9,7 +10,7 @@
 
 	// Function to determine the current globe texture based on the data-theme attribute
 	const getThemeTexture = () => {
-		return document.documentElement.getAttribute("data-theme") === "dark"
+		return document.documentElement.getAttribute("data-theme") == "dark"
 			? "/assets/home/earth_dark.jpg" // Dark mode texture
 			: "/assets/home/earth_light.jpg"; // Light mode texture
 	};
@@ -49,7 +50,7 @@
 			.onPolygonClick((clickedCountry) => {
 				if (clickedCountry) {
 					const countryName = clickedCountry.properties.NAME.toLowerCase().replace(/ /g, "-");
-					window.location.href = `/countries/learn/${countryName}`;
+					goto(`/countries/learn/${countryName}`);
 				}
 			});
 

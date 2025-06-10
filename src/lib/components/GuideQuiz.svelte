@@ -63,7 +63,7 @@
 	}
 </script>
 
-<div class="w-full bg-base-300 rounded-xl shadow-md my-8 relative">
+<div class="w-full bg-base-300 rounded-3xl shadow-md my-8 relative">
 	{#if !isLoggedIn}
 		<div class="absolute w-full h-full backdrop-blur-sm z-20 rounded-xl">
 			<div class="w-full h-full rounded-xl bg-base-200 opacity-75 absolute p-4"></div>

@@ -177,6 +177,7 @@
 									region={quiz.region}
 									width={192}
 									height={120}
+									countryOutlineColor="var(--color-secondary)"
 									hueRotateDegree={index * 30}
 									topoJsonName={quiz.topoJson}
 									projectionRotation={quiz.projectionRotation || undefined}

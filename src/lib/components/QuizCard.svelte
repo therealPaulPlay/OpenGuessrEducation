@@ -56,9 +56,9 @@
 			<a
 				href={path.replace("/+page.svelte", "")}
 				style="filter: hue-rotate({hueRotateDegree}deg)"
-				class="btn btn-secondary btn-md -mb-1 mt-2"
+				class="btn btn-secondary btn-md -mb-1 mt-2 w-full"
 			>
-				Start Quiz
+				Play
 			</a>
 		</div>
 	</div>

@@ -83,7 +83,7 @@
 	<div class="text-focused-section mb-20 mt-28 flex justify-center flex-col">
 		<h2 class="text-4xl font-bold mb-10 text-center">The place to learn it all.</h2>
 
-		<div class="grid md:grid-cols-2 gap-8 w-5/6 mx-auto">
+		<div class="grid md:grid-cols-2 gap-8 w-5/6 mx-auto max-w-6xl">
 			<div class="space-y-6">
 				<div class="flex items-start">
 					<Compass class="w-8 h-8 text-secondary mr-4 mt-1 flex-shrink-0" />

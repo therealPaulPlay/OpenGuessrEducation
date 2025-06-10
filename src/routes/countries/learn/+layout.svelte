@@ -1,15 +1,7 @@
 <script>
-	import { page } from "$app/stores"; // To get the current URL
+	import { page } from "$app/state";
 	import Map from "$lib/components/Map.svelte";
-	import {
-		EthernetPort,
-		Phone,
-		Flag,
-		Languages,
-		UsersRound,
-		CircleDollarSign,
-		Compass,
-	} from "lucide-svelte";
+	import { EthernetPort, Phone, Flag, Languages, UsersRound, CircleDollarSign, Compass } from "lucide-svelte";
 	import ArticleEditButton from "$lib/components/ArticleEditButton.svelte";
 	import * as Icon from "svelte-flag-icons";
 	import { onMount } from "svelte";
@@ -42,7 +34,6 @@
 
 	async function fetchJsonData() {
 		if (telephonePrefixes && topLevelDomains) return; // if everything is already loaded, skip
-
 		try {
 			[telephonePrefixes, topLevelDomains, countryLanguages, populationData, countryGDP, videoSources] =
 				await Promise.all([
@@ -60,27 +51,25 @@
 		}
 	}
 
-	// Fetch this all on the server
-	onMount(async () => {
-		countryNameFromPath = $page.url.pathname.replace("/countries/learn/", "").replaceAll("-", " ");
-
+	async function loadData() {
+		countryNameFromPath = page.url.pathname.replace("/countries/learn/", "").replaceAll("-", " ");
 		await fetchCountryCodes(); // Fetch this first, to load the name quickly
-
 		countryName = Object.keys(countryCodes).find((country) => country.toLowerCase() === countryNameFromPath);
-
 		setTitle("Learn " + countryName);
-
 		IconComponent = Icon[countryCodes[countryName]];
-
 		await fetchJsonData(); // Then load all json data
 		jsonDataLoading = false;
+	}
+
+	// Fetch this all on the server
+	$effect(() => {
+		if (page.url.pathname) loadData();
 	});
 
 	// Derived value for child content presence
 	let childHasNoContent = $state(false);
 
 	$effect(() => {
-		if (!childrenContainer) return;
 		childHasNoContent =
 			[...childrenContainer.childNodes].find((node) => node.nodeType !== Node.COMMENT_NODE)?.outerHTML == null;
 	});
@@ -142,7 +131,7 @@
 			<IconComponent size="40" />
 		{/if}
 		<div class="ml-auto mb-0.5">
-			<ArticleEditButton path={$page.url.pathname} />
+			<ArticleEditButton path={page.url.pathname} />
 		</div>
 	</div>
 
@@ -192,7 +181,6 @@
 		justify-content: center;
 		align-items: center;
 		gap: 0.5rem;
-		height: 2.2em;
 		flex-grow: 1;
 	}
 

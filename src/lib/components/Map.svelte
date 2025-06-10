@@ -26,6 +26,7 @@
 		projectionType = "geoMercator",
 		projectionRotation = 0,
 		singleCountryRegion,
+		countryOutlineColor = "var(--color-base-100)",
 		children, // For components that work like layouts (with a render slot, in which HTML can be passed) - children needs to be specified as a prop
 	} = $props();
 
@@ -663,7 +664,7 @@
 						<path
 							d={feature.d}
 							fill={feature.flashColor || feature.color || "var(--color-accent)"}
-							stroke="var(--color-accent)"
+							stroke={countryOutlineColor}
 							stroke-width="0.5"
 							vector-effect="non-scaling-stroke"
 							onclick={(event) => handleRegionClick(feature, event)}
@@ -841,7 +842,7 @@
 	.custom-loading-size {
 		height: 100%;
 		width: 100%;
-		min-height: 135px;
+		min-height: 130px;
 	}
 
 	svg {

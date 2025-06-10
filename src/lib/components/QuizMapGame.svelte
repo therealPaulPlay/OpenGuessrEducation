@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from "svelte";
-	import { Timer } from "lucide-svelte";
+	import { Check, Timer } from "lucide-svelte";
 	import Map from "$lib/components/Map.svelte";
 	import QuizResult from "./QuizResult.svelte";
 	import { playSound } from "$lib/utils/playSound";
@@ -273,7 +273,7 @@
 	let timeString = $derived(`${Math.floor(timer / 60)}:${(timer % 60).toString().padStart(2, "0")}`);
 </script>
 
-<div class="quiz-container bg-base-200 p-4 rounded-xl">
+<div class="quiz-container bg-base-200 p-4 rounded-3xl">
 	<div class="flex justify-between items-center mb-4 gap-3 flex-wrap">
 		<h2 class="text-2xl font-bold">
 			{#if gameOver}
@@ -349,7 +349,7 @@
 				placeholder={inputPlaceholderHint}
 				class="input input-bordered w-full"
 			/>
-			<button class="btn btn-secondary btn-sm mt-1 mb-1 absolute right-1" onclick={handleInputSubmit}>Submit</button>
+			<button class="btn btn-secondary btn-sm mt-1 mb-1 absolute right-1" onclick={handleInputSubmit}><Check /></button>
 			<div
 				class="absolute w-full top-16 bg-accent shadow-lg transition-opacity p-4 flex flex-col gap-2 rounded-lg z-20 max-h-52 overflow-auto outline outline-accent {showTypeAutoComplete
 					? 'opacity-100'

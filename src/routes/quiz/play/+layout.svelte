@@ -112,6 +112,7 @@
 							width={192}
 							height={120}
 							topoJsonName={quiz.topoJson}
+							countryOutlineColor="var(--color-secondary)"
 							zoom={quiz.previewZoom || undefined}
 							projectionType={quiz.category == "satellite" ? "geoOrthographic" : "geoMercator"}
 							projectionRotation={quiz.projectionRotation || undefined}

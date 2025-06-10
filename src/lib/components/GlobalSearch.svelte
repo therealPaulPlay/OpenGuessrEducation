@@ -1,4 +1,5 @@
 <script>
+	import { goto } from "$app/navigation";
 	import { Search } from "lucide-svelte";
 
 	let searchInput = $state("");
@@ -78,9 +79,8 @@
 	function handleResultClick(url) {
 		// Extract the path
 		const path = new URL(url).pathname;
-
-		// Use current host with the path
-		window.location.href = `${window.location.origin}${path}`;
+		goto(`${window.location.origin}${path}`);
+		showDropdown = false;
 	}
 
 	function handleClickOutside(event) {

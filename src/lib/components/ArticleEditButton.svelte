@@ -9,7 +9,7 @@
 		<p class="hide-on-mobile text-sm">Edit this page</p>
 	</div>
 	<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-	<ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-56 p-2 shadow-md mb-3">
+	<ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-2xl z-[1] w-56 p-2 shadow-md mb-3">
 		<div class="flex items-center flex-col gap-x-2">
 			<div class="bg-base-200 flex justify-center items-center flex-col gap-x-2 rounded-lg p-2 w-full">
 				<h2 class="font-bold text-base mb-3">Are you a developer?</h2>
