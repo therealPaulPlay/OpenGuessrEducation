@@ -68,7 +68,7 @@
 		<div class="absolute w-full h-full backdrop-blur-sm z-20 rounded-xl">
 			<div class="w-full h-full rounded-xl bg-base-200 opacity-75 absolute p-4"></div>
 			<div class="flex w-full h-full justify-center items-center">
-				<p class="text-center z-10">
+				<p class="text-center z-10 mx-4">
 					<b>Log in</b> to earn experience through guide quizzes.
 				</p>
 			</div>
