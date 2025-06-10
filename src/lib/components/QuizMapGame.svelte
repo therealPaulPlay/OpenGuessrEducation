@@ -274,7 +274,7 @@
 </script>
 
 <div class="quiz-container bg-base-200 p-4 rounded-3xl">
-	<div class="flex justify-between items-center mb-4 gap-3 flex-wrap">
+	<div class="flex justify-between items-center mb-4 gap-4 flex-wrap">
 		<h2 class="text-2xl font-bold">
 			{#if gameOver}
 				Quiz completed.
@@ -286,7 +286,7 @@
 				Which region is highlighted?
 			{/if}
 		</h2>
-		<div class="flex flex-wrap justify-end gap-3">
+		<div class="flex flex-wrap justify-end gap-4">
 			<!-- svelte-ignore a11y_click_events_have_key_events -->
 			<!-- svelte-ignore a11y_missing_attribute -->
 			<!-- svelte-ignore a11y_interactive_supports_focus -->
