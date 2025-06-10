@@ -92,12 +92,6 @@
 	function stopPropagation(e) {
 		e.stopPropagation();
 	}
-
-	function handleEnterPress(e) {
-		if (e.key == "Enter") {
-			handleResultClick(searchResults[0].url);
-		}
-	}
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -110,7 +104,9 @@
 				placeholder="Search"
 				class="w-full max-w-xs"
 				bind:value={searchInput}
-				onkeypress={handleEnterPress}
+				onkeypress={(e) => {
+					if (e.key == "Enter") handleResultClick(searchResults[0].url);
+				}}
 			/>
 			<Search />
 		</label>
