@@ -245,10 +245,15 @@
 		}
 	});
 
+	let hasDragged = false;
+
 	function handleRegionClick(feature, event) {
-		if (feature.isHighlighted && feature.isInteractive) {
-			dispatch("click", { properties: feature.properties });
+		if (hasDragged) {
+			hasDragged = false;
+			return;
 		}
+
+		if (feature.isHighlighted && feature.isInteractive) dispatch("click", { properties: feature.properties });
 
 		rect = mapContainer.getBoundingClientRect();
 
@@ -441,13 +446,14 @@
 	function handleMouseDown(event) {
 		if (!interactive) return;
 		isDragging = true;
+		hasDragged = false;
 		lastX = event.clientX;
 		lastY = event.clientY;
 	}
 
 	function handleMouseMove(event) {
 		if (!interactive || !isDragging) return;
-		// Store the initial rect for reference
+		hasDragged = true;
 		rect = mapContainer.getBoundingClientRect();
 		translateX += (event.clientX - lastX) * (width / rect.width);
 		translateY += (event.clientY - lastY) * (height / rect.height);

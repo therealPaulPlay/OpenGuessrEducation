@@ -402,8 +402,4 @@
 		padding-right: 0.75rem;
 		border-radius: 0.4rem;
 	}
-
-	.custom-tabs .tab-active {
-		background-color: var(--color-secondary) !important;
-	}
 </style>

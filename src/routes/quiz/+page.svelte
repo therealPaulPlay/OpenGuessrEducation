@@ -81,8 +81,6 @@
 			selectedTags.add(tag);
 		}
 
-		console.log(selectedTags);
-
 		const newSet = selectedTags;
 		selectedTags = new Set();
 		selectedTags = newSet;

@@ -1,33 +1,5 @@
 <script>
-	import { onMount } from "svelte";
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
-
-	let message = $state("Guess where this is!");
-	let correct = $state(false);
-	let buttons = [];
-
-	const incorrectMessages = ["Nope, not it.", "Almost, try again.", "Close, but incorrect!", "That isn't it."];
-
-	onMount(() => {
-		buttons = document.querySelectorAll(".streetview-minigame-button");
-		setTitle("Get started");
-	});
-
-	function handleGuess(guess, button) {
-		if (guess === "New York") {
-			message = "Correct!";
-			correct = true;
-			buttons.forEach((btn) => {
-				if (btn !== button) {
-					btn.style.pointerEvents = "none";
-					btn.style.opacity = "0.5";
-				}
-			});
-		} else {
-			message = incorrectMessages[Math.floor(Math.random() * incorrectMessages.length)];
-			correct = false;
-		}
-	}
 </script>
 
 <article class="container mx-auto p-6 px-1 max-w-4xl">
@@ -52,39 +24,6 @@
 		The closer your guess is to the actual location, the higher your score. Think of it as a virtual treasure hunt where
 		the treasure is your newfound knowledge of the world.
 	</p>
-
-	<div class="game-container flex flex-wrap mb-8">
-		<img src="/assets/home/streetview_example.png" alt="Street View Example" class="rounded-xl mb-6 w-96" />
-
-		<div class="info-container flex flex-col ml-4">
-			<h3 class="text-lg font-semibold mb-4">
-				{message}
-			</h3>
-			<div class="buttons-container flex flex-col space-y-2">
-				<button
-					class="btn btn-outline btn-sm streetview-minigame-button"
-					onclick={(event) => handleGuess("Washington", event.target)}
-				>
-					Washington
-				</button>
-				<button class="btn btn-outline btn-sm" onclick={(event) => handleGuess("New York", event.target)}>
-					New York
-				</button>
-				<button
-					class="btn btn-outline btn-sm streetview-minigame-button"
-					onclick={(event) => handleGuess("London", event.target)}
-				>
-					London
-				</button>
-				<button
-					class="btn btn-outline btn-sm streetview-minigame-button"
-					onclick={(event) => handleGuess("Las Vegas", event.target)}
-				>
-					Las Vegas
-				</button>
-			</div>
-		</div>
-	</div>
 
 	<h2 class="text-2xl font-semibold mb-2">Got it, but what's OpenGuessr Education?</h2>
 	<p class="mb-6">
@@ -168,21 +107,3 @@
 		</div>
 	</div>
 </article>
-
-<style>
-	.game-container {
-		display: flex;
-		align-items: flex-start;
-	}
-
-	.buttons-container {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.info-container {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-</style>
