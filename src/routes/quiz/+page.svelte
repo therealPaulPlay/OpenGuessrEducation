@@ -94,8 +94,11 @@
 	function scrollContainer(containerId, scrollAmount) {
 		const container = document.getElementById(containerId);
 		if (container) {
-			container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-			updateButtonVisibility(containerId);
+			const { scrollLeft, scrollWidth, clientWidth } = container;
+			const newScrollLeft = Math.max(0, Math.min(scrollLeft + scrollAmount, scrollWidth - clientWidth));
+
+			container.scrollTo({ left: newScrollLeft, behavior: "smooth" });
+			setTimeout(() => updateButtonVisibility(containerId), 100);
 		}
 	}
 
@@ -136,7 +139,7 @@
 	<div class="mb-8">
 		<h2 class="text-2xl font-semibold mb-4">Filter by continent:</h2>
 		<div class="w-fit max-sm:mask-x-from-93% max-sm:mask-x-to-100% mr-auto max-w-full max-sm:-ml-2">
-			<div class="flex gap-2 overflow-x-auto max-sm:px-2">
+			<div class="flex gap-2 overflow-x-auto overflow-y-hidden max-sm:px-2">
 				{#each allTags as tag}
 					{#if tag !== undefined}
 						<button

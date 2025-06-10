@@ -170,14 +170,14 @@
 {/if}
 
 {#if showError}
-	<div class="toast toast-top toast-start">
+	<div class="toast toast-top toast-start max-w-2/3">
 		<div class="alert alert-error">
 			<span>Error: {error}</span>
 		</div>
 	</div>
 {/if}
 
-<dialog id="login_modal" class="modal h-full w-[calc(100vw-1rem)] mx-2 p-0">
+<dialog id="login_modal" class="modal h-full w-full p-2">
 	<dialog id="my_modal_2" class="modal"></dialog>
 	<div class="modal-box h-[98%] max-h-full w-full p-0 bg-base-200">
 		<iframe
