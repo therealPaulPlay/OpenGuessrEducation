@@ -1,4 +1,5 @@
 <script>
+	import { goto } from "$app/navigation";
 	import { onMount, onDestroy } from "svelte";
 
 	let globeElement = $state();
@@ -9,9 +10,9 @@
 
 	// Function to determine the current globe texture based on the data-theme attribute
 	const getThemeTexture = () => {
-		return document.documentElement.getAttribute("data-theme") === "customDark"
-			? "/assets/earth_dark.jpg" // Dark mode texture
-			: "/assets/earth_light.jpg"; // Light mode texture
+		return document.documentElement.getAttribute("data-theme") == "dark"
+			? "/assets/home/earth_dark.jpg" // Dark mode texture
+			: "/assets/home/earth_light.jpg"; // Light mode texture
 	};
 
 	const loadGlobe = async () => {
@@ -19,12 +20,16 @@
 
 		const Globe = (await import("globe.gl")).default;
 
+		const isMobile = window.innerWidth <= 768;
+		const globeWidth = isMobile ? 500 : 800;
+		const globeHeight = isMobile ? 350 : 470;
+
 		globe = Globe()
 			.globeImageUrl(getThemeTexture())
 			.backgroundColor("rgba(0, 0, 0, 0)")
 			.lineHoverPrecision(0)
-			.width(800)
-			.height(470)(globeElement)
+			.width(globeWidth)
+			.height(globeHeight)(globeElement)
 			.atmosphereColor("red");
 
 		// Add country polygons
@@ -45,7 +50,7 @@
 			.onPolygonClick((clickedCountry) => {
 				if (clickedCountry) {
 					const countryName = clickedCountry.properties.NAME.toLowerCase().replace(/ /g, "-");
-					window.location.href = `/countries/learn/${countryName}`;
+					goto(`/countries/learn/${countryName}`);
 				}
 			});
 
@@ -86,9 +91,7 @@
 			{ threshold: 0.1 },
 		);
 
-		if (globeElement) {
-			observer.observe(globeElement);
-		}
+		if (globeElement) observer.observe(globeElement);
 
 		// Theme change observer
 		const themeObserver = new MutationObserver(() => {
@@ -105,9 +108,7 @@
 	});
 
 	onDestroy(() => {
-		if (observer) {
-			observer.disconnect();
-		}
+		if (observer) observer.disconnect();
 		cleanupGlobe();
 	});
 </script>
@@ -127,9 +128,9 @@
 	}
 
 	/* disable on small phones to allow for scrolling without spinning the globe */
-	@media all and (max-width: 600px) {
+	@media all and (max-width: 768px) {
 		.globe-container {
-			pointer-events: none;
+			height: 250px;
 		}
 	}
 </style>

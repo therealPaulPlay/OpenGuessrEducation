@@ -35,7 +35,7 @@
 
 <div
 	bind:this={containerRef}
-	class="card w-64 bg-base-200 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300"
+	class="card w-64 bg-base-300 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300"
 >
 	<div class="card-body flex flex-col h-full">
 		<div class="flex-grow">
@@ -56,9 +56,9 @@
 			<a
 				href={path.replace("/+page.svelte", "")}
 				style="filter: hue-rotate({hueRotateDegree}deg)"
-				class="btn btn-secondary btn-md -mb-1 mt-2"
+				class="btn btn-secondary btn-md -mb-1 mt-2 w-full"
 			>
-				Start Quiz
+				Play
 			</a>
 		</div>
 	</div>

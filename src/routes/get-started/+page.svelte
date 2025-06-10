@@ -31,7 +31,7 @@
 </script>
 
 <article class="container mx-auto p-6 px-1 max-w-4xl">
-	<img src="/assets/openguessr_jungle_adventure.png" alt="Geography adventure" class="w-full rounded-xl mb-10" />
+	<img src="/assets/home/openguessr_jungle_adventure.png" alt="Geography adventure" class="w-full rounded-xl mb-10" />
 	<h1 class="text-4xl font-bold mb-4">Embark on an epic learning-adventure.</h1>
 	<p class="mb-6">
 		<b>Welcome to OpenGuessr Education</b>, the
@@ -54,10 +54,10 @@
 	</p>
 
 	<div class="game-container flex flex-wrap mb-8">
-		<img src="/assets/streetview_example.png" alt="Street View Example" class="rounded-xl mb-6 w-96" />
+		<img src="/assets/home/streetview_example.png" alt="Street View Example" class="rounded-xl mb-6 w-96" />
 
 		<div class="info-container flex flex-col ml-4">
-			<h3 class="text-lg font-semibold mb-4 {correct ? 'text-secondary' : ''}">
+			<h3 class="text-lg font-semibold mb-4">
 				{message}
 			</h3>
 			<div class="buttons-container flex flex-col space-y-2">
@@ -129,7 +129,7 @@
 		<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 		<div class="collapse collapse-arrow bg-base-200 bg-base-100 rounded-box mb-2">
 			<input type="checkbox" />
-			<div class="collapse-title text-lg font-medium">What is "geoguessing"?</div>
+			<div class="collapse-title text-lg font-medium">What is Geo-Guessing?</div>
 			<div class="collapse-content">
 				<p>
 					Geo-Guessing is the activity of guessing the location of a panorama image. It involves analyzing the image for

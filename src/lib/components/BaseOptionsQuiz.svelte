@@ -98,7 +98,7 @@
 	}
 </script>
 
-<div class="w-full bg-base-200 rounded-xl shadow-md my-8 relative">
+<div class="w-full bg-base-200 rounded-3xl shadow-md my-8 relative">
 	<div class="p-4">
 		<div class="flex w-full items-center mb-4 flex-wrap gap-3">
 			<h2 class="text-xl font-bold ml-1">{question}</h2>

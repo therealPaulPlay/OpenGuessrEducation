@@ -1,10 +1,69 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+@plugin "daisyui" {
+	themes: light --default, dark;
+}
+
+/* Light theme (default) */
+@plugin "daisyui/theme" {
+	name: "light";
+	default: true;
+	--color-primary: #ff0808;
+	--color-secondary: #ff6363;
+	--color-secondary-content: white;
+	--color-accent: oklch(86% 0 0/1);
+	--color-accent-content: black;
+	--color-neutral: #333333;
+	--color-base-100: #ffffff;
+	--color-base-content: #000000;
+	--color-info: #3ABFF8;
+	--color-success: #36D399;
+	--color-warning: #FBBD23;
+	--color-error: #F87272;
+}
+
+/* Custom dark theme */
+@plugin "daisyui/theme" {
+	name: "dark";
+	--color-primary: #ff0808;
+	--color-secondary: #d95252;
+	--color-secondary-content: black;
+	--color-accent: rgb(59, 66, 75);
+	--color-accent-content: white;
+	--color-neutral: #374151;
+	--color-base-100: rgb(6, 8, 9);
+	--color-base-200: rgb(40, 46, 51);
+	--color-base-content: #ffffff;
+	--color-info: #3ABFF8;
+	--color-success: #36D399;
+	--color-warning: #FBBD23;
+	--color-error: #F87272;
+}
+
+@theme {
+	--font-sans: "Barlow", sans-serif;
+	--radius-sm: 2px;
+	--radius-DEFAULT: 4px;
+	--radius-md: 6px;
+	--radius-lg: 8px;
+	--radius-xl: 10px;
+	--radius-2xl: 12px;
+	--radius-3xl: 16px;
+}
 
 @layer base {
 	html {
-		@apply text-lg;
+		@apply text-base;
+		@apply font-sans;
+	}
+}
+
+@layer utilities {
+
+	p,
+	a {
+		@apply text-base;
 	}
 }
 
@@ -12,4 +71,54 @@ body {
 	transition:
 		background-color 0.2s ease-in-out,
 		color 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+	.text-2xl {
+		font-size: 1.125rem;
+		/* 18px instead of 24px */
+		line-height: 1.625rem;
+	}
+
+	.text-3xl {
+		font-size: 1.25rem;
+		/* 20px instead of 30px */
+		line-height: 1.75rem;
+	}
+
+	.text-4xl {
+		font-size: 1.5rem;
+		/* 24px instead of 36px */
+		line-height: 2rem;
+	}
+
+	.text-5xl {
+		font-size: 1.875rem;
+		/* 30px instead of 48px */
+		line-height: 2.25rem;
+	}
+
+	.text-6xl {
+		font-size: 2.25rem;
+		/* 36px instead of 60px */
+		line-height: 2.5rem;
+	}
+
+	.text-7xl {
+		font-size: 2.5rem;
+		/* 40px instead of 72px */
+		line-height: 1;
+	}
+
+	.text-8xl {
+		font-size: 3rem;
+		/* 48px instead of 96px */
+		line-height: 1;
+	}
+
+	.text-9xl {
+		font-size: 3.75rem;
+		/* 60px instead of 128px */
+		line-height: 1;
+	}
 }

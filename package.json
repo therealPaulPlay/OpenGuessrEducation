@@ -1,7 +1,6 @@
 {
 	"name": "openguessreducation",
 	"version": "1.0.1",
-	"private": true,
 	"scripts": {
 		"generate-sitemap": "node ./scripts/generate-sitemap.js",
 		"dev": "vite dev --port 3000 --host",
@@ -10,26 +9,23 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.3.0",
-		"@sveltejs/adapter-node": "^5.2.9",
+		"@sveltejs/adapter-static": "^3.0.6",
 		"@sveltejs/kit": "^2.7.2",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
-		"autoprefixer": "^10.4.20",
-		"postcss": "^8.4.47",
+		"daisyui": "^5.0.43",
 		"prettier-plugin-svelte": "^3.3.3",
 		"svelte": "^5.1.4",
-		"tailwindcss": "^3.4.13",
+		"tailwindcss": "^4.1.8",
 		"vite": "^5.4.10"
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-static": "^3.0.6",
+		"@tailwindcss/vite": "^4.1.8",
 		"d3-geo": "^3.1.1",
-		"daisyui": "^4.12.10",
 		"globe.gl": "^2.32.6",
 		"lucide-svelte": "^0.446.0",
 		"ol": "^10.2.1",
 		"svelte-flag-icons": "^1.0.3",
-		"theme-change": "^2.5.0",
 		"three": "^0.169.0",
 		"topojson-client": "^3.1.0"
 	}

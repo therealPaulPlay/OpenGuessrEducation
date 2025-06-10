@@ -1,28 +1,18 @@
 <script>
-	import { page } from "$app/stores"; // To get the current URL
+	import { page } from "$app/state";
 	import Map from "$lib/components/Map.svelte";
-	import {
-		ArrowLeftIcon,
-		EthernetPort,
-		Phone,
-		Flag,
-		Languages,
-		UsersRound,
-		CircleDollarSign,
-		Compass,
-	} from "lucide-svelte";
+	import { EthernetPort, Phone, Flag, Languages, UsersRound, CircleDollarSign, Compass } from "lucide-svelte";
 	import ArticleEditButton from "$lib/components/ArticleEditButton.svelte";
 	import * as Icon from "svelte-flag-icons";
 	import { onMount } from "svelte";
 	import ScrollUp from "$lib/components/ScrollUp.svelte";
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
+	import GoBack from "$lib/components/GoBack.svelte";
 
 	let { children } = $props();
 
 	let countryNameFromPath;
-
 	let countryName = $state("Loading...");
-
 	let IconComponent = $state();
 
 	// JSON data
@@ -44,7 +34,6 @@
 
 	async function fetchJsonData() {
 		if (telephonePrefixes && topLevelDomains) return; // if everything is already loaded, skip
-
 		try {
 			[telephonePrefixes, topLevelDomains, countryLanguages, populationData, countryGDP, videoSources] =
 				await Promise.all([
@@ -62,40 +51,32 @@
 		}
 	}
 
-	// Fetch this all on the server
-	onMount(async () => {
-		countryNameFromPath = $page.url.pathname.replace("/countries/learn/", "").replaceAll("-", " ");
-
+	async function loadData() {
+		countryNameFromPath = page.url.pathname.replace("/countries/learn/", "").replaceAll("-", " ");
 		await fetchCountryCodes(); // Fetch this first, to load the name quickly
-
 		countryName = Object.keys(countryCodes).find((country) => country.toLowerCase() === countryNameFromPath);
-
 		setTitle("Learn " + countryName);
-
 		IconComponent = Icon[countryCodes[countryName]];
-
 		await fetchJsonData(); // Then load all json data
 		jsonDataLoading = false;
+	}
+
+	// Fetch this all on the server
+	$effect(() => {
+		if (page.url.pathname) loadData();
 	});
 
 	// Derived value for child content presence
 	let childHasNoContent = $state(false);
 
 	$effect(() => {
-		if (!childrenContainer) return;
 		childHasNoContent =
 			[...childrenContainer.childNodes].find((node) => node.nodeType !== Node.COMMENT_NODE)?.outerHTML == null;
 	});
 </script>
 
 <article class="container mx-auto p-6 px-1 max-w-3xl">
-	<a
-		class="text-lg flex gap-3 justify-items-start items-center hover:opacity-50 transition-opacity w-fit mb-4"
-		href="/countries/"
-	>
-		<ArrowLeftIcon />
-		Back
-	</a>
+	<GoBack href="/countries/" />
 
 	{#if countryName}
 		<Map region={countryName} singleCountryRegion={countryName} smallDynamicHeight="true" showPoints="true" />
@@ -105,42 +86,42 @@
 	<div class="w-full bg-base-300 rounded-lg flex flex-wrap items-center p-2 gap-2 mt-2">
 		{#if !jsonDataLoading}
 			{#if topLevelDomains}
-				<div class="stat-pill">
+				<div class="stat-pill text-sm">
 					<EthernetPort />
 					{topLevelDomains[countryName] || "-"}
 				</div>
 			{/if}
 			{#if telephonePrefixes}
-				<div class="stat-pill">
+				<div class="stat-pill text-sm">
 					<Phone />
 					{telephonePrefixes[countryName] || "-"}
 				</div>
 			{/if}
 			{#if populationData}
-				<div class="stat-pill">
+				<div class="stat-pill text-sm">
 					<UsersRound />
 					{populationData[countryName] || "-"}
 				</div>
 			{/if}
 			{#if countryLanguages}
-				<div class="stat-pill">
+				<div class="stat-pill text-sm">
 					<Languages />
 					{countryLanguages[countryName] || "-"}
 				</div>
 			{/if}
 			{#if countryGDP}
-				<div class="stat-pill">
+				<div class="stat-pill text-sm">
 					<CircleDollarSign />
 					{countryGDP[countryName] || "-"} Bn. USD
 				</div>
 			{/if}
 		{/if}
 		<a
-			class="btn btn-secondary btn-sm custom-btn-height {jsonDataLoading ? 'invisible' : ''}"
+			class="btn btn-secondary custom-btn-height {jsonDataLoading ? 'invisible' : ''}"
 			href="https://openguessr.com/?play-map={countryName.replaceAll(' ', '_')}"
 			target="_blank"
 		>
-			<Compass size="25" /> Explore
+			Explore
 		</a>
 	</div>
 
@@ -150,7 +131,7 @@
 			<IconComponent size="40" />
 		{/if}
 		<div class="ml-auto mb-0.5">
-			<ArticleEditButton path={$page.url.pathname} />
+			<ArticleEditButton path={page.url.pathname} />
 		</div>
 	</div>
 
@@ -192,7 +173,7 @@
 
 <style>
 	.stat-pill {
-		background-color: oklch(var(--b2));
+		background-color: var(--color-base-200);
 		border-radius: 0.25rem;
 		padding: 0.25rem;
 		padding-inline: 0.5rem;
@@ -200,11 +181,12 @@
 		justify-content: center;
 		align-items: center;
 		gap: 0.5rem;
+		flex-grow: 1;
 	}
 
 	.custom-btn-height {
 		flex-grow: 1;
-		height: 2.3rem;
+		height: 2rem;
 		border-radius: 0.25rem;
 	}
 </style>

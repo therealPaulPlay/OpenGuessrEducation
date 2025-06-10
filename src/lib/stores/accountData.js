@@ -1,3 +1,6 @@
 import { writable } from "svelte/store";
 
-export let isAuthenticated = writable(false);
+export const isAuthenticated = writable(false);
+export const username = writable("Guest");
+export const supporterLevel = writable(0);
+export const experience = writable(0);

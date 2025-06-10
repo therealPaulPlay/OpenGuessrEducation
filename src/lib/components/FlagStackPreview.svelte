@@ -60,10 +60,10 @@
 	}
 
 	function assignRandomIcon(i, startIndex) {
-		const randomRegionIndex = i + startIndex;
-		const randomRegion = regionsArray[randomRegionIndex];
-
 		try {
+			const randomRegionIndex = i + startIndex;
+			const randomRegion = regionsArray[randomRegionIndex];
+			
 			switch (i) {
 				case 1:
 					Icon1 = Icon[countryCodes[randomRegion]];
@@ -95,28 +95,24 @@
 	}
 </script>
 
-<div class="custom-size rounded-lg overflow-hidden grow bg-base-300 relative">
+<div class="custom-size rounded-lg overflow-hidden grow bg-accent relative dark-out">
 	{#if flagsLoaded}
-		<div class="absolute w-full h-full flex justify-center items-center dark:brightness-75 z-[5]">
+		<div class="absolute w-full h-full flex justify-center items-center z-[5]">
 			{#if Icon1}
 				<Icon1 class="z-50" size="110" />
 			{/if}
 		</div>
-		<div
-			class="absolute w-full h-full flex justify-center items-center dark:brightness-50 brightness-75 z-[4] rotate-1"
-		>
+		<div class="absolute w-full h-full flex justify-center items-center brightness-75 z-[4] rotate-1">
 			{#if Icon2}
 				<Icon2 class="z-40 ml-1 mt-1" size="110" />
 			{/if}
 		</div>
-		<div class="absolute w-full h-full flex justify-center items-center dark:brightness-50 brightness-75 z-[3]">
+		<div class="absolute w-full h-full flex justify-center items-center brightness-75 z-[3]">
 			{#if Icon3}
 				<Icon3 class="z-30 ml-2 mt-2" size="110" />
 			{/if}
 		</div>
-		<div
-			class="absolute w-full h-full flex justify-center items-center dark:brightness-50 brightness-50 z-[2] rotate-2"
-		>
+		<div class="absolute w-full h-full flex justify-center items-center brightness-50 z-[2] rotate-2">
 			{#if Icon4}
 				<Icon4 class="z-20 ml-3 mt-3" size="110" />
 			{/if}
@@ -129,5 +125,9 @@
 		width: 216px;
 		height: 135px;
 		background-blend-mode: luminosity;
+	}
+
+	:global([data-theme="dark"] .dark-out) {
+		opacity: 0.85;
 	}
 </style>

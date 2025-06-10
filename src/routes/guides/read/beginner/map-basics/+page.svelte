@@ -6,18 +6,18 @@
 	at a few specifics.
 </p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Official vs. Community Maps</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Official vs. Community maps</h2>
 <p class="mb-2">
 	In all three major guessing games, user created maps are available and known as community maps. Moreover, they include
 	pages that showcase these maps.
 </p>
 <ol class="mb-2 list-disc list-inside">
 	<li>
-		<a href="https://openguessr.com/maps" class="text-secondary" target="_blank">OpenGuessr Community Maps</a>
+		<a href="https://openguessr.com/maps" class="text-secondary" target="_blank">OpenGuessr community maps</a>
 	</li>
 	<li>
-		<a href="https://www.geoguessr.com/community/maps" class="text-secondary" target="_blank"
-			>GeoGuessr Community Maps</a
+		<a href="https://www.geoguessr.com/maps/community" class="text-secondary" target="_blank"
+			>GeoGuessr community maps</a
 		>
 	</li>
 	<li>

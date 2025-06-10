@@ -4,6 +4,7 @@
 	import { Star, ArrowLeft } from "lucide-svelte";
 	import { scale } from "svelte/transition";
 	import { quintOut } from "svelte/easing";
+	import { supporterLevel } from "$lib/stores/accountData.js";
 
 	import Toast from "$lib/components/Toast.svelte";
 
@@ -11,22 +12,19 @@
 	import { isAuthenticated } from "$lib/stores/accountData.js";
 	import { addExperience } from "$lib/utils/addExperience.js";
 
-	let supporterLevel = $state(0);
-
 	let { score = 0, errors = 0, timeString = undefined, startGame, errorWeight = 0.25 } = $props();
 
 	let achievedScore = Math.max(score - errors * errorWeight, 0);
-	let experience = $derived(
-		supporterLevel ? Math.floor(achievedScore * 50 * (1 + supporterBoostFactor)) : Math.floor(achievedScore * 50),
+	let earnedExperience = $derived(
+		$supporterLevel ? Math.floor(achievedScore * 50 * (1 + supporterBoostFactor)) : Math.floor(achievedScore * 50),
 	);
 	let showToast = $state(false);
 
-	let supporterBoostFactor = $derived(supporterLevel * 0.05 + 0.05);
+	let supporterBoostFactor = $derived($supporterLevel * 0.05 + 0.05);
 
 	onMount(() => {
 		if ($isAuthenticated && achievedScore != 0) {
-			supporterLevel = Number(localStorage.getItem("supporterLevel")) || 0;
-			addExperience(experience);
+			addExperience(earnedExperience);
 			showToast = true;
 		}
 	});
@@ -35,7 +33,7 @@
 	let stars = $derived(Math.min(3, Math.floor(accuracy / 33)));
 </script>
 
-<div class="fixed inset-0 bg-base-300 bg-opacity-75 flex items-center justify-center z-50">
+<div class="fixed inset-0 bg-base-300/75 flex items-center justify-center z-50">
 	<div class="bg-base-100 p-8 rounded-xl text-center" in:scale={{ duration: 300, easing: quintOut }}>
 		<h3 class="text-3xl font-bold mb-4">Quiz complete!</h3>
 		<div class="flex justify-center flex-col items-center rounded-lg bg-base-200 my-4 mb-3 py-4">
@@ -64,8 +62,8 @@
 			{#if $isAuthenticated}
 				<div class="badge badge-success mx-auto mb-8">
 					<p>
-						Earned {experience.toLocaleString()} XP!
-						{#if supporterLevel != 0}
+						Earned {earnedExperience.toLocaleString()} XP!
+						{#if $supporterLevel != 0}
 							(+{supporterBoostFactor * 100}%)
 						{/if}
 					</p>
@@ -81,5 +79,5 @@
 	</div>
 </div>
 {#if showToast}
-	<Toast message="{experience} XP earned!" />
+	<Toast message="{earnedExperience} XP earned!" />
 {/if}

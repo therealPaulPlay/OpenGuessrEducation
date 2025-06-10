@@ -44,8 +44,8 @@
 >
 	<nav class="flex h-full flex-col justify-between p-4">
 		<!-- Logo -->
-		<div class="flex justify-center items-center mb-6 mt-5">
-			<img src="/assets/openguessr_icon.png" alt="OpenGuessr Logo" class="w-16 h-16 rounded-full p-2 bg-base-300" />
+		<div class="flex justify-center items-center mb-2 mt-8">
+			<img src="/assets/home/openguessr_icon.png" alt="OpenGuessr Logo" class="w-16 h-16 rounded-lg p-2 bg-base-300" />
 		</div>
 
 		<!-- Navigation Links -->
@@ -54,35 +54,35 @@
 				<GlobalSearch />
 				<li>
 					<a
-						class="btn normal-case text-lg {activeButton === 'home' ? 'btn-primary text-white' : 'btn-accent'}"
+						class="btn normal-case text-lg {activeButton === 'home' ? 'btn-primary text-white' : 'bg-base-300'}"
 						href="/"
 						onclick={() => switchSelection("home")}>Home</a
 					>
 				</li>
 				<li>
 					<a
-						class="btn normal-case text-lg {activeButton === 'quiz' ? 'btn-primary text-white' : 'btn-accent'}"
+						class="btn normal-case text-lg {activeButton === 'quiz' ? 'btn-primary text-white' : 'bg-base-300'}"
 						href="/quiz"
 						onclick={() => switchSelection("quiz")}>Quizzes</a
 					>
 				</li>
 				<li>
 					<a
-						class="btn normal-case text-lg {activeButton === 'guides' ? 'btn-primary text-white' : 'btn-accent'}"
+						class="btn normal-case text-lg {activeButton === 'guides' ? 'btn-primary text-white' : 'bg-base-300'}"
 						href="/guides"
 						onclick={() => switchSelection("guides")}>Guides</a
 					>
 				</li>
 				<li>
 					<a
-						class="btn normal-case text-lg {activeButton === 'countries' ? 'btn-primary text-white' : 'btn-accent'}"
+						class="btn normal-case text-lg {activeButton === 'countries' ? 'btn-primary text-white' : 'bg-base-300'}"
 						href="/countries"
 						onclick={() => switchSelection("countries")}>Countries</a
 					>
 				</li>
 				<div class="divider">OR</div>
 				<li>
-					<a class="btn normal-case text-lg btn-accent" href="https://openguessr.com" target="_blank">
+					<a class="btn normal-case text-lg bg-base-300" href="https://openguessr.com" target="_blank">
 						Play OpenGuessr</a
 					>
 				</li>
@@ -99,7 +99,7 @@
 <!-- Overlay for mobile -->
 {#if isOpen}
 	<button
-		class="fixed inset-0 bg-black bg-opacity-50 z-[99] lg:hidden"
+		class="fixed inset-0 bg-black opacity-50 z-99 lg:hidden transition"
 		onclick={() => (isOpen = false)}
 		aria-label="Toggle Sidebar"
 	></button>
