@@ -118,7 +118,7 @@
 
 	{#if showDropdown && searchResults.length > 0}
 		<div
-			class="absolute w-full mt-2 bg-base-100 shadow-lg transition-opacity p-4 flex flex-col gap-2 rounded-lg z-20 max-h-52 overflow-auto"
+			class="absolute w-full mt-2 bg-base-100 shadow-lg transition-opacity p-4 flex flex-col gap-2 rounded-2xl z-20 max-h-52 overflow-auto"
 		>
 			{#each searchResults as result}
 				<div

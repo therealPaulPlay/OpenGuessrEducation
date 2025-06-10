@@ -5,7 +5,7 @@
 	export const metadata = {
 		title: "Telephone prefixes",
 		tags: ["All"],
-		region: "Telephone Prefixes",
+		region: "Telephone prefixes",
 		previewImagePath: "/telephone-prefixes/tel-number-example.jpg",
 		textDataPath: "/json/country-data/telephone-prefixes.json",
 		category: determineCategory(new URL(import.meta.url).pathname),

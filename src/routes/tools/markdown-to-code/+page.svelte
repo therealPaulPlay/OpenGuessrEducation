@@ -235,8 +235,8 @@
 		<b>then click</b> the button. Thank you!
 	</p>
 
-	<div class="h-fit pb-1 bg-base-100 rounded-xl bg-base-200 mt-10">
-		<div class="flex gap-2 p-4 bg-base-300 rounded-lg flex-wrap">
+	<div class="h-fit pb-1 bg-base-100 rounded-3xl bg-base-200 mt-10">
+		<div class="flex gap-2 p-4 bg-base-300 rounded-3xl flex-wrap">
 			<div class="lg:tooltip" data-tip="Heading 1 (large, only one)">
 				<button onclick={() => insertMarkdown("h1")} class="btn btn-ghost btn-sm">H1</button>
 			</div>

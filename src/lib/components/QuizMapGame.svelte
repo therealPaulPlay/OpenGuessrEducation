@@ -351,7 +351,7 @@
 			/>
 			<button class="btn btn-secondary btn-sm mt-1 mb-1 absolute right-1" onclick={handleInputSubmit}><Check /></button>
 			<div
-				class="absolute w-full top-16 bg-accent shadow-lg transition-opacity p-4 flex flex-col gap-2 rounded-lg z-20 max-h-52 overflow-auto outline outline-accent {showTypeAutoComplete
+				class="absolute w-full top-16 bg-accent shadow-lg transition-opacity p-4 flex flex-col gap-2 rounded-2xl z-20 max-h-52 overflow-auto outline outline-accent {showTypeAutoComplete
 					? 'opacity-100'
 					: 'opacity-0'}"
 			>
