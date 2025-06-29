@@ -112,7 +112,7 @@
 
 	<!-- Features Section -->
 	<div class="mb-30">
-		<h2 class="text-4xl md:text-5xl font-bold mb-4 text-center">The place to learn it all.</h2>
+		<h2 class="text-4xl md:text-5xl font-bold sm:mb-4 mb-2 text-center">The place to learn it all.</h2>
 		<p class="text-lg text-base-content text-center mb-16 mx-auto">
 			Everything you need to become an expert.
 		</p>
