@@ -31,9 +31,11 @@
 	--color-secondary-content: black;
 	--color-accent: rgb(59, 66, 75);
 	--color-accent-content: white;
+	--color-secondary-content: white;
 	--color-neutral: #374151;
-	--color-base-100: rgb(6, 8, 9);
-	--color-base-200: rgb(40, 46, 51);
+	--color-base-100: rgb(0, 1, 2);
+	--color-base-200: rgb(4, 6, 10);
+	--color-base-300: rgb(22, 22, 26);
 	--color-base-content: #ffffff;
 	--color-info: #3ABFF8;
 	--color-success: #36D399;
