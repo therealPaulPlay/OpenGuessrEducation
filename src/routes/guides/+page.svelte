@@ -41,7 +41,7 @@
 			<!-- Cards here -->
 			<GuideCard
 				title="The compass"
-				description="Learn how to use the compass, determine the hemisphere and line up."
+				description="Learn how to use the compass to determine the hemisphere."
 				href="/guides/read/beginner/compass"
 				hueRotate="0"
 			>
