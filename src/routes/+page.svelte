@@ -13,7 +13,7 @@
 	});
 </script>
 
-<article class="container mx-auto px-4 py-8 max-md:pt-0 max-md:-mt-5">
+<article class="container mx-auto py-8 max-md:pt-0 max-md:-mt-5">
 	<!-- Hero Section -->
 	<div class="text-center mb-16">
 		<div class="mb-6 py-4">
@@ -114,7 +114,7 @@
 	<div class="mb-30">
 		<h2 class="text-4xl md:text-5xl font-bold mb-4 text-center">The place to learn it all.</h2>
 		<p class="text-lg text-base-content text-center mb-16 mx-auto">
-			Everything you need to become a geography expert.
+			Everything you need to become an expert.
 		</p>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">

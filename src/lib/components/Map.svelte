@@ -882,11 +882,11 @@
 	}
 
 	.dynamic-viewport-height {
-		height: 50dvh;
+		height: 50vh;
 	}
 
 	.small-dynamic-viewport-height {
-		height: 25dvh;
+		height: 25vh;
 	}
 
 	.planet-background {
