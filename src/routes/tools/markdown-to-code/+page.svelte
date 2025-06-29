@@ -192,7 +192,7 @@
 	</p>
 
 	<p class="font-bold">Please read:</p>
-	<ul class="list list-disc list-inside mb-4 max-w-2xl">
+	<ul class="list list-disc list-inside mb-4 max-w-2xl text-base">
 		<li>
 			You can only have <b>one</b> H1 header per article.
 		</li>

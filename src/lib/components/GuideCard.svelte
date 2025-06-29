@@ -13,7 +13,7 @@
 	let mobile = $state(false);
 
 	const handleResize = () => {
-		mobile = window.matchMedia("(max-width: 600px)").matches;
+		mobile = window.matchMedia("(max-width: 1280px)").matches;
 	};
 
 	onMount(() => {
@@ -27,14 +27,14 @@
 <div
 	class="card {mobile
 		? 'image-full'
-		: 'card-side'} bg-base-300 shadow-md hover:shadow-xl transition-shadow duration-300 {mobile
+		: 'card-side'} bg-base-300 shadow-md hover:shadow-xl transition-shadow overflow-hidden duration-300 max-h-58 {mobile
 		? 'max-h-42'
-		: ''} overflow-hidden"
+		: ''}"
 >
 	<figure class="relative h-full {mobile ? 'brightness-30' : ''}">
 		<img
 			src="/assets/home/guide_preview.png"
-			class="h-full {mobile ? 'w-64' : 'w-48'}"
+			class="h-full w-48"
 			style="filter: hue-rotate({hueRotate}deg)"
 			alt="Guide preview"
 		/>
@@ -47,7 +47,11 @@
 	</figure>
 	<div class="card-body max-w-64">
 		<h2 class="card-title text-ellipsis">{title}</h2>
-		<p class="text-wrap {mobile ? 'mask-b-from-50% mask-b-to-100% leading-5' : ''} {mobile ? 'max-h-10' : 'max-h-24'}">
+		<p
+			class="text-wrap overflow-hidden {mobile ? 'mask-b-from-50% mask-b-to-100% leading-5' : ''} {mobile
+				? 'max-h-10'
+				: 'max-h-20'}"
+		>
 			{description}
 		</p>
 		<div class="card-actions justify-end mt-auto -mb-1">

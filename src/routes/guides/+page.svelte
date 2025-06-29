@@ -73,7 +73,7 @@
 			</GuideCard>
 			<GuideCard
 				title="Street View coverage"
-				description="Find out where coverage exist, which cameras where used and what generations are."
+				description="Find out where coverage exist and how to recognize camera generations."
 				href="/guides/read/beginner/coverage"
 				hueRotate="80"
 			>
@@ -105,7 +105,7 @@
 			</GuideCard>
 			<GuideCard
 				title="Road lines"
-				description="Distinguish road lines from another, differentiate between white and yellow lines."
+				description="Distinguish road lines from another and learn where to find which colors."
 				href="/guides/read/intermediate/road-lines"
 				hueRotate="140"
 			>

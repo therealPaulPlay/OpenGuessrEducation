@@ -4,7 +4,7 @@
 export const titleState = $state({
 	mainTitle: "", // e.g., "Driving Side"
 	homeTitle: "Geography Quizzes & Guides | OpenGuessr Education",
-	suffix: " | OpenGuessr Education - Learn Geography!", // Static suffix
+	suffix: " | OpenGuessr Education", // Static suffix
 });
 
 // A utility function to set the title dynamically

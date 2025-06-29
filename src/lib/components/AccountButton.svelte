@@ -1,7 +1,6 @@
-<!-- src/lib/components/AccountButton.svelte -->
 <script>
 	import { onMount } from "svelte";
-	import { CircleUserRound, LogIn } from "lucide-svelte";
+	import { CircleUserRound, LogIn, X } from "lucide-svelte";
 	import { experience, isAuthenticated, supporterLevel, username } from "$lib/stores/accountData.js";
 
 	let userId = null;
@@ -103,6 +102,11 @@
 		login_modal.showModal();
 	}
 
+	function closeModal() {
+		login_modal.close();
+		loadIframeSource = false;
+	}
+
 	onMount(() => {
 		checkAuthenticationStatus();
 
@@ -113,8 +117,7 @@
 
 				switch (true) {
 					case data === "close":
-						login_modal.close();
-						loadIframeSource = false;
+						closeModal();
 						break;
 					case data.includes("token"):
 						localStorage.setItem("bearer", data.replace("token ", ""));
@@ -125,7 +128,7 @@
 					case data == "loadAccountStatus":
 						setTimeout(() => {
 							checkAuthenticationStatus();
-						}, 200);
+						}, 250);
 						break;
 				}
 			} catch (error) {
@@ -177,14 +180,29 @@
 	</div>
 {/if}
 
-<dialog id="login_modal" class="modal h-full w-full p-2">
-	<dialog id="my_modal_2" class="modal"></dialog>
-	<div class="modal-box h-[98%] max-h-full w-full p-0 bg-base-200">
-		<iframe
-			src={loadIframeSource ? "https://openguessr.com/signup" : ""}
-			class="w-full h-full {loadIframeSource ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500"
-			title="Login and Sign up"
-			referrerpolicy="no-referrer-when-downgrade"
-		></iframe>
+<dialog id="login_modal" class="modal">
+	<div class="modal-box max-w-2xl w-full h-full max-h-200 p-0 relative overflow-hidden">
+		<!-- Header with close button -->
+		<div class="flex items-center justify-between p-4 border-b border-base-300 bg-base-100 flex-shrink-0">
+			<h3 class="text-lg font-semibold">Login or Sign Up</h3>
+			<button class="btn btn-sm btn-ghost btn-circle" onclick={closeModal}>
+				<X class="w-4 h-4" />
+			</button>
+		</div>
+
+		<!-- iframe content -->
+		<div class="w-full flex-1 overflow-hidden" style="height: calc(100% - 4rem);">
+			<iframe
+				src={loadIframeSource ? "https://openguessr.com/signup" : ""}
+				class="w-full h-full {loadIframeSource ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500 border-0"
+				title="Login and Sign up"
+				referrerpolicy="no-referrer-when-downgrade"
+			></iframe>
+		</div>
 	</div>
+
+	<!-- Backdrop - clicking outside closes modal -->
+	<form method="dialog" class="modal-backdrop">
+		<button onclick={closeModal}>close</button>
+	</form>
 </dialog>
