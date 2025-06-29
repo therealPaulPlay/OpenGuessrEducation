@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from "svelte";
 	import { page } from "$app/stores";
-	import { AlertCircle } from "lucide-svelte";
 
 	let showBanner = $state(false);
 	let cookieConsent = false;
@@ -73,16 +72,15 @@
 </svelte:head>
 
 {#if showBanner}
-	<div role="alert" class="alert fixed w-fit m-4 bottom-0 bg-base-100 right-0 z-50 shadow-lg">
-		<AlertCircle />
-		<span
-			>This website uses cookies according to its <a href="https://openguessr.com/legal" class="text-secondary"
+	<div role="alert" class="alert fixed w-fit m-4 bottom-0 bg-base-100 right-0 z-50 shadow-lg flex flex-wrap">
+		<span class="text-base"
+			>This website uses cookies according to its <a href="https://openguessr.com/legal" class="text-secondary text-base"
 				>privacy policy</a
 			>.</span
 		>
 		<div class="flex flex-wrap gap-2">
-			<button onclick={handleDeny} class="btn btn-sm btn-accent">Only essential</button>
-			<button onclick={handleAccept} class="btn btn-sm btn-secondary">Accept</button>
+			<button onclick={handleDeny} class="btn btn-accent">Only essential</button>
+			<button onclick={handleAccept} class="btn btn-secondary">Accept</button>
 		</div>
 	</div>
 {/if}

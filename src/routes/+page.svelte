@@ -6,15 +6,10 @@
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
 	import { username } from "$lib/stores/accountData";
 
-	let welcomeText = "Master your geography skills.";
-	let yourNameString = $state("");
 	let isHovered = $state(false);
 
 	onMount(() => {
 		setTitle("");
-
-		if ($username && $username !== "Guest") yourNameString = ", " + $username;
-		else yourNameString = "";
 	});
 </script>
 
@@ -23,12 +18,7 @@
 		<Globe />
 	</div>
 
-	<h1 class="text-5xl font-bold mb-4 text-center">
-		{welcomeText}
-	</h1>
-	<p class="text-xl text-center mb-8">
-		Welcome to OpenGuessr Education{yourNameString}.
-	</p>
+	<h1 class="text-5xl font-bold mb-4 text-center">Know the world.</h1>
 
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 mt-12">
 		<div class="card bg-base-300 shadow-md hover:shadow-xl transition-shadow duration-300">
@@ -83,7 +73,7 @@
 	<div class="text-focused-section mb-20 mt-28 flex justify-center flex-col">
 		<h2 class="text-4xl font-bold mb-10 text-center">The place to learn it all.</h2>
 
-		<div class="grid md:grid-cols-2 gap-8 w-5/6 mx-auto max-w-6xl">
+		<div class="grid md:grid-cols-2 gap-8 mx-auto max-w-6xl">
 			<div class="space-y-6">
 				<div class="flex items-start">
 					<Compass class="w-8 h-8 text-secondary mr-4 mt-1 flex-shrink-0" />
