@@ -32,14 +32,11 @@
 		: ''}"
 >
 	<figure class="relative h-full {mobile ? 'brightness-30' : ''}">
-		<img
-			src="/assets/home/guide_preview.png"
-			class="h-full w-48"
+		<div
+			class="h-full w-full min-w-48 bg-radial from-secondary to-primary/50"
 			style="filter: hue-rotate({hueRotate}deg)"
-			alt="Guide preview"
-		/>
-		<div class="absolute h-full w-full">
-			<div class="flex justify-center items-center w-full h-full text-base-200">
+		>
+			<div class="flex justify-center items-center w-full h-full text-base-200 {mobile ? 'text-black/25' : ''}">
 				{@render children?.()}
 				<!-- formerly <slot /> in Svelte 4 -->
 			</div>

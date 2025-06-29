@@ -16,11 +16,11 @@
 <article class="container mx-auto px-4 py-8 max-md:pt-0 max-md:-mt-5">
 	<!-- Hero Section -->
 	<div class="text-center mb-16">
-		<div class="mb-12">
+		<div class="mb-6 py-4">
 			<Globe />
 		</div>
 
-		<h1 class="text-6xl md:text-7xl font-black mb-2 leading-tight">Know the world.</h1>
+		<h1 class="text-6xl md:text-7xl font-black mb-2 leading-tight">Know your world.</h1>
 
 		<p class="text-lg md:text-xl text-base-content max-w-lg mx-auto mb-8 leading-relaxed">
 			Master geography through interactive learning, challenging quizzes, and professional metas.
@@ -33,7 +33,7 @@
 				onmouseleave={() => (isHovered = false)}
 				onclick={() => goto("/get-started")}
 			>
-				<span class="mr-3">Start learning</span>
+				<span class="mr-2">Start learning</span>
 				<div class="w-8 h-8 relative">
 					<img
 						src="/assets/home/noob_player.png"
@@ -172,7 +172,7 @@
 			onmouseleave={() => (isHovered = false)}
 			onclick={() => goto("/get-started")}
 		>
-			<span class="mr-3">Start learning</span>
+			<span class="mr-2">Start learning</span>
 			<div class="w-8 h-8 relative">
 				<img
 					src="/assets/home/noob_player.png"
