@@ -1,4 +1,3 @@
-// scripts/generate-sitemap.js
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -9,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.join(__dirname, "..");
 const ROUTES_DIR = path.join(PROJECT_ROOT, "src", "routes");
 const OUTPUT_FILE = path.join(PROJECT_ROOT, "static", "sitemap.xml");
-const BASE_URL = "https://education.openguessr.com"; // Updated to your actual domain
+const BASE_URL = "https://education.openguessr.com";
 
 function getRoutes(dir, baseRoute = "") {
 	let routes = [];
