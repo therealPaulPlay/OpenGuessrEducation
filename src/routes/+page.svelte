@@ -15,52 +15,20 @@
 
 <article class="container mx-auto py-8 max-md:pt-0 max-md:-mt-5">
 	<!-- Hero Section -->
-	<div class="text-center mb-16">
+	<div class="text-center mb-18">
 		<div class="mb-6 py-4">
 			<Globe />
 		</div>
 
 		<h1 class="text-6xl md:text-7xl font-black mb-2 leading-tight">Know your world.</h1>
 
-		<p class="text-lg md:text-xl text-base-content max-w-lg mx-auto mb-8 leading-relaxed">
+		<p class="text-lg md:text-xl text-base-content max-w-lg mx-auto leading-relaxed">
 			Master geography through interactive learning, challenging quizzes, and professional metas.
 		</p>
-
-		<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-			<button
-				class="btn btn-secondary btn-lg relative overflow-hidden group"
-				onmouseenter={() => (isHovered = true)}
-				onmouseleave={() => (isHovered = false)}
-				onclick={() => goto("/get-started")}
-			>
-				<span class="mr-2">Start learning</span>
-				<div class="w-8 h-8 relative">
-					<img
-						src="/assets/home/noob_player.png"
-						alt="Beginner"
-						class="w-full h-full object-contain absolute transition-all duration-300 {isHovered
-							? 'opacity-0 scale-75'
-							: 'opacity-100 scale-100'}"
-					/>
-					<img
-						src="/assets/home/chad_moai.png"
-						alt="Pro"
-						class="w-full h-full object-contain absolute transition-all duration-300 {isHovered
-							? 'opacity-100 scale-100'
-							: 'opacity-0 scale-125'}"
-					/>
-				</div>
-			</button>
-
-			<button class="btn btn-outline btn-lg" onclick={() => window.open("https://openguessr.com", "_blank")}>
-				<Gamepad2 class="w-5 h-5 mr-2" />
-				Play
-			</button>
-		</div>
 	</div>
 
 	<!-- Feature Cards -->
-	<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-30">
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-25">
 		<div class="card bg-base-300 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
 			<div class="card-body">
 				<Book class="w-12 h-12 text-secondary mb-4" />
@@ -111,11 +79,9 @@
 	</div>
 
 	<!-- Features Section -->
-	<div class="mb-30">
+	<div class="mb-25">
 		<h2 class="text-4xl md:text-5xl font-bold sm:mb-4 mb-2 text-center">The place to learn it all.</h2>
-		<p class="text-lg text-base-content text-center mb-16 mx-auto">
-			Everything you need to become an expert.
-		</p>
+		<p class="text-lg text-base-content text-center mb-16 mx-auto">Everything you need to become an expert.</p>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
 			<div class="text-center group">
