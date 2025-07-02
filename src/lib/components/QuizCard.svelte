@@ -1,4 +1,5 @@
 <script>
+	import { goto } from "$app/navigation";
 	import { onMount, onDestroy } from "svelte";
 
 	let { title = "Default title", path, hueRotateDegree = 0, tags = [], children } = $props();
@@ -53,13 +54,15 @@
 			{/if}
 		</div>
 		<div class="card-actions justify-end mt-auto">
-			<a
-				href={path.replace("/+page.svelte", "")}
+			<button
 				style="filter: hue-rotate({hueRotateDegree}deg)"
 				class="btn btn-secondary btn-md -mb-1 mt-2 w-full"
+				onclick={() => {
+					goto(path.replace("/+page.svelte", ""));
+				}}
 			>
 				Play
-			</a>
+			</button>
 		</div>
 	</div>
 </div>

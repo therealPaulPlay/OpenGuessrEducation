@@ -27,6 +27,7 @@
 		projectionRotation = 0,
 		singleCountryRegion,
 		countryOutlineColor = "var(--color-base-100)",
+		extraRounded = false,
 		children, // For components that work like layouts (with a render slot, in which HTML can be passed) - children needs to be specified as a prop
 	} = $props();
 
@@ -631,9 +632,9 @@
 </script>
 
 <div
-	class="map-container rounded-lg relative grow {dynamicHeight ? 'dynamic-viewport-height' : ''} {smallDynamicHeight
-		? 'small-dynamic-viewport-height'
-		: ''}"
+	class="map-container {extraRounded ? 'rounded-xl' : 'rounded-lg'} relative grow {dynamicHeight
+		? 'dynamic-viewport-height'
+		: ''} {smallDynamicHeight ? 'small-dynamic-viewport-height' : ''}"
 	bind:this={mapContainer}
 	id="mapContainer"
 >

@@ -30,7 +30,7 @@
 </p>
 
 <div class="flex flex-wrap justify-evenly items-center gap-5 mb-4">
-	<Map region="A-Profile" interactive="true" />
+	<Map region="A-Profile" interactive={true} />
 	<img alt="A-profile" src="/assets/guides/a-profile-guardrail.png" class="rounded-lg h-44" />
 </div>
 
@@ -58,7 +58,7 @@
 </ul>
 
 <div class="flex flex-wrap justify-evenly items-center gap-5 mb-4">
-	<Map region="B-Profile" interactive="true" />
+	<Map region="B-Profile" interactive={true} />
 	<img alt="B-profile" src="/assets/guides/b-profile-guardrail.png" class="rounded-lg h-44" />
 </div>
 
