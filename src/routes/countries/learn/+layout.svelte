@@ -156,7 +156,7 @@
 	<!-- Video content -->
 	{#if videoSources}
 		<h3 class="text-xl font-bold ml-1 mt-14 mb-4">Featured videos:</h3>
-		<div class="rounded-lg bg-base-200 p-2 w-fit max-w-full">
+		<div class="rounded-xl bg-base-200 p-2 w-fit max-w-full">
 			<div class="flex items-center flex-wrap gap-2 overflow-hidden">
 				{#each videoSources as src}
 					<iframe
