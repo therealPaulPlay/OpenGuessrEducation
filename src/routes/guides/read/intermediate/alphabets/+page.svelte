@@ -22,7 +22,7 @@
 	<b>français</b> in France.
 </ArticleTip>
 
-<Map region="Latin Alphabet" interactive="true" showLabels="true" minLabelZoom="3" />
+<Map region="Latin Alphabet" interactive={true} showLabels={true} minLabelZoom="3" />
 
 <p class="text-center mt-2">Countries that use the Latin alphabet.</p>
 
@@ -35,7 +35,7 @@
 	A common sentence example: <b>Привет, как дела?</b> (Hello, how are you?) can help you spot Russian instantly.
 </p>
 
-<Map region="Cyrillic Alphabet" interactive="true" showLabels="true" minLabelZoom="3" />
+<Map region="Cyrillic Alphabet" interactive={true} showLabels={true} minLabelZoom="3" />
 
 <p class="text-center mt-2">Countries that use the Cyrillic alphabet.</p>
 
@@ -53,7 +53,7 @@
 	Detect Arabic by recognizing the script's right-to-left orientation and its elegant, connected letters.
 </ArticleTip>
 
-<Map region="Arabic Alphabet" interactive="true" showLabels="true" minLabelZoom="3" />
+<Map region="Arabic Alphabet" interactive={true} showLabels={true} minLabelZoom="3" />
 
 <p class="text-center mt-2">Countries that use the Arabic alphabet.</p>
 
@@ -70,7 +70,7 @@
 	Look for Hebrew's blocky characters and right-to-left writing style to spot countries like Israel.
 </ArticleTip>
 
-<Map region="Hebrew Alphabet" interactive="true" showLabels="true" minLabelZoom="3" />
+<Map region="Hebrew Alphabet" interactive={true} showLabels={true} minLabelZoom="3" />
 
 <p class="text-center mt-2">Countries that use the Hebrew alphabet.</p>
 
@@ -86,7 +86,7 @@
 
 <ArticleTip>Pay attention to the complex, square-shaped characters of Chinese.</ArticleTip>
 
-<Map region="Chinese Alphabet" interactive="true" showLabels="true" minLabelZoom="3" />
+<Map region="Chinese Alphabet" interactive={true} showLabels={true} minLabelZoom="3" />
 
 <p class="text-center mt-2">Countries that use the Chinese alphabet.</p>
 
@@ -101,7 +101,7 @@
 	A typical sentence might be: <b>こんにちは、お元気ですか？</b> (Hello, how are you?), blending kanji and kana.
 </p>
 
-<Map region="Kanji Alphabet" interactive="true" showLabels="true" minLabelZoom="3" />
+<Map region="Kanji Alphabet" interactive={true} showLabels={true} minLabelZoom="3" />
 
 <p class="text-center mt-2">Countries that use the Japanese (Kana / Kanji) alphabet.</p>
 
@@ -118,7 +118,7 @@
 	Look for the horizontal line across the top of letters to recognize scripts from India and Nepal.
 </ArticleTip>
 
-<Map region="Devanagari Alphabet" interactive="true" showLabels="true" minLabelZoom="3" />
+<Map region="Devanagari Alphabet" interactive={true} showLabels={true} minLabelZoom="3" />
 
 <p class="text-center mt-2">Countries that use the Devanagari alphabet.</p>
 
@@ -133,7 +133,7 @@
 
 <ArticleTip>Korean uses a lot of circular shapres in their letters.</ArticleTip>
 
-<Map region="Hangul Alphabet" interactive="true" showLabels="true" minLabelZoom="3" />
+<Map region="Hangul Alphabet" interactive={true} showLabels={true} minLabelZoom="3" />
 
 <p class="text-center mt-2">Countries that use the Hangul (Korean) alphabet.</p>
 
@@ -147,6 +147,6 @@
 	Example sentence: <b>Γειά σου, πώς είσαι;</b> (Hello, how are you?) highlights Greek script.
 </p>
 
-<Map region="Greek Alphabet" interactive="true" showLabels="true" minLabelZoom="3" />
+<Map region="Greek Alphabet" interactive={true} showLabels={true} minLabelZoom="3" />
 
 <p class="text-center mt-2">Countries that use the Greek alphabet.</p>

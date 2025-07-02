@@ -48,7 +48,7 @@
 <Map
 	region="South-East Asia"
 	interactive="false"
-	showLabels="true"
+	showLabels={true}
 	notHighlightedColor="#67999e"
 	topoJsonName="south_east_asia"
 />

@@ -79,11 +79,17 @@
 	<GoBack href="/countries/" />
 
 	{#if countryName}
-		<Map region={countryName} singleCountryRegion={countryName} smallDynamicHeight="true" showPoints="true" />
+		<Map
+			region={countryName}
+			singleCountryRegion={countryName}
+			smallDynamicHeight={true}
+			showPoints={true}
+			extraRounded={true}
+		/>
 	{/if}
 
 	<!-- statistics and other data -->
-	<div class="w-full bg-base-300 rounded-lg flex flex-wrap items-center p-2 gap-2 mt-2">
+	<div class="w-full bg-base-300 rounded-xl flex flex-wrap items-center p-2 gap-2 mt-2">
 		{#if !jsonDataLoading}
 			{#if topLevelDomains}
 				<div class="stat-pill text-sm">
