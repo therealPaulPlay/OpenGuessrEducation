@@ -63,6 +63,7 @@
 
 	const MIN_ZOOM = 0.5;
 	const MAX_ZOOM = 20;
+	const DRAG_THRESHOLD = 5; // Pixel threshold for drag detection
 
 	let allRegionSettings = {};
 	let regionPoints = {};
@@ -247,6 +248,8 @@
 	});
 
 	let hasDragged = false;
+	let mouseDownX = 0;
+	let mouseDownY = 0;
 
 	function handleRegionClick(feature, event) {
 		if (hasDragged) {
@@ -450,18 +453,29 @@
 		hasDragged = false;
 		lastX = event.clientX;
 		lastY = event.clientY;
+		mouseDownX = event.clientX; // Store initial position
+		mouseDownY = event.clientY;
 	}
 
 	function handleMouseMove(event) {
 		if (!interactive || !isDragging) return;
-		hasDragged = true;
-		rect = mapContainer.getBoundingClientRect();
-		translateX += (event.clientX - lastX) * (width / rect.width);
-		translateY += (event.clientY - lastY) * (height / rect.height);
-		lastX = event.clientX;
-		lastY = event.clientY;
-		updateProjection();
-		generatePaths();
+
+		// Calculate distance moved from initial click position
+		const deltaX = Math.abs(event.clientX - mouseDownX);
+		const deltaY = Math.abs(event.clientY - mouseDownY);
+		const totalMovement = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+		// Only set hasDragged if movement exceeds threshold
+		if (totalMovement > DRAG_THRESHOLD) {
+			hasDragged = true;
+			rect = mapContainer.getBoundingClientRect();
+			translateX += (event.clientX - lastX) * (width / rect.width);
+			translateY += (event.clientY - lastY) * (height / rect.height);
+			lastX = event.clientX;
+			lastY = event.clientY;
+			updateProjection();
+			generatePaths();
+		}
 	}
 
 	function handleMouseUp() {
@@ -484,6 +498,8 @@
 
 	let isTouching = false;
 	let lastTouchDistance = null;
+	let touchStartX = 0;
+	let touchStartY = 0;
 
 	function handleTouchStart(event) {
 		if (!interactive) return;
@@ -492,6 +508,8 @@
 			const touch = event.touches[0];
 			lastX = touch.clientX;
 			lastY = touch.clientY;
+			touchStartX = touch.clientX; // Store initial touch position
+			touchStartY = touch.clientY;
 			lastTouchDistance = null;
 		} else if (event.touches.length === 2) {
 			isTouching = false; // Disable panning on multi-touch
@@ -503,21 +521,30 @@
 		if (!interactive) return;
 
 		if (isTouching && event.touches.length === 1) {
-			event.preventDefault(); // Prevent page scroll
-			rect = mapContainer.getBoundingClientRect();
-
 			const touch = event.touches[0];
-			const deltaX = touch.clientX - lastX;
-			const deltaY = touch.clientY - lastY;
 
-			translateX += deltaX * (width / rect.width);
-			translateY += deltaY * (height / rect.height);
+			// Calculate distance moved from initial touch position
+			const deltaX = Math.abs(touch.clientX - touchStartX);
+			const deltaY = Math.abs(touch.clientY - touchStartY);
+			const totalMovement = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 
-			lastX = touch.clientX;
-			lastY = touch.clientY;
+			// Only start panning if movement exceeds threshold
+			if (totalMovement > DRAG_THRESHOLD) {
+				event.preventDefault(); // Prevent page scroll
+				rect = mapContainer.getBoundingClientRect();
 
-			updateProjection();
-			generatePaths();
+				const currentDeltaX = touch.clientX - lastX;
+				const currentDeltaY = touch.clientY - lastY;
+
+				translateX += currentDeltaX * (width / rect.width);
+				translateY += currentDeltaY * (height / rect.height);
+
+				lastX = touch.clientX;
+				lastY = touch.clientY;
+
+				updateProjection();
+				generatePaths();
+			}
 		} else if (event.touches.length === 2) {
 			const currentDistance = getTouchDistance(event.touches);
 
