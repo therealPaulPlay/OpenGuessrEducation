@@ -4,6 +4,7 @@
 	import Footer from "$lib/components/Footer.svelte";
 	import Analytics from "$lib/components/Analytics.svelte";
 	import { onMount } from "svelte";
+	import SignupIframePopup from "$lib/components/SignupIframePopup.svelte";
 
 	let { children } = $props();
 
@@ -51,15 +52,17 @@
 		</button>
 
 		<!-- The main content where route content will be displayed -->
-		<main class="flex-1 md:p-6 p-4 overflow-y-auto w-full mt-16 lg:mt-0 overflow-x-hidden">
+		<main class="flex-1 lg:p-12 p-4 overflow-y-auto w-full mt-16 lg:mt-0 overflow-x-hidden">
 			{@render children?.()}
-			<!-- formerly <slot /> in Svelte 4 -->
 		</main>
 
 		<!-- Footer -->
 		<Footer />
 	</div>
 </div>
+
+<!-- Signup popup -->
+<SignupIframePopup />
 
 <!-- Google Analytics (just code)-->
 <Analytics />

@@ -20,7 +20,7 @@
 			<Globe />
 		</div>
 
-		<h1 class="text-6xl md:text-7xl font-black mb-2 leading-tight">Know your world.</h1>
+		<h1 class="text-6xl md:text-7xl font-black mb-2 leading-tight">Know your world</h1>
 
 		<p class="text-lg md:text-xl text-base-content max-w-lg mx-auto leading-relaxed">
 			Master geography through interactive learning, challenging quizzes, and professional metas.
@@ -28,7 +28,7 @@
 	</div>
 
 	<!-- Feature Cards -->
-	<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-25">
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-30">
 		<div class="card bg-base-300 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
 			<div class="card-body">
 				<Book class="w-12 h-12 text-secondary mb-4" />
@@ -79,8 +79,8 @@
 	</div>
 
 	<!-- Features Section -->
-	<div class="mb-25">
-		<h2 class="text-4xl md:text-5xl font-bold sm:mb-4 mb-2 text-center">The place to learn it all.</h2>
+	<div class="mb-30">
+		<h2 class="text-4xl md:text-5xl font-bold sm:mb-4 mb-2 text-center">The place to learn it all</h2>
 		<p class="text-lg text-base-content text-center mb-16 mx-auto">Everything you need to become an expert.</p>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">

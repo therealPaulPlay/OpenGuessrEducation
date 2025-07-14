@@ -75,11 +75,8 @@
 	]);
 
 	function toggleTag(tag) {
-		if (selectedTags.has(tag)) {
-			selectedTags.delete(tag);
-		} else {
-			selectedTags.add(tag);
-		}
+		if (selectedTags.has(tag)) selectedTags.delete(tag);
+		else selectedTags.add(tag);
 
 		const newSet = selectedTags;
 		selectedTags = new Set();
@@ -131,7 +128,7 @@
 	}
 </script>
 
-<article class="container mx-auto p-6 px-1">
+<article class="mx-auto py-6">
 	<h1 class="text-5xl font-bold mb-8">Discover quizzes</h1>
 
 	<div class="mb-8">

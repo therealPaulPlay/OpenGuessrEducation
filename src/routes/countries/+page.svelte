@@ -8,16 +8,12 @@
 	onMount(async () => {
 		setTitle("Learn countries");
 		// Only fetch if data isn't already in store
-		if (!$countryStore.countryCodes) {
-			await countryStore.fetchCountryCodes();
-		}
-		if (!$countryStore.favoriteCountries.length) {
-			await countryStore.fetchFavorites();
-		}
+		if (!$countryStore.countryCodes) await countryStore.fetchCountryCodes();
+		if (!$countryStore.favoriteCountries.length) await countryStore.fetchFavorites();
 	});
 </script>
 
-<article class="container mx-auto p-6 px-1">
+<article class="container mx-auto py-6">
 	<h1 class="text-5xl font-bold mb-6">Learn countries</h1>
 
 	<div

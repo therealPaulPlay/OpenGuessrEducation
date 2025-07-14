@@ -2,7 +2,7 @@
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
 </script>
 
-<article class="container mx-auto p-6 px-1 max-w-4xl">
+<article class="container mx-auto py-6 max-w-4xl">
 	<img src="/assets/home/openguessr_jungle_adventure.png" alt="Geography adventure" class="w-full rounded-xl mb-10" />
 	<h1 class="text-4xl font-bold mb-4">Embark on an epic learning-adventure.</h1>
 	<p class="mb-6">

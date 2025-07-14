@@ -28,7 +28,7 @@
 	});
 </script>
 
-<article class="container mx-auto p-6 px-1 custom-width">
+<article class="container mx-auto py-6 custom-width">
 	<h1 class="text-5xl font-bold mb-12">Guides</h1>
 
 	<div class="mb-12">

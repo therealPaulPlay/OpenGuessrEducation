@@ -46,7 +46,7 @@
 	</p>
 </div>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Geographical Features</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Geographical features</h2>
 <p class="mb-2">
 	<b>Mountainous Terrain:</b> Austria is characterized by its <b>mountainous landscape</b>, especially in the
 	<b>western regions</b>.
