@@ -4,7 +4,8 @@
 	import Footer from "$lib/components/Footer.svelte";
 	import Analytics from "$lib/components/Analytics.svelte";
 	import { onMount } from "svelte";
-	
+	import SignupIframePopup from "$lib/components/SignupIframePopup.svelte";
+
 	let { children } = $props();
 
 	let isDrawerOpen = $state(false);
@@ -59,6 +60,9 @@
 		<Footer />
 	</div>
 </div>
+
+<!-- Signup popup -->
+<SignupIframePopup />
 
 <!-- Google Analytics (just code)-->
 <Analytics />
