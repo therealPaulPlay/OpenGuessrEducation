@@ -28,7 +28,7 @@
 	</div>
 
 	<!-- Feature Cards -->
-	<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-25">
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-30">
 		<div class="card bg-base-300 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
 			<div class="card-body">
 				<Book class="w-12 h-12 text-secondary mb-4" />
@@ -79,7 +79,7 @@
 	</div>
 
 	<!-- Features Section -->
-	<div class="mb-25">
+	<div class="mb-30">
 		<h2 class="text-4xl md:text-5xl font-bold sm:mb-4 mb-2 text-center">The place to learn it all.</h2>
 		<p class="text-lg text-base-content text-center mb-16 mx-auto">Everything you need to become an expert.</p>
 

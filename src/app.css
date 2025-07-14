@@ -75,7 +75,7 @@ body {
 		color 0.2s ease-in-out;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	.text-2xl {
 		font-size: 1.125rem;
 		/* 18px instead of 24px */

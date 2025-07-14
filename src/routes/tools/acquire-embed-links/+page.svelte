@@ -7,7 +7,7 @@
 	});
 </script>
 
-<article class="container mx-auto p-6 px-1">
+<article class="container mx-auto py-6">
 	<h1 class="text-4xl font-bold mb-8">How to get embed links from Google Street View</h1>
 
 	<p class="mb-4 max-w-2xl">
