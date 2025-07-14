@@ -128,7 +128,7 @@
 	}
 </script>
 
-<article class="mx-auto py-6">
+<article class="mx-auto py-6 max-w-375">
 	<h1 class="text-5xl font-bold mb-8">Discover quizzes</h1>
 
 	<div class="mb-8">
