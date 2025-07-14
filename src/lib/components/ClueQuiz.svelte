@@ -106,6 +106,6 @@
 
 <style>
 	.custom-height {
-		height: 20dvh;
+		height: 20lvh;
 	}
 </style>
