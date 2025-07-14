@@ -175,12 +175,12 @@
 <style>
 	.custom-size {
 		width: 100%;
-		height: 40dvh;
+		height: 40lvh;
 	}
 
 	@media (max-width: 700px) {
 		.custom-size {
-			height: 20dvh;
+			height: 20lvh;
 		}
 	}
 </style>
