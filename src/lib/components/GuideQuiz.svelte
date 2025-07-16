@@ -30,9 +30,7 @@
 	onMount(() => {
 		quizId = `${window.location.pathname}_${question.substring(0, 10)}`; // don't change this, would mess up all quiz saves
 		isCompleted = localStorage.getItem(quizId) === "completed";
-		if (isCompleted) {
-			selectedAnswer = correctAnswer - 1;
-		}
+		if (isCompleted) selectedAnswer = correctAnswer - 1;
 	});
 
 	onDestroy(() => {
