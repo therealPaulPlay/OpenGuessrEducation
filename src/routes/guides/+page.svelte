@@ -31,7 +31,7 @@
 <article class="container mx-auto py-6 custom-width">
 	<h1 class="text-5xl font-bold mb-12">Guides</h1>
 
-	<div class="mb-12">
+	<div class="mb-8">
 		<h2 class="text-3xl font-semibold mb-4 flex items-center">
 			<Sprout class="w-8 h-8 mr-2" />
 			Beginner
@@ -49,7 +49,7 @@
 			</GuideCard>
 			<GuideCard
 				title="Keyboard shortcuts"
-				description="A cheat sheet for the most useful keyboard shortcuts in GeoGuessr."
+				description="A cheat sheet for keyboard shortcuts in GeoGuessr."
 				href="/guides/read/beginner/shortcuts"
 				hueRotate="20"
 			>
@@ -65,7 +65,7 @@
 			</GuideCard>
 			<GuideCard
 				title="Map basics"
-				description="Learn what maps are, what coverage is and how community maps differ."
+				description="Learn what maps are, what coverage is and how they differ."
 				href="/guides/read/beginner/map-basics"
 				hueRotate="60"
 			>
@@ -73,7 +73,7 @@
 			</GuideCard>
 			<GuideCard
 				title="Street View coverage"
-				description="Find out where coverage exist and how to recognize camera generations."
+				description="Find out how to differentiate between camera generations."
 				href="/guides/read/beginner/coverage"
 				hueRotate="80"
 			>
@@ -81,7 +81,7 @@
 			</GuideCard>
 			<GuideCard
 				title="Restrictions & NMPZ"
-				description="Learn about game controls, like Zoom, Move and Pan, and discover restrictions."
+				description="Learn about game controls and discover restrictions."
 				href="/guides/read/beginner/restrictions"
 				hueRotate="100"
 			>
@@ -121,7 +121,7 @@
 			</GuideCard>
 			<GuideCard
 				title="Trekker coverage"
-				description="Learn what Trekker coverage refers to and how it could be useful for guessing."
+				description="Learn what Trekker coverage refers to and how Pro's use it."
 				href="/guides/read/intermediate/trekker"
 				hueRotate="180"
 			>
@@ -129,7 +129,7 @@
 			</GuideCard>
 			<GuideCard
 				title="European guardrails"
-				description="Find out which types of guardrails exist in Europe and where they are common."
+				description="Find out which types of guardrails exist where in Europe."
 				href="/guides/read/intermediate/european-guardrails"
 				hueRotate="200"
 			>
@@ -152,7 +152,7 @@
 		<div class="w-full flex gap-8 flex-wrap scrollbar-hide">
 			<GuideCard
 				title="Map creation"
-				description="Discover the tools that professional map creators use and become one yourself."
+				description="Discover the tools that professional map creators use."
 				href="/guides/read/advanced/map-creation"
 				hueRotate="240"
 			>
@@ -174,18 +174,6 @@
 			>
 				<Tag class="w-28 h-28"></Tag>
 			</GuideCard>
-		</div>
-	</div>
-
-	<div class="w-full">
-		<div class="rounded-lg p-2 px-6 flex items-center justify-center bg-base-200 mx-auto w-fit">
-			<p class="text-wrap">
-				More guides coming soon! Feel free to <a
-					class="text-secondary"
-					href="https://github.com/therealPaulPlay/OpenGuessrEducation"
-					target="_blank">contribute</a
-				> on Github.
-			</p>
 		</div>
 	</div>
 </article>

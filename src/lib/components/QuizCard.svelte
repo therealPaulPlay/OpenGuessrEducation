@@ -2,7 +2,7 @@
 	import { goto } from "$app/navigation";
 	import { onMount, onDestroy } from "svelte";
 
-	let { title = "Default title", path, hueRotateDegree = 0, tags = [], children } = $props();
+	let { title = "Default title", path, hueRotateDegree = 0, children } = $props();
 
 	let containerRef;
 	let hasBeenVisible = $state(false); // Changed from isVisible to hasBeenVisible
@@ -36,18 +36,13 @@
 
 <div
 	bind:this={containerRef}
-	class="card w-64 bg-base-300 shadow-md flex-shrink-0 hover:shadow-xl transition-shadow duration-300"
+	class="card w-64 border border-accent shadow-sm/5 flex-shrink-0 hover:shadow-xl transition duration-300 hover:-translate-y-1"
 >
 	<div class="card-body flex flex-col h-full">
 		<div class="flex-grow">
 			<h3 class="card-title text-xl mb-6 text-wrap h-10 items-start">
 				{title}
 			</h3>
-			<div class="flex flex-wrap gap-2 mb-2">
-				{#each tags || [] as tag}
-					<span class="badge badge-accent">{tag}</span>
-				{/each}
-			</div>
 			<!-- Render children once it has been visible -->
 			{#if hasBeenVisible}
 				{@render children?.()}
@@ -56,7 +51,7 @@
 		<div class="card-actions justify-end mt-auto">
 			<button
 				style="filter: hue-rotate({hueRotateDegree}deg)"
-				class="btn btn-secondary btn-md -mb-1 mt-2 w-full"
+				class="btn btn-secondary btn-md mt-2 w-full"
 				onclick={() => {
 					goto(path.replace("/+page.svelte", ""));
 				}}

@@ -4,17 +4,11 @@
 
 	let {
 		title = "This is an awesome guide.",
-		description = "This guide will teach you the basics of creating guide cards, which is an important skill.",
+		description = "This guide will teach you the basics of creating guide cards.",
 		href = "/",
 		hueRotate = 0,
 		children, // For components that work like layouts (with a slot, in which HTML can be passed) - children needs to be specified as a prop
 	} = $props();
-
-	let mobile = $state(false);
-
-	const handleResize = () => {
-		mobile = window.matchMedia("(max-width: 1280px)").matches;
-	};
 
 	onMount(() => {
 		if (window) {
@@ -25,33 +19,22 @@
 </script>
 
 <div
-	class="card {mobile
-		? 'image-full'
-		: 'card-side'} bg-base-300 shadow-md hover:shadow-xl transition-shadow overflow-hidden duration-300 max-h-58 {mobile
-		? 'max-h-42'
-		: ''}"
+	class="card shadow-sm/5 border image-full border-accent hover:shadow-xl transition hover:-translate-y-1 overflow-hidden duration-300 max-h-68 flex-1 min-w-60"
 >
-	<figure class="relative h-full {mobile ? 'brightness-30' : ''}">
-		<div
-			class="h-full w-full min-w-48 bg-radial from-secondary to-primary/50"
-			style="filter: hue-rotate({hueRotate}deg)"
-		>
-			<div class="flex justify-center items-center w-full h-full text-base-200 {mobile ? 'text-black/25' : ''}">
+	<figure class="relative h-full rounded-none!">
+		<div class="h-full w-full min-w-48 bg-secondary/20" style="filter: hue-rotate({hueRotate}deg);">
+			<div class="flex justify-center items-center w-full h-full text-base-100/35">
 				{@render children?.()}
 				<!-- formerly <slot /> in Svelte 4 -->
 			</div>
 		</div>
 	</figure>
-	<div class="card-body max-w-64">
-		<h2 class="card-title text-ellipsis">{title}</h2>
-		<p
-			class="text-wrap overflow-hidden {mobile ? 'mask-b-from-50% mask-b-to-100% leading-5' : ''} {mobile
-				? 'max-h-10'
-				: 'max-h-20'}"
-		>
+	<div class="card-body">
+		<h2 class="card-title text-ellipsis text-base-content">{title}</h2>
+		<p class="text-wrap overflow-hidden leading-5 text-base-content">
 			{description}
 		</p>
-		<div class="card-actions justify-end mt-auto -mb-1">
+		<div class="card-actions justify-end mt-4">
 			<a class="btn btn-secondary btn-md" style="filter: hue-rotate({hueRotate}deg)" {href}>Read</a>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 <script module>
 	import { determineCategory } from "$lib/utils/quizMetadataHelper.js";
-	import QuizMapGame from "$lib/components/QuizMapGame.svelte";
+	import QuizMapGame from "$lib/components/MapQuiz.svelte";
 	import ExploreInOpenGuessr from "$lib/components/ExploreInOpenGuessr.svelte";
 
 	export const metadata = {

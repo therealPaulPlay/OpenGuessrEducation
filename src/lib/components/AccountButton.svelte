@@ -15,11 +15,14 @@
 
 {#if $isAuthenticated}
 	<div class="dropdown dropdown-top dropdown-end">
-		<div tabindex="0" role="button" class="btn bg-base-300">
+		<div tabindex="0" role="button" class="btn">
 			<CircleUserRound />
 		</div>
 		<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-		<ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-56 p-2 shadow-md mb-3">
+		<ul
+			tabindex="0"
+			class="dropdown-content menu bg-base-100 border border-accent rounded-box z-[1] w-56 p-2 shadow-md mb-3"
+		>
 			<div class="flex justify-center items-center mb-5 flex-col gap-x-2">
 				<h3 class="font-bold text-lg text-wrap truncate max-w-36 text-center">
 					Hey, {$username}
@@ -40,5 +43,5 @@
 		</ul>
 	</div>
 {:else}
-	<button class="btn bg-base-300" onclick={openSignin}>Log in <LogIn /></button>
+	<button class="btn" onclick={openSignin}>Log in <LogIn /></button>
 {/if}

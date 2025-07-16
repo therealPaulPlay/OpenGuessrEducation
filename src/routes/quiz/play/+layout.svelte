@@ -105,7 +105,7 @@
 			<p>No quizzes available.</p>
 		{:else}
 			{#each quizzesWithSimilarityScore as quiz (quiz.path)}
-				<QuizCard title={quiz.title} tags={quiz.tags || []} path={quiz.path}>
+				<QuizCard title={quiz.title} path={quiz.path}>
 					{#if quiz.category == "countries" || quiz.category == "cities" || quiz.category == "regions" || quiz.category == "satellite" || quiz.category == "multinational-alliances"}
 						<Map
 							region={quiz.region}

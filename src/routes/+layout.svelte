@@ -30,7 +30,7 @@
 	}
 </script>
 
-<div class="flex flex-col h-screen bg-base-100 dark:bg-base-900">
+<div class="flex flex-col h-screen bg-base-100">
 	<!-- Sidebar -->
 	<Sidebar bind:isOpen={isDrawerOpen} />
 

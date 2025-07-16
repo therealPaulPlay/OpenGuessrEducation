@@ -17,9 +17,7 @@
 </script>
 
 <a
-	class="px-2 py-1 bg-base-300 rounded-md hover:scale-95 transition-all cursor-pointer box-border m-0.5 flex relative {isFavorite
-		? 'outline outline-1 outline-secondary'
-		: ''}"
+	class="btn border-accent btn-sm btn-outline relative {isFavorite ? 'border-secondary' : ''}"
 	href="/countries/learn/{country.toLowerCase().replaceAll(' ', '-')}"
 >
 	<div class="flex gap-2 items-center mx-auto overflow-hidden flex justify-center">

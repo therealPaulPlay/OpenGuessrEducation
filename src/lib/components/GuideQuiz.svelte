@@ -63,7 +63,7 @@
 	}
 </script>
 
-<div class="w-full bg-base-300 rounded-3xl shadow-md my-8 relative">
+<div class="w-full border border-accent rounded-2xl shadow-sm/5 my-8 relative">
 	{#if !isLoggedIn}
 		<div class="absolute w-full h-full backdrop-blur-sm z-20 rounded-xl">
 			<div class="w-full h-full rounded-xl bg-base-200 opacity-75 absolute p-4"></div>
@@ -78,7 +78,6 @@
 	<div class="p-4">
 		<div class="flex justify-content items-center mb-4 flex-wrap gap-3">
 			<h2 class="text-xl font-bold">{question}</h2>
-			<div class="badge badge-success mt-1 transition-opacity {isCompleted ? 'opacity-0' : ''}">500 XP</div>
 		</div>
 
 		{@render children?.()}
@@ -86,7 +85,7 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 			{#each answers as answer, index}
 				<button
-					class="btn w-full h-auto py-2 px-12 relative text-wrap
+					class="btn btn-outline text-base-content w-full h-auto py-2 px-12 relative text-wrap
                    {index === correctAnswer - 1 && isCompleted ? 'btn-success opacity-100' : 'btn-accent'}
                    {selectedAnswer == index && index != correctAnswer - 1 ? 'btn-error animate-shake' : ''}
                    {isCompleted && index != correctAnswer - 1 ? 'opacity-50 pointer-events-none' : ''}"
@@ -98,10 +97,8 @@
 							<Check size={20} />
 						</span>
 					{/if}
-					<span
-						class="absolute left-2 rounded-full items-center flex justify-center bg-base-200 text-center align-middle w-7 h-7"
-					>
-						<p class="opacity-50 text-base-300 invert">{getIndexLetter(index)}</p>
+					<span class="absolute left-2 rounded-full items-center flex justify-center text-center w-7 h-7">
+						<p class="opacity-50">{getIndexLetter(index)}</p>
 					</span>
 				</button>
 			{/each}

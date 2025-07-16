@@ -36,7 +36,7 @@
 				ad_storage: "denied",
 				ad_personalization: "denied",
 				ad_user_data: "denied",
-				analytics_storage: "denied",
+				analytics_storage: "granted", // This is GDPR compliant, so always enabled
 			});
 
 			// Grant permissions if the user has accepted
@@ -74,8 +74,9 @@
 {#if showBanner}
 	<div role="alert" class="alert fixed w-fit m-4 bottom-0 bg-base-100 right-0 z-50 shadow-lg flex flex-wrap">
 		<span class="text-base"
-			>This website uses cookies according to its <a href="https://openguessr.com/legal" class="text-secondary text-base"
-				>privacy policy</a
+			>This website uses cookies according to its <a
+				href="https://openguessr.com/legal"
+				class="text-secondary text-base">privacy policy</a
 			>.</span
 		>
 		<div class="flex flex-wrap gap-2">

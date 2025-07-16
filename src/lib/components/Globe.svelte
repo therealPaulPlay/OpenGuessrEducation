@@ -39,13 +39,13 @@
 		globe
 			.polygonsData(countries.features)
 			.polygonAltitude(0.01)
-			.polygonCapColor(() => "rgba(255, 8, 8, 0.6)")
-			.polygonSideColor(() => "rgba(255, 8, 8, 0.6)")
+			.polygonCapColor(() => "rgba(245,85, 85, 0.9)")
+			.polygonSideColor(() => "rgba(250, 150, 150, 0.5)")
 			.polygonStrokeColor(() => "#111")
 			.onPolygonHover((hoverD) => {
 				globe
 					.polygonAltitude((d) => (d === hoverD ? 0.02 : 0.01))
-					.polygonCapColor((d) => (d === hoverD ? "rgba(255, 255, 255, 0.8)" : "rgba(255, 8, 8, 0.6)"));
+					.polygonCapColor((d) => (d === hoverD ? "white" : "rgba(245,85, 85, 0.9)"));
 			})
 			.onPolygonClick((clickedCountry) => {
 				if (clickedCountry) {

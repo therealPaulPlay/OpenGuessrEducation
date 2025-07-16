@@ -98,11 +98,11 @@
 	}
 </script>
 
-<div class="w-full bg-base-200 rounded-3xl shadow-md my-8 relative">
+<div class="w-full border border-accent shadow-sm/5 rounded-2xl shadow-md my-8 relative">
 	<div class="p-4">
 		<div class="flex w-full items-center mb-4 flex-wrap gap-3">
 			<h2 class="text-xl font-bold ml-1">{question}</h2>
-			<span class="rounded-md bg-base-300 px-2 mt-0.5">{currentQuestionIndex}/{questionAmount}</span>
+			<span class="rounded-md px-1 mt-0.5">{currentQuestionIndex}/{questionAmount}</span>
 			<div class="flex justify-end ml-auto items-center gap-4">
 				<div class="lg:tooltip" data-tip="Automatically go to the next question">
 					<label class="label cursor-pointer">
@@ -132,7 +132,7 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 			{#each answers as answer, index}
 				<button
-					class="btn w-full h-auto py-2 px-12 relative text-wrap
+					class="btn btn-outline text-base-content w-full h-auto py-2 px-12 relative text-wrap
                      {index === correctAnswer - 1 && selectedAnswer === correctAnswer - 1
 						? 'btn-success opacity-100'
 						: 'btn-accent'}
@@ -146,9 +146,7 @@
 							<Check size={20} />
 						</span>
 					{/if}
-					<span
-						class="absolute left-2 rounded-full items-center flex justify-center bg-base-200 text-center align-middle w-7 h-7"
-					>
+					<span class="absolute left-2 items-center flex justify-center text-center align-middle w-7 h-7">
 						<p class="opacity-50 text-base-300 invert">
 							{getIndexLetter(index)}
 						</p>

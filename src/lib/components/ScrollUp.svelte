@@ -25,7 +25,7 @@
 
 {#if showScrollButton}
 	<div class="w-full flex justify-center mt-12">
-		<button class="btn btn-wide btn-accent" onclick={scrollTop}>
+		<button class="btn btn-wide btn-soft btn-secondary" onclick={scrollTop}>
 			<ArrowUp /> Back to top
 		</button>
 	</div>

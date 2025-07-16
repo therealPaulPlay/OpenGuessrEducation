@@ -47,20 +47,11 @@
 
 	<h3 class="text-xl font-semibold mb-2">About guides</h3>
 	<p class="mb-6">
-		Want to <b>improve</b> your <b>geo-guessing skills</b> and gain knowledge about the game? <b>Check out</b>
+		Want to gain more knowledge about the game? <b>Check out</b>
 		the comprehensive <a href="/guides" class="text-secondary">guides</a>
-		section. Guides are <b>packed with tips</b> and tricks to help you become the next Rainbolt. They are frequently
-		updated, so you'll always have the latest strategies at your fingertips. Whether you're looking to
+		section. They are <b>packed with tips</b> and tricks to help you become the next Rainbolt. Whether you're looking to
 		<b>score more 5ks</b>, win more duels or want to learn how to use the compass effectively, these guides have got you
 		covered.
-	</p>
-
-	<h3 class="text-xl font-semibold mb-2">Join the community</h3>
-	<p class="mb-6">
-		<b>Connect</b> with other <b>geography enthusiasts</b> and share your experiences. Join the
-		<a href="https://discord.com/invite/CSc3MbDrZ8" target="_blank" class="text-secondary">Discord server</a> to participate
-		in discussions, share tips, and compete in challenges. It's a virtual hangout for geography nerds - chances are, you'll
-		like it there!
 	</p>
 
 	<h3 class="text-2xl font-semibold mb-4">Frequently asked questions</h3>

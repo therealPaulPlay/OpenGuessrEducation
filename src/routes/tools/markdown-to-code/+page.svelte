@@ -235,8 +235,8 @@
 		<b>then click</b> the button. Thank you!
 	</p>
 
-	<div class="h-fit pb-1 bg-base-100 rounded-3xl bg-base-200 mt-10">
-		<div class="flex gap-2 p-4 bg-base-300 rounded-3xl flex-wrap">
+	<div class="h-fit pb-1 bg-base-100 rounded-2xl shadow-sm/5 border border-accent mt-10">
+		<div class="flex gap-2 p-4 border-b border-accent flex-wrap">
 			<div class="lg:tooltip" data-tip="Heading 1 (large, only one)">
 				<button onclick={() => insertMarkdown("h1")} class="btn btn-ghost btn-sm">H1</button>
 			</div>
@@ -266,25 +266,25 @@
 			</div>
 		</div>
 
-		<div class="flex flex-1 h-fit pb-14 flex-wrap gap-y-12">
-			<div class="w-1/2 p-4 min-w-52 grow h-[calc(100vh-16rem)] relative pr-2">
+		<div class="flex flex-1 h-fit pb-13 flex-wrap gap-y-12 min-h-[50vh]">
+			<div class="w-1/2 p-4 min-w-52 grow relative pr-2">
 				<h2 class="text-lg font-bold mb-4 h-10 flex items-center">Markdown editor</h2>
 				<textarea
 					bind:value={markdown}
 					oninput={saveMarkdownToStorage}
-					class="w-full h-full p-4 bg-base-200 rounded-xl font-mono text-sm overflow-y-auto resize-none bg-base-300"
+					class="w-full h-full p-4 shadow-sm/5 border border-accent rounded-lg font-mono text-sm overflow-y-auto resize-none"
 					placeholder="Start typing your pseudo-markdown text here..."
 				></textarea>
 			</div>
 
-			<div class="w-1/2 p-4 min-w-52 grow h-[calc(100vh-16rem)] relative pl-2">
+			<div class="w-1/2 p-4 min-w-52 grow relative pl-2">
 				<h2 class="text-lg font-bold mb-4 flex items-center h-10">
-					Code
+					Svelte code
 					<button class="btn btn-accent btn-sm ml-auto" onclick={openPreview}> Preview </button>
 					<button onclick={copyToClipboard} class="btn btn-accent btn-sm ml-2"><Copy size={16} />Copy</button>
 				</h2>
 				<code
-					class="block w-full h-full p-4 bg-neutral rounded-xl font-mono text-sm whitespace-pre-wrap overflow-y-auto text-white"
+					class="block w-full h-full p-4 bg-neutral rounded-lg font-mono text-sm whitespace-pre-wrap overflow-y-auto text-white"
 				>
 					{generatedCode}
 				</code>
