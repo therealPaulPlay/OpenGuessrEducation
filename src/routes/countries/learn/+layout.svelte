@@ -1,13 +1,14 @@
 <script>
 	import { page } from "$app/state";
 	import Map from "$lib/components/Map.svelte";
-	import { EthernetPort, Phone, Flag, Languages, UsersRound, CircleDollarSign, Compass } from "lucide-svelte";
+	import { EthernetPort, Phone, Flag, Languages, UsersRound, CircleDollarSign, Compass, Info } from "lucide-svelte";
 	import ArticleEditButton from "$lib/components/ArticleEditButton.svelte";
 	import * as Icon from "svelte-flag-icons";
 	import { onMount } from "svelte";
 	import ScrollUp from "$lib/components/ScrollUp.svelte";
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
 	import GoBack from "$lib/components/GoBack.svelte";
+	import ArticleTip from "$lib/components/ArticleTip.svelte";
 
 	let { children } = $props();
 
@@ -89,7 +90,9 @@
 	{/if}
 
 	<!-- statistics and other data -->
-	<div class="w-full bg-base-300 rounded-xl flex flex-wrap items-center p-2 gap-2 mt-2">
+	<div
+		class="w-full bg-base-300 rounded-xl border border-accent shadow-sm/5 flex flex-wrap items-center p-2 gap-2 mt-2"
+	>
 		{#if !jsonDataLoading}
 			{#if topLevelDomains}
 				<div class="stat-pill text-sm">
@@ -122,6 +125,7 @@
 				</div>
 			{/if}
 		{/if}
+		<ArticleEditButton path={page.url.pathname} />
 		<a
 			class="btn btn-secondary custom-btn-height {jsonDataLoading ? 'invisible' : ''}"
 			href="https://openguessr.com/?play-map={countryName.replaceAll(' ', '_')}"
@@ -134,11 +138,8 @@
 	<div class="flex flex-wrap items-end mt-8 mb-3 gap-4">
 		<h1 class="text-4xl font-bold">{countryName || "Not defined"}</h1>
 		{#if IconComponent}
-			<IconComponent size="40" />
+			<IconComponent size="40" class="drop-shadow-sm" />
 		{/if}
-		<div class="ml-auto mb-0.5">
-			<ArticleEditButton path={page.url.pathname} />
-		</div>
 	</div>
 
 	<!-- Page Content -->
@@ -147,32 +148,33 @@
 	</article>
 
 	{#if childHasNoContent}
-		<p class="w-fit mx-auto text-center my-5 italic mt-14">
-			There is no article for "{countryName}" yet. Feel free to
-			<b>edit this page</b> and contribute content.
-		</p>
+		<ArticleTip class="my-4!"
+			>There is no article for {countryName} yet. Feel free to edit this page and submit one.</ArticleTip
+		>
 	{/if}
 
+	<div class="divider mt-8"></div>
+
 	<!-- Video content -->
-	{#if videoSources}
-		<h3 class="text-xl font-bold ml-1 mt-14 mb-4">Featured videos:</h3>
-		<div class="rounded-xl bg-base-200 p-2 w-fit max-w-full">
-			<div class="flex items-center flex-wrap gap-2 overflow-hidden">
-				{#each videoSources as src}
-					<iframe
-						class="rounded-md"
-						width="356"
-						height="200"
-						{src}
-						title="Video"
-						frameborder="0"
-						referrerpolicy="strict-origin-when-cross-origin"
-						allowfullscreen
-					></iframe>
-				{/each}
-			</div>
-		</div>
-	{/if}
+	<h3 class="text-xl font-bold my-4">Featured videos:</h3>
+	<div class="flex items-center flex-wrap gap-4 overflow-hidden">
+		{#if videoSources}
+			{#each videoSources as src}
+				<iframe
+					class="rounded-xl"
+					width="356"
+					height="200"
+					{src}
+					title="Video"
+					frameborder="0"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+				></iframe>
+			{/each}
+		{:else}
+			<p>There are no curated videos for this country.</p>
+		{/if}
+	</div>
 
 	<ScrollUp />
 </article>

@@ -16,6 +16,7 @@
 	import FlagStackPreview from "$lib/components/FlagStackPreview.svelte";
 	import QuizPreviewImage from "$lib/components/QuizPreviewImage.svelte";
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
+	import { fade } from "svelte/transition";
 
 	// Category names have to match the path / folder names
 	const categories = [
@@ -132,7 +133,7 @@
 	<h1 class="text-5xl font-bold mb-8">Discover quizzes</h1>
 
 	<div class="mb-8">
-		<h2 class="text-2xl font-semibold mb-4">Filter by continent:</h2>
+		<h2 class="text-2xl font-semibold mb-4">By continent:</h2>
 		<div class="w-fit max-sm:mask-x-from-93% max-sm:mask-x-to-100% mr-auto max-w-full max-sm:-ml-2">
 			<div class="flex gap-2 overflow-x-auto overflow-y-hidden max-sm:px-2">
 				{#each allTags as tag}
@@ -157,7 +158,8 @@
 			<div class="relative">
 				{#if scrollButtonVisibility[index]?.left}
 					<button
-						class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg items-center justify-center"
+						transition:fade={{ duration: 100 }}
+						class="absolute btn left-3 top-1/2! transform -translate-y-1/2! z-20 p-2 shadow-lg"
 						onclick={() => scrollContainer(`scroll-container-${index}`, -460)}
 					>
 						<ArrowLeft />
@@ -169,7 +171,7 @@
 					onscroll={() => updateButtonVisibility(`scroll-container-${index}`)}
 				>
 					{#each category.quizzes as quiz (quiz.path)}
-						<QuizCard title={quiz.title} tags={quiz.tags || []} path={quiz.path} hueRotateDegree={index * 30}>
+						<QuizCard title={quiz.title} path={quiz.path} hueRotateDegree={index * 30}>
 							{#if category.name == "countries" || category.name == "cities" || category.name == "regions" || category.name == "satellite" || category.name == "multinational-alliances"}
 								<Map
 									region={quiz.region}
@@ -202,7 +204,8 @@
 				</div>
 				{#if scrollButtonVisibility[index]?.right}
 					<button
-						class="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-base-300 p-2 rounded-full shadow-lg items-center justify-center"
+						transition:fade={{ duration: 100 }}
+						class="absolute btn right-3 top-1/2! transform -translate-y-1/2! z-20 p-2 shadow-lg"
 						onclick={() => scrollContainer(`scroll-container-${index}`, 460)}
 					>
 						<ArrowRight />
@@ -242,7 +245,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 12vw;
+		width: 6vw;
 		height: 100%;
 		background: linear-gradient(to right, var(--color-base-100), rgba(255, 255, 255, 0));
 		pointer-events: none;
@@ -253,7 +256,7 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 12vw;
+		width: 6vw;
 		height: 100%;
 		background: linear-gradient(to left, var(--color-base-100), rgba(255, 255, 255, 0));
 		pointer-events: none; /* Prevent interaction */

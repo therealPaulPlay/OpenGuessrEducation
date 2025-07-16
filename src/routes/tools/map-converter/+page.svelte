@@ -98,7 +98,7 @@
 	{/if}
 
 	<div class="flex items-center flex-col justify-start w-fit mt-8 custom-screen-width">
-		<div class="bg-base-200 rounded-xl p-4 flex justify-center gap-4 flex-wrap">
+		<div class="shadow-sm/5 border border-accent rounded-xl p-4 flex justify-center gap-4 flex-wrap">
 			<input
 				type="file"
 				id="fileInput"
@@ -120,7 +120,7 @@
 
 		<button class="btn btn-secondary my-4" onclick={convertJSON}>Convert <ArrowDown /></button>
 
-		<div class="bg-base-200 rounded-xl p-4 flex justify-center gap-4 flex-col">
+		<div class="shadow-sm/5 border border-accent rounded-xl p-4 flex justify-center gap-4 flex-col">
 			<textarea
 				id="outputJson"
 				rows="1"
@@ -128,7 +128,7 @@
 				class="textarea textarea-bordered custom-screen-width"
 				placeholder="Converted JSON will appear here"
 			></textarea>
-			<button onclick={downloadConvertedJSON} class="btn btn-accent">Download JSON <Download /></button>
+			<button onclick={downloadConvertedJSON} class="btn">Download JSON <Download /></button>
 		</div>
 	</div>
 </article>

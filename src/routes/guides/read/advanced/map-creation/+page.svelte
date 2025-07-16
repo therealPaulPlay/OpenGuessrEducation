@@ -31,7 +31,7 @@
 
 <img alt="Map Generator (non-NSJ)" src="/assets/guides/map-generator-example.png" class="rounded-xl w-full" />
 
-<p class="text-center mt-2">The Map-Generator website.</p>
+<p class="text-center mt-2 mb-4">The Map-Generator website.</p>
 
 <p class="mb-2">
 	You can click on countries to select them, or use the selection tools from the <b>bottom left-hand corner</b> to
@@ -42,7 +42,7 @@
 
 <img alt="Map Generator Export" src="/assets/guides/map-generator-export.png" class="rounded-xl w-full" />
 
-<p class="text-center mt-2 mb-2">Export options on the Map-Generator.</p>
+<p class="text-center mt-2 mb-4">Export options on the Map-Generator.</p>
 
 <p class="mb-2">
 	You can then export the coordinates as <b>JSON</b> in the GeoGuessr format. Other options include GeoJSON, which also

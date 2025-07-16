@@ -261,19 +261,10 @@
 	}
 
 	let showTypeAutoComplete = $state(false);
-
-	function handleFocus() {
-		showTypeAutoComplete = true;
-	}
-
-	function handleBlur() {
-		showTypeAutoComplete = false;
-	}
-
 	let timeString = $derived(`${Math.floor(timer / 60)}:${(timer % 60).toString().padStart(2, "0")}`);
 </script>
 
-<div class="quiz-container bg-base-200 p-4 rounded-3xl">
+<div class="quiz-container border border-accent shadow-sm/5 p-4 rounded-2xl">
 	<div class="flex justify-between items-center mb-4 gap-4 flex-wrap">
 		<h2 class="text-2xl font-bold">
 			{#if gameOver}
@@ -290,7 +281,7 @@
 			<!-- svelte-ignore a11y_click_events_have_key_events -->
 			<!-- svelte-ignore a11y_missing_attribute -->
 			<!-- svelte-ignore a11y_interactive_supports_focus -->
-			<div role="tablist" class="tabs tabs-box bg-base-300 custom-tabs">
+			<div role="tablist" class="tabs tabs-box bg-base-200 custom-tabs">
 				<a role="tab" class="tab tab-sm" class:tab-active={gameMode === "click"} onclick={() => changeGameMode("click")}
 					>Click</a
 				>
@@ -301,7 +292,7 @@
 					>Learn</a
 				>
 			</div>
-			<div class="flex items-center gap-2 bg-base-300 rounded-lg p-1">
+			<div class="flex items-center gap-2 bg-base-200 rounded-lg p-1 px-3">
 				<Timer class="w-5 h-5" />
 				<span class="text-base min-w-10 text-center">{timeString}</span>
 			</div>
@@ -327,8 +318,8 @@
 				afterLoad={handleMapLoad}
 			>
 				{#if IconComponent}
-					<div class="absolute z-20 top-3 right-3 rounded-md bg-base-200 py-0 p-1.5">
-						<IconComponent size="50" />
+					<div class="absolute z-20 top-2 right-4">
+						<IconComponent size="50" class="drop-shadow-sm" />
 					</div>
 				{/if}
 			</Map>
@@ -340,8 +331,12 @@
 			<input
 				type="text"
 				bind:value={userInput}
-				onfocus={handleFocus}
-				onblur={handleBlur}
+				onfocus={() => {
+					showTypeAutoComplete = true;
+				}}
+				onblur={() => {
+					showTypeAutoComplete = false;
+				}}
 				onkeypress={(e) => e.key === "Enter" && handleInputSubmit()}
 				onkeydown={(e) => {
 					if (e.key === "Tab") userInput = regionNamesAutocomplete[0];
@@ -349,9 +344,11 @@
 				placeholder={inputPlaceholderHint}
 				class="input input-bordered w-full"
 			/>
-			<button class="btn btn-secondary btn-sm mt-1 mb-1 absolute right-1" onclick={handleInputSubmit}><Check /></button>
+			<button class="btn btn-secondary btn-sm mt-1 mb-1 absolute right-1" onclick={handleInputSubmit}
+				><Check size={18} /></button
+			>
 			<div
-				class="absolute w-full top-16 bg-accent shadow-lg transition-opacity p-4 flex flex-col gap-2 rounded-2xl z-20 max-h-52 overflow-auto outline outline-accent {showTypeAutoComplete
+				class="absolute w-full top-16 shadow-lg transition-opacity p-2 flex flex-col gap-2 rounded-2xl z-20 max-h-52 overflow-auto bg-base-100 border border-accent shadow {showTypeAutoComplete
 					? 'opacity-100'
 					: 'opacity-0'}"
 			>
@@ -360,7 +357,7 @@
 						<!-- svelte-ignore a11y_click_events_have_key_events -->
 						<!-- svelte-ignore a11y_no_static_element_interactions -->
 						<div
-							class="rounded-md w-full px-2 bg-base-200 hover:bg-base-100 transition-colors cursor-pointer"
+							class="rounded-md w-full px-2 bg-base-200 hover:bg-base-300 transition-colors cursor-pointer"
 							onclick={() => {
 								userInput = regionName;
 							}}
@@ -401,5 +398,10 @@
 		padding-left: 0.75rem;
 		padding-right: 0.75rem;
 		border-radius: 0.4rem;
+	}
+
+	.custom-tabs .tab-active {
+		background-color: var(--color-secondary);
+		color: var(--color-base-100);
 	}
 </style>

@@ -1,7 +1,7 @@
 <script>
 	import Globe from "$lib/components/Globe.svelte";
 	import { goto } from "$app/navigation";
-	import { Book, Trophy, Compass, Flag, Award, Map, Gamepad2, ArrowRight } from "lucide-svelte";
+	import { Compass, Award, Map, Gamepad2, ArrowRight } from "lucide-svelte";
 	import { onMount } from "svelte";
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
 	import { username } from "$lib/stores/accountData";
@@ -28,50 +28,66 @@
 	</div>
 
 	<!-- Feature Cards -->
-	<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-30">
-		<div class="card bg-base-300 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+	<div class="flex flex-wrap gap-8 mb-8">
+		<div
+			class="card shadow-sm/5 border border-accent hover:shadow-xl rounded-lg transition-all hover:-translate-y-1 flex-1 min-w-80"
+		>
 			<div class="card-body">
-				<Book class="w-12 h-12 text-secondary mb-4" />
-				<h2 class="card-title text-xl">Recognize countries</h2>
-				<p class="text-base-content mb-4">
-					Study country metas, common locations and regions with comprehensive country articles.
-				</p>
+				<img
+					alt="country icon"
+					src="/assets/home/learn_countries_icon.png"
+					class="h-20 w-20 drop-shadow-md drop-shadow-primary/25"
+				/>
+				<h2 class="card-title text-xl">Study countries</h2>
+				<p class="text-base-content mb-4">Study country metas, common locations and regions with country articles.</p>
 				<div class="card-actions justify-end mt-auto">
 					<button class="btn btn-secondary group" onclick={() => goto("/countries")}>
 						See countries
-						<ArrowRight class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+						<ArrowRight class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
 					</button>
 				</div>
 			</div>
 		</div>
 
-		<div class="card bg-base-300 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+		<div
+			class="card shadow-sm/5 hover:shadow-xl border border-accent transition-all rounded-lg hover:-translate-y-1 flex-1 min-w-80"
+		>
 			<div class="card-body">
-				<Gamepad2 class="w-12 h-12 text-secondary mb-4" />
-				<h2 class="card-title text-xl">Quizzes</h2>
+				<img
+					alt="country icon"
+					src="/assets/home/play_quizzes_icon.png"
+					class="h-20 w-20 drop-shadow-md drop-shadow-primary/25"
+				/>
+				<h2 class="card-title text-xl">Play quizzes</h2>
 				<p class="text-base-content mb-4">
 					Challenge yourself in engaging geography quizzes. Why not give it a go now?
 				</p>
 				<div class="card-actions justify-end mt-auto">
 					<button class="btn btn-secondary group" onclick={() => goto("/quiz")}>
 						Take a quiz
-						<ArrowRight class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+						<ArrowRight class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
 					</button>
 				</div>
 			</div>
 		</div>
 
-		<div class="card bg-base-300 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+		<div
+			class="card shadow-sm/5 hover:shadow-xl border border-accent transition-all rounded-lg hover:-translate-y-1 flex-1 min-w-80"
+		>
 			<div class="card-body">
-				<Trophy class="w-12 h-12 text-secondary mb-4" />
-				<h2 class="card-title text-xl">Professional guides</h2>
+				<img
+					alt="country icon"
+					src="/assets/home/guides_icon.png"
+					class="h-20 w-20 drop-shadow-md drop-shadow-primary/25"
+				/>
+				<h2 class="card-title text-xl">Discover guides</h2>
 				<p class="text-base-content mb-4">
 					Learn to geo-guess and discover new tricks and strategies to elevate your game.
 				</p>
 				<div class="card-actions justify-end mt-auto">
 					<button class="btn btn-secondary group" onclick={() => goto("/guides")}>
 						Discover guides
-						<ArrowRight class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+						<ArrowRight class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
 					</button>
 				</div>
 			</div>
@@ -79,57 +95,39 @@
 	</div>
 
 	<!-- Features Section -->
-	<div class="mb-30">
-		<h2 class="text-4xl md:text-5xl font-bold sm:mb-4 mb-2 text-center">The place to learn it all</h2>
-		<p class="text-lg text-base-content text-center mb-16 mx-auto">Everything you need to become an expert.</p>
+	<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-8">
+		<div class="text-center group border border-accent p-8 rounded-lg shadow-sm/5">
+			<h3 class="text-xl font-semibold mb-3">Explore the world</h3>
+			<p class="text-base-content leading-relaxed">
+				Dive into our educational (but fun!) content to learn about different locations, continents, capitals, and
+				landmarks.
+			</p>
+		</div>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-			<div class="text-center group">
-				<div class="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-6">
-					<Compass class="w-8 h-8 text-secondary-content" />
-				</div>
-				<h3 class="text-xl font-semibold mb-3">Explore the world</h3>
-				<p class="text-base-content leading-relaxed">
-					Dive into our educational (but fun!) content to learn about different locations, continents, capitals, and
-					landmarks.
-				</p>
-			</div>
+		<div class="text-center group border border-accent p-8 rounded-lg shadow-sm/5">
+			<h3 class="text-xl font-semibold mb-3">Learn through play</h3>
+			<p class="text-base-content leading-relaxed">
+				The platform makes learning fun and exciting through various quizzes and trivia challenges.
+			</p>
+		</div>
 
-			<div class="text-center group">
-				<div class="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-6">
-					<Flag class="w-8 h-8 text-secondary-content" />
-				</div>
-				<h3 class="text-xl font-semibold mb-3">Learn through play</h3>
-				<p class="text-base-content leading-relaxed">
-					The platform makes learning fun and exciting through various quizzes and trivia challenges.
-				</p>
-			</div>
+		<div class="text-center group border border-accent p-8 rounded-lg shadow-sm/5">
+			<h3 class="text-xl font-semibold mb-3">Master Geo-Guessing</h3>
+			<p class="text-base-content leading-relaxed">
+				Whether you're a fan of GeoGuessr, OpenGuessr, or Geotastic, you'll find something that suits your needs.
+			</p>
+		</div>
 
-			<div class="text-center group">
-				<div class="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-6">
-					<Award class="w-8 h-8 text-secondary-content" />
-				</div>
-				<h3 class="text-xl font-semibold mb-3">Master Geo-Guessing</h3>
-				<p class="text-base-content leading-relaxed">
-					Whether you're a fan of GeoGuessr, OpenGuessr, or Geotastic, you'll find something that suits your needs.
-				</p>
-			</div>
-
-			<div class="text-center group">
-				<div class="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-6">
-					<Map class="w-8 h-8 text-secondary-content" />
-				</div>
-				<h3 class="text-xl font-semibold mb-3">Become a geography expert</h3>
-				<p class="text-base-content leading-relaxed">
-					Become a staple of the geography community. The discord is full of cool nerds that want to learn more about
-					our planet.
-				</p>
-			</div>
+		<div class="text-center group border border-accent p-8 rounded-lg shadow-sm/5">
+			<h3 class="text-xl font-semibold mb-3">Join the community</h3>
+			<p class="text-base-content leading-relaxed">
+				Become a staple of the geography community. The Discord is full of like-minded people.
+			</p>
 		</div>
 	</div>
 
 	<!-- Final CTA -->
-	<div class="text-center bg-radial from-secondary/80 to-secondary rounded-2xl p-12 border border-secondary/20">
+	<div class="text-center bg-secondary/90 rounded-lg p-12">
 		<h2 class="text-4xl md:text-5xl font-bold mb-4 text-secondary-content">Ready to become a pro?</h2>
 		<p class="text-lg text-base-content mb-10 text-secondary-content">The journey will be legendary.</p>
 		<button
@@ -143,14 +141,14 @@
 				<img
 					src="/assets/home/noob_player.png"
 					alt="Beginner"
-					class="w-full h-full object-contain absolute transition-all duration-300 {isHovered
+					class="w-full h-full object-contain absolute transition-all {isHovered
 						? 'opacity-0 scale-75'
 						: 'opacity-100 scale-100'}"
 				/>
 				<img
 					src="/assets/home/chad_moai.png"
 					alt="Pro"
-					class="w-full h-full object-contain absolute transition-all duration-300 {isHovered
+					class="w-full h-full object-contain absolute transition-all {isHovered
 						? 'opacity-100 scale-100'
 						: 'opacity-0 scale-125'}"
 				/>

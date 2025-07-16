@@ -167,7 +167,7 @@
 	{handleNextQuestion}
 	handleStartGame={startSatelliteGame}
 >
-	<div class="w-full h-full mb-4 rounded-lg overflow-hidden">
+	<div class="w-full h-full mb-4 rounded-lg overflow-hidden border border-accent shadow-sm/5">
 		<div id="map" class="custom-size"></div>
 	</div>
 </BaseOptionsQuiz>

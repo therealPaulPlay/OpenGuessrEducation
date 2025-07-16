@@ -117,7 +117,7 @@
 >
 	<div class="w-full flex justify-center items-center mb-2">
 		{#if IconComponent}
-			<IconComponent size={dynamicSize} />
+			<IconComponent size={dynamicSize} class="drop-shadow-sm" />
 		{/if}
 	</div>
 </BaseOptionsQuiz>

@@ -63,7 +63,7 @@
 		try {
 			const randomRegionIndex = i + startIndex;
 			const randomRegion = regionsArray[randomRegionIndex];
-			
+
 			switch (i) {
 				case 1:
 					Icon1 = Icon[countryCodes[randomRegion]];
@@ -95,7 +95,7 @@
 	}
 </script>
 
-<div class="custom-size rounded-lg overflow-hidden grow bg-accent relative dark-out">
+<div class="custom-size rounded-lg overflow-hidden grow border border-accent shadow-sm/5 relative dark-out bg-base-200">
 	{#if flagsLoaded}
 		<div class="absolute w-full h-full flex justify-center items-center z-[5]">
 			{#if Icon1}
@@ -114,7 +114,7 @@
 		</div>
 		<div class="absolute w-full h-full flex justify-center items-center brightness-50 z-[2] rotate-2">
 			{#if Icon4}
-				<Icon4 class="z-20 ml-3 mt-3" size="110" />
+				<Icon4 class="z-20 ml-3 mt-3 drop-shadow-lg" size="110" />
 			{/if}
 		</div>
 	{/if}

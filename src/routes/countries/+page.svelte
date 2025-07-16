@@ -14,13 +14,7 @@
 </script>
 
 <article class="container mx-auto py-6">
-	<h1 class="text-5xl font-bold mb-6">Learn countries</h1>
-
-	<div
-		class="outline outline-1 px-4 py-2 rounded-lg w-fit opacity-75 flex items-center justify-center gap-3 mb-10 leading-snug"
-	>
-		<Info size={20} style="min-width: 20px;" />Use the search field in the sidebar to quickly find a country!
-	</div>
+	<h1 class="text-5xl font-bold mb-12">Learn countries</h1>
 
 	<div class="collapse collapse-arrow mb-10">
 		<input type="checkbox" checked="true" />

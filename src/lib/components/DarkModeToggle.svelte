@@ -5,7 +5,7 @@
 	}
 </script>
 
-<label class="swap swap-rotate btn bg-base-300">
+<label class="swap swap-rotate btn">
 	<!-- this hidden checkbox controls the state -->
 	<input type="checkbox" class="theme-controller" autocomplete="off" value="dark" onchange={handleThemeToggle} />
 	<!-- sun icon -->

@@ -112,22 +112,22 @@
 		</label>
 	</div>
 
-	{#if showDropdown && searchResults.length > 0}
+	{#if showDropdown}
 		<div
-			class="absolute w-full mt-2 bg-base-100 shadow-lg transition-opacity p-4 flex flex-col gap-2 rounded-2xl z-20 max-h-52 overflow-auto"
+			class="absolute w-full mt-2 bg-base-100 border border-accent shadow-md transition-opacity p-2 flex flex-col gap-2 rounded-lg z-20 max-h-52 overflow-auto"
 		>
-			{#each searchResults as result}
-				<div
-					class="rounded-md w-full px-2 py-1 bg-base-200 hover:bg-base-300 transition-colors cursor-pointer"
-					onclick={() => handleResultClick(result.url)}
-				>
-					<p class="text-sm">{result.path}</p>
-				</div>
-			{/each}
-		</div>
-	{:else if showDropdown}
-		<div class="absolute w-full mt-2 bg-base-100 shadow-lg p-4 rounded-lg z-20">
-			<p class="text-center text-base-content/60">No matching entries.</p>
+			{#if searchResults?.length}
+				{#each searchResults as result}
+					<div
+						class="rounded w-full px-2 py-1 bg-base-200 hover:bg-base-300 transition-colors cursor-pointer"
+						onclick={() => handleResultClick(result.url)}
+					>
+						<p class="text-sm">{result.path}</p>
+					</div>
+				{/each}
+			{:else}
+				<p class="text-center text-base-content text-sm">No matching entries.</p>
+			{/if}
 		</div>
 	{/if}
 </div>

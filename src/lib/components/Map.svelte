@@ -659,17 +659,19 @@
 </script>
 
 <div
-	class="map-container {extraRounded ? 'rounded-xl' : 'rounded-lg'} relative grow {dynamicHeight
+	class="map-container {extraRounded
+		? 'rounded-xl'
+		: 'rounded-lg'} relative grow shadow-sm/5 border border-accent {dynamicHeight
 		? 'dynamic-viewport-height'
 		: ''} {smallDynamicHeight ? 'small-dynamic-viewport-height' : ''}"
 	bind:this={mapContainer}
 	id="mapContainer"
 >
 	{#if !loaded}
-		<div class="skeleton custom-loading-size opacity-75 rounded-lg bg-accent"></div>
+		<div class="skeleton custom-loading-size opacity-75 rounded-lg bg-base-200"></div>
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 	{:else}
-		<div class="absolute w-full h-full bg-accent"></div>
+		<div class="absolute w-full h-full bg-base-200"></div>
 
 		{@render children?.()}
 
@@ -754,12 +756,13 @@
 											y={y - 12}
 											width={textLength + 20}
 											height="24"
-											rx="10"
-											ry="10"
+											rx="5"
+											ry="5"
 											opacity="0.85"
 											pointer-events="none"
 											fill="var(--color-base-300)"
 											class="label-background"
+											stroke="var(--color-accent)"
 										/>
 										<text
 											{x}
@@ -789,12 +792,13 @@
 										y={-43}
 										width={textLength + 20}
 										height="24"
-										rx="10"
-										ry="10"
+										rx="5"
+										ry="5"
 										opacity="0.85"
 										pointer-events="none"
 										fill="var(--color-base-300)"
 										class="label-background"
+										stroke="var(--color-accent)"
 									/>
 									<text
 										y={-30}
@@ -851,10 +855,10 @@
 
 		{#if interactive}
 			<div class="absolute bottom-4 right-4 flex flex-col gap-2">
-				<button class="btn btn-circle btn-base-200 btn-sm" onclick={handleZoomIn} aria-label="Zoom in">
+				<button class="btn btn-circle btn-sm" onclick={handleZoomIn} aria-label="Zoom in">
 					<Plus size={16} />
 				</button>
-				<button class="btn btn-circle btn-base-200 btn-sm" onclick={handleZoomOut} aria-label="Zoom out">
+				<button class="btn btn-circle btn-sm" onclick={handleZoomOut} aria-label="Zoom out">
 					<Minus size={16} />
 				</button>
 			</div>
@@ -876,7 +880,7 @@
 	.custom-loading-size {
 		height: 100%;
 		width: 100%;
-		min-height: 130px;
+		min-height: 128px;
 	}
 
 	svg {

@@ -1,13 +1,10 @@
 <script>
-	import { Compass } from "lucide-svelte";
 	let { mapName } = $props();
 </script>
 
-<div class="rounded-3xl bg-base-200 mt-4 p-4 gap-2 flex justify-between items-center flex-wrap">
-	<h3 class="font-bold text-lg px-2 grow-10 grow opacity-75">Explore {mapName} in OpenGuessr.</h3>
-	<a
-		href="https://openguessr.com/?play-map={mapName.replaceAll(' ', '_')}"
-		target="_blank"
-		class="btn btn-accent grow"><Compass size="20" /> Explore</a
+<div class="rounded-2xl mt-4 flex flex-wrap justify-center border border-accent shadow-sm/5 p-2 px-4 w-full gap-x-2">
+	<p class="text-center">Want to explore {mapName} in OpenGuessr?</p>
+	<a href="https://openguessr.com/?play-map={mapName.replaceAll(' ', '_')}" target="_blank" class="text-secondary">
+		Play the map!</a
 	>
 </div>
