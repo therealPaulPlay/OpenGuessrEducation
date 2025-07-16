@@ -31,9 +31,7 @@
 
 	function switchSelection(buttonId) {
 		activeButton = buttonId;
-		if (window.innerWidth < 1024) {
-			isOpen = false;
-		}
+		if (window.innerWidth < 1024) isOpen = false;
 	}
 </script>
 
@@ -45,7 +43,7 @@
 	<nav class="flex h-full flex-col justify-between p-4">
 		<!-- Logo -->
 		<div class="flex justify-center items-center mb-2 mt-8">
-			<a href="/">
+			<a href="/" onclick={() => switchSelection("home")}>
 				<img
 					src="/assets/home/openguessr_icon.png"
 					alt="OpenGuessr Logo"
