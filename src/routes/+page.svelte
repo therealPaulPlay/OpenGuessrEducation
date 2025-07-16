@@ -15,15 +15,23 @@
 
 <article class="container mx-auto py-8 max-md:pt-0 max-md:-mt-5">
 	<!-- Hero Section -->
-	<div class="text-center mb-18">
-		<div class="mb-6 py-4">
+	<div class="text-center md:mb-16 mt-18 mb-12">
+		<div class="mb-6 py-4 relative">
+			<h1
+				class="absolute lg:-top-11 -top-1 md:-top-2 -top-2 left-0 right-0 text-8xl scale-102 max-md:scale-104 text-nowrap truncate font-black mb-2 leading-tight text-primary/15"
+			>
+				Know the world
+			</h1>
+			<h1
+				class="absolute lg:-top-11 -top-1 md:-top-2 -top-2 left-0 right-0 text-8xl text-nowrap truncate font-black mb-2 leading-tight"
+			>
+				Know the world
+			</h1>
 			<Globe />
 		</div>
 
-		<h1 class="text-6xl md:text-7xl font-black mb-2 leading-tight">Know your world</h1>
-
-		<p class="text-lg md:text-xl text-base-content max-w-lg mx-auto leading-relaxed">
-			Master geography through interactive learning, challenging quizzes, and professional metas.
+		<p class="text-md md:text-xl text-base-content max-w-105 mx-auto leading-relaxed w-7/9">
+			Master geography through interactive articles, challenging quizzes, and clever metas.
 		</p>
 	</div>
 
@@ -36,7 +44,7 @@
 				<img
 					alt="country icon"
 					src="/assets/home/learn_countries_icon.png"
-					class="h-20 w-20 drop-shadow-md drop-shadow-primary/25"
+					class="h-15 w-15 xl:h-20 xl:w-20 drop-shadow-md drop-shadow-primary/25"
 				/>
 				<h2 class="card-title text-xl">Study countries</h2>
 				<p class="text-base-content mb-4">Study country metas, common locations and regions with country articles.</p>
@@ -56,7 +64,7 @@
 				<img
 					alt="country icon"
 					src="/assets/home/play_quizzes_icon.png"
-					class="h-20 w-20 drop-shadow-md drop-shadow-primary/25"
+					class="h-15 w-15 xl:h-20 xl:w-20 drop-shadow-md drop-shadow-primary/25"
 				/>
 				<h2 class="card-title text-xl">Play quizzes</h2>
 				<p class="text-base-content mb-4">
@@ -78,7 +86,7 @@
 				<img
 					alt="country icon"
 					src="/assets/home/guides_icon.png"
-					class="h-20 w-20 drop-shadow-md drop-shadow-primary/25"
+					class="h-15 w-15 xl:h-20 xl:w-20 drop-shadow-md drop-shadow-primary/25"
 				/>
 				<h2 class="card-title text-xl">Discover guides</h2>
 				<p class="text-base-content mb-4">

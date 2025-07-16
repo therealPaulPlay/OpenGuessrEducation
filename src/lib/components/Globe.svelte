@@ -20,7 +20,7 @@
 
 		const Globe = (await import("globe.gl")).default;
 
-		const isMobile = window.innerWidth <= 768;
+		const isMobile = window.innerWidth <= 1024;
 		const globeWidth = isMobile ? 500 : 800;
 		const globeHeight = isMobile ? 350 : 470;
 
@@ -61,7 +61,6 @@
 
 		// Apply low-poly effect
 		globe.polygonStrokeColor(() => "#111");
-
 		isLoading = false;
 	};
 
@@ -115,7 +114,7 @@
 
 <div class="globe-container w-full flex justify-center items-center rounded-xl" bind:this={globeElement}>
 	{#if isLoading}
-		<div class="loading loading-spinner loading-lg text-base-200"></div>
+		<div class="loading loading-spinner loading-lg text-base-300"></div>
 	{/if}
 </div>
 
@@ -128,7 +127,7 @@
 	}
 
 	/* disable on small phones to allow for scrolling without spinning the globe */
-	@media all and (max-width: 768px) {
+	@media all and (max-width: 1024px) {
 		.globe-container {
 			height: 250px;
 		}

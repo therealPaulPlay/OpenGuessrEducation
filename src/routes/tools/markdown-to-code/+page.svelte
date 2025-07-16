@@ -280,8 +280,8 @@
 			<div class="w-1/2 p-4 min-w-52 grow relative pl-2">
 				<h2 class="text-lg font-bold mb-4 flex items-center h-10">
 					Svelte code
-					<button class="btn btn-accent btn-sm ml-auto" onclick={openPreview}> Preview </button>
-					<button onclick={copyToClipboard} class="btn btn-accent btn-sm ml-2"><Copy size={16} />Copy</button>
+					<button class="btn btn-sm ml-auto" onclick={openPreview}> Preview </button>
+					<button onclick={copyToClipboard} class="btn btn-sm ml-2"><Copy size={16} />Copy</button>
 				</h2>
 				<code
 					class="block w-full h-full p-4 bg-neutral rounded-lg font-mono text-sm whitespace-pre-wrap overflow-y-auto text-white"

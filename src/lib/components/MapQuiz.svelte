@@ -17,31 +17,20 @@
 	let currentQuestion = $state("loading...");
 	let remainingFeatures = $state([]);
 	let gameMode = $state("click"); // 'click', 'type', or 'learn'
-
 	let userInput = $state("");
-
-	// used as a key to reload and thereby reset the map
-	let uniqueMap = $state({});
-
+	let uniqueMap = $state({}); // used as a key to reload and thereby reset the map
 	let score = $state(0);
 	let errors = $state(0);
 	let gameOver = $state(false);
 	let timer = $state(0);
-
+	let timerRunning = false;
 	let countryCodes;
 	let IconComponent = $state();
-
 	let currentWrongAttempts = 0;
-
 	let timerInterval;
 	let highlightedFeature = $state(null);
-
-	let timerRunning = false;
-
 	let inputPlaceholderHint = $state("Type your answer...");
-
 	let mapLoaded = false;
-
 	let validOptions = $derived([currentQuestion].concat(remainingFeatures));
 
 	let regionNamesAutocomplete = $derived(
@@ -62,14 +51,9 @@
 	onMount(async () => {
 		await loadFeatures();
 		remainingFeatures = [...features];
-		startGame();
-
 		screenHeight = Math.min(window.innerHeight * 0.6, 1200);
 		screenWidth = Math.min(window.innerWidth * 0.6, 1200);
-		window.addEventListener("resize", () => {
-			screenHeight = Math.min(window.innerHeight * 0.6, 1200);
-			screenWidth = Math.min(window.innerWidth * 0.6, 1200);
-		});
+		startGame();
 	});
 
 	async function loadFeatures() {
@@ -97,11 +81,8 @@
 				];
 			}
 
-			if (!features) {
-				console.log(
-					"Features is undefined. This is likely because this region doesn't have an entry in regions.json yet.",
-				);
-			}
+			if (!features)
+				console.log("Features is undefined, likely because the region doesn't have an entry in regions.json.");
 		} catch (error) {
 			console.error("Error fetching and processing region json:", error);
 		}
@@ -140,14 +121,8 @@
 		mapLoaded = false;
 	}
 
-	function handleMapLoad() {
-		mapLoaded = true;
-		nextQuestion();
-	}
-
 	function startTimer() {
 		timerRunning = true;
-
 		timerInterval = setInterval(() => {
 			timer++;
 		}, 1000);
@@ -159,13 +134,9 @@
 	}
 
 	async function nextQuestion() {
-		if (remainingFeatures.length === 0) {
-			endGame();
-			return;
-		}
+		if (remainingFeatures.length === 0) return endGame();
 
 		currentWrongAttempts = 0;
-
 		inputPlaceholderHint = "Your answer..."; // This can become a hint over time
 
 		const index = Math.floor(Math.random() * remainingFeatures.length);
@@ -194,11 +165,8 @@
 			quizMap.highlightFeatureOutline(currentQuestion);
 
 			// Highlight region green if hint was not used, highlight yellow if hint was used
-			if (currentWrongAttempts >= 3) {
-				quizMap.highlightFeature(currentQuestion, "var(--color-warning)");
-			} else {
-				quizMap.highlightFeature(currentQuestion, "var(--color-success)");
-			}
+			if (currentWrongAttempts >= 3) quizMap.highlightFeature(currentQuestion, "var(--color-warning)");
+			else quizMap.highlightFeature(currentQuestion, "var(--color-success)");
 
 			nextQuestion();
 		} else {
@@ -209,37 +177,22 @@
 			currentWrongAttempts++;
 
 			quizMap.highlightFeature(answer, "var(--color-primary)");
-
 			if (gameMode != "learn") quizMap.brieflyShowName(answer);
 
 			setTimeout(() => {
 				quizMap.highlightFeature(answer, "var(--color-secondary)");
 			}, 500);
 
-			if (currentWrongAttempts >= 3 && gameMode != "type") {
-				highlightCorrectAnswer();
-			}
-
+			if (currentWrongAttempts >= 3 && gameMode != "type") quizMap.flashFeature(currentQuestion); // Highlight correct answer
 			if (gameMode == "type") {
 				const correctAnswer = currentQuestion;
 				// Create the hint by revealing letters based on wrong attempts
 				const revealedLettersCount = Math.min(currentWrongAttempts, correctAnswer.length);
-
 				const revealedHint =
 					correctAnswer.slice(0, revealedLettersCount) + "*".repeat(correctAnswer.length - revealedLettersCount);
 
 				inputPlaceholderHint = `Hint: ${revealedHint}`;
 			}
-		}
-	}
-
-	function highlightCorrectAnswer() {
-		quizMap.flashFeature(currentQuestion);
-	}
-
-	function handleMapClick(event) {
-		if (gameMode === "click" || gameMode === "learn") {
-			checkAnswer(event.detail.properties.name);
 		}
 	}
 
@@ -263,6 +216,13 @@
 	let showTypeAutoComplete = $state(false);
 	let timeString = $derived(`${Math.floor(timer / 60)}:${(timer % 60).toString().padStart(2, "0")}`);
 </script>
+
+<svelte:window
+	onresize={() => {
+		screenHeight = Math.min(window.innerHeight * 0.6, 1200);
+		screenWidth = Math.min(window.innerWidth * 0.6, 1200);
+	}}
+/>
 
 <div class="quiz-container border border-accent shadow-sm/5 p-4 rounded-2xl">
 	<div class="flex justify-between items-center mb-4 gap-4 flex-wrap">
@@ -307,7 +267,9 @@
 				{zoom}
 				width={screenWidth}
 				height={screenHeight}
-				on:click={handleMapClick}
+				onclick={(properties) => {
+					if (gameMode === "click" || gameMode === "learn") checkAnswer(properties.name);
+				}}
 				interactive={true}
 				{minLabelZoom}
 				{highlightedFeature}
@@ -315,7 +277,10 @@
 				dynamicHeight="true"
 				showPoints="true"
 				showLabels={gameMode === "learn"}
-				afterLoad={handleMapLoad}
+				afterLoad={() => {
+					mapLoaded = true;
+					nextQuestion();
+				}}
 			>
 				{#if IconComponent}
 					<div class="absolute z-20 top-2 right-4">

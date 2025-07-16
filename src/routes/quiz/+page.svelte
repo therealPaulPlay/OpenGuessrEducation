@@ -179,7 +179,9 @@
 									height={120}
 									countryOutlineColor="var(--color-secondary)"
 									hueRotateDegree={index * 30}
-									topoJsonName={quiz.topoJson}
+									topoJsonName={!quiz.topoJson && category.name !== "countries" && category.name !== "satellite"
+										? "topojson-world-compressed"
+										: quiz.topoJson}
 									projectionRotation={quiz.projectionRotation || undefined}
 									zoom={quiz.previewZoom || undefined}
 									projectionType={category.name == "satellite" ? "geoOrthographic" : "geoMercator"}

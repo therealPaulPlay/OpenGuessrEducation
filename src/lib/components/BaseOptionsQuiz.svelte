@@ -22,7 +22,6 @@
 	let currentQuestionIndex = $state(1);
 
 	let autoNext = $state(true); // Automatically skip to next question after answering last one
-
 	let answers = $derived([answerOne, answerTwo, answerThree, answerFour]);
 
 	function getIndexLetter(i) {
@@ -37,13 +36,11 @@
 		if (isCompleted) return;
 
 		isCompleted = true;
-
 		selectedAnswer = index;
 
 		// Check if answer is correct
-		if (index === correctAnswer - 1) {
-			playSound("answer_correct");
-		} else {
+		if (index === correctAnswer - 1) playSound("answer_correct");
+		else {
 			playSound("answer_wrong");
 			errors++;
 		}
@@ -55,18 +52,9 @@
 		}
 	}
 
-	function manuallyGoToNextQuestion() {
-		if (isCompleted) {
-			clearAnswersAndNextQuestion();
-		}
-	}
-
 	function enableAutoNextQuestion() {
 		localStorage.setItem("autoNext", autoNext ? "" : "disabled");
-
-		if (autoNext && isCompleted) {
-			clearAnswersAndNextQuestion();
-		}
+		if (autoNext && isCompleted) clearAnswersAndNextQuestion();
 	}
 
 	onMount(() => {
@@ -76,11 +64,7 @@
 	function clearAnswersAndNextQuestion() {
 		isCompleted = false;
 
-		if (currentQuestionIndex == questionAmount) {
-			gameOver = true;
-			return;
-		}
-
+		if (currentQuestionIndex == questionAmount) return (gameOver = true);
 		currentQuestionIndex++;
 
 		selectedAnswer = -1;
@@ -116,10 +100,12 @@
 					</label>
 				</div>
 				<button
-					class="btn btn-accent btn-sm {autoNext ? 'opacity-50 pointer-events-none' : ''} {isCompleted
+					class="btn btn-sm {autoNext ? 'opacity-50 pointer-events-none' : ''} {isCompleted
 						? ''
 						: 'opacity-50'}"
-					onclick={manuallyGoToNextQuestion}
+					onclick={() => {
+						if (isCompleted) clearAnswersAndNextQuestion();
+					}}
 				>
 					Next <ArrowRight />
 				</button>
@@ -132,10 +118,10 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 			{#each answers as answer, index}
 				<button
-					class="btn btn-outline text-base-content w-full h-auto py-2 px-12 relative text-wrap
+					class="btn w-full h-auto py-2 px-12 relative text-wrap
                      {index === correctAnswer - 1 && selectedAnswer === correctAnswer - 1
 						? 'btn-success opacity-100'
-						: 'btn-accent'}
+						: ''}
                      {selectedAnswer == index && index != correctAnswer - 1 ? 'btn-error animate-shake' : ''}
                      {isCompleted && index != correctAnswer - 1 ? 'opacity-50 pointer-events-none' : ''}"
 					onclick={() => handleAnswer(index)}

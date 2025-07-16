@@ -21,6 +21,7 @@
 	let showToast = $state(false);
 	let quizId = "";
 	let isLoggedIn = $state(false);
+	
 	const unsubscribe = isAuthenticated.subscribe((value) => {
 		isLoggedIn = value;
 	});
@@ -83,8 +84,8 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 			{#each answers as answer, index}
 				<button
-					class="btn btn-outline text-base-content w-full h-auto py-2 px-12 relative text-wrap
-                   {index === correctAnswer - 1 && isCompleted ? 'btn-success opacity-100' : 'btn-accent'}
+					class="btn w-full h-auto py-2 px-12 relative text-wrap
+                   {index === correctAnswer - 1 && isCompleted ? 'btn-success opacity-100' : ''}
                    {selectedAnswer == index && index != correctAnswer - 1 ? 'btn-error animate-shake' : ''}
                    {isCompleted && index != correctAnswer - 1 ? 'opacity-50 pointer-events-none' : ''}"
 					onclick={() => handleAnswer(index)}

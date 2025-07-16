@@ -80,7 +80,7 @@
 			>.</span
 		>
 		<div class="flex flex-wrap gap-2">
-			<button onclick={handleDeny} class="btn btn-accent">Only essential</button>
+			<button onclick={handleDeny} class="btn">Only essential</button>
 			<button onclick={handleAccept} class="btn btn-secondary">Accept</button>
 		</div>
 	</div>
