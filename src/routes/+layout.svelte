@@ -38,7 +38,7 @@
 	<div class="flex-1 flex flex-col lg:ml-64">
 		<!-- Hamburger toggle for smaller screens -->
 		<button
-			class="lg:hidden fixed top-4 left-4 z-[60] btn btn-square btn-accent"
+			class="lg:hidden fixed top-4 left-4 z-[60] btn btn-square shadow-lg"
 			aria-label="Floating Sidebar toggle"
 			onclick={toggleDrawer}
 		>
