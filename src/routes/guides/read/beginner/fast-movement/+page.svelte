@@ -12,7 +12,7 @@
 <p class="mb-2">The trick to move fast is to make use of the focus state of the arrow buttons.</p>
 <ol class="mb-4 list-decimal list-inside">
 	<li>
-		<b>Click</b> on the <b>white arrow </b>to move forward. Don't click anywhere else afterwards.
+		<b>Click</b> on the <b>white arrow</b> to move forward. Don't click anywhere else afterwards.
 	</li>
 	<li>
 		<b>Hold down </b><kbd class="kbd kbd-sm">Space</kbd>, or better yet, hold down <kbd class="kbd kbd-sm">Enter</kbd>,
