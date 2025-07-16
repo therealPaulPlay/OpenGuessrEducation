@@ -76,7 +76,7 @@
 	<aside>
 		<p>
 			© {new Date().getFullYear()}
-			<a href="https://paulplay.studio" target="_blank" class="hover:underline">PaulPlay</a> – All rights reserved.
+			<a href="https://paulplay.studio" target="_blank" class="hover:underline">PaulPlay</a>. All rights reserved.
 		</p>
 	</aside>
 </footer>
