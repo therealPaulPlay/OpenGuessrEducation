@@ -2,7 +2,6 @@
 	import { onMount } from "svelte";
 	import { geoPath, geoMercator, geoOrthographic, geoGraticule10 } from "d3-geo";
 	import { feature } from "topojson-client";
-	import { createEventDispatcher } from "svelte";
 	import { Plus, Minus } from "lucide-svelte";
 	import { tweened } from "svelte/motion";
 	import { cubicOut, linear, backInOut } from "svelte/easing";
@@ -10,6 +9,7 @@
 	let {
 		region = "World",
 		zoom = $bindable(1),
+		onclick,
 		width = 800,
 		height = 400,
 		interactive = false,
@@ -28,7 +28,7 @@
 		singleCountryRegion,
 		countryOutlineColor = "var(--color-base-100)",
 		extraRounded = false,
-		children, // For components that work like layouts (with a render slot, in which HTML can be passed) - children needs to be specified as a prop
+		children, // To allow for passing html
 	} = $props();
 
 	let mapContainer = $state();
@@ -58,8 +58,6 @@
 	let outlineWidth = tweened(0, { duration: 500, easing: cubicOut });
 
 	let loaded = $state(false);
-
-	const dispatch = createEventDispatcher();
 
 	const MIN_ZOOM = 0.5;
 	const MAX_ZOOM = 20;
@@ -103,10 +101,7 @@
 	}
 
 	function shortenRegionName(name) {
-		if (name.length > 14) {
-			name = name.substring(0, 10) + "..";
-		}
-
+		if (name.length > 14) name = name.substring(0, 10) + "..";
 		return name;
 	}
 
@@ -252,13 +247,9 @@
 	let mouseDownY = 0;
 
 	function handleRegionClick(feature, event) {
-		if (hasDragged) {
-			hasDragged = false;
-			return;
-		}
+		if (hasDragged) return (hasDragged = false);
 
-		if (feature.isHighlighted && feature.isInteractive) dispatch("click", { properties: feature.properties });
-
+		if (feature.isHighlighted && feature.isInteractive) onclick?.(feature.properties);
 		rect = mapContainer.getBoundingClientRect();
 
 		const x = (event.clientX - rect.left) * (width / rect.width);
@@ -268,8 +259,6 @@
 		let [longitude, latitude] = projection.invert([x, y]);
 		latitude = Math.round(latitude * 100) / 100;
 		longitude = Math.round(longitude * 100) / 100;
-
-		console.log("Coordinates: ", { latitude, longitude }, "Region name: ", feature.properties.name);
 	}
 
 	async function fetchTopoJSON() {
@@ -325,12 +314,8 @@
 		const baseScale = minDimension / 2;
 		const scale = baseScale * regionZoom * zoom;
 
-		if (projectionType === "geoOrthographic") {
-			backgroundCircle = geoGraticule10();
-		}
-
+		if (projectionType === "geoOrthographic") backgroundCircle = geoGraticule10();
 		projection.scale(scale).center([center.long, center.lat]).translate([translateX, translateY]);
-
 		path = geoPath().projection(projection);
 	}
 
@@ -408,7 +393,6 @@
 	}
 
 	// Drag & Zoom --------------------------------------------------------------------------------------------------------------------------
-
 	let isDragging = false;
 	let lastX, lastY;
 
@@ -420,21 +404,15 @@
 
 		const cursorX = (event.clientX - rect.left) * (width / rect.width);
 		const cursorY = (event.clientY - rect.top) * (height / rect.height);
-
 		const direction = event.deltaY > 0 ? -1 : 1;
-
 		const isTouchpad = Math.abs(event.deltaY) < 50;
 
 		let zoomChange;
 
-		if (isTouchpad) {
-			zoomChange = 1 + direction * 0.05;
-		} else {
-			zoomChange = Math.exp(direction * 0.1);
-		}
+		if (isTouchpad) zoomChange = 1 + direction * 0.05;
+		else zoomChange = Math.exp(direction * 0.1);
 
 		const oldZoom = zoom;
-
 		zoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, zoom * zoomChange));
 
 		const scaleChange = zoom / oldZoom;
@@ -443,7 +421,6 @@
 		translateY -= (cursorY - translateY) * (scaleChange - 1);
 
 		updateProjection();
-
 		generatePaths();
 	}
 
@@ -610,7 +587,6 @@
 	});
 
 	// Mount, draw initial map  --------------------------------------------------------------------------------------------------------------------------
-
 	onMount(async () => {
 		const geoData = await fetchTopoJSON();
 		regionCountries = await fetchRegionCountries();
@@ -652,9 +628,7 @@
 			loaded = true;
 		}
 
-		if (typeof afterLoad == "function") {
-			afterLoad();
-		}
+		if (typeof afterLoad == "function") afterLoad();
 	});
 </script>
 

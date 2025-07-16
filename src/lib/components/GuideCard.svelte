@@ -9,13 +9,6 @@
 		hueRotate = 0,
 		children, // For components that work like layouts (with a slot, in which HTML can be passed) - children needs to be specified as a prop
 	} = $props();
-
-	onMount(() => {
-		if (window) {
-			handleResize(); // Check on mount
-			window.addEventListener("resize", handleResize); // Listen to resize
-		}
-	});
 </script>
 
 <div

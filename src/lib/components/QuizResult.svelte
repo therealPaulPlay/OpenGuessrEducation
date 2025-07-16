@@ -8,7 +8,7 @@
 
 	import Toast from "$lib/components/Toast.svelte";
 
-	// Experience
+	// Account related
 	import { isAuthenticated } from "$lib/stores/accountData.js";
 	import { addExperience } from "$lib/utils/addExperience.js";
 

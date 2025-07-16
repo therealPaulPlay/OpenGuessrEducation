@@ -16,9 +16,7 @@
 	let questionsArray;
 	let questionAmount = $state(0);
 
-	// svelte-ignore non_reactive_update
-	let textData;
-
+	let textData = $state();
 	let remainingQuestionsArray = [];
 
 	async function fetchQuestionsArray() {
@@ -52,9 +50,7 @@
 
 		shuffleArray(remainingQuestionsArray);
 		remainingQuestionsArray.splice(1, remainingQuestionsArray.length - 10);
-
 		questionAmount = remainingQuestionsArray.length;
-
 		setQuizContent();
 	}
 
