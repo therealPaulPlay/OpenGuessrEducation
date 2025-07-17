@@ -35,7 +35,7 @@
 				{/if}
 			</div>
 			<div class="bg-base-200 rounded-md p-2 text-center mb-3">
-				View and manage your account on the main OpenGuessr site.
+				<p>View and manage your account on the main OpenGuessr site.</p>
 			</div>
 			<li>
 				<button class="btn btn-primary text-white" onclick={logOut}>Log out</button>
