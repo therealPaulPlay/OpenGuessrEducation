@@ -7,86 +7,100 @@
 	let isLoading = $state(true);
 	let isVisible = false;
 	let observer;
+	let themeObserver;
 
-	// Function to determine the current globe texture based on the data-theme attribute
-	const getThemeTexture = () => {
-		return document.documentElement.getAttribute("data-theme") == "dark"
-			? "/assets/home/earth_dark.jpg" // Dark mode texture
-			: "/assets/home/earth_light.jpg"; // Light mode texture
+	const getThemeTexture = () =>
+		document.documentElement.getAttribute("data-theme") === "dark"
+			? "/assets/home/earth_dark.jpg"
+			: "/assets/home/earth_light.jpg";
+
+	const getGlobeConfig = () => {
+		const width = window.innerWidth;
+		const isMobile = width <= 768;
+		const isTablet = width <= 1024;
+
+		return {
+			width: isMobile ? 500 : isTablet ? 1000 : 1400,
+			height: isMobile ? 500 : isTablet ? 1000 : 1400,
+		};
 	};
 
 	const loadGlobe = async () => {
-		if (!isVisible || globe) return;
+		if (!isVisible || globe || !globeElement) return;
 
-		const Globe = (await import("globe.gl")).default;
+		try {
+			const [Globe, response] = await Promise.all([
+				import("globe.gl").then((module) => module.default),
+				fetch("/json/topojson/globe-data.json"),
+			]);
 
-		const isTablet = window.innerWidth <= 1024;
-		const isMobile = window.innerWidth <= 768;
-		const globeWidth = isMobile ? 500 : isTablet ? 1000 : 1400;
-		const globeHeight = isMobile ? 500 : isTablet ? 1000 : 1400;
+			const countries = await response.json();
+			const config = getGlobeConfig();
 
-		globe = Globe()
-			.globeImageUrl(getThemeTexture())
-			.backgroundColor("rgba(0, 0, 0, 0)")
-			.lineHoverPrecision(0)
-			.width(globeWidth)
-			.height(globeHeight)(globeElement)
-			.atmosphereColor("red");
-
-		// Add country polygons
-		const response = await fetch("/json/topojson/globe-data.json");
-		const countries = await response.json();
-
-		globe
-			.polygonsData(countries.features)
-			.polygonAltitude(0.01)
-			.polygonCapColor(() => "rgba(245,85, 85, 0.9)")
-			.polygonSideColor(() => "rgba(250, 150, 150, 0.5)")
-			.polygonStrokeColor(() => "#111")
-			.onPolygonHover((hoverD) => {
-				globe
-					.polygonAltitude((d) => (d === hoverD ? 0.02 : 0.01))
-					.polygonCapColor((d) => (d === hoverD ? "white" : "rgba(245,85, 85, 0.9)"));
-			})
-			.onPolygonClick((clickedCountry) => {
-				if (clickedCountry) {
+			globe = Globe()
+				.globeImageUrl(getThemeTexture())
+				.backgroundColor("rgba(0, 0, 0, 0)")
+				.lineHoverPrecision(0)
+				.width(config.width)
+				.height(config.height)
+				.atmosphereColor("red")
+				.polygonsData(countries.features)
+				.polygonAltitude(0.01)
+				.polygonCapColor(() => "rgba(245,85, 85, 0.9)")
+				.polygonSideColor(() => "rgba(250, 150, 150, 0.5)")
+				.polygonStrokeColor(() => "#111")
+				.onPolygonHover((hoverD) => {
+					globe
+						.polygonAltitude((d) => (d === hoverD ? 0.02 : 0.01))
+						.polygonCapColor((d) => (d === hoverD ? "white" : "rgba(245,85, 85, 0.9)"));
+				})
+				.onPolygonClick((clickedCountry) => {
+					if (!clickedCountry) return;
 					const countryName = clickedCountry.properties.NAME.toLowerCase().replace(/ /g, "-");
 					goto(`/countries/learn/${countryName}`);
-				}
-			});
+				})(globeElement);
 
-		// Auto-rotate
-		globe.controls().autoRotate = true;
-		globe.controls().autoRotateSpeed = 0.2;
-		globe.controls().enableZoom = false;
+			// Configure controls
+			const controls = globe.controls();
+			controls.autoRotate = true;
+			controls.autoRotateSpeed = 0.2;
+			controls.enableZoom = false;
 
-		// Apply low-poly effect
-		globe.polygonStrokeColor(() => "#111");
-		isLoading = false;
+			isLoading = false;
+		} catch (error) {
+			console.error("Failed to load globe:", error);
+			isLoading = false;
+		}
 	};
 
 	const cleanupGlobe = () => {
-		if (globe) {
+		if (!globe) return;
+
+		try {
 			globe.pauseAnimation();
 			globe.controls().dispose();
 			globe._destructor();
-			globe = null;
+		} catch (error) {
+			console.warn("Globe cleanup error:", error);
 		}
+
+		globe = null;
+
 		if (globeElement) {
 			while (globeElement.firstChild) {
 				globeElement.removeChild(globeElement.firstChild);
 			}
 		}
+
 		isLoading = true;
 	};
 
 	onMount(() => {
+		// Intersection observer for lazy loading
 		observer = new IntersectionObserver(
 			([entry]) => {
 				isVisible = entry.isIntersecting;
-				if (isVisible) {
-					loadGlobe();
-				}
+				if (isVisible) loadGlobe();
 			},
 			{ threshold: 0.1 },
 		);
@@ -94,21 +108,19 @@
 		if (globeElement) observer.observe(globeElement);
 
 		// Theme change observer
-		const themeObserver = new MutationObserver(() => {
-			if (globe) {
-				globe.globeImageUrl(getThemeTexture());
-			}
+		themeObserver = new MutationObserver(() => {
+			if (globe) globe.globeImageUrl(getThemeTexture());
 		});
 
-		themeObserver.observe(document.documentElement, { attributes: true });
-
-		return () => {
-			themeObserver.disconnect();
-		};
+		themeObserver.observe(document.documentElement, {
+			attributes: true,
+			attributeFilter: ["data-theme"],
+		});
 	});
 
 	onDestroy(() => {
-		if (observer) observer.disconnect();
+		observer?.disconnect();
+		themeObserver?.disconnect();
 		cleanupGlobe();
 	});
 </script>
@@ -123,12 +135,8 @@
 	.globe-container {
 		height: 350px;
 	}
-	:global(.scene-container) {
-		background-color: transparent !important;
-	}
 
-	/* disable on small phones to allow for scrolling without spinning the globe */
-	@media all and (max-width: 1024px) {
+	@media (max-width: 1024px) {
 		.globe-container {
 			height: 250px;
 		}
