@@ -72,7 +72,7 @@
 </svelte:head>
 
 {#if showBanner}
-	<div role="alert" class="alert fixed w-fit m-4 bottom-0 bg-base-100 right-0 z-50 shadow-lg flex flex-wrap">
+	<div role="alert" class="alert fixed w-fit m-4 bottom-0 bg-base-100 right-0 z-50 shadow-lg flex flex-wrap pr-3!">
 		<span class="text-base"
 			>This website uses cookies according to its <a
 				href="https://openguessr.com/legal"
