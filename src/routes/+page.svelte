@@ -15,24 +15,21 @@
 
 <article class="container mx-auto py-8 max-md:pt-0 max-md:-mt-5">
 	<!-- Hero Section -->
-	<div class="text-center md:mb-16 mt-18 mb-12">
-		<div class="mb-6 py-4 relative">
+	<div class="mt-6">
+		<div class="mx-auto text-center relative h-15 lg:h-42">
 			<h1
-				class="absolute lg:-top-11 -top-1 md:-top-2 -top-2 left-0 right-0 text-8xl scale-102 max-md:scale-104 text-nowrap truncate font-black mb-2 leading-tight text-primary/15"
+				class="inset-0 absolute sm:text-9xl text-8xl scale-102 max-sm:scale-103 text-nowrap truncate font-black mb-2 leading-tight text-primary/15"
 			>
 				Know the world
 			</h1>
-			<h1
-				class="absolute lg:-top-11 -top-1 md:-top-2 -top-2 left-0 right-0 text-8xl text-nowrap truncate font-black mb-2 leading-tight"
-			>
-				Know the world
-			</h1>
-			<Globe />
+			<h1 class="inset-0 absolute sm:text-9xl text-8xl text-nowrap truncate font-black mb-2 leading-tight">Know the world</h1>
 		</div>
-
-		<p class="text-md md:text-xl text-base-content max-w-105 mx-auto leading-relaxed w-7/9">
+		<p class="sm:text-xl max-w-105 mx-auto w-7/9 text-center sm:leading-8">
 			Master geography through interactive articles, challenging quizzes, and clever metas.
 		</p>
+		<div class="relative max-sm:mb-3 sm:max-h-100 max-h-45 overflow-hidden lg:pt-90 sm:pt-70 pt-20 mask-b-from-30% mask-b-to-95% mask-x-from-95% mask-x-to-100%">
+			<Globe />
+		</div>
 	</div>
 
 	<!-- Feature Cards -->
