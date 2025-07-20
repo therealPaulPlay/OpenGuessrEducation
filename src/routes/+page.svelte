@@ -22,12 +22,16 @@
 			>
 				Know the world
 			</h1>
-			<h1 class="inset-0 absolute sm:text-9xl text-8xl text-nowrap truncate font-black mb-2 leading-tight">Know the world</h1>
+			<h1 class="inset-0 absolute sm:text-9xl text-8xl text-nowrap truncate font-black mb-2 leading-tight">
+				Know the world
+			</h1>
 		</div>
 		<p class="sm:text-xl max-w-105 mx-auto w-7/9 text-center sm:leading-8">
-			Master geography through interactive articles, challenging quizzes, and clever metas.
+			Master geo-guessing through interactive articles, challenging quizzes, and clever metas.
 		</p>
-		<div class="relative max-sm:mb-3 sm:max-h-100 max-h-45 overflow-hidden lg:pt-90 sm:pt-70 pt-20 mask-b-from-30% mask-b-to-95% mask-x-from-95% mask-x-to-100%">
+		<div
+			class="relative max-sm:mb-3 sm:max-h-100 max-h-45 overflow-hidden lg:pt-90 sm:pt-70 pt-20 mask-b-from-30% mask-b-to-95% mask-x-from-95% mask-x-to-100%"
+		>
 			<Globe />
 		</div>
 	</div>
@@ -44,7 +48,9 @@
 					class="h-15 w-15 xl:h-20 xl:w-20 drop-shadow-md drop-shadow-primary/25"
 				/>
 				<h2 class="card-title text-xl">Study countries</h2>
-				<p class="text-base-content mb-4">Study country metas, common locations and regions with country articles.</p>
+				<p class="text-base-content mb-4">
+					Study country metas, common locations and regions. Start to recognize countries with ease.
+				</p>
 				<div class="card-actions justify-end mt-auto">
 					<button class="btn btn-secondary group" onclick={() => goto("/countries")}>
 						See countries
@@ -65,7 +71,7 @@
 				/>
 				<h2 class="card-title text-xl">Play quizzes</h2>
 				<p class="text-base-content mb-4">
-					Challenge yourself in engaging geography quizzes. Why not give it a go now?
+					Challenge yourself in engaging geography quizzes that teach the fundamentals you need to become a pro.
 				</p>
 				<div class="card-actions justify-end mt-auto">
 					<button class="btn btn-secondary group" onclick={() => goto("/quiz")}>
@@ -87,7 +93,7 @@
 				/>
 				<h2 class="card-title text-xl">Discover guides</h2>
 				<p class="text-base-content mb-4">
-					Learn to geo-guess and discover new tricks and strategies to elevate your game.
+					Learn how to guess where you are and discover new tips & tricks to elevate your game.
 				</p>
 				<div class="card-actions justify-end mt-auto">
 					<button class="btn btn-secondary group" onclick={() => goto("/guides")}>
@@ -104,8 +110,7 @@
 		<div class="text-center group border border-accent p-8 rounded-lg shadow-sm/5">
 			<h3 class="text-xl font-semibold mb-3">Explore the world</h3>
 			<p class="text-base-content leading-relaxed">
-				Dive into our educational (but fun!) content to learn about different locations, continents, capitals, and
-				landmarks.
+				Dive into our educational content to learn about different locations, continents, capitals, and landmarks.
 			</p>
 		</div>
 
@@ -117,16 +122,16 @@
 		</div>
 
 		<div class="text-center group border border-accent p-8 rounded-lg shadow-sm/5">
-			<h3 class="text-xl font-semibold mb-3">Master Geo-Guessing</h3>
+			<h3 class="text-xl font-semibold mb-3">Game agnostic</h3>
 			<p class="text-base-content leading-relaxed">
 				Whether you're a fan of GeoGuessr, OpenGuessr, or Geotastic, you'll find something that suits your needs.
 			</p>
 		</div>
 
 		<div class="text-center group border border-accent p-8 rounded-lg shadow-sm/5">
-			<h3 class="text-xl font-semibold mb-3">Join the community</h3>
+			<h3 class="text-xl font-semibold mb-3">Large community</h3>
 			<p class="text-base-content leading-relaxed">
-				Become a staple of the geography community. The Discord is full of like-minded people.
+				Become a staple of the OpenGuessr geography community. The Discord is full of like-minded people.
 			</p>
 		</div>
 	</div>
@@ -134,7 +139,7 @@
 	<!-- Final CTA -->
 	<div class="text-center bg-secondary/90 rounded-lg p-12">
 		<h2 class="text-4xl md:text-5xl font-bold mb-4 text-secondary-content">Ready to become a pro?</h2>
-		<p class="text-lg text-base-content mb-10 text-secondary-content">The journey will be legendary.</p>
+		<p class="text-lg text-base-content mb-10 text-secondary-content">Go from guessing to knowing.</p>
 		<button
 			class="btn btn-lg relative overflow-hidden group"
 			onmouseenter={() => (isHovered = true)}
