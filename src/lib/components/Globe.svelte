@@ -20,9 +20,10 @@
 
 		const Globe = (await import("globe.gl")).default;
 
-		const isMobile = window.innerWidth <= 1024;
-		const globeWidth = isMobile ? 500 : 800;
-		const globeHeight = isMobile ? 350 : 470;
+		const isTablet = window.innerWidth <= 1024;
+		const isMobile = window.innerWidth <= 768;
+		const globeWidth = isMobile ? 500 : isTablet ? 1000 : 1400;
+		const globeHeight = isMobile ? 500 : isTablet ? 1000 : 1400;
 
 		globe = Globe()
 			.globeImageUrl(getThemeTexture())
@@ -56,7 +57,7 @@
 
 		// Auto-rotate
 		globe.controls().autoRotate = true;
-		globe.controls().autoRotateSpeed = 0.5;
+		globe.controls().autoRotateSpeed = 0.2;
 		globe.controls().enableZoom = false;
 
 		// Apply low-poly effect
