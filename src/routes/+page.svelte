@@ -108,14 +108,14 @@
 	<!-- Features Section -->
 	<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-8">
 		<div class="text-center group border border-accent p-8 rounded-lg shadow-sm/5">
-			<h3 class="text-xl font-semibold mb-3">Explore the world</h3>
+			<h3 class="text-xl font-semibold mb-3">Around the globe</h3>
 			<p class="text-base-content leading-relaxed">
 				Dive into our educational content to learn about different locations, continents, capitals, and landmarks.
 			</p>
 		</div>
 
 		<div class="text-center group border border-accent p-8 rounded-lg shadow-sm/5">
-			<h3 class="text-xl font-semibold mb-3">Learn through play</h3>
+			<h3 class="text-xl font-semibold mb-3">Learn and play</h3>
 			<p class="text-base-content leading-relaxed">
 				The platform makes learning fun and exciting through various quizzes and trivia challenges.
 			</p>
