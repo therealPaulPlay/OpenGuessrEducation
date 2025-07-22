@@ -86,6 +86,9 @@
 				</li>
 				<div class="divider">OR</div>
 				<li>
+					<a class="btn normal-case text-lg" href="https://geometas.com" target="_blank">Visit Geometas</a>
+				</li>
+				<li>
 					<a class="btn normal-case text-lg" href="https://openguessr.com" target="_blank"> Play OpenGuessr</a>
 				</li>
 			</ul>
