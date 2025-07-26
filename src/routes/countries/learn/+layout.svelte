@@ -1,7 +1,17 @@
 <script>
 	import { page } from "$app/state";
 	import Map from "$lib/components/Map.svelte";
-	import { EthernetPort, Phone, Flag, Languages, UsersRound, CircleDollarSign, Compass, Info } from "lucide-svelte";
+	import {
+		EthernetPort,
+		Phone,
+		Flag,
+		Languages,
+		UsersRound,
+		CircleDollarSign,
+		Compass,
+		Info,
+		TriangleAlert,
+	} from "lucide-svelte";
 	import ArticleEditButton from "$lib/components/ArticleEditButton.svelte";
 	import * as Icon from "svelte-flag-icons";
 	import { onMount } from "svelte";
@@ -24,42 +34,51 @@
 	let countryLanguages = $state();
 	let populationData = $state();
 	let countryGDP = $state();
+	let allVideos = $state();
 	let videoSources = $state();
+	let metas = $state({});
 
 	let childrenContainer = $state();
-
-	async function fetchCountryCodes() {
-		if (countryCodes) return;
-		countryCodes = await fetch("/json/countryCodes.json").then((response) => response.json());
-	}
 
 	async function fetchJsonData() {
 		if (telephonePrefixes && topLevelDomains) return; // if everything is already loaded, skip
 		try {
-			[telephonePrefixes, topLevelDomains, countryLanguages, populationData, countryGDP, videoSources] =
+			[countryCodes, telephonePrefixes, topLevelDomains, countryLanguages, populationData, countryGDP, allVideos] =
 				await Promise.all([
+					fetch("/json/countryCodes.json").then((response) => response.json()),
 					fetch("/json/country-data/telephone-prefixes.json").then((response) => response.json()),
 					fetch("/json/country-data/country-tld.json").then((response) => response.json()),
 					fetch("/json/country-data/country-languages.json").then((response) => response.json()),
 					fetch("/json/country-data/population-data.json").then((response) => response.json()),
 					fetch("/json/country-data/country-gdp.json").then((response) => response.json()),
-					fetch("/json/country-data/country-videos.json").then((response) =>
-						response.json().then((response) => response[countryName]),
-					),
+					fetch("/json/country-data/country-videos.json").then((response) => response.json()),
 				]);
 		} catch (error) {
 			console.error("Failed to fetch country json files:", error);
 		}
 	}
 
+	async function fetchMetas(countryName) {
+		try {
+			countryName = countryName.toLowerCase().replaceAll(" ", "_");
+			const response = await fetch("https://geometas.com/api/metas/countries/" + countryName);
+			if (!response.ok) throw new Error(response.status);
+			const jsonResponse = await response.json();
+			metas = jsonResponse;
+		} catch (error) {
+			console.error("Failed to fetch metas from Geometas:", error);
+		}
+	}
+
 	async function loadData() {
+		await fetchJsonData(); // Load all json data
 		countryNameFromPath = page.url.pathname.replace("/countries/learn/", "").replaceAll("-", " ");
-		await fetchCountryCodes(); // Fetch this first, to load the name quickly
 		countryName = Object.keys(countryCodes).find((country) => country.toLowerCase() === countryNameFromPath);
 		setTitle("Learn " + countryName);
+		videoSources = allVideos[countryName];
 		IconComponent = Icon[countryCodes[countryName]];
-		await fetchJsonData(); // Then load all json data
 		jsonDataLoading = false;
+		await fetchMetas(countryName);
 	}
 
 	// Fetch this all on the server
@@ -85,13 +104,13 @@
 			singleCountryRegion={countryName}
 			smallDynamicHeight={true}
 			showPoints={true}
-			extraRounded={true}
+			class="rounded-2xl!"
 		/>
 	{/if}
 
 	<!-- statistics and other data -->
 	<div
-		class="w-full bg-base-300 rounded-xl border border-accent shadow-sm/5 flex flex-wrap items-center p-2 gap-2 mt-2"
+		class="w-full bg-base-300 rounded-2xl border border-accent shadow-sm/5 flex flex-wrap items-center p-2 gap-2 mt-2"
 	>
 		{#if !jsonDataLoading}
 			{#if topLevelDomains}
@@ -155,8 +174,43 @@
 
 	<div class="divider mt-8"></div>
 
+	<!-- Metas from Geometas -->
+	<h3 class="text-xl font-bold my-4">Metas</h3>
+	<div class="flex items-center flex-wrap gap-4 w-full">
+		{#if metas?.metas?.length}
+			{#each metas.metas as meta}
+				<div
+					class="flex justify-between gap-4 w-full shadow-sm/5 border border-accent p-4 rounded-2xl max-sm:flex-wrap"
+				>
+					<div class="space-y-2">
+						<span class="badge badge-soft">{meta.category?.name}</span>
+						<p>{meta.answer}</p>
+						{#if meta.notes}
+							<div role="alert" class="alert alert-warning alert-soft">
+								<TriangleAlert />
+								<span class="text-base-content">{meta.notes}</span>
+							</div>
+						{/if}
+					</div>
+					<div
+						class="bg-base-200 rounded-md overflow-hidden sm:min-w-fit min-h-40 max-sm:w-full flex justify-center items-center"
+					>
+						<img alt="meta" class="max-h-40 max-w-90 object-fit" src={meta.image_url} />
+					</div>
+				</div>
+			{/each}
+			<ArticleTip class="w-full my-0!"
+				>Powered by <a class="text-secondary" href="https://geometas.com" target="_blank">Geometas</a>.</ArticleTip
+			>
+		{:else}
+			<p>There are no metas for this country.</p>
+		{/if}
+	</div>
+
+	<div class="divider mt-8"></div>
+
 	<!-- Video content -->
-	<h3 class="text-xl font-bold my-4">Featured videos:</h3>
+	<h3 class="text-xl font-bold my-4">Featured videos</h3>
 	<div class="flex items-center flex-wrap gap-4">
 		{#if videoSources}
 			{#each videoSources as src}

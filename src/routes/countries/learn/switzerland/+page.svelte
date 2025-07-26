@@ -57,7 +57,7 @@
 	<li><b>Different vegetation:</b> Unique compared to the rest of Switzerland.</li>
 	<li><b>Feels Italian:</b> If the surroundings seem Italian, it's probably <b>Ticino</b>.</li>
 </ul>
-<div class="flex justify-center space-x-4 w-full">
+<div class="flex justify-center space-x-4 w-full max-sm:flex-wrap">
 	<div class="flex-grow w-full">
 		<ArticleEmbedPanorama
 			src="https://www.google.com/maps/embed?pb=!4v1740247690303!6m8!1m7!1sCAoSLEFGMVFpcE1wNUJnNjRhOVZIN2FhaXlmZ1ZPdG42b0Z4S3ZqWWxkSnFiVEFu!2m2!1d46.22708547069591!2d8.602791398804767!3f354.3372900000479!4f1.5967223010608507!5f1.088857812671821"
@@ -201,11 +201,11 @@
 <p class="text-center mt-2 mb-4">Typical swiss roadlines and crosswalks.</p>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">License plates & codes</h2>
-<div class="flex flex-wrap justify-left items-left">
+<div class="flex flex-wrap justify-center items-center bg-base-200 rounded-xl">
 	<img
 		alt="swiss license plate"
 		src="/assets/articles/switzerland/switzerland_licenseplate.jpg"
-		class="rounded-xl w-1/3 h-1/3 mb-2 mt-4"
+		class="w-1/3 h-1/3"
 	/>
 </div>
 <p class="text-left mt-2 mb-4 ml-2">
@@ -220,11 +220,11 @@
 <p>Swiss license plates do not have the blue stripe on the left, like most countries in europe.</p>
 <p>Cars in switzerland commonly have a <b>CH</b> sticker on the rear window or on the trunk.</p>
 
-<div class="flex flex-wrap justify-left items-left">
+<div class="flex flex-wrap justify-center items-center bg-base-200 rounded-xl">
 	<img
 		alt="swiss ch car sticker"
 		src="/assets/articles/switzerland/switzerland_ch_sticker.jpg"
-		class="rounded-xl w-1/3 h-1/3 mb-2 mt-4"
+		class="w-1/3 h-1/3"
 	/>
 </div>
 <p class="text-center mt-2 mb-4 ml-2">
