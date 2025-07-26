@@ -98,15 +98,17 @@
 <article class="container mx-auto py-6 max-w-3xl">
 	<GoBack href="/countries/" />
 
-	{#if countryName}
-		<Map
-			region={countryName}
-			singleCountryRegion={countryName}
-			smallDynamicHeight={true}
-			showPoints={true}
-			class="rounded-2xl!"
-		/>
-	{/if}
+	{#key page.url.pathname}
+		{#if countryName}
+			<Map
+				region={countryName}
+				singleCountryRegion={countryName}
+				smallDynamicHeight={true}
+				showPoints={true}
+				class="rounded-2xl!"
+			/>
+		{/if}
+	{/key}
 
 	<!-- statistics and other data -->
 	<div
