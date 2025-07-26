@@ -169,10 +169,10 @@
 	<li>Uses <b>Latin alphabet</b> with <b>some unique letters</b>: "ë" (is very common) and "ç" (is less common).</li>
 	<li>Words may sound like gibberish or a fake language.</li>
 </ul>
-<div class="flex justify-center w-full">
-	<img alt="albania letters" src="/assets/articles/albania/albania_letters.jpg" class="rounded-xl w-1/2" />
+<div class="w-1/2">
+	<img alt="albania letters" src="/assets/articles/albania/albania_letters.jpg" class="rounded-xl w-full" />
+	<p class="text-center mt-2">Albanian letters.</p>
 </div>
-<p class="text-center mt-2">Albanian letters.</p>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">License plates</h2>
 <ul class="mb-2 list-disc list-inside">
@@ -180,11 +180,11 @@
 	<li><b>Old</b> (pre-2011): <b>Red stripe on the left</b> with <b>white to the right</b> (unique in Europe).</li>
 </ul>
 <div class="flex justify-center w-full">
-	<img alt="albania new license plate" src="/assets/articles/albania/albania_license_current.jpg" class="w-1/2" />
+	<img alt="albania new license plate" src="/assets/articles/albania/albania_license_current.jpg" class="rounded-xl" />
 </div>
 <p class="text-center mt-2 mb-4">Albanian current license plate.</p>
 <div class="flex justify-center w-full">
-	<img alt="albania old license plate" src="/assets/articles/albania/albania_license_old.jpg" class="w-1/2" />
+	<img alt="albania old license plate" src="/assets/articles/albania/albania_license_old.jpg" class="rounded-xl" />
 </div>
 <p class="text-center mt-2 mb-4">Albanian license plate before 2011.</p>
 
@@ -283,7 +283,7 @@
 			<img
 				alt="albania highways"
 				src="/assets/articles/albania/albania_highways.jpg"
-				class="rounded-xl w-full h-full object-contain"
+				class="rounded-xl w-full h-full object-cover"
 			/>
 		</div>
 		<p class="text-center mt-2 mb-4"><b>Green:</b> Motorways. <b>Blue:</b> State Roads.</p>
@@ -293,7 +293,7 @@
 			<img
 				alt="albania coverage"
 				src="/assets/articles/albania/albania_coverage.jpg"
-				class="rounded-xl w-full h-full object-contain"
+				class="rounded-xl w-full h-full object-cover"
 			/>
 		</div>
 		<p class="text-center mt-2 mb-4">Albanian streetview coverage.</p>

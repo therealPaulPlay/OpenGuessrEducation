@@ -121,7 +121,7 @@
 		<img
 			alt="vienna red/white chevron"
 			src="/assets/articles/austria/austria_chevronRedWhite.jpg"
-			class="rounded-xl w-full h-3/4 aspect-[478/435] object-contain"
+			class="rounded-xl w-full h-3/4 aspect-[478/435] object-cover"
 		/>
 		<p class="text-center mt-2">Austrian red and white chevron.</p>
 	</div>
@@ -129,7 +129,7 @@
 		<img
 			alt="austrian town entry sign"
 			src="/assets/articles/austria/austria_chevronRedYellow.jpg"
-			class="rounded-xl w-full h-3/4 object-contain aspect-[429/406]"
+			class="rounded-xl w-full h-3/4 object-cover aspect-[429/406]"
 		/>
 		<p class="text-center mt-2">Austrian red and yellow chevron.</p>
 	</div>
@@ -140,7 +140,7 @@
 		<img
 			alt="austrian bollard"
 			src="/assets/articles/austria/austria_bollard1.jpg"
-			class="rounded-xl w-full h-64 aspect-[382/615] object-contain"
+			class="rounded-xl w-full h-64 object-contain bg-base-200"
 		/>
 		<p class="text-center mt-2">
 			Austria uses <b>white bollards</b>, with a <b>black top</b>. The colour of the reflector is
@@ -151,7 +151,7 @@
 		<img
 			alt="austrian bollard cap example"
 			src="/assets/articles/austria/austria_bollard2.jpg"
-			class="rounded-xl w-full h-64 object-contain aspect-[331/690]"
+			class="rounded-xl w-full h-64 object-contain bg-base-200"
 		/>
 		<p class="text-center mt-2">Sometimes the bollard has a small <b>nipple-shaped black cap</b> on the <b>top</b>.</p>
 	</div>
@@ -162,7 +162,7 @@
 		<img
 			alt="austrian pedestrian sign"
 			src="/assets/articles/austria/austria_pedestriansign.jpg"
-			class="rounded-xl w-full h-3/4 aspect-[460/415] object-contain"
+			class="rounded-xl w-full h-3/4 object-cover"
 		/>
 		<p class="text-center mt-2">
 			Austrias pedestrian signs use <b>two horizontal dashed lines</b> which is very unique.
@@ -172,7 +172,7 @@
 		<img
 			alt="austrian facility sign"
 			src="/assets/articles/austria/austria_facilitysign.jpg"
-			class="rounded-xl w-full h-3/4 object-contain aspect-[571/222]"
+			class="rounded-xl w-full h-3/4 object-contain bg-base-200"
 		/>
 		<p class="text-center mt-2">
 			<b>Green signs with white text</b> are commonly used to give directions for different <b>local facilities</b>.
