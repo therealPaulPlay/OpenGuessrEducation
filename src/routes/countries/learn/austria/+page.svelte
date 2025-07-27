@@ -140,7 +140,7 @@
 		<img
 			alt="austrian bollard"
 			src="/assets/articles/austria/austria_bollard1.jpg"
-			class="rounded-xl w-full h-64 object-contain bg-base-200"
+			class="rounded-xl w-full h-64 object-contain"
 		/>
 		<p class="text-center mt-2">
 			Austria uses <b>white bollards</b>, with a <b>black top</b>. The colour of the reflector is
@@ -151,7 +151,7 @@
 		<img
 			alt="austrian bollard cap example"
 			src="/assets/articles/austria/austria_bollard2.jpg"
-			class="rounded-xl w-full h-64 object-contain bg-base-200"
+			class="rounded-xl w-full h-64 object-contain"
 		/>
 		<p class="text-center mt-2">Sometimes the bollard has a small <b>nipple-shaped black cap</b> on the <b>top</b>.</p>
 	</div>
@@ -172,7 +172,7 @@
 		<img
 			alt="austrian facility sign"
 			src="/assets/articles/austria/austria_facilitysign.jpg"
-			class="rounded-xl w-full h-3/4 object-contain bg-base-200"
+			class="rounded-xl w-full h-3/4 object-contain"
 		/>
 		<p class="text-center mt-2">
 			<b>Green signs with white text</b> are commonly used to give directions for different <b>local facilities</b>.

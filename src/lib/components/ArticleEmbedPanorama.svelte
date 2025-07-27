@@ -5,7 +5,7 @@
 <!-- iframe with lazy loading, meaning, it will only be loaded if it's in the viewport -->
 <iframe
 	{src}
-	class="w-full rounded-xl mt-4 bg-base-200"
+	class="w-full rounded-xl mt-4 bg-base-300"
 	title="Panorama Images"
 	width="600"
 	height="400"

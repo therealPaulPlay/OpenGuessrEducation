@@ -201,7 +201,7 @@
 <p class="text-center mt-2 mb-4">Typical swiss roadlines and crosswalks.</p>
 
 <h2 class="text-2xl font-bold mt-8 mb-2">License plates & codes</h2>
-<div class="flex flex-wrap justify-center items-center bg-base-200 rounded-xl">
+<div class="flex flex-wrap justify-center items-center rounded-xl">
 	<img
 		alt="swiss license plate"
 		src="/assets/articles/switzerland/switzerland_licenseplate.jpg"
@@ -220,7 +220,7 @@
 <p>Swiss license plates do not have the blue stripe on the left, like most countries in europe.</p>
 <p>Cars in switzerland commonly have a <b>CH</b> sticker on the rear window or on the trunk.</p>
 
-<div class="flex flex-wrap justify-center items-center bg-base-200 rounded-xl">
+<div class="flex flex-wrap justify-center items-center rounded-xl">
 	<img
 		alt="swiss ch car sticker"
 		src="/assets/articles/switzerland/switzerland_ch_sticker.jpg"
