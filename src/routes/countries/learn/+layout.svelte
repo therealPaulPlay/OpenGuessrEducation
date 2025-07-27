@@ -205,7 +205,7 @@
 				>Powered by <a class="text-secondary" href="https://geometas.com" target="_blank">Geometas</a>.</ArticleTip
 			>
 		{:else}
-			<p>There are no metas for this country.</p>
+			<p>There are no featured metas for this country.</p>
 		{/if}
 	</div>
 
