@@ -195,7 +195,7 @@
 						{/if}
 					</div>
 					<div
-						class="bg-base-200 rounded-md overflow-hidden sm:min-w-fit min-h-40 max-sm:w-full flex justify-center items-center"
+						class="bg-base-300 rounded-md overflow-hidden sm:min-w-fit min-h-40 max-sm:w-full flex justify-center items-center"
 					>
 						<img alt="meta" class="max-h-40 max-w-90 object-fit" src={meta.image_url} />
 					</div>
@@ -217,7 +217,7 @@
 		{#if videoSources}
 			{#each videoSources as src}
 				<iframe
-					class="rounded-xl bg-base-200 skeleton shadow-sm/5"
+					class="rounded-xl bg-base-300 skeleton shadow-sm/5"
 					width="356"
 					height="200"
 					{src}
