@@ -4,7 +4,6 @@
 	import { Compass, Award, Map, Gamepad2, ArrowRight } from "lucide-svelte";
 	import { onMount } from "svelte";
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
-	import { username } from "$lib/stores/accountData";
 
 	let isHovered = $state(false);
 
