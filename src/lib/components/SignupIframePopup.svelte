@@ -22,7 +22,7 @@
 
 				const user = await getUser(Number(localStorage.getItem("id")) || null);
 
-				if (user?.userName) username.set(user.userName);
+				if (user?.userName) username.set(user.username);
 				if (user?.supporterLevel) supporterLevel.set(user.supporterLevel);
 				if (user?.experience) experience.set(user.experience);
 			}
