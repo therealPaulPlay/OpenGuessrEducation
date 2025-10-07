@@ -12,7 +12,7 @@
 		"@sveltejs/adapter-static": "^3.0.6",
 		"@sveltejs/kit": "^2.7.2",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
-		"daisyui": "^5.0.43",
+		"daisyui": "^5.1.29",
 		"prettier-plugin-svelte": "^3.3.3",
 		"svelte": "^5.1.4",
 		"tailwindcss": "^4.1.8",
@@ -22,7 +22,7 @@
 	"dependencies": {
 		"@tailwindcss/vite": "^4.1.8",
 		"d3-geo": "^3.1.1",
-		"globe.gl": "^2.42.0",
+		"globe.gl": "^2.44.0",
 		"lucide-svelte": "^0.446.0",
 		"ol": "^10.2.1",
 		"svelte-flag-icons": "^1.0.3",
