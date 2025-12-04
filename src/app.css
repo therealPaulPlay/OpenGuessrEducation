@@ -1,5 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap");
 @import "tailwindcss";
+
+@font-face {
+	font-family: "Barlow";
+	src: url("/fonts/Barlow-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Barlow";
+	src: url("/fonts/Barlow-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Barlow";
+	src: url("/fonts/Barlow-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
 
 @plugin "daisyui" {
 	themes: light --default, dark;
