@@ -1,7 +1,7 @@
 <script>
 	function handleThemeToggle(event) {
-		const isChecked = event.target.checked;
-		document.documentElement.setAttribute("data-theme", isChecked ? "dark" : "light");
+		const theme = event.target.checked ? "dark" : "light";
+		document.documentElement.setAttribute("data-theme", theme);
 	}
 </script>
 
