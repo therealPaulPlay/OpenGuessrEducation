@@ -3,8 +3,9 @@
 	"version": "1.0.1",
 	"scripts": {
 		"generate-sitemap": "node ./scripts/generate-sitemap.js",
+		"generate-quiz-metadata": "node ./scripts/generate-quiz-metadata.js",
 		"dev": "vite dev --port 3000 --host",
-		"build": "vite build && npm run generate-sitemap",
+		"build": "npm run generate-quiz-metadata && vite build && npm run generate-sitemap",
 		"preview": "vite preview"
 	},
 	"devDependencies": {
@@ -22,7 +23,6 @@
 	"dependencies": {
 		"@tailwindcss/vite": "^4.1.8",
 		"d3-geo": "^3.1.1",
-		"globe.gl": "^2.44.0",
 		"lucide-svelte": "^0.446.0",
 		"ol": "^10.2.1",
 		"svelte-flag-icons": "^1.0.3",

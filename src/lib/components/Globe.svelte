@@ -1,144 +1,120 @@
 <script>
 	import { goto } from "$app/navigation";
-	import { onMount, onDestroy } from "svelte";
+	import { onMount } from "svelte";
+	import { geoPath, geoOrthographic, geoGraticule10 } from "d3-geo";
+	import { feature } from "topojson-client";
 
-	let globeElement = $state();
-	let globe;
-	let isLoading = $state(true);
-	let isVisible = false;
-	let observer;
-	let themeObserver;
+	let countries = $state([]);
 
-	const getThemeTexture = () =>
-		document.documentElement.getAttribute("data-theme") === "dark"
-			? "/assets/home/earth_dark.jpg"
-			: "/assets/home/earth_light.jpg";
+	const width = 2000;
+	const height = 2000;
+	const projection = geoOrthographic()
+		.scale(950)
+		.translate([width / 2, height / 2])
+		.rotate([-10, -10, 0])
+		.clipAngle(90);
 
-	const getGlobeConfig = () => {
-		const width = window.innerWidth;
-		const isMobile = width <= 768;
-		const isTablet = width <= 1024;
+	const graticule = geoGraticule10();
+	const path = geoPath().projection(projection);
 
-		return {
-			width: isMobile ? 500 : isTablet ? 1000 : 1400,
-			height: isMobile ? 500 : isTablet ? 1000 : 1400,
-		};
-	};
+	function handleCountryClick(countryName) {
+		const formattedName = countryName.toLowerCase().replace(/ /g, "-");
+		goto(`/countries/learn/${formattedName}`);
+	}
 
-	const loadGlobe = async () => {
-		if (!isVisible || globe || !globeElement) return;
-
-		try {
-			const [Globe, response] = await Promise.all([
-				import("globe.gl").then((module) => module.default),
-				fetch("/json/topojson/globe-data.json"),
-			]);
-
-			const countries = await response.json();
-			const config = getGlobeConfig();
-
-			globe = Globe()
-				.globeImageUrl(getThemeTexture())
-				.backgroundColor("rgba(0, 0, 0, 0)")
-				.lineHoverPrecision(0)
-				.width(config.width)
-				.height(config.height)
-				.atmosphereColor("red")
-				.polygonsData(countries.features)
-				.polygonAltitude(0.01)
-				.polygonCapColor(() => "rgba(245,85, 85, 0.9)")
-				.polygonSideColor(() => "rgba(250, 150, 150, 0.5)")
-				.polygonStrokeColor(() => "#111")
-				.onPolygonHover((hoverD) => {
-					globe
-						.polygonAltitude((d) => (d === hoverD ? 0.02 : 0.01))
-						.polygonCapColor((d) => (d === hoverD ? "white" : "rgba(245,85, 85, 0.9)"));
-				})
-				.onPolygonClick((clickedCountry) => {
-					if (!clickedCountry) return;
-					const countryName = clickedCountry.properties.NAME.toLowerCase().replace(/ /g, "-");
-					goto(`/countries/learn/${countryName}`);
-				})(globeElement);
-
-			// Configure controls
-			const controls = globe.controls();
-			controls.autoRotate = true;
-			controls.autoRotateSpeed = 0.2;
-			controls.enableZoom = false;
-
-			isLoading = false;
-		} catch (error) {
-			console.error("Failed to load globe:", error);
-			isLoading = false;
-		}
-	};
-
-	const cleanupGlobe = () => {
-		if (!globe) return;
-
-		try {
-			globe.pauseAnimation();
-			globe.controls().dispose();
-			globe._destructor();
-		} catch (error) {
-			console.warn("Globe cleanup error:", error);
-		}
-
-		globe = null;
-
-		if (globeElement) {
-			while (globeElement.firstChild) {
-				globeElement.removeChild(globeElement.firstChild);
-			}
-		}
-
-		isLoading = true;
-	};
+	async function loadGlobeData() {
+		const response = await fetch("/json/topojson/topojson-world-110m.json");
+		const topology = await response.json();
+		const geoData = feature(topology, topology.objects.countries);
+		countries = geoData.features;
+	}
 
 	onMount(() => {
-		// Intersection observer for lazy loading
-		observer = new IntersectionObserver(
-			([entry]) => {
-				isVisible = entry.isIntersecting;
-				if (isVisible) loadGlobe();
-			},
-			{ threshold: 0.1 },
-		);
-
-		if (globeElement) observer.observe(globeElement);
-
-		// Theme change observer
-		themeObserver = new MutationObserver(() => {
-			if (globe) globe.globeImageUrl(getThemeTexture());
-		});
-
-		themeObserver.observe(document.documentElement, {
-			attributes: true,
-			attributeFilter: ["data-theme"],
-		});
-	});
-
-	onDestroy(() => {
-		observer?.disconnect();
-		themeObserver?.disconnect();
-		cleanupGlobe();
+		loadGlobeData();
 	});
 </script>
 
-<div class="globe-container w-full flex justify-center items-center rounded-xl" bind:this={globeElement}>
-	{#if isLoading}
-		<div class="loading loading-spinner loading-lg text-base-300"></div>
-	{/if}
+<div class="globe-container w-full flex justify-center items-center">
+	<svg {width} {height} viewBox="0 0 {width} {height}" class="globe-svg">
+		<defs>
+			<radialGradient id="sphere-gradient">
+				<stop offset="0%" stop-color="rgba(255, 255, 255, 0.95)" />
+				<stop offset="100%" stop-color="rgba(255, 255, 255, 0.85)" />
+			</radialGradient>
+			<filter id="glow">
+				<feGaussianBlur stdDeviation="8" result="coloredBlur" />
+				<feMerge>
+					<feMergeNode in="coloredBlur" />
+					<feMergeNode in="SourceGraphic" />
+				</feMerge>
+			</filter>
+		</defs>
+
+		<!-- Background sphere -->
+		<circle cx={width / 2} cy={height / 2} r={950} fill="url(#sphere-gradient)" filter="url(#glow)" />
+
+		<!-- Graticule (grid lines) -->
+		<path d={path(graticule)} fill="none" stroke="rgba(200, 200, 200, 0.2)" stroke-width="0.5" />
+
+		<!-- Countries -->
+		{#each countries as country, i (`${country.properties.name}-${i}`)}
+			{@const d = path(country)}
+			{#if d}
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
+				<path
+					{d}
+					fill="var(--color-secondary)"
+					stroke="#8B0000"
+					stroke-width="1"
+					class="country-path"
+					onclick={() => handleCountryClick(country.properties.name)}
+				/>
+			{/if}
+		{/each}
+	</svg>
 </div>
 
 <style>
 	.globe-container {
-		height: 350px;
+		height: 900px;
+		overflow: visible;
+		margin-top: -290px;
 	}
 
 	@media (max-width: 1024px) {
 		.globe-container {
-			height: 250px;
+			height: 800px;
+			margin-top: -250px;
 		}
+	}
+
+	@media (max-width: 640px) {
+		.globe-container {
+			height: 400px;
+			margin-top: -30px;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.globe-container {
+			height: 400px;
+			margin-top: -40px;
+		}
+	}
+
+	.globe-svg {
+		max-width: 100%;
+		max-height: 100%;
+		filter: drop-shadow(0 0 30px var(--color-secondary));
+	}
+
+	.country-path {
+		cursor: pointer;
+		transition: fill 0.15s;
+	}
+
+	.country-path:hover {
+		fill: white;
 	}
 </style>

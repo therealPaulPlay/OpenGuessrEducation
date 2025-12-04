@@ -17,27 +17,15 @@
 	let loading = $state(true); // Loading flag
 
 	async function loadSimilarQuizzes() {
-		const modules = import.meta.glob("/src/routes/quiz/play/**/*.svelte");
-		const currentQuizPath = $page.url.pathname.replace("src/routes", "");
+		const response = await fetch("/json/quiz-metadata.json");
+		quizzes = await response.json();
 
+		const currentQuizPath = $page.url.pathname;
 		quizzesWithSimilarityScore = [];
 
-		quizzes = await Promise.all(
-			Object.entries(modules).map(async ([path, module]) => {
-				const quizModule = await module();
-				const quizMetadata = quizModule.metadata;
-				const pathParts = path.split("/");
-				const category = pathParts[pathParts.length - 3];
-				const formattedPath = path.replace("/src/routes", "").replace("+page.svelte", "");
-
-				// Check if this is the current quiz
-				if (path.includes(currentQuizPath)) {
-					metadata = quizMetadata; // Set metadata for the current quiz
-				}
-
-				return { ...quizMetadata, category, path: formattedPath };
-			}),
-		);
+		// Find current quiz metadata
+		const currentQuiz = quizzes.find(q => currentQuizPath.startsWith(q.path));
+		if (currentQuiz) metadata = currentQuiz;
 
 		setTitle(metadata.title + " Quiz"); // Set page title based on current quiz title
 

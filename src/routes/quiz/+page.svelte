@@ -44,16 +44,8 @@
 
 	onMount(async () => {
 		setTitle("Discover quizzes");
-		const modules = import.meta.glob("/src/routes/quiz/play/**/*.svelte");
-		const quizzes = await Promise.all(
-			Object.entries(modules).map(async ([path, module]) => {
-				const { metadata } = await module();
-				const pathParts = path.split("/");
-				const category = pathParts[pathParts.length - 3];
-				path = path.replace("/src/routes", "");
-				return { ...metadata, category, path };
-			}),
-		);
+		const response = await fetch("/json/quiz-metadata.json");
+		const quizzes = await response.json();
 
 		// add matching quizzes to each category
 		quizCategories = categories.map((category) => ({

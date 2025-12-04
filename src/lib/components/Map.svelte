@@ -33,7 +33,7 @@
 
 	let mapContainer = $state();
 	let features = $state([]);
-	let points = $state([]); // New array to store point features
+	let points = $state([]);
 
 	let projections = {
 		geoMercator: geoMercator(),
@@ -41,7 +41,6 @@
 	};
 
 	let backgroundCircle = $state();
-
 	let projection = projections[projectionType];
 	let path = $state(geoPath().projection(projection));
 	let regionCountries;
