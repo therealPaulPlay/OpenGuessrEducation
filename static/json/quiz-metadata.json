@@ -1,0 +1,471 @@
+[
+    {
+        "title": "20 largest cities (by population)",
+        "tags": [
+            "All"
+        ],
+        "region": "20 largest cities",
+        "category": "cities",
+        "path": "/quiz/play/cities/20-largest-cities"
+    },
+    {
+        "title": "African capitals",
+        "tags": [
+            "Africa"
+        ],
+        "region": "African Capitals",
+        "category": "cities",
+        "path": "/quiz/play/cities/african-capitals"
+    },
+    {
+        "title": "Asian capitals",
+        "tags": [
+            "Asia"
+        ],
+        "region": "Asian Capitals",
+        "category": "cities",
+        "path": "/quiz/play/cities/asian-capitals"
+    },
+    {
+        "title": "European capitals",
+        "tags": [
+            "Europe"
+        ],
+        "region": "European Capitals",
+        "category": "cities",
+        "path": "/quiz/play/cities/european-capitals"
+    },
+    {
+        "title": "North American capitals",
+        "tags": [
+            "North America"
+        ],
+        "region": "North American Capitals",
+        "category": "cities",
+        "path": "/quiz/play/cities/north-american-capitals"
+    },
+    {
+        "title": "Oceanian capitals",
+        "tags": [
+            "Oceania"
+        ],
+        "region": "Oceanian Capitals",
+        "category": "cities",
+        "path": "/quiz/play/cities/oceanian-capitals"
+    },
+    {
+        "title": "South American capitals",
+        "tags": [
+            "South America"
+        ],
+        "region": "South American Capitals",
+        "category": "cities",
+        "path": "/quiz/play/cities/south-america"
+    },
+    {
+        "title": "Bollards",
+        "tags": [
+            "All"
+        ],
+        "region": "Bollards",
+        "assetFolder": "bollards",
+        "filePrefix": "bollard",
+        "previewImagePath": "/bollards/bollard-estonia.jpg",
+        "category": "clues",
+        "path": "/quiz/play/clues/bollards"
+    },
+    {
+        "title": "Top level domains",
+        "tags": [
+            "All"
+        ],
+        "region": "Top level domains",
+        "previewImagePath": "/domains/domain-example.jpg",
+        "textDataPath": "/json/country-data/country-tld.json",
+        "category": "clues",
+        "path": "/quiz/play/clues/domains"
+    },
+    {
+        "title": "License plates",
+        "tags": [
+            "All"
+        ],
+        "region": "License plates",
+        "assetFolder": "license-plates",
+        "filePrefix": "license-plate",
+        "previewImagePath": "/license-plates/license-plate-thailand.jpg",
+        "category": "clues",
+        "path": "/quiz/play/clues/license-plates"
+    },
+    {
+        "title": "Street names",
+        "tags": [
+            "All"
+        ],
+        "region": "Street names",
+        "assetFolder": "street-names",
+        "filePrefix": "streetname",
+        "previewImagePath": "/street-names/streetname-australia.jpg",
+        "category": "clues",
+        "path": "/quiz/play/clues/street-names"
+    },
+    {
+        "title": "Telephone prefixes",
+        "tags": [
+            "All"
+        ],
+        "region": "Telephone prefixes",
+        "previewImagePath": "/telephone-prefixes/tel-number-example.jpg",
+        "textDataPath": "/json/country-data/telephone-prefixes.json",
+        "category": "clues",
+        "path": "/quiz/play/clues/telephone-prefixes"
+    },
+    {
+        "title": "Utility poles",
+        "tags": [
+            "All"
+        ],
+        "region": "Utility poles",
+        "assetFolder": "utility-poles",
+        "filePrefix": "pole",
+        "previewImagePath": "/utility-poles/pole-indonesia.jpg",
+        "category": "clues",
+        "path": "/quiz/play/clues/utility-poles"
+    },
+    {
+        "title": "African countries",
+        "tags": [
+            "Africa"
+        ],
+        "region": "Africa",
+        "category": "countries",
+        "path": "/quiz/play/countries/africa"
+    },
+    {
+        "title": "All countries",
+        "tags": [
+            "All"
+        ],
+        "region": "World",
+        "category": "countries",
+        "path": "/quiz/play/countries/all"
+    },
+    {
+        "title": "Asian countries",
+        "tags": [
+            "Asia"
+        ],
+        "region": "Asia",
+        "category": "countries",
+        "path": "/quiz/play/countries/asia"
+    },
+    {
+        "title": "European countries",
+        "tags": [
+            "Europe"
+        ],
+        "region": "Europe",
+        "category": "countries",
+        "path": "/quiz/play/countries/europe"
+    },
+    {
+        "title": "North American countries",
+        "tags": [
+            "North America"
+        ],
+        "region": "North America",
+        "category": "countries",
+        "path": "/quiz/play/countries/north-america"
+    },
+    {
+        "title": "Oceanian countries",
+        "tags": [
+            "Oceania"
+        ],
+        "region": "Oceania",
+        "category": "countries",
+        "path": "/quiz/play/countries/oceania"
+    },
+    {
+        "title": "South American countries",
+        "tags": [
+            "South America"
+        ],
+        "region": "South America",
+        "category": "countries",
+        "path": "/quiz/play/countries/south-america"
+    },
+    {
+        "title": "African flags",
+        "tags": [
+            "Africa"
+        ],
+        "region": "Africa",
+        "category": "flags",
+        "path": "/quiz/play/flags/african-flags"
+    },
+    {
+        "title": "Asian flags",
+        "tags": [
+            "Asia"
+        ],
+        "region": "Asia",
+        "category": "flags",
+        "path": "/quiz/play/flags/asian-flags"
+    },
+    {
+        "title": "European flags",
+        "tags": [
+            "Europe"
+        ],
+        "region": "Europe",
+        "category": "flags",
+        "path": "/quiz/play/flags/european-flags"
+    },
+    {
+        "title": "3 wrong, 1 correct flag",
+        "tags": [
+            "All"
+        ],
+        "region": "All",
+        "category": "flags",
+        "path": "/quiz/play/flags/fake-flags"
+    },
+    {
+        "title": "North American flags",
+        "tags": [
+            "North America"
+        ],
+        "region": "North America",
+        "category": "flags",
+        "path": "/quiz/play/flags/north-american-flags"
+    },
+    {
+        "title": "Oceanian flags",
+        "tags": [
+            "Oceania"
+        ],
+        "region": "Oceania",
+        "category": "flags",
+        "path": "/quiz/play/flags/oceania"
+    },
+    {
+        "title": "Flags that look alike",
+        "tags": [
+            "All"
+        ],
+        "region": "Similar Flags",
+        "category": "flags",
+        "path": "/quiz/play/flags/similar-flags"
+    },
+    {
+        "title": "South American flags",
+        "tags": [
+            "South America"
+        ],
+        "region": "South America",
+        "category": "flags",
+        "path": "/quiz/play/flags/south-american-flags"
+    },
+    {
+        "title": "BRICS+",
+        "tags": [
+            "Asia"
+        ],
+        "region": "BRICS",
+        "category": "multinational-alliances",
+        "path": "/quiz/play/multinational-alliances/brics"
+    },
+    {
+        "title": "EU-27",
+        "tags": [
+            "Europe"
+        ],
+        "region": "European Union",
+        "category": "multinational-alliances",
+        "path": "/quiz/play/multinational-alliances/european-union"
+    },
+    {
+        "title": "GCC",
+        "tags": [
+            "Asia"
+        ],
+        "region": "GCC",
+        "category": "multinational-alliances",
+        "path": "/quiz/play/multinational-alliances/gcc"
+    },
+    {
+        "title": "Mercosur",
+        "tags": [
+            "South America"
+        ],
+        "region": "Mercosur",
+        "category": "multinational-alliances",
+        "path": "/quiz/play/multinational-alliances/mercosur"
+    },
+    {
+        "title": "RCEP",
+        "tags": [
+            "Asia"
+        ],
+        "region": "RCEP",
+        "category": "multinational-alliances",
+        "path": "/quiz/play/multinational-alliances/rcep"
+    },
+    {
+        "title": "USMCA",
+        "tags": [
+            "North America"
+        ],
+        "region": "USMCA",
+        "category": "multinational-alliances",
+        "path": "/quiz/play/multinational-alliances/usmca"
+    },
+    {
+        "title": "Australian states & territories",
+        "tags": [
+            "Oceania"
+        ],
+        "region": "Australian States",
+        "topoJson": "au-states-topo",
+        "category": "regions",
+        "path": "/quiz/play/regions/australia"
+    },
+    {
+        "title": "Brazilian states (Estados)",
+        "tags": [
+            "South America"
+        ],
+        "region": "Brazilian States",
+        "topoJson": "brazilian-states",
+        "category": "regions",
+        "path": "/quiz/play/regions/brazil"
+    },
+    {
+        "title": "German states (Bundesländer)",
+        "tags": [
+            "Europe"
+        ],
+        "region": "German States",
+        "topoJson": "german-states",
+        "category": "regions",
+        "path": "/quiz/play/regions/germany"
+    },
+    {
+        "title": "Indonesian provinces (Provinsi)",
+        "tags": [
+            "Asia"
+        ],
+        "region": "Indonesian Provinces",
+        "topoJson": "indonesian-provinces",
+        "category": "regions",
+        "path": "/quiz/play/regions/indonesia"
+    },
+    {
+        "title": "Spanish regiones autónomas",
+        "tags": [
+            "Europe"
+        ],
+        "region": "Spanish Regions",
+        "topoJson": "spanish-regions",
+        "category": "regions",
+        "path": "/quiz/play/regions/spain"
+    },
+    {
+        "title": "United Kingdom regions",
+        "tags": [
+            "Europe"
+        ],
+        "region": "United Kingdom Regions",
+        "topoJson": "uk-regions",
+        "category": "regions",
+        "path": "/quiz/play/regions/united-kingdom"
+    },
+    {
+        "title": "US states",
+        "tags": [
+            "North America"
+        ],
+        "region": "US States",
+        "topoJson": "us-states-10m",
+        "category": "regions",
+        "path": "/quiz/play/regions/united-states"
+    },
+    {
+        "title": "African cities from above",
+        "tags": [
+            "Africa"
+        ],
+        "region": "Africa",
+        "jsonName": "african-cities",
+        "category": "satellite",
+        "path": "/quiz/play/satellite/african-cities"
+    },
+    {
+        "title": "Capital cities from above",
+        "tags": [
+            "All"
+        ],
+        "region": "Satellite World",
+        "jsonName": "capital-cities",
+        "category": "satellite",
+        "path": "/quiz/play/satellite/capital-cities"
+    },
+    {
+        "title": "European cities from above",
+        "tags": [
+            "Europe"
+        ],
+        "region": "Europe",
+        "jsonName": "european-cities",
+        "category": "satellite",
+        "path": "/quiz/play/satellite/european-cities"
+    },
+    {
+        "title": "North American cities from above",
+        "tags": [
+            "North America"
+        ],
+        "region": "North America",
+        "jsonName": "north-american-cities",
+        "projectionRotation": [
+            60,
+            0,
+            0
+        ],
+        "previewZoom": 1.5,
+        "category": "satellite",
+        "path": "/quiz/play/satellite/north-american-cities"
+    },
+    {
+        "title": "Oceanian cities from above",
+        "tags": [
+            "Oceania"
+        ],
+        "region": "Oceania",
+        "jsonName": "oceanian-cities",
+        "projectionRotation": [
+            -110,
+            -5,
+            10
+        ],
+        "previewZoom": 1.2,
+        "category": "satellite",
+        "path": "/quiz/play/satellite/oceanian-cities"
+    },
+    {
+        "title": "South American cities from above",
+        "tags": [
+            "South America"
+        ],
+        "region": "South America",
+        "jsonName": "south-american-cities",
+        "projectionRotation": [
+            40,
+            20,
+            20
+        ],
+        "category": "satellite",
+        "path": "/quiz/play/satellite/south-american-cities"
+    }
+]

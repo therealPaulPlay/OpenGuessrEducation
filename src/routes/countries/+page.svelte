@@ -7,9 +7,11 @@
 
 	onMount(async () => {
 		setTitle("Learn countries");
-		// Only fetch if data isn't already in store
-		if (!$countryStore.countryCodes) await countryStore.fetchCountryCodes();
-		if (!$countryStore.favoriteCountries.length) await countryStore.fetchFavorites();
+		// Fetch both in parallel for better performance
+		await Promise.all([
+			!$countryStore.countryCodes ? countryStore.fetchCountryCodes() : Promise.resolve(),
+			!$countryStore.favoriteCountries.length ? countryStore.fetchFavorites() : Promise.resolve()
+		]);
 	});
 </script>
 
