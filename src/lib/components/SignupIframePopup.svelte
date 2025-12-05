@@ -132,7 +132,7 @@
 <dialog class="modal" class:modal-open={$signupPopupOpen}>
 	<div class="modal-box max-w-2xl w-full h-full max-h-200 p-0 relative overflow-hidden">
 		<div class="flex items-center justify-between p-4 border-b border-base-300 bg-base-100 flex-shrink-0">
-			<h3 class="text-lg font-semibold">Login or Sign Up</h3>
+			<h3 class="text-lg font-semibold">Log in or Sign Up</h3>
 			<button class="btn btn-sm btn-ghost btn-circle" onclick={closeModal}>
 				<X class="w-4 h-4" />
 			</button>
