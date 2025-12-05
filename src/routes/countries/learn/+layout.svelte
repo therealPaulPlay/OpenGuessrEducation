@@ -164,7 +164,7 @@
 	</div>
 
 	<!-- Page Content -->
-	<article bind:this={childrenContainer} class="w-full" id="children-container">
+	<article bind:this={childrenContainer} class="w-full relative overflow-hidden" id="children-container">
 		{@render children?.()}
 	</article>
 

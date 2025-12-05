@@ -18,12 +18,12 @@
 <article class="container mx-auto py-6">
 	<h1 class="text-5xl font-bold mb-12">Learn countries</h1>
 
-	<div class="collapse collapse-arrow mb-10">
+	<div class="collapse rounded-none! collapse-arrow mb-10">
 		<input type="checkbox" checked="true" />
 		<div class="collapse-title p-0">
 			<h2 class="text-3xl font-semibold">Europe</h2>
 		</div>
-		<div class="collapse-content p-0 pt-4">
+		<div class="collapse-content rounded-none!  p-0 pt-4">
 			<div class="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] w-full gap-3">
 				<CountryLink country="Albania" />
 				<CountryLink country="Andorra" />
@@ -73,12 +73,12 @@
 		</div>
 	</div>
 
-	<div class="collapse collapse-arrow mb-10">
+	<div class="collapse rounded-none! collapse-arrow mb-10">
 		<input type="checkbox" checked="true" />
 		<div class="collapse-title p-0">
 			<h2 class="text-3xl font-semibold">Asia</h2>
 		</div>
-		<div class="collapse-content p-0 pt-4">
+		<div class="collapse-content rounded-none!  p-0 pt-4">
 			<div class="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] w-full gap-3">
 				<CountryLink country="Afghanistan" />
 				<CountryLink country="Armenia" />
@@ -133,12 +133,12 @@
 		</div>
 	</div>
 
-	<div class="collapse collapse-arrow mb-10">
+	<div class="collapse rounded-none! collapse-arrow mb-10">
 		<input type="checkbox" checked="true" />
 		<div class="collapse-title p-0">
 			<h2 class="text-3xl font-semibold">Africa</h2>
 		</div>
-		<div class="collapse-content p-0 pt-4">
+		<div class="collapse-content rounded-none!  p-0 pt-4">
 			<div class="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] w-full gap-3">
 				<CountryLink country="Algeria" />
 				<CountryLink country="Angola" />
@@ -199,12 +199,12 @@
 		</div>
 	</div>
 
-	<div class="collapse collapse-arrow mb-10">
+	<div class="collapse rounded-none! collapse-arrow mb-10">
 		<input type="checkbox" checked="true" />
 		<div class="collapse-title p-0">
 			<h2 class="text-3xl font-semibold">North America</h2>
 		</div>
-		<div class="collapse-content p-0 pt-4">
+		<div class="collapse-content rounded-none!  p-0 pt-4">
 			<div class="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] w-full gap-3">
 				<CountryLink country="Bahamas" />
 				<CountryLink country="Belize" />
@@ -225,12 +225,12 @@
 		</div>
 	</div>
 
-	<div class="collapse collapse-arrow mb-10">
+	<div class="collapse rounded-none! collapse-arrow mb-10">
 		<input type="checkbox" checked="true" />
 		<div class="collapse-title p-0">
 			<h2 class="text-3xl font-semibold">South America</h2>
 		</div>
-		<div class="collapse-content p-0 pt-4">
+		<div class="collapse-content rounded-none!  p-0 pt-4">
 			<div class="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] w-full gap-3">
 				<CountryLink country="Argentina" />
 				<CountryLink country="Bolivia" />
@@ -248,12 +248,12 @@
 		</div>
 	</div>
 
-	<div class="collapse collapse-arrow mb-20">
+	<div class="collapse rounded-none! collapse-arrow mb-20">
 		<input type="checkbox" checked="true" />
 		<div class="collapse-title p-0">
 			<h2 class="text-3xl font-semibold">Oceania</h2>
 		</div>
-		<div class="collapse-content p-0 pt-4">
+		<div class="collapse-content rounded-none!  p-0 pt-4">
 			<div class="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] w-full gap-3">
 				<CountryLink country="Australia" />
 				<CountryLink country="Fiji" />
