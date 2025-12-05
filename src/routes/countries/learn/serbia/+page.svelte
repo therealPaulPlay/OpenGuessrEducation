@@ -17,12 +17,12 @@
 	<img
 		alt="street view example lining up"
 		src="/assets/articles/serbia/bollard1.jpg"
-		class="rounded-xl w-full h-96 object-cover"
+		class="rounded-xl h-96 object-cover flex-1 min-w-0"
 	/>
 	<img
 		alt="street view example lining up"
 		src="/assets/articles/serbia/bollard2.jpg"
-		class="rounded-xl w-full h-96 object-cover"
+		class="rounded-xl h-96 object-cover flex-1 min-w-0"
 	/>
 </div>
 <p class="text-center mt-2">
@@ -34,12 +34,12 @@
 	<img
 		alt="street view example lining up"
 		src="/assets/articles/serbia/serbia_pole.jpg"
-		class="rounded-xl grow w-full h-96 object-cover"
+		class="rounded-xl h-96 object-cover flex-1 min-w-0"
 	/>
 	<img
 		alt="street view example lining up"
 		src="/assets/articles/serbia/serbia_pole2.jpg"
-		class="rounded-xl grow w-full h-96 object-cover"
+		class="rounded-xl h-96 object-cover flex-1 min-w-0"
 	/>
 </div>
 <p class="text-center mt-2">
@@ -57,12 +57,12 @@
 	<img
 		alt="street view example lining up"
 		src="/assets/articles/serbia/polished_house.jpg"
-		class="rounded-xl w-full h-96 object-cover"
+		class="rounded-xl h-96 object-cover flex-1 min-w-0"
 	/>
 	<img
 		alt="street view example lining up"
 		src="/assets/articles/serbia/brickhouse.jpg"
-		class="rounded-xl w-full h-96 object-cover"
+		class="rounded-xl h-96 object-cover flex-1 min-w-0"
 	/>
 </div>
 <p class="text-center mt-2">
@@ -74,7 +74,7 @@
 <img
 	alt="street view example lining up"
 	src="/assets/articles/serbia/roadlines.jpg"
-	class="rounded-xl w-full h-96 object-cover"
+	class="rounded-xl h-96 object-cover w-full"
 />
 <p class="text-center mt-2">
 	On Serbian roads, noticeably often there is just a <b>middle line</b> visible. (Does not apply to major highways!)
@@ -83,7 +83,7 @@
 <img
 	alt="street view example lining up"
 	src="/assets/articles/serbia/serbia_guardrail.jpg"
-	class="rounded-xl w-full h-96 object-cover"
+	class="rounded-xl h-96 object-cover w-full"
 />
 <p class="text-center mt-2">
 	Serbia exclusively uses the <b>B-Type guardrail</b>. Keep in mind that Croatia and Montenegro also use this type!
