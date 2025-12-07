@@ -148,7 +148,7 @@
 		{/if}
 		<ArticleEditButton path={page.url.pathname} />
 		<a
-			class="btn btn-secondary custom-btn-height {jsonDataLoading ? 'invisible' : ''}"
+			class="btn btn-secondary custom-btn-height text-sm {jsonDataLoading ? 'invisible' : ''}"
 			href="https://openguessr.com/?play-map={countryName.replaceAll(' ', '_')}"
 			target="_blank"
 		>
@@ -164,7 +164,7 @@
 	</div>
 
 	<!-- Page Content -->
-	<article bind:this={childrenContainer} class="w-full relative overflow-hidden" id="children-container">
+	<article bind:this={childrenContainer} class="w-full relative" id="children-container">
 		{@render children?.()}
 	</article>
 
