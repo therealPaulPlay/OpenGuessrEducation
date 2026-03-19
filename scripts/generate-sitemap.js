@@ -15,8 +15,8 @@ function getRoutes(dir, baseRoute = "") {
 
 		if (entry.isDirectory()) {
 			routes.push(...getRoutes(fullPath, routePath));
-		} else if (entry.name.startsWith("+page")) {
-			const route = ("/" + routePath.replace(/\+page(\.js|\.svelte)?$/, "")).replace(/\/$/, "") || "/";
+		} else if (entry.name === "+page.svelte") {
+			const route = ("/" + routePath.replace(/\+page\.svelte$/, "")).replace(/\/$/, "") || "/";
 			// Skip dynamic routes like /my-route/[varName]
 			if (!route.includes("[")) routes.push(route);
 		}
