@@ -6,7 +6,7 @@
 
 	let answers = $state(["", "", "", ""]);
 	let correctAnswer = $state(1);
-	let question = `Where can you find this ${region.substring(0, region.length - 1)}?`;
+	let question = $derived(`Where can you find this ${region.substring(0, region.length - 1)}?`);
 	let questionsArray;
 	let questionAmount = $state(0);
 	let remainingQuestionsArray = [];

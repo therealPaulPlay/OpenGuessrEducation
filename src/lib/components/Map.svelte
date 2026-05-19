@@ -797,7 +797,7 @@
 							<circle
 								{cx}
 								{cy}
-								r={$flashCircleRadius}
+								r={Math.max(0, $flashCircleRadius)}
 								fill="none"
 								stroke="white"
 								stroke-width="4"
