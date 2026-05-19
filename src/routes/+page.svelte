@@ -8,7 +8,7 @@
 	let isHovered = $state(false);
 
 	onMount(() => {
-		setTitle("");
+		setTitle(""); // Home, falls back to the intended site name
 	});
 </script>
 

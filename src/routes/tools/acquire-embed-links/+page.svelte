@@ -3,7 +3,7 @@
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
 
 	onMount(() => {
-		setTitle("How to Embed Google Street View in an Article");
+		setTitle("How to embed Google Street View in an article");
 	});
 </script>
 

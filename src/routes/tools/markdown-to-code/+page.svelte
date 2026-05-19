@@ -163,7 +163,7 @@
 	}
 
 	onMount(() => {
-		setTitle("Markdown-To-Code");
+		setTitle("Markdown-to-code");
 
 		// Keyboard shortcuts
 		if (window) {

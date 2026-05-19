@@ -5,7 +5,7 @@
 	import { setTitle } from "$lib/utils/pageTitle.svelte.js";
 
 	onMount(() => {
-		setTitle("Map Converter");
+		setTitle("Map converter");
 	});
 
 	let errorMessage = $state();
