@@ -24,7 +24,7 @@
 
 <h2 class="text-2xl font-bold mt-8 mb-2">The Map-Generator</h2>
 <p class="mb-2">
-	<a class="text-secondary" target="_blank" href="https://map-generator.vercel.app/">Map-Generator</a> is currently the
+	<a class="text-secondary" target="_blank" href="https://map-g3nerator.vercel.app/">Map-Generator</a> is currently the
 	most popular tool for generating locations. There is also a <b>NSJ</b> variant of the same software, that was forked
 	and modified by the Github user NSJ. It offers <b>slightly different features</b>, but is fundamentally similar.
 </p>

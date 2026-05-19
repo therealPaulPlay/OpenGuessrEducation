@@ -58,8 +58,17 @@
 				return [Number(lat), Number(lng)];
 			});
 
+			// Deduplicate locations by exact lat,lng pair
+			let seen = new Set();
+			let dedupedJson = newJson.filter(([lat, lng]) => {
+				let key = `${lat},${lng}`;
+				if (seen.has(key)) return false;
+				seen.add(key);
+				return true;
+			});
+
 			// Generate the output JSON
-			let convertedJson = JSON.stringify({ locations: newJson }, null, 2);
+			let convertedJson = JSON.stringify({ locations: dedupedJson }, null, 2);
 
 			document.getElementById("outputJson").value = convertedJson;
 		} catch (error) {
@@ -87,7 +96,7 @@
 		This tool allows to convert maps from sources like <a
 			class="text-secondary"
 			target="_blank"
-			href="https://map-generator.vercel.app/">Map-Generator</a
+			href="https://map-g3nerator.vercel.app/">Map-Generator</a
 		> to the OpenGuessr format.
 	</p>
 
@@ -107,14 +116,12 @@
 				onchange={handleFileSelect}
 			/>
 
-			<div class="divider">OR</div>
-
 			<textarea
 				id="inputJson"
 				rows="1"
 				cols="5"
 				class="textarea textarea-bordered custom-screen-width"
-				placeholder="...paste your JSON directly here"
+				placeholder="Or paste your JSON directly here"
 			></textarea>
 		</div>
 

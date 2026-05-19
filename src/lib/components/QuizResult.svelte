@@ -14,7 +14,7 @@
 
 	let { score = 0, errors = 0, timeString = undefined, startGame, errorWeight = 0.25 } = $props();
 
-	let achievedScore = Math.max(score - errors * errorWeight, 0);
+	let achievedScore = $derived(Math.max(score - errors * errorWeight, 0));
 	let earnedExperience = $derived(
 		$supporterLevel ? Math.floor(achievedScore * 50 * (1 + supporterBoostFactor)) : Math.floor(achievedScore * 50),
 	);
@@ -34,7 +34,10 @@
 </script>
 
 <div class="fixed inset-0 bg-base-300/75 flex items-center justify-center z-50">
-	<div class="bg-base-100 p-8 border border-accent shadow-sm/5 rounded-xl text-center" in:scale={{ duration: 300, easing: quintOut }}>
+	<div
+		class="bg-base-100 p-8 border border-accent shadow-sm/5 rounded-xl text-center"
+		in:scale={{ duration: 300, easing: quintOut }}
+	>
 		<h3 class="text-3xl font-bold mb-4">Quiz complete!</h3>
 		<div class="flex justify-center flex-col items-center rounded-lg my-2 py-4">
 			<p class="text-xl mb-2">
