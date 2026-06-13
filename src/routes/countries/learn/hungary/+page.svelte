@@ -30,7 +30,7 @@
 <h2 class="text-2xl font-bold mt-8 mb-2">Strategies</h2>
 <ul class="mb-2 list-disc list-inside">
 	<li>Look for the unique Hungarian letters <b>ő</b> and <b>ű</b>.</li>
-	<li>Many signs contain accented letters such as <b>á, é, í, ó, ö, ú, ü</b></li>
+	<li>Many signs contain accented letters such as <b>á, é, í, ó, ö, ú, ü</b>.</li>
 	<li>Hungarian roads often feature concrete utility poles with holes running down their sides.</li>
 	<li>White roadside bollards with black and red markings are common.</li>
 	<li>Street names frequently contain the word <b>utca</b>.</li>
@@ -51,4 +51,4 @@
 />
 <p class="text-center mt-2">Typical Hungarian countryside with flat terrain and agricultural fields.</p>
 
-<p class="mt-8 mb-2">Written by Muaves</p>
+<p class="mt-8 mb-2 italic">Written by Muaves.</p>
