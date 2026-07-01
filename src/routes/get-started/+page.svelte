@@ -4,7 +4,7 @@
 
 <article class="container mx-auto py-6 max-w-4xl">
 	<img src="/assets/home/openguessr_jungle_adventure.png" alt="Geography adventure" class="w-full rounded-xl mb-10" />
-	<h1 class="text-4xl font-bold mb-4">Embark on an epic learning-adventure.</h1>
+	<h1 class="text-4xl font-bold mb-4">Embark on an epic learning-adventure</h1>
 	<p class="mb-6">
 		<b>Welcome to OpenGuessr Education</b>, the
 		<b>ultimate geography platform</b>
