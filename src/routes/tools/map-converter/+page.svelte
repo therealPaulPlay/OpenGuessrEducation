@@ -10,6 +10,11 @@
 
 	let errorMessage = $state();
 
+	// Optional location details to extract into the third array value
+	let extractHeading = $state(true);
+	let extractPitch = $state(false);
+	let extractPanoramaId = $state(false);
+
 	function handleFileSelect(event) {
 		const file = event.target.files[0];
 		const reader = new FileReader();
@@ -55,7 +60,16 @@
 					throw new Error("Missing or unrecognized latitude/longitude in one of the coordinate pairs");
 				}
 
-				return [Number(lat), Number(lng)];
+				let location = [Number(lat), Number(lng)];
+
+				// Optional data object as third entry in location array with the data chosen through the checkboxes
+				let details = {};
+				if (extractHeading && coordinate.heading != null) details.heading = Number(coordinate.heading);
+				if (extractPitch && coordinate.pitch != null) details.pitch = Number(coordinate.pitch);
+				if (extractPanoramaId && coordinate.panoId != null) details.panoramaId = String(coordinate.panoId);
+				if (Object.keys(details).length > 0) location.push(details);
+
+				return location;
 			});
 
 			// Deduplicate locations by exact lat,lng pair
@@ -84,7 +98,7 @@
 
 		var a = document.createElement("a");
 		a.href = URL.createObjectURL(blob);
-		a.download = "converted_coordinates.json";
+		a.download = "converted_map.json";
 		a.click();
 	}
 </script>
@@ -123,6 +137,21 @@
 				class="textarea textarea-bordered custom-screen-width"
 				placeholder="Or paste your JSON directly here"
 			></textarea>
+		</div>
+
+		<div class="shadow-sm/5 border border-accent rounded-xl px-4 py-2 mt-4 flex justify-center gap-4 flex-wrap">
+			<label class="label cursor-pointer gap-2">
+				<input type="checkbox" class="checkbox" bind:checked={extractHeading} />
+				<span class="label-text">Extract heading</span>
+			</label>
+			<label class="label cursor-pointer gap-2">
+				<input type="checkbox" class="checkbox" bind:checked={extractPitch} />
+				<span class="label-text">Extract pitch</span>
+			</label>
+			<label class="label cursor-pointer gap-2">
+				<input type="checkbox" class="checkbox" bind:checked={extractPanoramaId} />
+				<span class="label-text">Extract panorama ID</span>
+			</label>
 		</div>
 
 		<button class="btn btn-secondary my-4" onclick={convertJSON}>Convert <ArrowDown /></button>
