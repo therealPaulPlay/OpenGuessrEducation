@@ -1,6 +1,6 @@
 {
 	"name": "openguessreducation",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"scripts": {
 		"generate-sitemap": "node ./scripts/generate-sitemap.js",
 		"generate-quiz-metadata": "node ./scripts/generate-quiz-metadata.js",
@@ -9,12 +9,10 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.3.0",
 		"@sveltejs/adapter-static": "^3.0.6",
 		"@sveltejs/kit": "^2.7.2",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
 		"daisyui": "^5.5.8",
-		"prettier-plugin-svelte": "^3.3.3",
 		"svelte": "^5.1.4",
 		"tailwindcss": "^4.1.8",
 		"vite": "^5.4.10"
