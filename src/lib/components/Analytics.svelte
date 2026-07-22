@@ -32,7 +32,7 @@
 			gtag("config", GA_ID, {
 				page_title: document.title,
 				page_path: page.url.pathname,
-				cookie_domain: location.hostname,
+				cookie_domain: page.url.hostname,
 				cookie_flags: "SameSite=None; Secure",
 			});
 		} catch (error) {
