@@ -2,6 +2,8 @@
 	import { onMount } from "svelte";
 	import { page } from "$app/state";
 
+	const GA_ID = "G-DXD64B7ZDX";
+
 	let showBanner = $state(false);
 
 	// Instead of a banner, if a TCF-enabled CMP already exists, use TCF instead
@@ -27,10 +29,10 @@
 		try {
 			setConsent(hasConsent, false); // Set consent before JS init (required)
 			gtag("js", new Date());
-			gtag("config", "G-DXD64B7ZDX", {
+			gtag("config", GA_ID, {
 				page_title: document.title,
 				page_path: page.url.pathname,
-				cookie_domain: location.hostname,
+				cookie_domain: page.url.hostname,
 				cookie_flags: "SameSite=None; Secure",
 			});
 		} catch (error) {
@@ -51,7 +53,7 @@
 </script>
 
 <svelte:head>
-	<script src="https://www.googletagmanager.com/gtag/js?id=G-DXD64B7ZDX" async></script>
+	<script src="https://www.googletagmanager.com/gtag/js?id={GA_ID}" async></script>
 </svelte:head>
 
 {#if showBanner}
