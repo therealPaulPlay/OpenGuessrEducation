@@ -1,20 +1,23 @@
 <script>
 	import { onMount } from "svelte";
-	import { page } from "$app/stores";
+	import { page } from "$app/state";
 
 	let showBanner = $state(false);
-	let cookieConsent = false;
 
-	// Instead of a banner, if one CMP already exists (e.g. for Ads), use TFC instead to listen to the consent from there
-	// window["gtag_enable_tcf_support"] = true;
+	// Instead of a banner, if a TCF-enabled CMP already exists, use TCF instead
+	// via window["gtag_enable_tcf_support"] = true;
+	function gtag() {
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayer.push(arguments);
+	}
 
 	onMount(() => {
-		// Check if the user has already accepted cookies
+		// Load cookie acceptance state
 		const consent = localStorage.getItem("cookieConsent");
-		if (consent) {
-			cookieConsent = true;
-			loadGoogleAnalytics(true);
-		} else {
+		if (consent === "true") loadGoogleAnalytics(true);
+		else if (consent === "false") loadGoogleAnalytics(false);
+		else {
+			// New user, show banner
 			showBanner = true;
 			loadGoogleAnalytics(false);
 		}
@@ -22,48 +25,28 @@
 
 	function loadGoogleAnalytics(hasConsent) {
 		try {
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
+			setConsent(hasConsent, false); // Set consent before JS init (required)
 			gtag("js", new Date());
 			gtag("config", "G-DXD64B7ZDX", {
 				page_title: document.title,
-				page_path: $page.url.pathname,
+				page_path: page.url.pathname,
 				cookie_domain: location.hostname,
 				cookie_flags: "SameSite=None; Secure",
-				// Deny data collection by default
-				ad_storage: "denied",
-				ad_personalization: "denied",
-				ad_user_data: "denied",
-				analytics_storage: "granted", // This is GDPR compliant, so always enabled
 			});
-
-			// Grant permissions if the user has accepted
-			if (hasConsent) {
-				gtag("config", "G-DXD64B7ZDX", {
-					ad_storage: "granted",
-					ad_personalization: "granted",
-					ad_user_data: "granted",
-					analytics_storage: "granted",
-				});
-			}
 		} catch (error) {
 			console.error("Error loading Google Analytics:", error);
 		}
 	}
 
-	function handleAccept() {
-		cookieConsent = true;
-		localStorage.setItem("cookieConsent", "true");
-		loadGoogleAnalytics(true);
-		showBanner = false;
-	}
-
-	function handleDeny() {
-		cookieConsent = false;
-		localStorage.setItem("cookieConsent", "false");
-		showBanner = false;
+	function setConsent(hasConsent, isUpdate = false) {
+		const consentState = hasConsent ? "granted" : "denied";
+		// Apply consent state
+		gtag("consent", isUpdate ? "update" : "default", {
+			ad_storage: consentState,
+			ad_personalization: consentState,
+			ad_user_data: consentState,
+			analytics_storage: consentState,
+		});
 	}
 </script>
 
@@ -72,7 +55,10 @@
 </svelte:head>
 
 {#if showBanner}
-	<div role="alert" class="alert fixed w-fit m-4 bottom-0 bg-base-100 right-0 z-50 shadow-lg flex flex-wrap border border-accent pr-3!">
+	<div
+		role="alert"
+		class="alert fixed w-fit m-4 bottom-0 bg-base-100 right-0 z-50 shadow-lg flex flex-wrap border border-accent pr-3!"
+	>
 		<span class="text-base"
 			>This website uses cookies according to its <a
 				href="https://openguessr.com/legal"
@@ -80,8 +66,23 @@
 			>.</span
 		>
 		<div class="flex flex-wrap gap-2">
-			<button onclick={handleDeny} class="btn">Only essential</button>
-			<button onclick={handleAccept} class="btn btn-secondary">Accept</button>
+			<button
+				onclick={() => {
+					// Deny
+					localStorage.setItem("cookieConsent", "false");
+					showBanner = false;
+				}}
+				class="btn">Only essential</button
+			>
+			<button
+				onclick={() => {
+					// Accept
+					localStorage.setItem("cookieConsent", "true");
+					showBanner = false;
+					setConsent(true, true);
+				}}
+				class="btn btn-secondary">Accept</button
+			>
 		</div>
 	</div>
 {/if}
