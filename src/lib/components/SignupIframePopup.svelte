@@ -101,17 +101,13 @@
 				switch (true) {
 					case data === "close":
 						closeModal();
+						checkAuthenticationStatus();
 						break;
 					case data.includes("token"):
 						localStorage.setItem("bearer", data.replace("token ", ""));
 						break;
 					case data.includes("id"):
 						localStorage.setItem("id", data.replace("id ", ""));
-						break;
-					case data == "loadAccountStatus":
-						setTimeout(() => {
-							checkAuthenticationStatus();
-						}, 250);
 						break;
 				}
 			} catch (error) {
