@@ -19,10 +19,12 @@
 		<b>GeoGuessr</b>
 		before? OpenGuessr is
 		<b>comparable</b>, but with a slightly different feature set, and
-		<b>100% free</b>!
-		<br /><br />
-		The closer your guess is to the actual location, the higher your score. Think of it as a virtual treasure hunt where
+		<b>100% free</b>! The closer your guess is to the actual location, the higher your score. Think of it as a virtual treasure hunt where
 		the treasure is your newfound knowledge of the world.
+		<br /><br />
+		OpenGuessr isn't the only alternative to paying for GeoGuessr. There are various <b>ways that you can still play</b> the original
+		game without spending a dime. Check out our guide on how you can
+		<a href="/guides/read/other/how-to-play-geoguessr-for-free" class="text-secondary">play GeoGuessr for free</a>.
 	</p>
 
 	<h2 class="text-2xl font-semibold mb-2">Got it, but what's OpenGuessr Education?</h2>
