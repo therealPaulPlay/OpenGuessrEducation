@@ -11,7 +11,7 @@
 	<b>how the driving side</b> can be determined in a picture.
 </p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Right side vs. Left side</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Right side vs. left side</h2>
 
 <p class="mb-2">
 	This map shows countries in which cars drive on the <b>left side</b> in <b>red</b> and countries with

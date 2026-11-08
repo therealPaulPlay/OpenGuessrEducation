@@ -80,7 +80,7 @@
 	correctAnswer={1}
 />
 
-<h2 class="text-2xl font-bold mt-8 mb-2">The Map-Maker</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">The Map-Making-App</h2>
 
 <p class="mb-2">
 	The <a target="blank" href="https://map-making.app" class="text-secondary">Map-Making-App</a> is awesome for working
