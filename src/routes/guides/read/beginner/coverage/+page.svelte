@@ -17,7 +17,7 @@
 
 <ArticleTip>While alternatives are mentioned briefly, this guide focuses on Google Street View.</ArticleTip>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Official Coverage</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Official coverage</h2>
 
 <p class="mb-2">
 	Currently, <b>4 camera generations</b> exist. Let's quickly go over these:
@@ -61,7 +61,7 @@
 
 <img alt="Street View Camera Generations" src="/assets/guides/coverage_types.png" class="rounded-xl w-full" />
 
-<p class="text-center mt-2 mb-4">Camera Generations (Source: geodummy.com).</p>
+<p class="text-center mt-2 mb-4">Camera generations (Source: geodummy.com).</p>
 
 <img alt="Street View Generations Map" src="/assets/guides/coverage_gen_map.png" class="rounded-xl w-full" />
 
@@ -104,7 +104,7 @@
 
 <p class="text-center mt-2">A car from Autori (Source: Google).</p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Google Streetview Alternatives</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Google Street View alternatives</h2>
 
 <p class="mb-2">Currently, there are two main Street View competitors that both have their shortcomings.</p>
 

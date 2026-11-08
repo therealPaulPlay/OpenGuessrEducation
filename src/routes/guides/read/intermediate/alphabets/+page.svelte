@@ -9,7 +9,7 @@
 	alphabets can help you identify <b>countries</b> and regions in your GeoGuessr or OpenGuessr journey.
 </p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Latin Alphabet</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Latin alphabet</h2>
 <p class="mb-2">
 	The <b>Latin alphabet</b> is the most widely used script in the world. It's the official alphabet in many countries
 	including <b>the USA, most of Europe, and parts of Africa</b>. It's characterized by simple letters like
@@ -26,7 +26,7 @@
 
 <p class="text-center mt-2">Countries that use the Latin alphabet.</p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Cyrillic Alphabet</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Cyrillic alphabet</h2>
 <p class="mb-2">
 	The <b>Cyrillic alphabet</b> is used in several countries including <b>Russia, Bulgaria, and Serbia</b>. It's
 	distinctive with letters like <b>ж, ч, ш</b>. Words written in Cyrillic often look more compact and blocky.
@@ -39,7 +39,7 @@
 
 <p class="text-center mt-2">Countries that use the Cyrillic alphabet.</p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Arabic Alphabet</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Arabic alphabet</h2>
 <p class="mb-2">
 	The <b>Arabic alphabet</b> is used in countries across the <b>Middle East and North Africa</b>, including
 	<b>Saudi Arabia, Egypt, and Morocco</b>. It's written <b>right-to-left</b> and has a flowing, cursive style. Key
@@ -53,11 +53,11 @@
 	Detect Arabic by recognizing the script's right-to-left orientation and its elegant, connected letters.
 </ArticleTip>
 
-<Map region="Arabic Alphabet" interactive={true} showLabels={true} minLabelZoom="3" />
+<Map region="Arabic alphabet" interactive={true} showLabels={true} minLabelZoom="3" />
 
 <p class="text-center mt-2">Countries that use the Arabic alphabet.</p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Hebrew Alphabet</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Hebrew alphabet</h2>
 <p class="mb-2">
 	The <b>Hebrew alphabet</b> is primarily used in <b>Israel</b>. It's also written <b>right-to-left</b> and includes
 	distinct letters like <b>א, ב, ג</b>.
@@ -74,7 +74,7 @@
 
 <p class="text-center mt-2">Countries that use the Hebrew alphabet.</p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Chinese Characters</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Chinese characters</h2>
 <p class="mb-2">
 	<b>Chinese characters</b>, or <b>hanzi</b>, are used in <b>China, Taiwan, and Singapore</b>. They are logographic,
 	meaning each character represents a word or a concept. Recognizable characters include <b>人</b> (person), <b>山</b>
@@ -105,7 +105,7 @@
 
 <p class="text-center mt-2">Countries that use the Japanese (Kana / Kanji) alphabet.</p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Devanagari Alphabet</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Devanagari alphabet</h2>
 <p class="mb-2">
 	The <b>Devanagari alphabet</b> is used in <b>India and Nepal</b>, for languages like <b>Hindi</b> and <b>Nepali</b>.
 	It's notable for its horizontal line running above the letters and includes characters like <b>अ, ब, म</b>.
@@ -122,7 +122,7 @@
 
 <p class="text-center mt-2">Countries that use the Devanagari alphabet.</p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Hangul Alphabet</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Hangul alphabet</h2>
 <p class="mb-2">
 	<b>Hangul</b> is the unique alphabet used in <b>South Korea</b>. It's composed of distinct letters that combine to
 	form syllables. Recognizable characters include <b>ㅎ, ㄱ, ㅂ</b>.
@@ -137,7 +137,7 @@
 
 <p class="text-center mt-2">Countries that use the Hangul (Korean) alphabet.</p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Greek Alphabet</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Greek alphabet</h2>
 <p class="mb-2">
 	The <b>Greek alphabet</b> is used in <b>Greece</b> and <b>Cyprus</b>. It contains letters like <b>α, β, γ, δ</b>,
 	which can help identify Greece immediately. Look out for characters that may look familiar but sound different.

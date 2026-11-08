@@ -13,7 +13,7 @@
 
 <div class="flex gap-10 mt-8 flex-wrap">
 	<div class="max-w-xs">
-		<h2 class="text-2xl font-bold mb-4">Determining the Hemisphere</h2>
+		<h2 class="text-2xl font-bold mb-4">Determining the hemisphere</h2>
 		<ol class="list-decimal list-inside mb-6">
 			<li class="mb-2">Locate the compass in-game.</li>
 			<li class="mb-2">Find the sun's position in the sky. Note that the sun is not always visible.</li>

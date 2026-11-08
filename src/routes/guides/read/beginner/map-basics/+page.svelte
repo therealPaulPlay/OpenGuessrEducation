@@ -6,7 +6,7 @@
 	at a few specifics.
 </p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">Official vs. Community maps</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">Official vs. community maps</h2>
 <p class="mb-2">
 	In all three major guessing games, user created maps are available and known as community maps. Moreover, they include
 	pages that showcase these maps.
@@ -39,7 +39,7 @@
 
 <p class="text-center mt-2">Official GeoGuessr maps.</p>
 
-<h2 class="text-2xl font-bold mt-8 mb-2">General Terms</h2>
+<h2 class="text-2xl font-bold mt-8 mb-2">General terms</h2>
 
 <p class="mb-4">Let's now take a look at a few terms that are often being used by players when talking about maps:</p>
 
